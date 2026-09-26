@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T13:59:01.604374+00:00",
+  "config_hash": "83b85b54c64b",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.038,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 4.2877094410547695e-05
+  },
+  "model_id": "M04",
+  "profile": "pilot",
+  "run_id": "bench_M04",
+  "seed": 11,
+  "variant": "default"
+}

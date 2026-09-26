@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-26T14:01:38.426078+00:00",
+  "config_hash": "5d71a48b68a9",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.038,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "funding_shortfall",
+    "primary_value": 0.0,
+    "research_proxy_liabilities": true
+  },
+  "model_id": "M11",
+  "profile": "pilot",
+  "run_id": "pilot_M11_default_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

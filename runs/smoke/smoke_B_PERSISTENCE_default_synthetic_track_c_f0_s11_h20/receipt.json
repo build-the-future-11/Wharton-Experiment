@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-09-26T14:01:22.175397+00:00",
+  "config_hash": "542acac0bf9f",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.0,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "predictions": [
+      0.07032095744691767,
+      0.07032095744691767,
+      0.07032095744691767,
+      0.07032095744691767,
+      0.07032095744691767
+    ],
+    "primary_value": 0.02367852028349004
+  },
+  "model_id": "B_PERSISTENCE",
+  "profile": "smoke",
+  "run_id": "smoke_B_PERSISTENCE_default_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

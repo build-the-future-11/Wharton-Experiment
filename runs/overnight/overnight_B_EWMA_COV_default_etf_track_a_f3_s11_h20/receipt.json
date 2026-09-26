@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T12:39:55.760061+00:00",
+  "config_hash": "843b39711e74",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 0.578,
+  "fold": 3,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "frobenius_cov_error",
+    "primary_value": 7.530467890663891e-05
+  },
+  "model_id": "B_EWMA_COV",
+  "profile": "overnight",
+  "run_id": "overnight_B_EWMA_COV_default_etf_track_a_f3_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

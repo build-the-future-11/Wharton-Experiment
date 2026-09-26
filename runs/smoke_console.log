@@ -1,0 +1,2 @@
+[smoke] done=1 skip=0 fail=0 total=34 elapsed=0.0s last=smoke_B_EWMA_COV_default_synthetic_track_c_f0_s11_h20
+[smoke] done=25 skip=0 fail=0 total=34 elapsed=2.5s last=smoke_M09_default_synthetic_track_c_f0_s11_h20

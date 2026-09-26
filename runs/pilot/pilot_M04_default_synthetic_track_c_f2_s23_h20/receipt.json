@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T12:05:38.100562+00:00",
+  "config_hash": "fa57f1a88808",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.002,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 9.375796975137819e-05
+  },
+  "model_id": "M04",
+  "profile": "pilot",
+  "run_id": "pilot_M04_default_synthetic_track_c_f2_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

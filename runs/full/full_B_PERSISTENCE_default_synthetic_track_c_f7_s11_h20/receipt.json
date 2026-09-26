@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-09-26T12:55:11.167538+00:00",
+  "config_hash": "542acac0bf9f",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.0,
+  "fold": 7,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "predictions": [
+      0.06590900677228081,
+      0.06590900677228081,
+      0.06590900677228081,
+      0.06590900677228081,
+      0.06590900677228081
+    ],
+    "primary_value": 0.026514767059419457
+  },
+  "model_id": "B_PERSISTENCE",
+  "profile": "full",
+  "run_id": "full_B_PERSISTENCE_default_synthetic_track_c_f7_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

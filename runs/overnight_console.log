@@ -1,0 +1,15 @@
+[overnight] done=1 skip=0 fail=0 total=360 elapsed=0.0s last=overnight_B_EWMA_COV_default_etf_track_a_f0_s11_h20
+[overnight] done=25 skip=0 fail=0 total=360 elapsed=0.0s last=overnight_B_PERSISTENCE_default_etf_track_a_f0_s11_h20
+[overnight] done=50 skip=0 fail=0 total=360 elapsed=0.1s last=overnight_B_RIDGE_default_etf_track_a_f0_s23_h20
+[overnight] done=75 skip=0 fail=0 total=360 elapsed=0.2s last=overnight_M01_default_etf_track_a_f0_s47_h20
+[overnight] done=100 skip=0 fail=0 total=360 elapsed=1.9s last=overnight_M02_default_etf_track_a_f0_s89_h20
+[overnight] done=125 skip=0 fail=0 total=360 elapsed=4.8s last=overnight_M03_default_etf_track_a_f1_s11_h20
+[overnight] done=150 skip=0 fail=0 total=360 elapsed=4.9s last=overnight_M04_default_etf_track_a_f1_s23_h20
+[overnight] done=175 skip=0 fail=0 total=360 elapsed=5.0s last=overnight_M05_default_etf_track_a_f1_s47_h20
+[overnight] done=200 skip=0 fail=0 total=360 elapsed=6.6s last=overnight_M06_default_etf_track_a_f1_s89_h20
+[overnight] done=225 skip=0 fail=0 total=360 elapsed=7.2s last=overnight_M07_default_etf_track_a_f2_s11_h20
+[overnight] done=250 skip=0 fail=0 total=360 elapsed=7.8s last=overnight_M08_default_etf_track_a_f2_s23_h20
+[overnight] done=275 skip=0 fail=0 total=360 elapsed=8.2s last=overnight_M09_default_etf_track_a_f2_s47_h20
+[overnight] done=300 skip=0 fail=0 total=360 elapsed=8.4s last=overnight_M10_default_etf_track_a_f2_s89_h20
+[overnight] done=325 skip=0 fail=0 total=360 elapsed=8.7s last=overnight_M11_default_synthetic_track_c_f0_s11_h20
+[overnight] done=350 skip=0 fail=0 total=360 elapsed=10.2s last=overnight_M12_default_synthetic_track_c_f0_s23_h20

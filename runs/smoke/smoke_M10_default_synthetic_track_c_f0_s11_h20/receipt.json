@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:24.699869+00:00",
+  "config_hash": "c81a9fda4cc0",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.002,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "energy_score_proxy_mse",
+    "primary_value": 0.0011161967887401822
+  },
+  "model_id": "M10",
+  "profile": "smoke",
+  "run_id": "smoke_M10_default_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

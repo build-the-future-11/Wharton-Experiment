@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T12:51:06.235846+00:00",
+  "config_hash": "e59cd493e31e",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.001,
+  "fold": 3,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 0.006152536966995911
+  },
+  "model_id": "M05",
+  "profile": "overnight",
+  "run_id": "overnight_M05_default_synthetic_track_c_f3_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

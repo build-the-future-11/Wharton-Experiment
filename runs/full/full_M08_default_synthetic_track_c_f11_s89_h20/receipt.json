@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T13:35:52.873913+00:00",
+  "config_hash": "b2987b85be37",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.537,
+  "fold": 11,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "graph_latent_mse",
+    "primary_value": 0.03288306023922877
+  },
+  "model_id": "M08",
+  "profile": "full",
+  "run_id": "full_M08_default_synthetic_track_c_f11_s89_h20",
+  "seed": 89,
+  "variant": "default"
+}

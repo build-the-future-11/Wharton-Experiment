@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T13:01:20.158763+00:00",
+  "config_hash": "5c92d93fe831",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 9.443,
+  "fold": 10,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "spearman_ic",
+    "primary_value": 0.022826985846843468
+  },
+  "model_id": "M02",
+  "profile": "full",
+  "run_id": "full_M02_default_etf_track_a_f10_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

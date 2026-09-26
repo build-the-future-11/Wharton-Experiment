@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:02:04.635942+00:00",
+  "config_hash": "843b39711e74",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.001,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "frobenius_cov_error",
+    "primary_value": 0.010425750401099955
+  },
+  "model_id": "B_EWMA_COV",
+  "profile": "full",
+  "run_id": "full_B_EWMA_COV_default_synthetic_track_c_f2_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

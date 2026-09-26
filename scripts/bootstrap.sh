@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
+
+if [[ ! -d .venv ]]; then
+  python3 -m venv .venv
+fi
+# shellcheck disable=SC1091
+source .venv/bin/activate
+
+python -m pip install -U pip wheel setuptools
+python -m pip install -e ".[dev,torch]"
+
+python -m wharton_lab.orchestration.manifest_bootstrap
+
+echo "Bootstrap complete (.venv + editable install + manifest)."

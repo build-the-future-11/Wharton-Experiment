@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:37.487307+00:00",
+  "config_hash": "3b09fc643731",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.024,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "cov_forecast_mse",
+    "primary_value": 0.05957484573706764
+  },
+  "model_id": "M07",
+  "profile": "pilot",
+  "run_id": "pilot_M07_default_synthetic_track_c_f0_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

@@ -1,0 +1,46 @@
+{
+  "dataset": "synthetic_track_c",
+  "selected_forecast": "B_RIDGE",
+  "selected_metrics": {
+    "primary_value": 9.893280567261514e-05,
+    "metric_name": "mse",
+    "predictions": [
+      0.3156350717383712,
+      -0.09666078607943428,
+      -0.057802740953250435,
+      0.03614110720463231,
+      0.09221138122242445
+    ]
+  },
+  "persistence": {
+    "primary_value": 0.02814908551718266,
+    "metric_name": "mse",
+    "predictions": [
+      0.08644694502759549,
+      0.08644694502759549,
+      0.08644694502759549,
+      0.08644694502759549,
+      0.08644694502759549
+    ]
+  },
+  "ridge": {
+    "primary_value": 9.893280567261514e-05,
+    "metric_name": "mse",
+    "predictions": [
+      0.3156350717383712,
+      -0.09666078607943428,
+      -0.057802740953250435,
+      0.03614110720463231,
+      0.09221138122242445
+    ]
+  },
+  "ewma_cov": {
+    "primary_value": 0.0096532891962233,
+    "metric_name": "frobenius_cov_error"
+  },
+  "provenance": {
+    "source": "synthetic_lockbox_seed_997",
+    "lockbox": true,
+    "seed": 997
+  }
+}

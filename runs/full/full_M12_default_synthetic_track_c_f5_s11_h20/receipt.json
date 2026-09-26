@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-26T13:45:00.453175+00:00",
+  "config_hash": "7c3096a9b573",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 1.172,
+  "fold": 5,
+  "horizon": 20,
+  "metrics": {
+    "allocation_sum": 1.0,
+    "metric_name": "market_mse",
+    "primary_value": 0.0002659949085842969
+  },
+  "model_id": "M12",
+  "profile": "full",
+  "run_id": "full_M12_default_synthetic_track_c_f5_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

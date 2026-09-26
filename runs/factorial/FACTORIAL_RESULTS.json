@@ -1,0 +1,197 @@
+{
+  "created_at": "2026-09-26T14:25:46.782776+00:00",
+  "seed": 997,
+  "turnover_definition": "one_way",
+  "cost_scenarios_bps": [
+    0,
+    5,
+    10,
+    25,
+    50
+  ],
+  "base_cost_bps": 10,
+  "note": "Research proxies only \u2014 not client funding guarantees",
+  "ewma_frobenius_vs_sample": 0.02867471193065843,
+  "cells": [
+    {
+      "forecast": "persistence",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 0,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 5,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 10,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 25,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 50,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 0,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.43454109039622413,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 5,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.43359568214095096,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 10,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.43275468289402236,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 25,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.43023603069823324,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "persistence",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 50,
+      "forecast_mse": 0.02814908551718266,
+      "terminal_wealth": 0.42605279524111367,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 0,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 5,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 10,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 25,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "myopic_equal",
+      "cost_bps_one_way": 50,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.422174961059366,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 0,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.43454109039622413,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 5,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.43359568214095096,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 10,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.43275468289402236,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 25,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.43023603069823324,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    },
+    {
+      "forecast": "ridge",
+      "controller": "mpc_cvar",
+      "cost_bps_one_way": 50,
+      "forecast_mse": 9.893280567261514e-05,
+      "terminal_wealth": 0.42605279524111367,
+      "shortfall_mean": 0.0,
+      "shortfall_cvar_80": 0.0
+    }
+  ]
+}

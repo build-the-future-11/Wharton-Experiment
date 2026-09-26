@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:34.897163+00:00",
+  "config_hash": "3840bb529752",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.006,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 0.006729394529761247
+  },
+  "model_id": "M04",
+  "profile": "pilot",
+  "run_id": "pilot_M04_ablation_mlp_backbone_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "ablation_mlp_backbone"
+}

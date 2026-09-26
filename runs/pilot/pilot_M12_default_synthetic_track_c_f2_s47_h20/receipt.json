@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-26T12:07:55.255312+00:00",
+  "config_hash": "315a2de4fd34",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 1.11,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "allocation_sum": 1.0,
+    "metric_name": "market_mse",
+    "primary_value": 0.0001103858476016574
+  },
+  "model_id": "M12",
+  "profile": "pilot",
+  "run_id": "pilot_M12_default_synthetic_track_c_f2_s47_h20",
+  "seed": 47,
+  "variant": "default"
+}

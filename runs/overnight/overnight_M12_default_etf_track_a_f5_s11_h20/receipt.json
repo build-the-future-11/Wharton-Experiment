@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-26T12:53:31.699448+00:00",
+  "config_hash": "7c3096a9b573",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 1.456,
+  "fold": 5,
+  "horizon": 20,
+  "metrics": {
+    "allocation_sum": 1.0,
+    "metric_name": "market_mse",
+    "primary_value": 6.868372336391397e-05
+  },
+  "model_id": "M12",
+  "profile": "overnight",
+  "run_id": "overnight_M12_default_etf_track_a_f5_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

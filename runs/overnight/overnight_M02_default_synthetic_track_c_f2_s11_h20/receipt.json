@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:51.288711+00:00",
+  "config_hash": "5c92d93fe831",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.143,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "spearman_ic",
+    "primary_value": -0.002251015046572725
+  },
+  "model_id": "M02",
+  "profile": "overnight",
+  "run_id": "overnight_M02_default_synthetic_track_c_f2_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

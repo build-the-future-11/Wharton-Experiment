@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:22.492988+00:00",
+  "config_hash": "e59cd493e31e",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.001,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 0.007118082306110734
+  },
+  "model_id": "M05",
+  "profile": "smoke",
+  "run_id": "smoke_M05_default_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

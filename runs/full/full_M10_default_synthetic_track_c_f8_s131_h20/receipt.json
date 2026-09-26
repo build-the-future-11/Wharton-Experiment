@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T13:38:12.181733+00:00",
+  "config_hash": "a0fb7ce391e7",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.148,
+  "fold": 8,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "energy_score_proxy_mse",
+    "primary_value": 0.000509271317374191
+  },
+  "model_id": "M10",
+  "profile": "full",
+  "run_id": "full_M10_default_synthetic_track_c_f8_s131_h20",
+  "seed": 131,
+  "variant": "default"
+}

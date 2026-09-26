@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-09-26T12:55:30.771097+00:00",
+  "config_hash": "74d8e8fa17f9",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 0.567,
+  "fold": 5,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "predictions": [
+      1.6617006492090363e-06,
+      9.688358752124716e-07,
+      1.9317532442135252e-06,
+      1.563009607616969e-06,
+      2.9647879057967984e-06
+    ],
+    "primary_value": 4.920200864356417e-06
+  },
+  "model_id": "B_RIDGE",
+  "profile": "full",
+  "run_id": "full_B_RIDGE_default_etf_track_a_f5_s47_h20",
+  "seed": 47,
+  "variant": "default"
+}

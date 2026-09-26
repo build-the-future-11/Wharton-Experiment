@@ -1,0 +1,23 @@
+{
+  "completed_at": "2026-09-26T11:52:44.285143+00:00",
+  "config_hash": "f786999491dc",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 7.706,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "baseline_comparison": "lower_pinball_vs_ridge_mse",
+    "baseline_ridge_mse": 2.7472274388710463e-06,
+    "metric_name": "pinball_loss",
+    "primary_value": 0.0006662381570463057
+  },
+  "model_id": "M01",
+  "profile": "pilot",
+  "run_id": "pilot_M01_default_etf_track_a_f2_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

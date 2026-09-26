@@ -1,0 +1,14 @@
+{
+  "full": {
+    "COMPLETED": 600
+  },
+  "overnight": {
+    "COMPLETED": 360
+  },
+  "pilot": {
+    "COMPLETED": 187
+  },
+  "smoke": {
+    "COMPLETED": 34
+  }
+}

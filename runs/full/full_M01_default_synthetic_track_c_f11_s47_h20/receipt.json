@@ -1,0 +1,23 @@
+{
+  "completed_at": "2026-09-26T12:58:50.280768+00:00",
+  "config_hash": "4302ba26b083",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 1.646,
+  "fold": 11,
+  "horizon": 20,
+  "metrics": {
+    "baseline_comparison": "lower_pinball_vs_ridge_mse",
+    "baseline_ridge_mse": 8.808539655741068e-05,
+    "metric_name": "pinball_loss",
+    "primary_value": 0.005041990112837379
+  },
+  "model_id": "M01",
+  "profile": "full",
+  "run_id": "full_M01_default_synthetic_track_c_f11_s47_h20",
+  "seed": 47,
+  "variant": "default"
+}

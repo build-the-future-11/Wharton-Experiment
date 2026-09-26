@@ -1,0 +1,28 @@
+status: BLOCKED_MISSING_SOURCE
+client_pdfs:
+  pattern: "2026_WGY_*"
+  found: false
+  impact: BLOCKED
+  notes: IPS and trading-note constraints cannot be validated without source PDFs.
+
+wealth:
+  status: BLOCKED_MISSING_SOURCE
+  fields: [total_aum, liquid_aum, target_spending_rate]
+  values: null
+
+obligations:
+  status: BLOCKED_MISSING_SOURCE
+  fields: [liability_schedule, horizon_years, inflation_linked_flags]
+  values: null
+  research_proxy_allowed: true
+  research_proxy_label: SYNTHETIC_LINEAR_OBLIGATIONS_ONLY
+
+roster:
+  status: BLOCKED_MISSING_SOURCE
+  fields: [beneficiary_count, age_bands, mortality_assumptions]
+  values: null
+
+track_b_equities:
+  status: BLOCKED_DATA
+  reason: no_point_in_time_fundamentals
+  allowed_use: none_for_unbiased_selection

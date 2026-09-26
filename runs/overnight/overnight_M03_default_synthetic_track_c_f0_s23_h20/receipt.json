@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:51.858192+00:00",
+  "config_hash": "86eab08c793f",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.006,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 0.01931747012377014
+  },
+  "model_id": "M03",
+  "profile": "overnight",
+  "run_id": "overnight_M03_default_synthetic_track_c_f0_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

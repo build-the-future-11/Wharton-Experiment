@@ -1,0 +1,6 @@
+# WInS execution evidence manifest
+# status: EMPTY — no verified executions present
+provider: WInS
+access_basis: pending_user_export
+files: []
+blocker: BLOCKED_DATA

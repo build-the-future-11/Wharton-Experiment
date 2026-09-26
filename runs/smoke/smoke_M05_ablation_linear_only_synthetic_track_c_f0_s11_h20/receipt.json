@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:22.490267+00:00",
+  "config_hash": "1236a964c2bd",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.002,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 0.00676283166801329
+  },
+  "model_id": "M05",
+  "profile": "smoke",
+  "run_id": "smoke_M05_ablation_linear_only_synthetic_track_c_f0_s11_h20",
+  "seed": 11,
+  "variant": "ablation_linear_only"
+}

@@ -1,0 +1,8 @@
+[pilot] done=1 skip=0 fail=0 total=187 elapsed=0.0s last=pilot_B_EWMA_COV_default_etf_track_a_f0_s11_h20
+[pilot] done=25 skip=0 fail=0 total=187 elapsed=0.0s last=pilot_B_RIDGE_default_etf_track_a_f0_s11_h20
+[pilot] done=50 skip=0 fail=0 total=187 elapsed=0.9s last=pilot_M01_default_synthetic_track_c_f1_s47_h20
+[pilot] done=75 skip=0 fail=0 total=187 elapsed=2.5s last=pilot_M04_ablation_mlp_backbone_synthetic_track_c_f0_s11_h20
+[pilot] done=100 skip=0 fail=0 total=187 elapsed=2.6s last=pilot_M05_default_synthetic_track_c_f1_s47_h20
+[pilot] done=125 skip=0 fail=0 total=187 elapsed=5.2s last=pilot_M08_default_etf_track_a_f0_s11_h20
+[pilot] done=150 skip=0 fail=0 total=187 elapsed=5.7s last=pilot_M10_default_etf_track_a_f0_s23_h20
+[pilot] done=175 skip=0 fail=0 total=187 elapsed=6.5s last=pilot_M12_ablation_no_memory_synthetic_track_c_f0_s11_h20

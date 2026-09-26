@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T12:51:02.761519+00:00",
+  "config_hash": "0d0a6404d50c",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 0.452,
+  "fold": 6,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 7.164840716912799e-05
+  },
+  "model_id": "M05",
+  "profile": "overnight",
+  "run_id": "overnight_M05_default_etf_track_a_f6_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:01:51.830617+00:00",
+  "config_hash": "86eab08c793f",
+  "data_provenance": {
+    "source": "cache",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 0.007,
+  "fold": 2,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "primary_value": 2.820703640273177e-06
+  },
+  "model_id": "M03",
+  "profile": "overnight",
+  "run_id": "overnight_M03_default_etf_track_a_f2_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

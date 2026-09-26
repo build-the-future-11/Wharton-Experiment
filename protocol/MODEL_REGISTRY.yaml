@@ -1,0 +1,125 @@
+version: "2026-09-26"
+models:
+  - id: M01
+    name: Regime-Conditioned Distributional GBM
+    capabilities: [quantiles, regime, causal]
+    primary_metric: pinball_loss
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    lineage_notes: Greenfield reimplementation from M01 spec; causal vol/sign regimes.
+    ablation_keys: [use_regimes, soft_vs_hard, distributional_vs_point, calibrate]
+    baseline_keys: [B_RIDGE, B_PERSISTENCE]
+
+  - id: M02
+    name: Factor-Residualized Cross-Sectional Ranker
+    capabilities: [ranking, factors, maturity]
+    primary_metric: spearman_ic
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    lineage_notes: Pairwise ranker with rolling OLS exposures.
+    ablation_keys: [factor_window, max_pairs_per_date]
+    baseline_keys: [B_RIDGE]
+
+  - id: M03
+    name: Conditional Nonlinear Factor Model
+    capabilities: [factors, mlp]
+    primary_metric: mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    ablation_keys: [pca_on_train, n_factors]
+    baseline_keys: [B_RIDGE, B_PERSISTENCE]
+
+  - id: M04
+    name: Financial APEN
+    capabilities: [memory, maturity, retrieval]
+    primary_metric: mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    lineage_notes: Synthica financial APEN pattern; mechanism reimplemented (not physics PDE port).
+    ablation_keys: [use_mlp_backbone, retrieval_k, memory_capacity]
+    baseline_keys: [B_RIDGE, B_PERSISTENCE]
+
+  - id: M05
+    name: Q-APEN
+    capabilities: [experts, quantization, lifecycle]
+    primary_metric: mse
+    status: IMPLEMENTED
+    lineage: NEW_DEFAULT
+    lineage_notes: World-Series causal Q-APEN lineage; pending queue extension NEW_DEFAULT.
+    ablation_keys: [expert_types, top_k, memory_cap_bytes]
+    baseline_keys: [B_RIDGE]
+
+  - id: M06
+    name: FI-JEPA
+    capabilities: [jepa, multi_horizon, torch]
+    primary_metric: latent_mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    lineage_notes: GitHub-Every-Repo FI-JEPA pattern; lab reimplementation.
+    ablation_keys: [horizons, vicreg_coeff, holdout_future_frac]
+    baseline_keys: [B_RIDGE]
+
+  - id: M07
+    name: Eigen-JEPA
+    capabilities: [covariance, jepa, torch]
+    primary_metric: cov_forecast_mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    lineage_notes: GitHub-Every-Repo Eigen-JEPA pattern.
+    ablation_keys: [windows, eigengap_threshold]
+    baseline_keys: [B_EWMA_COV]
+
+  - id: M08
+    name: Graph FI-JEPA
+    capabilities: [graph, jepa, torch]
+    primary_metric: graph_latent_mse
+    status: IMPLEMENTED
+    lineage: NEW_DEFAULT
+    lineage_notes: No upstream Graph JEPA; graph message-passing NEW_DEFAULT in lab.
+    ablation_keys: [message_passes, graph_window, shuffled_edges_control]
+    baseline_keys: [B_RIDGE]
+
+  - id: M09
+    name: Fast-Slow Fusion with GroupDRO
+    capabilities: [fusion, robustness]
+    primary_metric: mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    ablation_keys: [groupdro_steps, slow_window]
+    baseline_keys: [B_RIDGE]
+
+  - id: M10
+    name: Neural Scenario Flow
+    capabilities: [scenarios, generative]
+    primary_metric: energy_score_proxy_mse
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    ablation_keys: [path_steps, student_t_df]
+    baseline_keys: [B_PERSISTENCE]
+
+  - id: M11
+    name: Liability-Conditioned Distributional MPC
+    capabilities: [mpc, cvar, liabilities]
+    primary_metric: funding_shortfall
+    status: IMPLEMENTED
+    lineage: RECOVERED
+    ablation_keys: [transaction_cost_bps, cvar_alpha]
+    baseline_keys: [B_PERSISTENCE]
+
+  - id: M12
+    name: LAF-GMJEPA
+    capabilities: [composed, graph, memory, mpc]
+    primary_metric: market_mse
+    status: IMPLEMENTED
+    lineage: NEW_DEFAULT
+    lineage_notes: Composes M10/M11 stack; ablations no_graph/no_memory/no_latent/no_liability.
+    ablation_keys: [no_graph, no_memory, no_latent, no_liability, joint_training]
+    baseline_keys: [B_RIDGE, B_PERSISTENCE]
+
+baselines:
+  - id: B_RIDGE
+    primary_metric: mse
+  - id: B_PERSISTENCE
+    primary_metric: mse
+  - id: B_EWMA_COV
+    primary_metric: frobenius_cov_error

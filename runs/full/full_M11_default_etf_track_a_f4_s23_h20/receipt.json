@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-26T13:39:03.398602+00:00",
+  "config_hash": "55e82d7201d7",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 1.182,
+  "fold": 4,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "funding_shortfall",
+    "primary_value": 0.0,
+    "research_proxy_liabilities": true
+  },
+  "model_id": "M11",
+  "profile": "full",
+  "run_id": "full_M11_default_etf_track_a_f4_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-26T14:02:16.909403+00:00",
+  "config_hash": "358919ef08b5",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.017,
+  "fold": 3,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "latent_mse",
+    "primary_value": 1.0233907282318122
+  },
+  "model_id": "M06",
+  "profile": "full",
+  "run_id": "full_M06_default_synthetic_track_c_f3_s23_h20",
+  "seed": 23,
+  "variant": "default"
+}

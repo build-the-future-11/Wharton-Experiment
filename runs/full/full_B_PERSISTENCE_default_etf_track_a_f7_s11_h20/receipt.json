@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-09-26T12:55:03.295654+00:00",
+  "config_hash": "542acac0bf9f",
+  "data_provenance": {
+    "source": "yfinance",
+    "synthetic_proxy": false
+  },
+  "dataset": "etf_track_a",
+  "elapsed_sec": 0.4,
+  "fold": 7,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "predictions": [
+      -0.000349030328712141,
+      -0.000349030328712141,
+      -0.000349030328712141,
+      -0.000349030328712141,
+      -0.000349030328712141
+    ],
+    "primary_value": 5.071222441671074e-06
+  },
+  "model_id": "B_PERSISTENCE",
+  "profile": "full",
+  "run_id": "full_B_PERSISTENCE_default_etf_track_a_f7_s11_h20",
+  "seed": 11,
+  "variant": "default"
+}

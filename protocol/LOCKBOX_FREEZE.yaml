@@ -1,0 +1,26 @@
+frozen_at: '2026-09-26T14:03:41.276491+00:00'
+status: FROZEN
+code_tree_fingerprint: c33889d32828f88bf7e0070cc1ad98ff8fd81b561f75c3e52ee5aa1ac30e86e5
+manifest_sha256: 1c5d39a45e37f728f28d994a668bfa65a0601fae382173cdf77701a8d124155e
+selected_stack:
+  forecast: B_RIDGE
+  forecast_runner_up: M04
+  selection_rule: min_mse_folds_0_2; prefer_ridge_if_within_1pct
+  covariance: B_EWMA_COV
+  optional_distributional: M01
+  controller: null
+  controller_reason: BLOCKED_MISSING_CLIENT_LIABILITIES
+  validation_folds:
+  - 0
+  - 1
+  - 2
+  excluded_from_selection: full fold 3 already scored; not used as lockbox
+  lockbox_seed: 997
+  lockbox_etf_offset: 800
+  lockbox_n_steps: 160
+hypotheses:
+- 'H1: Selected forecast beats persistence on lockbox MSE (paired).'
+- 'H2: Selected cov has finite Frobenius error on lockbox panel.'
+opened: true
+opened_at: '2026-09-26T14:03:48.042434+00:00'
+result_path: runs/lockbox/

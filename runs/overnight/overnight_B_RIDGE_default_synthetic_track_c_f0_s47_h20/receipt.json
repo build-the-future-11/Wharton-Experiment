@@ -1,0 +1,28 @@
+{
+  "completed_at": "2026-09-26T14:01:47.113383+00:00",
+  "config_hash": "74d8e8fa17f9",
+  "data_provenance": {
+    "source": "synthetic_track_c",
+    "synthetic_proxy": null
+  },
+  "dataset": "synthetic_track_c",
+  "elapsed_sec": 0.0,
+  "fold": 0,
+  "horizon": 20,
+  "metrics": {
+    "metric_name": "mse",
+    "predictions": [
+      -0.08422223821799099,
+      -0.20396394594114448,
+      -0.08935296777489866,
+      -0.03562147632255036,
+      -0.06269832256925335
+    ],
+    "primary_value": 6.156114487882674e-05
+  },
+  "model_id": "B_RIDGE",
+  "profile": "overnight",
+  "run_id": "overnight_B_RIDGE_default_synthetic_track_c_f0_s47_h20",
+  "seed": 47,
+  "variant": "default"
+}
