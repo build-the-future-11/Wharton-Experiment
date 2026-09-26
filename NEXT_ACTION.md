@@ -1,19 +1,15 @@
 # Next action
 
-## Done
-- Lean matrix complete; lockbox opened once (`protocol/LOCKBOX_FREEZE.yaml`, `runs/lockbox/`).
-- Selected: **B_RIDGE + B_EWMA_COV**. ETF lockbox: ridge does **not** beat persistence.
+## Shipped
+- Research package committed (`git log -1`)
+- Selected stack: **B_RIDGE + B_EWMA_COV**
+- Lockbox: synthetic H1 supported; ETF H1 unsupported
+- Factorial costs: `runs/factorial/` (MPC > myopic on terminal wealth at 10bps research cost)
+- IPS draft PDF: `reports/competition_drafts/IPS_DRAFT_BLOCKED.pdf` (3 pages, **not a submission**)
 
-## Do not
-- Re-run lockbox without an amendment log.
-- Invent client facts / fake WInS trades.
+## Only you can unblock
+1. Drop `2026_WGY_*.pdf` into the workspace
+2. Export 3 WInS executions → `data/wins/executions/`
+3. Explicitly authorize any submit/trade
 
-## Needs from you
-1. WGY PDFs + client constraints
-2. WInS blotter (3 executions)
-3. Optional: authorize git commit
-
-```bash
-bash scripts/audit_completion.sh
-cat reports/evidence_bank/LOCKBOX_SUMMARY.md
-```
+Until then: do not treat drafts as FINAL.
