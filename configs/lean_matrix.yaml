@@ -1,0 +1,32 @@
+# Lean FAST_MATRIX profile defaults (mirrors orchestration/profiles.py)
+matrix:
+  smoke:
+    n_folds: 1
+    n_seeds: 1
+    n_steps: 40
+    n_scenarios: 4
+  pilot:
+    n_folds: 2
+    n_seeds: 2
+    n_steps: 60
+    n_scenarios: 16
+  overnight:
+    n_folds: 3
+    n_seeds: 3
+    n_steps: 80
+    n_scenarios: 32
+  full:
+    n_folds: 5
+    n_seeds: 4
+    n_steps: 100
+    n_scenarios: 64
+
+selection:
+  rule: min_mse_prefer_ridge_within_1pct
+  selected_stack: [B_RIDGE, B_EWMA_COV]
+  research_cost_bps_base: 10
+
+lockbox:
+  reopen: forbidden_without_amendment
+  synthetic_seed: 997
+  etf_offset: 800

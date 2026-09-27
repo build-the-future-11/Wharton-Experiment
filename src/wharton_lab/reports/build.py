@@ -17,8 +17,20 @@ def build_reports(repo_root: Path | str) -> Path:
     root = Path(repo_root)
     out_dir = root / "reports" / "generated"
     out_dir.mkdir(parents=True, exist_ok=True)
+    manifest = root / "protocol" / "EXPERIMENT_MANIFEST.csv"
+    manifest_paths: set[str] = set()
+    if manifest.exists():
+        with manifest.open(newline="") as f:
+            manifest_paths = {r["result_path"] for r in csv.DictReader(f) if r.get("result_path")}
     summaries = []
+    orphans: list[str] = []
     for receipt in sorted(root.glob("runs/**/receipt.json")):
+        rel = str(receipt.relative_to(root))
+        if rel.startswith("runs/lockbox/"):
+            continue
+        if rel not in manifest_paths:
+            orphans.append(rel)
+            continue
         data = json.loads(receipt.read_text())
         metrics = data.get("metrics") or {}
         summaries.append(
@@ -38,6 +50,16 @@ def build_reports(repo_root: Path | str) -> Path:
         )
     index_path = out_dir / "index.json"
     index_path.write_text(json.dumps(summaries, indent=2, sort_keys=True))
+    (out_dir / "HISTORICAL_ORPHANS.json").write_text(
+        json.dumps(
+            {
+                "label": "historical / pre-lean generation — not in EXPERIMENT_MANIFEST; excluded",
+                "count": len(orphans),
+                "receipts": orphans,
+            },
+            indent=2,
+        )
+    )
 
     # Scoreboards by profile × model (default variants only for clarity)
     by_prof: dict[str, dict[str, list[float]]] = defaultdict(lambda: defaultdict(list))
@@ -57,7 +79,12 @@ def build_reports(repo_root: Path | str) -> Path:
     md = [
         "# Experiment summary",
         "",
-        f"Runs indexed: {len(summaries)}",
+        f"Runs indexed (manifest only): {len(summaries)}",
+        f"Historical orphan receipts excluded: {len(orphans)} (see `HISTORICAL_ORPHANS.json`)",
+        "",
+        "**Generation:** legacy lean matrix — leakage-contaminated on both tracks, degenerate "
+        "folds, identical ETF seeds (protocol/DECISIONS.md D-050..D-052). `n` counts cells, "
+        "not independent evaluations.",
         "",
         "## Status distinctions",
         "",
@@ -102,7 +129,6 @@ def build_reports(repo_root: Path | str) -> Path:
     (out_dir / "scoreboard.json").write_text(json.dumps(scoreboard_rows, indent=2))
 
     # Manifest rollup
-    manifest = root / "protocol" / "EXPERIMENT_MANIFEST.csv"
     if manifest.exists():
         with manifest.open(newline="") as f:
             rows = list(csv.DictReader(f))

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from typing import Callable
+
 import numpy as np
 
 
@@ -35,3 +37,31 @@ def assert_no_feature_leak(features: np.ndarray, labels: np.ndarray) -> None:
     lag = feature_label_max_lag(features, labels)
     if lag == 0:
         raise LeakyFeatureError("Features appear aligned with contemporaneous labels (leak).")
+
+
+def assert_features_causal(
+    build: Callable[[np.ndarray], tuple[np.ndarray, np.ndarray]],
+    returns: np.ndarray,
+    *,
+    probe_rows: tuple[int, ...] | None = None,
+    bump: float = 1.0,
+) -> None:
+    """Structural check: bumping ``returns[t]`` must not change feature rows ``<= t``.
+
+    ``build`` maps a (T, K) returns panel to ``(X, row_t)`` where ``row_t[i]`` is the
+    returns row whose value is the label of feature row ``i``.
+    """
+    rets = np.asarray(returns, dtype=float)
+    X0, row_t = build(rets)
+    row_t = np.asarray(row_t, dtype=int)
+    if probe_rows is None:
+        probe_rows = tuple(int(row_t[i]) for i in np.linspace(0, len(row_t) - 1, 5).astype(int))
+    for t in probe_rows:
+        bumped = rets.copy()
+        bumped[t] = bumped[t] + bump
+        X1, row_t1 = build(bumped)
+        mask = row_t <= t
+        if not np.array_equal(row_t, np.asarray(row_t1, dtype=int)) or not np.allclose(
+            X0[mask], X1[mask], rtol=0, atol=0
+        ):
+            raise LeakyFeatureError(f"Feature rows at or before t={t} depend on returns[t] (leak).")

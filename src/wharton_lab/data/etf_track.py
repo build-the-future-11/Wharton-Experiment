@@ -76,6 +76,25 @@ def _rectangular_returns(close) -> tuple[np.ndarray, list[str]] | None:
     return arr, tickers
 
 
+def _cache_columns(cache_file: Path, n_cols: int) -> list[str]:
+    """Column order of a cached panel: sidecar, else DATA_MANIFEST entry matching sha256."""
+    sidecar = cache_file.with_suffix(".columns.json")
+    if sidecar.exists():
+        cols = json.loads(sidecar.read_text())
+        if len(cols) == n_cols:
+            return [str(c) for c in cols]
+    if MANIFEST_PATH.exists():
+        try:
+            import yaml  # type: ignore
+
+            entry = (yaml.safe_load(MANIFEST_PATH.read_text()) or {}).get("etf_track") or {}
+            if entry.get("sha256") == _file_sha256(cache_file) and len(entry.get("columns", [])) == n_cols:
+                return [str(c) for c in entry["columns"]]
+        except Exception:
+            pass
+    return [f"UNKNOWN_COL{i}" for i in range(n_cols)]
+
+
 def load_etf_track(
     tickers: Sequence[str] | None = None,
     *,
@@ -96,11 +115,12 @@ def load_etf_track(
             if cached.ndim == 2 and cached.shape[0] >= 30 and cached.shape[1] >= 1 and np.all(
                 np.isfinite(cached)
             ):
+                cols = _cache_columns(cache_file, cached.shape[1])
                 return ETFTrackResult(
-                    tickers=tickers[: cached.shape[1]],
+                    tickers=cols,
                     returns=cached,
                     source="cache",
-                    synthetic_proxy=False,
+                    synthetic_proxy=any("SYNTHETIC" in c for c in cols),
                     file_path=cache_file,
                 )
         except Exception:
@@ -119,24 +139,27 @@ def load_etf_track(
         )
         if data is not None and getattr(data, "empty", True) is False:
             close = data["Close"] if "Close" in getattr(data, "columns", []) else data
+            # yfinance returns multi-ticker columns alphabetically, not in request order.
+            if hasattr(close, "reindex"):
+                close = close.reindex(columns=[t for t in tickers if t in close.columns])
             parsed = _rectangular_returns(close)
             if parsed is not None:
                 rets, used = parsed
                 # Pad/truncate to requested ticker count with synthetic extras if needed
                 if rets.shape[1] < len(tickers):
-                    pad = _synthetic_etf_returns(tickers[rets.shape[1] :], n_days=rets.shape[0], seed=seed)
+                    missing = [t for t in tickers if t not in used]
+                    pad = _synthetic_etf_returns(missing, n_days=rets.shape[0], seed=seed)
                     # correlate pad lightly with first column
                     pad = 0.3 * rets[:, :1] + 0.7 * pad
                     rets = np.concatenate([rets, pad], axis=1)
-                    used = tickers
+                    used = list(used) + [f"{t}_SYNTHETIC_PAD" for t in missing]
                     source = "yfinance+synthetic_pad"
                     synthetic = True
                 else:
-                    rets = rets[:, : len(tickers)]
-                    used = tickers
                     source = "yfinance"
                     synthetic = False
                 np.save(cache_file, rets)
+                cache_file.with_suffix(".columns.json").write_text(json.dumps(list(used)))
                 return ETFTrackResult(
                     tickers=list(used),
                     returns=np.asarray(rets, dtype=float),
@@ -149,8 +172,10 @@ def load_etf_track(
 
     rets = _synthetic_etf_returns(tickers, seed=seed)
     np.save(cache_file, rets)
+    proxy_cols = [f"{t}_SYNTHETIC_PROXY" for t in tickers]
+    cache_file.with_suffix(".columns.json").write_text(json.dumps(proxy_cols))
     return ETFTrackResult(
-        tickers=tickers,
+        tickers=proxy_cols,
         returns=np.asarray(rets, dtype=float),
         source="SYNTHETIC_PROXY",
         synthetic_proxy=True,
@@ -168,7 +193,7 @@ def write_data_manifest(
     entries = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "etf_track": {
-            "tickers": track.tickers,
+            "columns": track.tickers,
             "source": track.source,
             "synthetic_proxy": track.synthetic_proxy,
             "shape": list(track.returns.shape),
