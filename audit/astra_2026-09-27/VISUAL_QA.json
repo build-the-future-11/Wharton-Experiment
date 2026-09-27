@@ -1,0 +1,24 @@
+{
+  "visual_review": "PASS",
+  "review_scope": "All 21 PDF pages inspected via rendered images; final affected pack pages 1 and 7 re-inspected after ordered-list spacing fix. Brief and IPS content/layout unchanged by final rebuild. Desktop and mobile HTML screenshots inspected.",
+  "pdfs": {
+    "WHARTON_EXECUTIVE_BRIEF.pdf": {
+      "pages": 1,
+      "sha256": "f399b760f84c5835d2babd4611b74e47d2637bce8969ea5df7162bea1663a82c",
+      "text_present_every_page": true
+    },
+    "WHARTON_PREPARATION_PACK.pdf": {
+      "pages": 17,
+      "sha256": "6d17fa845482e4b8a1245726bae59814ea4628fdb753fbcc02c7be78a5d0cc8b",
+      "text_present_every_page": true
+    },
+    "WHARTON_IPS_DRAFT_BLOCKED.pdf": {
+      "pages": 3,
+      "sha256": "67180e0d6f6595febeed527daa49d97d6f8dc580e518bc7332a2913577e96487",
+      "text_present_every_page": true
+    }
+  },
+  "browser_receipt": "audit/astra_2026-09-27/BROWSER_QA.json",
+  "source_pdf_pages_inspected": 8,
+  "limitations": "Content checks do not establish client suitability or submission approval."
+}

@@ -1,0 +1,6 @@
+Captured from tool session 65170 on 2026-09-27.
+Command: .venv/bin/python -m pytest -q --basetemp=/Volumes/PRO-BLADE/Wharton-Experiments/.local_tmp/astra/pytest
+Environment: TMPDIR and caches in workspace, OMP/OPENBLAS threads=1.
+............................................................ [100%]
+60 passed in 15.55s
+No code under src or tests changed after this test run. Subsequent edits were artifact/verification scripts and documentation.

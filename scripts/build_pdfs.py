@@ -187,7 +187,7 @@ def build_ips_pdf() -> Path:
 
 def main() -> int:
     print(f"Wrote {build_report_pdf()}")
-    print(f"Wrote {build_ips_pdf()}")
+    print("Historical IPS builder superseded. Run scripts/build_competition_artifacts.py for the current blocked draft.")
     return 0
 
 

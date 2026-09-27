@@ -1,0 +1,38 @@
+{
+  "pdfs": {
+    "output/pdf/WHARTON_EXECUTIVE_BRIEF.pdf": {
+      "pages": 1,
+      "bytes": 3597,
+      "sha256": "f399b760f84c5835d2babd4611b74e47d2637bce8969ea5df7162bea1663a82c"
+    },
+    "output/pdf/WHARTON_PREPARATION_PACK.pdf": {
+      "pages": 17,
+      "bytes": 45848,
+      "sha256": "6d17fa845482e4b8a1245726bae59814ea4628fdb753fbcc02c7be78a5d0cc8b"
+    },
+    "output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf": {
+      "pages": 3,
+      "bytes": 85177,
+      "sha256": "67180e0d6f6595febeed527daa49d97d6f8dc580e518bc7332a2913577e96487"
+    }
+  },
+  "ips_word_counts": {
+    "pitch": 39,
+    "ips": 288
+  },
+  "ips_font": "embedded Times New Roman, 12 pt, 24 pt leading",
+  "ips_margins_inches": 1,
+  "submission_ready": false,
+  "source_sha256": {
+    "reports/competition_package/DEMO_SCRIPT.md": "99d2f9b79a72f0cf79f4df51201eb201cc1ebd0466113625b27af73e7bfa01fd",
+    "reports/competition_package/EVIDENCE_APPENDIX.md": "3123c081ca55a4844c5d06f621acc1a89f4fab92f4e4defa631fa4d019ebe786",
+    "reports/competition_package/EXECUTIVE_BRIEF.md": "c8da3a4047bcc271dca4d4d52e87966d8c91fefb7f03b2448165189543c50d58",
+    "reports/competition_package/FINANCIAL_STRESS.md": "5f4de21742d4e3dc61dee084df7dc0ab56157734c3ef337197538a2d490f6bcd",
+    "reports/competition_package/IPS_DRAFT.md": "b0560af57d7339cc19e41070392c396a58629697f60d90e6d381d6dca49ee960",
+    "reports/competition_package/JUDGE_QA.md": "5b7ebd28d605388d3ebc7bc7492c977f27aef8f2c4b21362a6d47c94955002c6",
+    "reports/competition_package/PITCH_CONTENT.md": "b30f2ec51f103c9ea6e469254478f2bdc41b1e0ad890c95dd8e095e381512cda",
+    "reports/competition_package/README.md": "99ad78a93976cd67e6373a5afa69fe86de5a4b9a2a3dddf117cfe6b52b93e677",
+    "reports/competition_package/TIMED_PITCH.md": "577b5c511617902bb92d57daa6d0c2a4f6f473eeb0c5703d374b442cd109819f",
+    "reports/competition_package/WRITTEN_RESPONSES.md": "f30c86943ee5a5412d2ed2045eef654f76379046b33636f12d906a2183489da4"
+  }
+}

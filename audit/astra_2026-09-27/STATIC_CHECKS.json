@@ -1,0 +1,7 @@
+{
+  "python_files_parsed": 144,
+  "parse_errors": [],
+  "unfinished_code_markers": [],
+  "secret_pattern_findings": [],
+  "scope": "Python syntax across src/scripts/tests; bounded pattern scan of new package and implementation. Not a guarantee that all secrets or defects are detectable."
+}

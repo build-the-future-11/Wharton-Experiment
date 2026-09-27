@@ -1,5 +1,7 @@
 # IPS DRAFT — BLOCKED (not a submission)
 
+**Historical draft, superseded on 2026-09-27.** Instruction PDFs have now been recovered. Use `reports/competition_package/IPS_DRAFT.md` and `output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf`; the missing-source statements below record the earlier state.
+
 **Status:** BLOCKED_MISSING_SOURCE  
 **Authority:** Missing `2026_WGY_Investment Policy-FINAL.pdf` and client roster/wealth/obligations.
 

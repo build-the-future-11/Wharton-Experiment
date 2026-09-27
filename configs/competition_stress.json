@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "ASSUMPTION_ONLY_NOT_CLIENT_DATA",
+  "units": "initial wealth = 1; each amount is a fraction of initial wealth",
+  "months": 120,
+  "initial_wealth": 1.0,
+  "monthly_obligation": 0.002,
+  "reserve_months": 12,
+  "planning_inflation": 0.025,
+  "assets": ["hypothetical_equity_sleeve", "hypothetical_bond_sleeve"],
+  "policies": ["fully_invested", "fixed_cash_20pct", "liability_reserve"],
+  "cost_bps": [0, 5, 10, 25, 50],
+  "scenarios": [
+    {"id": "steady_assumption", "annual_asset_returns": [0.04, 0.02], "annual_inflation": 0.025, "obligation_multiplier": 1},
+    {"id": "early_joint_crash", "annual_asset_returns": [0.04, 0.02], "annual_inflation": 0.025, "obligation_multiplier": 1, "shocks": [{"month": 1, "asset_returns": [-0.4, -0.15]}]},
+    {"id": "late_joint_crash", "annual_asset_returns": [0.04, 0.02], "annual_inflation": 0.025, "obligation_multiplier": 1, "shocks": [{"month": 120, "asset_returns": [-0.4, -0.15]}]},
+    {"id": "stagnation_high_inflation", "annual_asset_returns": [0.0, 0.0], "annual_inflation": 0.08, "obligation_multiplier": 2},
+    {"id": "funding_failure", "annual_asset_returns": [-0.04, -0.02], "annual_inflation": 0.08, "obligation_multiplier": 4}
+  ]
+}

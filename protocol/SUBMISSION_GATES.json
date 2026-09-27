@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "note": "These require documented human/source review. File presence alone never certifies suitability or submission authority.",
+  "gates": {
+    "complete_client_case_extracted_and_reviewed": false,
+    "current_trading_rules_and_security_eligibility_verified": false,
+    "team_registration_roster_and_school_documents_verified": false,
+    "three_wins_executions_and_exact_notes_verified": false,
+    "final_report_instructions_and_rubric_verified": false,
+    "student_strategy_review_and_ai_attribution_complete": false,
+    "explicit_submission_authority_recorded": false
+  }
+}

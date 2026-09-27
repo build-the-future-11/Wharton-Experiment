@@ -1,0 +1,17 @@
+{
+  "artifact_consistency": "PASS",
+  "errors": [],
+  "stress_cells": 75,
+  "questions": 60,
+  "submission_status": "BLOCKED",
+  "blockers": [
+    "complete_client_case_extracted_and_reviewed",
+    "current_trading_rules_and_security_eligibility_verified",
+    "team_registration_roster_and_school_documents_verified",
+    "three_wins_executions_and_exact_notes_verified",
+    "final_report_instructions_and_rubric_verified",
+    "student_strategy_review_and_ai_attribution_complete",
+    "explicit_submission_authority_recorded"
+  ],
+  "note": "Passing artifact checks does not certify scientific validity, client suitability, authorship, eligibility or authority."
+}

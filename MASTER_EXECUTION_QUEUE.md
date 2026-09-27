@@ -1,5 +1,7 @@
 # Master Execution Queue — Wharton-Experiments (2026-09-27)
 
+Current overlay: ASTRA competition preparation completed; see ASTRA_FINAL_REPORT.md. IPS and Trading Notes instructions recovered; full client case, real WInS records, eligibility and authority remain blocked. M11 cash-path accounting also fails D-059. P2 research extensions remain unperformed.
+
 ## P0 — Critical
 
 | # | Task | Status |
@@ -22,7 +24,7 @@
 | 11 | Repaired causal evaluation of the selected baseline | DONE — exploratory null (D-056) |
 | 12 | Figure from real data + source CSV | DONE — `reports/figures/repaired_oos_r2.*` |
 | 13 | Reconcile stale docs (`lean_matrix.yaml`, repro audit, gaps, README, checklist) | DONE |
-| 14 | Client IPS FINAL | BLOCKED — `2026_WGY_*.pdf`, roster/wealth/obligations |
+| 14 | Client IPS FINAL | BLOCKED — complete client case, roster/wealth/obligations (instruction PDFs recovered) |
 | 15 | Trading Notes FINAL | BLOCKED — 3 WInS executions |
 | 16 | Submit / trade | BLOCKED — explicit authorization |
 

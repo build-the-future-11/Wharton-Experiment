@@ -1,16 +1,11 @@
 # Next action
 
-## Shipped (2026-09-27 integrity pass)
-- Found and documented leakage in both legacy data tracks, degenerate folds/seeds, a mislabelled ETF target (AGG, not SPY), and an invalid factorial (D-050..D-058)
-- Lockbox synthetic "win" withdrawn; ETF lockbox negative; lockbox **not** reopened
-- Repaired causal evaluation: no forecast beats the historical mean (exploratory)
-- Decision brief and BLOCKED IPS draft rewritten: strategic allocation + EWMA risk + cash reserve; no forecasting edge claimed
+Local finishing is complete within the recorded scope; see ASTRA_FINAL_REPORT.md.
 
-## Only you can unblock
-1. Drop the `2026_WGY_*.pdf` files into the workspace
-2. Export 3 WInS executions → `data/wins/executions/`
-3. Explicitly authorize any submit/trade
-4. Decide whether to version the ETF cache in git (data-licence call) — see `MASTER_EXECUTION_QUEUE.md`
-5. Free space on the internal disk (≈ 0.1–0.4 GB free during this pass)
+1. Supply Laura's complete current client case, trading rules and final-report instructions. IPS/Trading Notes instruction PDFs have already been recovered from Downloads.
+2. Supply official team name, finalized student names and WInS username, plus registration/school evidence. No credentials are requested.
+3. Students review the proposed strategy against the case before the IPS deadline; retain attribution and source records. The submitted strategy cannot be revised after that deadline.
+4. Supply three actually executed WInS notes, original wording and source records for reflections of at most 100 words each. Trading begins September 28; no executions are invented now.
+5. Finalize source-based client documents and authorize any external submission explicitly.
 
-Until then: do not treat drafts as FINAL.
+Research extensions remain optional and unperformed: causal M01-M12 comparison, amended controller repair/factorial and fresh confirmatory data. No deployment, trade or submission has occurred.

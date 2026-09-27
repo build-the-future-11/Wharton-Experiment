@@ -1,0 +1,27 @@
+{
+  "source_head_at_start": "8af749dab048b3626090703806f0f2233ce4f210",
+  "historical_files_preserved": 3170,
+  "all_preserved": true,
+  "repaired_contrasts_reproduced": 68,
+  "differences": [],
+  "scope": "same-machine repeatability only; not independent reproduction",
+  "m11_accounting_diagnostic": {
+    "zero_returns_all_cash_payments": [
+      0.1,
+      0.1
+    ],
+    "legacy_reported_cash": [
+      [
+        0.8,
+        0.8
+      ]
+    ],
+    "cash_after_single_deduction": [
+      [
+        0.9,
+        0.8
+      ]
+    ],
+    "legacy_matches": false
+  }
+}

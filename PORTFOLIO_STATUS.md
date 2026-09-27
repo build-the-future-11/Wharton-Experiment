@@ -1,9 +1,9 @@
-# Portfolio Status (2026-09-27)
+# Portfolio status - 2026-09-27
 
-Scope: this workspace (`/Volumes/PRO-BLADE/Wharton-Experiments`) only. About 40 sibling directories on `/Volumes/PRO-BLADE` (e.g. `IRIS-Project`, `World-Series`, `Kyrlov-JEPA`, `OLYMPUS`) are outside this workspace and were **not audited**.
+Scope is this Wharton workspace only. Sibling projects were not audited.
 
-| Project | Path | Type | Current State | Critical Blocker | Evidence | Next Action | Priority |
-|---|---|---|---|---|---|---|---|
-| Wharton-Experiments (wharton-lab) | `/Volumes/PRO-BLADE/Wharton-Experiments` | research / finance ML + competition decision support | experimental → negative-result package; `master`, no remote; 50/50 tests; fresh clone passes | Client WGY PDFs, WInS executions, and submit authority missing; legacy evidence leakage-contaminated (documented) | `RESEARCH_AUDIT.md`, `protocol/DECISIONS.md` D-050..D-058, `runs/repaired/` | Supply client sources, then finalize the IPS on the strategic-allocation + EWMA stack; optional repaired M01–M12 run | P0 (client-blocked) |
+| Project | Local state | Scientific state | Competition state | Next blocker |
+|---|---|---|---|---|
+| Wharton-Experiments | Preparation package and sensitivity viewer built and checked | Exploratory baseline null; leakage claims withdrawn; frozen controller defect retained | BLOCKED for submission | Complete client case, trading rules, team and actual execution evidence |
 
-Environment note: the internal disk was full (≈ 116 MiB free) during this pass. Only PRO-BLADE had space.
+Receipts: audit/astra_2026-09-27/. Current package: reports/competition_package/ and output/pdf/. Prior claims of missing IPS/Trading Notes instructions are superseded by recovered sources. Free space checked this pass: about 607 GiB on PRO-BLADE and 9.2 GiB internally; this is a point-in-time reading, not an ongoing guarantee.

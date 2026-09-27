@@ -10,3 +10,5 @@ data/raw/
 .ruff_cache/
 pytest-of-*/
 .mplconfig/
+.local_tmp/
+data/source_documents/

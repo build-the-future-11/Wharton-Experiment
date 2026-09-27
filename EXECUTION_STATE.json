@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T03:30:00+00:00",
+  "updated_at": "2026-09-27T04:59:41.494925+00:00",
   "code_commit_for_repaired_run": "2b146663bd2efca373d3b5f93ee3f2a4018ff8ed",
   "matrix": {
     "smoke": 34,
@@ -16,13 +16,27 @@
     "B_RIDGE",
     "B_EWMA_COV"
   ],
-  "recommended_stack": "strategic allocation + B_EWMA_COV + operating cash reserve; no return forecast",
-  "ips_draft_pdf": "reports/competition_drafts/IPS_DRAFT_BLOCKED.pdf",
-  "tests": "50_passed",
+  "recommended_stack": "Candidate strategic allocation / reserve process; EWMA monitoring unvalidated; no return forecast selected",
+  "ips_draft_pdf": "output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf",
+  "tests": "60_passed",
   "blocked": [
-    "WGY_PDFS",
+    "COMPLETE_CLIENT_CASE",
+    "TRADING_RULES",
+    "TEAM_ELIGIBILITY",
     "WINS_EXECUTIONS",
-    "CLIENT_FACTS",
+    "FINAL_REPORT_INSTRUCTIONS",
+    "STUDENT_REVIEW",
     "SUBMISSION_AUTH"
-  ]
+  ],
+  "astra_finish": {
+    "updated_at": "2026-09-27T04:59:41.494925+00:00",
+    "local_package": "COMPLETE_WITH_EXTERNAL_BLOCKERS",
+    "official_instruction_pdfs": "RECOVERED",
+    "case": "MISSING",
+    "stress_cells": 75,
+    "replayed_contrasts": 68,
+    "tests": "60_passed",
+    "submission": "BLOCKED",
+    "authoritative_status": "STATUS.md"
+  }
 }

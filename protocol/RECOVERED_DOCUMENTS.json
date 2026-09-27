@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "file": "data/source_documents/2026_WGY_Investment Policy-FINAL.pdf",
+      "original_path": "/Users/ryan/Downloads/2026_WGY_Investment Policy-FINAL.pdf",
+      "sha256": "d4aeaca75c2875fb7c6b59833f94606b729404ad0d983e34e7fe13188800df6a",
+      "pages": 6,
+      "provenance": "Recovered from user Downloads on 2026-09-27; not independently authenticated with Apply"
+    },
+    {
+      "file": "data/source_documents/2026_WGY_Trading Notes Analysis-FINAL.pdf",
+      "original_path": "/Users/ryan/Downloads/2026_WGY_Trading Notes Analysis-FINAL.pdf",
+      "sha256": "72bbc4a90ba02dd17dcacc0bea4339fb261f6aa33483784a275d7b3083d05d52",
+      "pages": 2,
+      "provenance": "Recovered from user Downloads on 2026-09-27; not independently authenticated with Apply"
+    }
+  ],
+  "duplicate": {
+    "path": "/Users/ryan/Downloads/2026_WGY_Trading Notes Analysis-FINAL (1).pdf",
+    "same_sha256_as": "data/source_documents/2026_WGY_Trading Notes Analysis-FINAL.pdf",
+    "action": "left untouched"
+  }
+}

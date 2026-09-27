@@ -1,9 +1,22 @@
-status: BLOCKED_MISSING_SOURCE
+status: BLOCKED_MISSING_CLIENT_CASE
 client_pdfs:
   pattern: "2026_WGY_*"
-  found: false
-  impact: BLOCKED
-  notes: IPS and trading-note constraints cannot be validated without source PDFs.
+  found: true
+  impact: PARTIAL_SOURCE_RECOVERY
+  notes: IPS and Trading Notes instruction PDFs recovered from Downloads; full client case and trading rules still missing. See RECOVERED_DOCUMENTS.json and VERIFIED_DELIVERABLE_REQUIREMENTS.md.
+
+confirmed_context:
+  client_first_name: Laura
+  source: data/source_documents/2026_WGY_Trading Notes Analysis-FINAL.pdf
+  page: 1
+  operating_commitment: true
+  facility_contribution: true
+  notes: Objectives mentioned in instructions; no wealth, obligation values or dates inferred.
+
+team_roster:
+  status: BLOCKED_MISSING_SOURCE
+  fields: [official_team_name, student_names_first_and_last_initial, wins_username]
+  values: null
 
 wealth:
   status: BLOCKED_MISSING_SOURCE
