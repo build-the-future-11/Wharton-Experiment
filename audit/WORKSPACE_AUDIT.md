@@ -27,9 +27,10 @@
 
 Unavailable upstream binaries are **evidence gaps**, not permission to claim identity with a generic net.
 
-## Current delivery state
+## Current delivery state (2026-09-27)
 
-- Package `src/wharton_lab/` with M01–M12, baselines, splits, orchestration, reports, audit.
-- Smoke 34/34, Pilot 277/277 COMPLETED.
-- Overnight launched under 8h budget (see `EXECUTION_STATE.json`).
+- Package `src/wharton_lab/` with M01–M12, baselines, splits, orchestration, reports, audit, and the repaired causal path.
+- Manifest: smoke 34, pilot 187, overnight 360, full 600 — all COMPLETED (legacy, leakage-contaminated).
+- Git: 4+ commits on `master`; no remote configured.
+- Internal disk (`/`) was full (~116 MiB free) during the 2026-09-27 pass; temp files were redirected to PRO-BLADE.
 - Client competition package blocked on missing sources.

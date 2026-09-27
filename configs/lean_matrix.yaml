@@ -1,32 +1,44 @@
-# Lean FAST_MATRIX profile defaults (mirrors orchestration/profiles.py)
+# Lean FAST_MATRIX profile defaults — mirrors src/wharton_lab/orchestration/profiles.py
+# (profiles.py is authoritative; this file is documentation and is not read by code).
 matrix:
   smoke:
-    n_folds: 1
-    n_seeds: 1
-    n_steps: 40
+    seeds: [11]
+    max_folds: 1
+    n_steps: 48
     n_scenarios: 4
   pilot:
-    n_folds: 2
-    n_seeds: 2
-    n_steps: 60
+    seeds: [11, 23, 47]
+    max_folds: 2
+    n_steps: 96
     n_scenarios: 16
   overnight:
-    n_folds: 3
-    n_seeds: 3
-    n_steps: 80
+    seeds: [11, 23, 47, 89]
+    max_folds: 3
+    n_steps: 128
     n_scenarios: 32
   full:
-    n_folds: 5
-    n_seeds: 4
-    n_steps: 100
+    seeds: [11, 23, 47, 89, 131]
+    max_folds: 4
+    n_steps: 160
     n_scenarios: 64
+  primary_horizon: 20   # nominal for tabular baselines — label is 1-step (D-051)
+  context_len: 64
+  caveat: legacy folds are identical at these sizes and ETF seeds share one panel (D-052)
 
 selection:
   rule: min_mse_prefer_ridge_within_1pct
   selected_stack: [B_RIDGE, B_EWMA_COV]
   research_cost_bps_base: 10
+  status: not evidence of skill (D-050, D-052)
 
 lockbox:
   reopen: forbidden_without_amendment
   synthetic_seed: 997
   etf_offset: 800
+
+repaired_exploratory:   # D-056
+  folds: {n_folds: 8, test_size: 100, min_train: 300}
+  synthetic_seeds: [11, 23, 47, 89, 131]
+  synthetic_n_steps: 1200
+  etf_test_excludes_rows: [800, 960]
+  primary_contrast: [ridge_std, mean]

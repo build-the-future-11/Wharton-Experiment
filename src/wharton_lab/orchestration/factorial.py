@@ -99,6 +99,13 @@ def run_factorial(repo_root: Path | str, *, seed: int = LOCKBOX_SEED) -> dict:
         "cost_scenarios_bps": list(BPS),
         "base_cost_bps": 10,
         "note": "Research proxies only — not client funding guarantees",
+        "status": "INVALID_AS_EVIDENCE (D-054)",
+        "defects": [
+            "forecast predictions are computed but never passed to either controller",
+            "mpc_cvar scenarios at step t are centred on path[t], the return it then earns (look-ahead)",
+            "evaluated on the spent lockbox seed after the lockbox was opened",
+            "single 40-step path, no uncertainty; shortfall never binds",
+        ],
         "ewma_frobenius_vs_sample": float(
             np.linalg.norm(cov - np.cov(rets[:cut].T), ord="fro")
         ),
@@ -109,6 +116,11 @@ def run_factorial(repo_root: Path | str, *, seed: int = LOCKBOX_SEED) -> dict:
     # Markdown table at base cost
     lines = [
         "# Forecast × controller factorial (synthetic lockbox seed)",
+        "",
+        "**Status: INVALID AS EVIDENCE (protocol/DECISIONS.md D-054).** Forecasts are never "
+        "passed to the controllers (both forecast rows are identical); `mpc_cvar` scenarios "
+        "at step t are centred on the return it then earns (look-ahead); single 40-step path "
+        "on the spent lockbox seed. Retained for provenance only.",
         "",
         "Costs are **one-way** turnover × research bps. Base = **10 bps**.",
         "",

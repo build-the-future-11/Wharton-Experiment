@@ -1,5 +1,7 @@
 # Forecast × controller factorial (synthetic lockbox seed)
 
+**Status: INVALID AS EVIDENCE (protocol/DECISIONS.md D-054).** Forecasts are never passed to the controllers (both forecast rows are identical); `mpc_cvar` scenarios at step t are centred on the return it then earns (look-ahead); single 40-step path on the spent lockbox seed. Retained for provenance only.
+
 Costs are **one-way** turnover × research bps. Base = **10 bps**.
 
 | forecast | controller | bps | terminal_wealth | shortfall_mean |

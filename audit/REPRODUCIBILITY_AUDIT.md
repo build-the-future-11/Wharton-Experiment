@@ -1,47 +1,27 @@
-# Reproducibility Audit
+# Reproducibility Audit (revised 2026-09-27)
 
 ## Environment
 
-- Host: Apple M4, 16 GB RAM, MPS available (orchestration defaults CPU for determinism)
-- Python: project `.venv` via `scripts/bootstrap.sh`
-- OS: darwin (see host)
+- Host: Apple M4, 16 GB RAM, MPS available (orchestration defaults to CPU for determinism)
+- Python 3.14.7 in project `.venv` (`scripts/bootstrap.sh`); numpy/scipy versions recorded per run in `runs/repaired/REPAIRED_RESULTS.json`
+- matplotlib (figures) and reportlab (PDFs) are required for `scripts/figures/` and `scripts/build_pdfs.py`
 
 ## Determinism controls
 
-- Seeds: smoke `[11]`; pilot `[11,23,47]`; full `[11,23,47,89,131]` (`protocol/DECISIONS.md`)
-- Manifest rows carry `run_id`, `config_hash` (when written), `result_path`
-- Resume skips `COMPLETED` only
+- Seeds: smoke `[11]`; pilot `[11,23,47]`; overnight `[11,23,47,89]`; full `[11,23,47,89,131]` (`orchestration/profiles.py`)
+- Manifest rows carry `run_id`, `result_path`; resume skips `COMPLETED` only
+- Repaired runs record the git HEAD, the environment, and the ETF sha256
 
-## Reproduce smoke
+## Verified on 2026-09-27
 
-```bash
-cd /Volumes/PRO-BLADE/Wharton-Experiments
-bash scripts/bootstrap.sh
-bash scripts/run_smoke.sh
-bash scripts/build_reports.sh
-```
-
-## Reproduce one real-data comparison + one ablation
-
-```bash
-# Ridge vs M04 on ETF track (if Yahoo available) — from saved pilot receipts:
-python - <<'PY'
-import json
-from pathlib import Path
-for rid in [
-  "pilot_B_RIDGE_default_etf_track_a_f0_s11_h20",
-  "pilot_M04_default_etf_track_a_f0_s11_h20",
-  "pilot_M01_ablation_no_regime_synthetic_track_c_f0_s11_h20",
-]:
-    p = Path("runs/pilot")/rid/"receipt.json"
-    print(rid, json.loads(p.read_text())["metrics"])
-PY
-```
-
-Ablation example: `pilot_M01_ablation_no_regime_synthetic_track_c_f0_s11_h20` vs `pilot_M01_default_synthetic_track_c_f0_s11_h20`.
+- Full test suite: 50 passed (41 legacy + 9 new leakage/evaluation tests)
+- A fresh `git clone` of HEAD passes the suite (source packages that had been untracked are now committed)
+- `scripts/run_repaired_eval.py` and `scripts/run_multiplicity.py` are deterministic given the ETF cache
 
 ## Gaps
 
-- No git commit hash frozen yet (repo has no commits).
-- Upstream lineage trees not vendored; mechanism reimplementation disclosed in `protocol/DECISIONS.md`.
-- Full matrix not executed → cannot claim bit-for-bit FULL reproduction.
+- **ETF cache is not in git** (`data/raw/` ignored). A fresh clone re-downloads with a later end date, which changes every ETF number. Exact reproduction needs the file with sha256 `6c234590…` (`data/manifests/DATA_MANIFEST.yaml`).
+- Lockbox freeze fingerprint matches no commit (D-058).
+- Legacy "folds" and ETF "seeds" are not independent replications (D-052).
+- The git author email is a placeholder (`youremail@example.com`).
+- Upstream lineage trees are not vendored; mechanism reimplementation is disclosed in `protocol/DECISIONS.md`.

@@ -20,7 +20,8 @@ dependencies = [
 dev = ["pytest>=7.4", "yfinance>=0.2"]
 torch = ["torch>=2.0"]
 etf = ["yfinance>=0.2"]
-all = ["pytest>=7.4", "yfinance>=0.2", "torch>=2.0"]
+reports = ["matplotlib>=3.8", "reportlab>=4.0", "pypdf>=4.0"]
+all = ["pytest>=7.4", "yfinance>=0.2", "torch>=2.0", "matplotlib>=3.8", "reportlab>=4.0", "pypdf>=4.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

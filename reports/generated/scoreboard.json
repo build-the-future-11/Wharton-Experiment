@@ -3,316 +3,316 @@
     "profile": "full",
     "model_id": "B_EWMA_COV",
     "metric": "frobenius_cov_error",
-    "n": 120,
-    "mean": 0.008159086739621473
+    "n": 40,
+    "mean": 0.004712509630777986
   },
   {
     "profile": "full",
     "model_id": "B_PERSISTENCE",
     "metric": "mse",
-    "n": 120,
-    "mean": 0.016344243391025557
+    "n": 40,
+    "mean": 0.022457302472075866
   },
   {
     "profile": "full",
     "model_id": "B_RIDGE",
     "metric": "mse",
-    "n": 120,
-    "mean": 5.319319986611754e-05
+    "n": 40,
+    "mean": 5.3653311643289804e-05
   },
   {
     "profile": "full",
     "model_id": "M01",
     "metric": "pinball_loss",
-    "n": 120,
-    "mean": 0.004489156016188424
+    "n": 40,
+    "mean": 0.007151414793446441
   },
   {
     "profile": "full",
     "model_id": "M02",
     "metric": "spearman_ic",
-    "n": 121,
-    "mean": 0.03225997894048862
+    "n": 40,
+    "mean": 0.07359403075985992
   },
   {
     "profile": "full",
     "model_id": "M03",
     "metric": "mse",
-    "n": 121,
-    "mean": 0.010822519751901509
+    "n": 40,
+    "mean": 0.010917798342281692
   },
   {
     "profile": "full",
     "model_id": "M04",
     "metric": "mse",
-    "n": 121,
-    "mean": 5.2716483146460897e-05
+    "n": 40,
+    "mean": 5.356022666555808e-05
   },
   {
     "profile": "full",
     "model_id": "M05",
     "metric": "mse",
-    "n": 121,
-    "mean": 0.004031857046290984
+    "n": 40,
+    "mean": 0.004667913658010777
   },
   {
     "profile": "full",
     "model_id": "M06",
     "metric": "latent_mse",
-    "n": 120,
-    "mean": 0.5088780163499629
+    "n": 40,
+    "mean": 0.5127006191156578
   },
   {
     "profile": "full",
     "model_id": "M07",
     "metric": "cov_forecast_mse",
-    "n": 120,
-    "mean": 0.15614400960980104
+    "n": 40,
+    "mean": 0.17322364675334603
   },
   {
     "profile": "full",
     "model_id": "M08",
     "metric": "graph_latent_mse",
-    "n": 121,
-    "mean": 0.017505530604331705
+    "n": 40,
+    "mean": 0.016192998883565467
   },
   {
     "profile": "full",
     "model_id": "M09",
     "metric": "mse",
-    "n": 120,
-    "mean": 0.05684547028671962
+    "n": 40,
+    "mean": 0.007360504436607196
   },
   {
     "profile": "full",
     "model_id": "M10",
     "metric": "energy_score_proxy_mse",
-    "n": 120,
-    "mean": 0.00025943232498238706
+    "n": 40,
+    "mean": 0.00027493470083486037
   },
   {
     "profile": "full",
     "model_id": "M11",
     "metric": "funding_shortfall",
-    "n": 120,
+    "n": 40,
     "mean": 0.0
   },
   {
     "profile": "full",
     "model_id": "M12",
     "metric": "market_mse",
-    "n": 120,
-    "mean": 0.00014182328956382405
+    "n": 40,
+    "mean": 0.00012996851715410345
   },
   {
     "profile": "overnight",
     "model_id": "B_EWMA_COV",
     "metric": "frobenius_cov_error",
-    "n": 64,
-    "mean": 0.014764014548625807
+    "n": 24,
+    "mean": 0.014547499955921079
   },
   {
     "profile": "overnight",
     "model_id": "B_PERSISTENCE",
     "metric": "mse",
-    "n": 64,
-    "mean": 0.025913054617600878
+    "n": 24,
+    "mean": 0.02052432017597359
   },
   {
     "profile": "overnight",
     "model_id": "B_RIDGE",
     "metric": "mse",
-    "n": 64,
-    "mean": 4.899661078821762e-05
+    "n": 24,
+    "mean": 4.7872698740291374e-05
   },
   {
     "profile": "overnight",
     "model_id": "M01",
     "metric": "pinball_loss",
-    "n": 64,
-    "mean": 0.004874886104923336
+    "n": 24,
+    "mean": 0.006886200938051138
   },
   {
     "profile": "overnight",
     "model_id": "M02",
     "metric": "spearman_ic",
-    "n": 64,
-    "mean": 0.020715860174539927
+    "n": 24,
+    "mean": -0.02421035347504179
   },
   {
     "profile": "overnight",
     "model_id": "M03",
     "metric": "mse",
-    "n": 64,
-    "mean": 0.00960555232452882
+    "n": 24,
+    "mean": 0.00982647429620324
   },
   {
     "profile": "overnight",
     "model_id": "M04",
     "metric": "mse",
-    "n": 64,
-    "mean": 4.932061956400419e-05
+    "n": 24,
+    "mean": 4.8276323780290736e-05
   },
   {
     "profile": "overnight",
     "model_id": "M05",
     "metric": "mse",
-    "n": 64,
-    "mean": 0.0038761173780750857
+    "n": 24,
+    "mean": 0.004301741975359606
   },
   {
     "profile": "overnight",
     "model_id": "M06",
     "metric": "latent_mse",
-    "n": 64,
-    "mean": 0.47197239995309903
+    "n": 24,
+    "mean": 0.4529732404157769
   },
   {
     "profile": "overnight",
     "model_id": "M07",
     "metric": "cov_forecast_mse",
-    "n": 64,
-    "mean": 0.1598344211785119
+    "n": 24,
+    "mean": 0.17744104762287358
   },
   {
     "profile": "overnight",
     "model_id": "M08",
     "metric": "graph_latent_mse",
-    "n": 64,
-    "mean": 0.016423448324502467
+    "n": 24,
+    "mean": 0.014491586825643115
   },
   {
     "profile": "overnight",
     "model_id": "M09",
     "metric": "mse",
-    "n": 64,
-    "mean": 0.007439849626869044
+    "n": 24,
+    "mean": 0.006418936835919121
   },
   {
     "profile": "overnight",
     "model_id": "M10",
     "metric": "energy_score_proxy_mse",
-    "n": 64,
-    "mean": 0.0002973528745838094
+    "n": 24,
+    "mean": 0.0002975926840573714
   },
   {
     "profile": "overnight",
     "model_id": "M11",
     "metric": "funding_shortfall",
-    "n": 64,
+    "n": 24,
     "mean": 0.0
   },
   {
     "profile": "overnight",
     "model_id": "M12",
     "metric": "market_mse",
-    "n": 64,
-    "mean": 0.00015164818872080872
+    "n": 24,
+    "mean": 0.00011995552965202347
   },
   {
     "profile": "pilot",
     "model_id": "B_EWMA_COV",
     "metric": "frobenius_cov_error",
-    "n": 18,
-    "mean": 0.018461494748849828
+    "n": 12,
+    "mean": 0.01984268341427121
   },
   {
     "profile": "pilot",
     "model_id": "B_PERSISTENCE",
     "metric": "mse",
-    "n": 18,
-    "mean": 0.0267552603712973
+    "n": 12,
+    "mean": 0.02977700023601874
   },
   {
     "profile": "pilot",
     "model_id": "B_RIDGE",
     "metric": "mse",
-    "n": 19,
-    "mean": 5.236593571521396e-05
+    "n": 12,
+    "mean": 5.5508608118025274e-05
   },
   {
     "profile": "pilot",
     "model_id": "M01",
     "metric": "pinball_loss",
-    "n": 20,
-    "mean": 0.008754362031327949
+    "n": 12,
+    "mean": 0.009218625693733521
   },
   {
     "profile": "pilot",
     "model_id": "M02",
     "metric": "spearman_ic",
-    "n": 20,
-    "mean": 0.1094199300151339
+    "n": 12,
+    "mean": 0.14462802069980535
   },
   {
     "profile": "pilot",
     "model_id": "M03",
     "metric": "mse",
-    "n": 19,
-    "mean": 0.012842679671496127
+    "n": 12,
+    "mean": 0.013421990617052525
   },
   {
     "profile": "pilot",
     "model_id": "M04",
     "metric": "mse",
-    "n": 19,
-    "mean": 5.313759377746553e-05
+    "n": 12,
+    "mean": 5.642788430429873e-05
   },
   {
     "profile": "pilot",
     "model_id": "M05",
     "metric": "mse",
-    "n": 19,
-    "mean": 0.004878130880465921
+    "n": 12,
+    "mean": 0.004908634313120561
   },
   {
     "profile": "pilot",
     "model_id": "M06",
     "metric": "latent_mse",
-    "n": 23,
-    "mean": 0.6293448979663431
+    "n": 12,
+    "mean": 0.6062780666847928
   },
   {
     "profile": "pilot",
     "model_id": "M07",
     "metric": "cov_forecast_mse",
-    "n": 19,
-    "mean": 0.15971675119143838
+    "n": 12,
+    "mean": 0.16684122775294857
   },
   {
     "profile": "pilot",
     "model_id": "M08",
     "metric": "graph_latent_mse",
-    "n": 19,
-    "mean": 0.02031327306574249
+    "n": 12,
+    "mean": 0.02090856784030633
   },
   {
     "profile": "pilot",
     "model_id": "M09",
     "metric": "mse",
-    "n": 19,
-    "mean": 0.008952518948431692
+    "n": 12,
+    "mean": 0.009307420231826713
   },
   {
     "profile": "pilot",
     "model_id": "M10",
     "metric": "energy_score_proxy_mse",
-    "n": 19,
-    "mean": 0.000279907523260805
+    "n": 12,
+    "mean": 0.00027040176851805163
   },
   {
     "profile": "pilot",
     "model_id": "M11",
     "metric": "funding_shortfall",
-    "n": 20,
+    "n": 12,
     "mean": 0.0
   },
   {
     "profile": "pilot",
     "model_id": "M12",
     "metric": "market_mse",
-    "n": 20,
-    "mean": 0.00010368640803888654
+    "n": 12,
+    "mean": 8.843845508405368e-05
   },
   {
     "profile": "smoke",

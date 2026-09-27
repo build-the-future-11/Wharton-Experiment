@@ -10,6 +10,6 @@ When sources arrive:
 2. Draft elevator pitch ≤50 words, IPS ≤500 words, Times New Roman 12pt double-spaced, 1" margins.
 3. No graphics, footnotes, citations, or external links in the IPS PDF.
 4. Keep technical evidence in the internal research report only.
-5. Prefer the simplest validation-supported stack (provisional: ridge forecast + EWMA risk + operating cash reserve). Do not force all twelve models into the IPS.
+5. Prefer the simplest evidence-supported stack: strategic allocation + EWMA risk sizing + operating cash reserve. No return forecast has shown skill over the historical mean (see `reports/FINAL_RESEARCH_REPORT.md` §5), so do not describe a forecasting edge. Do not force all twelve models into the IPS.
 
 Word/page limits and formatting must be verified on the rendered PDF before any submit authorization.
