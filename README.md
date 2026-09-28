@@ -31,3 +31,4 @@ See `REPRODUCE.md` for dependencies, cache placement and browser/PDF checks. The
 ## Historical research
 
 `RESEARCH_AUDIT.md`, `reports/FINAL_RESEARCH_REPORT.*`, and `runs/` preserve the earlier negative-result investigation. The 1181 legacy matrix cells and factorial are invalid as forecasting/decision evidence. The original lockbox remains spent. Old competition PDFs and the legacy IPS builder are superseded; only the current package should be used for preparation.
+# Wharton-Experiment
