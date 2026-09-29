@@ -64,7 +64,7 @@ def ema_update(target: nn.Module, online: nn.Module, m: float) -> None:
 
 def vicreg_loss(z: torch.Tensor, coeff: float = 0.1) -> torch.Tensor:
     z = z - z.mean(dim=0, keepdim=True)
-    std = torch.sqrt(z.var(dim=0) + 1e-4)
+    std = torch.sqrt(z.var(dim=0, unbiased=False) + 1e-4)
     var_loss = torch.mean(torch.relu(1.0 - std))
     n, d = z.shape
     zc = z - z.mean(0)

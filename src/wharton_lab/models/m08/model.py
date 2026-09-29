@@ -141,7 +141,14 @@ class GraphFIJEPAModel(BaseModel):
         # history-only returns: average batch -> (time, nodes)
         rets = X_arr[:, :, :, 0]
         hist = rets.mean(axis=0).T
+        supplied_history = kwargs.get("history_returns")
+        if supplied_history is not None:
+            hist = np.asarray(supplied_history, dtype=float)
+            if hist.ndim != 2 or hist.shape[1] != self.config.n_nodes or not np.isfinite(hist).all():
+                raise ValueError("history_returns must be a finite time-by-node panel")
         self._frozen_adj = self.build_graph_from_history(hist)
+        if kwargs.get("no_edges", False):
+            self._frozen_adj = np.zeros_like(self._frozen_adj)
 
         x_t = torch.as_tensor(X_arr, dtype=torch.float32, device=self.device)
         m_t = torch.as_tensor(default_mask, dtype=torch.float32, device=self.device)

@@ -83,10 +83,20 @@ class M12Model(BaseModel):
         enc = np.hstack([enc, np.ones((len(enc), 1))])
         self._market_coef = np.linalg.lstsq(enc, y, rcond=None)[0]
 
+        scenario_targets = kwargs.get("scenario_targets")
         if self.config.joint_training:
-            self.scenario_head.fit(enc[:, :-1], y.reshape(-1, 1))
-        else:
-            self.scenario_head.fit(enc[:, :-1], np.tile(y.reshape(-1, 1), (1, self.config.n_assets)))
+            raise NotImplementedError("Joint training is not implemented; use the explicitly composed model")
+        scenario_options = {"n_assets": self.config.n_assets, "random_state": self.config.random_state}
+        scenario_options.update(kwargs.get("scenario_config", {}))
+        if scenario_options["n_assets"] != self.config.n_assets:
+            raise ValueError("Scenario and market asset counts must match")
+        self.scenario_head = M10Model(M10Config(**scenario_options))
+        if scenario_targets is not None:
+            targets = np.asarray(scenario_targets, dtype=float)
+            expected = self.config.n_assets * self.scenario_head.config.path_steps
+            if targets.shape != (len(X), expected):
+                raise ValueError("scenario_targets must contain genuine full multi-asset future paths")
+            self.scenario_head.fit(enc[:, :-1], targets)
 
         if not self.config.no_liability and kwargs.get("liability_schedule") is not None:
             scen = kwargs.get("scenario_returns")
@@ -138,16 +148,25 @@ class M12Model(BaseModel):
             "market_coef": None if self._market_coef is None else self._market_coef.tolist(),
             "memory": self.memory.memory.tolist(),
             "fitted": self._fitted,
+            "latent_A": self.latent.A,
+            "scenario_head": self.scenario_head._serialize_state(),
+            "planner": self.planner._serialize_state(),
         }
 
     def _deserialize_state(self, state: Mapping[str, Any]) -> None:
-        self.config = M12Config(**state["config"])
+        self.__init__(M12Config(**state["config"]))
         self._market_coef = None if state["market_coef"] is None else np.asarray(state["market_coef"])
         self.memory.memory = np.asarray(state["memory"])
         self._fitted = bool(state["fitted"])
+        if "latent_A" in state:
+            self.latent.A = np.asarray(state["latent_A"])
+        if "scenario_head" in state:
+            self.scenario_head._deserialize_state(state["scenario_head"])
+        if "planner" in state:
+            self.planner._deserialize_state(state["planner"])
 
     def config_dict(self) -> Mapping[str, Any]:
-        return self.config.to_dict()
+        return {**self.config.to_dict(), "scenario_model": self.scenario_head.config_dict(), "planner_model": self.planner.config_dict()}
 
     def smoke_forward(self, n_features: int = 10, n_samples: int = 32) -> dict[str, Any]:
         rng = np.random.default_rng(0)

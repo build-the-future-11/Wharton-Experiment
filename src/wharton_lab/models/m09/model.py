@@ -76,30 +76,38 @@ class M09Model(BaseModel):
             vol_window=self.config.vol_window,
             vol_threshold=self.config.vol_threshold,
         )
+        if X.ndim != 2 or len(X) != len(y) or not np.isfinite(X).all() or not np.isfinite(y).all():
+            raise ValueError("Finite, aligned X and y are required")
+        if self.config.groupdro_steps < 1 or self.config.ridge_alpha < 0:
+            raise ValueError("Positive iterations and nonnegative regularization required")
         n_groups = 4
-        q = np.ones(n_groups) / n_groups
-        w_sample = np.ones(len(y))
-        coef = np.zeros(Z.shape[1])
-
+        counts = np.bincount(groups, minlength=n_groups)
+        present = counts > 0
+        q = present.astype(float) / present.sum()
+        base_weight = np.ones(len(y)) if sample_weight is None else np.asarray(sample_weight, dtype=float)
+        if base_weight.shape != y.shape or np.any(base_weight < 0) or not np.isfinite(base_weight).all():
+            raise ValueError("Invalid sample weights")
+        masses = np.bincount(groups, weights=base_weight, minlength=n_groups)
+        if np.any(masses[present] <= 0):
+            raise ValueError("Every present group needs positive sample mass")
+        penalty = self.config.ridge_alpha * np.eye(Z.shape[1])
+        penalty[-1, -1] = 0.0  # unpenalized intercept
         for _ in range(self.config.groupdro_steps):
-            for j in range(Z.shape[1]):
-                num = 0.0
-                den = 0.0
-                for g in range(n_groups):
-                    mask = groups == g
-                    if not mask.any():
-                        continue
-                    wg = q[g]
-                    zg = Z[mask, j]
-                    num += wg * float(np.sum(w_sample[mask] * zg))
-                    den += wg * float(np.sum(w_sample[mask] * zg * zg))
-                coef[j] = num / (den + self.config.ridge_alpha) if j < Z.shape[1] - 1 else 0.0
-
-            pred = Z @ coef
-            resid = y - pred
-            g_loss = gd.group_losses(resid, groups, n_groups)
-            q = gd.groupdro_weights(g_loss, q, eta=self.config.groupdro_eta)
-            w_sample = np.array([q[groups[i]] for i in range(len(groups))])
+            used_q = q.copy()
+            weights = base_weight * q[groups] / masses[groups]
+            lhs = Z.T @ (weights[:, None] * Z) + penalty
+            rhs = Z.T @ (weights * y)
+            coef = np.linalg.lstsq(lhs, rhs, rcond=None)[0]
+            residual_sq = (y - Z @ coef) ** 2
+            losses = np.bincount(groups, weights=base_weight * residual_sq, minlength=n_groups)
+            losses[present] /= masses[present]
+            log_q = np.log(q[present]) + self.config.groupdro_eta * losses[present]
+            log_q -= log_q.max()
+            q[present] = np.exp(log_q) / np.exp(log_q).sum()
+        # Store the weights used for the final regression, not an unused next update.
+        q = used_q
+        self._history_X = X[-max(self.config.slow_window, self.config.vol_window):].copy()
+        self._returns_col = returns_col
 
         self.coef_ = coef
         self.intercept_ = float(coef[-1]) if len(coef) else 0.0
@@ -110,7 +118,13 @@ class M09Model(BaseModel):
     def predict(self, X: np.ndarray, **kwargs: Any) -> np.ndarray:
         if not self._fitted or self.fusion is None or self.coef_ is None:
             raise RuntimeError("Model not fitted")
-        fast, slow = self._split_streams(X, returns_col=kwargs.get("returns_col", 0))
+        X = np.asarray(X, dtype=float)
+        history = getattr(self, "_history_X", np.empty((0, X.shape[1])))
+        if history is None:
+            history = np.empty((0, X.shape[1]))
+        joined = np.concatenate([history, X], axis=0)
+        fast, slow = self._split_streams(joined, returns_col=kwargs.get("returns_col", getattr(self, "_returns_col", 0)))
+        fast, slow = fast[len(history):], slow[len(history):]
         Z = self.fusion.transform(fast, slow)
         Z = np.hstack([Z, np.ones((len(Z), 1))])
         return Z @ self.coef_
@@ -125,6 +139,8 @@ class M09Model(BaseModel):
             "fusion": None if self.fusion is None else self.fusion.state_dict(),
             "group_weights": None if self.group_weights_ is None else self.group_weights_.tolist(),
             "fitted": self._fitted,
+            "history_X": getattr(self, "_history_X", None),
+            "returns_col": getattr(self, "_returns_col", 0),
         }
 
     def _deserialize_state(self, state: Mapping[str, Any]) -> None:
@@ -132,6 +148,8 @@ class M09Model(BaseModel):
         self.coef_ = None if state["coef"] is None else np.asarray(state["coef"])
         self.group_weights_ = None if state["group_weights"] is None else np.asarray(state["group_weights"])
         self._fitted = bool(state["fitted"])
+        self._history_X = state.get("history_X", None)
+        self._returns_col = state.get("returns_col", 0)
         if state["fusion"] is not None:
             self.fusion = FusionModule(1, 2, hidden=self.config.fusion_hidden)
             self.fusion.load_state_dict(state["fusion"])

@@ -104,11 +104,29 @@ class FIJEPAModel(BaseModel):
         y = np.asarray(y, dtype=float).ravel()
         n = seq_np.shape[0]
         split = max(1, int(n * (1.0 - self.config.holdout_future_frac)))
-        train_idx = np.arange(split)
+        # Explicit forward targets overlap adjacent rows. Purge training rows
+        # whose target horizon would reach the internal validation origin.
+        train_end = split
+        if kwargs.get("future_windows") is not None:
+            train_end = split - max(self.config.horizons) + 1
+        if train_end < 2:
+            raise ValueError("Not enough matured training rows after horizon purge")
+        train_idx = np.arange(train_end)
         hold_idx = np.arange(split, n)
 
         seq_t = torch.as_tensor(seq_np, dtype=torch.float32, device=self.device)
         y_t = torch.as_tensor(y, dtype=torch.float32, device=self.device)
+        self.predictive_coeff_ = float(kwargs.get("predictive_coeff", 1.0))
+        if self.predictive_coeff_ < 0: raise ValueError("predictive_coeff must be nonnegative")
+        future_windows = kwargs.get("future_windows")
+        self.target_mode_ = "explicit_future_windows" if future_windows is not None else "in_context_self_distillation_not_future"
+        future_t = {}
+        if future_windows is not None:
+            for ho in self.config.horizons:
+                arr = np.asarray(future_windows[ho], dtype=float)
+                if arr.shape != (n, ho, self.config.input_dim) or not np.isfinite(arr).all():
+                    raise ValueError("future_windows must have shape (n, horizon, input_dim)")
+                future_t[ho] = torch.as_tensor(arr, dtype=torch.float32, device=self.device)
         ret_aux = y_t
         vol_aux = torch.sqrt(torch.relu(y_t ** 2) + 1e-6)
 
@@ -118,13 +136,13 @@ class FIJEPAModel(BaseModel):
                 idx = train_idx[start : start + self.config.batch_size]
                 batch = seq_t[idx]
                 z_c = self.context(batch)
-                futures = self._future_slices(batch)
+                futures = {ho: arr[idx] for ho, arr in future_t.items()} if future_t else self._future_slices(batch)
                 loss = torch.zeros((), device=self.device)
                 for ho, fut in futures.items():
                     with torch.no_grad():
                         z_t = self.target(fut)
                     z_p = self.predictors[str(ho)](z_c)
-                    loss = loss + nn.functional.mse_loss(z_p, z_t)
+                    loss = loss + self.predictive_coeff_ * nn.functional.mse_loss(z_p, z_t)
                 pred_ret, pred_vol = self.aux(z_c)
                 loss = loss + self.config.aux_coeff * (
                     nn.functional.mse_loss(pred_ret, ret_aux[idx])
@@ -136,19 +154,14 @@ class FIJEPAModel(BaseModel):
                 self._opt.step()
                 ema_update(self.target, self.context, self.config.ema_momentum)
 
-            # Held-out future: train heads but NO target EMA from holdout
+            # Diagnostics only: neither gradients nor optimizer/EMA updates use holdout.
+            self.validation_loss_ = None
             if len(hold_idx) > 0:
-                batch = seq_t[hold_idx]
-                z_c = self.context(batch)
-                futures = self._future_slices(batch)
-                loss = torch.zeros((), device=self.device)
-                for ho, fut in futures.items():
-                    z_t = self.target(fut).detach()
-                    z_p = self.predictors[str(ho)](z_c)
-                    loss = loss + nn.functional.mse_loss(z_p, z_t)
-                self._opt.zero_grad()
-                loss.backward()
-                self._opt.step()
+                self.context.eval()
+                with torch.no_grad():
+                    z_c = self.context(seq_t[hold_idx])
+                    predicted, _ = self.aux(z_c)
+                    self.validation_loss_ = float(nn.functional.mse_loss(predicted, y_t[hold_idx]).cpu())
 
         self._fitted = True
         return self
@@ -174,6 +187,8 @@ class FIJEPAModel(BaseModel):
             "predictors": self.predictors.state_dict(),
             "aux": self.aux.state_dict(),
             "fitted": self._fitted,
+            "target_mode": getattr(self, "target_mode_", "legacy_in_context"),
+            "predictive_coeff": getattr(self, "predictive_coeff_", 1.0),
         }
 
     def _deserialize_state(self, state: Mapping[str, Any]) -> None:
@@ -200,3 +215,5 @@ class FIJEPAModel(BaseModel):
             lr=self.config.lr,
         )
         self._fitted = bool(state.get("fitted", False))
+        self.target_mode_ = state.get("target_mode", "legacy_in_context")
+        self.predictive_coeff_ = state.get("predictive_coeff", 1.0)

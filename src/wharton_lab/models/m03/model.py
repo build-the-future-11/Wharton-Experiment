@@ -82,15 +82,21 @@ class M03ConditionalNonlinearFactor(BaseModel):
             else:
                 self._ar_params.append((0.0, 0.0))
 
-        # Target loadings: approximate via cross-section regression targets
-        # r_i ≈ beta_i · f_last
-        f_last = factors[-1]
-        denom = np.sum(f_last**2) + 1e-8
-        target_loadings = np.outer(y, f_last) / denom  # (N, K) rank-1 proxy
+        # Use the entire observed training panel, not a single-snapshot rank-1 proxy.
+        self.loading_target_ = kwargs.get("loading_target", "historical_ols")
+        self._has_alpha = self.loading_target_ == "historical_ols"
+        if self._has_alpha:
+            design = np.column_stack([np.ones(len(factors)), factors])
+            target_loadings = np.linalg.lstsq(design, np.asarray(returns_panel), rcond=None)[0].T
+        elif self.loading_target_ == "legacy_single_snapshot":
+            f_last = factors[-1]
+            target_loadings = np.outer(y, f_last) / (np.sum(f_last**2)+1e-8)
+        else:
+            raise ValueError("Unknown loading target mode")
 
         self._mlp = LoadingMLP(
             n_char=self._n_char,
-            n_factors=int(K),
+            n_factors=target_loadings.shape[1],
             hidden=self.config.mlp_hidden,
             lr=self.config.mlp_lr,
             random_state=self.config.random_state,
@@ -120,6 +126,8 @@ class M03ConditionalNonlinearFactor(BaseModel):
         X = np.asarray(X, dtype=float)
         betas = self._mlp.forward(X)  # (N, K)
         f_fore = self.forecast_factors(steps=forecast_steps)[-1]
+        if getattr(self, "_has_alpha", False):
+            return betas[:, 0] + (betas[:, 1:] * f_fore[None, :]).sum(axis=1)
         return (betas * f_fore[None, :]).sum(axis=1)
 
     def smoke_forward(self, n_features: int = 4, n_samples: int = 32) -> dict[str, Any]:
@@ -145,6 +153,8 @@ class M03ConditionalNonlinearFactor(BaseModel):
             "pca": self._pca,
             "fitted": self._fitted,
             "n_char": self._n_char,
+            "has_alpha": getattr(self, "_has_alpha", False),
+            "loading_target": getattr(self, "loading_target_", "legacy_single_snapshot"),
         }
 
     def _deserialize_state(self, state: Mapping[str, Any]) -> None:
@@ -154,6 +164,8 @@ class M03ConditionalNonlinearFactor(BaseModel):
         self._pca = state["pca"]
         self._fitted = state["fitted"]
         self._n_char = state["n_char"]
+        self._has_alpha = state.get("has_alpha", False)
+        self.loading_target_ = state.get("loading_target", "legacy_single_snapshot")
         if state["mlp"] is not None:
             self._mlp = LoadingMLP(self._n_char, self.config.n_factors)
             self._mlp.load_state_dict(state["mlp"])

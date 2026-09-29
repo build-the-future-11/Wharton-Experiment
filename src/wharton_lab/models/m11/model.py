@@ -10,7 +10,8 @@ from wharton_lab.contracts.base import ModelCapabilities, ModelMetadata
 from wharton_lab.exceptions import BlockedClientError
 from wharton_lab.models.base import BaseModel
 from wharton_lab.models.m11.config import M11Config
-from wharton_lab.models.m11.mpc import MPCResult, PortfolioState, solve_mpc
+from wharton_lab.models.m11.mpc import MPCResult, PortfolioState
+from wharton_lab.models.m11.mpc_verified import solve_mpc
 
 
 class M11Model(BaseModel):
@@ -85,6 +86,9 @@ class M11Model(BaseModel):
                 cvar_alpha=self.config.cvar_alpha,
                 max_weight=self.config.max_weight,
                 tcost_bps=self.config.transaction_cost_bps,
+                allow_cash=self.config.allow_cash,
+                min_cash_buffer=self.config.min_cash_buffer,
+                solver=self.config.solver,
             )
         except Exception as exc:
             return self._handle_infeasible(exc)
@@ -95,16 +99,7 @@ class M11Model(BaseModel):
         return result.first_action_weights
 
     def _handle_infeasible(self, exc: Exception) -> np.ndarray:
-        k = self._scenario_returns.shape[-1] if self._scenario_returns is not None else 1
-        if self._state is not None:
-            h = self._state.holdings
-            h_sum = 0.0 if h is None else float(np.asarray(h).sum())
-            port = self._state.cash + h_sum
-            if port <= 0:
-                raise BlockedClientError(f"Insolvent client state: {exc}") from exc
-        w = np.zeros(k)
-        w[0] = 1.0
-        return w
+        raise BlockedClientError(f"No verified feasible allocation; failing closed: {exc}") from exc
 
     def capabilities(self) -> ModelCapabilities:
         return ModelCapabilities(requires_maturity=False)

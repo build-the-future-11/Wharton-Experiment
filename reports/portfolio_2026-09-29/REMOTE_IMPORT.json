@@ -1,0 +1,12 @@
+{
+  "upstream_baseline": "8e3d790dd513a93b7d80d5726a8b2708e8615b71",
+  "patch_sha256": "a5778731dc1e749dc5c9f03e7e8a67d3a5725e222b2d4000b9aa5805eb97dd19",
+  "source_fingerprint": "39292d20615c26dc7e310b6543ca36651063ded1a6369f9255e82897f70ad045",
+  "remote_checks": [
+    "patch checksum",
+    "clean patch applicability",
+    "Python syntax compilation",
+    "exact experimental source fingerprint"
+  ],
+  "tests_and_experiments_executed_locally_not_in_this_workflow": true
+}

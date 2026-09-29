@@ -107,15 +107,12 @@ class QAPENModel(BaseModel):
         return np.stack(preds, axis=1), np.stack(vars_, axis=1)
 
     def _aggregate(self, weights: np.ndarray, preds: np.ndarray, vars_: np.ndarray) -> np.ndarray:
-        # disagreement-aware: down-weight high-variance / disagreeing experts
-        mean_pred = (weights * preds).sum(axis=1)
-        disagree = np.var(preds, axis=1)
-        noise = (weights * vars_).sum(axis=1)
-        conf = 1.0 / (self.config.disagreement_eps + disagree + noise)
-        num = (weights * preds * conf[:, None]).sum(axis=1)
-        den = (weights * conf[:, None]).sum(axis=1)
-        den[den < 1e-12] = 1.0
-        return num / den
+        # Reliability must vary by expert: a common row-wise factor cancels.
+        center = (weights * preds).sum(axis=1, keepdims=True)
+        reliability = 1.0 / (self.config.disagreement_eps + np.maximum(vars_, 0) + (preds-center)**2)
+        reliable_weights = weights * reliability
+        denom = reliable_weights.sum(axis=1)
+        return (reliable_weights * preds).sum(axis=1) / np.maximum(denom, 1e-12)
 
     def _lifecycle_update(self, batch_loss: float) -> None:
         ready = self._lifecycle.advance_step()

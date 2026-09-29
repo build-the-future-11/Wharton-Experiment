@@ -20,7 +20,7 @@ class DynamicGraphState:
         out = np.zeros((n, d))
         for i in range(n):
             sl = returns[max(0, i - self.window) : i]
-            if len(sl) < 2:
+            if len(sl) < 2 or d == 1 or self.k < 1:
                 out[i] = returns[i]
                 continue
             corr = np.corrcoef(sl.T)
@@ -29,7 +29,7 @@ class DynamicGraphState:
                 continue
             np.fill_diagonal(corr, -np.inf)
             for j in range(d):
-                nbrs = np.argsort(corr[j])[-self.k :]
+                nbrs = np.argsort(corr[j])[-min(self.k, d - 1) :]
                 out[i, j] = float(np.mean(returns[i, nbrs]))
         return out
 

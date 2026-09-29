@@ -13,6 +13,7 @@ class M11Config:
     max_weight: float = 0.4
     min_cash_buffer: float = 0.0
     solver: str = "slsqp"
+    allow_cash: bool = False
 
     def to_dict(self) -> dict:
         return asdict(self)

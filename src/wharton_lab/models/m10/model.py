@@ -53,13 +53,18 @@ class M10Model(BaseModel):
         y = np.asarray(y, dtype=float)
         if y.ndim == 1:
             y = y.reshape(-1, 1)
+        if len(X) != len(y) or not np.isfinite(X).all() or not np.isfinite(y).all():
+            raise ValueError("Finite aligned training arrays are required")
+        if self.config.n_ode_steps < 1 or self.config.training_tau_samples < 1 or self.config.ridge_alpha < 0:
+            raise ValueError("Invalid flow solver or training configuration")
         ctx = self._context(X)
         self._context_mean = ctx.mean(axis=0)
         self._y_mean = y.mean(axis=0)
         ctx_c = ctx - self._context_mean
         n, out_dim = y.shape
         d = ctx_c.shape[1]
-        in_dim = out_dim + d
+        in_dim = out_dim + d + 2
+        self._feature_version = 2
         F_list = []
         V_list = []
         for i in range(n):
@@ -71,16 +76,19 @@ class M10Model(BaseModel):
                     student_t_df=self.config.student_t_df,
                     scale=self.config.noise_scale,
                 )
-                x_tau = flow.bridge_sample(z, y_i, float(self._rng.uniform(0, 1)))
+                tau = float(self._rng.uniform(0, 1))
+                x_tau = flow.bridge_sample(z, y_i, tau)
                 v_tgt = flow.bridge_velocity(z, y_i)
-                F_list.append(np.concatenate([x_tau, ctx_c[i]]))
+                F_list.append(np.concatenate([x_tau, ctx_c[i], [tau, 1.0]]))
                 V_list.append(v_tgt)
         F = np.vstack(F_list)
         V = np.vstack(V_list)
-        self._W = np.linalg.solve(
-            F.T @ F + self.config.ridge_alpha * np.eye(in_dim),
-            F.T @ V,
-        )
+        penalty = self.config.ridge_alpha * np.eye(in_dim)
+        penalty[-1, -1] = 0
+        self._W = np.linalg.lstsq(
+            F.T @ F + penalty,
+            F.T @ V, rcond=None,
+        )[0]
         self._fitted = True
         return self
 
@@ -92,8 +100,8 @@ class M10Model(BaseModel):
         def v_fn(z: np.ndarray, tau: float) -> np.ndarray:
             z = np.asarray(z, dtype=float).ravel()
             if z.size != out_dim:
-                z = np.resize(z, out_dim)
-            feat = np.concatenate([z, context_row])
+                raise ValueError("Velocity state dimension mismatch")
+            feat = np.concatenate([z, context_row, [tau, 1.0]]) if getattr(self, "_feature_version", 1) == 2 else np.concatenate([z, context_row])
             return feat @ W
 
         return v_fn
@@ -102,7 +110,11 @@ class M10Model(BaseModel):
         if not self._fitted or self._W is None:
             raise RuntimeError("Model not fitted")
         n_paths = int(kwargs.get("n_paths", 16))
+        if n_paths < 1:
+            raise ValueError("n_paths must be positive")
         ctx = self._context(X)
+        if ctx.shape[1] != len(self._context_mean) or not np.isfinite(ctx).all():
+            raise ValueError("Context dimension mismatch or nonfinite input")
         if ctx.shape[0] == 1 and n_paths > 1:
             ctx = np.repeat(ctx, n_paths, axis=0)
         out_dim = self._W.shape[1]
@@ -126,11 +138,7 @@ class M10Model(BaseModel):
         k = self.config.n_assets
         h = self.config.path_steps
         if flat.shape[1] != k * h:
-            flat = flat.reshape(n_paths, -1)
-            if flat.shape[1] < k * h:
-                pad = np.zeros((n_paths, k * h - flat.shape[1]))
-                flat = np.hstack([flat, pad])
-            flat = flat[:, : k * h]
+            raise ValueError("Trained target dimension does not equal path_steps * n_assets; no future padding is allowed")
         return flat.reshape(n_paths, h, k)
 
     def capabilities(self) -> ModelCapabilities:
@@ -143,6 +151,8 @@ class M10Model(BaseModel):
             "context_mean": None if self._context_mean is None else self._context_mean.tolist(),
             "y_mean": None if self._y_mean is None else self._y_mean.tolist(),
             "fitted": self._fitted,
+            "rng_state": self._rng.bit_generator.state,
+            "feature_version": getattr(self, "_feature_version", 1),
         }
 
     def _deserialize_state(self, state: Mapping[str, Any]) -> None:
@@ -152,6 +162,9 @@ class M10Model(BaseModel):
         self._y_mean = None if state["y_mean"] is None else np.asarray(state["y_mean"])
         self._fitted = bool(state["fitted"])
         self._rng = np.random.default_rng(self.config.random_state)
+        if state.get("rng_state") is not None:
+            self._rng.bit_generator.state = state["rng_state"]
+        self._feature_version = state.get("feature_version", 1)
 
     def config_dict(self) -> Mapping[str, Any]:
         return self.config.to_dict()
