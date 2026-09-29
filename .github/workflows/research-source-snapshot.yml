@@ -1,0 +1,29 @@
+name: Research source snapshot
+on:
+  push:
+    branches: [research/portfolio-verification-2026-09-29]
+    paths: [.github/workflows/research-source-snapshot.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: 8e3d790dd513a93b7d80d5726a8b2708e8615b71
+          persist-credentials: false
+      - name: Archive the inspected baseline without running any experiments
+        run: |
+          git archive --format=zip --output=research-source.zip HEAD
+          sha256sum research-source.zip > research-source.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: research-source-8e3d790
+          path: |
+            research-source.zip
+            research-source.sha256
+          retention-days: 7
+          if-no-files-found: error
