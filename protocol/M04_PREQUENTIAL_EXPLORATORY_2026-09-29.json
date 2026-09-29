@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "confirmatory": false,
+  "data_scope": "synthetic_only",
+  "purpose": "Exercise canonical Financial APEN memory with maturity-safe online updates, not prove market alpha.",
+  "upstream_revision": "8e3d790dd513a93b7d80d5726a8b2708e8615b71",
+  "worlds": [
+    "signal",
+    "null",
+    "regimes",
+    "fat_tails"
+  ],
+  "seeds": [
+    11,
+    23,
+    47,
+    89,
+    131
+  ],
+  "n_steps": 1200,
+  "n_assets": 5,
+  "n_folds": 8,
+  "min_train": 300,
+  "test_size": 100,
+  "horizon_steps": 1,
+  "maturity_delay": 2,
+  "bias_gain": 0.1,
+  "arms": [
+    "zero",
+    "historical_mean",
+    "online_mean",
+    "ridge_no_memory",
+    "online_bias",
+    "M04_online",
+    "M04_zero_residual"
+  ],
+  "primary_contrast": [
+    "M04_online",
+    "ridge_no_memory"
+  ],
+  "secondary_benchmarks": [
+    "online_bias",
+    "historical_mean",
+    "online_mean"
+  ],
+  "metric": "one-step MSE; OOS R2 vs named matched benchmark; no pooled cross-world MSE",
+  "preprocessing": "Standardize features using mature training rows only; use exactly the same frozen ridge backbone for M04 and its no-memory contrast.",
+  "availability": "Outcome for decision row t is released before prediction at t+1+2. Exclude immature training labels. Clock is logical steps, not calendar dates.",
+  "online_updates": "Only already-predicted test outcomes that have matured are disclosed. Cold-start memory each fold. No in-sample residual warming. Boundary-purged labels are not later fed into online controls.",
+  "seed_interpretation": "Five development seeds per world. Folds share training histories and are not independent replications. Worlds share seed identifiers; no pooled significance claim.",
+  "negative_control": "The zero-residual-memory ablation must exactly match the ridge backbone. SIGNAL is contemporaneous latent signal; its causal lags do not expose that latent value.",
+  "source_policy": "Fail closed if any of the eight original module Git blob hashes changes. Legacy protocols, code, results and holdout remain unchanged.",
+  "exclusions": [
+    "real ETF cache",
+    "client portfolio",
+    "transaction costs",
+    "deployment",
+    "confirmatory inference",
+    "other eleven core models"
+  ],
+  "retuning": "No outcome-driven hyperparameter search in this run."
+}
