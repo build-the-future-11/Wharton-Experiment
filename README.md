@@ -2,7 +2,12 @@
 
 Investment research and preparation for the Wharton Global High School Investment Competition.
 
-## Current state - 2026-09-27
+## Research source and reproduction
+
+For the repaired twelve-model synthetic study, start with [RESEARCH_HANDOFF.md](RESEARCH_HANDOFF.md). It identifies the pinned repaired source and the separate September 30 paper archive, with their different reproduction commands and data requirements.
+
+The September 27 preparation material below is retained as a historical record. It does not describe the later research release or establish competition registration.
+## Historical preparation state - 2026-09-27
 
 Local preparation tools and documents are ready for review. **Competition submission remains BLOCKED** on the complete client case, trading/eligibility sources, real WInS records, student review and authority. IPS and Trading Notes instruction PDFs were recovered from Downloads and verified; see `protocol/VERIFIED_DELIVERABLE_REQUIREMENTS.md`.
 
@@ -16,7 +21,7 @@ The earlier synthetic forecasting win was withdrawn for leakage. Repaired tested
 - `output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf` - three-page working IPS, verified font/length structure; case and roster still missing.
 - `ASTRA_FINAL_REPORT.md`, `STATUS.md`, `CLAIMS.md`, `LIMITATIONS.md` - exact scope, evidence and blockers.
 
-## Reproduce the current package
+## Reproduce the historical preparation package
 
 ```bash
 PYTHONPATH=src .venv/bin/python scripts/run_competition_stress.py
