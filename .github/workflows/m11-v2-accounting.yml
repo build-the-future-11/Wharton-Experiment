@@ -1,0 +1,57 @@
+name: M11 v2 development accounting
+
+on:
+  pull_request:
+    paths:
+      - "src/wharton_lab/models/m11/**"
+      - "src/wharton_lab/competition/stress.py"
+      - "pyproject.toml"
+      - "tests/unit/test_m11_v2*.py"
+      - "tests/unit/test_competition_stress.py"
+      - "protocol/M11_V2_ACCOUNTING_AMENDMENT_20261010.md"
+      - ".github/workflows/m11-v2-accounting.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/wharton_lab/models/m11/**"
+      - "src/wharton_lab/competition/stress.py"
+      - "pyproject.toml"
+      - "tests/unit/test_m11_v2*.py"
+      - ".github/workflows/m11-v2-accounting.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: m11-v2-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bounded-accounting-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - name: Checkout exact candidate source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ env.SOURCE_SHA }}
+          persist-credentials: false
+      - name: Verify source identity
+        run: test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.11"
+      - name: Install declared CPU dependencies
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e . pytest
+      - name: Run bounded fictional accounting and numerical tests
+        run: >-
+          python -m pytest
+          tests/unit/test_m11_v2_objective_numerics.py
+          tests/unit/test_m11_v2.py
+          tests/unit/test_m11.py
+          tests/unit/test_competition_stress.py -q

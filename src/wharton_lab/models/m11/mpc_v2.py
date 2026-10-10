@@ -9,6 +9,8 @@ empirical CVaR of each scenario's maximum outstanding arrears.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from fractions import Fraction
+import math
 
 import numpy as np
 from scipy.optimize import minimize
@@ -118,19 +120,33 @@ def empirical_cvar_v2(losses: np.ndarray, alpha: float = 0.95) -> float:
         raise ValueError("losses must be a nonempty finite vector")
     if not np.isfinite(alpha) or not 0 <= alpha < 1:
         raise ValueError("alpha must be in [0, 1)")
-    scale = float(np.max(np.abs(losses)))
-    if scale == 0:
-        return 0.0
-    ordered = np.sort(losses / scale)[::-1]
-    mass = (1 - alpha) * len(ordered)
+    ordered = np.sort(losses)[::-1]
+    mass = float((1 - alpha) * len(ordered))
     whole = int(np.floor(mass))
     fractional = mass - whole
-    total = float(ordered[:whole].sum())
+    # Accumulate the supplied binary64 values exactly: scaling first can erase
+    # a small residual when large positive and negative losses cancel. The
+    # explicit fractional tail mass is kept until one final float conversion.
+    total = sum((Fraction(float(value)) for value in ordered[:whole]), Fraction())
     if fractional > 0 and whole < len(ordered):
-        total += fractional * float(ordered[whole])
-    # A normalized weighted average cannot exceed the observed loss range.
-    tail_mean = float(np.clip(total / mass, ordered[-1], ordered[0]))
-    return tail_mean * scale
+        total += Fraction(fractional) * Fraction(float(ordered[whole]))
+    tail_mean = float(total / Fraction(mass))
+    if tail_mean == 0 and total != 0:
+        raise ArithmeticError("CVaR underflow; the objective is below binary64 resolution")
+    return tail_mean
+
+
+def _terminal_mean(wealth):
+    """Mean finite ledger values without overflowing an intermediate sum."""
+    values = [float(value) for value in wealth]
+    try:
+        total = math.fsum(values)
+    except OverflowError:
+        total = sum((Fraction(value) for value in values), Fraction())
+    mean = float(total / len(values))
+    if mean == 0 and total != 0:
+        raise ArithmeticError("terminal-wealth objective underflow")
+    return mean
 
 
 def solve_mpc_v2(
@@ -167,8 +183,18 @@ def solve_mpc_v2(
 
     def objective(flat):
         ledger = ledger_at(flat)
-        return (empirical_cvar_v2(ledger.arrears.max(axis=1), cvar_alpha)
-                - terminal_wealth_weight * float(ledger.wealth[:, -1].mean()))
+        value = empirical_cvar_v2(ledger.arrears.max(axis=1), cvar_alpha)
+        # A disabled reward must not evaluate an unused reduction: 0 * inf
+        # produced NaN even when every ledger and the true objective were finite.
+        if terminal_wealth_weight:
+            mean_wealth = _terminal_mean(ledger.wealth[:, -1])
+            reward = terminal_wealth_weight * mean_wealth
+            if reward == 0 and mean_wealth != 0:
+                raise ArithmeticError("terminal-wealth objective product underflow")
+            value -= reward
+        if not math.isfinite(value):
+            raise ArithmeticError("MPC objective is not representable as a finite value")
+        return value
 
     # One linear inequality per period; the same controls serve all scenarios.
     constraints = {"type": "ineq", "fun": lambda flat: allowed - flat.reshape(horizon, assets).sum(axis=1)}
