@@ -1,0 +1,150 @@
+{
+  "schema": "retained.engineering.artifacts.v1",
+  "scope": "record files plus full raw artifacts in the named archives; index excludes itself and mutable canonical index to avoid circular hashes",
+  "artifacts": [
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/archive_manifest.json",
+      "bytes": 2520,
+      "sha256": "c3f049db9c8b9f841c5eb375d6d9b4bb6af71b61a3d7520294d35f44456036bc",
+      "git_blob": "99333b9d13c0cff6a4036d5e146fddcdb1e3b94c"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/baseline.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/baseline.stdout.log",
+      "bytes": 1139,
+      "sha256": "50a401e807ce64501a011090015e834de3af6b7b67be324745407e6cf9176800",
+      "git_blob": "36723d6e4773d439dc51a3baa55e54cbd3c6c278"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/baseline_pytest_artifacts.tar.gz",
+      "bytes": 75,
+      "sha256": "b5ead1016dfadfd2cef1a1ec3f42cc1e0b6f3e45cac08265744295b2405dbd3e",
+      "git_blob": "7bbc25bfa96044cb623eaa7b99f7e913fbb12d4e"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/baseline_receipt.json",
+      "bytes": 4878,
+      "sha256": "58d963ea6518827aa3e461b0e7f7cbf01af31ee0bfd2d3c2e80a5028df025d74",
+      "git_blob": "26bb137a32d19a2fb2c4013e61bb78733ac5b2db"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/closure.json",
+      "bytes": 6052,
+      "sha256": "b7345ca9b42deabd18aae02bb596f1e6064edfb0d3feb5d45c7fb5f6e4087882",
+      "git_blob": "a732eb6a01f9534d8bc4bd82bee1017638c6e390"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/contract.json",
+      "bytes": 3329,
+      "sha256": "9709a89423b32d7de6891a965785a53441535092daa7506bdbd1b9ba04ac7378",
+      "git_blob": "9d51fee791476bb0e752708522c0ff4c1a3783a0"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/final.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/final.stdout.log",
+      "bytes": 113,
+      "sha256": "2084e09ba88722431e7eae7c591b849674dd4c2b83c475341310869242905b35",
+      "git_blob": "ee35d11123ef30a1b3437f9d0ba37656abb0693d"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/final_pytest_artifacts.tar.gz",
+      "bytes": 72,
+      "sha256": "7a310e105c2bf0074d1ae75371b1aa11e7670184342e0921356eefbad9cbdc45",
+      "git_blob": "ff6cb569d73480f5dde63569b5d5d71cd745ffbc"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/final_receipt.json",
+      "bytes": 29159,
+      "sha256": "822950c3270cccdfd42df664e25e2f55d96e25e454a1fdf1d2b3f01ff1935f7d",
+      "git_blob": "b5b1e2291d155fde2a92e5d7db6e37004370d69f"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture.stdout.log",
+      "bytes": 1014,
+      "sha256": "cb95ceac5b8cdeae16eede5cce62d177671cef1410c608c7b8a7a53667af37f9",
+      "git_blob": "22792ed1ebe8e144da6cc2b5abc7847d5ece7681"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture_artifacts.tar.gz",
+      "bytes": 11066,
+      "sha256": "7cb18cb9378e5eb3ec94b7121529ea5e72a7fc21a8186d1e99b6ef8658c40196",
+      "git_blob": "202ff0b2f4fc669c718a6cdefc3eba23a1d2aa5d"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture_receipt.json",
+      "bytes": 28546,
+      "sha256": "9f15bda3a5074cbe417fc9bc4f7808b5fce5270f2fda163644a0be00bd11be48",
+      "git_blob": "2781dbec586ee4c4d1cb08bdbca8b89dc843883c"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture_result.json",
+      "bytes": 14290,
+      "sha256": "83929972adf7cc7260e7f310d59e589a88d8ec19aad9e09722b15e6504b7ead3",
+      "git_blob": "dce30450ba18424a7bf04934a00c23917c0df6f2"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/incoming/EXECUTION_STATE.json.snapshot",
+      "bytes": 2477,
+      "sha256": "a97f683e0a4626ce1ab589a32eb79ae8869e1a6e06dd847d1931ab03b5a3f1bd",
+      "git_blob": "c622df6a879fc614d9e33b443fa882076694704d"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/incoming/baseline_test_m11_v2_midpoint.py.snapshot",
+      "bytes": 5896,
+      "sha256": "5433226ba8c1cb7758393fd7bf0cfd354684cbc8fc723db4fef9ced9f808d584",
+      "git_blob": "6174004162140ad8d943b92117003d04e651e405"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/incoming/mpc.py.snapshot",
+      "bytes": 3564,
+      "sha256": "af467317a6356010f0c5cb4098048d298c76b63c3030bfa2af6eb4aa5666fcbf",
+      "git_blob": "4047e51225d8b012fc8443ed8295669056ebe7fc"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/incoming/mpc_v2.py.snapshot",
+      "bytes": 11155,
+      "sha256": "81ebf89c490f652dc2dc3153ae05ae03256f20c20e20621584081eb529d53d1a",
+      "git_blob": "017a68324d76a62d12d5d84f4b968c5c674bdc48"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/incoming/stress.py.snapshot",
+      "bytes": 6156,
+      "sha256": "c0e4ebd27545219069578a08cab228f727ed84e04e08e66e1ccaa1713808f351",
+      "git_blob": "e8c66dc9e6ba1dbab6716d88a885454152561a67"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/run_fixture.py",
+      "bytes": 8637,
+      "sha256": "fd91609bd47916b19a1cf02ce6853866d4e4f72526d2886efb4bf50780ca0925",
+      "git_blob": "e650253a615518c4c7351243c36a547d3deecbe7"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/runtime.diff",
+      "bytes": 2778,
+      "sha256": "3f14d46da52a0056c0f6c0d636d433b959e7743766317243ef097a100687ff56",
+      "git_blob": "f0503fce8408914eccd0c971c3f5ac07a2befe5f"
+    },
+    {
+      "path": "research/development/m11_v2_midpoint_20261010/verify.py",
+      "bytes": 3676,
+      "sha256": "7c424fe1ee3c07a3b67dddd0d2c192c41879cd176314031657da33e70273043d",
+      "git_blob": "133e6de335d7b616f0dce0b680fc0d140a54ed71"
+    }
+  ]
+}

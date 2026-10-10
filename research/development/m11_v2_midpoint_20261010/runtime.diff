@@ -1,0 +1,66 @@
+--- parent/src/wharton_lab/models/m11/mpc_v2.py
++++ candidate/src/wharton_lab/models/m11/mpc_v2.py
+@@ -15,7 +15,6 @@
+ import numpy as np
+ from scipy.optimize import minimize
+ 
+-from wharton_lab.competition.stress import rebalance
+ from wharton_lab.models.m11.mpc import PortfolioState
+ 
+ 
+@@ -61,6 +60,46 @@
+     return returns, due, holdings
+ 
+ 
++def _midpoint_v2(lo, hi):
++    """Keep the native midpoint unless its finite endpoint sum overflows."""
++    total = lo + hi
++    # The rebalance bracket is nonnegative and ordered, so hi - lo is finite.
++    return total / 2 if math.isfinite(total) else lo + (hi - lo) / 2
++
++
++def _rebalance_v2(holdings, cash: float, weights, cost_bps: float):
++    """Existing stress fixed point with an opt-in finite-midpoint correction.
++
++    The frozen competition implementation remains unchanged. Preserve its
++    validation, 80 iterations, fee law and ordinary operation order here.
++    """
++    holdings = np.asarray(holdings, dtype=float)
++    weights = np.asarray(weights, dtype=float)
++    if (holdings.ndim != 1 or holdings.shape != weights.shape
++            or not np.all(np.isfinite(holdings)) or not np.all(np.isfinite(weights))
++            or not np.isfinite(cash) or cash < 0 or np.any(holdings < 0)
++            or np.any(weights < 0) or weights.sum() > 1 + 1e-12
++            or not np.isfinite(cost_bps) or not 0 <= cost_bps < 10000):
++        raise ValueError("invalid long-only portfolio or cost")
++    wealth = float(cash + holdings.sum())
++    cost_rate = cost_bps / 10000
++    # V_after + cost * sum(|w * V_after - current_holdings|) = V_before.
++    lo, hi = 0.0, wealth
++    for _ in range(80):
++        mid = _midpoint_v2(lo, hi)
++        if mid + cost_rate * np.abs(weights * mid - holdings).sum() > wealth:
++            hi = mid
++        else:
++            lo = mid
++    target = weights * _midpoint_v2(lo, hi)
++    turnover = float(np.abs(target - holdings).sum())
++    fee = cost_rate * turnover
++    remaining_cash = wealth - target.sum() - fee
++    if remaining_cash < -1e-10:
++        raise ArithmeticError("rebalance overspent available cash")
++    return target, max(0.0, float(remaining_cash)), fee, turnover
++
++
+ def simulate_cash_ledger_v2(
+     *, state: PortfolioState, scenario_returns: np.ndarray,
+     obligations: np.ndarray, weights: np.ndarray, cost_bps: float = 0.0,
+@@ -86,7 +125,7 @@
+         h = initial_holdings.copy()
+         c, unpaid = float(state.cash), 0.0
+         for t in range(horizon):
+-            h, c, fee, traded = rebalance(h, c, weights[t], cost_bps)
++            h, c, fee, traded = _rebalance_v2(h, c, weights[t], cost_bps)
+             gains[s, t] = float(h @ returns[s, t])
+             h = h * (1 + returns[s, t])
+             current_due = float(due[t] + unpaid)
