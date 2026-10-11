@@ -1,0 +1,124 @@
+{
+  "configuration": {
+    "budget": {
+      "max_runs": 4,
+      "max_wall_seconds": 900
+    },
+    "data": {
+      "base_currency": "USD",
+      "context": 32,
+      "horizon": 5,
+      "include_missingness": true,
+      "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/data/engineering/yahoo_calibrated_v1/panel.parquet",
+      "peer_features": false
+    },
+    "description": "Four-cell integration run on a deterministic Yahoo-calibrated synthetic panel. Scientific and market claims are prohibited.",
+    "evaluation": {
+      "bootstrap_block_dates": 20,
+      "bootstrap_repetitions": 200,
+      "online_update": false
+    },
+    "model": {
+      "hidden_dim": 32,
+      "memory_capacity": 128,
+      "memory_neighbors": 4,
+      "reservoir_dim": 32,
+      "spectral_bands": 4
+    },
+    "models": [
+      "frem",
+      "no_memory",
+      "ridge",
+      "xgboost"
+    ],
+    "name": "yahoo_calibrated_synthetic_engineering_v1",
+    "output_dir": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/engineering_yahoo_calibrated_v1",
+    "schema_version": 1,
+    "seeds": [
+      11
+    ],
+    "split": {
+      "embargo_bars": 5,
+      "protected_start": "2020-01-01T00:00:00Z",
+      "train_fraction": 0.6,
+      "validation_fraction": 0.2
+    },
+    "training": {
+      "batch_size": 64,
+      "device": "cpu",
+      "epochs": 2,
+      "learning_rate": 0.001,
+      "max_wall_seconds": 180
+    }
+  },
+  "environment": {
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "pyarrow": "21.0.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "torch": "2.14.1",
+      "xgboost": "3.4.1"
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14 (main, Aug 12 2026, 13:57:54) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "finished": "2026-10-11T11:01:25.672741+00:00",
+  "identity": {
+    "code": {
+      "files": {
+        "configs/confirmatory.json": "71bf444503e22e6b0bcfc66465d9034c041af18dd991b029ee73b43828fcc836",
+        "configs/data/fred_request.example.json": "f01931a975a4c768145dc57f9e3a56dc3422eb6fe8e322eeeab76da2e2dd438b",
+        "configs/development.json": "768c975e5199052aee9b143cf6a78633a34d03e657913d142c78f8d0011b57b2",
+        "configs/engineering_yahoo_calibrated.json": "fb198761f3895265f55e2e44d6e7a5d739e01bdd4c35517c21bd8befd1a331f2",
+        "configs/first_execution.json": "a35c83d45ad88e1663f049cadcb626f8541eb00197931cd01b3766b3c41429d9",
+        "configs/mandates/allocation_request.template.json": "91335eda475efadb9aa3cd3d65f30d799ea8da494c4599c2bb3318f9dcb61a69",
+        "configs/mandates/decision_request.template.json": "843fc836790e1595dbd19870f1ee456a72f2fd21e72d995d734d3950a1466f0b",
+        "configs/mandates/instrument_master.template.json": "8a504f5b43b42edef657be19b1bd00766f45dbb49b27dc45958cac5520e62c5e",
+        "configs/mandates/laura_gao.pending.json": "e8d44d4110a58cac08c1a2b8497fce01e9e9afd40ed21cbc63765fc96438f6cc",
+        "configs/robustness_suite.json": "c243f7193165573ec608f697f40984a84950686eba3f8431670ac0dd972b86c2",
+        "pyproject.toml": "6b569d290b7da09b1adbcaaa0f81b32c80f1189ded27973fdef90f9db9caad0c",
+        "research/protocol.json": "833100ef8ff8b0a6ca568bfba1d8601c6f115b3bab11705d7876aa978360763c",
+        "src/frem/__init__.py": "a80cb5a07cc95027621d3443aaaf9f38804127205509af1b3bf6262a6dde73a8",
+        "src/frem/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+        "src/frem/artifacts.py": "b30e9f3a70a473c539059f7c98712e859ab20887a3a7b6c4c697cf8c21feb487",
+        "src/frem/baselines.py": "3ad850db0b390e53238a47758e3be62a736f5bf59e0c56d64e02d3ebabc1e46e",
+        "src/frem/cli.py": "7e2517344f6a87897bb6ed959db200ae81b3bed3cd446add029c8bb6e17c5c6e",
+        "src/frem/config.py": "975ff050d227b61acabbc66c383c6bbc5ad0f2969ba7a89834c2255110f604fc",
+        "src/frem/controller.py": "df4acffc1908f2b1bddad146d1fb7412ea62dcb19daf03e2da2c6cb6d45c9773",
+        "src/frem/data.py": "888e772097d468b528fb53ee2ced7d01c050c1803f17decf7af3e90645b0654d",
+        "src/frem/data_sources.py": "67ad1178f5356eb64c9912a919476989b2688e4b62ba0396ff90f67fb5349918",
+        "src/frem/decision.py": "cc27615b637a6d2d9f2cea70ca326f00cdbf83a8b195f2d851c3288d6140649d",
+        "src/frem/evaluation.py": "782b1ae1a7818b8448e83312606aa6f67ec8326f30d3ded668b1cd0186946285",
+        "src/frem/experiments.py": "70e16fd12346836863364667a60ca2990211ac33c6472bfd4a40cb3e51cabe54",
+        "src/frem/governance.py": "83f7cf6ea88b02811cdb7e7d02745410831e75959f0524940ed6a3e50d7c3807",
+        "src/frem/mandate.py": "3a00893af4635bfbaf867a79893cda7ee21e2ddd5947c89eedab675b253857e7",
+        "src/frem/memory.py": "c55fb99f9aa9d2e2b547a668147fc550e689c94f5ff1411a60e74aa01d7db5a7",
+        "src/frem/metrics.py": "30faca0c7ef46b5f408ef11235f1ad57f9bf39f6f03215974c77e533abb98b15",
+        "src/frem/model.py": "cc892baf9cab5163555418d703da4969d07de0aac81665af80c7dd0870f76966",
+        "src/frem/portfolio.py": "941becf8b39bfa0785fb03bb24c0096df30738430546a36a3682efb0ca2e8ffc",
+        "src/frem/reporting.py": "c49f615a4c49f73d97e0a7ef9dd49697a284db120a1d57da2d02a455c00fdb5a",
+        "src/frem/risk.py": "b00359adb6944245ae1208806b6efd1b5e269e292e39335a5f6a0459ddfa67b2",
+        "src/frem/robustness.py": "e6710de1c9b1a6fcd306dd8e23c014120b2686525e0cdcc9dda6f5a820740098",
+        "src/frem/splits.py": "cc1fefbe5a54c9673df1c31ccb52cea8cabb8aab619d4e651fd417baab34bc97",
+        "src/frem/statistics.py": "61b1f3e2dd6719e00be12fe1acee6101cf7ae2e495b146b62818b9e21239ccd6",
+        "src/frem/training.py": "087ba770f6c0e48e783d2e83dd1d4495a91ab30e296dc5317336495123c9ca86"
+      },
+      "sha256": "90d00a2d24dd605c2b73cd47f47d19e999d9627c094c1baacad785cda13babf7"
+    },
+    "config_sha256": "8bdd70aaabb34c3433bee6798129e91db7e9ddf93174a9f8ab185a507552d3a2",
+    "data": {
+      "panel": "38fac83aa6000dff58ceb8b69a59b10a4d77434cd175722a8bb2bff2aec3d7f1",
+      "panel_manifest": "5627c6ca82020ebdb103e22679f5ba288b1074ac4401a211f4a4de894570f5b7"
+    },
+    "protected_start": "2020-01-01T00:00:00Z"
+  },
+  "phase": "development",
+  "process_peak_rss_bytes": 498925568,
+  "rss_scope": "process lifetime high-water mark; not isolated model memory",
+  "run_id": "20261011T110103Z_a65733448e",
+  "started": "2026-10-11T11:01:03.545899+00:00",
+  "status": "COMPLETE",
+  "wall_seconds": 22.12682591698831
+}

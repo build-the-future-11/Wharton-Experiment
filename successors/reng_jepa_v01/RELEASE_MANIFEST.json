@@ -1,7 +1,7 @@
 {
   "project": "RENG-JEPA",
   "version": "0.1.0",
-  "generated_utc": "2026-10-11T10:42:49.537570+00:00",
+  "generated_utc": "2026-10-11T11:07:08.281246+00:00",
   "release_status": "ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
   "scientific_status": "NOT_EVALUATED",
   "scope": "Package-local release inventory",
@@ -24,7 +24,7 @@
       "sha256": "a4142bfb347c61674ce7fcc788f80c31c08a07f52e2a7a34cd0653f398088064"
     }
   ],
-  "file_count_excluding_manifest": 72,
+  "file_count_excluding_manifest": 81,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "RESEARCH_STATE.json",
-      "bytes": 4088,
-      "sha256": "41c8b5faab586b6186f4db6595fe7a0d6b193bf5afdcb2ad4a1b650b7b964f6c"
+      "bytes": 4333,
+      "sha256": "748f30f27d2e22c07c0a35f546e74acd60837f7530f25feca8c8ebf487b1fe41"
     },
     {
       "path": "configs/engineering.json",
@@ -251,6 +251,51 @@
       "path": "runs/engineering_compatibility_20261011_v4/missing_actions/receipt.json",
       "bytes": 3139,
       "sha256": "816d76c84998e8938910e89a8b4ef92b0f094bec97a471251b4e928e69456b3d"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
+      "bytes": 707,
+      "sha256": "afc1638fd53545ef0e91b9953170815e8f3e239197de4feca024787ad98f390d"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/calm_trend/manifest.json",
+      "bytes": 717,
+      "sha256": "3cf3d2f6928debfbb1a8c2cf6f4d983c8da9eb7870f4357663a5e9c342955e7d"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/calm_trend/receipt.json",
+      "bytes": 3136,
+      "sha256": "58b9b760a38247e4bf90e3dc53f02b53843266d3db1b62027f4fb8553fbe3a01"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/correlation_break/manifest.json",
+      "bytes": 724,
+      "sha256": "f13b3fefa72d13e05df6748c08315970ba6a2daee56b2d91b49cc3dd19b521b7"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/correlation_break/receipt.json",
+      "bytes": 3122,
+      "sha256": "efcea60d17b1e88159adac56c86169bf2c69ed9676bfb345de801d3040752ebe"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/mean_reversion/manifest.json",
+      "bytes": 721,
+      "sha256": "f4fb521bec5b93f0a386b32e6400d3e915882fc9db47ed5dc86cf05af5d818db"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/mean_reversion/receipt.json",
+      "bytes": 3156,
+      "sha256": "701cbfeaad85f62e8f31a05d37fd171ffaaa1cb8a55c4e0ef2f56eaf261194b5"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/missing_actions/manifest.json",
+      "bytes": 722,
+      "sha256": "f83977b0f2421e289fdf26366fd44f9e818268780d4c2d9f18dd542f411f67f3"
+    },
+    {
+      "path": "runs/engineering_compatibility_allnow_20261011/missing_actions/receipt.json",
+      "bytes": 3140,
+      "sha256": "89bd5e23e7cd8d933ed33ba0cce129870e371b8220cfe24921909f3d7de9a593"
     },
     {
       "path": "src/reng/__init__.py",

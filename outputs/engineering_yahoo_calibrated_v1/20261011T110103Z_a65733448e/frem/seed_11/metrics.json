@@ -1,0 +1,154 @@
+{
+  "brier_up": 0.4412482817432498,
+  "calibration": {
+    "bins": [
+      {
+        "count": 255,
+        "event_frequency": 0.5411764705882353,
+        "lower": 0.0,
+        "mean_probability": 0.07680191741902637,
+        "upper": 0.1
+      },
+      {
+        "count": 112,
+        "event_frequency": 0.5,
+        "lower": 0.1,
+        "mean_probability": 0.12326866478207589,
+        "upper": 0.2
+      },
+      {
+        "count": 1,
+        "event_frequency": 1.0,
+        "lower": 0.2,
+        "mean_probability": 0.20238248481186027,
+        "upper": 0.30000000000000004
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.30000000000000004,
+        "mean_probability": null,
+        "upper": 0.4
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.4,
+        "mean_probability": null,
+        "upper": 0.5
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.5,
+        "mean_probability": null,
+        "upper": 0.6000000000000001
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.6000000000000001,
+        "mean_probability": null,
+        "upper": 0.7000000000000001
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.7000000000000001,
+        "mean_probability": null,
+        "upper": 0.8
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.8,
+        "mean_probability": null,
+        "upper": 0.9
+      },
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.9,
+        "mean_probability": null,
+        "upper": 1.0
+      }
+    ],
+    "brier_score": 0.4412482817432498,
+    "ece": 0.4386060818416954,
+    "ece_is_not_a_proper_score": true
+  },
+  "calibration_weighting": "reliability bins and PIT counts pool individual observations",
+  "crps_method": "96-node deterministic quantile quadrature",
+  "direction_accuracy": 0.4701086956521739,
+  "distribution_note": "scale is Student-t scale, not standard deviation; no finite exponential moment",
+  "forecast_units": "cumulative base-currency log total return",
+  "intervals": {
+    "0.5": {
+      "coverage": 0.1956521739130435,
+      "mean_interval_score": 0.18079367512982164,
+      "mean_width": 0.042087310216950995,
+      "nominal": 0.5
+    },
+    "0.8": {
+      "coverage": 0.4157608695652174,
+      "mean_interval_score": 0.27908167599577693,
+      "mean_width": 0.08566960561591655,
+      "nominal": 0.8
+    },
+    "0.95": {
+      "coverage": 0.7690217391304348,
+      "mean_interval_score": 0.39409136891597674,
+      "mean_width": 0.14989256860160732,
+      "nominal": 0.95
+    }
+  },
+  "mae": 0.053864957680422425,
+  "mean_crps": 0.0400852244689275,
+  "mean_nll": -0.9013619367407929,
+  "mse": 0.004003856209223634,
+  "nll": -0.9013619367407929,
+  "performance_claim": "scores describe supplied observations only; they do not establish future profitability",
+  "pit_histogram": {
+    "counts": [
+      6,
+      2,
+      7,
+      5,
+      9,
+      13,
+      25,
+      33,
+      59,
+      209
+    ],
+    "edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "independent_sample_p_value": null
+  },
+  "pooled_mean_nll": -0.9013619367407928,
+  "primary_weighting": "equal UTC-date weight, equal asset weight within date",
+  "rank_correlation": {
+    "defined_dates": 92,
+    "definition": "Spearman correlation of per-asset date-mean forecasts and outcomes; at least three assets and nonconstant ranks required",
+    "independent_sample_p_value": null,
+    "mean_over_defined_dates": 0.01956521739130435,
+    "undefined_dates": 0
+  },
+  "rows": 368,
+  "training_limit_seconds": 180,
+  "training_soft_limit_overrun": false,
+  "training_wall_seconds": 6.232057167013409,
+  "utc_dates": 92,
+  "wall_seconds": 7.927892834006343
+}

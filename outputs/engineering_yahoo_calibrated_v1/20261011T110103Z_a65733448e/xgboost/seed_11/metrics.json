@@ -1,0 +1,154 @@
+{
+  "brier_up": 0.26184321990617515,
+  "calibration": {
+    "bins": [
+      {
+        "count": 0,
+        "event_frequency": null,
+        "lower": 0.0,
+        "mean_probability": null,
+        "upper": 0.1
+      },
+      {
+        "count": 1,
+        "event_frequency": 0.0,
+        "lower": 0.1,
+        "mean_probability": 0.19570184018232903,
+        "upper": 0.2
+      },
+      {
+        "count": 5,
+        "event_frequency": 0.2,
+        "lower": 0.2,
+        "mean_probability": 0.24174666064407538,
+        "upper": 0.30000000000000004
+      },
+      {
+        "count": 53,
+        "event_frequency": 0.5283018867924528,
+        "lower": 0.30000000000000004,
+        "mean_probability": 0.35284513525196753,
+        "upper": 0.4
+      },
+      {
+        "count": 52,
+        "event_frequency": 0.6346153846153846,
+        "lower": 0.4,
+        "mean_probability": 0.45511626206903383,
+        "upper": 0.5
+      },
+      {
+        "count": 102,
+        "event_frequency": 0.47058823529411764,
+        "lower": 0.5,
+        "mean_probability": 0.5482018785300411,
+        "upper": 0.6000000000000001
+      },
+      {
+        "count": 77,
+        "event_frequency": 0.5064935064935064,
+        "lower": 0.6000000000000001,
+        "mean_probability": 0.651566049098245,
+        "upper": 0.7000000000000001
+      },
+      {
+        "count": 64,
+        "event_frequency": 0.546875,
+        "lower": 0.7000000000000001,
+        "mean_probability": 0.7455840581644373,
+        "upper": 0.8
+      },
+      {
+        "count": 13,
+        "event_frequency": 0.7692307692307693,
+        "lower": 0.8,
+        "mean_probability": 0.8364906489037859,
+        "upper": 0.9
+      },
+      {
+        "count": 1,
+        "event_frequency": 1.0,
+        "lower": 0.9,
+        "mean_probability": 0.9058863589267381,
+        "upper": 1.0
+      }
+    ],
+    "brier_score": 0.26184321990617515,
+    "ece": 0.14078980037346248,
+    "ece_is_not_a_proper_score": true
+  },
+  "calibration_weighting": "reliability bins and PIT counts pool individual observations",
+  "crps_method": "96-node deterministic quantile quadrature",
+  "direction_accuracy": 0.4945652173913043,
+  "distribution_note": "scale is Student-t scale, not standard deviation; no finite exponential moment",
+  "forecast_units": "cumulative base-currency log total return",
+  "intervals": {
+    "0.5": {
+      "coverage": 0.4483695652173913,
+      "mean_interval_score": 0.10021177138263991,
+      "mean_width": 0.040762568950941935,
+      "nominal": 0.5
+    },
+    "0.8": {
+      "coverage": 0.7146739130434783,
+      "mean_interval_score": 0.14528237312220077,
+      "mean_width": 0.08278782782026785,
+      "nominal": 0.8
+    },
+    "0.95": {
+      "coverage": 0.9239130434782609,
+      "mean_interval_score": 0.1949076419268337,
+      "mean_width": 0.14419349987288596,
+      "nominal": 0.95
+    }
+  },
+  "mae": 0.030653502550957546,
+  "mean_crps": 0.02218567126974712,
+  "mean_nll": -1.7904398717467447,
+  "mse": 0.0015561288209025642,
+  "nll": -1.7904398717467447,
+  "performance_claim": "scores describe supplied observations only; they do not establish future profitability",
+  "pit_histogram": {
+    "counts": [
+      51,
+      39,
+      42,
+      24,
+      33,
+      28,
+      46,
+      20,
+      31,
+      54
+    ],
+    "edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.30000000000000004,
+      0.4,
+      0.5,
+      0.6000000000000001,
+      0.7000000000000001,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "independent_sample_p_value": null
+  },
+  "pooled_mean_nll": -1.7904398717467445,
+  "primary_weighting": "equal UTC-date weight, equal asset weight within date",
+  "rank_correlation": {
+    "defined_dates": 92,
+    "definition": "Spearman correlation of per-asset date-mean forecasts and outcomes; at least three assets and nonconstant ranks required",
+    "independent_sample_p_value": null,
+    "mean_over_defined_dates": 0.0717391304347826,
+    "undefined_dates": 0
+  },
+  "rows": 368,
+  "training_limit_seconds": 180,
+  "training_soft_limit_overrun": false,
+  "training_wall_seconds": 0.7392052499926649,
+  "utc_dates": 92,
+  "wall_seconds": 0.8987244169984479
+}

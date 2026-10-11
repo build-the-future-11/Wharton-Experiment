@@ -1,0 +1,41 @@
+{
+  "all_missing_fallback": {
+    "median": 0.0,
+    "noise_width": 1.0
+  },
+  "all_missing_training_features": [],
+  "feature_medians": [
+    0.00027716407203115523,
+    0.01446322537958622,
+    0.0022572397720068693,
+    0.0063297078013420105,
+    1.0,
+    0.010416666977107525,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "feature_noise_widths": [
+    0.019970828667283058,
+    0.006362440995872021,
+    0.044110435992479324,
+    0.10337359085679054,
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-08,
+    1e-08
+  ],
+  "missing_probability": 0.0,
+  "noise_std": 0.0,
+  "scale_fit_source": "training contexts only",
+  "seed": 11,
+  "synthetic_missing_counts": {},
+  "targets_unchanged": true
+}

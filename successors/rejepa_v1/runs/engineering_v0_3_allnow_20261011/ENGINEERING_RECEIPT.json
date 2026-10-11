@@ -1,0 +1,57 @@
+{
+  "checkpoint_hashes": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "0d70e7f2dfa8bc7c85c9740a82250ee91b08c3dc2ddf9cff4524cec82a6c17d9"
+  },
+  "checkpoint_metadata": {
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "phase": "engineering_compatibility",
+    "scientific_status": "NOT_EVALUATED"
+  },
+  "checkpoint_state_sha256": "8b0b1ef59264d601f159a6142443558ed56b7b99c09434aea98afa5f6a5a6777",
+  "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+  "input_label_required": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "limitations": [
+    "Synthetic fixture only; no market performance inference",
+    "Single bounded seed; no scientific comparison",
+    "No protected outcomes or portfolio claims"
+  ],
+  "manifest_sha256": "5d1faccee653ce1a4fbfce110fc9481b071a4ad71bcf48e0908fac0bf21d772b",
+  "matrix_status": {
+    "complete": true,
+    "completed_cells": 2,
+    "expected_cells": 2,
+    "failed_cells": [],
+    "missing_cells": [],
+    "observed_cells": 2
+  },
+  "model_parameters": 8006,
+  "peak_rss_raw": 439042048,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "ridge_validation_mse": 0.00026072735145621665,
+  "scientific_status": "NOT_EVALUATED",
+  "status": "ENGINEERING_COMPATIBILITY_PASS",
+  "train_samples": 330,
+  "training": {
+    "best_epoch": 1,
+    "best_validation_loss": 2.1777076721191406,
+    "completed_epochs": 2,
+    "history": [
+      {
+        "epoch": 0.0,
+        "training_loss": 2.1938533782958984,
+        "validation_loss": 2.1911487579345703
+      },
+      {
+        "epoch": 1.0,
+        "training_loss": 2.1817684173583984,
+        "validation_loss": 2.1777076721191406
+      }
+    ],
+    "stopped_early": false
+  },
+  "validation_samples": 96,
+  "validation_student_t_nll": 0.46943679451942444,
+  "wall_seconds": 1.3915863330184948
+}

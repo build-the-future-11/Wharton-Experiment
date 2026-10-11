@@ -1,0 +1,144 @@
+{
+  "format_version": 1,
+  "name": "ridge",
+  "parameters": {
+    "seed": 11,
+    "alpha": 1.0,
+    "hidden_dim": 32,
+    "reservoir_dim": 32,
+    "epochs": 2,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scale_floor": 0.0001,
+    "calibration_fraction": 0.2,
+    "max_wall_seconds": 180,
+    "device": "cpu",
+    "n_estimators": 200,
+    "max_depth": 3,
+    "patch_length": 8
+  },
+  "context": 32,
+  "features": 12,
+  "feature_names": [
+    "log_return",
+    "realized_vol_20",
+    "momentum_5",
+    "momentum_20",
+    "elapsed_days",
+    "availability_lag_days",
+    "log_return__missing",
+    "realized_vol_20__missing",
+    "momentum_5__missing",
+    "momentum_20__missing",
+    "elapsed_days__missing",
+    "availability_lag_days__missing"
+  ],
+  "asset_names": [
+    "SYN_YC_00",
+    "SYN_YC_01",
+    "SYN_YC_02",
+    "SYN_YC_03"
+  ],
+  "fitted_through": 1554239700000000000,
+  "scale": 0.029603794498839386,
+  "student_df": 5.0,
+  "scaler": {
+    "clip": 12.0,
+    "eps": 1e-08,
+    "median": [
+      0.00027716407203115523,
+      0.01446322537958622,
+      0.0022572397720068693,
+      0.0063297078013420105,
+      1.0,
+      0.010416666977107525,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.019970828667283058,
+      0.006362440995872021,
+      0.044110435992479324,
+      0.10337359085679054,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mask": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "feature_names": [
+      "log_return",
+      "realized_vol_20",
+      "momentum_5",
+      "momentum_20",
+      "elapsed_days",
+      "availability_lag_days",
+      "log_return__missing",
+      "realized_vol_20__missing",
+      "momentum_5__missing",
+      "momentum_20__missing",
+      "elapsed_days__missing",
+      "availability_lag_days__missing"
+    ],
+    "fit_metadata": {
+      "fit_time_max": 1553548500000000000,
+      "fit_label_time_max": 1554239700000000000,
+      "fit_rows": 1156,
+      "fit_source": "training context x only",
+      "overlapping_context_observations_repeated": true,
+      "all_missing_features": [],
+      "panel_fingerprint": "6c25d33fca6824f3de6a00d9c1766c2e010dd8e9527145282b395185c8fa4750",
+      "training_context_fingerprint": "f84664bd8928a455be6419e86419b8b7200ab8f37e54c122f4fe436a86a86e16"
+    }
+  },
+  "fit_report": {
+    "baseline": "ridge",
+    "status": "fitted",
+    "train_rows": 1156,
+    "fitted_through": 1554239700000000000,
+    "scale": 0.029603794498839386,
+    "scale_calibration": "purged_chronological_training_tail_with_earlier_only_scaler",
+    "passes": [
+      {
+        "pass": "inner_scale_fit",
+        "rows": 900,
+        "epochs": null,
+        "gradient_steps": 0,
+        "wall_limited": false
+      },
+      {
+        "pass": "full_training_refit",
+        "rows": 1156,
+        "epochs": null,
+        "gradient_steps": 0,
+        "wall_limited": false
+      }
+    ],
+    "trainable_parameters": null,
+    "elapsed_seconds": 2.7135534579865634,
+    "max_wall_seconds": 180,
+    "budget_note": "Wall clock checked between neural minibatches and estimator calls; a single tree/linear fit cannot be forcibly interrupted here"
+  }
+}

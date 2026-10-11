@@ -1,0 +1,27 @@
+{
+  "name": "yahoo_calibrated_synthetic_engineering_v1",
+  "dataset_synthetic": true,
+  "scientific_claims_allowed": false,
+  "base_currency": "USD",
+  "universe_status": "fixed_ex_ante",
+  "universe_frozen_at": "2017-12-31T00:00:00+00:00",
+  "delistings_included": false,
+  "availability_policy": "synthetic 21:00 UTC event plus deterministic 15-minute delay",
+  "total_return_methodology": "Positive synthetic total-return indices from a Gaussian process calibrated to the full retained Yahoo adjusted-close sample; engineering only, not a point-in-time market reconstruction",
+  "feature_provenance": {},
+  "source_license": "Calibration source records Yahoo terms; generated fixture is local engineering data",
+  "calibration_source": "/Volumes/PRO-BLADE/GitHubRepos/Old-Stuff/Everything Else/GitHub-Every-Repo/EigenFinance/data/public_yahoo_v1/prices.csv",
+  "calibration_source_sha256": "4b10408bb7f8bfcd76dd33df4b1b61e2fcaa416d67beebf66c38b4e09630fc55",
+  "calibration_assets": [
+    "AAPL",
+    "JNJ",
+    "JPM",
+    "KO"
+  ],
+  "calibration_uses_full_source_sample": true,
+  "seed": 20261011,
+  "sessions": 600,
+  "assets": 4,
+  "expected_file_sha256": "38fac83aa6000dff58ceb8b69a59b10a4d77434cd175722a8bb2bff2aec3d7f1",
+  "prohibition": "Do not report this fixture as market, protected, predictive, investment, or competition evidence."
+}

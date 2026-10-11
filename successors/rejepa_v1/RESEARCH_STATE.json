@@ -3,7 +3,7 @@
   "lineage": "successor_to_frem_v0.1; predecessor evidence preserved in repository root and legacy/wharton_lab_v0",
   "created": "2026-10-11",
   "updated": "2026-10-11",
-  "phase": "engineering_run_ready_external_market_data_and_rules_block_scientific_execution",
+  "phase": "fresh_engineering_matrix_complete_external_market_data_and_rules_block_scientific_execution",
   "scientific_status": "NOT_EVALUATED",
   "competition_scope": "2026-2027 Wharton Global High School Investment Competition; local research and simulation only",
   "central_hypothesis": "Under predeclared low-data regimes, causal latent-world imagination plus matured spectral-engram retrieval improves date-level probabilistic return forecasts over the identical reservoir-JEPA backbone with both mechanisms disabled, under matched information and bounded compute.",
@@ -51,7 +51,8 @@
     "Current retrieval and streaming-memory prior art reviewed; novelty claim narrowed and causal retrieval controls added to the protocol",
     "Causal nearest-history continuation retrieval, chronological streaming residual memory, and frozen residual-alignment controls implemented",
     "Final v0.3 verification passed 67 tests with deprecations treated as errors, Ruff, package build, wheel CLI smoke, and packaged data validation",
-    "Version 0.3.0 wheel and source archive built with recorded SHA-256 hashes"
+    "Version 0.3.0 wheel and source archive built with recorded SHA-256 hashes",
+    "Fresh two-cell seed-11 engineering compatibility matrix completed on explicit user request at runs/engineering_v0_3_allnow_20261011 with status ENGINEERING_COMPATIBILITY_PASS; synthetic fixture only"
   ],
   "not_completed": [
     "Independent novelty determination",

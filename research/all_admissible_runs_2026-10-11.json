@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-11",
+  "scope": "All currently admissible bounded engineering runs requested by the user; no admitted-market or protected execution",
+  "terminal_status": "ENGINEERING_RUNS_COMPLETE_MARKET_EXECUTION_BLOCKED",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_outcomes_accessed": false,
+  "scientific_claims_allowed": false,
+  "resource_admission": {
+    "status": "PASS_BEFORE_EXECUTION",
+    "basis": "Free plus speculative memory exceeded the repository 512 MiB floor and three one-second samples showed zero pageout growth after the unrelated OpenSCAD process completed.",
+    "thread_limits": {
+      "OPENBLAS_NUM_THREADS": 1,
+      "OMP_NUM_THREADS": 1,
+      "VECLIB_MAXIMUM_THREADS": 1
+    }
+  },
+  "data": {
+    "path": "data/engineering/yahoo_calibrated_v1/panel.parquet",
+    "manifest": "data/engineering/yahoo_calibrated_v1/panel.parquet.manifest.json",
+    "panel_sha256": "38fac83aa6000dff58ceb8b69a59b10a4d77434cd175722a8bb2bff2aec3d7f1",
+    "manifest_sha256": "5627c6ca82020ebdb103e22679f5ba288b1074ac4401a211f4a4de894570f5b7",
+    "calibration_source_sha256": "4b10408bb7f8bfcd76dd33df4b1b61e2fcaa416d67beebf66c38b4e09630fc55",
+    "generator_seed": 20261011,
+    "assets": 4,
+    "sessions": 600,
+    "classification": "Deterministic Gaussian synthetic total-return-index fixture calibrated on the full retrospective Yahoo adjusted-close sample",
+    "limitations": [
+      "The calibration source is retrospective and survivorship biased.",
+      "The calibration uses the full source sample.",
+      "Corporate actions, point-in-time membership, delistings, availability timestamps, and institutional license provenance are not supplied by the calibration source.",
+      "This generated fixture is prohibited from market, protected, predictive, investment, or competition claims."
+    ]
+  },
+  "frem": {
+    "run_directory": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e",
+    "run_id": "20261011T110103Z_a65733448e",
+    "status": "COMPLETE",
+    "phase_label": "development",
+    "interpretation": "Engineering integration only; the phase label does not make the synthetic fixture scientific development evidence.",
+    "completed_cells": 4,
+    "expected_cells": 4,
+    "failed_cells": 0,
+    "wall_seconds": 22.12682591698831,
+    "process_peak_rss_bytes": 498925568,
+    "manifest_sha256": "263ef74947edb57d8836da9416e471e7daaf048434dc3c642d2feb3ef05c9752",
+    "summary_sha256": "d90f46f6315199f413c0d070915c2ea1bead56e004b14b202cc1539b56ad3a94",
+    "cells": [
+      {
+        "model": "frem",
+        "seed": 11,
+        "rows": 368,
+        "utc_dates": 92,
+        "mean_nll": -0.9013619367407929,
+        "mae": 0.053864957680422425,
+        "direction_accuracy": 0.4701086956521739,
+        "training_wall_seconds": 6.232057167013409,
+        "wall_seconds": 7.927892834006343
+      },
+      {
+        "model": "no_memory",
+        "seed": 11,
+        "rows": 368,
+        "utc_dates": 92,
+        "mean_nll": -1.466288794090774,
+        "mae": 0.04176564590021649,
+        "direction_accuracy": 0.5407608695652174,
+        "training_wall_seconds": 7.132810707989847,
+        "wall_seconds": 7.518680666020373
+      },
+      {
+        "model": "ridge",
+        "seed": 11,
+        "rows": 368,
+        "utc_dates": 92,
+        "mean_nll": -1.6914724959381287,
+        "mae": 0.03353472920206433,
+        "direction_accuracy": 0.44565217391304346,
+        "training_wall_seconds": 2.713596667017555,
+        "wall_seconds": 2.869985083991196
+      },
+      {
+        "model": "xgboost",
+        "seed": 11,
+        "rows": 368,
+        "utc_dates": 92,
+        "mean_nll": -1.7904398717467447,
+        "mae": 0.030653502550957546,
+        "direction_accuracy": 0.4945652173913043,
+        "training_wall_seconds": 0.7392052499926649,
+        "wall_seconds": 0.8987244169984479
+      }
+    ],
+    "primary_comparison": {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/analysis/frem_vs_no_memory_4fceb7d074473efc.json",
+      "sha256": "be63bf9e2c81b05507abd86cfa2f31c4277dd833427ae2a3ea3d2f426008cff5",
+      "effect": "control NLL minus candidate NLL; positive favors FREM",
+      "estimate": -0.564926857349982,
+      "confidence_interval_95": [
+        -1.1325719066136994,
+        -0.002587922724053381
+      ],
+      "p_two_sided": 0.05472636815920398,
+      "paired_rows": 368,
+      "dates": 92,
+      "block_length": 20,
+      "bootstrap_resamples": 200,
+      "statistical_result": "NONPOSITIVE_UPPER_BOUND",
+      "primary_statistical_criterion_met": false,
+      "interpretation": "FREM was worse than the no-memory control on this engineering fixture. This negative result is preserved but is not market or confirmatory evidence."
+    }
+  },
+  "rejepa_v0_3": {
+    "run_directory": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011",
+    "receipt": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
+    "receipt_sha256": "a25eec1db746c5d0cb4d85b9c552edc58ce23cd1bae15e00438086bb9d151d82",
+    "status": "ENGINEERING_COMPATIBILITY_PASS",
+    "completed_cells": 2,
+    "expected_cells": 2,
+    "failed_cells": 0,
+    "wall_seconds": 1.3915863330184948,
+    "peak_rss_raw": 439042048,
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "checkpoint_state_sha256": "8b0b1ef59264d601f159a6142443558ed56b7b99c09434aea98afa5f6a5a6777",
+    "validation_student_t_nll": 0.46943679451942444,
+    "ridge_validation_mse": 0.00026072735145621665
+  },
+  "reng_jepa_v0_1": {
+    "run_directory": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011",
+    "summary": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
+    "summary_sha256": "afc1638fd53545ef0e91b9953170815e8f3e239197de4feca024787ad98f390d",
+    "status": "ENGINEERING_MATRIX_PASS",
+    "datasets": [
+      "calm_trend",
+      "mean_reversion",
+      "correlation_break",
+      "missing_actions"
+    ],
+    "completed_cells": 4,
+    "expected_cells": 4,
+    "failed_cells": 0
+  },
+  "retained_failure": {
+    "stage": "engineering_panel_generation_attempt_1",
+    "status": "REPAIRED_WITHOUT_RELABELLING_DATA",
+    "detail": "The first generator invocation completed but emitted pandas and NumPy deprecation warnings for Timedelta construction. The source was repaired to use explicit NumPy timedeltas; the already generated deterministic panel was preserved rather than overwritten."
+  },
+  "final_verification": {
+    "generator_reproducibility": "PASS with PYTHONWARNINGS=error; regenerated panel SHA-256 exactly matched 38fac83aa6000dff58ceb8b69a59b10a4d77434cd175722a8bb2bff2aec3d7f1",
+    "frem_tests": "163 passed in 8.64 seconds with warnings treated as errors",
+    "rejepa_tests": "67 passed in 5.23 seconds with warnings treated as errors",
+    "reng_jepa_tests": "45 passed in 5.23 seconds with warnings treated as errors",
+    "static_source_validation": "PASS for 38 Python files and 25 JSON files",
+    "ruff": "PASS across FREM source, scripts, tests, and both successor source and test trees"
+  },
+  "not_run": [
+    {
+      "scope": "24-cell admitted-market development matrix",
+      "reason": "No lawful canonical point-in-time panel and manifest passed the declared market-data contract."
+    },
+    {
+      "scope": "36-cell robustness suite",
+      "reason": "It is a separately declared matrix and no admitted market dataset exists; supplied presets are not inferred to be authorized synthetic substitutes."
+    },
+    {
+      "scope": "confirmatory or protected evaluation",
+      "reason": "No scientific freeze exists and protected outcomes must not be accessed."
+    },
+    {
+      "scope": "portfolio or competition execution",
+      "reason": "Official universe, rules, holdings, and team mandate inputs remain absent."
+    }
+  ]
+}

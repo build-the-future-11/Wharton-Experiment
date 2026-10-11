@@ -1,0 +1,16 @@
+{
+  "cell": {
+    "cell_id": "ridge-s11",
+    "configuration": {},
+    "model": "ridge",
+    "seed": 11,
+    "train_fraction": 0.8
+  },
+  "manifest_sha256": "5d1faccee653ce1a4fbfce110fc9481b071a4ad71bcf48e0908fac0bf21d772b",
+  "result": {
+    "scientific_use": "PROHIBITED",
+    "validation_mse": 0.00026072735145621665
+  },
+  "status": "COMPLETE",
+  "wall_seconds": 3.0916009563952684e-05
+}

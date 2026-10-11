@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>FREM evidence report</title>
+<style>body{font:16px system-ui;max-width:1040px;margin:48px auto;line-height:1.6;color:#16323a}table{border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #ddd;text-align:left}img{max-width:100%}code{overflow-wrap:anywhere}</style>
+<h1>FREM evidence report</h1><p>Phase: development. Run: <code>20261011T110103Z_a65733448e</code>.</p>
+<p>Every method and configured seed uses matching outcomes, label availability and execution timestamps. Repeated observations are averaged within an asset and UTC date before assets and dates are weighted equally.</p>
+<p>Seed standard deviation describes optimizer variability; it is not a confidence interval across independent financial histories. Use the paired date-block analysis and the declared complete multiplicity family for inference.</p>
+<img src="predictive_scores.png" alt="Predictive likelihood by method"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>mean_nll</th>
+      <th>seed_sd</th>
+      <th>seeds</th>
+      <th>decision_dates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>xgboost</td>
+      <td>-1.790440</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>ridge</td>
+      <td>-1.691472</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>no_memory</td>
+      <td>-1.466289</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>frem</td>
+      <td>-0.901362</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>92</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Evidence identity</h2><p>Source SHA-256: <code>90d00a2d24dd605c2b73cd47f47d19e999d9627c094c1baacad785cda13babf7</code>.</p>
+<p>Raw forecasts, exact configurations, retained failures, training records and prediction-file hashes remain in the experiment directory. No strategy-return plot is made without an explicit realizable portfolio ledger.</p></html>

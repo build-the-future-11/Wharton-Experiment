@@ -1,0 +1,7 @@
+{
+  "matrix_max_wall_seconds": 900.0,
+  "note": "Cooperative wall checks include data preparation, fitting, prediction and artifact writes. Python cannot interrupt a running native tensor, tree, linear-solver or I/O call; use an external process timeout for a hard wall limit. Training overruns are recorded, and a matrix or suite overrun fails at the next check, including its final cell.",
+  "per_fit_max_wall_seconds": 180,
+  "requested_cells": 4,
+  "timer_starts_before": "identity hashing and data preparation"
+}

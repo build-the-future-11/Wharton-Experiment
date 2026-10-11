@@ -1,0 +1,18 @@
+{
+  "dataset_count": 4,
+  "datasets": [
+    "calm_trend",
+    "mean_reversion",
+    "correlation_break",
+    "missing_actions"
+  ],
+  "receipts": [
+    "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/calm_trend/receipt.json",
+    "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/mean_reversion/receipt.json",
+    "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/correlation_break/receipt.json",
+    "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/missing_actions/receipt.json"
+  ],
+  "scientific_claims_allowed": false,
+  "scientific_status": "NOT_EVALUATED",
+  "terminal_status": "ENGINEERING_MATRIX_PASS"
+}

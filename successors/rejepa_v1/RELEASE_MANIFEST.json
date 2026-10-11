@@ -1,7 +1,7 @@
 {
   "project": "RE-JEPA",
   "version": "0.3.0",
-  "generated_utc": "2026-10-11T10:42:49.506100+00:00",
+  "generated_utc": "2026-10-11T11:07:08.250929+00:00",
   "release_status": "ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
   "scientific_status": "NOT_EVALUATED",
   "scope": "Package-local release inventory",
@@ -44,7 +44,7 @@
       "sha256": "56a1a70e1ef58eacf2afa0ba6a42fdd4c533edca56b2f76749b5c259cd586503"
     }
   ],
-  "file_count_excluding_manifest": 137,
+  "file_count_excluding_manifest": 145,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -54,8 +54,8 @@
     },
     {
       "path": "RESEARCH_STATE.json",
-      "bytes": 6778,
-      "sha256": "147377fb7eda119a269db1fcf4d1ed6de86d7aa766cfc35aa8d53247d4326b9e"
+      "bytes": 6996,
+      "sha256": "d1179e1be9eb27c0cc41b1308b828ad6713d37f45c01a385b9cf996253ea3fc7"
     },
     {
       "path": "configs/ablations.json",
@@ -256,6 +256,46 @@
       "path": "runs/engineering_v0_3/checkpoint/model.pt",
       "bytes": 49901,
       "sha256": "b260b1b70ac1f83161eef5ad8110b8465545e00638012252e6015df1d104f3ec"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
+      "bytes": 2017,
+      "sha256": "a25eec1db746c5d0cb4d85b9c552edc58ce23cd1bae15e00438086bb9d151d82"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/cells/rejepa-full-s11.receipt.json",
+      "bytes": 496,
+      "sha256": "ab135a2b97ccfe041ac2240703e52e0c5024a133b213637c3f0816862a743ebf"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/cells/ridge-s11.receipt.json",
+      "bytes": 392,
+      "sha256": "a10e6150366c24698e03f7abe9ba0257a27b46168eb0eb25e8cfdccfc39f3e75"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/checkpoint/config.json",
+      "bytes": 504,
+      "sha256": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/checkpoint/manifest.json",
+      "bytes": 373,
+      "sha256": "90d354611760cc9140febec62d91d3291ad876d9fd63a111102e3fd42babb2aa"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/checkpoint/metadata.json",
+      "bytes": 171,
+      "sha256": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/checkpoint/model.pt",
+      "bytes": 49901,
+      "sha256": "0d70e7f2dfa8bc7c85c9740a82250ee91b08c3dc2ddf9cff4524cec82a6c17d9"
+    },
+    {
+      "path": "runs/engineering_v0_3_allnow_20261011/manifest.json",
+      "bytes": 784,
+      "sha256": "202ecd67471ae9e3e96b004eab7a97633461496bf451cd04fb3454910961a699"
     },
     {
       "path": "runs/engineering_v0_3_final_a/ENGINEERING_RECEIPT.json",

@@ -1,0 +1,28 @@
+{
+  "baseline": "ridge",
+  "budget_note": "Wall clock checked between neural minibatches and estimator calls; a single tree/linear fit cannot be forcibly interrupted here",
+  "elapsed_seconds": 2.7135534579865634,
+  "fitted_through": 1554239700000000000,
+  "max_wall_seconds": 180,
+  "passes": [
+    {
+      "epochs": null,
+      "gradient_steps": 0,
+      "pass": "inner_scale_fit",
+      "rows": 900,
+      "wall_limited": false
+    },
+    {
+      "epochs": null,
+      "gradient_steps": 0,
+      "pass": "full_training_refit",
+      "rows": 1156,
+      "wall_limited": false
+    }
+  ],
+  "scale": 0.029603794498839386,
+  "scale_calibration": "purged_chronological_training_tail_with_earlier_only_scaler",
+  "status": "fitted",
+  "train_rows": 1156,
+  "trainable_parameters": null
+}

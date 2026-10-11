@@ -1,0 +1,22 @@
+{
+  "model": {
+    "context_length": 32,
+    "hidden_dim": 32,
+    "horizon": 5,
+    "input_dim": 12,
+    "memory_capacity": 128,
+    "memory_neighbors": 4,
+    "reservoir_dim": 32,
+    "reservoir_seed": 11,
+    "spectral_bands": 4,
+    "use_memory": false
+  },
+  "training": {
+    "batch_size": 64,
+    "device": "cpu",
+    "epochs": 2,
+    "learning_rate": 0.001,
+    "max_wall_seconds": 180,
+    "seed": 11
+  }
+}

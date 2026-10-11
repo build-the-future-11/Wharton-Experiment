@@ -1,0 +1,11 @@
+{
+  "decision_id": "FREM-ENGINEERING-EXECUTION-20261011",
+  "scope": "Bounded synthetic engineering execution across FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
+  "observation": "The user authorized immediate execution, resource admission recovered above the declared floor, no admitted point-in-time market panel existed, and a retained Yahoo adjusted-close file was available only as a retrospective calibration source.",
+  "hypothesized_cause": "Synthetic integration runs can verify the executable model and artifact paths without manufacturing market admissibility, while real-market and protected runs remain blocked by missing external data and freeze inputs.",
+  "decision": "Generate one explicitly synthetic Yahoo-calibrated engineering panel, run the bounded four-cell FREM compatibility matrix and fresh successor engineering matrices, preserve negative evidence, and prohibit all market, protected, predictive, investment, or competition claims.",
+  "predicted_effect": "All currently admissible model paths will produce complete local receipts while the scientific and protected gates remain closed.",
+  "discriminating_experiment": "Require complete cell manifests and artifact hashes for FREM, RE-JEPA, and RENG-JEPA; compare FREM to the identical no-memory control; retain any negative comparison without retuning or rerunning for a favorable result.",
+  "result": "All 10 bounded engineering cells completed. FREM was worse than no-memory on the synthetic fixture: control NLL minus candidate NLL was -0.564926857349982 with a 95% interval of [-1.1325719066136994, -0.002587922724053381]. RE-JEPA passed 2/2 compatibility cells and RENG-JEPA passed 4/4 synthetic regimes. Scientific status remains NOT_EVALUATED and protected outcomes were not accessed.",
+  "status": "ENGINEERING_EXECUTION_COMPLETE_SCIENCE_UNCHANGED"
+}

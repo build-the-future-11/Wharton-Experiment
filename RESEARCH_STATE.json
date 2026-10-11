@@ -3,16 +3,16 @@
   "version": "0.1.1-runtime-gated",
   "created": "2026-10-10",
   "updated": "2026-10-11",
-  "phase": "runtime_verified_waiting_for_admitted_market_data",
+  "phase": "engineering_execution_complete_waiting_for_admitted_market_data_and_freeze",
   "scientific_status": "NOT_EVALUATED",
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
-  "compute_authorized_this_session": "User authorized completion and all backtests on 2026-10-11. Compatibility execution was performed. Market development and confirmatory cells could not start because no admitted canonical panel exists; no substitute data or protected access was invented.",
+  "compute_authorized_this_session": "User authorized immediate execution on 2026-10-11. Ten bounded engineering cells were completed across FREM, RE-JEPA v0.3, and RENG-JEPA v0.1 using explicitly synthetic fixtures. Market development and confirmatory cells could not start because no admitted canonical panel or scientific freeze exists; no dataset was relabeled and no protected outcomes were accessed.",
   "development_budget_proposed": {
     "max_trials": 24,
     "max_wall_clock_hours": 12,
     "status": "authorized_but_unspent_data_blocked",
-    "interpretation": "The optional robustness suite remains a separately declared 36-trial/12-hour matrix. The first four-cell compatibility matrix was attempted and blocked before fitting on the absent canonical panel."
+    "interpretation": "The optional robustness suite remains a separately declared 36-trial/12-hour market matrix. A separate four-cell synthetic engineering matrix completed and does not consume or satisfy this scientific development budget."
   },
   "protected_evaluation": {
     "status": "not accessed",
@@ -34,7 +34,9 @@
     "Do not rerun the spent legacy lockbox or the completed one-path synthetic amendment",
     "Publish the 2026-10-11 stock ranking only as a provisional watchlist pending the team-only approved universe",
     "Treat the successor RE-JEPA v0.3 synthetic run as engineering compatibility evidence only; it does not unlock market, protected, or competition claims",
-    "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED"
+    "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
+    "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
+    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result"
   ],
   "failures": [
     {
@@ -72,6 +74,12 @@
       "stage": "data_admission_search",
       "status": "blocked_before_model_execution",
       "detail": "Local repositories, indexed user files, connected Google Drive, and configured-provider credentials contained no canonical point-in-time panel and manifest. Two Yahoo-derived candidates were rejected for explicit timestamp, actions, eligibility, survivorship, license/provenance, and terminal-outcome gaps. Zero model cells started."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "engineering_panel_generation_attempt_1",
+      "status": "retained_repaired_warning",
+      "detail": "The first generator invocation completed but emitted pandas and NumPy deprecation warnings for Timedelta construction. The generator was repaired to use explicit NumPy timedeltas; the deterministic output was preserved rather than overwritten."
     }
   ],
   "history": [
@@ -106,6 +114,10 @@
     {
       "date": "2026-10-11",
       "event": "Searched local repositories, indexed user files, connected Google Drive, and configured provider credentials for a runnable market panel. Rejected the available Yahoo adjusted-close and monthly-return candidates under the declared information/provenance contract. No dataset was relabeled, no model cell started, and no protected outcome was accessed; the exact intake audit is research/data_admission_audit_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "After explicit user execution authorization and resource admission, generated an explicitly synthetic Yahoo-calibrated engineering fixture and completed 10 bounded cells: four FREM compatibility cells, two RE-JEPA v0.3 cells, and four RENG-JEPA v0.1 regimes. FREM was worse than no-memory on the synthetic fixture and that negative result was preserved. No admitted-market, robustness, confirmatory, protected, portfolio, or competition execution occurred; scientific status remains NOT_EVALUATED."
     }
   ],
   "prior_reported_evidence": [
@@ -134,7 +146,7 @@
     "methodology": "prospective protocol written, not frozen",
     "model_source": "implemented; runtime compatibility verified by tests",
     "experiment_source": "implemented; runtime compatibility verified by tests",
-    "dry_run": "attempted; blocked before model execution by absent admitted panel",
+    "dry_run": "synthetic engineering integration complete; admitted-market dry run remains blocked by absent canonical panel",
     "development_matrix": "authorized but not started; admitted data absent",
     "confirmatory_freeze": "not created",
     "protected_evaluation": "not executed",
@@ -144,17 +156,18 @@
   "successor_lineages": {
     "rejepa_v1": {
       "path": "successors/rejepa_v1",
-      "status": "engineering_run_ready_external_market_data_and_rules_block_scientific_execution",
+      "status": "fresh_engineering_matrix_complete_external_market_data_and_rules_block_scientific_execution",
       "scientific_status": "NOT_EVALUATED",
       "tests": "67 passed",
+      "engineering_matrix": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
       "protected_outcomes_accessed": false
     },
     "reng_jepa_v01": {
       "path": "successors/reng_jepa_v01",
-      "status": "engineering_validated_waiting_for_admitted_data_and_resource",
+      "status": "fresh_engineering_matrix_complete_waiting_for_admitted_data_and_freeze",
       "scientific_status": "NOT_EVALUATED",
       "tests": "45 passed",
-      "engineering_matrix": "successors/reng_jepa_v01/runs/engineering_compatibility_20261011_v4/SUMMARY.json",
+      "engineering_matrix": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
       "protected_outcomes_accessed": false
     }
   },
@@ -170,14 +183,17 @@
     "repository_cleanup_record": "research/repository_cleanup_verification_2026-10-11.json",
     "efficiency_record": "research/efficiency_verification_2026-10-11.json",
     "data_admission_record": "research/data_admission_audit_2026-10-11.json",
+    "engineering_execution_record": "research/all_admissible_runs_2026-10-11.json",
     "python_files": 37,
     "authored_test_functions": 130,
     "tests_executed": true,
-    "runtime_test_result": "163 passed in 6.14 seconds with DeprecationWarning treated as an error",
-    "successor_test_results": "RE-JEPA v0.3: 67 passed; RENG-JEPA v0.1: 45 passed",
+    "runtime_test_result": "163 passed in 8.64 seconds with warnings treated as errors",
+    "successor_test_results": "RE-JEPA v0.3: 67 passed in 5.23 seconds; RENG-JEPA v0.1: 45 passed in 5.23 seconds; warnings treated as errors",
     "package_build": "PASS for FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
     "market_data_downloaded": false,
-    "model_or_portfolio_runs_executed": false,
+    "engineering_model_runs_executed": true,
+    "engineering_cells_completed": 10,
+    "market_model_or_portfolio_runs_executed": false,
     "paper_pages": 21,
     "bibliographic_references": 21,
     "paper_status": "methods_and_prospective_protocol_rendered_and_visually_reviewed"

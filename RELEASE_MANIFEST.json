@@ -1,7 +1,7 @@
 {
   "project": "FREM",
   "version": "0.1.1",
-  "generated_utc": "2026-10-11T10:42:49.440081+00:00",
+  "generated_utc": "2026-10-11T11:07:08.196766+00:00",
   "release_status": "ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
   "scientific_status": "NOT_EVALUATED",
   "scope": "Active FREM release; successor packages and byte-preserved legacy archive have separate boundaries",
@@ -24,7 +24,7 @@
       "sha256": "32208ad86b581b7df4f686f7b378354ffc27abef43396df821198cc922171520"
     }
   ],
-  "file_count_excluding_manifest": 114,
+  "file_count_excluding_manifest": 165,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "path": "RESEARCH_STATE.json",
-      "bytes": 12209,
-      "sha256": "3c42abc777503d44e99bc0a59aa2f7608ad625c5b5d1b555eb737f9c2fb4f1d4"
+      "bytes": 14032,
+      "sha256": "ca5f5fbc7b241ca4a0ca63cef40e79a305c9ae5d9264c4c922ea07f10ab614f2"
     },
     {
       "path": "configs/confirmatory.json",
@@ -66,6 +66,11 @@
       "path": "configs/development.json",
       "bytes": 1397,
       "sha256": "768c975e5199052aee9b143cf6a78633a34d03e657913d142c78f8d0011b57b2"
+    },
+    {
+      "path": "configs/engineering_yahoo_calibrated.json",
+      "bytes": 1174,
+      "sha256": "fb198761f3895265f55e2e44d6e7a5d739e01bdd4c35517c21bd8befd1a331f2"
     },
     {
       "path": "configs/first_execution.json",
@@ -96,6 +101,16 @@
       "path": "configs/robustness_suite.json",
       "bytes": 1639,
       "sha256": "c243f7193165573ec608f697f40984a84950686eba3f8431670ac0dd972b86c2"
+    },
+    {
+      "path": "data/engineering/yahoo_calibrated_v1/panel.parquet",
+      "bytes": 65835,
+      "sha256": "38fac83aa6000dff58ceb8b69a59b10a4d77434cd175722a8bb2bff2aec3d7f1"
+    },
+    {
+      "path": "data/engineering/yahoo_calibrated_v1/panel.parquet.manifest.json",
+      "bytes": 1349,
+      "sha256": "5627c6ca82020ebdb103e22679f5ba288b1074ac4401a211f4a4de894570f5b7"
     },
     {
       "path": "data/templates/macro_headers.csv",
@@ -203,6 +218,231 @@
       "sha256": "1ac130f6fbdecab5f54b6a76155e1d8a0e28bcd808441e6a358748725734507c"
     },
     {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/analysis/frem_vs_no_memory_4fceb7d074473efc.json",
+      "bytes": 6242,
+      "sha256": "be63bf9e2c81b05507abd86cfa2f31c4277dd833427ae2a3ea3d2f426008cff5"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/budget.json",
+      "bytes": 518,
+      "sha256": "466fa2d90905e5b48ad9056b2248414e37420deea53b90aff7bd6d38a9167057"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/completed_cells.json",
+      "bytes": 19065,
+      "sha256": "0148ecfb4d76b0b57385a56a3f109d035386aa628076f47d20783ecf6e4c6bd0"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/checkpoint/model.pt",
+      "bytes": 130505,
+      "sha256": "8e859abbd15d61eec28d29bfa16a4c30b7befd33d4364a7db5134218301a28a3"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/checkpoint/optimizer.pt",
+      "bytes": 190551,
+      "sha256": "1da0339c02793cb6f425d7fbb27d6af33b1ff05df326ac11a5d4e43f1365bb66"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/checkpoint/state.json",
+      "bytes": 700868,
+      "sha256": "93bd37f8b10bc9340ab65ef466929f7d24f1c4491e88483080bca4344bbd2862"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/fit.json",
+      "bytes": 3665,
+      "sha256": "725877f9a6f9e6265f06503f6b7c5c03139bff47d2a40a3f08353256a5c968d4"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/fit_budget.json",
+      "bytes": 455,
+      "sha256": "abd517336eca297d774ab2cb84a64cef9a47ca208fd133bfc4ce4c3d64aea7ef"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/input_perturbation.json",
+      "bytes": 738,
+      "sha256": "42c844a577fa3398920d8c451f83f10afef2655920d718ae843ba22fe5b3ed92"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/metrics.json",
+      "bytes": 3984,
+      "sha256": "b81ad80fa7129bfb39263dca5e7adfa1322780f7dfdd6d3957ea8287295c64c4"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/predictions.csv",
+      "bytes": 90096,
+      "sha256": "95f5180c30596fd38551d9bef0a89f13df14ee12ec278df85889ec174b924f2d"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/frem/seed_11/resolved_config.json",
+      "bytes": 391,
+      "sha256": "f20b430876fbc04c63021dd986cc9da994e33579f99846d292d62fc18569843d"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/manifest.json",
+      "bytes": 6383,
+      "sha256": "263ef74947edb57d8836da9416e471e7daaf048434dc3c642d2feb3ef05c9752"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/checkpoint/model.pt",
+      "bytes": 130505,
+      "sha256": "2f6bc2c2d65dbf5f37b645b1c81943f002c88145b13a28638fe5ec6634a3e5c6"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/checkpoint/optimizer.pt",
+      "bytes": 182115,
+      "sha256": "0cb79f3ef0c9e3c98299682500bca60ca687fb852f8f7f0e4132444d52aa44b8"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/checkpoint/state.json",
+      "bytes": 11528,
+      "sha256": "b0ed62b3d20e1507f91aefdc7ec79e22bc3d25284f2787a043144fa21f312bc4"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/fit.json",
+      "bytes": 3520,
+      "sha256": "92b159be8a599fbf70480c7401e915e380ac2af1f7efacb643c5a4e4029b3b01"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/fit_budget.json",
+      "bytes": 455,
+      "sha256": "fccc2f6d7ba0ebfc8d708e81767c20ea67df58b6ce3bad6bd8880494bcf74f05"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/input_perturbation.json",
+      "bytes": 738,
+      "sha256": "42c844a577fa3398920d8c451f83f10afef2655920d718ae843ba22fe5b3ed92"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/metrics.json",
+      "bytes": 4090,
+      "sha256": "6474845106ba4fec5c61cbf3cc42435a9bed2775c5302a1b5eeb0691d6bc338d"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/predictions.csv",
+      "bytes": 85078,
+      "sha256": "2dab202e959709a6e306bb0b45afcf65bcbe3097a5deeeccc62fc3008541b548"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/no_memory/seed_11/resolved_config.json",
+      "bytes": 416,
+      "sha256": "088338852b4bfa2776def9032c00426d1d69fb0c3f638a189fb4a76429e3b751"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/protocol.json",
+      "bytes": 3849,
+      "sha256": "833100ef8ff8b0a6ca568bfba1d8601c6f115b3bab11705d7876aa978360763c"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/report/index.html",
+      "bytes": 2052,
+      "sha256": "bd5186c24b6754536f6fcd96265519436af3cb315b01ff2520f63c66dd4331ad"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/report/predictive_scores.csv",
+      "bytes": 189,
+      "sha256": "3d581d56133ee2e2f8faf544d685799127830aa4174fddb1325933d74f876784"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/report/predictive_scores.png",
+      "bytes": 38652,
+      "sha256": "66726b63823ad5075ef30b308e157ba89d31d811669929197ea7d061c906a21e"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/report/report_provenance.json",
+      "bytes": 5095,
+      "sha256": "b7e1331ba7ea0e758e7b4986ca86f25022d05214ba00a373eaeecb8fc3a5e7f7"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/checkpoint/baseline.json",
+      "bytes": 3360,
+      "sha256": "103f74418a990a7358d28083debeef910f80606c42310e4798b738233a35d707"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/checkpoint/estimator.joblib",
+      "bytes": 2085,
+      "sha256": "f6a70f5dc8ba7045ab83eae5b3b7722e2c3b15e8fe0a001e26697d5fcc321aa3"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/fit.json",
+      "bytes": 785,
+      "sha256": "4e9b5c0b92ef57f282b5942483ceab866e495b346d9c5a829874b56dc0ae39a9"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/fit_budget.json",
+      "bytes": 455,
+      "sha256": "48a56a375a541183da907e41439cf9fbc993281b94254a79a7aeaaf2bfdce3f1"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/input_perturbation.json",
+      "bytes": 738,
+      "sha256": "42c844a577fa3398920d8c451f83f10afef2655920d718ae843ba22fe5b3ed92"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/metrics.json",
+      "bytes": 4147,
+      "sha256": "1900739ff64cfa7164ffc11137720e3cf5fde717a82b769dc97fb6029eea5bf2"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/predictions.csv",
+      "bytes": 62076,
+      "sha256": "5b2aa7198ec1e17bf3040794afb6589edc69f812dc1688b4f71170d031204e19"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/ridge/seed_11/resolved_config.json",
+      "bytes": 271,
+      "sha256": "12e51b5e658c848286fc0381a1774986ae2316e12a5ac5346134e42462b6e7f2"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/split.json",
+      "bytes": 19461,
+      "sha256": "c15a68abbfe828a28c5c9173b46e4942c77e66c36e970a8a72ce8b2b77cc1af7"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/summary.json",
+      "bytes": 20895,
+      "sha256": "d90f46f6315199f413c0d070915c2ea1bead56e004b14b202cc1539b56ad3a94"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/checkpoint/baseline.json",
+      "bytes": 3364,
+      "sha256": "72fcc88d0220d1cc1fb15d2c15cc8a56910b28dd76f75355596f979bec4c4f44"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/checkpoint/model.ubj",
+      "bytes": 228433,
+      "sha256": "591186a5c6694376c4494448f19922a3d0740ae014fadf6084b95368eee8d9c7"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/fit.json",
+      "bytes": 787,
+      "sha256": "6dce44bfaffd39462e35be4e2020bd356179c1eac6e3fb304e0d1af7cc7b2eb3"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/fit_budget.json",
+      "bytes": 456,
+      "sha256": "10408b589fdb50659b15cf014fb390194e8c799c15d0d8e0fb4f296924e9d8f1"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/input_perturbation.json",
+      "bytes": 738,
+      "sha256": "42c844a577fa3398920d8c451f83f10afef2655920d718ae843ba22fe5b3ed92"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/metrics.json",
+      "bytes": 4140,
+      "sha256": "dfdce6d939b7d1496851cd056e340ca5199d258be23211f081476eceaf12d5b1"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/predictions.csv",
+      "bytes": 62805,
+      "sha256": "bfd05516893ddf9033702b57bb4df230c5d3341e06ed0651aadd48ff5254f99a"
+    },
+    {
+      "path": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e/xgboost/seed_11/resolved_config.json",
+      "bytes": 273,
+      "sha256": "f2d43f6c3a684101334ad91e025d67b4c8837f1d5c38cb5e83b41d3c05c63996"
+    },
+    {
       "path": "paper/main.bbl",
       "bytes": 6437,
       "sha256": "bf7cb03f673fd96e848791e80407dcae7bfcb58e3420b08ce03299a7fbacf30f"
@@ -228,6 +468,11 @@
       "sha256": "6b569d290b7da09b1adbcaaa0f81b32c80f1189ded27973fdef90f9db9caad0c"
     },
     {
+      "path": "research/all_admissible_runs_2026-10-11.json",
+      "bytes": 7886,
+      "sha256": "a98d46b4a9f9ab469e4c8aa8335ff07cc24c3213d92d1f05c479fbf9736910ad"
+    },
+    {
       "path": "research/current_gyic_watchlist_2026-10-11.md",
       "bytes": 5333,
       "sha256": "ea32692173df4e5fcd14f61c167f95c5fc9997ec58245fa40a8c36ae2a782327"
@@ -243,6 +488,11 @@
       "sha256": "576152e108b4b100ecbdd34b70bca86c3a2e90e8eb9b3de66f00a0bfe927889d"
     },
     {
+      "path": "research/decisions/engineering_execution_2026-10-11.json",
+      "bytes": 1836,
+      "sha256": "4185755d196074213d1ebf0616692cf880394b165f19af8d2297937db91a7387"
+    },
+    {
       "path": "research/decisions/repository_cleanup_efficiency_2026-10-11.json",
       "bytes": 1885,
       "sha256": "fec8ac5419f38cf38e4972f3997e95ebc54f84305b5c9d020c6a67a89f994301"
@@ -254,8 +504,8 @@
     },
     {
       "path": "research/events.jsonl",
-      "bytes": 3607,
-      "sha256": "75c2f1b2f6570804d6a20747977f801adfdcfab477e4d30fbd66452f09d5a222"
+      "bytes": 7270,
+      "sha256": "041dc60542a278d65fc0c95cd8868b4705505ef296cd6666cd7b371cb80b127c"
     },
     {
       "path": "research/initial_implementation_contract.md",
@@ -296,6 +546,11 @@
       "path": "scripts/build_release_manifests.py",
       "bytes": 3736,
       "sha256": "3be2ec6743b0fd3e5fdf7f35522a61893692a8af2722efb59abc81ba3f59a623"
+    },
+    {
+      "path": "scripts/generate_yahoo_calibrated_engineering_panel.py",
+      "bytes": 5401,
+      "sha256": "2f0a418f66183ebc45b00da2b54ec87b7e7a569210265a4f5bb6b3a556cb4d5b"
     },
     {
       "path": "scripts/validate_source.py",
