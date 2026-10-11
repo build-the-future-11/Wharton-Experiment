@@ -1,0 +1,48 @@
+{
+  "amendment": "WHARTON-PRIVATE-ENGINEERING-TERMINAL-BOOL-20261009",
+  "status": "IMPLEMENTED_AND_TESTED_PRIVATE_PATCH",
+  "created_at_utc": "2026-10-09T15:41:40.850200+00:00",
+  "defect": "Non-boolean terminal/closed flags accepted by truthiness; terminal string false triggers liquidation and fees.",
+  "base_accounting_sha256": "3f2c22ff8de14b16491d7e58fc74149db7979d322d1a79833a36727e55c9bc2b",
+  "candidate_accounting_sha256": "2060b064b6156d2e964752e66faff42bd50b79f590bc0d6fd368eb61179a5d89",
+  "patch_sha256": "cfd15445c33daf6436ae27b6df35ae4f81e8883e3935a07e06a8490624a3bee6",
+  "test_file_sha256": "f1189744226c08ccea8389b0e85e0f85251b57731905d200a24d2edb9b8a6de5",
+  "base_proof": {
+    "new_tests": 4,
+    "failures": 16,
+    "failure_unit": "invalid-value subtests across two test methods; two valid-boolean test methods passed",
+    "exit_code": 1,
+    "log": "baseline-regression.log",
+    "witness": "DEFECT_WITNESS.json"
+  },
+  "candidate_verification": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. python3 -m unittest discover -s tests -p 'test_accounting*.py' -v",
+    "cwd": "candidate",
+    "tests": 25,
+    "existing_ledger_tests": 21,
+    "new_regression_tests": 4,
+    "exit_code": 0,
+    "log": "candidate-tests.log",
+    "AST_parse": "PASS"
+  },
+  "behavioral_scope": "Reject non-boolean terminal and State.closed flags; preserve default False and both explicit terminal policy alternatives. No economic policy selected.",
+  "compatibility": "Malformed caller inputs such as strings,0/1,null now raise ValueError; callers must provide literal booleans. Valid booleans retain the same arithmetic.",
+  "preservation": {
+    "workspace_R2_source": "all12 bound source files unchanged",
+    "PRO_BLADE_R2_source": "all12 bound source files unchanged",
+    "R2_negative_memory_result_percent": 9.269584365779265,
+    "run_zip_sha256": "3f84010155736b483844d3cc36149ef7256648688afa6dc91122993cc1b676cd",
+    "legacy_models_changed": false
+  },
+  "not_done": [
+    "training",
+    "tuning",
+    "scientific benchmark",
+    "protected data access",
+    "economic policy adoption",
+    "public push",
+    "deployment",
+    "integration into frozenR2"
+  ],
+  "review_boundary": "Private isolated patch ready for owner integration; frozen R2 code/checkpoints retain their original source identity."
+}

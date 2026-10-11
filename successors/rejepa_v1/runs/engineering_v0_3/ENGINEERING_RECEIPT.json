@@ -1,0 +1,52 @@
+{
+  "checkpoint_hashes": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "b260b1b70ac1f83161eef5ad8110b8465545e00638012252e6015df1d104f3ec"
+  },
+  "checkpoint_metadata": {
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "phase": "engineering_compatibility",
+    "scientific_status": "NOT_EVALUATED"
+  },
+  "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+  "input_label_required": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "limitations": [
+    "Synthetic fixture only; no market performance inference",
+    "Single bounded seed; no scientific comparison",
+    "No protected outcomes or portfolio claims"
+  ],
+  "model_parameters": 8006,
+  "peak_rss_raw": 438763520,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "ridge_validation_mse": 0.00026072735145621665,
+  "scientific_status": "NOT_EVALUATED",
+  "status": "ENGINEERING_COMPATIBILITY_PASS",
+  "train_samples": 330,
+  "training": {
+    "best_epoch": 2,
+    "best_validation_loss": 2.439462423324585,
+    "completed_epochs": 3,
+    "history": [
+      {
+        "epoch": 0.0,
+        "training_loss": 2.5148634910583496,
+        "validation_loss": 2.460726737976074
+      },
+      {
+        "epoch": 1.0,
+        "training_loss": 2.503692150115967,
+        "validation_loss": 2.4499893188476562
+      },
+      {
+        "epoch": 2.0,
+        "training_loss": 2.493255853652954,
+        "validation_loss": 2.439462423324585
+      }
+    ],
+    "stopped_early": false
+  },
+  "validation_samples": 96,
+  "validation_student_t_nll": 0.8170244693756104,
+  "wall_seconds": 1.0664320829964709
+}

@@ -1,0 +1,62 @@
+{
+  "checkpoint_hashes": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "484c8600b88953ed54c2bfc80f0d33512cd56584ed8fe579f0ca5298efabcec1"
+  },
+  "checkpoint_metadata": {
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "phase": "engineering_compatibility",
+    "scientific_status": "NOT_EVALUATED"
+  },
+  "checkpoint_state_sha256": "1429f225ce3a93c944ce4f55941bb0ef79bbb4ea16261e0c9d9f3f9fa0a5fa97",
+  "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+  "input_label_required": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "limitations": [
+    "Synthetic fixture only; no market performance inference",
+    "Single bounded seed; no scientific comparison",
+    "No protected outcomes or portfolio claims"
+  ],
+  "manifest_sha256": "81e9c03598dd55c934809960b0faef06ae034c52815f1f36792a236f2bc5108c",
+  "matrix_status": {
+    "complete": true,
+    "completed_cells": 2,
+    "expected_cells": 2,
+    "failed_cells": [],
+    "missing_cells": [],
+    "observed_cells": 2
+  },
+  "model_parameters": 8006,
+  "peak_rss_raw": 439484416,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "ridge_validation_mse": 0.00026072735145621665,
+  "scientific_status": "NOT_EVALUATED",
+  "status": "ENGINEERING_COMPATIBILITY_PASS",
+  "train_samples": 330,
+  "training": {
+    "best_epoch": 2,
+    "best_validation_loss": 2.1644487380981445,
+    "completed_epochs": 3,
+    "history": [
+      {
+        "epoch": 0.0,
+        "training_loss": 2.1938533782958984,
+        "validation_loss": 2.1911487579345703
+      },
+      {
+        "epoch": 1.0,
+        "training_loss": 2.1817684173583984,
+        "validation_loss": 2.1777076721191406
+      },
+      {
+        "epoch": 2.0,
+        "training_loss": 2.169715166091919,
+        "validation_loss": 2.1644487380981445
+      }
+    ],
+    "stopped_early": false
+  },
+  "validation_samples": 96,
+  "validation_student_t_nll": 0.46605125069618225,
+  "wall_seconds": 1.335960167023586
+}

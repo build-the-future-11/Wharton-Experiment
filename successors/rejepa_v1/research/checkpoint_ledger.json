@@ -1,0 +1,107 @@
+{
+  "updated": "2026-10-11",
+  "scientific_status": "NOT_EVALUATED",
+  "checkpoints": [
+    {
+      "id": 0,
+      "name": "Initialize",
+      "status": "PASS",
+      "evidence": [
+        "RESEARCH_STATE.json",
+        "research/protocol.json",
+        "research/decisions.jsonl",
+        "research/source_provenance.json"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Idea Ready",
+      "status": "PASS_PROPOSAL_NOVELTY_UNESTABLISHED",
+      "evidence": [
+        "research/prior_art_review.md",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Model Specification Ready",
+      "status": "PASS_PROSPECTIVE_NO_RESULTS",
+      "evidence": [
+        "paper/prospective_specification.md",
+        "configs/phase1_model.json"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Methodology Ready",
+      "status": "BLOCKED_EXTERNAL_INPUTS_NOT_FROZEN",
+      "evidence": [
+        "research/methodology.md",
+        "research/protocol.json",
+        "docs/DATA_CONTRACT.md"
+      ],
+      "blockers": [
+        "admitted point-in-time international data manifest",
+        "actual protected split boundary",
+        "team-only official WInS universe and rules"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Model Implemented",
+      "status": "IMPLEMENTATION_COMPLETE_FORMAL_GATE_BLOCKED_BY_CHECKPOINT_3",
+      "evidence": [
+        "src/rejepa",
+        "tests",
+        "research/runtime_verification_v0.3_2026-10-11.json"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Experiment System",
+      "status": "IMPLEMENTED_FORMAL_GATE_BLOCKED_BY_CHECKPOINT_3",
+      "evidence": [
+        "src/rejepa/experiments.py",
+        "src/rejepa/evaluation.py",
+        "src/rejepa/cli.py",
+        "tests"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dry Run",
+      "status": "PASS_ENGINEERING_FIXTURE_ONLY_MARKET_DRY_RUN_BLOCKED",
+      "evidence": [
+        "data/engineering/v0_3/ENGINEERING_DATASET.json",
+        "runs/engineering_v0_3_release_a/ENGINEERING_RECEIPT.json",
+        "runs/engineering_v0_3_release_b/ENGINEERING_RECEIPT.json",
+        "research/runtime_verification_v0.3_2026-10-11.json"
+      ],
+      "blockers": [
+        "admitted point-in-time international market panel",
+        "actual chronological split boundaries",
+        "team-only official WInS universe and rules"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Scientific Freeze",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": 8,
+      "name": "Evidence Complete",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": 9,
+      "name": "Independent Verification",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": 10,
+      "name": "Release",
+      "status": "NOT_STARTED"
+    }
+  ]
+}

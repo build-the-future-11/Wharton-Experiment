@@ -1,0 +1,44 @@
+test_all_policy_combinations_conserve (test_accounting.LedgerTests.test_all_policy_combinations_conserve) ... ok
+test_arrears_not_new_liabilities (test_accounting.LedgerTests.test_arrears_not_new_liabilities) ... ok
+test_capital_gain_is_not_cash (test_accounting.LedgerTests.test_capital_gain_is_not_cash) ... ok
+test_cash_interest_separate (test_accounting.LedgerTests.test_cash_interest_separate) ... ok
+test_corporate_actions_and_price_order (test_accounting.LedgerTests.test_corporate_actions_and_price_order) ... ok
+test_duplicate_obligation_and_bad_clock (test_accounting.LedgerTests.test_duplicate_obligation_and_bad_clock) ... ok
+test_fees_on_executed_trades (test_accounting.LedgerTests.test_fees_on_executed_trades) ... ok
+test_fifo_deterministic (test_accounting.LedgerTests.test_fifo_deterministic) ... ok
+test_future_liability_not_paid_early (test_accounting.LedgerTests.test_future_liability_not_paid_early) ... ok
+test_insufficient_sale_records_arrears (test_accounting.LedgerTests.test_insufficient_sale_records_arrears) ... ok
+test_original_m11_regression (test_accounting.LedgerTests.test_original_m11_regression) ... ok
+test_payment_carries_wealth_forward (test_accounting.LedgerTests.test_payment_carries_wealth_forward) ... ok
+test_purchase_is_self_financing (test_accounting.LedgerTests.test_purchase_is_self_financing) ... ok
+test_reject_invalid_contracts (test_accounting.LedgerTests.test_reject_invalid_contracts) ... ok
+test_sale_funds_payment_net_fees (test_accounting.LedgerTests.test_sale_funds_payment_net_fees) ... ok
+test_terminal_cash_is_not_marked_wealth (test_accounting.LedgerTests.test_terminal_cash_is_not_marked_wealth) ... ok
+test_time_order_changes_funding_but_conserves (test_accounting.LedgerTests.test_time_order_changes_funding_but_conserves) ... ok
+test_total_loss_and_zero_mark (test_accounting.LedgerTests.test_total_loss_and_zero_mark) ... ok
+test_total_return_double_count_rejected (test_accounting.LedgerTests.test_total_return_double_count_rejected) ... ok
+test_writeoff_explicit (test_accounting.LedgerTests.test_writeoff_explicit) ... ok
+test_zero_partial_full_payments (test_accounting.LedgerTests.test_zero_partial_full_payments) ... ok
+test_data_admission_hash_and_order (test_pipeline.ChronologyTests.test_data_admission_hash_and_order) ... ok
+test_delayed_observation_rejected (test_pipeline.ChronologyTests.test_delayed_observation_rejected) ... ok
+test_features_do_not_change_with_future (test_pipeline.ChronologyTests.test_features_do_not_change_with_future) ... ok
+test_spent_lockbox_rejected (test_pipeline.ChronologyTests.test_spent_lockbox_rejected) ... ok
+test_true_horizon_and_label_maturation (test_pipeline.ChronologyTests.test_true_horizon_and_label_maturation) ... ok
+test_ledger_cli (test_pipeline.FullHeadAndCliTests.test_ledger_cli) ... ok
+test_xgboost_pipeline_and_forecast_cli (test_pipeline.FullHeadAndCliTests.test_xgboost_pipeline_and_forecast_cli) ... ok
+test_full_evaluation_function (test_pipeline.ModelTests.test_full_evaluation_function) ... ok
+test_future_label_poison_does_not_change_fit (test_pipeline.ModelTests.test_future_label_poison_does_not_change_fit) ... ok
+test_inference_rejects_old_clock (test_pipeline.ModelTests.test_inference_rejects_old_clock) ... ok
+test_memory_matured_and_encoder_learns (test_pipeline.ModelTests.test_memory_matured_and_encoder_learns) ... ok
+test_no_implicit_xgboost_substitution (test_pipeline.ModelTests.test_no_implicit_xgboost_substitution) ... ok
+test_predict_save_reload_and_batch_invariance (test_pipeline.ModelTests.test_predict_save_reload_and_batch_invariance) ... ok
+test_forecast_reaches_scenarios (test_pipeline.PlannerTests.test_forecast_reaches_scenarios) ... ok
+test_fractional_cvar (test_pipeline.PlannerTests.test_fractional_cvar) ... ok
+test_shortfall_counted_once (test_pipeline.PlannerTests.test_shortfall_counted_once) ... ok
+test_terminal_cash_policy_used_by_planner (test_pipeline.PlannerTests.test_terminal_cash_policy_used_by_planner) ... ok
+test_writeoff_does_not_hide_failure (test_pipeline.PlannerTests.test_writeoff_does_not_hide_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 11.183s
+
+OK

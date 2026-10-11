@@ -1,0 +1,8 @@
+{
+  "model_state_sha256": "2f95e6f19e9b1d9a35781e7e21608d20e869f084ae325a2672bfba0a7e307c1c",
+  "sha256": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "aad58f4a892b3589b57e5189df690af97635dbeabd6a9f8ad82a8cb1b4f53717"
+  }
+}

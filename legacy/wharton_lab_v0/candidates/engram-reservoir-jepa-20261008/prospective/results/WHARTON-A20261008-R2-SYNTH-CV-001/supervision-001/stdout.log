@@ -1,0 +1,5 @@
+All source, dependency, data and chronology gates passed; beginning one fixed evaluation.
+Origin 600 starting {'wall_seconds': 3.1301537919998736, 'cpu_seconds': 2.461903, 'peak_rss_bytes': 345653248}
+Origin 620 starting {'wall_seconds': 5.527996124999845, 'cpu_seconds': 4.628938, 'peak_rss_bytes': 495878144}
+Origin 640 starting {'wall_seconds': 6.986845250000442, 'cpu_seconds': 6.083721, 'peak_rss_bytes': 525402112}
+Worker disposition: completed {'wall_seconds': 8.473362583999915, 'cpu_seconds': 7.566744, 'peak_rss_bytes': 547307520}

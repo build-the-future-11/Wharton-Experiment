@@ -1,0 +1,24 @@
+{
+  "name": "reng_jepa_v0_3_engineering_compatibility",
+  "status": "READY_WITH_REPOSITORY_GENERATED_LABELED_INPUT",
+  "scientific_use": "PROHIBITED",
+  "models": [
+    "ridge",
+    "equal_weight",
+    "rejepa_no_world_no_engram",
+    "rejepa_full"
+  ],
+  "seeds": [11],
+  "epochs": 2,
+  "maximum_cells": 4,
+  "required_input_label": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "generator_command": "rejepa synthetic-generate successors/rejepa_v1/data/engineering/v0_3",
+  "smoke_command": "rejepa engineering-smoke successors/rejepa_v1/data/engineering/v0_3/training.npz successors/rejepa_v1/runs/engineering_v0_3",
+  "outputs": [
+    "frozen manifest",
+    "one receipt per cell",
+    "completion status",
+    "runtime and memory",
+    "no financial-performance claim"
+  ]
+}

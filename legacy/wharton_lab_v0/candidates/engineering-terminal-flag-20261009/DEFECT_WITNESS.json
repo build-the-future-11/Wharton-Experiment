@@ -1,0 +1,19 @@
+{
+  "fixture": "Deterministic artificial one-asset ledger; not market performance",
+  "base_behavior": "Invalid string flag accepted and treated as terminal",
+  "input_terminal": "false",
+  "starting_units": "10",
+  "starting_price": "10",
+  "starting_cash": "5",
+  "declared_terminal_policy": "liquidate",
+  "explicit_fee_rate": "0.1",
+  "actual_turnover": "100",
+  "actual_fees": "10.0",
+  "ending_units": [
+    "0"
+  ],
+  "ending_cash": "95.0",
+  "closed_value": "false",
+  "expected_behavior": "Reject non-boolean flag before creating a terminal transaction",
+  "source_state_unchanged": true
+}

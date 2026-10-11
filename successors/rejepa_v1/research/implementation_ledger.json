@@ -1,0 +1,24 @@
+{
+  "version": "0.3.0",
+  "updated": "2026-10-11",
+  "scientific_status": "NOT_EVALUATED",
+  "engineering_scope": "complete local implementation of phases 0 through 14; phase 15 external execution remains gated",
+  "phases": {
+    "0": {"status": "IMPLEMENTED", "artifacts": ["research_state.yaml", "docs", "research"]},
+    "1": {"status": "IMPLEMENTED", "artifacts": ["src/rejepa/mandate.py"]},
+    "2": {"status": "IMPLEMENTED_ENGINEERING_FIXTURE_VALIDATED_NO_MARKET_DATA_ADMITTED", "artifacts": ["src/rejepa/data.py", "src/rejepa/engineering_data.py", "data/engineering/v0_3/ENGINEERING_DATASET.json"]},
+    "3": {"status": "IMPLEMENTED_ENGINEERING_SMOKE_ONLY_NOT_SCIENTIFICALLY_TRAINED", "artifacts": ["src/rejepa/model.py", "src/rejepa/representation.py", "runs/engineering_v0_3_release_a/ENGINEERING_RECEIPT.json"]},
+    "4": {"status": "IMPLEMENTED_NOT_CALIBRATED", "artifacts": ["src/rejepa/simulator.py"]},
+    "5": {"status": "IMPLEMENTED", "artifacts": ["src/rejepa/engram.py", "src/rejepa/graph_memory.py", "src/rejepa/memory_diagnostics.py"]},
+    "6": {"status": "IMPLEMENTED", "artifacts": ["src/rejepa/reservoir.py", "src/rejepa/spectral.py", "src/rejepa/spectral_diagnostics.py"]},
+    "7": {"status": "IMPLEMENTED", "artifacts": ["src/rejepa/model.py"]},
+    "8": {"status": "IMPLEMENTED_NOT_CALIBRATED", "artifacts": ["src/rejepa/model.py", "src/rejepa/training.py"]},
+    "9": {"status": "IMPLEMENTED_RESEARCH_ONLY_EXACT_SCENARIO_CVAR_LP", "artifacts": ["src/rejepa/portfolio.py", "src/rejepa/baselines.py"]},
+    "10": {"status": "IMPLEMENTED_NO_APPROVED_UNIVERSE", "artifacts": ["src/rejepa/international.py"]},
+    "11": {"status": "IMPLEMENTED_NO_MARKET_EXECUTION", "artifacts": ["src/rejepa/evaluation.py", "src/rejepa/experiments.py"]},
+    "12": {"status": "IMPLEMENTED_CONTROLS_NO_ABLATION_RESULTS", "artifacts": ["research/protocol.json", "configs", "src/rejepa/baselines.py"]},
+    "13": {"status": "BLOCKED_DRAFT_GENERATOR_IMPLEMENTED", "artifacts": ["src/rejepa/reporting.py"]},
+    "14": {"status": "IMPLEMENTED_AND_PACKAGED_V0_3", "artifacts": ["src/rejepa/cli.py", "src/rejepa/checkpoint.py", "pyproject.toml", "tests", "RELEASE_MANIFEST.json", "research/runtime_verification_v0.3_2026-10-11.json"]},
+    "15": {"status": "BLOCKED_EXTERNAL_DATA_AND_RULES", "artifacts": ["research/checkpoint_ledger.json"]}
+  }
+}

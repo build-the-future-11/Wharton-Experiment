@@ -1,0 +1,11 @@
+{
+  "base_currency": "USD",
+  "universe_status": "REQUIRED: point_in_time_complete or fixed_ex_ante with real evidence",
+  "universe_frozen_at": null,
+  "delistings_included": false,
+  "availability_policy": "REQUIRED: verified exchange calendar and source publication policy",
+  "total_return_methodology": "REQUIRED: corporate actions, distributions, terminal outcomes, reinvestment and FX",
+  "feature_provenance": {},
+  "source_license": "REQUIRED: source license and permitted research use",
+  "template_status": "INCOMPLETE INPUT CONTRACT; not a validated source attestation"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "failed",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-c",
+    "raise RuntimeError(\"deliberate guard fixture\")"
+  ],
+  "cwd": "/Users/ryan/Documents/Codex/2026-10-08/task-10/approved_run",
+  "wall_limit_seconds": 3,
+  "rss_limit_bytes": 104857600,
+  "started_utc": "2026-10-08T18:18:05.113142+00:00",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "sampling_target_seconds": 0.2,
+  "monitor": "sum RSS of worker process group from macOS ps; wait4 worker high-water RSS also retained",
+  "stop_reason": "worker_error",
+  "exit_code": 1,
+  "worker_pid": 20188,
+  "worker_group": 20188,
+  "wall_seconds": 0.24517283299974224,
+  "cleanup_seconds": 0.015419125000335043,
+  "sampled_peak_group_rss_bytes": 1294336,
+  "worker_peak_rss_bytes": 20004864,
+  "cpu_user_seconds": 0.040586,
+  "cpu_system_seconds": 0.008236,
+  "remaining_group_pids": [],
+  "rss_samples": [
+    {
+      "elapsed_seconds": 0.015586083000016515,
+      "rss_bytes": 1294336,
+      "pids": [
+        20188
+      ]
+    },
+    {
+      "elapsed_seconds": 0.24514908299988747,
+      "rss_bytes": 0,
+      "pids": [
+        20188
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-08T18:18:05.373860+00:00"
+}

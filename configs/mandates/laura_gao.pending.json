@@ -1,0 +1,174 @@
+{
+  "mandate_id": "laura-gao-wharton-2026-2027",
+  "client_name": "Laura Gao",
+  "base_currency": "USD",
+  "status": "requires_inputs",
+  "sources": {
+    "laura_case_copy_20261010": {
+      "source_id": "laura_case_copy_20261010",
+      "title": "ROI - Wharton Global Youth Investment Challenge Prep — Case study tab",
+      "location": "https://docs.google.com/document/d/1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U/edit",
+      "kind": "user_document",
+      "verified_at": "2026-10-10T12:56:02Z",
+      "effective_from": "2026-10-10T12:56:02Z",
+      "effective_until": null,
+      "revision": "AHj4eMSWUsJnY4Mwh2ILrcCGEx9ohcgj9LPocSnhH3dyzEXDx36GqvSE5DyBCK0DEXToiSJmcQ4tuWnfpDNOamg9g69kEYDRByaeGETEi90",
+      "scope": "Reproduced competition client case in tab t.ex0r35fa9gmc, not proof of a current authenticated organizer publication.",
+      "notes": "Current text recovered directly on 10 October 2026. Organizer amendments, approved universe and trading requirements still need exact participant material."
+    },
+    "twse_guide_20261010": {
+      "source_id": "twse_guide_20261010",
+      "title": "2025 Guide to Investing in Taiwan",
+      "location": "https://www.twse.com.tw/en/about/company/guide.html",
+      "kind": "official",
+      "verified_at": "2026-10-10T12:56:02Z",
+      "effective_from": "2026-10-10T12:56:02Z",
+      "effective_until": null,
+      "revision": "Web page retrieved 2026-10-10",
+      "scope": "General TWSE market mechanics; product exceptions apply.",
+      "notes": "A 10% daily reference-price band is not a general limit on foreign-investor portfolio weights or share of trades. Security-specific rules and participant rules remain separate."
+    }
+  },
+  "rules": [
+    {
+      "rule_id": "twse-general-equity-price-band",
+      "rule_type": "daily_price_band",
+      "subject": "TWSE eligible products, with exceptions",
+      "value": 0.1,
+      "source_id": "twse_guide_20261010",
+      "interpretation": "Price variation relative to the session reference; not a country weight, ownership or foreign trading quota.",
+      "enforced_by_optimizer": false
+    }
+  ],
+  "cashflows": [
+    {
+      "date": "2027-01-01",
+      "amount": 300000,
+      "kind": "contribution",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2028-01-01",
+      "amount": 150000,
+      "kind": "contribution",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2033-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2034-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2035-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2036-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2037-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2038-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2039-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2040-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2041-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    },
+    {
+      "date": "2042-01-01",
+      "amount": 50000,
+      "kind": "operating",
+      "currency": "USD",
+      "source_id": "laura_case_copy_20261010"
+    }
+  ],
+  "case_source_id": "laura_case_copy_20261010",
+  "participant_rules_source_id": null,
+  "universe_source_id": null,
+  "policy_source_id": null,
+  "allowed_markets": [],
+  "allowed_asset_classes": [],
+  "eligible_asset_ids": [],
+  "min_cash_weight": null,
+  "max_cash_weight": null,
+  "max_asset_weight": null,
+  "max_turnover": null,
+  "max_trade_adv_fraction": null,
+  "max_position_adv_days": null,
+  "max_foreign_currency_weight": null,
+  "market_weight_caps": {},
+  "market_weight_floors": {},
+  "sector_weight_caps": {},
+  "sector_weight_floors": {},
+  "asset_class_weight_caps": {},
+  "asset_class_weight_floors": {},
+  "max_metadata_age_days": 7,
+  "long_only": true,
+  "allow_leverage": false,
+  "funding_confidence": null,
+  "flexibility_buffer": null,
+  "reserve_year": 2033,
+  "communication_year": 2031,
+  "missing_inputs": [
+    "Current official participant trading rules and dated approved instrument universe must be supplied.",
+    "The team must document and review numerical risk, concentration, liquidity, turnover and cash policies.",
+    "A justified numerical funding-confidence target and financial-flexibility treatment are not assigned by the case.",
+    "Current holdings, base-currency instrument metadata, costs and point-in-time market data remain required."
+  ],
+  "notes": [
+    "Known case cashflows are implemented and usable for conditional arithmetic independently of allocation readiness.",
+    "No other contributions or withdrawals before 2033. Personal living expenses are funded outside this portfolio.",
+    "Establish the operating reserve before the immediate 2033 payment and before facility spending.",
+    "Ten operating payments are fixed nominal USD amounts, not inflation-adjusted, and cannot rely on outside funding.",
+    "Facility contribution is not predetermined. Preserve financial flexibility; a separate contingency endowment is not required by the case.",
+    "A 2031 communication range must be conditional on information available in 2031 and state confidence assumptions.",
+    "WInS trading gains/losses are excluded from the two-contribution long-run projection.",
+    "The case waives personal/capital-gains tax modeling and Taiwan residency-establishment legal requirements; that is not a blanket exemption from securities trading rules.",
+    "Markets named in brainstorming tabs (United States, Taiwan, Japan, Europe, emerging markets) are ideas, not verified case requirements.",
+    "No recession probability, imminent-recession assertion, investment recommendation or test result is encoded here."
+  ]
+}

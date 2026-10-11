@@ -1,0 +1,99 @@
+{
+  "status": "completed",
+  "role": "exploratory_development",
+  "evidence_class": "correctness_only",
+  "source_revision": {
+    "files": {
+      "SPEC.md": "dc19ea815c913ae1135db5e487b790ac3a491aa50391ac024910b07d25ba794a",
+      "evidence/SOURCE_RECOVERY.json": "8228abaf77dcde744c4390e068c14e6c3280b5c20f128737cabb48e5acc9a572",
+      "pyproject.toml": "ea49f00615aa3556ffc1002abbda5774a9cbec49024a145854a538c87385f210",
+      "wharton_final/__init__.py": "fcd7fbfbbf4deba466443eaf0f01e74845bfb806cb533f97b65ce2b6c747eebb",
+      "wharton_final/__main__.py": "be1b37b584b360e78f8fd7b91892f6ccf7522c5096543c4990dbdcad206e502e",
+      "wharton_final/accounting.py": "b5f3886c238aebd09cbb19a6bb9003990cead5e0015a6d1f1ce23677278f01d1",
+      "wharton_final/data.py": "65568123c79f89d1bbfebe267184eceb3465f49eeec40fd1048d2c8f733384ea",
+      "wharton_final/model.py": "50684c91b5a47e5d77fde149470922a94d1327028fc5e557bfc174c23db64d31",
+      "wharton_final/pipeline.py": "9aae32b3a34e4382cc7be8a7087a215e34a77d88ffb75ea8d1288a5834bb1212",
+      "wharton_final/planning.py": "807a3a748a2e4607006aaf1f7681479e3f1dca23ad2d42f58f235e635cfa9235"
+    },
+    "sha256": "a0988a707b5caf2fdb5f50f950b3b49994fc1cd71c16c437565ab70d3ed241a4"
+  },
+  "data_revision": {
+    "manifest_sha256": "f21c8bcb41f967ea17ca3bd7e1d49b8fb061362f52ed1770f62d37e695571262",
+    "data_sha256": "27c040284e0f924b7f6d50c78d88bd2e3091ce1273eb3788abe439543f78555f",
+    "contract": {
+      "csv": "fixture.csv",
+      "sha256": "27c040284e0f924b7f6d50c78d88bd2e3091ce1273eb3788abe439543f78555f",
+      "assets": [
+        "A",
+        "B"
+      ],
+      "source": "synthetic unit fixture, not real performance",
+      "license": "generated test fixture",
+      "lawful_use_attested": true,
+      "asset_order_verified": true,
+      "role": "development",
+      "return_kind": "total",
+      "protected_rows": [],
+      "data_kind": "synthetic_fixture"
+    }
+  },
+  "config": {
+    "context": 6,
+    "horizon": 3,
+    "reporting_delay_seconds": 0,
+    "latent": 4,
+    "reservoir": 5,
+    "spectral_radius": 0.8,
+    "leak": 0.3,
+    "epochs": 2,
+    "learning_rate": 0.001,
+    "ema": 0.99,
+    "memory_slots": 256,
+    "neighbors": 5,
+    "memory_strength": 0.25,
+    "head": "xgboost",
+    "seed": 11
+  },
+  "origins": [
+    65
+  ],
+  "environment": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.4",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "torch": "2.11.0",
+      "xgboost": "3.4.1"
+    }
+  },
+  "metrics": {
+    "candidate": {
+      "mse": 0.0003944490251909782,
+      "mae": 0.01800413266249056,
+      "oos_r2_vs_historical_mean": -0.09065716709723382
+    },
+    "ridge": {
+      "mse": 0.0003941196181581099,
+      "mae": 0.01774798879422587,
+      "oos_r2_vs_historical_mean": -0.08974635196436309
+    },
+    "historical_mean": {
+      "mse": 0.0003616617917074692,
+      "mae": 0.01792293691630174,
+      "oos_r2_vs_historical_mean": 0.0
+    },
+    "persistence": {
+      "mse": 2.407562561774793e-05,
+      "mae": 0.0041715939755401325,
+      "oos_r2_vs_historical_mean": 0.9334305526052873
+    }
+  },
+  "elapsed_seconds": 1.082712625000113,
+  "checkpoint_sha256": {
+    "model-65.pkl": "77de0e7136ca3d4d84b5f0b7eb907c794b5f1aab25a58dbde764d3882de72b6b"
+  },
+  "predictions_sha256": "33031ca631301f1838d1bd61caab0c67d3c433f4c8d930c45494825ec44c68cc"
+}

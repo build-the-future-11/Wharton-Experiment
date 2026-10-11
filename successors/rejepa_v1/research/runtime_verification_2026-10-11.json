@@ -1,0 +1,58 @@
+{
+  "receipt_id": "REJEPA-RUNTIME-20261011",
+  "date": "2026-10-11",
+  "status": "CORE_ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
+  "scope": "Ground-up successor Phase 1: mandate mathematics, causal memory, latent worlds, dual-objective allocation, deterministic training, frozen inference, hash-bound checkpoints, packaging, and local tests. No admitted market data, scientific fitting, backtest, protected outcome, WInS trade, client contact, or submission.",
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "torch": "2.14.1",
+    "pytest": "8.4.2",
+    "ruff": "0.17.0"
+  },
+  "source": {
+    "python_modules": 10,
+    "test_files": 6,
+    "test_functions": 23
+  },
+  "tests": {
+    "command": "PYTHONPATH=successors/rejepa_v1/src .venv/bin/python -m pytest -q successors/rejepa_v1/tests",
+    "status": "PASS",
+    "result": "23 passed in 4.15 seconds on the final source-tree run"
+  },
+  "lint": {
+    "command": ".venv/bin/ruff check successors/rejepa_v1",
+    "status": "PASS"
+  },
+  "package_build": {
+    "command": ".venv/bin/python -m build successors/rejepa_v1 --outdir successors/rejepa_v1/dist",
+    "status": "PASS",
+    "wheel": {
+      "path": "successors/rejepa_v1/dist/rejepa_research-0.1.0-py3-none-any.whl",
+      "sha256": "dfe6dc532a02509ccbf8251d8561bca54875efd191d98a3995fdff623bf5392b"
+    },
+    "sdist": {
+      "path": "successors/rejepa_v1/dist/rejepa_research-0.1.0.tar.gz",
+      "sha256": "bf4bbe1a32e8ab6114641bec682356b81a35afee0130dbd07061acd04c0cc893"
+    }
+  },
+  "artifact_import_smoke": {
+    "command": "PYTHONPATH=successors/rejepa_v1/dist/rejepa_research-0.1.0-py3-none-any.whl .venv/bin/python -c import_rejepa_and_construct_config",
+    "status": "PASS"
+  },
+  "retained_attempts": [
+    {
+      "status": "FAILED_INVOCATION",
+      "detail": "The first 2026-10-11 expanded-suite invocation omitted PYTHONPATH; collection stopped with six ModuleNotFoundError errors and no tests ran. The documented invocation then passed."
+    },
+    {
+      "status": "INDETERMINATE_INTERRUPTED",
+      "detail": "One combined lint-test-build shell request was interrupted before returning a receipt. Lint, tests, and build were rerun separately and passed."
+    }
+  ],
+  "scientific_conclusion": "NOT_EVALUATED",
+  "next_gate": "Obtain and validate the admitted point-in-time panel and current team-only WInS rules, bind actual split dates, then implement the Phase 2 experiment manifest/runner before a labeled compatibility dry run."
+}
+

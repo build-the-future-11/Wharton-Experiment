@@ -1,0 +1,47 @@
+{
+  "source_type": "connected_google_drive_native_doc",
+  "document_id": "1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U",
+  "title": "Wharton Global Youth Investment Challenge Prep",
+  "revision_id": "ANLCKQkBFdGCXbn9XTFIrvEXlfgfGfMr5dWDRd4KxLdpJVRSpWEokxjysTEefx0OXjuZ2IqP5JEHs2xZfm2CeMPsr9QzUBMyHilfPsKRD5E",
+  "drive_last_modified_observed": "2026-10-06T14:11:31.878Z",
+  "client": "Laura Gao",
+  "competition_contract": {
+    "year_0": 2026,
+    "initial_contribution": {
+      "year": 2027,
+      "timing": "beginning_of_year",
+      "usd": 300000
+    },
+    "second_contribution": {
+      "year": 2028,
+      "timing": "beginning_of_year",
+      "usd": 150000
+    },
+    "pre_2033_withdrawals_allowed": false,
+    "operating_payments": {
+      "first_year": 2033,
+      "last_year": 2042,
+      "count": 10,
+      "timing": "beginning_of_each_year",
+      "usd_each": 50000,
+      "inflation_adjusted": false
+    },
+    "reserve_timing": "beginning_of_2033_before_first_operating_payment_and_before_facility_contribution",
+    "reserve_must_fund_all_operating_payments": true,
+    "outside_funding_allowed_for_operating_commitment": false,
+    "facility_contribution_timing": "after_operating_reserve_is_established_in_2033",
+    "facility_cost_is_not_predetermined": true,
+    "must_preserve_financial_flexibility": true,
+    "co_sponsor_communication_year": 2031,
+    "co_sponsor_amount_format": "credible_range_for_2033_facility_contribution",
+    "wins_trading_gains_affect_long_term_projection": false,
+    "taxes_required": false,
+    "taiwan_legal_regulatory_model_required": false
+  },
+  "source_boundary": [
+    "This snapshot records rules recovered from the current connected Drive document.",
+    "It does not assert that this Drive document is the competition organizer's immutable official publication.",
+    "No current canonical Wharton model/data spreadsheet was found in the bounded Drive searches.",
+    "All return/yield values used by the engine are user-supplied assumptions, not forecasts."
+  ]
+}

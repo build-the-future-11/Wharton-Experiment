@@ -1,0 +1,90 @@
+{
+  "project": "RE-JEPA v0.3: Reservoir-Engram Joint-Embedding Predictive Architecture",
+  "lineage": "successor_to_frem_v0.1; predecessor evidence preserved in repository root and legacy/wharton_lab_v0",
+  "created": "2026-10-11",
+  "updated": "2026-10-11",
+  "phase": "engineering_run_ready_external_market_data_and_rules_block_scientific_execution",
+  "scientific_status": "NOT_EVALUATED",
+  "competition_scope": "2026-2027 Wharton Global High School Investment Competition; local research and simulation only",
+  "central_hypothesis": "Under predeclared low-data regimes, causal latent-world imagination plus matured spectral-engram retrieval improves date-level probabilistic return forecasts over the identical reservoir-JEPA backbone with both mechanisms disabled, under matched information and bounded compute.",
+  "primary_falsifier": "On the protected low-data evaluation, the paired confidence interval for control NLL minus RE-JEPA NLL fails to clear 0.01 nats per observation, or any integrity, completeness, calibration, or compute-matching gate fails.",
+  "protected_evaluation": {
+    "status": "not defined and not accessed",
+    "freeze_required": true
+  },
+  "claims": {
+    "novelty": "candidate mechanism; not established",
+    "forecast_performance": "not evaluated",
+    "low_data_advantage": "hypothesis only",
+    "portfolio_performance": "not evaluated",
+    "competition_readiness": "blocked on official participant materials, admitted data, team policy, and student authorship review"
+  },
+  "completed": [
+    "Case-study source identified and hashed",
+    "Case cash-flow and deliverable contract extracted",
+    "Leakage-safe architectural interpretation specified",
+    "Ground-up causal Fourier, reservoir, engram, latent-world, JEPA, dual-expert, mandate, and allocation core authored",
+    "Prospective development and confirmatory protocol drafted",
+    "Primary-source prior-art boundary, fatal-flaw audit, and falsifiers completed",
+    "Prospective model paper completed with equations, algorithms, complexity, training and inference contracts",
+    "Methodology completed through freeze prerequisites; not frozen because external inputs are absent",
+    "Deterministic trainer, early stopping, gradient clipping, mechanism controls, frozen inference, and hash-bound checkpointing implemented",
+    "23 successor unit, mathematical, training, causality, checkpoint, and mandate tests passed on 2026-10-11",
+    "Full successor Ruff check passed",
+    "Version 0.1.0 wheel and source archive built"
+    ,
+    "ClientMandate, LiabilitySchedule, FundingFrontier, LiquidityReserve, FacilityContributionPolicy, and dynamic FUND/GUARD/GROW sleeves implemented",
+    "Point-in-time validation, as-of filtering, and deterministic hash-bound snapshot engine implemented",
+    "Horizon-conditioned JEPA, representation diagnostics, stress-conditioned simulator, graph relations, and spectral diagnostics implemented",
+    "Separate return, probability, downside, volatility, quantile, and drawdown outputs implemented",
+    "Purged walk-forward splits, portfolio metrics, paired moving-block intervals, baselines, international FX analytics, and scenario-CVaR optimization implemented",
+    "Immutable experiment manifests, complete failure receipts, evidence-bound reporting, and nine-command CLI implemented",
+    "50 successor tests passed and full successor Ruff check passed on 2026-10-11"
+    ,
+    "Final v0.2 verification passed 57 tests, lint, package build, source and wheel CLI smoke, and blocked strategy-report generation",
+    "Version 0.2.0 wheel and source archive built with recorded SHA-256 hashes",
+    "Strict schema validation rejects implicit booleans, nonpositive FX, impossible simple returns, fractional horizons, and invalid optimizer policies",
+    "Exact Student-t tail quantiles, horizon propagation, sample-weighted losses, short-window Fourier support, and exact Rockafellar-Uryasev scenario-CVaR linear programming implemented",
+    "Deterministic causal synthetic engineering fixture generated and explicitly prohibited from scientific use",
+    "Two-cell ridge and full RENG-JEPA engineering matrix completed twice with identical histories, manifest hash, and canonical tensor-state hash",
+    "Canonical semantic checkpoint hashing added after retaining evidence that identical torch tensor states can have different archive bytes",
+    "Current retrieval and streaming-memory prior art reviewed; novelty claim narrowed and causal retrieval controls added to the protocol",
+    "Causal nearest-history continuation retrieval, chronological streaming residual memory, and frozen residual-alignment controls implemented",
+    "Final v0.3 verification passed 67 tests with deprecations treated as errors, Ruff, package build, wheel CLI smoke, and packaged data validation",
+    "Version 0.3.0 wheel and source archive built with recorded SHA-256 hashes"
+  ],
+  "not_completed": [
+    "Independent novelty determination",
+    "Admitted international market dataset",
+    "Official WInS approved-security universe and trading requirements",
+    "Development experiments",
+    "Scientific freeze",
+    "Protected evaluation",
+    "Empirical paper or competition deliverables"
+  ],
+  "inherited_negative_evidence": [
+    "Legacy 1181-cell matrix is leakage or degeneracy contaminated",
+    "Legacy spent synthetic lockbox arm is invalid and ETF arm is negative",
+    "Legacy repaired pipeline is exploratory null versus historical mean",
+    "Later single-path synthetic memory result was worse than memory-off"
+  ],
+  "retained_v0_3_engineering_failures": [
+    "Initial v0.3 smoke receipts differed because model construction preceded seeding; fixed without overwriting the original run directories",
+    "Raw torch archive hashes differed across numerically identical final runs; canonical tensor-state hashing now verifies semantic model identity while raw archives remain recorded"
+  ],
+  "external_inputs_required": [
+    "Team-only current WInS approved-security universe and trading requirements",
+    "Lawful point-in-time total-return, corporate-action, FX, membership, delisting, and availability data",
+    "Team-selected funding-confidence target and financial-flexibility floor",
+    "Current simulated holdings and portfolio policy",
+    "Student review, adaptation, citation, and authentic authorship for competition use"
+  ],
+  "prohibited_shortcuts": [
+    "No test-time adaptation using protected returns",
+    "No future membership backfill or adjusted-close-only provenance claims",
+    "No calling latent samples real market scenarios without calibration",
+    "No claiming the Taiwan residency implies a Taiwan equity overweight",
+    "No live trading, client contact, or public submission"
+  ]
+}
+

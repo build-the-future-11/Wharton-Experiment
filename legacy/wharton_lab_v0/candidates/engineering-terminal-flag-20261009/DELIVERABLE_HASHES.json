@@ -1,0 +1,18 @@
+{
+  "files": {
+    "DEFECT_WITNESS.json": "24bc365a4ccbef761b1c4f43363c377df27716716607ac149532f79ae87b2aa9",
+    "ENGINEERING_RECEIPT.json": "7a3488e70f96c98d15aa8c6c08a485969af9b3c2d44547f22a4a2a81cd218510",
+    "PATCH_APPLICATION_VERIFICATION.json": "f9d22174ecce09910829b7a0cea5f296c99b7a70d5c7424097b2d6e16c4386ae",
+    "README.txt": "f011ca81f98124c684e79eb2d1cdb799e7c0d99fe4be7b89c1abc0f5e4ac7a58",
+    "SCOPE_AND_BASE.json": "2d469ab7180a8c0aa2bb25e055e64bd5e62870901d2a343545a4a4de2a376502",
+    "STATE_AFTER.json": "cd2ee1d6e54a4bafe331c7b3bf765418ec76a6cfbf8b4ce2a2c046b92fb73129",
+    "STATE_BEFORE.json": "7359e2da069a9a8ccd60e07c24f8c2f570969eee73e6d8740375f7038b053eb8",
+    "baseline-regression.log": "90f6dd9183a5cf0ebbfa68e318c4cc60b376d12c61ba3ba7cc602822e3ec2bcf",
+    "candidate/tests/test_accounting.py": "6d8cd6a8fe18c27a2a183fd31869a2e362c53f96966549bb0a8222082e62dd7e",
+    "candidate/tests/test_accounting_terminal_flag.py": "f1189744226c08ccea8389b0e85e0f85251b57731905d200a24d2edb9b8a6de5",
+    "candidate/wharton_final/__init__.py": "1e35156112594150503d7458bf8c34bb86650904de0456209b318cc0426ef803",
+    "candidate/wharton_final/accounting.py": "2060b064b6156d2e964752e66faff42bd50b79f590bc0d6fd368eb61179a5d89",
+    "candidate-tests.log": "cec024eff7f9b7f45ad16f710b1bd95cd96ed4349d7489f6fdc484cefa6e35a1",
+    "terminal-flag-validation.patch": "cfd15445c33daf6436ae27b6df35ae4f81e8883e3935a07e06a8490624a3bee6"
+  }
+}

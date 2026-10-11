@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-11",
+  "timezone": "Asia/Kolkata",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_outcomes_accessed": false,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1"
+  },
+  "checks": [
+    {
+      "command": "PYTHONPATH=successors/reng_jepa_v01/src .venv/bin/python -m pytest -q successors/reng_jepa_v01/tests",
+      "status": "PASS",
+      "result": "43 passed in 6.60s",
+      "maximum_resident_set_bytes": 381501440,
+      "warnings": 0
+    },
+    {
+      "command": ".venv/bin/ruff check successors/reng_jepa_v01/src successors/reng_jepa_v01/tests",
+      "status": "PASS",
+      "result": "All checks passed"
+    },
+    {
+      "command": "PYTHONPATH=successors/reng_jepa_v01/src .venv/bin/python -m reng engineering-matrix --output successors/reng_jepa_v01/runs/engineering_compatibility_20261011_v4",
+      "status": "ENGINEERING_MATRIX_PASS",
+      "datasets": [
+        "calm_trend",
+        "mean_reversion",
+        "correlation_break",
+        "missing_actions"
+      ],
+      "elapsed_seconds": 3.77,
+      "maximum_resident_set_bytes": 303431680,
+      "source_tree_sha256": "ae77eef6f1011841d29dde8edf6ae405518a0b185b77595fe2baa9e3caa8b728",
+      "summary_sha256": "8ea8be8acd29f03fce4ea828d9452c435a33e119e5570dc3fbcd041758cd0b8d",
+      "scientific_claims_allowed": false
+    },
+    {
+      "command": ".venv/bin/python -m build --no-isolation --outdir successors/reng_jepa_v01/dist successors/reng_jepa_v01",
+      "status": "FAIL_PRE_ARTIFACT",
+      "result": "wheel build dependency absent; no install attempted and no package artifact created"
+    }
+  ],
+  "retained_failures": [
+    "Initial suite: 37 passed, 1 failed due explicit-date UTC normalization defect",
+    "Expanded suite: 40 passed, 1 failed due unavailable torch.flatnonzero",
+    "Optional package build: wheel dependency absent"
+  ],
+  "negative_diagnostics": [
+    "All four untrained random-initialization compatibility runs triggered the declared collapse threshold"
+  ],
+  "conclusion": "Local implementation and bounded synthetic engineering contracts pass. No admitted-market, predictive, investment, funding, competition, or protected-evaluation conclusion exists."
+}

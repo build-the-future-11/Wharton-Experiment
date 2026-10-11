@@ -12,3 +12,23 @@ pytest-of-*/
 .mplconfig/
 .local_tmp/
 data/source_documents/
+
+# Reproducible build and local render outputs.
+dist/
+tmp/
+build/
+*.whl
+
+# LaTeX intermediates; source and reviewed PDFs remain versioned.
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+
+# Preserved local dependency payloads are not research evidence.
+legacy/**/.deps/
+
+# Clean external checkout retained locally; provenance is recorded in
+# legacy/README.md instead of nesting one Git repository inside another.
+legacy/wharton_lab_v0/Wharton-GYIC-Model-Stochastic-Engram-Reservoir-JEPA-for-Regime-Aware-Financial-Forecasting/

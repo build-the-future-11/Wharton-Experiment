@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reng-jepa-research"
+version = "0.1.0"
+description = "Evidence-bound implementation of the RENG-JEPA v0.1 manuscript"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.11",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+reng = "reng.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+

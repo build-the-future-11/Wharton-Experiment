@@ -1,0 +1,63 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "evaluate",
+      "--manifest",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/manifest.json",
+      "--config",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/config.json",
+      "--first-test-row",
+      "65",
+      "--test-count",
+      "1",
+      "--stride",
+      "3",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/run"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"candidate\": {\n    \"mse\": 0.0003944490251909782,\n    \"mae\": 0.01800413266249056,\n    \"oos_r2_vs_historical_mean\": -0.09065716709723382\n  },\n  \"ridge\": {\n    \"mse\": 0.0003941196181581099,\n    \"mae\": 0.01774798879422587,\n    \"oos_r2_vs_historical_mean\": -0.08974635196436309\n  },\n  \"historical_mean\": {\n    \"mse\": 0.0003616617917074692,\n    \"mae\": 0.01792293691630174,\n    \"oos_r2_vs_historical_mean\": 0.0\n  },\n  \"persistence\": {\n    \"mse\": 2.407562561774793e-05,\n    \"mae\": 0.0041715939755401325,\n    \"oos_r2_vs_historical_mean\": 0.9334305526052873\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "forecast",
+      "--checkpoint",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/run/model-65.pkl",
+      "--checkpoint-sha256",
+      "77de0e7136ca3d4d84b5f0b7eb907c794b5f1aab25a58dbde764d3882de72b6b",
+      "--manifest",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/manifest.json",
+      "--as-of",
+      "2024-02-12T22:13:20+00:00",
+      "--plan-contract",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/plan.json",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/forecast-plan.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "ledger",
+      "--contract",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/configs/ledger-correctness.json",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/correctness-fixture/ledger.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

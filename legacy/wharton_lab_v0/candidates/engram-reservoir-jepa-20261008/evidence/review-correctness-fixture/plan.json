@@ -1,0 +1,48 @@
+{
+  "purpose": "synthetic correctness fixture, not client policy",
+  "assets": [
+    "A",
+    "B"
+  ],
+  "state": {
+    "at": 0,
+    "units": [
+      0,
+      0
+    ],
+    "prices": [
+      1,
+      1
+    ],
+    "cash": 100
+  },
+  "policy": {
+    "payment": "cash_only",
+    "unpaid": "carry",
+    "timing": "after_market",
+    "terminal": "mark",
+    "fee_rate": 0
+  },
+  "scenario_count": 2,
+  "seed": 11,
+  "obligations": [
+    [
+      {
+        "id": "a",
+        "due_at": 1,
+        "amount": 1
+      }
+    ],
+    [],
+    []
+  ],
+  "max_weight": 0.8,
+  "alpha": 0.5,
+  "terminal_cash_target": 90,
+  "cash_rates": [
+    0,
+    0,
+    0
+  ],
+  "future_liability_policy": "reserve_nominal_cash"
+}

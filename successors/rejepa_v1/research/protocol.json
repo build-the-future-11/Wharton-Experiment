@@ -1,0 +1,105 @@
+{
+  "protocol_id": "REJEPA-P0",
+  "version": 2,
+  "status": "PROPOSED_NOT_FROZEN",
+  "question": "Do learned latent-world rollouts and delayed-credit spectral engrams improve probabilistic return forecasting when development data are scarce?",
+  "primary_comparison": {
+    "candidate": "rejepa_full",
+    "control": "rejepa_no_world_no_engram",
+    "endpoint": "mean_date_level_student_t_negative_log_likelihood",
+    "direction": "lower_is_better",
+    "minimum_practical_improvement_nats": 0.01
+  },
+  "low_data_train_fractions": [0.1, 0.25, 0.5],
+  "mechanism_controls": [
+    "rejepa_no_world",
+    "rejepa_no_engram",
+    "rejepa_no_world_no_engram",
+    "rejepa_single_interpreter",
+    "rejepa_no_fourier_key",
+    "rejepa_similarity_only_memory",
+    "rejepa_static_memory",
+    "single_joint_return_risk_head"
+  ],
+  "strong_baselines": [
+    "historical_zero",
+    "ridge",
+    "elastic_net",
+    "xgboost",
+    "echo_state_ridge",
+    "gru",
+    "dlinear",
+    "patch_transformer",
+    "raft_style_causal_retrieval",
+    "freshcast_style_streaming_residual_memory"
+  ],
+  "information_rule": "Every candidate and control receives identical observations, availability timestamps, universe membership, training dates, seeds, tuning opportunities, and protected boundary.",
+  "capacity_and_compute_matching": {
+    "parameter_control": "A widened no-world/no-engram backbone is selected on development data to fall within plus or minus 5 percent of full-model trainable parameters.",
+    "compute_sensitivity": "A separate sensitivity caps control and candidate wall time at the lower observed budget; parameter count, wall time and peak memory are always reported.",
+    "broken_cell_rule": "A failed or missing baseline cell invalidates the paired comparison and cannot be omitted."
+  },
+  "interpretation_rule": "Interpreter parameters and gating are learned only on development data and frozen before protected evaluation. No protected outcome can select a latent world, interpreter, seed, threshold, or portfolio objective weight.",
+  "engram_rule": "An episode is readable only after its outcome availability timestamp. Stored keys and values are detached historical records; current-query gradients cannot rewrite past episodes. A memory claim additionally requires causal RAFT-style and FreshCast-style controls so retrieval freshness or residual alignment cannot masquerade as utility-retention novelty.",
+  "statistical_unit": "UTC decision date with all contemporaneously eligible assets retained together",
+  "seed_policy": {
+    "development": [11, 29, 47],
+    "confirmatory": [11, 29, 47, 71, 97]
+  },
+  "statistics": {
+    "method": "paired moving-date-block bootstrap",
+    "primary_block_dates": 20,
+    "sensitivity_block_dates": [5, 60],
+    "confidence": 0.95,
+    "bootstrap_repetitions": 5000,
+    "multiplicity": "Holm correction across the predeclared mechanism-control family"
+  },
+  "chronology": {
+    "split": "contiguous expanding-window development followed by validation and one final protected interval",
+    "embargo": "at least the maximum target horizon at every boundary",
+    "transform_fit": "training prefix only",
+    "protected_start": null,
+    "status": "blocked until admitted panel exists"
+  },
+  "secondary_endpoints": [
+    "CRPS or distributional calibration",
+    "MAE",
+    "date-level rank correlation",
+    "directional Brier score",
+    "expected shortfall calibration",
+    "net-of-cost certainty equivalent",
+    "operating-reserve funding probability",
+    "2031 facility-contribution interval coverage",
+    "maximum drawdown",
+    "turnover",
+    "wall time",
+    "peak RSS",
+    "parameter count"
+  ],
+  "invalidators": [
+    "future or protected information leakage",
+    "unmatched candidate and control observations",
+    "incomplete predeclared seeds",
+    "test-time model or interpreter adaptation",
+    "unverifiable universe or data provenance",
+    "broken baseline or metric",
+    "portfolio result derived from overlapping or non-realizable returns"
+  ],
+  "freeze_prerequisites": [
+    "admitted data manifest and validator receipt",
+    "actual split dates, row counts, feature schema, horizons and embargo",
+    "official WInS universe and rule snapshot if competition claims are in scope",
+    "fixed cost schedule, search spaces, cell budget and resource admission",
+    "protected-boundary access control",
+    "signed configuration, source and protocol hashes"
+  ],
+  "decision_rule": {
+    "supported": "The complete valid primary interval is above 0.01 nats per observation and calibration is not materially degraded.",
+    "negative": "The complete valid primary interval upper endpoint is at or below zero.",
+    "mixed": "A predeclared component or regime improves but the primary rule is not met.",
+    "inconclusive": "The valid interval does not resolve the practical threshold.",
+    "invalid": "Any predeclared integrity gate fails."
+  },
+  "no_current_results": true
+}
+

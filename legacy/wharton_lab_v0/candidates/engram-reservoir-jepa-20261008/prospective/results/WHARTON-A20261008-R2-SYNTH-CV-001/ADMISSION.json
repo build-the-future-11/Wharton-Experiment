@@ -1,0 +1,16 @@
+{
+  "protocol_id": "WHARTON-A20261008-R2-SYNTH-CV-001",
+  "protocol_sha256": "543530312a36b3c001f272eb8db9e43f895455ae878dd827b9adefc6310197f5",
+  "accepted_by": "parent thread 01a11bc1-9f88-7732-8a54-3498a34f0025; explicit exact-protocol approval and single numerical lane allocation",
+  "budget": {
+    "wall_seconds": 180,
+    "rss_bytes": 2147483648,
+    "attempts": 1,
+    "reruns": 0
+  },
+  "guard_tests": "GUARD_TEST_RESULTS.json",
+  "guard_test_sha256": "85e764870c577b0ba3fa8adf313006e8c00e7bfe78e416374e5319aa77cdc9c4",
+  "worker_sha256": "831f4e2379d3decc757acbbf07eb6cd8e06b5fc5473df95492710dd5397d87d1",
+  "admitted_at_utc": "2026-10-08T18:21:34.449759+00:00",
+  "earlier_guard_test_disposition": "Initial four fixture run reported PASS but had an uncaught deadline-thread duplicate-kill PermissionError. That test batch is NOT accepted as enforcement evidence. Raw per-test outputs remain under guard_tests. Signal synchronization was repaired; the separate hash-bound second guard batch passed without errors. Neither batch imported model code or generated scientific data."
+}

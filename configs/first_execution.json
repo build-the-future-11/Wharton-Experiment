@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "bounded_development_dry_run",
+  "description": "For Codex's later authorized runtime verification; two epochs are not scientific evidence.",
+  "data": {"path": "data/raw/panel.parquet", "context": 32, "horizon": 5, "base_currency": "USD", "include_missingness": true, "peer_features": false},
+  "split": {"train_fraction": 0.6, "validation_fraction": 0.2, "embargo_bars": 5, "protected_start": "2025-01-01T00:00:00Z"},
+  "model": {"hidden_dim": 32, "reservoir_dim": 32, "spectral_bands": 4, "memory_capacity": 128, "memory_neighbors": 4},
+  "training": {"epochs": 2, "batch_size": 64, "learning_rate": 0.001, "device": "cpu", "max_wall_seconds": 180},
+  "evaluation": {"online_update": false, "bootstrap_block_dates": 20, "bootstrap_repetitions": 200},
+  "models": ["frem", "no_memory", "ridge", "xgboost"],
+  "seeds": [11],
+  "budget": {"max_runs": 4, "max_wall_seconds": 900},
+  "output_dir": "outputs/dry_runs"
+}

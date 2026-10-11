@@ -1,0 +1,10 @@
+{
+  "label": "synthetic_engineering_only",
+  "datasets": ["calm_trend", "mean_reversion", "correlation_break", "missing_actions"],
+  "seed": 11,
+  "sessions": 220,
+  "assets": 4,
+  "context_length": 32,
+  "horizons": [5, 21],
+  "scientific_claims_allowed": false
+}

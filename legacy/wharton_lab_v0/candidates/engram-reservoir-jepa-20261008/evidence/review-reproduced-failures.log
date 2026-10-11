@@ -1,0 +1,45 @@
+test_cash_yield_must_be_explicit (test_review_regressions.ReviewRegressions.test_cash_yield_must_be_explicit) ... FAIL
+test_failed_refit_cannot_leave_partial_model_predictable (test_review_regressions.ReviewRegressions.test_failed_refit_cannot_leave_partial_model_predictable) ... FAIL
+test_nonfinite_inference_clock_rejected (test_review_regressions.ReviewRegressions.test_nonfinite_inference_clock_rejected) ... FAIL
+test_reserved_future_liability_is_not_missed_payment (test_review_regressions.ReviewRegressions.test_reserved_future_liability_is_not_missed_payment) ... FAIL
+
+======================================================================
+FAIL: test_cash_yield_must_be_explicit (test_review_regressions.ReviewRegressions.test_cash_yield_must_be_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/tests/test_review_regressions.py", line 17, in test_cash_yield_must_be_explicit
+    with self.assertRaises(TypeError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: TypeError not raised
+
+======================================================================
+FAIL: test_failed_refit_cannot_leave_partial_model_predictable (test_review_regressions.ReviewRegressions.test_failed_refit_cannot_leave_partial_model_predictable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/tests/test_review_regressions.py", line 26, in test_failed_refit_cannot_leave_partial_model_predictable
+    self.assertFalse(m.fitted)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_nonfinite_inference_clock_rejected (test_review_regressions.ReviewRegressions.test_nonfinite_inference_clock_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/tests/test_review_regressions.py", line 21, in test_nonfinite_inference_clock_rejected
+    with self.assertRaises(ValueError):m.predict(s.context[-1:],float('nan'))
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reserved_future_liability_is_not_missed_payment (test_review_regressions.ReviewRegressions.test_reserved_future_liability_is_not_missed_payment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/tests/test_review_regressions.py", line 14, in test_reserved_future_liability_is_not_missed_payment
+    self.assertEqual(result[0,2],0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: np.float64(80.0) != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.937s
+
+FAILED (failures=4)

@@ -1,0 +1,38 @@
+{
+  "name": "rejepa_v1_confirmatory_template",
+  "status": "TEMPLATE_NOT_FROZEN",
+  "phase": "confirmatory",
+  "models": [
+    "rejepa_full",
+    "rejepa_no_world",
+    "rejepa_no_engram",
+    "rejepa_no_world_no_engram",
+    "rejepa_single_interpreter",
+    "rejepa_no_fourier_key",
+    "single_joint_return_risk_head",
+    "historical_zero",
+    "ridge",
+    "elastic_net",
+    "xgboost",
+    "echo_state_ridge",
+    "gru",
+    "dlinear",
+    "patch_transformer"
+  ],
+  "train_fractions": [0.1, 0.25, 0.5],
+  "seeds": [11, 29, 47, 71, 97],
+  "budget": {
+    "max_cells": 225,
+    "max_wall_seconds": 86400,
+    "status": "template_ceiling_not_execution_authority"
+  },
+  "freeze": null,
+  "data": {
+    "panel": null,
+    "manifest": null,
+    "approved_universe": null,
+    "base_currency": "USD"
+  },
+  "protected_boundary": null
+}
+

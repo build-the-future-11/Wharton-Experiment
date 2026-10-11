@@ -1,0 +1,77 @@
+{
+  "role": "deterministic_ledger",
+  "contract_sha256": "672e70daba3b7bcf55a1379d580079183f983bfb9d28024ac0394857d18b7647",
+  "receipts": [
+    {
+      "state": {
+        "at": 1,
+        "units": [
+          "0"
+        ],
+        "prices": [
+          "1"
+        ],
+        "cash": "0.9",
+        "liabilities": [],
+        "arrears": [],
+        "seen_ids": [
+          "first"
+        ],
+        "closed": false
+      },
+      "market_pnl": "0",
+      "distributions": "0",
+      "cash_interest": "0",
+      "fees": "0",
+      "payments": [
+        {
+          "id": "first",
+          "due": "0.1",
+          "paid": "0.1",
+          "unpaid": "0.0",
+          "written_off": "0"
+        }
+      ],
+      "turnover": "0",
+      "new_liabilities": "0.1",
+      "starting_wealth": "1",
+      "starting_equity": "1"
+    },
+    {
+      "state": {
+        "at": 2,
+        "units": [
+          "0"
+        ],
+        "prices": [
+          "1"
+        ],
+        "cash": "0.8",
+        "liabilities": [],
+        "arrears": [],
+        "seen_ids": [
+          "first",
+          "second"
+        ],
+        "closed": true
+      },
+      "market_pnl": "0",
+      "distributions": "0",
+      "cash_interest": "0.0",
+      "fees": "0",
+      "payments": [
+        {
+          "id": "second",
+          "due": "0.1",
+          "paid": "0.1",
+          "unpaid": "0.0",
+          "written_off": "0"
+        }
+      ],
+      "turnover": "0",
+      "new_liabilities": "0.1",
+      "starting_wealth": "0.9",
+      "starting_equity": "0.9"
+    }
+  ]
+}

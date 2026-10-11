@@ -1,0 +1,23 @@
+{
+  "status": "PROSPECTIVE_NOT_EXECUTED",
+  "base": "phase1_model.json",
+  "controls": {
+    "full": {},
+    "no_jepa": {"training.latent_weight": 0.0},
+    "no_simulation": {"model.use_world_model": false},
+    "no_engram": {"model.use_engram": false},
+    "no_reservoir": {"model.use_reservoir": false},
+    "no_fourier": {"model.use_fourier": false, "model.use_fourier_key": false},
+    "no_risk_head": {"model.use_risk_head": false, "training.protection_weight": 0.0},
+    "fixed_fusion": {"model.adaptive_gate": false},
+    "single_interpreter": {"model.interpreters": 1},
+    "joint_return_risk_head": {"model.separate_heads": false},
+    "international_off": {"portfolio.max_non_base_currency": 0.0}
+  },
+  "matching": {
+    "information": "identical observations, dates, availability, seeds and protected boundary",
+    "parameters": "widen mechanism-off control to within plus or minus 5 percent of full trainable parameters",
+    "compute": "report all wall time and peak memory; run a separate equal-wall-time sensitivity",
+    "completeness": "no failed or missing seed may be silently omitted"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "Local synthetic engineering benchmark; not market or scientific evidence",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "torch": "2.14.1",
+  "numpy": "2.5.4",
+  "graph_adjacency": {
+    "reference_median_seconds": 0.11907449999125674,
+    "optimized_median_seconds": 0.0002385829866398126,
+    "speedup": 499.0904911883883,
+    "maximum_absolute_error": 2.220446049250313e-16
+  },
+  "funding_frontier": {
+    "reference_median_seconds": 0.18202945802477188,
+    "optimized_median_seconds": 0.0081136460066773,
+    "speedup": 22.43497656601814,
+    "maximum_success_frequency_error": 0.0
+  }
+}

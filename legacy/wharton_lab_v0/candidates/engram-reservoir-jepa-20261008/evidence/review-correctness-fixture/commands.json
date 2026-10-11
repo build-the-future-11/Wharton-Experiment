@@ -1,0 +1,65 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "evaluate",
+      "--manifest",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/manifest.json",
+      "--config",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/config.json",
+      "--first-test-row",
+      "65",
+      "--test-count",
+      "1",
+      "--stride",
+      "3",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/run"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"candidate\": {\n    \"mse\": 0.0003944490251909782,\n    \"mae\": 0.01800413266249056,\n    \"oos_r2_vs_historical_mean\": -0.09065716709723382\n  },\n  \"ridge\": {\n    \"mse\": 0.0003941196181581099,\n    \"mae\": 0.01774798879422587,\n    \"oos_r2_vs_historical_mean\": -0.08974635196436309\n  },\n  \"historical_mean\": {\n    \"mse\": 0.0003616617917074692,\n    \"mae\": 0.01792293691630174,\n    \"oos_r2_vs_historical_mean\": 0.0\n  },\n  \"persistence\": {\n    \"mse\": 2.407562561774793e-05,\n    \"mae\": 0.0041715939755401325,\n    \"oos_r2_vs_historical_mean\": 0.9334305526052873\n  },\n  \"ridge_matched_fit\": {\n    \"mse\": 0.0004662959684854209,\n    \"mae\": 0.016317697737523378,\n    \"oos_r2_vs_historical_mean\": -0.2893149875853771\n  },\n  \"candidate_no_memory\": {\n    \"mse\": 0.0003869863166694988,\n    \"mae\": 0.017539315080675848,\n    \"oos_r2_vs_historical_mean\": -0.07002267185169897\n  },\n  \"xgboost_matched_fit\": {\n    \"mse\": 0.0004695685646753175,\n    \"mae\": 0.019058745247484736,\n    \"oos_r2_vs_historical_mean\": -0.29836376261479347\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "forecast",
+      "--checkpoint",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/run/model-65.pkl",
+      "--checkpoint-sha256",
+      "301b828d0e4d677877ce4d98e3ad19a64ceb3b72f5f03ff3ba946ab2c51238cc",
+      "--manifest",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/manifest.json",
+      "--as-of",
+      "2024-02-12T22:13:20+00:00",
+      "--max-context-age-seconds",
+      "86400",
+      "--plan-contract",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/plan.json",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/forecast-plan.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-m",
+      "wharton_final",
+      "ledger",
+      "--contract",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/configs/ledger-correctness.json",
+      "--output",
+      "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate/evidence/review-correctness-fixture/ledger.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

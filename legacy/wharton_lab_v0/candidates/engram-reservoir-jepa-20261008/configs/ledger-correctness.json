@@ -1,0 +1,53 @@
+{
+  "purpose": "hand-verifiable correctness fixture, not client facts",
+  "state": {
+    "at": 0,
+    "units": [
+      "0"
+    ],
+    "prices": [
+      "1"
+    ],
+    "cash": "1"
+  },
+  "policy": {
+    "payment": "cash_only",
+    "unpaid": "carry",
+    "timing": "after_market",
+    "terminal": "mark",
+    "fee_rate": "0"
+  },
+  "steps": [
+    {
+      "at": 1,
+      "returns": [
+        "0"
+      ],
+      "obligations": [
+        {
+          "id": "first",
+          "due_at": 1,
+          "amount": "0.1"
+        }
+      ],
+      "cash_rate": "0",
+      "return_kind": "price"
+    },
+    {
+      "at": 2,
+      "returns": [
+        "0"
+      ],
+      "obligations": [
+        {
+          "id": "second",
+          "due_at": 2,
+          "amount": "0.1"
+        }
+      ],
+      "terminal": true,
+      "cash_rate": "0",
+      "return_kind": "price"
+    }
+  ]
+}

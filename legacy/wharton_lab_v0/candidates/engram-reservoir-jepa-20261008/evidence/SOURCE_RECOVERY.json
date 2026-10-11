@@ -1,0 +1,63 @@
+{
+  "source_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+  "head": "8e3d790dd513a93b7d80d5726a8b2708e8615b71",
+  "source_files": [
+    {
+      "path": "protocol/DECISIONS.md",
+      "sha256": "769d02fe6eb0e79ddc7730f3a8884f27753c95b448819592b1febc4a6fd79f56"
+    },
+    {
+      "path": "protocol/LOCKBOX_FREEZE.yaml",
+      "sha256": "51f5346bab21bcd99e854ef485ff66ab7b18ea8e5c8f427b96e941df979f23ff"
+    },
+    {
+      "path": "specs/M04_SPEC.md",
+      "sha256": "b9dfbbce7ba8f46489f5213243146c14f6d48cc00de9b8a9e0b7a1f2f05ed6c9"
+    },
+    {
+      "path": "specs/M06_SPEC.md",
+      "sha256": "c7ff053465343f1478d278be1d05f27e3ba1d7ccb57bb66df6685b7d916d5815"
+    },
+    {
+      "path": "specs/M11_SPEC.md",
+      "sha256": "4dda0fd7a2785b01ef8c51260274e51570477a8a3f3efa200eb1b1f6e2c30472"
+    },
+    {
+      "path": "specs/M12_SPEC.md",
+      "sha256": "3d95755e02bf64d5d41d2184c3aebc105529b0230982f18dc4c29407a3acf95a"
+    },
+    {
+      "path": "data/manifests/DATA_MANIFEST.yaml",
+      "sha256": "3d8a68fb3a431c4a9a00f0b9772c869109ff6673d247b36164cf9d58e6da7771"
+    },
+    {
+      "path": "RESEARCH_AUDIT.md",
+      "sha256": "91131e2a51c31d4bb05ad7c3770028a8c61e1daf2b00f811ad94e279e48a39eb"
+    },
+    {
+      "path": "src/wharton_lab/models/m11/mpc.py",
+      "sha256": "af467317a6356010f0c5cb4098048d298c76b63c3030bfa2af6eb4aa5666fcbf"
+    },
+    {
+      "path": "Wharton-GYIC-Model-Stochastic-Engram-Reservoir-JEPA-for-Regime-Aware-Financial-Forecasting/README.md",
+      "sha256": "b1ead6ddf17e07c0c0bf6ff2704b3186c2135630629cc6bda340ea104b698233"
+    }
+  ],
+  "data_cache_present": false,
+  "ownership": "App thread inventory (40 recent threads) found only this task, Complete Wharton model implementation (01a11c69-7a51-70e7-96b5-2ccf829f501f), matching Wharton; no repository ownership file or active competing Wharton task found. Parent source thread 01a11bc1-9f88-7732-8a54-3498a34f0025 cannot be messaged (thread not found on default and durable hosts). Candidate isolated; integration remains separate.",
+  "legacy_result": "M04 14.26% worse than ridge supplied by user; retained, not recomputed or reinterpreted as valid confirmatory evidence.",
+  "lockbox": "spent; prohibited in this candidate",
+  "nested_head": "4e11e7e87a6ded4a082b5c4b2a62a3d0b98e5b3e",
+  "tracked_source_tree": {
+    "file_count": 3374,
+    "sha256": "ac4c8b441468947669e9178b733d504df376efb8d6c953aff0c4761bf743df40"
+  },
+  "review_recovery": {
+    "source_overlay": "libfile_e8d5f0ed2a348191ac6e99955d0359e7",
+    "all_12_model_handoff_hashes_match": true,
+    "client_cashflow_source": "libfile_a70ab99c9d808191a7b55c44b20742b1",
+    "older_path_present": false,
+    "historical_zip_materialization": "HTTP403; bytes unavailable",
+    "scientific_status": "Engram proposal, not scientifically admitted; current implementation remains development amendment"
+  }
+}

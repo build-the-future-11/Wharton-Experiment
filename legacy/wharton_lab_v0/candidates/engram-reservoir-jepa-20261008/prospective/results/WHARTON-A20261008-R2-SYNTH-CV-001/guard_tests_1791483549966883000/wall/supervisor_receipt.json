@@ -1,0 +1,123 @@
+{
+  "status": "failed",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-c",
+    "import signal,time;signal.signal(signal.SIGTERM,signal.SIG_IGN);time.sleep(30)"
+  ],
+  "cwd": "/Users/ryan/Documents/Codex/2026-10-08/task-10/approved_run",
+  "wall_limit_seconds": 0.6,
+  "rss_limit_bytes": 104857600,
+  "started_utc": "2026-10-08T18:19:10.263380+00:00",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "sampling_target_seconds": 0.2,
+  "monitor": "sum RSS of worker process group from macOS ps; wait4 worker high-water RSS also retained",
+  "stop_reason": "wall_limit",
+  "exit_code": -9,
+  "worker_pid": 20293,
+  "worker_group": 20293,
+  "wall_seconds": 2.643388958000287,
+  "cleanup_seconds": 0.015863542000261077,
+  "sampled_peak_group_rss_bytes": 17530880,
+  "worker_peak_rss_bytes": 17530880,
+  "cpu_user_seconds": 0.024783,
+  "cpu_system_seconds": 0.0078049999999999994,
+  "remaining_group_pids": [],
+  "signal_errors": [],
+  "rss_samples": [
+    {
+      "elapsed_seconds": 0.015684583000620478,
+      "rss_bytes": 1392640,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 0.2438499159998173,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 0.4740416250006092,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 0.6335764579998795,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 0.8661399160000656,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 1.1025411660002646,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 1.339494249999916,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 1.5641660830006003,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 1.7975494580005034,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 2.033650750000561,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 2.2705409999998665,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 2.5088825000002544,
+      "rss_bytes": 17530880,
+      "pids": [
+        20293
+      ]
+    },
+    {
+      "elapsed_seconds": 2.6433704999999463,
+      "rss_bytes": 0,
+      "pids": [
+        20293
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-08T18:19:12.922825+00:00"
+}

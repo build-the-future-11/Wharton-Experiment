@@ -1,0 +1,61 @@
+{
+  "checkpoint_hashes": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "fee702d80e95bfe0b82c1765f1bd83d1dbac5d85fd65b97b224b3e6a4a748ba4"
+  },
+  "checkpoint_metadata": {
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "phase": "engineering_compatibility",
+    "scientific_status": "NOT_EVALUATED"
+  },
+  "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+  "input_label_required": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "limitations": [
+    "Synthetic fixture only; no market performance inference",
+    "Single bounded seed; no scientific comparison",
+    "No protected outcomes or portfolio claims"
+  ],
+  "manifest_sha256": "4e387e187ce9bd8d2ece14dc8bfda2a8f5c99c4dac3956733216a2c26a6fc01c",
+  "matrix_status": {
+    "complete": true,
+    "completed_cells": 2,
+    "expected_cells": 2,
+    "failed_cells": [],
+    "missing_cells": [],
+    "observed_cells": 2
+  },
+  "model_parameters": 8006,
+  "peak_rss_raw": 438566912,
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "ridge_validation_mse": 0.00026072735145621665,
+  "scientific_status": "NOT_EVALUATED",
+  "status": "ENGINEERING_COMPATIBILITY_PASS",
+  "train_samples": 330,
+  "training": {
+    "best_epoch": 2,
+    "best_validation_loss": 1.9408031702041626,
+    "completed_epochs": 3,
+    "history": [
+      {
+        "epoch": 0.0,
+        "training_loss": 1.976544737815857,
+        "validation_loss": 1.9687310457229614
+      },
+      {
+        "epoch": 1.0,
+        "training_loss": 1.963115930557251,
+        "validation_loss": 1.954658031463623
+      },
+      {
+        "epoch": 2.0,
+        "training_loss": 1.9491138458251953,
+        "validation_loss": 1.9408031702041626
+      }
+    ],
+    "stopped_early": false
+  },
+  "validation_samples": 96,
+  "validation_student_t_nll": 0.5403020977973938,
+  "wall_seconds": 1.0134777920029592
+}

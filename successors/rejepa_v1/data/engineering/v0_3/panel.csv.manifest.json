@@ -1,0 +1,28 @@
+{
+  "base_currency": "USD",
+  "columns": [
+    "asset_id",
+    "event_time",
+    "availability_time",
+    "outcome_available_time",
+    "market",
+    "currency",
+    "eligible",
+    "point_in_time_membership",
+    "close",
+    "total_return",
+    "volume",
+    "source_id",
+    "fx_to_usd",
+    "delisted",
+    "corporate_action_id"
+  ],
+  "license_or_right": "Locally generated engineering fixture; scientific and market claims prohibited",
+  "maximum_event_time": "2024-05-14T21:00:00+00:00",
+  "minimum_event_time": "2024-01-02T21:00:00+00:00",
+  "retrieved_at": "2026-10-11T00:00:00Z",
+  "row_count": 576,
+  "sha256": "2c7977885a891087eca05db7486c6a1bc54467e1bff2c2616de395e918dce1bd",
+  "snapshot_id": "rejepa-engineering-seed-11",
+  "source_name": "RE-JEPA deterministic causal regime generator v0.3"
+}

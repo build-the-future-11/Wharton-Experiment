@@ -1,0 +1,42 @@
+{
+  "protocol_id": "RENG-JEPA-P0",
+  "version": 1,
+  "status": "PROPOSED_NOT_FROZEN",
+  "question": "With 504 fitting decision dates, does evidence-anchored latent simulation reduce the 21-session normalized quantile score versus a capacity-matched direct correlated-return model under identical information and development resources?",
+  "primary_endpoint": "mean_date_level_normalized_pinball_score",
+  "primary_effect": "1 - score_reng / score_direct",
+  "minimum_practical_improvement": 0.02,
+  "primary_horizon_sessions": 21,
+  "training_origins": [252, 504, 1008],
+  "primary_training_origins": 504,
+  "root_seeds": [11, 23, 47, 89, 131],
+  "ensemble_members_per_root": 3,
+  "quantiles": [0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95],
+  "development_years": [2018, 2019, 2020, 2021],
+  "retrospective_audit_years": [2022, 2023, 2024, 2025],
+  "prospective_target_sessions": 252,
+  "bootstrap": {
+    "method": "paired fold-preserving stationary date bootstrap",
+    "repetitions": 5000,
+    "expected_block_length": 63,
+    "sensitivities": [21, 126],
+    "confidence": 0.95
+  },
+  "confirmatory_mechanism_family": [
+    "valid_vs_permuted_memory",
+    "learned_vs_uniform_gate",
+    "latent_vs_direct_distribution"
+  ],
+  "multiplicity": "Holm familywise 0.05",
+  "development_search": {
+    "max_configurations_per_learned_family": 8,
+    "learning_rate": [0.0001, 0.0003],
+    "weight_decay": [0.00001, 0.0001],
+    "hidden_dropout": [0.0, 0.1],
+    "per_fit_wall_hours": 8
+  },
+  "protected_boundary": null,
+  "freeze_required": true,
+  "negative_result_rule": "A valid negative or inconclusive result does not authorize a repeat on the same protected observations."
+}
+

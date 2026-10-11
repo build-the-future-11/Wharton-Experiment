@@ -1,0 +1,94 @@
+{
+  "project": "RENG-JEPA",
+  "version": "0.3.0",
+  "date": "2026-10-11",
+  "status": "ENGINEERING_COMPATIBILITY_PASS_MARKET_EXECUTION_BLOCKED",
+  "scientific_status": "NOT_EVALUATED",
+  "scope": "Local, bounded, deterministic engineering verification on a synthetic fixture that is prohibited from scientific use.",
+  "verification": {
+    "tests": "67 passed",
+    "warnings_policy": "DeprecationWarning treated as error",
+    "lint": "Ruff PASS",
+    "package_build": "PASS",
+    "wheel_cli_smoke": "PASS",
+    "wheel_data_validation": {
+      "status": "PASS",
+      "rows": 576,
+      "assets": 6,
+      "errors": [],
+      "warnings": [],
+      "manifest_verified": true
+    },
+    "contemporary_controls": "PASS: packaged maturity-gated continuation retrieval, chronological streaming residual memory, and frozen residual alignment"
+  },
+  "engineering_dataset": {
+    "label": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+    "scientific_use": "PROHIBITED",
+    "metadata": "../data/engineering/v0_3/ENGINEERING_DATASET.json",
+    "panel_sha256": "2c7977885a891087eca05db7486c6a1bc54467e1bff2c2616de395e918dce1bd",
+    "training_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "samples": 456,
+    "context_length": 16,
+    "horizon": 5,
+    "walk_forward_planning": "PASS: 2 folds, train 40, validation 12, test 12, embargo 5"
+  },
+  "duplicate_runs": {
+    "run_a": "../runs/engineering_v0_3_release_a/ENGINEERING_RECEIPT.json",
+    "run_b": "../runs/engineering_v0_3_release_b/ENGINEERING_RECEIPT.json",
+    "status": "IDENTICAL_NUMERICS_AND_SEMANTIC_MODEL_STATE",
+    "manifest_sha256": "81e9c03598dd55c934809960b0faef06ae034c52815f1f36792a236f2bc5108c",
+    "source_tree_sha256": "f13f2f7b3c0f351fa9aa19e2f11e6bea1899640450e476b7e82ea20e477a748d",
+    "model_state_sha256": "1429f225ce3a93c944ce4f55941bb0ef79bbb4ea16261e0c9d9f3f9fa0a5fa97",
+    "completed_cells": 2,
+    "expected_cells": 2,
+    "failed_cells": [],
+    "training_history_identical": true,
+    "best_epoch": 2,
+    "best_validation_loss": 2.1644487380981445,
+    "validation_student_t_nll_engineering_only": 0.46605125069618225,
+    "ridge_validation_mse_engineering_only_noncomparable_endpoint": 0.00026072735145621665,
+    "raw_torch_archive_hashes_identical": false,
+    "raw_archive_interpretation": "torch.save container bytes varied while the canonical sorted tensor state hash and all numerical receipts matched; the semantic state hash is the reproducibility identity."
+  },
+  "retained_failures": [
+    {
+      "stage": "initial_v0.3_smoke",
+      "status": "FIXED_AND_RETAINED",
+      "detail": "The model was constructed before deterministic seeding, so two initial receipts differed. Construction now occurs after seed_everything."
+    },
+    {
+      "stage": "binary_checkpoint_comparison",
+      "status": "RESOLVED_WITH_SEMANTIC_HASH_AND_RETAINED",
+      "detail": "Identical tensor states produced different torch archive bytes. Checkpoints now bind and verify a canonical tensor-state SHA-256 in addition to file hashes."
+    }
+  ],
+  "release_artifacts": {
+    "wheel": {
+      "path": "../dist/rejepa_research-0.3.0-py3-none-any.whl",
+      "sha256": "820183bb1802b2af95d5549944f89541d286148612cd3dbd8caac1af9c519b78"
+    },
+    "source_distribution": {
+      "path": "../dist/rejepa_research-0.3.0.tar.gz",
+      "sha256": "93eaa18f10a9d651e65b28749b31b84ad6bedc1d495a3a67f30ea2c1f83386e8"
+    }
+  },
+  "resource_observation": {
+    "system_volume_free_space": "approximately 350 MiB at final verification",
+    "interpretation": "Adequate for bounded verification with temporary files redirected to PRO-BLADE; unsafe for an unbounded heavy matrix until system headroom is restored."
+  },
+  "not_claimed": [
+    "market-data ingestion",
+    "forecast or portfolio performance",
+    "calibration",
+    "novelty determination",
+    "scientific freeze",
+    "protected evaluation",
+    "competition-ready allocation"
+  ],
+  "external_blockers": [
+    "lawful point-in-time international market panel with total returns, corporate actions, FX, membership, delistings and availability timestamps",
+    "current team-only WInS approved-security universe and trading requirements",
+    "actual chronological development, validation and protected boundaries",
+    "team policy inputs and authentic student review"
+  ]
+}

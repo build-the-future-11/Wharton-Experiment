@@ -1,0 +1,27 @@
+{
+  "manifest": {
+    "cells": [
+      {
+        "cell_id": "ridge-s11",
+        "configuration": {},
+        "model": "ridge",
+        "seed": 11,
+        "train_fraction": 0.8
+      },
+      {
+        "cell_id": "rejepa-full-s11",
+        "configuration": {},
+        "model": "rejepa_full",
+        "seed": 11,
+        "train_fraction": 0.8
+      }
+    ],
+    "dataset_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9",
+    "experiment_id": "rejepa-v0.3-engineering-seed-11",
+    "frozen": true,
+    "phase": "engineering_compatibility",
+    "protected_start": null,
+    "source_tree_sha256": "852313c5e0120e2aa8c17e143e657a1a024fcb4ff666590314b304d7ca5858df"
+  },
+  "manifest_sha256": "4e387e187ce9bd8d2ece14dc8bfda2a8f5c99c4dac3956733216a2c26a6fc01c"
+}

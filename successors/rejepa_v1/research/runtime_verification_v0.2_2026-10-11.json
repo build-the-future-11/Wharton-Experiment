@@ -1,0 +1,74 @@
+{
+  "receipt_id": "RENGJEPA-V0.2-RUNTIME-20261011",
+  "date": "2026-10-11",
+  "status": "FULL_LOCAL_ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
+  "scope": "Phases 0 through 14 local implementation: client funding, time-valid data, JEPA, simulator, engram and graph memory, Fourier reservoir, dual predictive heads, international portfolio optimization, walk-forward evaluation, manifests, reporting, CLI, packaging and tests. No admitted market fitting, backtest, protected outcome, WInS trade, client contact or submission.",
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "torch": "2.14.1",
+    "pytest": "8.4.2",
+    "ruff": "0.17.0"
+  },
+  "source": {
+    "python_modules": 24,
+    "test_files": 14,
+    "test_functions": 57,
+    "workspace_files": 75
+  },
+  "tests": {
+    "command": "PYTHONPATH=successors/rejepa_v1/src .venv/bin/python -m pytest -q successors/rejepa_v1/tests",
+    "status": "PASS",
+    "result": "57 passed in 5.40 seconds on final source-tree run"
+  },
+  "lint": {
+    "command": ".venv/bin/ruff check successors/rejepa_v1",
+    "status": "PASS",
+    "result": "All checks passed"
+  },
+  "cli": {
+    "source_command": "PYTHONPATH=successors/rejepa_v1/src .venv/bin/python -m rejepa --help",
+    "wheel_command": "PYTHONPATH=successors/rejepa_v1/dist/rejepa_research-0.2.0-py3-none-any.whl .venv/bin/python -m rejepa --help",
+    "status": "PASS",
+    "commands": [
+      "data-validate",
+      "baseline-train",
+      "jepa-train",
+      "simulator-train",
+      "memory-experiment",
+      "full-train",
+      "walk-forward",
+      "portfolio-optimize",
+      "report-generate"
+    ]
+  },
+  "package_build": {
+    "command": ".venv/bin/python -m build successors/rejepa_v1 --outdir successors/rejepa_v1/dist",
+    "status": "PASS",
+    "wheel": {
+      "path": "successors/rejepa_v1/dist/rejepa_research-0.2.0-py3-none-any.whl",
+      "sha256": "a187530b0e58034c3feb0f82e5fea68beabf352bdfe76a327df7352a8d44b06e"
+    },
+    "sdist": {
+      "path": "successors/rejepa_v1/dist/rejepa_research-0.2.0.tar.gz",
+      "sha256": "124efb2207be5e22a78789296faab377d01313baea698b1650666210e5b615b3"
+    }
+  },
+  "report_generation": {
+    "status": "PASS_BLOCKED_EVIDENCE_DRAFT",
+    "path": "successors/rejepa_v1/reports/wharton_strategy_evidence_bound.md",
+    "holdings_emitted": false
+  },
+  "retained_failures": [
+    "Expanded v0.1 suite first invoked without PYTHONPATH; collection stopped before tests ran.",
+    "One combined v0.1 lint-test-build command was interrupted; independent reruns passed.",
+    "First v0.2 model suite passed 46 tests and failed one obsolete raw-context assertion after horizon conditioning; the contract assertion was corrected.",
+    "First v0.2 report command failed because the reports parent directory was absent; writer and regression test were corrected, then the command passed."
+  ],
+  "scientific_conclusion": "NOT_EVALUATED",
+  "next_gate": "Admit lawful point-in-time data and current team-only WInS rules, bind actual splits, freeze an experiment manifest, then run the labeled compatibility dry run before development."
+}

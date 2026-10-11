@@ -1,0 +1,18 @@
+{
+  "updated": "2026-10-11",
+  "scientific_status": "NOT_EVALUATED",
+  "checkpoints": [
+    {"id": 0, "name": "Initialize", "status": "PASS"},
+    {"id": 1, "name": "Idea Ready", "status": "PASS_PROPOSAL_NOVELTY_UNESTABLISHED"},
+    {"id": 2, "name": "Model Specification Ready", "status": "PASS_MANUSCRIPT_V0_1"},
+    {"id": 3, "name": "Methodology Ready", "status": "SPECIFIED_NOT_FROZEN_EXTERNAL_INPUTS_ABSENT"},
+    {"id": 4, "name": "Model Implemented", "status": "PASS_LOCAL_ENGINEERING"},
+    {"id": 5, "name": "Experiment System Implemented", "status": "PASS_LOCAL_ENGINEERING"},
+    {"id": 6, "name": "Run Ready", "status": "BLOCKED_ADMITTED_DATA_AND_RESOURCE"},
+    {"id": 7, "name": "Confirmatory Protocol Frozen", "status": "NOT_STARTED"},
+    {"id": 8, "name": "Evidence Locked", "status": "NOT_STARTED"},
+    {"id": 9, "name": "Verified", "status": "NOT_STARTED"},
+    {"id": 10, "name": "Research Complete", "status": "NOT_STARTED"}
+  ]
+}
+

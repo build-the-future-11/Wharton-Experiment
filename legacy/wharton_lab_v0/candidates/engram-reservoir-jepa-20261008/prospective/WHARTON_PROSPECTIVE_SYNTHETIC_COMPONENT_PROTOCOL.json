@@ -1,0 +1,452 @@
+{
+  "protocol_id": "WHARTON-A20261008-R2-SYNTH-CV-001",
+  "title": "Prospective synthetic component-validity development experiment: 180 seconds, one CPU worker, three origins",
+  "prepared_at_utc": "2026-10-08T18:01:54.208667+00:00",
+  "status": "PROPOSED_FOR_PARENT_REVIEW_NOT_EXECUTED",
+  "authorization": "No run authorized by this file. Parent must accept this exact file SHA256 and allocate a distinct numerical lane before generation or training.",
+  "amendment": "A-20261008-R2; isolated new development implementation; no original Engram fidelity or scientific-admission claim",
+  "scope": {
+    "question": "On one fixed generated recurrent/regime-varying panel, do all seven fixed methods execute causally and produce finite aligned forecasts, and what descriptive change does matured-memory correction make versus the exact same trained heads without memory?",
+    "candidate_prediction": "The memory mechanism may change forecasts; its MSE contrast may be positive, zero or negative. No favorable direction is assumed or required for engineering completion.",
+    "not_evaluated": [
+      "market predictability or investable alpha",
+      "returns, profit, Sharpe, portfolio utility, funding adequacy or client suitability",
+      "competition finalization or a 2031 credible facility-contribution range",
+      "original Engram proposal validity",
+      "novelty, generalization, confirmatory significance or a model winner"
+    ],
+    "relationship_to_previous_budget": "This is a NEW synthetic-only development lane. It does not fill, replace or admit the missing-market-data proposal in evidence/PROPOSED_DEVELOPMENT_BUDGET.json.",
+    "existing_pipeline_label": "data_kind=synthetic_fixture -> evidence_class=correctness_only. This is intentionally conservative. Add this protocol ID and component-development scope in a separate run receipt; do not relabel output as exploratory_market."
+  },
+  "source_and_environment": {
+    "source_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/candidates/engram-reservoir-jepa-20261008",
+    "source_revision": {
+      "files": {
+        "SPEC.md": "2c476129ec306a05026a0bcc4193033b42f2bfcd2029b2be5887691f61dd20aa",
+        "configs/recovered-laura-gao-source.json": "5a850a69b9e0ac2ae39052e2fa7f4c10d6a6d73c977300ccee422c309f1388e5",
+        "evidence/SOURCE_RECOVERY.json": "774182e01a2745cf926b308907f92a03ec306d7b2b6833d28ab07d3226a91339",
+        "pyproject.toml": "dd1bb6d4452aa7aa9fb9c920ffc8fa9aa05f0013074e51e057aa85b504150454",
+        "wharton_final/__init__.py": "1e35156112594150503d7458bf8c34bb86650904de0456209b318cc0426ef803",
+        "wharton_final/__main__.py": "688fa89d8fbeb98f676f47918e0db53568c8af5a8325c209e3f8ac1b311a6884",
+        "wharton_final/accounting.py": "3f2c22ff8de14b16491d7e58fc74149db7979d322d1a79833a36727e55c9bc2b",
+        "wharton_final/client_contract.py": "464e23a202a4b035a6af6c760444e07dcf677f85b3f3518bf6e45186c7fad915",
+        "wharton_final/data.py": "0d8bd79a15d1c128ab6e7e5d7674d72b7b4dfdab5e6f65b2dd9aa19a382a89b4",
+        "wharton_final/model.py": "3ad7b37153fcb978ae9299147ae76bf890dee101e889b23a6a1bb593148638e9",
+        "wharton_final/pipeline.py": "da1f9729d30d52f4b41f5bb1d5d9b6f17eab905e747fc3574c0eb76ab19ebe27",
+        "wharton_final/planning.py": "246eb73c699a8f43e115292eb2348789783b041686366f5856fb317323d5280e"
+      },
+      "sha256": "644afbefe9028f654144d2835a4ebfa043a4f4dd2ce68ce9e913fe7705168958"
+    },
+    "library_candidate": {
+      "library_file_id": "libfile_3df46e008b7c8191a123a17371dbe254",
+      "version": 1,
+      "file_id": "file_000000006dcc81fd978a3555c068e569",
+      "zip_sha256": "5497cc2eb6db318ef2126c5b3623231bb685398379d51b7b1a07f997512648ce"
+    },
+    "python": "3.14 as bound by evidence/REVIEW_ENVIRONMENT.json; same macOS arm64 environment",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "torch": "2.11.0",
+      "xgboost": "3.4.1"
+    },
+    "change_rule": "If source fingerprint, dependencies, generator, dates, seeds, methods, metrics or budgets differ, stop before outcomes and obtain an amended protocol. No silent fallback."
+  },
+  "data": {
+    "kind": "generated synthetic only; two fictitious channels, no securities",
+    "n_rows": 660,
+    "assets": [
+      "SYNTH_A",
+      "SYNTH_B"
+    ],
+    "dtype": "float64 generator/CSV; float32 neural tensors",
+    "generator_seed": 431,
+    "model_seed": 11,
+    "rng": "NumPy Generator(PCG64(431)); one standard_normal((660,4)) draw; row-major ordering pinned by NumPy 2.4.4",
+    "equations": [
+      "Let E[t,j] iid N(0,1), t=0..659, j=0..3. E is drawn once as the 660x4 matrix above.",
+      "x[-1]=0. q[t]=+1 for even floor(t/160), -1 otherwise. b=(1,-0.5).",
+      "ell[t,a]=(0.0005*q[t]+0.003*x[t-1])*b[a]+0.004*E[t,1]+0.006*E[t,a+2].",
+      "r[t,a]=expm1(ell[t,a]); then x[t]=0.85*x[t-1]+sqrt(1-0.85^2)*E[t,0].",
+      "No burn-in, clipping, rejection sampling, seed selection or parameter tuning. Latent state, shocks and regime labels are never features."
+    ],
+    "timestamps": "d[t]=2020-01-01T00:00:00+00:00 + t*86400 seconds; observed[t]=d[t]+3600 seconds. These are artificial equally spaced days, not an exchange calendar.",
+    "identity_before_generation": {
+      "protocol_id": "WHARTON-A20261008-R2-SYNTH-CV-001",
+      "generator_sha256": "d0f14dbe67fd8541e8fd58f1bfd3fba1e65c763a8b40e6839f008bdbc29a4a91",
+      "bytes_generated_yet": false
+    },
+    "identity_at_run": "After authorization, generator writes CSV once, hashes its exact UTF-8 LF bytes and writes the hash-admission manifest before any fit. Preserve generator source, protocol SHA256, CSV, manifest and their SHA256s. No existing synthetic fixture or historical market bytes may be substituted.",
+    "generator_python": "from datetime import datetime, timedelta, timezone\nfrom pathlib import Path\nimport csv, hashlib, json\nimport numpy as np\n\ndef write_generated_panel(directory):\n    directory = Path(directory)\n    directory.mkdir(parents=True, exist_ok=False)\n    rng = np.random.Generator(np.random.PCG64(431))\n    shocks = rng.standard_normal((660, 4))\n    loadings = np.array([1.0, -0.5], dtype=np.float64)\n    latent = 0.0\n    returns = np.empty((660, 2), dtype=np.float64)\n    for t in range(660):\n        regime = 1.0 if (t // 160) % 2 == 0 else -1.0\n        log_growth = (0.0005 * regime + 0.003 * latent) * loadings\n        log_growth = log_growth + 0.004 * shocks[t, 1] + 0.006 * shocks[t, 2:4]\n        returns[t] = np.expm1(log_growth)\n        latent = 0.85 * latent + np.sqrt(1.0 - 0.85**2) * shocks[t, 0]\n    start = datetime(2020, 1, 1, tzinfo=timezone.utc)\n    csv_path = directory / \"synthetic_component_panel.csv\"\n    with csv_path.open(\"w\", newline=\"\", encoding=\"utf-8\") as handle:\n        writer = csv.writer(handle, lineterminator=\"\\n\")\n        writer.writerow([\"decision_time\", \"observed_at\", \"SYNTH_A\", \"SYNTH_B\"])\n        for t, row in enumerate(returns):\n            decision = start + timedelta(days=t)\n            observed = decision + timedelta(hours=1)\n            writer.writerow([decision.isoformat(), observed.isoformat(), *[format(float(v), \".17g\") for v in row]])\n    checksum = hashlib.sha256(csv_path.read_bytes()).hexdigest()\n    manifest = {\n        \"csv\": csv_path.name, \"sha256\": checksum,\n        \"assets\": [\"SYNTH_A\", \"SYNTH_B\"],\n        \"source\": \"WHARTON-A20261008-R2-SYNTH-CV-001; explicitly generated synthetic component data\",\n        \"license\": \"Generated by this protocol from NumPy PCG64 draws; no market data imported\",\n        \"lawful_use_attested\": True, \"asset_order_verified\": True,\n        \"role\": \"development\", \"data_kind\": \"synthetic_fixture\",\n        \"return_kind\": \"total\", \"protected_rows\": []\n    }\n    manifest_path = directory / \"manifest.json\"\n    manifest_path.write_text(json.dumps(manifest, sort_keys=True, indent=2) + \"\\n\", encoding=\"utf-8\")\n    return manifest_path\n"
+  },
+  "chronology": {
+    "feature_context": "For decision at row t, X[t]=r[t-128:t] only. Require max availability in context < d[t]. No date/regime/latent features.",
+    "label": "Y[t,a]=expm1(sum(log1p(r[j,a])) for j=t..t+19). H=20 actual observations.",
+    "label_maturity": "m[t]=observed[t+19]; reporting delay=0 explicitly for this generated source. Eligible iff m[t] < origin timestamp. Zero delay is not a market-data assumption.",
+    "origins": [
+      600,
+      620,
+      640
+    ],
+    "test_windows_inclusive": [
+      [
+        600,
+        619
+      ],
+      [
+        620,
+        639
+      ],
+      [
+        640,
+        659
+      ]
+    ],
+    "fit_rule": "Fresh fit from scratch at each origin; eligible t start at 128. Split=max(8,floor(0.8*n_eligible)); earliest split rows are fit candidates, remainder calibration. Purge fit labels with maturity >= first calibration decision. No test labels enter that origin fit or memory.",
+    "exact_index_table": [
+      {
+        "origin": 600,
+        "eligible": [
+          128,
+          580
+        ],
+        "n_eligible": 453,
+        "fit": [
+          128,
+          470
+        ],
+        "n_fit": 343,
+        "purged": [
+          471,
+          489
+        ],
+        "calibration": [
+          490,
+          580
+        ],
+        "n_calibration": 91
+      },
+      {
+        "origin": 620,
+        "eligible": [
+          128,
+          600
+        ],
+        "n_eligible": 473,
+        "fit": [
+          128,
+          486
+        ],
+        "n_fit": 359,
+        "purged": [
+          487,
+          505
+        ],
+        "calibration": [
+          506,
+          600
+        ],
+        "n_calibration": 95
+      },
+      {
+        "origin": 640,
+        "eligible": [
+          128,
+          620
+        ],
+        "n_eligible": 493,
+        "fit": [
+          128,
+          502
+        ],
+        "n_fit": 375,
+        "purged": [
+          503,
+          521
+        ],
+        "calibration": [
+          522,
+          620
+        ],
+        "n_calibration": 99
+      }
+    ],
+    "normalization": "Input per-asset mean/std on flattened fit contexts only, population std floor1e-8; same frozen transform on fit future target sequences, calibration and test. Concatenated latent/reservoir features get fit-row mean/std floor1e-8 only. No future or calibration fit of these normalizers.",
+    "memory": "Keys/residuals come only from out-of-fit calibration labels matured before origin. Fit labels mature before calibration starts. No memory writes on test. Same fixed memory snapshot for each origin prediction.",
+    "prequential_caveat": "Earlier test outcomes may become available at later origins, as dictated by the same maturity rule. Do not freeze all training at origin600 or pretend later-origin data are unseen. This is development prequential evaluation."
+  },
+  "units_and_inference": {
+    "independent_units": 1,
+    "unit_definition": "One generated 660x2 panel under one fixed generator seed. Model seed is fixed, not a replication unit.",
+    "forecast_values": 6,
+    "three_origins": "Three disjoint label windows from one temporally dependent path with overlapping expanding training; not three independent trials. Two channels share latent/common shocks and are not independent either.",
+    "statistics": "Descriptive per-origin/per-channel values plus pooled summaries only. No t/Wilcoxon tests, bootstrap CI, p-values, significance, power, confidence-bound or generalization claims.",
+    "disposition": "Any gain is a hypothesis-generating observation on this specified synthetic path only. Any degradation, collapse, tie, nonfinite output, timeout or partial run remains visible."
+  },
+  "methods": [
+    {
+      "name": "candidate",
+      "fit": "JEPA+reservoir+XGBoost fitted on exact fit rows; matured calibration residual memory correction enabled"
+    },
+    {
+      "name": "candidate_no_memory",
+      "fit": "Identical same fitted object, encoders, reservoir, normalizers and heads; predict(use_memory=False). No retraining or changed seed. Isolates numerical correction at query."
+    },
+    {
+      "name": "ridge_matched_fit",
+      "fit": "StandardScaler plus multivariate Ridge, exact same fit rows; flattened raw contexts of 256 features; no calibration residual adjustment"
+    },
+    {
+      "name": "xgboost_matched_fit",
+      "fit": "One scalar XGBoost per channel, exact same fit rows; flattened raw 256 features; same64-tree/depth3 schedule as candidate heads; no calibration residual adjustment"
+    },
+    {
+      "name": "ridge",
+      "fit": "Strong reference: StandardScaler plus multivariate Ridge on all matured eligible rows at that origin, including calibration/purged samples"
+    },
+    {
+      "name": "historical_mean",
+      "fit": "Per-channel arithmetic mean of H-step labels from all eligible matured rows"
+    },
+    {
+      "name": "persistence",
+      "fit": "expm1(20*log1p(last context return)), without learned parameters"
+    }
+  ],
+  "fairness_limits": [
+    "All methods predict identical H-step labels at identical origins using causal observations.",
+    "Matched-fit baselines match supervised head-fit rows, not total end-to-end compute or feature count; raw256 features versus candidate48 latent+reservoir features.",
+    "Memory uses additional calibration labels that matched-fit baselines do not fit on. All-matured ridge/mean are stronger-history references. A memory-off difference cannot establish retrieval superiority over simpler use of those extra labels.",
+    "No bias-only calibration control or additional generator is included in this180-second proposal; that limitation prohibits attributing a gain uniquely to similarity retrieval.",
+    "One equal fixed config, no hyperparameter search, no early stopping on validation/test error and no post-hoc winner selection."
+  ],
+  "fixed_hyperparameters": {
+    "model_config": {
+      "context": 128,
+      "horizon": 20,
+      "reporting_delay_seconds": 0,
+      "latent": 16,
+      "reservoir": 32,
+      "spectral_radius": 0.8,
+      "leak": 0.3,
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "ema": 0.99,
+      "memory_slots": 256,
+      "neighbors": 5,
+      "memory_strength": 0.25,
+      "head": "xgboost",
+      "seed": 11
+    },
+    "encoder": {
+      "type": "single-layer unidirectional GRU",
+      "input_dim": 2,
+      "hidden_size": 16,
+      "bias": true,
+      "batch_first": true,
+      "dropout": 0,
+      "projection": "Linear16->16 with bias",
+      "initial_hidden": "zeros per sequence",
+      "parameter_initialization": "unmodified Torch2.11.0 defaults after manual_seed(11); target is a deep copy of online encoder"
+    },
+    "target_encoder": {
+      "stop_gradient": true,
+      "training_targets": "future sequence20x2, fit rows only",
+      "ema": 0.99,
+      "update": "after each full-batch optimizer step; target=0.99*target+0.01*online"
+    },
+    "predictor": "Linear16->16 with bias; tanh; Linear16->16 with bias",
+    "auxiliary_head": "Linear16->2 with bias",
+    "objective": "mean((predictor(z)-stopgrad(target_z))^2) +0.1*mean((aux(z)-Y)^2)+0.1*mean(relu(1-sqrt(population_var(z)+1e-4)))+0.01*mean(offdiag(C)^2); C=(z-mean(z))^T(z-mean(z))/max(1,n-1). Offdiagonal zeros remain in full16x16 mean denominator.",
+    "training": {
+      "epochs": 20,
+      "batch": "entire exact fit subset per epoch",
+      "shuffle": false,
+      "optimizer": "torch.optim.Adam",
+      "learning_rate": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "capturable": false,
+      "differentiable": false,
+      "decoupled_weight_decay": false,
+      "foreach": null,
+      "fused": null,
+      "gradient_clip": "encoder parameters only, max L2norm1.0; predictor/aux not clipped (matches bound code)",
+      "dtype": "float32",
+      "early_stopping": false,
+      "deterministic_torch_algorithms": true
+    },
+    "reservoir": {
+      "dim": 32,
+      "leak": 0.3,
+      "recurrent_norm_cap": 0.8,
+      "config_field_name": "spectral_radius; code actually uses conservative spectral/operator2-norm bound",
+      "rng": "new NumPy default_rng(11), i.e.PCG64 in pinned version",
+      "input_weights": "N(0,1/sqrt(2)), shape2x32, drawn first",
+      "recurrent_weights": "N(0,1), shape32x32, drawn second; multiply by0.8/||W||2",
+      "state_update": "h_s=0.7*h_(s-1)+0.3*tanh(normalized_x_s@Win+h_(s-1)@Wres)",
+      "initial_state": "zero per context; consume128 steps; output final state"
+    },
+    "memory": {
+      "capacity": 256,
+      "kept_rows": "last min(256,n_calibration) chronological entries; all91/95/99 here",
+      "keys": "standardized concatenated48-dim latent/reservoir features",
+      "value": "observed20-step return minus uncorrected fitted-head prediction",
+      "similarity": "cosine, norms floor1e-12",
+      "neighbors": 5,
+      "sort": "stable ascending argsort, last5",
+      "weights": "max(cosine,0), normalize positive total; zero correction if total0",
+      "strength": 0.25,
+      "query_update": false
+    },
+    "xgboost": {
+      "library_version": "3.4.1",
+      "per_channel_head": true,
+      "n_estimators": 64,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 1,
+      "colsample_bytree": 1,
+      "colsample_bylevel": 1,
+      "colsample_bynode": 1,
+      "objective": "reg:squarederror",
+      "booster": "gbtree",
+      "num_parallel_tree": 1,
+      "tree_method": "auto in bound implementation; resolves to grow_quantile_histmaker on this pinned CPU build",
+      "device": "cpu",
+      "random_state": 11,
+      "seed_per_iteration": false,
+      "n_jobs": 1,
+      "max_bin": 256,
+      "grow_policy": "depthwise",
+      "max_leaves": 0,
+      "min_child_weight": 1,
+      "gamma": 0,
+      "reg_alpha": 0,
+      "reg_lambda": 1,
+      "max_delta_step": 0,
+      "sampling_method": "uniform",
+      "monotone_constraints": [],
+      "interaction_constraints": [],
+      "scale_pos_weight": 1,
+      "base_score": "automatically estimated from the corresponding head fit labels, boost_from_average=1; not copied from prior fixture",
+      "missing": "NaN convention; actual inputs required finite",
+      "categorical_features": false,
+      "eval_set": null,
+      "early_stopping_rounds": null,
+      "sample_weight": null,
+      "callbacks": null,
+      "remaining_backend_defaults": "pinned3.4.1; retain each fitted booster save_config after the run. Any resolved substantive divergence from these values stops result interpretation."
+    },
+    "ridge": {
+      "alpha": 1,
+      "fit_intercept": true,
+      "solver": "auto from scikit-learn1.8.0; dense unweighted arrays",
+      "tol": 0.0001,
+      "max_iter": null,
+      "positive": false,
+      "copy_X": true,
+      "sample_weight": null,
+      "feature_scaler": "StandardScaler(with_mean=True,with_std=True); population variance, zero-variance feature scale1; fitted only on declared baseline rows"
+    },
+    "numeric_norms": "NumPy float64 generator/reservoir/ridge; torch float32 encoder; XGBoost pinned native implementation. No mixed precision/MPS/GPU."
+  },
+  "metrics_and_decision_rules": {
+    "primary": "Delta_memory=MSE(candidate)-MSE(candidate_no_memory), pooled equally over3 origins x2 channels. Positive means worse.",
+    "secondary": [
+      "MSE and MAE per method pooled over6 forecast values",
+      "per-origin/per-channel squared and absolute errors",
+      "OOS R2=1-MSE(method)/MSE(historical_mean), null if denominator0",
+      "paired MSE differences candidate versus each fixed comparator",
+      "max absolute candidate minus no-memory prediction, as mechanism-activity diagnostic"
+    ],
+    "raw_records": "Retain all six truths, all42 method forecasts, actual fit/calibration/baseline row IDs,20 epoch losses per origin,3 checkpoints, code/data/config hashes, command/stdout/stderr, exit/timeout, runtime and memory evidence.",
+    "completion": "All3 origins and all7 methods complete; outputs finite; row/maturity table exactly matches; artifacts/hash checks pass; resource ceilings respected.",
+    "non_completion": "Any violated gate, NaN, solver/library failure, native crash, timeout, memory cap or incomplete method is FAIL/PARTIAL. No completed-subset average presented as full result.",
+    "scientific_interpretation": "No success threshold for alpha. Delta<0 means only lower error on this single specified generated path; delta>=0 is retained negative/null component evidence. No model adoption follows from either."
+  },
+  "resource_and_cost_budget": {
+    "workload_processes": 1,
+    "cpu_worker_threads": 1,
+    "gpu_mps": false,
+    "network": false,
+    "paid_compute": false,
+    "data_purchase": false,
+    "wall_seconds_hard_limit": 180,
+    "peak_resident_memory_bytes_limit": 2147483648,
+    "clock_start": "Before launching the worker interpreter, includes imports, data generation/admission, all three origin fits, seven-method scoring, serialization and receipt writes.",
+    "clock_stop": "Worker exit; supervisory cleanup/receipt finalization is not training and is limited to5 seconds; report it separately.",
+    "supervision": "Parent provides a lightweight watchdog, not a second numerical worker. At180s terminate the entire workload process group; after2s grace kill it. No orphan/background process. Poll resident usage at<=1s intervals and terminate if >2GiB. If parent cannot enforce wall/RSS limits, do not start under this protocol.",
+    "environment_before_any_import": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": ".deps:."
+    },
+    "accounting": "No portfolio/trading experiment, transaction-cost policy or funding objective is invoked. Transaction costs are NOT APPLICABLE, not assumed zero. Report whole-run and per-origin wall time, CPU time if available, peak RSS, tree/epoch counts and retained bytes.",
+    "expected_fits": "3 JEPA trainings x20 epochs;6 candidate scalar XGBoost heads +6 matched raw XGBoost heads, each64 trees;6 multivariate ridge fits;3 parameter-free mean/persistence origins; memory-off uses existing heads.",
+    "time_estimate": "Feasibility within180s is unmeasured for full128-context/20-epoch configuration. Prior tiny correctness tests do not establish this runtime; timeout is a valid retained outcome.",
+    "observed_infrastructure_note": "A metadata-only read of the prior synthetic checkpoint exited139 when launched without thread caps during proposal preparation; capped retry exited0. Cause is not established. This is not a proposed experiment outcome or evidence that a model defect was repaired."
+  },
+  "stopping_and_change_control": {
+    "runs": 1,
+    "reruns": 0,
+    "parameter_search": false,
+    "seed_search": false,
+    "order": "Origins600,620,640 in that order. Methods in pipeline order; all retained.",
+    "start_gate": [
+      "parent accepts exact protocol SHA256 and grants lane",
+      "source/package hashes match bound R2 artifact",
+      "watchdog wall/RSS enforcement available",
+      "new unique output directory, no overwriting",
+      "no market data or historical lockbox access"
+    ],
+    "stop_immediately_on": [
+      "resource limit",
+      "invalid admission/timestamps/index table",
+      "nonfinite eligible arrays/loss/predictions",
+      "native/interpreter error",
+      "source/dependency mismatch",
+      "unexpected method or count",
+      "parent cancellation"
+    ],
+    "after_failure": "Retain failed attempt including time spent. Do not reduce epochs/context, drop baseline/origin, change generator/seed, extend time or retry. Any repair plus rerun needs a new source/protocol revision and parent allocation; count this attempt against development history.",
+    "after_any_outcomes": "Do not optimize this generator or candidate in place to improve reported results. This file remains a prospective frozen record."
+  },
+  "execution_plan_not_yet_run": [
+    "Parent accepts protocol SHA256 and schedules lane; start enforcing180s/2GiB budget.",
+    "Check source_revision and versions against this file before importing/running models; thread caps must already be in environment.",
+    "Execute the embedded generator exactly once to a new directory. Validate/hash exact CSV/manifest; no manual edits or downloads.",
+    "Use Config(**fixed_hyperparameters.model_config) and wharton_final.pipeline.evaluate(manifest,config,first_test_row=600,test_count=3,stride=20,output=new_run_directory).",
+    "Validate actual row sets against exact_index_table. From retained predictions compute declared descriptive contrasts, without refitting.",
+    "Retain all raw/derived artifacts and failed or complete receipt; bind protocol SHA256, source fingerprint and dataset byte hash. No forecasting/planning/live client command is part of this run."
+  ],
+  "dependencies_and_non_substitution": {
+    "synthetic_lane": "Does not require missing market bytes or adoption of a client economic policy; uses generated fictitious channels only. Still requires parent review/lane allocation and enforced resource limits.",
+    "market_lane_still_blocked": [
+      "exact accessible data bytes with raw/derived SHA256",
+      "lawful-use/vintage and actual publication/availability contract",
+      "verified instrument order and corporate-action treatment",
+      "development/protected-row boundary excluding spent history",
+      "separately adopted methodology and lane"
+    ],
+    "client_finalization_still_blocked": [
+      "approved asset universe and portfolio/economic policy",
+      "cash/account segregation and execution assumptions suitable to actual mandate",
+      "adopted2031 credible-range and long-run scenario mapping",
+      "competition/student review requirements outside this experiment"
+    ],
+    "original_Engram": "Library overlay calls it a proposal, not an admitted mechanism. This experiment does not claim or establish original specification fidelity.",
+    "historical_preservation": "No rerun or modification of M01–M12, no reopening spent lockbox, no seed997, no ETF rows800:960, no reinterpretation of M04 negative14.26% comparison."
+  }
+}

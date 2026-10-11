@@ -1,0 +1,26 @@
+{
+  "updated": "2026-10-11",
+  "scientific_status": "NOT_EVALUATED",
+  "manuscript_coverage": {
+    "data_and_universe": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "context_target_spectral_reservoir_graph": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "horizon_matured_engram": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "stochastic_interpreters_gate_decoder_growth": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "stage_a_stage_b_training": "IMPLEMENTED_UNIT_VALIDATED_NOT_SCIENTIFICALLY_TRAINED",
+    "calibration_and_scenarios": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "portfolio_and_international": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "fund_guard_grow": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "baselines_controls_ablations": "IMPLEMENTED_INTERFACE_AND_UNIT_VALIDATED",
+    "statistics_and_decision_rules": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "immutable_artifacts": "IMPLEMENTED_ENGINEERING_VALIDATED",
+    "hash_bound_checkpoints_and_freeze_consumption": "IMPLEMENTED_ENGINEERING_VALIDATED"
+  },
+  "current_receipt": "runs/engineering_compatibility_20261011_v4/SUMMARY.json",
+  "blocked_execution": [
+    "admitted point-in-time market bundle absent",
+    "protected boundary not frozen",
+    "official competition rules absent",
+    "current host resource pressure rejects the multi-hour matrix"
+  ]
+}
+

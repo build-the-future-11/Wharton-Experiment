@@ -1,0 +1,9 @@
+test_cash_yield_must_be_explicit (test_review_regressions.ReviewRegressions.test_cash_yield_must_be_explicit) ... ok
+test_failed_refit_cannot_leave_partial_model_predictable (test_review_regressions.ReviewRegressions.test_failed_refit_cannot_leave_partial_model_predictable) ... ok
+test_nonfinite_inference_clock_rejected (test_review_regressions.ReviewRegressions.test_nonfinite_inference_clock_rejected) ... ok
+test_reserved_future_liability_is_not_missed_payment (test_review_regressions.ReviewRegressions.test_reserved_future_liability_is_not_missed_payment) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.955s
+
+OK

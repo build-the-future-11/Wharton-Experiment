@@ -1,0 +1,1 @@
+{"csv": "fixture.csv", "sha256": "27c040284e0f924b7f6d50c78d88bd2e3091ce1273eb3788abe439543f78555f", "assets": ["A", "B"], "source": "synthetic unit fixture, not real performance", "license": "generated test fixture", "lawful_use_attested": true, "asset_order_verified": true, "role": "development", "return_kind": "total", "protected_rows": [], "data_kind": "synthetic_fixture"}

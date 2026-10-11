@@ -1,0 +1,7 @@
+{
+  "sha256": {
+    "config.json": "e02becef8ed69aa926043a1ab3eb4f04ac410ae23aaa4da018758b4f3bea1287",
+    "metadata.json": "885d5f472aeb310bae265f0e07374c4da5b1c43c1968c198ae7e6e5d1dc5bcd3",
+    "model.pt": "fee702d80e95bfe0b82c1765f1bd83d1dbac5d85fd65b97b224b3e6a4a748ba4"
+  }
+}

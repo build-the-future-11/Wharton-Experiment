@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-10-09T15:40:13.038435+00:00",
+  "task_owner": "01a11c69-7a51-70e7-96b5-2ccf829f501f",
+  "authorization": "Ryan continue coding15:37UTC; parent delegates one private validation/accounting regression with deterministic tests.",
+  "scope": "New isolated engineering_terminal_guard candidate copied from existing R2 ledger core; no edits to either frozen R2 tree.",
+  "competing_owner_check": "50 recent/pinned app inventory matched this Wharton task only; no owner/lease file at canonical repository/candidates/R2 roots; no other candidate directory present. This is bounded evidence, not a global integration lease.",
+  "base_source_sha256": "644afbefe9028f654144d2835a4ebfa043a4f4dd2ce68ce9e913fe7705168958",
+  "base_accounting_sha256": "3f2c22ff8de14b16491d7e58fc74149db7979d322d1a79833a36727e55c9bc2b",
+  "canonical_mount_verified": true,
+  "adopted_policy_changes": false,
+  "training_authorized": false,
+  "source_contract": "State.closed is annotated bool; transition terminal is a terminal-step flag. Rejecting other types prevents unintended terminal sale without selecting either supported terminal policy."
+}

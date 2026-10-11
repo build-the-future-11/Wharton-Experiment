@@ -1,0 +1,116 @@
+{
+  "status": "completed",
+  "role": "exploratory_development",
+  "evidence_class": "correctness_only",
+  "source_revision": {
+    "files": {
+      "SPEC.md": "2c476129ec306a05026a0bcc4193033b42f2bfcd2029b2be5887691f61dd20aa",
+      "configs/recovered-laura-gao-source.json": "5a850a69b9e0ac2ae39052e2fa7f4c10d6a6d73c977300ccee422c309f1388e5",
+      "evidence/SOURCE_RECOVERY.json": "774182e01a2745cf926b308907f92a03ec306d7b2b6833d28ab07d3226a91339",
+      "pyproject.toml": "dd1bb6d4452aa7aa9fb9c920ffc8fa9aa05f0013074e51e057aa85b504150454",
+      "wharton_final/__init__.py": "1e35156112594150503d7458bf8c34bb86650904de0456209b318cc0426ef803",
+      "wharton_final/__main__.py": "688fa89d8fbeb98f676f47918e0db53568c8af5a8325c209e3f8ac1b311a6884",
+      "wharton_final/accounting.py": "3f2c22ff8de14b16491d7e58fc74149db7979d322d1a79833a36727e55c9bc2b",
+      "wharton_final/client_contract.py": "464e23a202a4b035a6af6c760444e07dcf677f85b3f3518bf6e45186c7fad915",
+      "wharton_final/data.py": "0d8bd79a15d1c128ab6e7e5d7674d72b7b4dfdab5e6f65b2dd9aa19a382a89b4",
+      "wharton_final/model.py": "3ad7b37153fcb978ae9299147ae76bf890dee101e889b23a6a1bb593148638e9",
+      "wharton_final/pipeline.py": "da1f9729d30d52f4b41f5bb1d5d9b6f17eab905e747fc3574c0eb76ab19ebe27",
+      "wharton_final/planning.py": "246eb73c699a8f43e115292eb2348789783b041686366f5856fb317323d5280e"
+    },
+    "sha256": "644afbefe9028f654144d2835a4ebfa043a4f4dd2ce68ce9e913fe7705168958"
+  },
+  "data_revision": {
+    "manifest_sha256": "f21c8bcb41f967ea17ca3bd7e1d49b8fb061362f52ed1770f62d37e695571262",
+    "data_sha256": "27c040284e0f924b7f6d50c78d88bd2e3091ce1273eb3788abe439543f78555f",
+    "contract": {
+      "csv": "fixture.csv",
+      "sha256": "27c040284e0f924b7f6d50c78d88bd2e3091ce1273eb3788abe439543f78555f",
+      "assets": [
+        "A",
+        "B"
+      ],
+      "source": "synthetic unit fixture, not real performance",
+      "license": "generated test fixture",
+      "lawful_use_attested": true,
+      "asset_order_verified": true,
+      "role": "development",
+      "return_kind": "total",
+      "protected_rows": [],
+      "data_kind": "synthetic_fixture"
+    }
+  },
+  "config": {
+    "context": 6,
+    "horizon": 3,
+    "reporting_delay_seconds": 0,
+    "latent": 4,
+    "reservoir": 5,
+    "spectral_radius": 0.8,
+    "leak": 0.3,
+    "epochs": 2,
+    "learning_rate": 0.001,
+    "ema": 0.99,
+    "memory_slots": 256,
+    "neighbors": 5,
+    "memory_strength": 0.25,
+    "head": "xgboost",
+    "seed": 11
+  },
+  "origins": [
+    65
+  ],
+  "environment": {
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.4",
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "torch": "2.11.0",
+      "xgboost": "3.4.1"
+    }
+  },
+  "metrics": {
+    "candidate": {
+      "mse": 0.0003944490251909782,
+      "mae": 0.01800413266249056,
+      "oos_r2_vs_historical_mean": -0.09065716709723382
+    },
+    "ridge": {
+      "mse": 0.0003941196181581099,
+      "mae": 0.01774798879422587,
+      "oos_r2_vs_historical_mean": -0.08974635196436309
+    },
+    "historical_mean": {
+      "mse": 0.0003616617917074692,
+      "mae": 0.01792293691630174,
+      "oos_r2_vs_historical_mean": 0.0
+    },
+    "persistence": {
+      "mse": 2.407562561774793e-05,
+      "mae": 0.0041715939755401325,
+      "oos_r2_vs_historical_mean": 0.9334305526052873
+    },
+    "ridge_matched_fit": {
+      "mse": 0.0004662959684854209,
+      "mae": 0.016317697737523378,
+      "oos_r2_vs_historical_mean": -0.2893149875853771
+    },
+    "candidate_no_memory": {
+      "mse": 0.0003869863166694988,
+      "mae": 0.017539315080675848,
+      "oos_r2_vs_historical_mean": -0.07002267185169897
+    },
+    "xgboost_matched_fit": {
+      "mse": 0.0004695685646753175,
+      "mae": 0.019058745247484736,
+      "oos_r2_vs_historical_mean": -0.29836376261479347
+    }
+  },
+  "elapsed_seconds": 1.0655329589999383,
+  "checkpoint_sha256": {
+    "model-65.pkl": "301b828d0e4d677877ce4d98e3ad19a64ceb3b72f5f03ff3ba946ab2c51238cc"
+  },
+  "predictions_sha256": "59b02515c2da97edb433320d8414aa55b7454dad5c65f966b879ebb549ff57f6"
+}

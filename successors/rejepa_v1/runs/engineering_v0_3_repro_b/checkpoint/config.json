@@ -1,0 +1,23 @@
+{
+  "adaptive_gate": true,
+  "downside_quantile_level": 0.05,
+  "ema_decay": 0.99,
+  "input_dim": 4,
+  "interpreters": 2,
+  "latent_dim": 12,
+  "max_horizon": 20,
+  "reservoir_dim": 16,
+  "reservoir_leak": 0.35,
+  "reservoir_spectral_norm": 0.85,
+  "separate_heads": true,
+  "spectral_bands": 3,
+  "student_df": 5.0,
+  "use_engram": true,
+  "use_fourier": true,
+  "use_fourier_key": true,
+  "use_reservoir": true,
+  "use_risk_head": true,
+  "use_world_model": true,
+  "world_horizon": 5,
+  "worlds": 4
+}

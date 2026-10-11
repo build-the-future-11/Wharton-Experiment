@@ -1,0 +1,17 @@
+{
+  "context": 6,
+  "horizon": 3,
+  "reporting_delay_seconds": 0,
+  "latent": 4,
+  "reservoir": 5,
+  "spectral_radius": 0.8,
+  "leak": 0.3,
+  "epochs": 2,
+  "learning_rate": 0.001,
+  "ema": 0.99,
+  "memory_slots": 256,
+  "neighbors": 5,
+  "memory_strength": 0.25,
+  "head": "xgboost",
+  "seed": 11
+}

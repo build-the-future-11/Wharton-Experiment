@@ -1,0 +1,29 @@
+{
+  "status": "NOT_READY_NOT_AUTHORIZED_TO_RUN",
+  "scientific_label": "exploratory development amendment, not original Engram validation",
+  "dataset_identity": "No admitted exact data bytes. Historical ETF cache absent; French raw ZIP and its vintage/publication timing remain unverified; historical Library ZIP transfers failed HTTP403.",
+  "required_admission": ["exact local path or accessible Library file", "raw and derived SHA256", "lawful use/provenance", "verified asset order and instrument identities", "actual availability timestamps and corporate-action conventions", "explicit development-only rows with protected-history exclusion"],
+  "conditional_budget": {
+    "processes": 1,
+    "cpu_threads": 1,
+    "wall_seconds": 180,
+    "memory_gib": 2,
+    "seeds": [11],
+    "max_assets": 5,
+    "max_input_rows": 800,
+    "min_input_rows": 660,
+    "context": 128,
+    "horizon": 20,
+    "test_origins": [600,620,640],
+    "test_count": 3,
+    "epochs_per_origin": 20,
+    "head_trees": 64,
+    "hyperparameter_search": false,
+    "planned_repeats": 0,
+    "all_outcomes_retained": true
+  },
+  "contrasts": ["candidate", "same-head memory-off", "ridge matched fit", "raw XGBoost matched fit", "ridge all matured", "historical mean all matured", "persistence"],
+  "endpoint": "MSE and MAE of compounded 20-observation total returns; OOS R2 against historical mean; descriptive only",
+  "excluded": ["spent lockbox", "seed 997", "known ETF rows 800:960", "portfolio-alpha or client-suitability claims", "confirmatory significance", "tuning based on these outcomes"],
+  "decision_gate": "Parent must bind the exact dataset and approve a distinct bounded numerical slot/protocol after admission; current P1 correctness slot is not this authorization."
+}

@@ -1,0 +1,86 @@
+{
+  "project": "RENG-JEPA v0.1",
+  "lineage": "additive successor to FREM and RE-JEPA; predecessor evidence preserved",
+  "created": "2026-10-11",
+  "updated": "2026-10-11",
+  "phase": "engineering_validated_waiting_for_admitted_data_and_resource",
+  "scientific_status": "NOT_EVALUATED",
+  "manuscript": "/Users/ryan/Downloads/RENG_JEPA_Manuscript.pdf",
+  "protected_evaluation": {
+    "status": "not defined and not accessed",
+    "freeze_required": true
+  },
+  "claims": {
+    "novelty": "candidate mechanism only",
+    "predictive_performance": "not evaluated",
+    "investment_performance": "not evaluated",
+    "funding_reliability": "not evaluated",
+    "competition_compliance": "blocked on private official materials and approved universe"
+  },
+  "implementation_scope": "manuscript Sections 4 through 7, including dry-run experiment machinery",
+  "execution_scope": "deterministic unit, mathematical, leakage, accounting, and labeled synthetic compatibility checks only",
+  "external_blockers": [
+    "no admitted point-in-time market bundle for January 2007 through 2026-10-09",
+    "no verified provider entitlement or license manifest",
+    "no frozen fold universe snapshots or protected prospective boundary",
+    "no private official competition security list and rules snapshot",
+    "the multi-hour development matrix requires a fresh resource-admission check after admitted data exists"
+  ],
+  "decisions": [
+    "Preserve FREM and RE-JEPA as separate predecessor lineages",
+    "Use the manuscript quantile score as primary; NLL is secondary",
+    "Keep synthetic fixtures explicitly non-scientific",
+    "Do not consume a protected boundary during implementation"
+  ],
+  "completed": [
+    "Paper-specified core model and training objectives implemented",
+    "Point-in-time data, annual split, controls, inference, statistics, portfolio, funding and artifact contracts implemented",
+    "Ruff source and test checks passed",
+    "45 deterministic tests passed in 5.73 seconds with zero warnings",
+    "Four synthetic engineering datasets passed the current-source compatibility matrix",
+    "1,216,731 active trainable parameters measured for the three-member default configuration",
+    "Version 0.1.0 wheel and source archive built after retaining the initial missing-wheel failure"
+  ],
+  "evidence": {
+    "test_command": "PYTHONPATH=successors/reng_jepa_v01/src .venv/bin/python -m pytest -q successors/reng_jepa_v01/tests",
+    "test_result": "45 passed in 5.73s",
+    "ruff_result": "All checks passed",
+    "runtime_verification": "research/runtime_verification_2026-10-11.json",
+    "current_matrix": "runs/engineering_compatibility_20261011_v4/SUMMARY.json",
+    "datasets": [
+      "calm_trend",
+      "mean_reversion",
+      "correlation_break",
+      "missing_actions"
+    ],
+    "matrix_status": "ENGINEERING_MATRIX_PASS",
+    "scientific_claims_allowed": false,
+    "untrained_collapse_diagnostic": "triggered and retained; expected for random initialization, not a learned-result claim",
+    "package_build": {
+      "status": "PASS_AFTER_RETAINED_FAILURE",
+      "wheel_sha256": "b035b99cee4fed89e4e0f24012d66510ab7f50c4e4f3c87dd495f2ee99fd2410",
+      "sdist_sha256": "a4142bfb347c61674ce7fcc788f80c31c08a07f52e2a7a34cd0653f398088064"
+    }
+  },
+  "failures": [
+    {
+      "stage": "initial_test_run",
+      "result": "37 passed, 1 failed",
+      "cause": "numpy.datetime64 decision filter lost UTC identity",
+      "disposition": "repaired with explicit UTC normalization and full suite rerun"
+    },
+    {
+      "stage": "expanded_inference_test_run",
+      "result": "40 passed, 1 failed",
+      "cause": "installed PyTorch lacks torch.flatnonzero",
+      "disposition": "repaired with torch.nonzero(...).flatten() and full suite rerun"
+    },
+    {
+      "stage": "optional_package_build",
+      "result": "failed before artifact creation",
+      "cause": "resolved environment lacks wheel",
+      "disposition": "failure retained; wheel 0.48.0 was later installed into the ignored local environment and the package build passed"
+    }
+  ]
+}
+

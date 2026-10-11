@@ -1,0 +1,32 @@
+[
+  {
+    "origin": 600,
+    "n_samples": 453,
+    "n_features": 256
+  },
+  {
+    "origin": 600,
+    "n_samples": 343,
+    "n_features": 256
+  },
+  {
+    "origin": 620,
+    "n_samples": 473,
+    "n_features": 256
+  },
+  {
+    "origin": 620,
+    "n_samples": 359,
+    "n_features": 256
+  },
+  {
+    "origin": 640,
+    "n_samples": 493,
+    "n_features": 256
+  },
+  {
+    "origin": 640,
+    "n_samples": 375,
+    "n_features": 256
+  }
+]

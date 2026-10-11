@@ -1,0 +1,40 @@
+{
+  "model": {
+    "input_dim": null,
+    "reservoir_dim": 32,
+    "latent_dim": 24,
+    "spectral_bands": 4,
+    "worlds": 8,
+    "world_horizon": 5,
+    "interpreters": 3,
+    "reservoir_spectral_norm": 0.85,
+    "reservoir_leak": 0.35,
+    "student_df": 5.0,
+    "ema_decay": 0.99,
+    "use_world_model": true,
+    "use_engram": true,
+    "use_fourier_key": true,
+    "separate_heads": true,
+    "use_reservoir": true,
+    "use_fourier": true,
+    "use_risk_head": true,
+    "adaptive_gate": true,
+    "max_horizon": 20
+  },
+  "training": {
+    "epochs": 100,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "patience": 15,
+    "minimum_delta": 0.00001,
+    "seed": 11,
+    "world_seed": 1009,
+    "downside_threshold": 0.0,
+    "latent_weight": 1.0,
+    "growth_weight": 1.0,
+    "protection_weight": 1.0,
+    "diversity_floor": 0.05
+  },
+  "status": "TEMPLATE_INPUT_DIM_REQUIRES_ADMITTED_FEATURE_SCHEMA"
+}

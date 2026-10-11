@@ -1,0 +1,19 @@
+{
+  "configuration_sha256": "afaf256abba8bd714d9d1592ef813b8b61d31baf074ec4e9d47f925abdf35479",
+  "created_at": "2026-10-11T08:50:54.089613+00:00",
+  "dataset_label": "synthetic_engineering:missing_actions",
+  "dataset_sha256": "0ead7c4f97fed0eac2ae440932dc7d8aec7e7d4a3701f734f28199dfa497cdb5",
+  "dataset_synthetic": true,
+  "environment": {
+    "pid": "83032",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14"
+  },
+  "protocol_sha256": "8a5b32f92f869c82febff86eb22fb3fe80553c27fde7c02654e241f5d4b5b6c2",
+  "run_id": "bffb38eef2840c1d4a4b",
+  "scientific_claims_allowed": false,
+  "seeds": [
+    11
+  ],
+  "source_tree_sha256": "ae77eef6f1011841d29dde8edf6ae405518a0b185b77595fe2baa9e3caa8b728"
+}

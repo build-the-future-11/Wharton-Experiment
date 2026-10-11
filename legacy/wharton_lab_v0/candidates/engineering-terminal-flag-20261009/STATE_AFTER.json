@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "project": "Wharton Engram Reservoir JEPA",
+  "state_scope": "Canonical continuity record for this delegated task and isolated R2 candidate; not a replacement for frozen repository decisions or an adopted competition policy.",
+  "updated_at_utc": "2026-10-09T15:42:25.864660+00:00",
+  "pipeline": {
+    "library_file_id": "libfile_de1c13307d74819199946605f08e9c9b",
+    "local_copy": "resume_20261009/REQUESTED_RESEARCH_PIPELINE.txt",
+    "sha256": "0d621acf6bd24f370d2c78c2e9a97ee9d2a2a82d28a29c127750c58fdda381d5",
+    "application": "Resume from retained evidence, preserve negative/invalid history, keep development separate from confirmation, and stop dependent work at authentic-source/adoption gates."
+  },
+  "question": "For the fixed R2 development model, does matured calibration-memory correction change forecast error relative to the exact same fitted heads without memory, under a causal source contract?",
+  "scientific_objective": "Establish honest component behavior and engineering correctness before any separately adopted market or client claim.",
+  "hypothesis_status": "No positive memory effect or novelty claim adopted. The one completed specified synthetic path produced a negative MSE contrast; generalization remains unestablished.",
+  "intended_contribution": "An executable, auditable development amendment with explicit causal and accounting boundaries. Original Engram fidelity and defensible research novelty remain unverified.",
+  "current_phase": "One bounded private accounting validation fix implemented and tested; no active numerical lane.",
+  "scope": {
+    "included": [
+      "source/version reconciliation",
+      "document-correction boundary",
+      "deterministic retained-identity verification",
+      "authentic input requirements"
+    ],
+    "excluded": [
+      "new model",
+      "tuning",
+      "new scientific run",
+      "protected evaluation",
+      "market-data acquisition",
+      "economic-policy adoption",
+      "trading",
+      "publication",
+      "submission"
+    ]
+  },
+  "authorization_and_ownership": {
+    "task_owner": "This existing delegated Wharton implementation task under Ryan and coordinating parent thread01a11bc1-9f88-7732-8a54-3498a34f0025",
+    "authorized_scope": "Ryan continue coding15:37UTC, parent authorizes one real private input-validation/accounting regression with deterministic tests; isolated new path owned by this task, no canonical integration lease inferred.",
+    "canonical_code_integration_owner": "Not established by inspected evidence; session task authorization does not assign a separate contributor or resolve exclusive integration ownership.",
+    "current_inventory": "Inspected50 recent/pinned app threads: this Wharton task matched; no other named Wharton owner matched. No owner/lease file at inspected repository/candidate roots; only originalR2 candidate directory existed before creating this private artifact.",
+    "document_editor": {
+      "owner": "/root/afternoon_product",
+      "scope": "Only the final tab body and local formatting in Google Doc 1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U",
+      "released": true,
+      "released_utc": "2026-10-09 10:14:23 UTC",
+      "root_owns_portfolio_logs": true
+    },
+    "document_scope_conflict_closed": "Recorded native editor scope was the final Psychological Analysis tab only, released2026-10-09 10:14:23 UTC. It is not a model-code lease; do not apply a duplicate replacement.",
+    "remaining_owner_input": "Coordinator must bind exact implementation target, accepting owner, exclusive scope/lease and source/economic contract before integration."
+  },
+  "transport": {
+    "mac": "Verified Darwin arm64 and task cwd via actual commands.",
+    "PRO_BLADE": "Mounted and canonical repository present on2026-10-09 15:37\u201315:42UTC verification.",
+    "canonical_repository_current_state": "HEAD8e3d790dd513a93b7d80d5726a8b2708e8615b71; R2 source hashes unchanged; existing untracked paths preserved.",
+    "workspace_R2": "Available and source hashes verified unchanged.",
+    "archive_transfer": "Current supported helper with current companion files returned Library prepare_materialize is not available; zero bytes received; no archive extraction/use."
+  },
+  "source_versions": {
+    "canonical_repository": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "last_verified_head": "8e3d790dd513a93b7d80d5726a8b2708e8615b71",
+    "last_verified_head_is_current_claim": true,
+    "canonical_candidate": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/candidates/engram-reservoir-jepa-20261008",
+    "workspace_candidate": "/Users/ryan/Documents/Codex/2026-10-08/task-10/wharton_candidate",
+    "R2_source_revision": {
+      "files": {
+        "SPEC.md": "2c476129ec306a05026a0bcc4193033b42f2bfcd2029b2be5887691f61dd20aa",
+        "configs/recovered-laura-gao-source.json": "5a850a69b9e0ac2ae39052e2fa7f4c10d6a6d73c977300ccee422c309f1388e5",
+        "evidence/SOURCE_RECOVERY.json": "774182e01a2745cf926b308907f92a03ec306d7b2b6833d28ab07d3226a91339",
+        "pyproject.toml": "dd1bb6d4452aa7aa9fb9c920ffc8fa9aa05f0013074e51e057aa85b504150454",
+        "wharton_final/__init__.py": "1e35156112594150503d7458bf8c34bb86650904de0456209b318cc0426ef803",
+        "wharton_final/__main__.py": "688fa89d8fbeb98f676f47918e0db53568c8af5a8325c209e3f8ac1b311a6884",
+        "wharton_final/accounting.py": "3f2c22ff8de14b16491d7e58fc74149db7979d322d1a79833a36727e55c9bc2b",
+        "wharton_final/client_contract.py": "464e23a202a4b035a6af6c760444e07dcf677f85b3f3518bf6e45186c7fad915",
+        "wharton_final/data.py": "0d8bd79a15d1c128ab6e7e5d7674d72b7b4dfdab5e6f65b2dd9aa19a382a89b4",
+        "wharton_final/model.py": "3ad7b37153fcb978ae9299147ae76bf890dee101e889b23a6a1bb593148638e9",
+        "wharton_final/pipeline.py": "da1f9729d30d52f4b41f5bb1d5d9b6f17eab905e747fc3574c0eb76ab19ebe27",
+        "wharton_final/planning.py": "246eb73c699a8f43e115292eb2348789783b041686366f5856fb317323d5280e"
+      },
+      "sha256": "644afbefe9028f654144d2835a4ebfa043a4f4dd2ce68ce9e913fe7705168958"
+    },
+    "historical_crosswalk": "source_gate_20261009/Wharton_Experiment_Source_Crosswalk_20261009.json",
+    "historical_crosswalk_sha256": "e957354d797bca7e1b0f16caf1dc8f8a3e685a61533d9c6aae9cc39e713bf2b7",
+    "M11_generations": [
+      "Frozen main mpc.py with D-059 defects, preserved.",
+      "Oct7 corrected-v2 pre-payment successor reported in separate archive; archive bytes not recovered.",
+      "Repaired research branch simulate_ledger, previously verified Git blob59d32ac052aec97b484d4b86f1655a14678bfabe; zero cash yield, dollar holdings, no carry-forward arrears/corporate-action/terminal contract.",
+      "R2 Decimal unit/price ledger; explicit supported alternatives, not adopted competition policy."
+    ]
+  },
+  "document_correction_delta": {
+    "receipts": [
+      {
+        "library_file_id": "libfile_491812e7200481918d6e4ab139df44fb",
+        "sha256": "3300433d75345b4a4228282ae4b07dba65ca2edecefa6bd2869764493c6b6db5"
+      },
+      {
+        "library_file_id": "libfile_6600ce47bfb08191884771450247db64",
+        "sha256": "401d208fb1ca4a13576c6de67fefb3cb66087ec32c2ecfd1b594a1be6d4b3146"
+      }
+    ],
+    "document_id": "1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U",
+    "tab_id": "t.knod9pfb02qt",
+    "recorded_after_revision": "ANLCKQmqHap0gmJHcv95AuJh7GQx0sSxguR0m35Pv9A8xmX_bKhnT4gkYlUMActUZjzvEQFiQUPqSpRSLmoPyzDrPbmKprhRkeO0z2MWGvQ",
+    "recorded_native_body_sha256": "205c1f089673bb6cbda450efce4f6d35c2ac3e3461a98f7f871f872c210d657d",
+    "native_document_reread_in_this_pass": false,
+    "source_evidence_class": "Read and exact-byte-bound correction/verification receipts, not independent current native-document verification.",
+    "closed": "Previous private-proposal-only wording is superseded by these later completed native-edit and verification receipts. Unsupported politics, fixed risk tolerance and investment preferences were replaced by case constraints and open questions.",
+    "preserved": "The later verification receipt reports preserved contributions, ten2033\u20132042 operating payments, reserve priority, flexibility, qualified facility range and WInS separation. No new numerical case parameter was recovered in this pass.",
+    "still_open": "Official participant amendments/portal authentication, approved universe, economic choices and credible-range method.",
+    "model_evidence": false,
+    "duplicate_edit_performed": false
+  },
+  "data_lineage_gates": [
+    {
+      "id": "RESEARCH_ARCHIVE",
+      "library_file_id": "libfile_c5515d337f308191a533bddbdcc6c0d0",
+      "expected_bytes": 51950163,
+      "expected_sha256": "2706463f096ca81866e6e6beca55cdcc37c437d339476b4d1879db1f7bbf0ebc",
+      "checksum_source": "libfile_0c195df3d4648191aef1462529989268; exact text recovered in this pass",
+      "status": "Catalog identity/size and retained expected checksum resolved; authentic bytes unavailable.",
+      "boundary": "Synthetic paper/source archive is not a point-in-time market panel."
+    },
+    {
+      "id": "FRENCH_ORIGINAL",
+      "expected_raw_zip_sha256": "2f29e22546069914890a712680a6f81f3680ebc3543b52864484d209ca13a7db",
+      "required": "Original raw ZIP, licensed source/provenance, archive-member and derived hashes, extraction revision, original release/revision vintage and historical factor publication/availability timestamps. Exact historical publication times remain unknown.",
+      "boundary": "A latest download cannot stand in for original vintage; factor returns are not tradable self-financing inventory."
+    },
+    {
+      "id": "ETF_ORIGINAL",
+      "expected_cache_sha256": "6c234590d0b4c28901c9919044141e0617ae73b592b37bd510728386e26cfd29",
+      "shape": [
+        1691,
+        5
+      ],
+      "required": "Original cache, original retrieval/adjustment snapshot, dated observations, lawful use and vendor evidence of column-to-instrument mapping. Existing orderAGG,EFA,GLD,SPY,VNQ remains INFERRED.",
+      "protected_rows": "[800,960) excluded; exact upstream row mapping required for derivatives."
+    },
+    {
+      "id": "ADMITTED_MARKET_SUCCESSOR",
+      "status": "Not selected/admitted",
+      "required": "Explicitly chosen lawful source/universe; immutable raw and derived bytes/hashes; source release and revision history; per-value availability; timezone/calendar and cutoff rules; dividends/splits and total-versus-price return convention; PIT membership/fundamentals/delistings if used; missing-data rules; unspent development-only boundary.",
+      "schema_gap": "R2 accepts one observation timestamp per row and caller source/license/order attestations; it cannot prove original vintages or licensing. A source-specific revision/availability schema needs adoption before enforcement is invented."
+    }
+  ],
+  "matured_label_contract": {
+    "context": "X[t]=r[t-128:t]; observed[t-1]<decision[t] with strictly increasing observation clocks.",
+    "target": "Compounded total return over rows[t,t+20), twenty actual observations.",
+    "maturity": "m[t]=observed[t+19]+explicit_reporting_delay_seconds.",
+    "eligible": "m[t]<as_of and decision[t]<as_of; equality rejected.",
+    "purge": "Fit labels must mature strictly before first calibration decision; memory labels strictly before query. Fit-only normalization.",
+    "market_cutoff": "Not derivable without authentic availability and delay. Do not import the synthetic zero-delay/t-20 shortcut into market data."
+  },
+  "economic_contract": {
+    "existing_facts_snapshot": "wharton_candidate/configs/recovered-laura-gao-source.json; working source, not immutable official publication",
+    "supported_unadopted_options": [
+      "cash_only vs sell_pro_rata payment",
+      "carry vs write_off unpaid balance",
+      "before_trade vs after_market payment",
+      "mark vs liquidate terminal treatment",
+      "explicit cash yield and fee rate",
+      "total returns versus share-price returns with separate events",
+      "reserve_nominal_cash vs report_only future obligations"
+    ],
+    "remaining_decisions": [
+      "accepted instrument universe",
+      "execution/settlement/account segregation if required",
+      "flexibility buffer",
+      "2031 credible-range and long-run scenario methodology"
+    ],
+    "reason_no_policy_change": "Document correction deliberately leaves these choices open; neither that edit nor this research pipeline approves them."
+  },
+  "negative_and_invalid_history": [
+    {
+      "id": "LEGACY_MATRIX",
+      "status": "INVALID: documented leakage and pseudo-replication; preserve frozen receipts."
+    },
+    {
+      "id": "M04_FRENCH_DEV",
+      "status": "NEGATIVE source-reported14.26% worse than ridge; original-vintage qualifications retained."
+    },
+    {
+      "id": "M04_SYNTHETIC_20_CASES",
+      "status": "Separate historical negative synthetic evidence; not merged with French or R2 results."
+    },
+    {
+      "id": "R2_SYNTH_CV_001",
+      "status": "COMPLETE_NEGATIVE_COMPONENT_OBSERVATION",
+      "protocol_id": "WHARTON-A20261008-R2-SYNTH-CV-001",
+      "independent_units": 1,
+      "memory_mse_relative_change_percent": 9.269584365779265,
+      "primary_delta_memory": 0.00024681563412395956,
+      "scope": "One fixed synthetic dependent path; no generalization, market alpha or adoption claim.",
+      "zip": "Wharton-Approved-Synthetic-Run-001-Evidence.zip",
+      "zip_sha256": "3f84010155736b483844d3cc36149ef7256648688afa6dc91122993cc1b676cd",
+      "attempts": 1,
+      "reruns": 0
+    }
+  ],
+  "budgets": {
+    "new_scientific_runs": 0,
+    "new_training_or_tuning": 0,
+    "new_numerical_lane": "none; released",
+    "prior_completed_run": {
+      "wall_seconds": 9.221712708999803,
+      "cpu_seconds": 8.176966,
+      "peak_rss_bytes": 547307520
+    },
+    "any_successor": "Requires a scientifically distinct hypothesis/version, authentic inputs, falsifier, finite protocol and explicit lane admission."
+  },
+  "protected_evaluation": {
+    "lockbox": "spent, never fresh confirmation",
+    "seed997": "prohibited",
+    "known_ETF_rows800_960": "excluded",
+    "completed_R2_path": "observed development evidence; no retuning or rerun authorized"
+  },
+  "pipeline_checkpoints": {
+    "1_IDEA_READY": "Original novelty/contribution not admitted; no new hypothesis selected.",
+    "2_MODEL_SPECIFICATION_READY": "R2 development amendment explicit; original mechanism equivalence unverified.",
+    "3_METHODOLOGY_READY": "One fixed synthetic protocol completed; market/confirmatory successor absent.",
+    "4_MODEL_IMPLEMENTED": "R2 engineering implementation and prior59-test receipts retained, not rerun.",
+    "5_EXPERIMENT_SYSTEM_IMPLEMENTED": "Seven-method causal pipeline executed for the fixed synthetic protocol; not complete market methodology.",
+    "6_RUN_READY": "Historical single-run guards/receipts verified then; no current-run admission.",
+    "7_CONFIRMATORY_PROTOCOL_FROZEN": "Not satisfied; spent lockbox cannot be repurposed.",
+    "8_EVIDENCE_LOCKED": "R2 run archive unchanged; broader scientific claims unsupported.",
+    "9_VERIFIED": "Prior same-agent engineering review, not independent scientific verification.",
+    "10_RESEARCH_COMPLETE": "Not satisfied for broad project. The one synthetic run is complete and negative within its declared scope."
+  },
+  "claims": [
+    {
+      "claim": "R2 retained code and experiment bytes unchanged",
+      "evidence": "resume_20261009/VERIFY_RETAINED_STATE.json",
+      "scope": "Deterministic identity check only."
+    },
+    {
+      "claim": "Native document correction completed",
+      "evidence": [
+        "libfile_491812e7200481918d6e4ab139df44fb",
+        "libfile_6600ce47bfb08191884771450247db64"
+      ],
+      "scope": "Source-reported document edit/verification; no model evidence."
+    },
+    {
+      "claim": "Memory worsened MSE on the fixed synthetic path",
+      "evidence": "approved_run/attempt-001/descriptive_results.json",
+      "scope": "One dependent generated panel, no generalization."
+    },
+    {
+      "claim": "Malformed terminal/closed flags rejected before unintended terminal transaction; valid bool accounting preserved",
+      "evidence": "engineering_terminal_guard/ENGINEERING_RECEIPT.json",
+      "scope": "25 deterministic local accounting tests; no market or model evidence."
+    }
+  ],
+  "next_dependencies": [
+    "Private terminal-flag patch is complete; canonical integration requires owner-selected successor/source revision. Mount blocker is closed for this pass.",
+    "Make the exact research archive available through supported transfer or an explicitly supplied local copy; verify size/hash before extraction.",
+    "Coordinator binds integration owner/source scope; data custodian supplies authentic vintages/availability; project owner adopts economic contract."
+  ],
+  "actions_this_pass": {
+    "private_engineering_core_files_changed": 1,
+    "new_regression_test_files": 1,
+    "existing_ledger_tests_passed": 21,
+    "new_regression_tests_passed": 4,
+    "frozen_R2_changes": 0,
+    "training_or_scientific_runs": 0,
+    "native_document_edits": 0,
+    "public_push_or_deployment": 0
+  },
+  "private_engineering": {
+    "id": "WHARTON-PRIVATE-ENGINEERING-TERMINAL-BOOL-20261009",
+    "status": "IMPLEMENTED_TESTED_ISOLATED",
+    "path": "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard",
+    "PRO_BLADE_delivery_target": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/candidates/engineering-terminal-flag-20261009",
+    "receipt": "engineering_terminal_guard/ENGINEERING_RECEIPT.json",
+    "patch": "engineering_terminal_guard/terminal-flag-validation.patch",
+    "patch_sha256": "cfd15445c33daf6436ae27b6df35ae4f81e8883e3935a07e06a8490624a3bee6",
+    "tests": 25,
+    "baseline_invalid_value_failures": 16,
+    "scope": "Require bool for State.closed and transition terminal to prevent truthy string liquidation/fees.",
+    "R2_source_changed": false,
+    "scientific_results_changed": false,
+    "economic_policy_selected": false,
+    "integration": "not applied to frozenR2; private patch ready for separate owner integration"
+  }
+}

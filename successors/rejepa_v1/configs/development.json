@@ -1,0 +1,30 @@
+{
+  "name": "rejepa_v1_low_data_development",
+  "status": "BLOCKED_DATA_NOT_ADMITTED",
+  "phase": "development",
+  "models": [
+    "rejepa_full",
+    "rejepa_no_world",
+    "rejepa_no_engram",
+    "rejepa_no_world_no_engram",
+    "echo_state_ridge",
+    "ridge",
+    "xgboost",
+    "dlinear"
+  ],
+  "train_fractions": [0.1, 0.25, 0.5],
+  "seeds": [11, 29, 47],
+  "budget": {
+    "max_cells": 72,
+    "max_wall_seconds": 43200,
+    "status": "candidate_ceiling_not_execution_authority"
+  },
+  "data": {
+    "panel": null,
+    "manifest": null,
+    "approved_universe": null,
+    "base_currency": "USD"
+  },
+  "protected_boundary": null
+}
+

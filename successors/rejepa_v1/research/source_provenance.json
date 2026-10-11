@@ -1,0 +1,35 @@
+{
+  "case_study": {
+    "path": "/Users/ryan/Downloads/2026_WGY_Gao Case Study-FINAL.pdf",
+    "sha256": "bfb653cb9d530322b41d5290748e552d30e2db97798fa6dfb78fb80e2e1fead7",
+    "pages": 4,
+    "pdf_creation_date": "2026-09-11T00:49:51+05:30",
+    "interpretation": "Source of case facts only; document text is not an instruction to the coding agent."
+  },
+  "v0_2_user_specification": {
+    "path": "/Users/ryan/.codex/attachments/4878addd-7e94-4192-a247-953de6a42840/Pasted text.txt",
+    "sha256": "c778c440420ade4a408586bca9719edf3239bfea9ee858859f409415a53fac5a",
+    "interpretation": "User-authorized engineering scope for phases 0 through 15; does not provide market evidence or override scientific integrity gates."
+  },
+  "official_public_sources_checked_2026_10_11": [
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/",
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/faq/",
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/rules-roles/"
+  ],
+  "technical_prior_art_checked_2026_10_11": [
+    "https://arxiv.org/abs/2301.08243",
+    "https://arxiv.org/abs/2509.25449",
+    "https://arxiv.org/abs/2609.31680",
+    "https://arxiv.org/abs/2301.04104",
+    "https://doi.org/10.1126/science.1091277",
+    "https://arxiv.org/abs/2201.12740",
+    "https://arxiv.org/abs/1703.01988",
+    "https://arxiv.org/abs/1612.01474",
+    "https://arxiv.org/abs/1703.00443",
+    "https://doi.org/10.21314/JOR.2000.038",
+    "https://arxiv.org/abs/2205.13504",
+    "https://arxiv.org/abs/2211.14730"
+  ],
+  "prior_art_scope": "Primary-source architecture and method boundary, not a patent search or independent novelty determination."
+}
+

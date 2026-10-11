@@ -1,0 +1,20 @@
+{
+  "assets": 6,
+  "context_length": 16,
+  "decision_dates": 96,
+  "generator_contract": "Two-state stochastic volatility factor, heterogeneous loadings, deterministic seasonality, idiosyncratic noise and synthetic FX; all training windows are chronological.",
+  "horizon": 5,
+  "input_dim": 4,
+  "label": "SYNTHETIC_ENGINEERING_FIXTURE_NOT_MARKET_EVIDENCE",
+  "market_data": false,
+  "metadata_json": "successors/rejepa_v1/data/engineering/v0_3/ENGINEERING_DATASET.json",
+  "panel_csv": "successors/rejepa_v1/data/engineering/v0_3/panel.csv",
+  "panel_manifest": "successors/rejepa_v1/data/engineering/v0_3/panel.csv.manifest.json",
+  "panel_sha256": "2c7977885a891087eca05db7486c6a1bc54467e1bff2c2616de395e918dce1bd",
+  "protected_data": false,
+  "samples": 456,
+  "scientific_use": "PROHIBITED",
+  "seed": 11,
+  "training_npz": "successors/rejepa_v1/data/engineering/v0_3/training.npz",
+  "training_sha256": "f92faeb3335c847fc8e3ba617283430b51c7a29030bdbebcd645b947f89db7d9"
+}

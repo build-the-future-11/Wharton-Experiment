@@ -1,0 +1,54 @@
+project: RENG-JEPA
+version: 0.3.0
+updated: 2026-10-11
+scientific_status: NOT_EVALUATED
+engineering_status: END_TO_END_ENGINEERING_FIXTURE_PASSED_MARKET_EXECUTION_BLOCKED
+lineage: clean successor to FREM; prior evidence retained outside this package
+central_hypothesis: >-
+  Under predeclared low-data regimes, causal latent-world imagination plus
+  matured spectral-engram retrieval improves date-level probabilistic return
+  forecasts over an identical mechanism-off reservoir-JEPA under matched
+  information and bounded compute.
+primary_falsifier: >-
+  The paired 95 percent interval for control NLL minus RENG-JEPA NLL fails to
+  clear 0.01 nat per observation, or any integrity, completeness, calibration,
+  provenance, protected-boundary, or compute-matching gate fails.
+protected_evaluation:
+  status: NOT_DEFINED_NOT_ACCESSED
+  freeze_required: true
+implemented_phases:
+  - canonical state and governance
+  - Laura funding frontier and dynamic FUND GUARD GROW sleeves
+  - point-in-time validation and hashed snapshot engine
+  - horizon-conditioned temporal JEPA and representation diagnostics
+  - stress-conditioned latent simulator and calibration diagnostics
+  - matured engram memory, temporal graph relations, and retrieval diagnostics
+  - Fourier reservoir and amplitude phase time-frequency diagnostics
+  - adaptive or fixed fusion controls
+  - separate return and tail-risk outputs
+  - global CVaR portfolio optimizer and simple baselines
+  - currency and international-exposure analytics
+  - purged walk-forward evaluation and paired block uncertainty
+  - ablation flags and matched experiment manifests
+  - evidence-bound strategy reporting
+  - research CLI and packaged library
+  - strict causal data and numerical validation
+  - exact Student-t tail quantiles and exact scenario-CVaR linear programming
+  - deterministic labeled engineering fixture and duplicate semantic-state verification
+  - canonical tensor-state checkpoint hashing
+  - causal continuation-retrieval and streaming residual-alignment controls
+external_blockers:
+  - lawful admitted point-in-time international market panel
+  - current team-only WInS approved-security universe and trading requirements
+  - actual chronological development validation and protected dates
+  - team-selected funding-confidence and flexibility policy
+prohibited_claims:
+  - no claimed novelty determination
+  - no claimed forecast or portfolio outperformance
+  - no claimed calibrated recession or funding probability
+  - no live trading client contact or public submission
+next_gate: >-
+  Admit and hash a lawful data snapshot, bind actual chronological splits,
+  bind the implemented causal retrieval controls into a frozen Phase 2 experiment
+  manifest, then execute development without accessing protected outcomes. The
+  labeled engineering dry run is complete and is not market evidence.

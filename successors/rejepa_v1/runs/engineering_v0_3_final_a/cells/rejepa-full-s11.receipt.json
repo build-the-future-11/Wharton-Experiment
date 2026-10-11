@@ -1,0 +1,18 @@
+{
+  "cell": {
+    "cell_id": "rejepa-full-s11",
+    "configuration": {},
+    "model": "rejepa_full",
+    "seed": 11,
+    "train_fraction": 0.8
+  },
+  "manifest_sha256": "1c6101a2fe4c48be58365043e5222deb812c3ec6bcec95446459764a05fa4053",
+  "result": {
+    "best_validation_composite_loss": 2.1644487380981445,
+    "completed_epochs": 3,
+    "scientific_use": "PROHIBITED",
+    "validation_student_t_nll": 0.46605125069618225
+  },
+  "status": "COMPLETE",
+  "wall_seconds": 2.8750015189871192e-05
+}

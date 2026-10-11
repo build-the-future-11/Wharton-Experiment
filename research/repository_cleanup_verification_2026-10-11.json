@@ -1,0 +1,95 @@
+{
+  "receipt_id": "WHARTON-REPOSITORY-CLEANUP-20261011",
+  "date": "2026-10-11",
+  "status": "PASS_ENGINEERING_VERIFIED_SCIENCE_UNCHANGED",
+  "branch": "codex/repo-cleanup-efficiency",
+  "base_head": "8e3d790",
+  "scope": "Local reversible repository cleanup, package verification, and behavior-preserving efficiency work. No market data, protected outcome, model fit, allocation, trade, message, or publication action.",
+  "repository_cleanup": {
+    "legacy_destination": "legacy/wharton_lab_v0",
+    "legacy_files_verified_byte_identical_to_base": 3373,
+    "unique_files_preserved_beyond_base": 194,
+    "vendored_dependency_tree_preserved_but_gitignored": "legacy/wharton_lab_v0/candidates/engram-reservoir-jepa-20261008/.deps",
+    "nested_external_checkout": {
+      "status": "clean_and_gitignored",
+      "head": "4e11e7e",
+      "path": "legacy/wharton_lab_v0/Wharton-GYIC-Model-Stochastic-Engram-Reservoir-JEPA-for-Regime-Aware-Financial-Forecasting",
+      "remote": "https://github.com/build-the-future-11/Wharton-GYIC-Model-Stochastic-Engram-Reservoir-JEPA-for-Regime-Aware-Financial-Forecasting.git"
+    },
+    "layout_record": "docs/REPOSITORY_LAYOUT.md"
+  },
+  "runtime_tests": [
+    {
+      "package": "FREM 0.1.1",
+      "result": "163 passed in 6.14 seconds",
+      "warning_policy": "DeprecationWarning treated as error"
+    },
+    {
+      "package": "RE-JEPA 0.3.0",
+      "result": "67 passed in 5.50 seconds",
+      "warning_policy": "DeprecationWarning treated as error"
+    },
+    {
+      "package": "RENG-JEPA 0.1.0",
+      "result": "45 passed in 5.73 seconds",
+      "warning_policy": "default suite with zero warnings"
+    }
+  ],
+  "lint": {
+    "scope": "src/frem, scripts, tests, both successor source trees, and both successor test trees",
+    "status": "PASS",
+    "result": "All checks passed"
+  },
+  "static_validation": {
+    "status": "PASS",
+    "python_files": 37,
+    "json_files": 18,
+    "authored_test_functions": 130,
+    "receipt": "docs/STATIC_VERIFICATION.cleanup_2026-10-11.json",
+    "sha256": "b5b079333fa7dc05d66b534c6011fc272834d766d59f691961adc5576d54b136"
+  },
+  "package_builds": [
+    {
+      "package": "FREM 0.1.0",
+      "wheel_sha256": "628659a04a051b49b1234f4ba493654cb8ff7996dad3003605d753b008da7588",
+      "sdist_sha256": "32208ad86b581b7df4f686f7b378354ffc27abef43396df821198cc922171520"
+    },
+    {
+      "package": "RE-JEPA 0.3.0",
+      "wheel_sha256": "122669f1378361066cb9605715085b50f2eea369bbafbcb33f86d109b9cdf395",
+      "sdist_sha256": "56a1a70e1ef58eacf2afa0ba6a42fdd4c533edca56b2f76749b5c259cd586503"
+    },
+    {
+      "package": "RENG-JEPA 0.1.0",
+      "wheel_sha256": "b035b99cee4fed89e4e0f24012d66510ab7f50c4e4f3c87dd495f2ee99fd2410",
+      "sdist_sha256": "a4142bfb347c61674ce7fcc788f80c31c08a07f52e2a7a34cd0653f398088064"
+    }
+  ],
+  "efficiency_verification": {
+    "receipt": "research/efficiency_verification_2026-10-11.json",
+    "sha256": "e1f0fe3caf87bd42ccd5288458669e5d7e026de43f4236e029f097d549079312",
+    "scope": "local synthetic engineering benchmark only",
+    "graph_local_median_speedup": 499.0904911883883,
+    "graph_maximum_absolute_error": 2.220446049250313e-16,
+    "funding_frontier_local_median_speedup": 22.43497656601814,
+    "funding_maximum_success_frequency_error": 0.0
+  },
+  "decision_journal": {
+    "path": "research/events.jsonl",
+    "sha256_before_receipt_commit": "0f819267b74c6ff07755b82f806b2f835c998346313597e9d83b6d7bf1ba1af2",
+    "latest_event_sha256": "dd41c33f34acc96751897acfdd05118116346d2d8afa82491b1cdfaa5d1ec9c5"
+  },
+  "retained_failures": [
+    "The initial deprecation-warning repair produced 32 failures and 131 passes; the failed attempt remains recorded in RESEARCH_STATE.json.",
+    "The initial no-isolation package builds failed because wheel was absent; the failure remains recorded and later builds passed after installing wheel 0.48.0 into the ignored environment.",
+    "Earlier runtime, data, model, and scientific failures remain in their original receipts and the byte-preserved legacy archive."
+  ],
+  "resource_gate": {
+    "final_heavy_rerun": "not repeated after documentation-only reconciliation because free plus speculative memory fell below the 512 MiB project floor",
+    "last_runtime_results": "retained green runs above were completed after the implementation changes and before documentation, state, manifest-script, and test-docstring-only changes",
+    "final_bounded_checks": "full-scope Ruff and static validation passed after all source edits"
+  },
+  "scientific_status": "NOT_EVALUATED",
+  "protected_outcomes_accessed": false,
+  "next_external_gate": "Supply a lawful canonical point-in-time panel and manifest before any FREM market execution."
+}

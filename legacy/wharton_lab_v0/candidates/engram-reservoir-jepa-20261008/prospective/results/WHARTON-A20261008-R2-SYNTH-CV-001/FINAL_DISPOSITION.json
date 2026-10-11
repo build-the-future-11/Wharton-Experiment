@@ -1,0 +1,85 @@
+{
+  "protocol_id": "WHARTON-A20261008-R2-SYNTH-CV-001",
+  "status": "COMPLETE_SYNTHETIC_DEVELOPMENT_ONLY",
+  "numerical_lane": "RELEASED",
+  "lane_work_ended_utc": "2026-10-08T18:21:49.392009+00:00",
+  "attempts": 1,
+  "reruns": 0,
+  "independent_generated_paths": 1,
+  "seeds": {
+    "generator": 431,
+    "model": 11
+  },
+  "checks": {
+    "artifact_byte_hashes": "PASS",
+    "source_and_package_binding": "PASS",
+    "generator_and_config_binding": "PASS",
+    "exact_fit_purge_calibration_maturity_rows": "PASS",
+    "all_42_forecasts_and_60_losses_finite": "PASS",
+    "12_boosters_each_64_trees_and_resolved_defaults": "PASS",
+    "all_7_methods_at_all_3_origins": "PASS",
+    "resource_limits_and_no_orphans": "PASS",
+    "no_retry": "PASS"
+  },
+  "whole_worker_wall_seconds": 9.221712708999803,
+  "worker_cpu_user_seconds": 7.475813,
+  "worker_cpu_system_seconds": 0.7011529999999999,
+  "worker_cpu_total_seconds": 8.176966,
+  "peak_rss_bytes": 547307520,
+  "supervisory_cleanup_seconds": 0.01534908300072857,
+  "max_RSS_sampling_gap_seconds": 0.23066158300025563,
+  "errors": [],
+  "protocol_sha256": "543530312a36b3c001f272eb8db9e43f895455ae878dd827b9adefc6310197f5",
+  "source_sha256": "644afbefe9028f654144d2835a4ebfa043a4f4dd2ce68ce9e913fe7705168958",
+  "config_sha256": "c11a597056fbdf6add427a11fe8eaa774d2b211869db8f6bb0b10553efcb2216",
+  "data_sha256": "b6cb704d12aa46c25b494da21aa9b84c18d13d245668663971bfbec03e7b10e6",
+  "manifest_sha256": "3b25a9e0e13d721dc22bb8af770421245406daf135ce82099f068423d6e8f23c",
+  "primary_delta_memory": 0.00024681563412395956,
+  "memory_mse_direction": "WORSE on this fixed generated path",
+  "memory_mse_relative_change_percent": 9.269584365779265,
+  "metrics": {
+    "candidate": {
+      "mse": 0.0029094553424924862,
+      "mae": 0.04515178180902071,
+      "oos_r2_vs_historical_mean": -0.1402367796399877
+    },
+    "ridge": {
+      "mse": 0.0030598545061845325,
+      "mae": 0.04638538202532192,
+      "oos_r2_vs_historical_mean": -0.19917930938572792
+    },
+    "historical_mean": {
+      "mse": 0.002551623833263037,
+      "mae": 0.03972145743048507,
+      "oos_r2_vs_historical_mean": 0.0
+    },
+    "persistence": {
+      "mse": 0.02615716061923565,
+      "mae": 0.13382114554514704,
+      "oos_r2_vs_historical_mean": -9.251182121067457
+    },
+    "ridge_matched_fit": {
+      "mse": 0.006247804908215343,
+      "mae": 0.06464341704731773,
+      "oos_r2_vs_historical_mean": -1.4485603350967295
+    },
+    "candidate_no_memory": {
+      "mse": 0.0026626397083685267,
+      "mae": 0.04632348730298432,
+      "oos_r2_vs_historical_mean": -0.04350793156039834
+    },
+    "xgboost_matched_fit": {
+      "mse": 0.0023554457419786012,
+      "mae": 0.04065366121862888,
+      "oos_r2_vs_historical_mean": 0.07688362552781203
+    }
+  },
+  "remaining_final_model_blockers": [
+    "Admitted accessible lawful market bytes, vintage/publication/availability and corporate-action contracts, instrument ordering, and unspent development boundary remain unavailable.",
+    "Approved investment universe and cash/holdings/liability policy remain unresolved. Supported alternatives are explicit configuration, not adopted policy.",
+    "Original Engram proposal is not an admitted specification; this is development amendment A-20261008-R2.",
+    "2031 credible facility-contribution range and long-run scenario mapping require adoption and validation.",
+    "No competition submission or client-ready finalization follows from this one synthetic panel."
+  ],
+  "historical_result_preservation": "M04 historical negative 14.26% versus ridge remains unchanged. This synthetic run is separate. No historical market data, M01-M12 execution, or spent lockbox access occurred in this run."
+}

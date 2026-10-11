@@ -1,0 +1,11 @@
+{
+  "path": "/Users/ryan/Documents/Codex/2026-10-08/task-10/prospective_protocol/WHARTON_PROSPECTIVE_SYNTHETIC_COMPONENT_PROTOCOL.json",
+  "sha256": "543530312a36b3c001f272eb8db9e43f895455ae878dd827b9adefc6310197f5",
+  "size_bytes": 26346,
+  "json_parse": "PASS",
+  "generator_python_AST_parse": "PASS (not executed)",
+  "config_and_source_binding": "PASS",
+  "chronological_index_arithmetic": "PASS",
+  "generated_dataset": false,
+  "training_or_prediction_executed": false
+}

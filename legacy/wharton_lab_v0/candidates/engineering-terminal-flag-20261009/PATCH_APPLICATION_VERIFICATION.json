@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "base": "Exact bound R2 accounting source in disposable directory",
+  "git_apply_check": true,
+  "applied_candidate_files_hash_identical": true,
+  "frozen_files_mutated": false
+}

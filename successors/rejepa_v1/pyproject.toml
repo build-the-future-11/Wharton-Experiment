@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rejepa-research"
+version = "0.3.0"
+description = "Reservoir-Engram JEPA research core for low-data international forecasting"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<4",
+  "scipy>=1.12,<2",
+  "scikit-learn>=1.5,<2",
+  "torch>=2.4,<3",
+]
+
+[project.scripts]
+rejepa = "rejepa.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.9,<1", "build>=1.2,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+

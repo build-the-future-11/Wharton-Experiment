@@ -1,0 +1,90 @@
+{
+  "receipt_id": "FREM-RUNTIME-20261011",
+  "date": "2026-10-11",
+  "status": "ENGINEERING_RUNTIME_VERIFIED_RESEARCH_DATA_BLOCKED",
+  "checkout_head": "8e3d790",
+  "scope": "Local reversible compatibility verification and attempted first development execution. No protected outcomes, live trades, broker actions, participant submissions, or client allocations.",
+  "environment": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "torch": "2.14.1",
+    "pyarrow": "21.0.0",
+    "xgboost": "3.4.1",
+    "lock_file": "uv.lock",
+    "lock_sha256": "0eb43fa31306c4f2bc24702084da2a5727c170fad7a6520d2a96d05c83ce321e"
+  },
+  "static_validation": {
+    "command": ".venv/bin/python scripts/validate_source.py --output docs/STATIC_VERIFICATION.runtime.json",
+    "status": "PASS",
+    "python_files": 35,
+    "json_files": 16,
+    "authored_test_functions": 130,
+    "receipt": "docs/STATIC_VERIFICATION.runtime.json",
+    "receipt_sha256": "2e65fd8ec74909420289670ac84b25bfe384f3291af59fef98133306c02f81ed"
+  },
+  "runtime_tests": [
+    {
+      "attempt": 1,
+      "command": ".venv/bin/python -m pytest -q",
+      "status": "INFRASTRUCTURE_ERROR_RETAINED",
+      "result": "151 passed, 12 setup errors, 43 warnings in 259.40 seconds",
+      "cause": "The OS temporary volume could not create additional pytest tmp_path directories after the dependency install filled that volume. The 12 errors occurred during fixture setup before project code entered those tests."
+    },
+    {
+      "attempt": 2,
+      "command": "TMPDIR=/Volumes/PRO-BLADE/.codex-tmp/wharton-frem-pytest OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q",
+      "status": "PASS",
+      "result": "163 passed, 53 warnings in 22.99 seconds",
+      "interpretation": "Engineering compatibility only; not empirical or financial validation."
+    },
+    {
+      "attempt": 3,
+      "command": "Post-state-update regression with the same external TMPDIR and single-thread controls",
+      "status": "PASS",
+      "result": "163 passed, 53 warnings in 10.55 seconds",
+      "interpretation": "Confirms the canonical-state and receipt additions did not break the runtime suite."
+    }
+  ],
+  "lint": {
+    "correctness_gate_command": ".venv/bin/ruff check src/frem scripts --select E9,F63,F7,F82",
+    "correctness_gate": "PASS",
+    "full_current_scope": "83 pre-existing style/import/type-preference findings; no mass reformat was applied during scientific execution"
+  },
+  "package_build": {
+    "status": "PASS",
+    "wheel": {
+      "path": "dist/frem_research-0.1.0-py3-none-any.whl",
+      "sha256": "2a7ecc631c652c04572d68caa34aea8ea97c648cfef9731fc64bc3528f79d234"
+    },
+    "sdist": {
+      "path": "dist/frem_research-0.1.0.tar.gz",
+      "sha256": "c5d6f872efb063a0e8a546cbdd2e24e2892dfbc3144f4510859c7f7def431eda"
+    }
+  },
+  "planned_matrices": {
+    "first_execution": 4,
+    "development": 24,
+    "optional_robustness": 36,
+    "confirmatory_candidate": 90
+  },
+  "first_execution_attempt": {
+    "command": ".venv/bin/frem run --config configs/first_execution.json --phase development --execute",
+    "status": "BLOCKED_BEFORE_MODEL_EXECUTION",
+    "error": "FileNotFoundError: data/raw/panel.parquet",
+    "model_runs_started": 0,
+    "protected_outcomes_accessed": false,
+    "reason_not_substituted": "Only schema templates are present. A casual adjusted-price download cannot truthfully satisfy the required eligibility, corporate-action, timestamp, availability, delisting, license, and universe-provenance contract."
+  },
+  "legacy_evidence_reconciled": {
+    "legacy_matrix": "1181/1181 cells executed historically but leakage/degeneracy contaminated",
+    "spent_lockbox": "synthetic arm invalid for leakage; ETF arm negative; not reopened",
+    "repaired_pipeline": "exploratory null versus historical mean",
+    "later_synthetic_amendment": "one fixed synthetic path; candidate memory MSE 9.269584365779265 percent worse than memory-off; no rerun"
+  },
+  "scientific_conclusion": "NOT_EVALUATED for FREM on admitted market data",
+  "next_required_input": "Place a lawful canonical panel at data/raw/panel.parquet with panel.parquet.manifest.json, or update a development config to another admitted path. Supply the current team-only approved GYIC universe before any competition allocation."
+}

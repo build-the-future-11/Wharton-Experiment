@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "frem_development_v1",
+  "description": "Prospective settings; no data or training has been run. File paths are external-input requirements.",
+  "data": {"path": "data/raw/panel.parquet", "context": 64, "horizon": 5, "base_currency": "USD", "include_missingness": true, "peer_features": false},
+  "split": {"train_fraction": 0.6, "validation_fraction": 0.2, "embargo_bars": 5, "protected_start": "2025-01-01T00:00:00Z"},
+  "model": {"hidden_dim": 64, "reservoir_dim": 64, "reservoir_leak": 0.3, "reservoir_contraction": 0.9, "spectral_bands": 8, "memory_capacity": 512, "memory_neighbors": 8, "memory_ngram": 3, "memory_same_asset": true, "memory_retention": "utility", "dropout": 0.1, "use_adaptive_controller": true},
+  "training": {"epochs": 20, "batch_size": 128, "learning_rate": 0.001, "weight_decay": 0.0001, "gradient_clip": 1.0, "jepa_weight": 0.1, "variance_weight": 0.01, "covariance_weight": 0.001, "ema_momentum": 0.99, "early_stopping_patience": 5, "device": "cpu", "max_wall_seconds": 1800},
+  "evaluation": {"online_update": false, "training_fraction": 1.0, "bootstrap_block_dates": 20, "bootstrap_repetitions": 5000},
+  "models": ["frem", "no_memory", "fifo_memory", "no_spectral", "zero", "ridge", "reservoir_ridge", "xgboost"],
+  "seeds": [11, 29, 47],
+  "budget": {"max_runs": 24, "max_wall_seconds": 43200},
+  "output_dir": "outputs/runs"
+}

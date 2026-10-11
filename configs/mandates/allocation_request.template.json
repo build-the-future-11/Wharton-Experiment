@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "mandate_path": "laura_gao.pending.json",
+  "instrument_master_path": "reviewed_instrument_master.json",
+  "as_of": null,
+  "nav": null,
+  "current_weights": null,
+  "cash_return": null,
+  "reserve_cash": null,
+  "expected_returns": null,
+  "covariance": null,
+  "scenarios": null,
+  "scenario_probabilities": null,
+  "return_contract": {
+    "return_space": "simple",
+    "base_currency": "USD",
+    "asset_ids": ["REPLACE_WITH_APPROVED_ASSET_ID"],
+    "forecast_time": null,
+    "inputs_available_at": null,
+    "horizon_bars": null,
+    "entry_time": null,
+    "exit_time": null,
+    "common_execution_horizon_attested": false,
+    "timing_source": "REPLACE_WITH_DATED_SYNCHRONIZED_HORIZON_EVIDENCE",
+    "input_provenance": "REPLACE_WITH_CAUSAL_SIMPLE_RETURN_AND_RISK_INPUT_PROVENANCE"
+  },
+  "decision_context": {
+    "data_valid": false,
+    "calibration_valid": false,
+    "forecast_available": false
+  },
+  "policy": {}
+}

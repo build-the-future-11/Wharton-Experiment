@@ -1,0 +1,151 @@
+{
+  "recorded_at_utc": "2026-10-10T12:56:02Z",
+  "verbatim_evidence_file": "docs/laura_case_excerpts.json",
+  "source": {
+    "source_id": "laura_case_copy_20261010",
+    "title": "ROI - Wharton Global Youth Investment Challenge Prep — Case study tab",
+    "location": "https://docs.google.com/document/d/1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U/edit",
+    "kind": "user_document",
+    "verified_at": "2026-10-10T12:56:02Z",
+    "effective_from": "2026-10-10T12:56:02Z",
+    "effective_until": null,
+    "revision": "AHj4eMSWUsJnY4Mwh2ILrcCGEx9ohcgj9LPocSnhH3dyzEXDx36GqvSE5DyBCK0DEXToiSJmcQ4tuWnfpDNOamg9g69kEYDRByaeGETEi90",
+    "scope": "Reproduced competition client case in tab t.ex0r35fa9gmc, not proof of a current authenticated organizer publication.",
+    "notes": "Current text recovered directly on 10 October 2026. Organizer amendments, approved universe and trading requirements still need exact participant material."
+  },
+  "case_tab_id": "t.ex0r35fa9gmc",
+  "evidence_class": "current_user_document_reproduction",
+  "primary_organizer_confirmation": "Not independently authenticated. Current participant material is required to certify organizer amendments.",
+  "verified_case_facts": {
+    "calendar_year_zero": 2026,
+    "contributions": [
+      {
+        "date": "2027-01-01",
+        "amount": 300000,
+        "kind": "contribution",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2028-01-01",
+        "amount": 150000,
+        "kind": "contribution",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      }
+    ],
+    "operating_payments": [
+      {
+        "date": "2033-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2034-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2035-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2036-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2037-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2038-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2039-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2040-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2041-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      },
+      {
+        "date": "2042-01-01",
+        "amount": 50000,
+        "kind": "operating",
+        "currency": "USD",
+        "source_id": "laura_case_copy_20261010"
+      }
+    ],
+    "other_pre_2033_portfolio_flows": false,
+    "living_expenses_outside_portfolio": true,
+    "operating_payments_inflation_adjusted": false,
+    "outside_funding_for_ten_payments_allowed": false,
+    "reserve_before_first_operating_payment_and_facility_contribution": true,
+    "facility_amount_predetermined": false,
+    "financial_flexibility_required": true,
+    "separate_contingency_fund_or_endowment_size_required": false,
+    "communication_year": 2031,
+    "communication_target_year": 2033,
+    "communication_requires_range_and_confidence": true,
+    "wins_gains_change_long_run_projection": false,
+    "personal_income_and_capital_gains_taxes_required": false,
+    "taiwan_residency_setup_legal_regulatory_model_required": false
+  },
+  "case_does_not_supply": [
+    "approved ticker list",
+    "allowed trading markets",
+    "numerical country or sector weights",
+    "maximum loss/risk tolerance",
+    "numerical funding certainty",
+    "10% Taiwan foreign trading allocation cap"
+  ],
+  "independent_public_sources": [
+    {
+      "title": "Wharton investment competition FAQ",
+      "url": "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/faq/",
+      "fact": "Current official case, trading rules and other materials are distributed to registered team leaders through SurveyMonkey Apply."
+    },
+    {
+      "title": "TWSE investment guide",
+      "url": "https://www.twse.com.tw/en/about/company/guide.html",
+      "fact": "TWSE describes 10% daily price variation bands with instrument exceptions; this does not substantiate the suggested universal foreign-trading portfolio cap."
+    }
+  ],
+  "prior_results_preserved_as_unverified_history": [
+    {
+      "source_tab": "t.jkym6xeq73bm",
+      "claim": "The document reports APEN synthetic memory worsening MSE in all 20 cases and reports negative world-model comparisons.",
+      "status": "Prior document claims only. No run artifacts or statistical claims reverified in this authoring session. Preserve the negative history; do not treat the new implementation as a proven fix."
+    }
+  ]
+}

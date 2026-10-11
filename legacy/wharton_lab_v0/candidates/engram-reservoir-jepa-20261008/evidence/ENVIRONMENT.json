@@ -1,0 +1,27 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0",
+    "xgboost": "3.4.1"
+  },
+  "dependency_install": "XGBoost installed only in local .deps; no global environment mutation",
+  "source_revision": {
+    "files": {
+      "SPEC.md": "dc19ea815c913ae1135db5e487b790ac3a491aa50391ac024910b07d25ba794a",
+      "evidence/SOURCE_RECOVERY.json": "8228abaf77dcde744c4390e068c14e6c3280b5c20f128737cabb48e5acc9a572",
+      "pyproject.toml": "ea49f00615aa3556ffc1002abbda5774a9cbec49024a145854a538c87385f210",
+      "wharton_final/__init__.py": "fcd7fbfbbf4deba466443eaf0f01e74845bfb806cb533f97b65ce2b6c747eebb",
+      "wharton_final/__main__.py": "be1b37b584b360e78f8fd7b91892f6ccf7522c5096543c4990dbdcad206e502e",
+      "wharton_final/accounting.py": "b5f3886c238aebd09cbb19a6bb9003990cead5e0015a6d1f1ce23677278f01d1",
+      "wharton_final/data.py": "65568123c79f89d1bbfebe267184eceb3465f49eeec40fd1048d2c8f733384ea",
+      "wharton_final/model.py": "50684c91b5a47e5d77fde149470922a94d1327028fc5e557bfc174c23db64d31",
+      "wharton_final/pipeline.py": "9aae32b3a34e4382cc7be8a7087a215e34a77d88ffb75ea8d1288a5834bb1212",
+      "wharton_final/planning.py": "807a3a748a2e4607006aaf1f7681479e3f1dca23ad2d42f58f235e635cfa9235"
+    },
+    "sha256": "a0988a707b5caf2fdb5f50f950b3b49994fc1cd71c16c437565ab70d3ed241a4"
+  }
+}

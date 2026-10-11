@@ -1,0 +1,53 @@
+{
+  "status": "failed",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-c",
+    "import time;payload=bytearray(80*1024*1024);time.sleep(30)"
+  ],
+  "cwd": "/Users/ryan/Documents/Codex/2026-10-08/task-10/approved_run",
+  "wall_limit_seconds": 5,
+  "rss_limit_bytes": 52428800,
+  "started_utc": "2026-10-08T18:19:12.938298+00:00",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "sampling_target_seconds": 0.2,
+  "monitor": "sum RSS of worker process group from macOS ps; wait4 worker high-water RSS also retained",
+  "stop_reason": "rss_limit",
+  "exit_code": -15,
+  "worker_pid": 20315,
+  "worker_group": 20315,
+  "wall_seconds": 0.4673703749995184,
+  "cleanup_seconds": 0.014675000000352156,
+  "sampled_peak_group_rss_bytes": 101613568,
+  "worker_peak_rss_bytes": 101613568,
+  "cpu_user_seconds": 0.026173,
+  "cpu_system_seconds": 0.012721999999999999,
+  "remaining_group_pids": [],
+  "signal_errors": [],
+  "rss_samples": [
+    {
+      "elapsed_seconds": 0.01605012500021985,
+      "rss_bytes": 1490944,
+      "pids": [
+        20315
+      ]
+    },
+    {
+      "elapsed_seconds": 0.2379327500002546,
+      "rss_bytes": 101613568,
+      "pids": [
+        20315
+      ]
+    },
+    {
+      "elapsed_seconds": 0.4673490839995793,
+      "rss_bytes": 0,
+      "pids": [
+        20315
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-08T18:19:13.420479+00:00"
+}

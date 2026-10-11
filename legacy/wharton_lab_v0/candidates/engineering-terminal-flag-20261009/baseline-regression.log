@@ -1,0 +1,169 @@
+test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) ... 
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="'false'") ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="'true'") ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="''") ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='0') ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='1') ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='None') ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='[]') ... FAIL
+  test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='{}') ... FAIL
+test_false_preserves_inventory_without_terminal_fees (test_accounting_terminal_flag.TerminalFlagTests.test_false_preserves_inventory_without_terminal_fees) ... ok
+test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) ... 
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="'false'") ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="'true'") ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="''") ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='0') ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='1') ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='None') ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='[]') ... FAIL
+  test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='{}') ... FAIL
+test_true_keeps_explicit_terminal_treatment_and_exact_fees (test_accounting_terminal_flag.TerminalFlagTests.test_true_keeps_explicit_terminal_treatment_and_exact_fees) ... ok
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="'false'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="'true'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag="''")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='[]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_deserialized_state_requires_boolean_closed (test_accounting_terminal_flag.TerminalFlagTests.test_deserialized_state_requires_boolean_closed) (flag='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 35, in test_deserialized_state_requires_boolean_closed
+    with self.assertRaisesRegex(ValueError, 'closed.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="'false'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="'true'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag="''")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='None')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='[]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_non_boolean_terminal_rejected_before_events (test_accounting_terminal_flag.TerminalFlagTests.test_non_boolean_terminal_rejected_before_events) (flag='{}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ryan/Documents/Codex/2026-10-08/task-10/engineering_terminal_guard/candidate/tests/test_accounting_terminal_flag.py", line 26, in test_non_boolean_terminal_rejected_before_events
+    with self.assertRaisesRegex(ValueError, 'terminal.*bool'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+FAILED (failures=16)
