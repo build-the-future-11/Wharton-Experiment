@@ -3,8 +3,16 @@
   "version": "0.1.1-runtime-gated",
   "created": "2026-10-10",
   "updated": "2026-10-11",
-  "phase": "engineering_execution_complete_waiting_for_admitted_market_data_and_freeze",
+  "phase": "global_crisis_execution_requested_blocked_on_data_and_execution_scope",
   "scientific_status": "NOT_EVALUATED",
+  "global_crisis_request": {
+    "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
+    "priority": "Worldwide historical equities, especially the 2007-2009 crisis and calendar 2008",
+    "readiness_record": "research/global_equity_crisis_readiness_2026-10-11.json",
+    "market_cells_started": 0,
+    "required_input": "Historical market export or accessible provider including inactive securities, terminal outcomes, corporate actions, timestamps, historical membership and FX",
+    "required_implementation": "Explicit terminal-loss treatment, named-date fold orchestration, global portfolio accounting and measured scalable execution"
+  },
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
   "compute_authorized_this_session": "User authorized immediate execution on 2026-10-11. Ten bounded engineering cells were completed across FREM, RE-JEPA v0.3, and RENG-JEPA v0.1 using explicitly synthetic fixtures. Market development and confirmatory cells could not start because no admitted canonical panel or scientific freeze exists; no dataset was relabeled and no protected outcomes were accessed.",
@@ -36,7 +44,8 @@
     "Treat the successor RE-JEPA v0.3 synthetic run as engineering compatibility evidence only; it does not unlock market, protected, or competition claims",
     "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
     "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
-    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result"
+    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result",
+    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request"
   ],
   "failures": [
     {
@@ -118,6 +127,10 @@
     {
       "date": "2026-10-11",
       "event": "After explicit user execution authorization and resource admission, generated an explicitly synthetic Yahoo-calibrated engineering fixture and completed 10 bounded cells: four FREM compatibility cells, two RE-JEPA v0.3 cells, and four RENG-JEPA v0.1 regimes. FREM was worse than no-memory on the synthetic fixture and that negative result was preserved. No admitted-market, robustness, confirmatory, protected, portfolio, or competition execution occurred; scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all-world equity backtests, especially 2008. Rechecked missing canonical data and provider environment access, inspected terminal-loss, split and global-ledger limitations, verified historical recession announcement dates and candidate provider scope, and recorded proposed crisis windows and exact blockers. No new market cells ran and no protected outcomes were accessed. Receipt: research/global_equity_crisis_readiness_2026-10-11.json."
     }
   ],
   "prior_reported_evidence": [

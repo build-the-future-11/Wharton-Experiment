@@ -1,7 +1,7 @@
 {
   "project": "FREM",
   "version": "0.1.1",
-  "generated_utc": "2026-10-11T11:07:08.196766+00:00",
+  "generated_utc": "2026-10-11T11:13:10.467892+00:00",
   "release_status": "ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
   "scientific_status": "NOT_EVALUATED",
   "scope": "Active FREM release; successor packages and byte-preserved legacy archive have separate boundaries",
@@ -24,7 +24,7 @@
       "sha256": "32208ad86b581b7df4f686f7b378354ffc27abef43396df821198cc922171520"
     }
   ],
-  "file_count_excluding_manifest": 165,
+  "file_count_excluding_manifest": 167,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "path": "RESEARCH_STATE.json",
-      "bytes": 14032,
-      "sha256": "ca5f5fbc7b241ca4a0ca63cef40e79a305c9ae5d9264c4c922ea07f10ab614f2"
+      "bytes": 15375,
+      "sha256": "126f15e0ffa8833da4fe4db1493f3da3220c72eff5047d6333e1a7cb1056540e"
     },
     {
       "path": "configs/confirmatory.json",
@@ -493,6 +493,11 @@
       "sha256": "4185755d196074213d1ebf0616692cf880394b165f19af8d2297937db91a7387"
     },
     {
+      "path": "research/decisions/global_equity_crisis_request_2026-10-11.json",
+      "bytes": 1623,
+      "sha256": "49abbad95ac08acaa15b013ad89e205ab480dc35036ea9645051cde93d98c60b"
+    },
+    {
       "path": "research/decisions/repository_cleanup_efficiency_2026-10-11.json",
       "bytes": 1885,
       "sha256": "fec8ac5419f38cf38e4972f3997e95ebc54f84305b5c9d020c6a67a89f994301"
@@ -504,8 +509,13 @@
     },
     {
       "path": "research/events.jsonl",
-      "bytes": 7270,
-      "sha256": "041dc60542a278d65fc0c95cd8868b4705505ef296cd6666cd7b371cb80b127c"
+      "bytes": 9067,
+      "sha256": "759eba220100eadaa38cdf008588f863dfb6d74353c3232ec8150ea756dff4c6"
+    },
+    {
+      "path": "research/global_equity_crisis_readiness_2026-10-11.json",
+      "bytes": 7811,
+      "sha256": "d40d324882acd9f6cf03440057bbc43483d92a97dd0d1fde966cd35afd9b0e84"
     },
     {
       "path": "research/initial_implementation_contract.md",

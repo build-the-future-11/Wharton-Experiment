@@ -1,0 +1,11 @@
+{
+  "decision_id": "GLOBAL-EQUITIES-CRISES-20261011",
+  "scope": "Worldwide historical equity backtests with priority on the 2008 crisis",
+  "observation": "The user requested global and crisis execution. The canonical market panel remains absent, the audited Yahoo source begins in 2018, no checked provider environment variables are configured, and the current implementation cannot represent zero-recovery defaults or full asynchronous global portfolio accounting.",
+  "hypothesized_cause": "The existing package and synthetic compatibility receipts cover a narrower contract than the requested historical global-equity campaign.",
+  "decision": "Record the exact data and implementation blockers and propose calendar crisis windows before observing market outcomes. Preserve prior negative results and the 2025 protected boundary. Do not substitute today's survivors or synthetic paths for worldwide/2008 results.",
+  "predicted_effect": "A supplied historical provider export can be evaluated against explicit requirements, and follow-on implementation can preserve default losses and calendar causality.",
+  "discriminating_experiment": "After source entitlement and coverage are verified, implement and validate terminal-loss treatment, dated fold execution and global accounting, then run a resource-admitted compatibility stage before the declared crisis campaign.",
+  "result": "Zero market cells started. Readiness evidence and proposed evaluation windows are in research/global_equity_crisis_readiness_2026-10-11.json. Scientific status remains NOT_EVALUATED.",
+  "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE"
+}

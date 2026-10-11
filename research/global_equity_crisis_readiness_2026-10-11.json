@@ -1,0 +1,99 @@
+{
+  "request_id": "GLOBAL-EQUITIES-CRISES-20261011",
+  "observed_at_utc": "2026-10-11T11:11:19Z",
+  "request": "Test on all the world's stocks and run a series of backtests, especially the 2008 recession.",
+  "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
+  "market_runs_started": 0,
+  "stocks_tested_this_request": 0,
+  "scientific_status": "NOT_EVALUATED",
+  "protected_outcomes_accessed": false,
+  "inspection": {
+    "head_at_inspection": "56ae597",
+    "worktree_clean_at_start": true,
+    "canonical_panel_present": false,
+    "canonical_manifest_present": false,
+    "prior_intake_audit": "research/data_admission_audit_2026-10-11.json",
+    "available_yahoo_candidate": "Prior audited source has eight surviving US equities from 2018 through 2024; it cannot provide 2008 or global historical coverage.",
+    "provider_environment_variables_present": {
+      "WRDS_USERNAME": false,
+      "FRED_API_KEY": false,
+      "ALPHAVANTAGE_API_KEY": false,
+      "ALPHA_VANTAGE_API_KEY": false,
+      "LSEG_APP_KEY": false,
+      "LSEG_USERNAME": false,
+      "EIKON_APP_KEY": false,
+      "EODHD_API_TOKEN": false,
+      "EODHD_API_KEY": false,
+      "TIINGO_API_KEY": false,
+      "NASDAQ_DATA_LINK_API_KEY": false
+    },
+    "credential_check_scope": "Names/presence in the current process environment only; no secret values inspected or recorded. Absence does not prove the user lacks institutional access.",
+    "resource_admission": "NOT_ADMITTED: three consecutive free-plus-speculative readings were approximately 580, 482, and 341 MiB; headroom was not stably above 512 MiB."
+  },
+  "code_scope_findings": [
+    {
+      "source": "src/frem/data.py:validate_panel and _local_wealth; docs/DATA_GUIDE.md",
+      "finding": "Strictly positive prices and wealth are required; a total loss has no finite log return. The present model cannot cover zero-recovery defaults.",
+      "required_work": "Version and validate explicit default/terminal-return treatment and a compatible likelihood and loss-aware wealth ledger. Preserve failed securities; do not clip losses or remove bankrupt instruments."
+    },
+    {
+      "source": "src/frem/experiments.py:prepare_data; src/frem/splits.py",
+      "finding": "The main executable runner uses a single fractional chronological split. A walk-forward splitting helper exists, but named calendar-window orchestration is not wired into this runner.",
+      "required_work": "Implement and test exact calendar-boundary folds, with label-maturity purging, declared refit dates, and immutable per-fold receipts before starting the crisis series."
+    },
+    {
+      "source": "docs/STATIC_VERIFICATION.md; docs/DATA_GUIDE.md",
+      "finding": "The realized-return ledger supports synchronized nonoverlapping intervals, not full asynchronous global exchange settlement and holdings.",
+      "required_work": "Specify and implement exchange calendars, FX timing, corporate actions, liquidation/default outcomes, costs, holdings and a common NAV convention before global portfolio performance claims."
+    },
+    {
+      "source": "src/frem/experiments.py:prepare_data",
+      "finding": "The runner materializes the panel and training windows in memory. No world-scale memory or runtime measurement exists.",
+      "required_work": "Measure admitted-data volume and storage, and validate partitioned/streamed execution against the existing semantics before global execution."
+    }
+  ],
+  "requested_evaluation_design": {
+    "status": "PROPOSED_INTAKE_DESIGN_NOT_EXECUTABLE_CONFIG_OR_SCIENTIFIC_FREEZE",
+    "model_selection": "Primary FREM versus no_memory comparison inherited from the current protocol; successor campaigns require their own declared specifications.",
+    "universe": "Historical listed ordinary equities by permanent security/listing identifier, including inactive and delisted securities; report exchange, country, year and terminal-outcome coverage and all exclusions. No all-world completeness claim without an audited denominator.",
+    "primary_window": {
+      "name": "2007-2009 US recession / global crisis stress window",
+      "decision_start_inclusive": "2007-12-01T00:00:00Z",
+      "decision_end_exclusive": "2009-07-01T00:00:00Z",
+      "initial_fit_and_checkpoint_selection": "Use only labels fully mature before 2007-12-01, with train and validation separated chronologically and purged.",
+      "initial_refit_policy": "Fixed model through the primary crisis window; any expanding-window variant is separately declared before results.",
+      "calendar_2008_slice": "2008-01-01 through 2008-12-31 is a nested descriptive slice, not an independent replication.",
+      "date_label_scope": "NBER dates refer to the US recession; country-specific recession dates are not assumed identical.",
+      "lookahead_rule": "Retrospective recession labels may annotate reports only. NBER's beginning announcement was December 1, 2008 and ending announcement September 20, 2010; those classifications were not known at the start of the corresponding historical periods."
+    },
+    "additional_requested_series_candidates": [
+      {"name": "post-crisis recovery", "start": "2009-07-01", "end_exclusive": "2011-01-01"},
+      {"name": "2011 calendar stress window", "start": "2011-01-01", "end_exclusive": "2012-01-01"},
+      {"name": "2015-2016 calendar stress window", "start": "2015-01-01", "end_exclusive": "2017-01-01"},
+      {"name": "2020 calendar stress window", "start": "2020-01-01", "end_exclusive": "2021-01-01"},
+      {"name": "2022 calendar stress window", "start": "2022-01-01", "end_exclusive": "2023-01-01"}
+    ],
+    "series_policy": "Fit and select checkpoints only on labels matured before each declared window, using identical data and budgets across models. All candidate windows remain proposed until data coverage, implementation and the total campaign budget are bound.",
+    "existing_protected_boundary": "2025-01-01T00:00:00Z remains unchanged and unaccessed.",
+    "compute_budget": "Existing 24-cell/12-hour development ceiling is not silently multiplied across windows, markets, or models. Total campaign feasibility requires admitted-data measurements."
+  },
+  "source_checks": [
+    {
+      "url": "https://www.nber.org/research/business-cycle-dating/business-cycle-dating-committee-announcements",
+      "verified_via": "Web indexed page retrieved on 2026-10-11; direct fetch returned an error.",
+      "finding": "December 2007 peak announced December 1, 2008; June 2009 trough announced September 20, 2010."
+    },
+    {
+      "url": "https://www.marketplace.spglobal.com/en/datasets/compustat-financials-%288%29",
+      "verified_via": "Official provider indexed page retrieved on 2026-10-11.",
+      "finding": "Compustat describes North American and global active/inactive company data and daily/monthly security pricing, dividends and splits. This establishes a candidate provider, not entitlement or completeness of any export."
+    },
+    {
+      "url": "https://indexes.morningstar.com/research-data-products/crsp-us-stock-databases",
+      "verified_via": "Official provider page opened on 2026-10-11 after redirect from crsp.org.",
+      "finding": "CRSP covers US active and inactive securities, corporate actions and permanent identifiers; it is not a global-equity database."
+    }
+  ],
+  "next_required_external_input": "Provider/account-access identity or a local historical export covering pre-2007 training and 2007-2009 evaluation, with historical membership, actions, delistings, FX and permitted research use. Do not send secrets in chat.",
+  "result": "No market backtest is available. The requested worldwide/2008 execution is blocked by missing data, unsupported terminal-loss/global-ledger behavior, missing calendar-window orchestration and insufficient stable resource headroom."
+}
