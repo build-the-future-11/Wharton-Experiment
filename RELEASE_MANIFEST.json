@@ -24,7 +24,7 @@
       "sha256": "32208ad86b581b7df4f686f7b378354ffc27abef43396df821198cc922171520"
     }
   ],
-  "file_count_excluding_manifest": 230,
+  "file_count_excluding_manifest": 225,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -738,11 +738,6 @@
       "sha256": "a98d46b4a9f9ab469e4c8aa8335ff07cc24c3213d92d1f05c479fbf9736910ad"
     },
     {
-      "path": "research/completion_20261011/evidence_audit_tests.log",
-      "bytes": 1072,
-      "sha256": "9fba314bd91cd0cb79f36244461a9b91f1ab1e7b53ab40d3a5a907f2cec35b09"
-    },
-    {
       "path": "research/current_gyic_watchlist_2026-10-11.md",
       "bytes": 5333,
       "sha256": "ea32692173df4e5fcd14f61c167f95c5fc9997ec58245fa40a8c36ae2a782327"
@@ -793,16 +788,6 @@
       "sha256": "3e4fb4a631e6ed7003b1c840024889ef6f6bbaeedc5d1a1f1a05f3280c7ccd0a"
     },
     {
-      "path": "research/evidence_audit_20261011/audit.json",
-      "bytes": 8183,
-      "sha256": "228ee0864f920bdc1351ad066daa02a802dcca68b0939ebf84d191ab56ca1f7f"
-    },
-    {
-      "path": "research/evidence_audit_20261011/engineering_results.tex",
-      "bytes": 889,
-      "sha256": "15863c18aee90ec6a9a15323cbedf5ae8db6ed018ccce7f68e2b6986199d7016"
-    },
-    {
       "path": "research/global_equity_crisis_readiness_2026-10-11.json",
       "bytes": 7811,
       "sha256": "d40d324882acd9f6cf03440057bbc43483d92a97dd0d1fde966cd35afd9b0e84"
@@ -836,11 +821,6 @@
       "path": "research/runtime_verification_2026-10-11.json",
       "bytes": 4428,
       "sha256": "8942d7c7bbe3664de28a150db7d11764e6a614ca0b241b214aac85a0db6aac32"
-    },
-    {
-      "path": "scripts/audit_engineering_evidence.py",
-      "bytes": 10567,
-      "sha256": "532ff188273b1fdeb6756535f36ccc323e13305a05124ef201bb1c31206ee189"
     },
     {
       "path": "scripts/benchmark_efficiency.py",
@@ -1011,11 +991,6 @@
       "path": "tests/test_evaluation_contract.py",
       "bytes": 5751,
       "sha256": "9c984f93c45972367e8bfd9d13b9ccaacd1076a3d0042e17af1bc53ec6558205"
-    },
-    {
-      "path": "tests/test_evidence_audit.py",
-      "bytes": 2090,
-      "sha256": "f9329a63c03985916e69bc9cc47a283335b5fd72a966eb5193a5bb8c863faaaf"
     },
     {
       "path": "tests/test_governance.py",
