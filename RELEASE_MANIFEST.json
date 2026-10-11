@@ -1,7 +1,7 @@
 {
   "project": "FREM",
   "version": "0.1.1",
-  "generated_utc": "2026-10-11T10:12:36.987892+00:00",
+  "generated_utc": "2026-10-11T10:42:49.440081+00:00",
   "release_status": "ENGINEERING_VERIFIED_SCIENCE_NOT_EVALUATED",
   "scientific_status": "NOT_EVALUATED",
   "scope": "Active FREM release; successor packages and byte-preserved legacy archive have separate boundaries",
@@ -24,7 +24,7 @@
       "sha256": "32208ad86b581b7df4f686f7b378354ffc27abef43396df821198cc922171520"
     }
   ],
-  "file_count_excluding_manifest": 112,
+  "file_count_excluding_manifest": 114,
   "hash_convention": "SHA-256 of exact file bytes; manifest excludes itself and reproducible caches/build trees",
   "files": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "path": "RESEARCH_STATE.json",
-      "bytes": 11166,
-      "sha256": "390c19d06e45131829adb33443ef4ab34524d9a3b0303a7579fe195b78980b4b"
+      "bytes": 12209,
+      "sha256": "3c42abc777503d44e99bc0a59aa2f7608ad625c5b5d1b555eb737f9c2fb4f1d4"
     },
     {
       "path": "configs/confirmatory.json",
@@ -233,6 +233,16 @@
       "sha256": "ea32692173df4e5fcd14f61c167f95c5fc9997ec58245fa40a8c36ae2a782327"
     },
     {
+      "path": "research/data_admission_audit_2026-10-11.json",
+      "bytes": 4086,
+      "sha256": "e8b8873605281143b62791bd9b37e0b00299f00281fc5b51df41dc31b9b4953e"
+    },
+    {
+      "path": "research/decisions/data_admission_2026-10-11.json",
+      "bytes": 1374,
+      "sha256": "576152e108b4b100ecbdd34b70bca86c3a2e90e8eb9b3de66f00a0bfe927889d"
+    },
+    {
       "path": "research/decisions/repository_cleanup_efficiency_2026-10-11.json",
       "bytes": 1885,
       "sha256": "fec8ac5419f38cf38e4972f3997e95ebc54f84305b5c9d020c6a67a89f994301"
@@ -244,8 +254,8 @@
     },
     {
       "path": "research/events.jsonl",
-      "bytes": 2059,
-      "sha256": "0f819267b74c6ff07755b82f806b2f835c998346313597e9d83b6d7bf1ba1af2"
+      "bytes": 3607,
+      "sha256": "75c2f1b2f6570804d6a20747977f801adfdcfab477e4d30fbd66452f09d5a222"
     },
     {
       "path": "research/initial_implementation_contract.md",

@@ -1,0 +1,11 @@
+{
+  "decision_id": "FREM-DATA-ADMISSION-20261011",
+  "scope": "Dataset intake and bounded-run admission",
+  "observation": "No local, connected-Drive, or configured-provider source supplies a canonical point-in-time market panel and provenance manifest. The available real-market files are retrospective Yahoo-derived adjusted-close or return-only panels with acknowledged contract gaps.",
+  "hypothesized_cause": "The required licensed vendor export has not been supplied to this checkout or connected storage, and no provider credential is configured for a supported acquisition path.",
+  "decision": "Reject the discovered candidates for FREM market execution, preserve their hashes and failure reasons, and start zero model cells until a lawful canonical panel passes inspect-data and the resource floor.",
+  "predicted_effect": "The first market execution remains blocked without contaminating the prospective protocol or creating misleading empirical evidence.",
+  "discriminating_experiment": "Place the provider export and sidecar manifest at the declared intake paths, run inspect-data before the protected boundary, and proceed only if validation and resource admission pass.",
+  "result": "Blocked before model execution. No protected outcome was accessed and no dataset was relabeled to manufacture admissibility.",
+  "status": "DATA_BLOCKED_ZERO_MODEL_CELLS"
+}

@@ -66,6 +66,12 @@
       "stage": "package_build_cleanup_attempt",
       "status": "resolved_environment_failure",
       "detail": "The first no-isolation builds failed before artifact creation because wheel was absent. wheel 0.48.0 was installed into the ignored local environment and all three package wheel/source builds then passed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "data_admission_search",
+      "status": "blocked_before_model_execution",
+      "detail": "Local repositories, indexed user files, connected Google Drive, and configured-provider credentials contained no canonical point-in-time panel and manifest. Two Yahoo-derived candidates were rejected for explicit timestamp, actions, eligibility, survivorship, license/provenance, and terminal-outcome gaps. Zero model cells started."
     }
   ],
   "history": [
@@ -96,6 +102,10 @@
     {
       "date": "2026-10-11",
       "event": "Reconciled the repository into explicit FREM, RE-JEPA v0.3, RENG-JEPA v0.1, and byte-preserved legacy boundaries; passed 163, 67, and 45 tests respectively with deprecations treated as errors; passed full-scope Ruff and all three package builds; and verified graph and funding optimizations against scalar references. Synthetic timing evidence is engineering-only and scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Searched local repositories, indexed user files, connected Google Drive, and configured provider credentials for a runnable market panel. Rejected the available Yahoo adjusted-close and monthly-return candidates under the declared information/provenance contract. No dataset was relabeled, no model cell started, and no protected outcome was accessed; the exact intake audit is research/data_admission_audit_2026-10-11.json."
     }
   ],
   "prior_reported_evidence": [
@@ -159,6 +169,7 @@
     "runtime_record": "research/runtime_verification_2026-10-11.json",
     "repository_cleanup_record": "research/repository_cleanup_verification_2026-10-11.json",
     "efficiency_record": "research/efficiency_verification_2026-10-11.json",
+    "data_admission_record": "research/data_admission_audit_2026-10-11.json",
     "python_files": 37,
     "authored_test_functions": 130,
     "tests_executed": true,

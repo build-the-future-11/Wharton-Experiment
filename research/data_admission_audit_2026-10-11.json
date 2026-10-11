@@ -1,0 +1,75 @@
+{
+  "audit_id": "FREM-DATA-ADMISSION-20261011",
+  "date": "2026-10-11",
+  "status": "BLOCKED_NO_ADMISSIBLE_MARKET_PANEL",
+  "authorized_scope": "Locate, validate, and load available datasets, then begin bounded runs only if the data and resource gates pass.",
+  "searches": {
+    "repository_and_local_exports": "Searched PRO-BLADE repositories and indexed local files for parquet, CSV, price, return, panel, CRSP, market, and manifest candidates.",
+    "google_drive": "Read-only searches for CRSP, WRDS, Wharton market data, panel.parquet, point-in-time prices, CSV, Excel, parquet, and manifest files found no market-data export matching the FREM contract.",
+    "configured_credentials": {
+      "FRED_API_KEY": false,
+      "ALPHAVANTAGE_API_KEY": false,
+      "ALPHA_VANTAGE_API_KEY": false,
+      "WRDS_USERNAME": false
+    }
+  },
+  "rejected_candidates": [
+    {
+      "path": "/Volumes/PRO-BLADE/GitHubRepos/Old-Stuff/Everything Else/GitHub-Every-Repo/EigenFinance/data/public_yahoo_v1/prices.csv",
+      "sha256": "4b10408bb7f8bfcd76dd33df4b1b61e2fcaa416d67beebf66c38b4e09630fc55",
+      "rows_and_scope": "8 surviving US equities, 1760 shared dates, 2018-01-02 through 2024-12-30",
+      "validator_result": "FREM inspect-data rejected the unmapped source at the timestamp contract before any model execution.",
+      "reasons": [
+        "date-only observations rather than verified exchange timestamps",
+        "retrospective Yahoo auto-adjusted close without separate action or point-in-time revision history",
+        "rectangular dropna intersection with acknowledged survivorship bias",
+        "no historical eligibility, delisting, availability, FX, or permanent-identifier evidence",
+        "source manifest explicitly says it is not a licensed institutional feed and requires independent review"
+      ],
+      "admission": "REJECTED_FOR_FREM_MARKET_EXECUTION"
+    },
+    {
+      "path": "/Volumes/PRO-BLADE/GitHubRepos/Old-Stuff/Everything Else/GitHub-Every-Repo/Eigen-JEPA/data/real_market/monthly_multiasset_returns.csv",
+      "sha256": "d5c745e319247b856e7b7ed5c1b0eb50ec1f9bf6af3caa4bee114ad8302f5a76",
+      "reasons": [
+        "monthly returns only, without executable prices",
+        "no separate corporate actions, availability timestamps, or historical eligibility",
+        "upstream provenance states Yahoo Finance through yfinance"
+      ],
+      "admission": "REJECTED_FOR_FREM_MARKET_EXECUTION"
+    },
+    {
+      "path": "successors/rejepa_v1/data/engineering/v0_3/panel.csv",
+      "reasons": [
+        "deterministic synthetic engineering fixture",
+        "already used for retained compatibility runs",
+        "manifest prohibits scientific claims"
+      ],
+      "admission": "ENGINEERING_ONLY_NOT_A_MARKET_DATASET"
+    }
+  ],
+  "execution_decision": {
+    "first_execution": "NOT_STARTED",
+    "model_cells_started": 0,
+    "protected_outcomes_accessed": false,
+    "reason": "No candidate satisfies the canonical price, action, timestamp, availability, eligibility, delisting, currency, and license/provenance contract.",
+    "resource_gate": "Free plus speculative memory remained below the 512 MiB project floor; the existing synthetic matrices were not redundantly rerun under pressure."
+  },
+  "required_intake": {
+    "panel_destination": "data/raw/panel.parquet",
+    "manifest_destination": "data/raw/panel.parquet.manifest.json",
+    "minimum_evidence": [
+      "lawful provider/export identity and research-use rights",
+      "timezone-qualified price and availability timestamps",
+      "raw prices plus actions or a documented total-return methodology",
+      "historical eligibility/universe source and terminal outcomes",
+      "currency and timestamped FX where required",
+      "unmodified source hashes and retrieval/version metadata"
+    ],
+    "first_commands_after_intake": [
+      "frem inspect-data --path data/raw/panel.parquet --before 2025-01-01T00:00:00Z",
+      "frem plan --config configs/first_execution.json",
+      "frem run --config configs/first_execution.json --phase development --execute"
+    ]
+  }
+}
