@@ -1,0 +1,13 @@
+{
+  "symbol": "BP.L",
+  "market": "UK",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BP.L?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:21:55.671023+00:00",
+  "http_status": 200,
+  "path": "BP.L.json",
+  "sha256": "99a7ea814ea3cb1a7945edd7832f01f1661c390fdd4b4f33e55d5d0f2ec16c37",
+  "status": "DOWNLOADED",
+  "currency": "GBp",
+  "exchange_timezone": "Europe/London",
+  "rows": 6887
+}

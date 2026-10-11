@@ -1,0 +1,13 @@
+{
+  "symbol": "BHP.AX",
+  "market": "Australia",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BHP.AX?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:22.748834+00:00",
+  "http_status": 200,
+  "path": "BHP.AX.json",
+  "sha256": "ed68f321ee9b80f99b3a6c4cb4e20786d9f9694b667fff317c3b9a7cb17e1b87",
+  "status": "DOWNLOADED",
+  "currency": "AUD",
+  "exchange_timezone": "Australia/Sydney",
+  "rows": 6884
+}

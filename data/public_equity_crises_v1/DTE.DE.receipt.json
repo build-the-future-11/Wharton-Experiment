@@ -1,0 +1,13 @@
+{
+  "symbol": "DTE.DE",
+  "market": "Germany",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/DTE.DE?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:00.912383+00:00",
+  "http_status": 200,
+  "path": "DTE.DE.json",
+  "sha256": "58f1a29f6572fc12e46b9932a0c9327d6852e6c35fcdbe1bfbc9c8b9379070b9",
+  "status": "DOWNLOADED",
+  "currency": "EUR",
+  "exchange_timezone": "Europe/Berlin",
+  "rows": 6913
+}

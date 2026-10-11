@@ -1,0 +1,13 @@
+{
+  "symbol": "SAN.PA",
+  "market": "France",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAN.PA?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:04.554102+00:00",
+  "http_status": 200,
+  "path": "SAN.PA.json",
+  "sha256": "a2b6ee08865b66af81e59238c982046e8d495b0446ab40f426ca006b2a81aec5",
+  "status": "DOWNLOADED",
+  "currency": "EUR",
+  "exchange_timezone": "Europe/Paris",
+  "rows": 6426
+}

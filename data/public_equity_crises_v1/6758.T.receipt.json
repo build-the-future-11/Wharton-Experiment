@@ -1,0 +1,13 @@
+{
+  "symbol": "6758.T",
+  "market": "Japan",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/6758.T?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:15.119129+00:00",
+  "http_status": 200,
+  "path": "6758.T.json",
+  "sha256": "3055f5a29077e2883aa3e1648865c3d3dcbd639ad51a617bcc6fdc0d167746f0",
+  "status": "DOWNLOADED",
+  "currency": "JPY",
+  "exchange_timezone": "Asia/Tokyo",
+  "rows": 6248
+}

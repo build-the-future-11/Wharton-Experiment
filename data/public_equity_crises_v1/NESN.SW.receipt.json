@@ -1,0 +1,13 @@
+{
+  "symbol": "NESN.SW",
+  "market": "Switzerland",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NESN.SW?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:09.063654+00:00",
+  "http_status": 200,
+  "path": "NESN.SW.json",
+  "sha256": "668ae6f6fc2d33860483673f54c83e75ff39dbbaa888cf85870b4366ab88a72d",
+  "status": "DOWNLOADED",
+  "currency": "CHF",
+  "exchange_timezone": "Europe/Zurich",
+  "rows": 6873
+}

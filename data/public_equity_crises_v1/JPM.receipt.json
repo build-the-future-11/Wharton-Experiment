@@ -1,0 +1,13 @@
+{
+  "symbol": "JPM",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPM?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:21:50.484815+00:00",
+  "http_status": 200,
+  "path": "JPM.json",
+  "sha256": "d779572ce6b9de24a62a1ce4b7314a65555bb0434ab2af621d918bf47af910d6",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6793
+}

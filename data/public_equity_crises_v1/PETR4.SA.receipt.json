@@ -1,0 +1,13 @@
+{
+  "symbol": "PETR4.SA",
+  "market": "Brazil",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PETR4.SA?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:35.605772+00:00",
+  "http_status": 200,
+  "path": "PETR4.SA.json",
+  "sha256": "fcbee71f277c918b6731a4290cd1a75f3cea58671adc5c921bfd00441a47ecde",
+  "status": "DOWNLOADED",
+  "currency": "BRL",
+  "exchange_timezone": "America/Sao_Paulo",
+  "rows": 6278
+}

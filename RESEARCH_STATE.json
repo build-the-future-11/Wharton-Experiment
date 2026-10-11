@@ -3,7 +3,7 @@
   "version": "0.1.1-runtime-gated",
   "created": "2026-10-10",
   "updated": "2026-10-11",
-  "phase": "global_crisis_execution_requested_blocked_on_data_and_execution_scope",
+  "phase": "public_crisis_sample_downloaded_execution_waiting_for_resources",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -12,6 +12,16 @@
     "market_cells_started": 0,
     "required_input": "Historical market export or accessible provider including inactive securities, terminal outcomes, corporate actions, timestamps, historical membership and FX",
     "required_implementation": "Explicit terminal-loss treatment, named-date fold orchestration, global portfolio accounting and measured scalable execution"
+  },
+  "public_crisis_study": {
+    "status": "PUBLIC_DATA_ACQUIRED_EXECUTION_RESOURCE_BLOCKED",
+    "scope": "Retrospective public sample of 24 currently listed stocks across 12 listing markets; worldwide completeness is not claimed",
+    "receipt": "research/public_equity_intake_2026-10-11.json",
+    "configuration": "configs/public_equity_crises.json",
+    "data_manifest": "data/public_equity_crises_v1/manifest.json",
+    "market_cells_completed": 0,
+    "new_runtime_tests": "Six authored; pending resource admission",
+    "canonical_market_admission": false
   },
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
@@ -45,7 +55,8 @@
     "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
     "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
     "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result",
-    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request"
+    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request",
+    "Following the user's public-only access clarification, treat the 24-stock public crisis study as exploratory retrospective evidence with explicit survivor/revision/timing limits and separate local-currency ledgers"
   ],
   "failures": [
     {
@@ -131,6 +142,10 @@
     {
       "date": "2026-10-11",
       "event": "User requested all-world equity backtests, especially 2008. Rechecked missing canonical data and provider environment access, inspected terminal-loss, split and global-ledger limitations, verified historical recession announcement dates and candidate provider scope, and recorded proposed crisis windows and exact blockers. No new market cells ran and no protected outcomes were accessed. Receipt: research/global_equity_crisis_readiness_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User clarified public/free access only. Predeclared a separate retrospective 24-stock, 12-market crisis study, downloaded all 24 histories with 158,760 daily observations and verified source hashes. Added dated monthly folds, causal input gaps, coverage receipts, local-stock cost accounting and six authored tests. Static checks passed; resource admission stopped execution before model import. Canonical scientific status and protected boundary are unchanged."
     }
   ],
   "prior_reported_evidence": [
@@ -203,7 +218,8 @@
     "runtime_test_result": "163 passed in 8.64 seconds with warnings treated as errors",
     "successor_test_results": "RE-JEPA v0.3: 67 passed in 5.23 seconds; RENG-JEPA v0.1: 45 passed in 5.23 seconds; warnings treated as errors",
     "package_build": "PASS for FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
-    "market_data_downloaded": false,
+    "market_data_downloaded": true,
+    "market_data_download_scope": "Public retrospective 24-stock histories; not the canonical point-in-time global panel",
     "engineering_model_runs_executed": true,
     "engineering_cells_completed": 10,
     "market_model_or_portfolio_runs_executed": false,

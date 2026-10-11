@@ -1,0 +1,69 @@
+{
+  "study_id": "PUBLIC-EQUITY-CRISES-V1",
+  "date": "2026-10-11",
+  "authorization": "User requested global crisis backtests and clarified that only public/free data access is available.",
+  "status": "PUBLIC_DATA_ACQUIRED_EXECUTION_RESOURCE_BLOCKED",
+  "canonical_scientific_status": "NOT_EVALUATED",
+  "full_worldwide_request_completed": false,
+  "scope": "Exploratory retrospective survivor sample, not all historical worldwide stocks",
+  "acquisition": {
+    "manifest": "data/public_equity_crises_v1/manifest.json",
+    "request": "data/public_equity_crises_v1/request.json",
+    "successful_downloads": 24,
+    "failed_downloads": 0,
+    "source_rows": 158760,
+    "listing_markets": 12,
+    "quotation_currencies": 11,
+    "requested_start": "1998-01-01",
+    "requested_end_exclusive": "2025-01-01",
+    "protected_prices_requested": false,
+    "hashes_checked": 24,
+    "hash_mismatches": 0,
+    "provider_symbol_mismatches": 0,
+    "request_matches_declared_configuration": true,
+    "stocks_with_2008_source_bars": 24,
+    "source_bars_per_stock_in_2008_range": [245, 256],
+    "coverage_caveat": "First history differs by listing; 0700.HK begins 2004-06-16. Presence of 2008 bars does not itself satisfy the configured pre-crisis training/validation minimums. Per-fold coverage remains subject to runtime validation."
+  },
+  "implementation": {
+    "script": "scripts/public_equity_backtests.py",
+    "configuration": "configs/public_equity_crises.json",
+    "documentation": "docs/PUBLIC_EQUITY_BACKTESTS.md",
+    "test_file": "tests/test_public_equity_backtests.py",
+    "authored_tests": 6,
+    "runtime_test_status": "PENDING_RESOURCE_ADMISSION",
+    "bounded_resource_wait": "600-second admission wait exhausted without a pass; the queued pytest command did not start and no background wait remains",
+    "source_lint": "PASS",
+    "static_ast_and_json": "PASS",
+    "canonical_model_or_admission_rules_changed": false,
+    "changes": [
+      "Immutable per-symbol public download receipts and checksums",
+      "Distinct retrospective monthly research adapter with a blind input month and disclosed timing assumptions",
+      "Six dated folds with training/validation label-maturity purging",
+      "Complete per-fold stock coverage checks and explicit exclusions",
+      "FREM, no_memory, ridge and xgboost comparison under a 24-cell total cap",
+      "Local-currency per-stock hypothetical long/cash ledgers with self-financing round-trip costs",
+      "Complete-row paired monthly bootstrap and retained failures"
+    ]
+  },
+  "attempt": {
+    "path": "outputs/public_equity_crises_v1_admission_20261011/failure.json",
+    "status": "BLOCKED_BEFORE_MODEL_IMPORT",
+    "resource_samples_free_plus_speculative_mib": [177.5, 183.046875, 155.34375],
+    "resource_samples_pageouts": [657065, 657066, 657069],
+    "required_floor_mib": 512,
+    "model_cells_started": 0,
+    "model_cells_completed": 0,
+    "interpretation": "The admission guard ran; model imports, fitting and evaluation did not. No market performance metrics exist for this request."
+  },
+  "retained_engineering_findings": [
+    "Initial lint found broad exception handling and a deprecated regex alias; both were repaired before tests or fitting.",
+    "Runtime tests were not started by the first two guarded checks because headroom failed the same unchanged 512 MiB admission floor."
+  ],
+  "remaining_requirements": [
+    "Stable memory headroom before running the six new tests and any model fit",
+    "A passing runtime test receipt before treating the new adapter as verified",
+    "Actual complete campaign receipts before reporting backtest results",
+    "Historical global membership and terminal outcomes plus a default-aware model and global ledger for the original all-world claim"
+  ]
+}

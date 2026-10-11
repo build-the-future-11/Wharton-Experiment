@@ -1,0 +1,13 @@
+{
+  "symbol": "SAP.DE",
+  "market": "Germany",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/SAP.DE?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:21:58.554655+00:00",
+  "http_status": 200,
+  "path": "SAP.DE.json",
+  "sha256": "5f766bee33e548ad3fdb32bce357ee4d5529388edea39de8ae9fd1584e4c08f8",
+  "status": "DOWNLOADED",
+  "currency": "EUR",
+  "exchange_timezone": "Europe/Berlin",
+  "rows": 6843
+}

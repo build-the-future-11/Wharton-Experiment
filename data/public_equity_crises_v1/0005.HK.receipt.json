@@ -1,0 +1,13 @@
+{
+  "symbol": "0005.HK",
+  "market": "Hong Kong",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/0005.HK?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:16.062776+00:00",
+  "http_status": 200,
+  "path": "0005.HK.json",
+  "sha256": "39eb0da01dd74e3a08833423ff10827a98a6311c33946dd455ce2b15d1f0948d",
+  "status": "DOWNLOADED",
+  "currency": "HKD",
+  "exchange_timezone": "Asia/Hong_Kong",
+  "rows": 6239
+}

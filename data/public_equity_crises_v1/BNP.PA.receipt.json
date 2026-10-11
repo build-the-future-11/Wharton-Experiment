@@ -1,0 +1,13 @@
+{
+  "symbol": "BNP.PA",
+  "market": "France",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/BNP.PA?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:07.954222+00:00",
+  "http_status": 200,
+  "path": "BNP.PA.json",
+  "sha256": "f46b6a41664782f853fe005084d81263e77e56dd98e985c537de46a0031e6ae8",
+  "status": "DOWNLOADED",
+  "currency": "EUR",
+  "exchange_timezone": "Europe/Paris",
+  "rows": 6948
+}

@@ -1,0 +1,13 @@
+{
+  "symbol": "RY.TO",
+  "market": "Canada",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/RY.TO?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:27.632336+00:00",
+  "http_status": 200,
+  "path": "RY.TO.json",
+  "sha256": "e632798ac3b03cf6234cec844ced5124d5a385a096ecc3783f73e5b54904d773",
+  "status": "DOWNLOADED",
+  "currency": "CAD",
+  "exchange_timezone": "America/Toronto",
+  "rows": 6846
+}

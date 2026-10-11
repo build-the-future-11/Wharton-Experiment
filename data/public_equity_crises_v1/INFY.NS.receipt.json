@@ -1,0 +1,13 @@
+{
+  "symbol": "INFY.NS",
+  "market": "India",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/INFY.NS?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:20.166310+00:00",
+  "http_status": 200,
+  "path": "INFY.NS.json",
+  "sha256": "7ad265f319f0e5d33f0cc0bcbb16f47bba20273f76b686966a75614c4e68124a",
+  "status": "DOWNLOADED",
+  "currency": "INR",
+  "exchange_timezone": "Asia/Kolkata",
+  "rows": 6768
+}

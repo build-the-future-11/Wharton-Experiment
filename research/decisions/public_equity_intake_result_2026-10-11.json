@@ -1,0 +1,11 @@
+{
+  "decision_id": "PUBLIC-EQUITY-CRISES-V1-INTAKE-RESULT",
+  "scope": "Public-data acquisition and crisis-run preparation",
+  "observation": "All 24 named stock histories downloaded, yielding 158760 daily observations across 12 listing markets and 11 currencies. All source hashes, provider symbols and the immutable request match. Available host memory repeatedly failed the unchanged 512 MiB floor and pageouts increased.",
+  "hypothesized_cause": "The public source is accessible for this declared retrospective sample, while competing host workloads prevent resource admission for the new runtime tests and model campaign.",
+  "decision": "Retain all raw responses, source receipts, the prospective configuration, causal/accounting tests and the explicit pre-import resource failure. Keep the new runner marked runtime-unverified until its tests execute, and keep all backtest counts at zero until model receipts exist.",
+  "predicted_effect": "When stable headroom becomes available, the already downloaded sample and declared study can be tested and executed without repeating provider discovery or changing the scientific claim.",
+  "discriminating_experiment": "After three stable admission samples, pass tests/test_public_equity_backtests.py, then execute the declared 24-cell campaign in a new output directory and preserve every result and failure.",
+  "result": "PUBLIC_DATA_ACQUIRED_EXECUTION_RESOURCE_BLOCKED. Zero market cells started. Full worldwide coverage remains unresolved; the downloaded sample has explicit survivor, revision and local-currency limitations.",
+  "status": "ACQUISITION_COMPLETE_BACKTESTS_NOT_EXECUTED"
+}

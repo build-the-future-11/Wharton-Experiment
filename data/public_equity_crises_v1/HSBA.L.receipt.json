@@ -1,0 +1,13 @@
+{
+  "symbol": "HSBA.L",
+  "market": "UK",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HSBA.L?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:21:54.023953+00:00",
+  "http_status": 200,
+  "path": "HSBA.L.json",
+  "sha256": "c68e4e3a1428eaf697873a1223da9bdc6a5ee6584c40c494d1f1207fbba876cd",
+  "status": "DOWNLOADED",
+  "currency": "GBp",
+  "exchange_timezone": "Europe/London",
+  "rows": 6887
+}

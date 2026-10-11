@@ -1,0 +1,13 @@
+{
+  "symbol": "RELIANCE.NS",
+  "market": "India",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/RELIANCE.NS?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:18.496404+00:00",
+  "http_status": 200,
+  "path": "RELIANCE.NS.json",
+  "sha256": "af22da86f3601880070cfce872dbad51761d1e97ae68321ce64e03e50ec55da9",
+  "status": "DOWNLOADED",
+  "currency": "INR",
+  "exchange_timezone": "Asia/Kolkata",
+  "rows": 6768
+}

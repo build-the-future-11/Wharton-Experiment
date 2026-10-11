@@ -1,0 +1,11 @@
+{
+  "decision_id": "PUBLIC-EQUITY-CRISES-V1-DECLARATION",
+  "scope": "Public-only exploratory real-price backtests; a limited step toward the requested global crisis study",
+  "observation": "The user has only public/free data access. A read-only Yahoo endpoint probe returned pre-2008 stock history. Canonical point-in-time global membership and delisting data remain absent.",
+  "hypothesized_cause": "A separately disclosed retrospective sample can test the implemented model on actual historical prices while preserving the limitations of public revised survivor data.",
+  "decision": "Predeclare 24 named stocks across 12 listing markets, six monthly crisis/recovery windows, four models and seed 11 in configs/public_equity_crises.json. Use a distinct public research-window adapter and local-currency hypothetical stock ledgers without altering canonical panel admission or claiming historical publication timestamps, all-world coverage or global portfolio performance.",
+  "predicted_effect": "The bounded 24-cell campaign will produce actual historical conditional forecast and local-stock simulation evidence, including the 2008 crisis, if data completeness and resource checks pass.",
+  "discriminating_experiment": "Use identical dated, maturity-purged training/validation/test rows for FREM, no_memory, ridge and xgboost. Keep every failed download, excluded coverage window, failed fit and unfavorable comparison. Use 12-month contexts with a blind month, five epochs, three-month bootstrap blocks and predeclared 10-bps-per-side hypothetical transaction costs.",
+  "result": "DECLARED_BEFORE_CAMPAIGN_ACQUISITION_AND_MODEL_OUTCOMES; implementation and causal tests must pass before fitting.",
+  "status": "EXPLORATORY_DECLARATION_NOT_CANONICAL_SCIENTIFIC_FREEZE"
+}

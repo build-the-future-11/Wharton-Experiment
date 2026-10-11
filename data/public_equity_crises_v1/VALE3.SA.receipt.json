@@ -1,0 +1,13 @@
+{
+  "symbol": "VALE3.SA",
+  "market": "Brazil",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/VALE3.SA?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:37.394976+00:00",
+  "http_status": 200,
+  "path": "VALE3.SA.json",
+  "sha256": "df1794a173c949b882e81b639e5ddbf39d3518b31af352fd5455b68e35065efa",
+  "status": "DOWNLOADED",
+  "currency": "BRL",
+  "exchange_timezone": "America/Sao_Paulo",
+  "rows": 6278
+}

@@ -1,0 +1,13 @@
+{
+  "symbol": "NOVN.SW",
+  "market": "Switzerland",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/NOVN.SW?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:11.150517+00:00",
+  "http_status": 200,
+  "path": "NOVN.SW.json",
+  "sha256": "4aac929451e457b49c4e4a566a283359c2340fbb415b10385523997f745f33cb",
+  "status": "DOWNLOADED",
+  "currency": "CHF",
+  "exchange_timezone": "Europe/Zurich",
+  "rows": 6873
+}

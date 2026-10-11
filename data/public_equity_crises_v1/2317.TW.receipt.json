@@ -1,0 +1,13 @@
+{
+  "symbol": "2317.TW",
+  "market": "Taiwan",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/2317.TW?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:32.506807+00:00",
+  "http_status": 200,
+  "path": "2317.TW.json",
+  "sha256": "829d653e6b47ae699ae72002e5434d6f9e7ce96d550fc6ef3473c332dd2ad90a",
+  "status": "DOWNLOADED",
+  "currency": "TWD",
+  "exchange_timezone": "Asia/Taipei",
+  "rows": 6755
+}

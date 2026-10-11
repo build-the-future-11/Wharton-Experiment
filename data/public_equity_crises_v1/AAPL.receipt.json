@@ -1,0 +1,13 @@
+{
+  "symbol": "AAPL",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:21:48.522140+00:00",
+  "http_status": 200,
+  "path": "AAPL.json",
+  "sha256": "e66ed18688f400574ed67a2d04a3b82761398e7505a71695508acccdc078cd44",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6793
+}

@@ -1,0 +1,13 @@
+{
+  "symbol": "ENB.TO",
+  "market": "Canada",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ENB.TO?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:29.230320+00:00",
+  "http_status": 200,
+  "path": "ENB.TO.json",
+  "sha256": "8294da49c790c5541e24a7d3016fedd043c81339e7bfd621c3772cdc093c3821",
+  "status": "DOWNLOADED",
+  "currency": "CAD",
+  "exchange_timezone": "America/Toronto",
+  "rows": 6846
+}

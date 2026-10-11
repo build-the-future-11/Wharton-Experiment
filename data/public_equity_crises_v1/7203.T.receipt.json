@@ -1,0 +1,13 @@
+{
+  "symbol": "7203.T",
+  "market": "Japan",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/7203.T?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:12.806329+00:00",
+  "http_status": 200,
+  "path": "7203.T.json",
+  "sha256": "f884fc9c553ba9f1ec39bc2746d7d2b81a906f0832d15f6d79e28b56d9481d89",
+  "status": "DOWNLOADED",
+  "currency": "JPY",
+  "exchange_timezone": "Asia/Tokyo",
+  "rows": 6421
+}

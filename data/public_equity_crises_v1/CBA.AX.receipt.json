@@ -1,0 +1,13 @@
+{
+  "symbol": "CBA.AX",
+  "market": "Australia",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CBA.AX?period1=883612800&period2=1735689600&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T11:22:24.339011+00:00",
+  "http_status": 200,
+  "path": "CBA.AX.json",
+  "sha256": "4c5802997552f75afd04008a9423a87cc0ec3b0362ed2c297d5ed783b9005a56",
+  "status": "DOWNLOADED",
+  "currency": "AUD",
+  "exchange_timezone": "Australia/Sydney",
+  "rows": 6884
+}
