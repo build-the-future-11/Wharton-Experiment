@@ -1,0 +1,123 @@
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+  --> successors/frem_s9/data.py:86:23
+   |
+84 |     anchors = list(weeks.values())
+85 |     weekly = []
+86 |     for start, end in zip(anchors, anchors[1:]):
+   |                       ^^^
+87 |         if not 3*DAY <= stamp(end)-stamp(start) <= 10*DAY:
+88 |             raise ValueError('missing/invalid weekly interval')
+   |
+help: Replace `zip()` with `itertools.pairwise()`
+   |
+9  | from successors.frem_audit_v1.contracts import finite
+10 + import itertools
+11 |
+--------------------------------------------------------------------------------
+86 |     weekly = []
+   -     for start, end in zip(anchors, anchors[1:]):
+87 +     for start, end in itertools.pairwise(anchors):
+88 |         if not 3*DAY <= stamp(end)-stamp(start) <= 10*DAY:
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+  --> successors/frem_s9/run.py:23:64
+   |
+21 | def assess(samples):
+22 |     return (len(samples) == 3 and all(s['free_plus_speculative_mib'] >= 512 for s in samples)
+23 |             and all(a['pageouts'] == b['pageouts'] for a, b in zip(samples, samples[1:])))
+   |                                                                ^^^
+help: Replace `zip()` with `itertools.pairwise()`
+   |
+18 | from .experiment import report, study
+19 + import itertools
+20 |
+21 |
+22 | def assess(samples):
+23 |     return (len(samples) == 3 and all(s['free_plus_speculative_mib'] >= 512 for s in samples)
+   -             and all(a['pageouts'] == b['pageouts'] for a, b in zip(samples, samples[1:])))
+24 +             and all(a['pageouts'] == b['pageouts'] for a, b in itertools.pairwise(samples)))
+25 |
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+FURB167 [*] Use of regular expression alias `re.M`
+  --> successors/frem_s9/run.py:31:83
+   |
+29 |         raw = subprocess.check_output(['vm_stat'], text=True, timeout=5)
+30 |         size = int(re.search(r'page size of (\d+) bytes', raw).group(1))
+31 |         counts = {k: int(v) for k, v in re.findall(r'^([^:\n]+):\s*(\d+)\.', raw, re.M)}
+   |                                                                                   ^^^^
+32 |         samples.append({'free_plus_speculative_mib': (counts['Pages free']+counts['Pages speculative'])*size/2**20,
+33 |                         'pageouts': counts['Pageouts']})
+   |
+help: Replace with `re.MULTILINE`
+   |
+30 |         size = int(re.search(r'page size of (\d+) bytes', raw).group(1))
+   -         counts = {k: int(v) for k, v in re.findall(r'^([^:\n]+):\s*(\d+)\.', raw, re.M)}
+31 +         counts = {k: int(v) for k, v in re.findall(r'^([^:\n]+):\s*(\d+)\.', raw, re.MULTILINE)}
+32 |         samples.append({'free_plus_speculative_mib': (counts['Pages free']+counts['Pages speculative'])*size/2**20,
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/s9/test_s9.py:3:1
+   |
+ 1 |   """Constructed numerical/chronology cases, not empirical market results."""
+ 2 |
+ 3 | / import copy
+ 4 | | import json
+ 5 | | import math
+ 6 | | import tempfile
+ 7 | | import unittest
+ 8 | | from pathlib import Path
+ 9 | | from statistics import mean, pvariance
+10 | |
+11 | | from successors.frem_audit_v1.audit import digest
+12 | | from successors.frem_s9.data import ASSETS, DAY, date_of, outcome, prepare, split, stamp
+13 | | from successors.frem_s9.experiment import interval, percentile, report, study
+14 | | from successors.frem_s9.model import fit, predict, validate_checkpoint
+15 | | from successors.frem_s9.policy import ACTIONS, buy_hold, choose, moments, objective, round_trip, simulate, terminal_factor
+16 | | from successors.frem_s9.run import assess
+   | |_________________________________________^
+help: Organize imports
+   |
+14 | from successors.frem_s9.model import fit, predict, validate_checkpoint
+   - from successors.frem_s9.policy import ACTIONS, buy_hold, choose, moments, objective, round_trip, simulate, terminal_factor
+15 + from successors.frem_s9.policy import (
+16 +     ACTIONS,
+17 +     buy_hold,
+18 +     choose,
+19 +     moments,
+20 +     objective,
+21 +     round_trip,
+22 +     simulate,
+23 +     terminal_factor,
+24 + )
+25 | from successors.frem_s9.run import assess
+   |
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+  --> tests/s9/test_s9.py:79:64
+   |
+77 |         train, evaluation = split(rows, cutoff, rows[-1]['origin'], minimum_evaluation=4)
+78 |         self.assertTrue(all(r['available'] < cutoff for r in train))
+79 |         self.assertTrue(all(a['end'] == b['start'] for a, b in zip(evaluation, evaluation[1:])))
+   |                                                                ^^^
+80 |         self.assertEqual(evaluation[0]['index'], 80)
+   |
+help: Replace `zip()` with `itertools.pairwise()`
+   |
+16 | from successors.frem_s9.run import assess
+17 + import itertools
+18 |
+--------------------------------------------------------------------------------
+79 |         self.assertTrue(all(r['available'] < cutoff for r in train))
+   -         self.assertTrue(all(a['end'] == b['start'] for a, b in zip(evaluation, evaluation[1:])))
+80 +         self.assertTrue(all(a['end'] == b['start'] for a, b in itertools.pairwise(evaluation)))
+81 |         self.assertEqual(evaluation[0]['index'], 80)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 5 errors.
+[*] 2 fixable with `--fix` (3 unsafe fixes available with `--fix --unsafe-fixes`).

@@ -1,0 +1,21 @@
+{
+  "status": "TARGET_OBSERVED_INCOMPATIBLE",
+  "cpu_contract": {
+    "python_major_minor": "3.12",
+    "numpy": "2.5.4",
+    "precision": "float64",
+    "threads": 1
+  },
+  "actual_kaggle_python": "3.13.15",
+  "actual_kaggle_numpy": "2.1.3",
+  "actual_kaggle_cpu_ram": null,
+  "actual_assigned_gpu": null,
+  "dependency_changes_this_task": false,
+  "installation_policy": "Inspect target first; no blind installation or upgrade. Use exact existing lock hashes in an isolated CPU environment only after compatibility review.",
+  "actual_kaggle_torch_metadata": "2.11.0+cpu",
+  "actual_kaggle_system": "Linux",
+  "actual_kaggle_machine": "x86_64",
+  "runtime_numerical_imports": false,
+  "host_admission": "NOT_RUN_PYTHON_INCOMPATIBLE",
+  "evidence": "observations/CPU_PROBE_RESULT.json"
+}

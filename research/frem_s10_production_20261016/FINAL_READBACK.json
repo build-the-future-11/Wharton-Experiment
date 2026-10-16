@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "SOURCE_ENVIRONMENT_HISTORY_AND_PRESERVATION_METADATA_ONLY",
+  "journal_records": 62,
+  "journal_head": "41c60309b5a2d0bde87d8dc70ad2d721799fce0da42a8f4d7a78b786fd52ca3f",
+  "code_identity": {
+    "path": "research/frem_s10_objects/11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696.json",
+    "sha256": "11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696"
+  },
+  "historical_references": 486,
+  "historical_unique_files": 482,
+  "old_repair_evidence_files": 211,
+  "old_repair_source_files": 79,
+  "mismatches": [],
+  "scientific_execution": false
+}

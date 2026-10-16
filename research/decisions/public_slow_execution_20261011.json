@@ -1,0 +1,12 @@
+{
+  "decision_id": "PUBLIC-SIX-WINDOW-SLOW-20261011",
+  "declared_at": "2026-10-11T14:35:57.434961+00:00",
+  "observation": "User explicitly requests remaining public experiments with FREM-S2 sequential slow mode and same memory limits. Original public matrix has zero completed cells.",
+  "decision": "Run all six originally declared folds and four methods with seed 11; one nice-10 worker at a time, one compute thread, batch size 32, sampled RSS ceiling 768 MiB. Retain five epochs, 300-second fitting ceiling and 43200-second campaign ceiling; worker wall ceiling 360 seconds. Preserve failed memory gate as a recorded deviation.",
+  "data_amendment": "Extend the recorded S2 entire-month all-zero-quote quarantine to this separate exploratory public campaign, before any fits; preserve strict original launcher behavior, raw quotes and failures. No filled price, holiday assertion or dismissal of terminal loss.",
+  "hypothesized_cause": "Monolithic training processes and large minibatches raise peak resource demand; known all-zero quote prevents the strict public adapter from building windows.",
+  "predicted_effect": "Bound per-process resources and avoid constructing returns across the unknown month without changing the original declared models, folds, seeds or outcomes. Batch size changes optimization and is explicitly not claimed equivalent.",
+  "discriminating_experiment": "Complete fixed 24-cell exploratory matrix; retain every cell and failure; no outcome-driven retry or selection. Integrity tests precede fits.",
+  "status": "DECLARED_BEFORE_FITS",
+  "protected_outcomes_accessed": false
+}

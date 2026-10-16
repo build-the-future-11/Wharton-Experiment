@@ -1,0 +1,13 @@
+test_cauchy_density_at_origin (tests.test_evidence_audit.EvidenceAuditTests.test_cauchy_density_at_origin) ... ok
+test_duplicate_prediction_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_duplicate_prediction_rejected) ... ok
+test_empty_evidence_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_empty_evidence_rejected) ... ok
+test_invalid_distribution_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_invalid_distribution_rejected) ... ok
+test_protected_or_unmatured_observations_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_protected_or_unmatured_observations_rejected) ... ok
+test_scale_jacobian (tests.test_evidence_audit.EvidenceAuditTests.test_scale_jacobian) ... ok
+test_unequal_asset_observation_counts (tests.test_evidence_audit.EvidenceAuditTests.test_unequal_asset_observation_counts) ... ok
+test_wrong_model_or_seed_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_wrong_model_or_seed_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

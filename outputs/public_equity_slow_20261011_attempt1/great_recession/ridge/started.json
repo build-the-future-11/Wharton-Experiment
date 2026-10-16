@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 114.546875,
+    "pageouts": 887169
+  },
+  "fold": "great_recession",
+  "model": "ridge"
+}

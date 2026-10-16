@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-15T18:20:26.055533+00:00",
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "Partial interrupted implementation and valid predecessor failures did not establish a viable S10 experiment or positive market signal.",
+  "hypothesized_cause": "Concrete numerical, identity, event-ownership, lifecycle, integration and evidence-scope defects; empirical signal remains unknown.",
+  "change": "Isolated generated-data implementation and repair of causal forecasts, policy/benchmarks,192-cell replay,persistence/readback,paired inference,pilot isolation,supervisor and structural declarations; prospective CL15/CL16 retained.",
+  "predicted_effect": "Fail closed on tested malformed evidence, preserve causal/accounting identities and enable traceable bounded experiments; no predicted profit or guaranteed signal.",
+  "discriminating_experiment": "Independent constructed references, chronology/corruption/failure cases, actual small192-cell generated replay/readback, separate real-kernel bridge and scoped pilot, strict quality and clean offline wheel verification.",
+  "result": "GENERATED_ENGINEERING_VERIFIED_SCIENTIFIC_EXECUTION_BLOCKED",
+  "tests_passed": 274,
+  "receipt": "research/frem_s10_repair_20261015/RECEIPT.json",
+  "receipt_sha256": "8a650b4588f76a51badf82cd6eb2eadbdbd0b5ed059b82ba0848578e0338d001",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "market_policy_replays": 0,
+  "protected_access": false,
+  "new_scientific_freeze": false,
+  "primary_thresholds_changed": false,
+  "history_preserved": true,
+  "scientific_terminal_result_required_before_research_complete": true,
+  "design_addenda": [
+    "research/frem_s10_repair_20261015/DESIGN_ADDENDUM_CL15.md",
+    "research/frem_s10_repair_20261015/DESIGN_ADDENDUM_CL16.md"
+  ]
+}

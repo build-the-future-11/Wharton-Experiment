@@ -1,0 +1,11 @@
+{
+  "decision_id": "FREM-PORTFOLIO-V1-20261012",
+  "observation": "Separate active chat executed S4; this work must not edit its frozen source or duplicate fits. User clarified higher end values and Laura case.",
+  "change": "Add isolated standard-library portfolio/accounting successor and complete all declared net-wealth comparisons using saved forecasts.",
+  "hypothesis": "Risk-limited active overlay may improve ending wealth; zero-return scenario already rules out a universal6% floor.",
+  "falsifier": "Any finite primary case below6% refutes requested all-tested-case target; mixed/negative results preserved.",
+  "specification": "successors/frem_portfolio_v1/specification.json",
+  "status": "DECLARED_BEFORE_PORTFOLIO_OUTCOMES",
+  "external_framework_source": "not uniquely identified",
+  "protected_outcomes_accessed": false
+}

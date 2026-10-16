@@ -1,0 +1,308 @@
+Act as the lead researcher, senior research engineer, and reproducibility
+reviewer for the repository currently open in this workspace.
+
+MISSION
+Turn this project into its strongest coherent, correctly implemented,
+well-tested version, ready for a tightly budgeted Kaggle GPU campaign.
+
+Do the implementation work. Do not stop at an audit, recommendations,
+documentation, placeholder scripts, or a checklist of future work.
+
+“Strongest version” means scientifically justified improvements, correct
+mathematics, functioning features, maintainable code, efficient execution,
+and trustworthy evidence. It does not mean adding every possible component
+or claiming superiority without experiments.
+
+CONTEXT
+My immediate projects are APEN and FIM. Later I will use this workflow for
+my Wharton investment model and another quantitative research model.
+
+My development machine has 16 GB RAM. Keep local work lightweight.
+Large training runs belong on Kaggle, not my laptop.
+
+This prompt authorizes repository engineering and bounded local validation.
+It does NOT authorize consuming cloud GPU quota, purchasing compute,
+publishing research, or submitting anything externally.
+
+The follow-up campaign should preferably consume only 4–6 Kaggle quota
+hours when starting with 30 hours available. Design for that constraint,
+but do not make unmeasured runtime promises.
+
+BOUNDARIES
+- Work only in the selected project and its explicitly required dependencies.
+- Worldcastr is completely out of scope: no reads, changes, branches,
+  execution, deployments, or incidental traversal for this task.
+- Respect repository instructions and existing user changes.
+- Inspect git status before editing. Never reset, clean, force-push,
+  overwrite someone else's work, or rewrite history.
+- Do not push, merge, deploy, publish, or change external access settings.
+- Preserve historical code and results with their provenance. Do not erase
+  negative results or relabel old outputs as results from new code.
+- Never print secrets or include them in logs, notebooks, archives, or reports.
+- Do not create recurring jobs or external automations.
+- Use the currently configured coding environment economically; do not
+  launch paid model calls, large agent swarms, or model-training jobs.
+- Resolve ambiguity by inspection where possible. Ask only for genuinely
+  essential information that cannot be discovered.
+
+1. ESTABLISH THE ACTUAL PROJECT AND ITS SCIENTIFIC PURPOSE
+
+Inspect source, configuration, tests, recent relevant history, current
+entrypoints, data preparation, result artifacts, and research documentation.
+
+Determine:
+- The authoritative implementation and current source identity.
+- Whether this checkout is executable, historical, a mirror, or status-only.
+- The actual research question and claimed contribution.
+- What is implemented versus merely described.
+- Which results are historical, current-source, or not reproducible.
+- Which scripts are smoke tests despite names such as “full suite.”
+- The real default dataset sizes, epochs, seeds, horizons, and baselines.
+- Whether the relevant computations benefit from a GPU at all.
+
+Record the commit and dirty-tree state. Do not assume a repository name,
+README, “completed” label, or existing paper proves correctness.
+
+Briefly inspect the closest relevant primary papers or official reference
+implementations when access is available. Identify meaningful differences,
+missing controls, and unsupported novelty claims. Do not fabricate citations
+or spend the day on an unrelated literature survey.
+
+Timebox initial reconnaissance. Prioritize defects that would invalidate
+results, prevent execution, lose checkpoints, or waste compute.
+
+2. FIX THE REAL IMPLEMENTATION, NOT JUST THE PRESENTATION
+
+Trace the maintained path from raw data through preprocessing, training,
+validation, checkpoint selection, evaluation, and reported results.
+
+Repair applicable defects:
+- Incorrect shapes, axes, broadcasting, masking, normalization, units,
+  boundary conditions, loss reductions, and sample weighting.
+- Device and dtype mismatches, detached gradients, stale caches, accidental
+  graph retention, and unbounded CPU/GPU memory growth.
+- Future-target leakage, overlapping splits, train/test contamination,
+  invalid preprocessing statistics, or validation using test information.
+- Configuration flags that are ignored or silently replaced.
+- Broken checkpoints, unreliable resume paths, misleading success states,
+  fake fallback outputs, and swallowed exceptions.
+- NaN/Inf handling that conceals failure instead of recording it.
+- Baselines with broken training, unequal information, or unfair selection.
+- Unimplemented features presented as complete.
+
+Where an architectural improvement is justified, implement it as a named,
+tested variant with an explicit hypothesis and a corresponding ablation.
+Retain the previous implementation for comparison when appropriate.
+
+Separate correctness repairs from new research hypotheses. Do not pool
+results across materially different implementations.
+
+For APEN, investigate the applicable maintained paths for:
+- Causal salience and gating; current predictions must not access future
+  targets unavailable at inference.
+- Memory writes, resets, retrieval, and evaluation-time state.
+- Explicit zero-valued overrides versus missing configuration.
+- Forecast-horizon alignment and training/evaluation consistency.
+- Spectral losses, periodic boundaries, physical quantities, and metrics.
+- Parameter counts, compute budgets, and validation-selected baselines.
+
+For FIM, investigate:
+- Whether persistent memory actually persists where intended.
+- Whether memory resets prevent contamination between independent samples,
+  trajectories, splits, and evaluation runs.
+- Whether each memory, spectral, or geometry ablation truly changes the
+  corresponding computation.
+- Long-rollout stability, state initialization, gradient flow, and memory size.
+- Whether claimed component benefits are supported by current evidence.
+
+For a finance/Wharton/quant project, investigate:
+- Point-in-time features and data availability timestamps.
+- Look-ahead leakage, survivorship bias, corporate actions, and missing data.
+- Walk-forward evaluation and appropriate treatment of overlapping labels.
+- Transaction costs, spreads, turnover, constraints, and execution assumptions.
+- Comparisons against simple, investable reference strategies.
+- Whether CPU execution is faster or more economical than forcing GPU use.
+Do not connect to a broker or place trades.
+
+Apply only the relevant domain checks. Do not copy irrelevant machinery
+into every repository.
+
+3. CREATE ONE MAINTAINED EXECUTION PATH
+
+Consolidate or repair the existing runner rather than adding a parallel
+framework nobody will maintain.
+
+Provide working commands for:
+- Environment/data preflight.
+- A tiny CPU correctness test.
+- A tiny CUDA training/evaluation test.
+- One fully specified experiment.
+- A finite campaign described by a manifest.
+- Checkpoint resume.
+- Evaluation from a frozen checkpoint.
+- Analysis and artifact export.
+
+Use the project's existing command conventions where possible.
+
+Requirements:
+- Explicit device selection. A requested CUDA run must fail clearly when
+  CUDA is unavailable, not silently fall back to CPU.
+- Explicit seeds, batch size, training budget, dataset identity, split,
+  output location, precision, model variant, and evaluation protocol.
+- Safe paths independent of my laptop's directory structure.
+- Unique run directories and overwrite protection.
+- Dry-run output that enumerates every planned experiment.
+- Nonzero exit codes on failure.
+- Clear separation between smoke, development, and confirmatory campaigns.
+- No training on module import.
+- No hidden unlimited sweeps or background child processes.
+
+Preserve the working environment. Inspect installed PyTorch/CUDA versions
+before changing dependencies. Do not blindly upgrade everything or replace
+a CUDA build with a CPU-only package.
+
+4. IMPLEMENT SAFE, MEASURABLE PERFORMANCE IMPROVEMENTS
+
+Optimize the actual bottlenecks, not fashionable settings.
+
+Investigate vectorization, repeated data generation, redundant preprocessing,
+tensor transfers, batching, dataloader behavior, logging overhead, and
+unnecessary allocations.
+
+Cache data only with keys that include generation parameters, split identity,
+normalization, and relevant source/configuration hashes.
+
+Provide conservative defaults for CPU workers and thread counts. Do not
+assume more workers, larger batches, compilation, or multiprocessing help.
+
+Mixed precision:
+- Keep a correct reference-precision path.
+- Enable AMP only through an explicit tested configuration.
+- Check supported dtypes and actual hardware.
+- Keep numerically sensitive operations at suitable precision.
+- Test losses, gradients, rollout stability, and validation metrics.
+- Do not silently change scientific settings to obtain better throughput.
+
+Gradient accumulation:
+- Handle scaling and a partial final accumulation window correctly.
+- Report the effective batch size.
+- Do not claim equivalence where stateful behavior changes the computation.
+
+Activation checkpointing:
+- Use it only after measuring the memory/runtime tradeoff.
+- Do not recompute stateful memory writes or other side effects without
+  proving that recomputation preserves semantics.
+
+Compilation and multi-GPU:
+- Off by default unless measured total campaign time improves.
+- No unverified distributed-training claims.
+- Independent per-GPU jobs are optional only after resource and correctness
+  checks; they must not share mutable model state or output paths.
+
+Do not run lengthy GPU profiling under this prompt.
+
+5. MAKE INTERRUPTION AND RESUMPTION REAL
+
+Implement atomic, versioned checkpoints containing all state needed for the
+declared resume guarantee:
+- Model parameters and relevant non-parameter memory/state.
+- Optimizer, scheduler, and AMP scaler where applicable.
+- Epoch, global step, best-validation criterion, and training counters.
+- Python, NumPy, CPU, and CUDA random-generator state as appropriate.
+- Data sampler/generator state or a documented deterministic restart boundary.
+- Configuration, source identity, data identity, and checkpoint schema.
+
+Use a safe serialization format and trusted-loading policy. Do not introduce
+unsafe arbitrary checkpoint loading merely to simplify RNG serialization.
+
+Keep distinct latest and best checkpoints. Save at safe boundaries and at a
+configurable time interval suitable for interrupted sessions.
+
+Test interruption and resume against an uninterrupted short run. Verify
+parameter/state continuity and metrics within a stated tolerance.
+
+If exact mid-epoch continuation is unsupported, document the actual supported
+boundary. Do not describe warm-starting from weights as full resumption.
+
+For campaigns, reuse a completed cell only after validating its source,
+configuration, data identity, and required artifacts. A filename's existence
+is not sufficient evidence of completion.
+
+6. CONNECT REAL LIVE LOGGING
+
+Implement lightweight logging in the actual training/evaluation loops:
+- Unbuffered, timestamped console output.
+- Durable local JSONL or equivalent structured metrics.
+- Per-run logs and a campaign status file.
+- Optional TensorBoard.
+- Optional W&B with private, explicitly authorized configuration.
+- No mandatory account or network connection for core execution.
+
+Log applicable fields:
+run ID, benchmark, model, seed, phase, epoch/global step, learning rate,
+training loss, validation metric, elapsed time, throughput, memory usage,
+checkpoint path, and failure state.
+
+Estimate ETA only after sufficient measurements and label it as an estimate.
+
+The dashboard must show genuine logged metrics. Do not fabricate placeholder
+curves, progress percentages, or simulated experiment outcomes.
+
+Tracking failure must not kill training or discard local logs. Credentials
+must come from an approved secret store or environment, never source files.
+
+7. TEST AND CLEAN WITHOUT DESTROYING EVIDENCE
+
+Run focused tests for:
+- Forward/backward correctness and finite gradients.
+- Device/dtype behavior.
+- Causal inputs and split integrity.
+- Stateful memory reset and persistence.
+- Ablation semantics.
+- Checkpoint/resume.
+- Metric aggregation.
+- Invalid configuration and failure propagation.
+- Campaign reuse/overwrite protection.
+- Budget guard behavior using simulated time.
+- Log and artifact generation.
+
+A test skipped because CUDA is unavailable is not a GPU pass.
+
+Remove or archive genuinely obsolete duplicate entrypoints only after tracing
+references. Preserve historical evidence and explain migrations. Do not
+delete unfamiliar files, existing results, or user work.
+
+Update documentation to reflect commands that actually exist and were
+checked. Do not hide broken tests by deleting them or weakening assertions.
+
+8. HAND OFF A SPECIFIC, HONEST READINESS PACKAGE
+
+Reuse existing files where possible. Produce at least:
+- Updated implementation and targeted regression tests.
+- Compatible environment specification.
+- Maintained execution commands.
+- A preliminary experiment manifest.
+- GPU readiness report.
+- A concise change/evidence ledger.
+- A handoff document for the Kaggle campaign.
+
+The readiness report must separate:
+A. Engineering changes completed and tested.
+B. CPU checks actually executed.
+C. GPU checks actually executed, if any.
+D. Remaining blockers and unverified assumptions.
+E. Historical results that must not be reused as current confirmation.
+
+Use one accurate status:
+- BLOCKED.
+- READY_FOR_KAGGLE_PREFLIGHT.
+- GPU_PREFLIGHT_VERIFIED, only with actual execution evidence.
+
+Do not call the project “ultimate,” “publication-ready,” “fully validated,”
+or “better than baselines” merely because engineering work is finished.
+
+Conclude with the exact working launch path, changed files, test outcomes,
+remaining blockers, and the smallest next GPU validation step.
+
+Begin inspecting and implementing now. Deliver functioning improvements,
+not another broad plan.

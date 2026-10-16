@@ -1,0 +1,15 @@
+{
+  "label": "omit_cross_expert_terms",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-c",
+    "import pathlib,sys,frem_s10,pytest; assert pathlib.Path(frem_s10.__file__).resolve().is_relative_to(pathlib.Path.cwd()/'src'); raise SystemExit(pytest.main(sys.argv[1:]))",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+  ],
+  "returncode": 1,
+  "scope": "GENERATED_ENGINEERING"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PRESERVED_FOR_MERGE",
+  "reason": "Existing heartbeat recorded source drift while engineering was active",
+  "changed_keys": [
+    "phase",
+    "decisions",
+    "failures",
+    "history",
+    "s10_production_20261016",
+    "s10_source_rejection_20261016T063632"
+  ],
+  "record": {
+    "status": "FIXED_CANDIDATE_SOURCE_DRIFT_REVIEW_REQUIRED",
+    "scheduled_at": "2026-10-16T06:36:32.319Z",
+    "controller_exit_code": 2,
+    "controller_status": "REJECTED_UNCONSUMED",
+    "reason": "complete current code inventory differs from verified snapshot",
+    "report": "research/frem_s10_production_20261016/execution/review-20261016T063632/REPORT.md",
+    "receipt": "research/frem_s10_production_20261016/execution/review-20261016T063632/RECEIPT.json",
+    "source_comparison": "research/frem_s10_production_20261016/execution/review-20261016T063632/SOURCE_DRIFT.json",
+    "rejection": "research/frem_s10_production_20261016/execution/heartbeat-20261016T063632.json",
+    "observed_source_file_count": 132,
+    "added_files": 14,
+    "modified_files": 7,
+    "missing_files": 0,
+    "preserved_original_candidate_files": 118,
+    "original_candidate_matches_frozen_manifest": true,
+    "comparison_observed_at": "2026-10-16T06:40:36.383918+00:00",
+    "comparison_is_not_exact_rejection_time_reconstruction": true,
+    "automation_status": "PAUSED",
+    "automatic_retry_permitted": false,
+    "controller_invocations_this_wakeup": 1,
+    "source_changed_by_this_heartbeat": false,
+    "scientific_attempt_consumed": false,
+    "protected_access": false,
+    "next_action": "Review ongoing portability work and establish a separate exact candidate, full verification and supported platform qualification before explicit resumption; do not silently update or reuse the original plan."
+  },
+  "snapshots": [
+    {
+      "path": "RESEARCH_STATE.json",
+      "sha256": "4a36a81fe632da71740929940950039609aa05741d1350943bd02bffc164af46",
+      "original_session_snapshot_is_prefix": null
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "sha256": "3deadfa3166c773dd65dda4e49ad5d4d82e6152422e600e04d3c669b62c2282d",
+      "original_session_snapshot_is_prefix": true
+    },
+    {
+      "path": "docs/STATIC_VERIFICATION.md",
+      "sha256": "148e37309a7c2a3b964fdd43f7a1bec672b65ef32cda18396f7e869858d3a527",
+      "original_session_snapshot_is_prefix": true
+    },
+    {
+      "path": "research/events.jsonl",
+      "sha256": "5cd00445978c76d37e677860f39f6ca1fef682de6679fa74c0cb1fa9b1fa5740",
+      "original_session_snapshot_is_prefix": true
+    }
+  ],
+  "initial_write_refused": true,
+  "initial_record_decision_exit_code": 2,
+  "initial_record_decision_reason": "Event file was not created after canonical guard refusal; journal unchanged by that invocation"
+}

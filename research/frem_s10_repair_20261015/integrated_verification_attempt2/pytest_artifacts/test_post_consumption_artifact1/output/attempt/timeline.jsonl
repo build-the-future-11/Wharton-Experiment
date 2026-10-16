@@ -1,0 +1,2 @@
+{"event":{"state":"PREFLIGHT","time":"2026-10-15T18:19:50.445812+00:00"},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}
+{"event":{"marker_sha256":"1fffa39687eeb5c6f3ffb1fd209c61cf8c6910542baf59f41efd0026b99d2d3f","state":"CONSUMED"},"previous":"6bee153255473ed261687a28cc1451251dfb3baae41677264c43bbbc2ba34046","sequence":1}

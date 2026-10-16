@@ -1,0 +1,13 @@
+{
+  "symbol": "PG",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:23.642797+00:00",
+  "http_status": 200,
+  "path": "PG.json",
+  "sha256": "e2781085b49a83d6519c2bfdfcf7c765c7a05b8c2aec8a8be6b8bbbd56a9289e",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

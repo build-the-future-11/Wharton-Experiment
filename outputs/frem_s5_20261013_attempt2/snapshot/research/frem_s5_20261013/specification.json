@@ -1,0 +1,121 @@
+{
+  "study": "FREM-S5-R1",
+  "status": "FROZEN_SPECIFICATION_BEFORE_S5_OUTCOMES",
+  "declared_at": "2026-10-13T14:03:56.716388+00:00",
+  "hypothesis": "Date-level observable forecast context predicts relative expert log loss better than context-free recent loss weighting.",
+  "material_difference": "Route distributions from a shared frozen expert pool; do not correct mean residuals.",
+  "scope": "Retained S3 public survivor-history development replay and generated mechanism tests. All market outcomes previously inspected. No fresh training, generalization or confirmation claim.",
+  "plan_deviation": {
+    "cause": "Current free/speculative memory below 512MiB; normal training gate retained.",
+    "pilot": "Execute standard-library low-memory retained-expert replay separately from proposed fresh-trained S5.",
+    "expert_difference": "Existing zero/ridge/FREM/no-JEPA distributions replace proposed adaptive-volatility/trend pool for this pilot only; no-JEPA is a strong matched control already present.",
+    "fold_difference": "Two existing complete folds, not three newly trained chronological folds.",
+    "unexecuted_full_plan": "Fresh four-expert training, new date coverage audit and precision-qualified outer folds, current-liability mandate evaluation, protected confirmation remain separate gates."
+  },
+  "experts": [
+    "zero",
+    "ridge",
+    "frem",
+    "no_jepa"
+  ],
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "folds": [
+    "fresh_2023",
+    "fresh_2024"
+  ],
+  "validation": "Each existing validation split: first chronological half warmup and context normalization; second half temperature selection. Complete later evaluation replay with strictly matured feedback only. No evaluation selection.",
+  "context": "Date aggregates of issued expert forecasts: mean(mu)/.05, log(mean(scale)/.05), population sd(mu)/.05. Center/unit from warmup only, unit floor .1, clip standardized values [-5,5]. No realized target enters context.",
+  "routing": {
+    "arms": [
+      "equal",
+      "recent",
+      "context",
+      "random",
+      "linear"
+    ],
+    "temperatures": [
+      0.5,
+      1.0
+    ],
+    "tie": "temperature1",
+    "memory": "60 matured decision dates, pooling assets by equal date/asset averaging; no per-asset pseudo-independent episodes",
+    "context_neighbors": 12,
+    "recent_dates": 24,
+    "age_half_life_days": 365.25,
+    "random": "Same count in fixed 182.625-day age buckets as context nearest set; seeded without labels",
+    "shrinkage": "ESS/(ESS+12) toward equal expert weights; weights positive sum1",
+    "linear": "Weighted ridge loss regression on intercept and standardized context; penalty .001 intercept and1 other coefficients; same recent24 dates and shrinkage",
+    "feedback": "An episode enters memory only when label maturity is strictly before prediction time; one aggregate update per date after all assets predicted.",
+    "likelihood": "Exact weighted Student-t mixture log score; no moment-matched Student density substitution",
+    "portfolio_moments": "Mixture log-return mean and total variance including between-expert variance; location ranking only, not expected simple return"
+  },
+  "generated": {
+    "families": [
+      "null",
+      "recurrence",
+      "abrupt",
+      "delayed"
+    ],
+    "seeds": [
+      101,
+      211,
+      307
+    ],
+    "dates": 240,
+    "score_last": 120,
+    "fixed_temperature": 1,
+    "gate": "Null context harm vs equal <=.01 nat and recurrence mean gain >0 vs equal,recent,random; otherwise stop market replay.",
+    "limits": "Prescribed known context signal, not financial evidence. All abrupt and delayed failures reported."
+  },
+  "economics": {
+    "initial_wealth": 100000,
+    "currency": "USD",
+    "cost_bps": [
+      10,
+      20,
+      40
+    ],
+    "cash_return": 0,
+    "candidate_policy": "Inherited fixed80% equal-weight anchor,20% positive risk-adjusted signal; no policy tuning; inherited2% aggregate no-trade band",
+    "benchmarks": [
+      "equal_weight",
+      "buy_hold",
+      "cash",
+      "volatility_managed",
+      "equal_router",
+      "recent_router",
+      "random_router",
+      "linear_router",
+      "each_expert"
+    ],
+    "volatility_managed": "Equal stock basket exposure min(1,.10/sqrt(12*mean(zero_expert_variance))); conservative marginal-vol proxy, no covariance credit.",
+    "primary": "Seed-ensemble context net ending wealth vs equal_weight at10bps, separately in both existing folds. Also require outperformance of buy_hold,recent,random,linear to describe a broad benchmark win.",
+    "stretch_target": "At least6% relative ending wealth vs both equal_weight and buy_hold in each fold at10bps over its original12/10-month horizon; not annualized.",
+    "cashflows": "No external cashflows in this public proxy replay; not Laura liability certification.",
+    "execution": "Retain blind month and monthly research coordinates; no actual fills or verified historical membership."
+  },
+  "statistics": {
+    "unit": "decision date, assets jointly retained; seed forecasts pooled, seeds not market replicates",
+    "intervals": "Paired circular blocks3 and6 months,2000 draws seed1901 on saved net wealth increments; insufficient length retained. Conditional policy path only.",
+    "support": "Descriptive pilot only, no confirmatory support or p-value selection. Report all controls/costs/folds; positive point estimates do not establish alpha.",
+    "predictive_practical_threshold_nats": 0.01
+  },
+  "budget": {
+    "base_fits": 0,
+    "market_cells": 6,
+    "router_configs_per_arm": 2,
+    "generated_cells": 12,
+    "worker_seconds": 300,
+    "rss_mib": 128,
+    "workers": 1,
+    "nice": 10,
+    "fresh_training": "At most36 proposed base cells and7200seconds, blocked unless original512MiB gate passes and a complete fresh-stage protocol exists."
+  },
+  "preservation": "No modification of S3/S4 results. Freeze source and input hashes before generated/market tests; stop on failures, retain all outputs. Do not retune after outcomes.",
+  "protected_access": false,
+  "novelty": "Unestablished; online/contextual expert weighting is prior art. Pilot tests usefulness, not novelty."
+}

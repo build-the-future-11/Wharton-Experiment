@@ -1,0 +1,35 @@
+........................................................................ [ 50%]
+...................................................................F..   [100%]
+=================================== FAILURES ===================================
+_________________ test_ny_open_dst_and_adapter_no_gap_bridging _________________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-9/test_ny_open_dst_and_adapter_n0')
+
+    def test_ny_open_dst_and_adapter_no_gap_bridging(tmp_path):
+        from datetime import date, timedelta
+    
+        assert market_open("2020-03-09") - market_open("2020-03-02") == 7 * 86400 - 3600
+        days = [date(2020, 1, 1) + timedelta(days=i) for i in range(40)]
+        days = [d for d in days if d.weekday() < 5]
+        for asset in ASSETS:
+            write(
+                tmp_path / f"{asset}.json",
+                {
+                    "rows": [
+                        {"timestamp": stamp(str(d)) + 14 * 3600, "open": 100 + i, "close": 100.5 + i}
+                        for i, d in enumerate(days)
+                    ],
+                    "dividends": {},
+                },
+            )
+        parts, exclusions = build_segment(tmp_path, fresh=True)
+        p = parts["evaluation"]
+        dates = np.unique(p["origin_times"])
+>       assert exclusions and len(dates) >= 3
+E       AssertionError: assert ([{'reason': 'warmup_or_train_target_purge', 'start': '2020-01-01'}, {'reason': 'warmup_or_train_target_purge', 'start': '2020-01-06'}, {'reason': 'warmup_or_train_target_purge', 'start': '2020-01-13'}] and 2 >= 3)
+E        +  where 2 = len(array([1.5795306e+09, 1.5801354e+09]))
+
+tests/s8/test_s8_successor.py:152: AssertionError
+=========================== short test summary info ============================
+FAILED tests/s8/test_s8_successor.py::test_ny_open_dst_and_adapter_no_gap_bridging
+1 failed, 141 passed in 12.57s

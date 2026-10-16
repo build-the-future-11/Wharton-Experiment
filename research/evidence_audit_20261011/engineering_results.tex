@@ -1,0 +1,15 @@
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule Model & NLL & MAE & Direction accuracy & Fit seconds \\
+\midrule
+frem & -0.9014 & 0.0539 & 0.4701 & 6.23 \\
+no\_memory & -1.4663 & 0.0418 & 0.5408 & 7.13 \\
+ridge & -1.6915 & 0.0335 & 0.4457 & 2.71 \\
+xgboost & -1.7904 & 0.0307 & 0.4946 & 0.74 \\
+\bottomrule
+\end{tabular}
+\caption{Retained synthetic integration run only: four generated assets, 92 dates, 368 paired predictions per model, seed 11, two neural epochs. Lower NLL and MAE are better. Timings are the original single-run measurements, not efficiency evidence.}
+\label{tab:engineering}
+\end{table}
+The recomputed control-minus-FREM NLL difference is -0.564927 nats. The retained 95\% interval is [-1.132572, -0.002588], with centered-bootstrap two-sided $p=0.054726$. The original analysis used 200 resamples and 20-date blocks; it is unchanged by this audit.

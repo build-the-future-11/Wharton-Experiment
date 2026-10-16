@@ -1,0 +1,42 @@
+{
+  "as_of": "2026-10-13",
+  "case_source": "Full user-provided Laura case in conversation; normalized facts CASE_AND_POLICY.json; no claimed independent authentication of private case amendments",
+  "official_current_public_sources": [
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/faq/",
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/rules-roles/",
+    "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/"
+  ],
+  "official_current_participant_universe_acquired": false,
+  "official_old_lists": "2025-2026 ETF and Treasury PDFs located; not used to certify2026-2027eligibility",
+  "google_drive_connector": "Repeated authentication-required response even after accepted retry; no connector result set. Browser fallback performed.",
+  "google_drive_browser": {
+    "search": "Wharton",
+    "status": "Visible search results inspected; preparation document read; no current official instrument-list document in inspected results",
+    "document": "https://docs.google.com/document/d/1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U/edit",
+    "tabs_read": [
+      "ML Models",
+      "Registration",
+      "Notes"
+    ],
+    "result": "No current eligibility list or participant materials link found in these inspected tabs. Notes identify cash-flow linkage task. No private registration data copied into this report."
+  },
+  "gmail_search": "Targeted current-period Wharton/WInS searches returned no verified participant package. Exact sender whartonyouth@wharton.upenn.edu query returned zero. Not an exhaustive mailbox absence claim.",
+  "local_trading_guide": {
+    "path": "/Users/ryan/Downloads/2026_WGY_Trading Notes Analysis-FINAL.pdf",
+    "sha256": "72bbc4a90ba02dd17dcacc0bea4339fb261f6aa33483784a275d7b3083d05d52",
+    "pages_text_read": 2,
+    "pages_visually_reviewed": [
+      1,
+      2
+    ],
+    "render_warning": "pdftoppm and pdftotext report Invalid Font Weight; both rendered pages readable",
+    "findings": [
+      "Three notes must correspond to executed WInS trades and be copied exactly",
+      "Each reflection maximum100words",
+      "Reserve/projection/facility/fundraising work deferred to later report in this guide",
+      "No executed team trade receipts acquired"
+    ]
+  },
+  "external_writes_messages_or_orders": false,
+  "source_timestamp_boundary": "Public pages identify current2026-2027cycle; no historical publication timestamp invented. User case received2026-10-13. All market rate inputs remain explicit hypothetical assumptions."
+}

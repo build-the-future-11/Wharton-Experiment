@@ -1,0 +1,18 @@
+[
+  {
+    "path": "research/frem_s10_repair_20261015/final_verification_attempt2/dist/frem_s10-0.1.0-py3-none-any.whl",
+    "sha256": "f29dd32a4ff68cd4bd22dad4b4f4f36ebcf9b279c1606c4fbf62f6122cc4e187",
+    "members": 47,
+    "forbidden_members": [],
+    "source_mismatches": [],
+    "status": "PASS"
+  },
+  {
+    "path": "research/frem_s10_repair_20261015/final_verification_attempt2/dist/frem_s10-0.1.0.tar.gz",
+    "sha256": "2c975651963080d42fe1ef7dee1dee8221320b1aca1f049d2a0044fec600548c",
+    "members": 72,
+    "forbidden_members": [],
+    "source_mismatches": [],
+    "status": "PASS"
+  }
+]

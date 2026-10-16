@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "scripts.run_frem_rebuild",
+    "--output",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s2_development_20261011_attempt3",
+    "--worker",
+    "standardized_frem",
+    "--seed",
+    "29"
+  ],
+  "returncode": 0,
+  "termination": null,
+  "elapsed_seconds": 12.272072124993429,
+  "sampled_peak_rss_mib": 385.21875,
+  "rss_ceiling_mib": 768,
+  "wall_ceiling_seconds": 150,
+  "threads": 1,
+  "nice": 10,
+  "memory_snapshot_after": {
+    "available_mib": 563.421875,
+    "pageouts": 742813
+  }
+}

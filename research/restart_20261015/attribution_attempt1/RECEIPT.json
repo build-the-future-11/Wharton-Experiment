@@ -1,0 +1,11 @@
+{
+  "status": "FAILED",
+  "error": "expected '{'",
+  "exception": "ValueError",
+  "completed_at": "2026-10-15T14:08:43.715796+00:00",
+  "seconds": 0.08016991699696518,
+  "peak_rss_mib": 27.71875,
+  "market_fits": 0,
+  "new_policy_replays": 0,
+  "protected_access": false
+}

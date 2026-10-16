@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-15T13:58:04.324076+00:00",
+  "floor_mib": 512,
+  "samples": [
+    {
+      "available_mib": 130.09375,
+      "pageouts": 608922
+    },
+    {
+      "available_mib": 144.1875,
+      "pageouts": 608988
+    },
+    {
+      "available_mib": 109.359375,
+      "pageouts": 609002
+    }
+  ],
+  "admitted": false,
+  "model_imports": 0,
+  "market_fits": 0,
+  "scope": "Normal scientific-compute admission. Bounded standard-library saved-artifact analysis continues."
+}

@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frem-s10"
+version = "0.1.0"
+description = "Finite-scenario contextual stacking research with explicit evidence boundaries"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==2.5.4"]
+readme = "README.md"
+
+[project.scripts]
+s10-research = "frem_s10.cli:main"
+
+[dependency-groups]
+quality = ["pytest==8.4.2", "ruff==0.17.0", "mypy>=1.19,<2", "hypothesis>=6,<7", "coverage>=7,<8"]
+build = ["build==1.6.1", "setuptools==84.0.0", "wheel==0.48.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+frem_s10 = ["py.typed", "science.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers -ra"
+markers = [
+  "unit: isolated scientific or contract check",
+  "property: bounded generated invariant check",
+  "reference: independently derived numerical expected value",
+  "integration: complete generated engineering pipeline",
+  "fault: intentional corruption or interruption",
+  "slow_engineering: bounded resource or mutation check",
+  "market: explicitly scoped scientific work, never normal test collection",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+preview = false
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "SIM", "C4", "PIE", "RUF", "C90", "D"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["frem_s10"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"successors/frem_s10/tests/**" = ["D"]
+"tests/**" = ["D"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+warn_unreachable = true
+show_error_codes = true
+
+[tool.coverage.run]
+branch = true
+source = ["frem_s10"]
+
+[tool.coverage.report]
+show_missing = true

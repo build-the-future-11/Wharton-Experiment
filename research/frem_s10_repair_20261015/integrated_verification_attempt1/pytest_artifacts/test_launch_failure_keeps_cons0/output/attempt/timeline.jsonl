@@ -1,0 +1,3 @@
+{"event":{"state":"PREFLIGHT","time":"2026-10-15T18:13:29.884309+00:00"},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}
+{"event":{"marker_sha256":"5d239eb411129f3f862a843c983c5505237df35802a9fc41c2d584fb64e16c58","state":"CONSUMED"},"previous":"5c47b9b77fe72f245293ed726061fa17850279a8c8cac4b90abe4ed044811fad","sequence":1}
+{"event":{"state":"FAILED","worker_exit_code":null},"previous":"f693a3e814b9b4bd9d2a680d81e664fc4afcd4fb67e94214eff1d86116f96e21","sequence":2}

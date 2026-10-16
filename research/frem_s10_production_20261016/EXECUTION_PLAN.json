@@ -1,0 +1,47 @@
+{
+  "schema": "s10-continuation-plan-v1",
+  "artifact_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+  "source_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+  "consumption_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/execution/consumption",
+  "output_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/execution/outputs",
+  "work_root": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/execution/controller",
+  "attempt_prefix": "FREM-S10-production-20261016",
+  "artifacts": {
+    "code": {
+      "path": "research/frem_s10_objects/11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696.json",
+      "sha256": "11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696"
+    },
+    "environment": {
+      "path": "research/frem_s10_objects/f59dcf61fbb80d0924b8e360b80eec9a89fbf187e971339a2659c1f3a5918e8d.json",
+      "sha256": "f59dcf61fbb80d0924b8e360b80eec9a89fbf187e971339a2659c1f3a5918e8d"
+    },
+    "configuration": {
+      "path": "research/frem_s10_objects/69c61a6ce000efba4accd44e6691ba2aed9730f75b1735243b0fe48c89ec6baf.json",
+      "sha256": "69c61a6ce000efba4accd44e6691ba2aed9730f75b1735243b0fe48c89ec6baf"
+    },
+    "calendar": {
+      "path": "research/frem_s10_objects/cfae795b7f39efa8c30174f89a2321cb7a54903c5c6d6a27ee1e8d8e760f906d.json",
+      "sha256": "cfae795b7f39efa8c30174f89a2321cb7a54903c5c6d6a27ee1e8d8e760f906d"
+    },
+    "clock": {
+      "path": "research/frem_s10_production_20261016/data_provenance/sessions_2005_2016.json",
+      "sha256": "8f449c75bff8ada21ba7d13ea09b1557862c0cb31f3f3c80aa110f5bfa7ddae1"
+    },
+    "source_admission": {
+      "path": "research/frem_s10_production_20261016/source_admission_attempt1/admission.json",
+      "sha256": "93a52fa8b85c5b2cb25f7a4cf41f034f6202670c34362a6f7d063eb8bb3ff3c7"
+    },
+    "catalog": {
+      "path": "research/frem_s10_production_20261016/CATALOG_CANDIDATE_PLAN.json",
+      "sha256": "1c19ff8bf8763c2f06b685b1a185b997ade56983848f81713236d62df755af93"
+    },
+    "data_pilot": {
+      "path": "research/frem_s10_objects/05a5bdb593aa10e15e034f0a14bff9f331f54d119335331102b54b2542ad9793.json",
+      "sha256": "05a5bdb593aa10e15e034f0a14bff9f331f54d119335331102b54b2542ad9793"
+    },
+    "data_campaign": {
+      "path": "research/frem_s10_objects/d119b910aee703465c1ef77a33cbe61a95a0793f8a4584004ac2bbc57d7e3cf8.json",
+      "sha256": "d119b910aee703465c1ef77a33cbe61a95a0793f8a4584004ac2bbc57d7e3cf8"
+    }
+  }
+}

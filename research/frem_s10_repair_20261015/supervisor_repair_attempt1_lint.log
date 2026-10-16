@@ -1,0 +1,10 @@
+C901 `_poll` is too complex (11 > 10)
+   --> successors/frem_s10/src/frem_s10/runtime/supervisor.py:306:5
+    |
+306 | def _poll(
+    |     ^^^^^
+307 |     worker: subprocess.Popen[bytes],
+308 |     output: Path,
+    |
+
+Found 1 error.

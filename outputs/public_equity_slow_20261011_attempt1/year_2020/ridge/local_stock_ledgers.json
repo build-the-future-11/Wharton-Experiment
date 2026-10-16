@@ -1,0 +1,194 @@
+{
+  "0005.HK": {
+    "months": 12,
+    "long_months": 11,
+    "net_local_return": -0.2662937056670506,
+    "max_drawdown": -0.45889237170011365,
+    "same_cost_monthly_always_long_return": -0.3478059072967591,
+    "gross_continuous_buy_hold_return": -0.3319639001143212
+  },
+  "0700.HK": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": 0.3801747864175995,
+    "max_drawdown": -0.049280458555255535,
+    "same_cost_monthly_always_long_return": 0.47564777730273855,
+    "gross_continuous_buy_hold_return": 0.5114917429999499
+  },
+  "2317.TW": {
+    "months": 12,
+    "long_months": 10,
+    "net_local_return": -0.051099580880608175,
+    "max_drawdown": -0.23478139927878472,
+    "same_cost_monthly_always_long_return": 0.04003971559517505,
+    "gross_continuous_buy_hold_return": 0.06530261942827842
+  },
+  "2330.TW": {
+    "months": 12,
+    "long_months": 7,
+    "net_local_return": 0.5650738730857685,
+    "max_drawdown": -0.049128601437809505,
+    "same_cost_monthly_always_long_return": 0.6076228569982225,
+    "gross_continuous_buy_hold_return": 0.6466725404163256
+  },
+  "6758.T": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": 0.4016546869038149,
+    "max_drawdown": -0.03231083269632595,
+    "same_cost_monthly_always_long_return": 0.3659878932910927,
+    "gross_continuous_buy_hold_return": 0.39916818464722414
+  },
+  "7203.T": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": -0.07484551216565183,
+    "max_drawdown": -0.20051950501303806,
+    "same_cost_monthly_always_long_return": 0.03973798027123099,
+    "gross_continuous_buy_hold_return": 0.06499355485492453
+  },
+  "AAPL": {
+    "months": 12,
+    "long_months": 7,
+    "net_local_return": 0.24937225566435428,
+    "max_drawdown": -0.17974889057512533,
+    "same_cost_monthly_always_long_return": 0.7798347317406789,
+    "gross_continuous_buy_hold_return": 0.8230674977519752
+  },
+  "BHP.AX": {
+    "months": 12,
+    "long_months": 10,
+    "net_local_return": 0.13666177092733767,
+    "max_drawdown": -0.14891206078057584,
+    "same_cost_monthly_always_long_return": 0.12561940850438358,
+    "gross_continuous_buy_hold_return": 0.15296107098450107
+  },
+  "BNP.PA": {
+    "months": 12,
+    "long_months": 8,
+    "net_local_return": -0.21308318202012033,
+    "max_drawdown": -0.21308318202012033,
+    "same_cost_monthly_always_long_return": -0.20342998592819217,
+    "gross_continuous_buy_hold_return": -0.184081040536897
+  },
+  "BP.L": {
+    "months": 12,
+    "long_months": 11,
+    "net_local_return": -0.48591132424429717,
+    "max_drawdown": -0.591143974370446,
+    "same_cost_monthly_always_long_return": -0.4721255347069656,
+    "gross_continuous_buy_hold_return": -0.45930329181308027
+  },
+  "CBA.AX": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": 0.17850266000384774,
+    "max_drawdown": -0.09762026564084525,
+    "same_cost_monthly_always_long_return": 0.04049216901475594,
+    "gross_continuous_buy_hold_return": 0.06576606308895894
+  },
+  "DTE.DE": {
+    "months": 12,
+    "long_months": 8,
+    "net_local_return": -0.21777408953061317,
+    "max_drawdown": -0.22453841078179793,
+    "same_cost_monthly_always_long_return": 0.04283206476331758,
+    "gross_continuous_buy_hold_return": 0.06816279566825822
+  },
+  "ENB.TO": {
+    "months": 12,
+    "long_months": 6,
+    "net_local_return": -0.2121752905138894,
+    "max_drawdown": -0.24257907168703197,
+    "same_cost_monthly_always_long_return": -0.17313369262994494,
+    "gross_continuous_buy_hold_return": -0.15304884039527034
+  },
+  "HSBA.L": {
+    "months": 12,
+    "long_months": 11,
+    "net_local_return": -0.30636777368765133,
+    "max_drawdown": -0.4446650754390653,
+    "same_cost_monthly_always_long_return": -0.37512096184021815,
+    "gross_continuous_buy_hold_return": -0.35994244623966853
+  },
+  "INFY.NS": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": 0.790144050082928,
+    "max_drawdown": -0.12502627071274164,
+    "same_cost_monthly_always_long_return": 0.7179216730284128,
+    "gross_continuous_buy_hold_return": 0.7596505506546714
+  },
+  "JPM": {
+    "months": 12,
+    "long_months": 10,
+    "net_local_return": -0.15470172767516144,
+    "max_drawdown": -0.35390247361299465,
+    "same_cost_monthly_always_long_return": -0.07774917269872261,
+    "gross_continuous_buy_hold_return": -0.0553473993714616
+  },
+  "NESN.SW": {
+    "months": 12,
+    "long_months": 12,
+    "net_local_return": -0.0033051362971976417,
+    "max_drawdown": -0.07832357531223644,
+    "same_cost_monthly_always_long_return": -0.0033051362971976417,
+    "gross_continuous_buy_hold_return": 0.02090490694933611
+  },
+  "NOVN.SW": {
+    "months": 12,
+    "long_months": 11,
+    "net_local_return": -0.08971567515963297,
+    "max_drawdown": -0.20740833334813813,
+    "same_cost_monthly_always_long_return": -0.07629559465540725,
+    "gross_continuous_buy_hold_return": -0.05385851344348469
+  },
+  "PETR4.SA": {
+    "months": 12,
+    "long_months": 8,
+    "net_local_return": -0.13293789712527215,
+    "max_drawdown": -0.16372274331212422,
+    "same_cost_monthly_always_long_return": -0.0832175589429669,
+    "gross_continuous_buy_hold_return": -0.060948614500736964
+  },
+  "RELIANCE.NS": {
+    "months": 12,
+    "long_months": 8,
+    "net_local_return": -0.11631709762644915,
+    "max_drawdown": -0.2687907159695847,
+    "same_cost_monthly_always_long_return": 0.29754921165929327,
+    "gross_continuous_buy_hold_return": 0.32906710512176396
+  },
+  "RY.TO": {
+    "months": 12,
+    "long_months": 9,
+    "net_local_return": 0.009218672140274053,
+    "max_drawdown": -0.17546381429997782,
+    "same_cost_monthly_always_long_return": 0.03991700240397944,
+    "gross_continuous_buy_hold_return": 0.06517692549365406
+  },
+  "SAN.PA": {
+    "months": 12,
+    "long_months": 11,
+    "net_local_return": -0.04131076500017106,
+    "max_drawdown": -0.1532982772601008,
+    "same_cost_monthly_always_long_return": -0.11110724330738264,
+    "gross_continuous_buy_hold_return": -0.08951574839277077
+  },
+  "SAP.DE": {
+    "months": 12,
+    "long_months": 7,
+    "net_local_return": -0.3688934478801539,
+    "max_drawdown": -0.3688934478801539,
+    "same_cost_monthly_always_long_return": -0.11735377423543503,
+    "gross_continuous_buy_hold_return": -0.09591400959396523
+  },
+  "VALE3.SA": {
+    "months": 12,
+    "long_months": 10,
+    "net_local_return": 0.43976767726060584,
+    "max_drawdown": -0.19396902469617017,
+    "same_cost_monthly_always_long_return": 0.668764108339766,
+    "gross_continuous_buy_hold_return": 0.7092989326901962
+  }
+}

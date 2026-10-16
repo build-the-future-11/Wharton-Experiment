@@ -1,0 +1,1 @@
+Strict mypy found5test-only attr-defined re-export errors for accessing imported modules/constants via production modules; fixed by direct standard-library/constants imports, no production changes.

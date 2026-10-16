@@ -1,0 +1,50 @@
+{
+  "evidence_scope": "GENERATED_ENGINEERING_ONLY",
+  "files_before_parent_final_import_sort": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/artifacts.py",
+      "sha256": "2c29bab0a2e4b7bfa24872e2021c61207e3b13b0666095bed00a734edbf95052"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/readback.py",
+      "sha256": "d9e972f690874f9583e4f29f1ebca26b764eaea78ae5094f3d7b54ecaef14f40"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_readback_audit.py",
+      "sha256": "b0c91d253b26fc9cbdeaf73ec218509f7df627b3d48b912d47581eed0f8caea2"
+    }
+  ],
+  "independent_review_defects_fixed": [
+    "Forecast tape semantic hash now recomputed from exact metadata and verified component frame hashes, with numeric frames kept streamed.",
+    "Manifest/header experiment identity must match.",
+    "Forecast array metadata schema and record fields are exact; string and boolean coercion rejected.",
+    "Forecast tape structure requires sorted unique anchor/variant keys, exact six variants at every origin and identical origin/time across variants.",
+    "Header asset, interval and loss axes must match the frozen definitions."
+  ],
+  "market_fits_run": false,
+  "market_or_protected_values_read": false,
+  "new_rejection_evidence": "Fully re-signed duplicate-variant tape updates frame payload, inventory, tape hash, header, cell provenance and manifest; loader still rejects the invalid structure. Independent cases cover missing/order/common-origin/common-time defects, stale semantic metadata, array coercion and axis relabeling.",
+  "prior_receipts_retained": [
+    "readback_engineering_verification.json",
+    "experiment_engineering_verification.json"
+  ],
+  "quality": {
+    "format_log": "readback_structure_format_final.log",
+    "ruff_log": "readback_structure_lint_attempt1.log",
+    "ruff_scope": "All rules except I001; parent owns deterministic global first-party import sorting and final full lint.",
+    "strict_mypy_log": "readback_structure_mypy_final.log"
+  },
+  "remaining_scope": "Two-block generated real replay/readback and separate 24/25-row retained-evidence analysis; no claim of full market-length source-to-paper execution, source authority or empirical support.",
+  "retained_diagnostics": [
+    "readback_semantic_lint_attempt1.log",
+    "readback_structure_mypy_attempt1.log"
+  ],
+  "schema": "s10-generated-readback-semantic-review-receipt-v1",
+  "tests": {
+    "log": "readback_structure_tests_attempt1.log",
+    "passed": 22,
+    "post_test_edit": "Only list(frame_rows) type annotation compatibility copy; same values and no scientific behavior change; parent combined verification will retest.",
+    "seconds": 16.96,
+    "warnings": "error"
+  }
+}

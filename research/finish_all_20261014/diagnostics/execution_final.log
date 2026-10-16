@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "ledgers_verified": 252,
+  "max_accounting_residual": 1.3533281162381172e-09,
+  "fee_attribution": {
+    "charged_cost_bps": 10,
+    "observed_wealth": 98745.27368214123,
+    "same_dollar_positions_rebated_fee_wealth": 99555.51521259388,
+    "direct_fee_bill": 810.2415304526493,
+    "zero_cost_policy_wealth": 99990.33315642031,
+    "zero_minus_charged_policy_wealth": 1245.0594742790854,
+    "position_path_gross_pnl_difference": 434.8179438269905,
+    "interpretation": "Fixed saved dollar positions, fees credited to zero-yield cash without reinvestment. Difference from separately optimized zero-cost ledger includes endogenous allocations, sizing and wealth effects; not a pure fee bill."
+  }
+}
+
+Exit code: 0
+

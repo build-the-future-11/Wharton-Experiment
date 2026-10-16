@@ -1,0 +1,409 @@
+Act as the experiment lead, GPU-budget controller, and independent evidence
+reviewer for the currently selected research project.
+
+MISSION
+Prepare and, when actual Kaggle access is available, execute the strongest
+scientifically defensible experiment campaign that fits my time and quota.
+
+Target completion tonight, 16 October 2026, Asia/Kolkata.
+Use 22:00 IST as the planning target unless I specify another time.
+Read the actual current time. Do not pretend the deadline is still feasible
+if the available execution window has already disappeared.
+
+My preferred outcome is a complete, reproducible evidence package suitable
+for evaluating an arXiv manuscript or a specific conference submission.
+
+Do not promise acceptance, novelty, statistical significance, or positive
+results. Do not force the model to win. A valid negative result is acceptable.
+
+SCOPE AND PERMISSIONS
+- Work on the selected repository and the implementation finalized in the
+  preceding engineering phase.
+- Start with APEN or FIM, not every project at once.
+- Worldcastr is entirely excluded.
+- Do not purchase compute, upgrade plans, bypass quotas, create extra accounts,
+  submit papers, publish datasets, push code, or start recurring automations.
+- Keep unpublished work private.
+- Use existing authorized connections and secrets without exposing them.
+- Do not claim a cloud run has started unless it actually has.
+- If Kaggle access is unavailable, finish all independent preparation and
+  return the exact notebook and essential user action needed to launch it.
+
+A. ESTABLISH AND PROTECT THE REAL ACCOUNT BUDGET
+
+Read the remaining Kaggle GPU allowance immediately before allocating a GPU.
+Call this Q0, measured in Kaggle's displayed quota-hours.
+
+Thirty hours is only a planning example. Never assume Q0 = 30.
+
+Preferred policy:
+- Aim to spend around 4 hours when Q0 = 30.
+- Allow at most 6 hours under the preferred policy.
+- Prefer leaving at least 24 hours, ideally 26.
+- Never cross an absolute remaining-account floor of 20 hours.
+
+Calculate:
+preferred_budget = max(0, min(6, Q0 - 24))
+possible_expanded_budget = max(0, min(10, Q0 - 20))
+
+The second value is NOT automatic authorization.
+Do not expand beyond preferred_budget without my explicit approval.
+
+If the preferred budget is zero, finish CPU preparation and request a
+specific revised allocation before starting a GPU session.
+
+Use a shared account-level ledger. APEN, FIM, Wharton, and quant projects
+do not each receive a fresh imaginary 30-hour allowance.
+
+Account for other active sessions. Do not terminate unrelated user jobs;
+report their impact and require coordination when necessary to protect
+the reserve.
+
+Budget ALL quota-consuming time:
+- GPU environment setup.
+- Debugging and compatibility checks.
+- Profiling and failed attempts.
+- Training and validation.
+- Evaluation and export while the GPU session remains allocated.
+- Concurrent interactive or batch sessions.
+- Idle allocation and shutdown delay.
+
+Distinguish:
+1. Wall-clock elapsed time.
+2. Physical device-hours.
+3. Kaggle's reported quota debit.
+
+Do not assume how dual-GPU allocations are charged. Verify the applicable
+account/platform behavior. If it cannot be verified, use a conservative
+upper-bound estimate and explain the uncertainty.
+
+Reserve at least 10% of the authorized budget for variance, checkpointing,
+export, and shutdown. That reserve is not spare training capacity.
+
+Implement:
+- An absolute deadline.
+- A total campaign budget guard.
+- A per-run timeout.
+- A rule refusing to start a run that cannot conservatively finish with
+  export and shutdown margin.
+- Graceful checkpoint/exit handling.
+- Explicit platform session-stop instructions or supported control.
+
+A Python process exiting does not prove that the Kaggle GPU allocation
+has stopped. Verify platform session state.
+
+If session termination or quota visibility cannot be verified automatically,
+state that the reserve requires a manual confirmation. Do not advertise a
+guaranteed hard account limit that your code cannot actually enforce.
+
+B. VALIDATE THE READINESS HANDOFF BEFORE ALLOCATING GPU
+
+Read the actual code, tests, readiness report, and maintained entrypoints.
+Do not trust a “complete” label or script filename.
+
+Reject a long run when:
+- CUDA placement is unverified.
+- Data or split integrity is unresolved.
+- Baselines are broken.
+- Output persistence is untested.
+- Required resume behavior is unsupported.
+- The campaign includes placeholders or unexplained tiny defaults.
+- The code/configuration being executed cannot be identified.
+
+Perform installations, imports, data preparation, configuration checks, and
+small CPU tests without an allocated GPU wherever practical.
+
+Keep dependencies compatible with Kaggle's actual environment. Pin the
+resolved environment and source identity. Do not blindly install the newest
+PyTorch or silently change the scientific implementation.
+
+Do not run the entire test suite on a GPU merely because a GPU is available.
+
+C. BUILD A REPRODUCIBLE KAGGLE NOTEBOOK
+
+Create a working notebook using real repository commands, not invented CLI
+flags or a hypothetical train.py file.
+
+Required sections:
+1. Source retrieval at a recorded revision or verified source snapshot.
+2. Minimal, compatible dependency setup.
+3. Data attachment/generation and integrity checks.
+4. Credential loading from Kaggle Secrets where needed.
+5. Resolved configuration and source/data manifests.
+6. CPU preflight.
+7. GPU preflight and profiling.
+8. Frozen finite campaign execution.
+9. Live logs and campaign status.
+10. Resume from previously persisted outputs.
+11. Analysis, export, and persistence verification.
+12. Session shutdown procedure.
+
+Use safe, explicit paths:
+- Treat attached inputs as read-only.
+- Write new results to the writable working/output area.
+- Do not depend on files that exist only on my Mac.
+- Isolate generated outputs from historical repository artifacts.
+
+Make rerunning setup idempotent. Make rerunning execution detect and validate
+completed cells rather than blindly retrain them.
+
+Choose one production execution mode. Avoid leaving an interactive GPU
+session active while launching a second batch session unintentionally.
+
+Verify the current behavior of Save & Run All versus available save/export
+options. Do not rerun expensive training merely to preserve completed work.
+
+D. MEASURE BEFORE COMMITTING TO A CAMPAIGN
+
+Spend only a small, budgeted fraction on preflight and profiling.
+
+Record:
+- Assigned GPU model/count, VRAM, host RAM, CPU resources, and software versions.
+- Actual model and batch device placement.
+- Forward, backward, optimizer, validation, and checkpoint success.
+- Peak host and device memory.
+- Data preparation, epoch, evaluation, and export times.
+
+Profile representative shapes and rollout lengths after warmup. Do not
+extrapolate a paper-scale run from an unrepresentative tiny smoke test.
+
+Use conservative duration estimates and account for variable epoch costs,
+validation overhead, dataset generation, and checkpoint writes.
+
+Test only a small number of justified optimization candidates:
+- A few batch sizes.
+- Conservative dataloader settings.
+- Reference precision versus supported AMP.
+- Caching or vectorization improvements identified by measurement.
+
+Preserve scientific semantics. Do not change resolution, horizon, batch
+semantics, optimizer updates, or evaluation just to meet a runtime target
+without declaring a new protocol.
+
+Do not assume two GPUs double speed or combine their VRAM.
+Use one GPU initially. Consider independent jobs on separate GPUs only if
+host RAM, quota accounting, output isolation, and measured throughput justify
+the extra complexity. Do not introduce unverified distributed training.
+
+Keep these pilot runs labeled DEVELOPMENT. Do not later promote their
+test results into confirmatory evidence.
+
+E. FREEZE A COMPLETE, AFFORDABLE SCIENTIFIC QUESTION
+
+Use measured runtimes to select a complete study before examining its
+confirmatory test outcomes.
+
+Prefer a narrow, decisive experiment over fragments of a giant benchmark.
+
+A candidate design is:
+- One primary benchmark and primary metric.
+- The proposed model.
+- Two justified baselines, including a strong conventional comparator.
+- Paired independent repetitions.
+- One critical component ablation.
+- One additional stress/OOD evaluation using existing trained checkpoints,
+  where scientifically appropriate.
+
+This is a candidate, not a compulsory matrix. Calculate its actual cost.
+
+For example:
+3 model conditions × 5 seeds = 15 training cells.
+1 ablation × the same 5 seeds adds 5 cells.
+Determine whether those 20 cells fit BEFORE launching them.
+
+Do not treat five seeds as a universal guarantee of statistical rigor.
+Choose repetitions based on the question, variability, inference method,
+and available budget. With limited repetitions, report the uncertainty
+honestly and narrow the conclusions.
+
+If the matrix will not fit, reduce the question BEFORE confirmation:
+- Fewer justified conditions.
+- One benchmark instead of several.
+- A narrower claim.
+- A scientifically defensible fixed training budget.
+- Reuse of frozen checkpoints for additional evaluations.
+
+Do not quietly remove failed seeds, hard datasets, or winning baselines.
+
+Freeze and hash a manifest containing:
+- Hypotheses and primary comparison.
+- Dataset version, generation settings, and immutable split identifiers.
+- Preprocessing and training-only normalization.
+- Model variants and configurations.
+- Seeds and the statistical unit of replication.
+- Training budgets and early-stopping/checkpoint-selection rules.
+- Baseline tuning allowances.
+- Metrics and evaluation horizons.
+- Precision and numerical settings.
+- Planned ablations and stress tests.
+- Missing-cell/failure rules.
+- Statistical analysis and multiple-comparison treatment.
+- Expected costs and mandatory/optional execution order.
+- Source and environment identity.
+
+No test-set tuning. No expansion until significance appears. No stopping
+because the current result looks favorable.
+
+Use the same information availability and selection rules for comparisons.
+Report parameter counts and measured runtime; do not equate parameter
+matching with compute matching.
+
+For APEN:
+Focus on a specific forecasting or correction hypothesis, a meaningful
+mechanism ablation, and suitable strong baselines. Preserve prior negative
+evidence; new code requires new provenance.
+
+For FIM:
+Focus on whether the memory mechanism improves a defined task relative to
+appropriate baselines and a genuinely disabled-memory control. Verify that
+state does not leak across independent evaluation examples.
+
+For finance/Wharton/quant:
+Use point-in-time walk-forward evaluation, appropriate temporal dependence
+handling, costs, and credible reference strategies. Random train/test shuffles
+are not a substitute for temporal evaluation. Prefer CPU when it is adequate.
+
+F. EXECUTE WITH REAL LIVE VISIBILITY
+
+Run one bounded campaign with uniquely identified cells.
+
+Provide:
+- Unbuffered live notebook console output.
+- Per-run structured metric files.
+- A campaign status table/file.
+- Optional TensorBoard.
+- Optional private W&B tracking with an offline/no-account fallback.
+
+Connect metrics to actual training loops. Initialization alone is not logging.
+
+Show:
+project, run ID, benchmark, model, seed, phase, epoch/step, training loss,
+validation metric, elapsed time, estimated completion, memory usage,
+checkpoint state, campaign budget spent, and estimated quota remaining.
+
+Label quota estimates as estimates until reconciled with Kaggle's balance.
+
+Use inexpensive logging intervals and a periodic heartbeat. Do not run an
+expensive evaluation solely to refresh a dashboard.
+
+Run states must distinguish:
+PENDING, RUNNING, SUCCEEDED, FAILED, INTERRUPTED, and SKIPPED_BUDGET.
+
+Persist completed cells immediately. Validate required artifacts before
+marking a cell SUCCEEDED.
+
+Use tested full-state checkpointing at suitable safe boundaries, targeting
+roughly 5–10 minutes between recoverable checkpoints when overhead permits.
+
+On a failure:
+- Preserve traceback, configuration, and partial artifacts.
+- Do not substitute zeros, NaNs converted to numbers, or old metrics.
+- Allow only bounded, diagnosed retries.
+- A source/protocol change creates a new version; do not pool incompatible
+  cells to pretend the original matrix completed.
+
+Stop launching new jobs when the budget or deadline guard says so.
+Checkpoint, export, and stop the session with margin.
+
+G. MAKE RESULTS SURVIVE THE SESSION
+
+Local files in a temporary runtime are not sufficient persistence.
+
+Before long training, test the chosen supported persistence route with a
+small artifact and verify it can be retrieved.
+
+Use a supported private Kaggle output/dataset mechanism or an explicitly
+authorized external artifact destination. Do not publish private source or
+data as a convenience.
+
+Use secrets securely. Do not upload arbitrary repository contents or
+environment dumps to a tracking service.
+
+Persist:
+- Latest/best checkpoints required for resumption.
+- Logs and raw metric records.
+- Configurations and manifests.
+- Predictions or other raw evaluation outputs where practical and permitted.
+- Failure records.
+- Source snapshot/patch identity and artifact checksums.
+
+Keep artifact sizes within verified platform limits.
+
+A ZIP file on the same temporary machine is not a second persistent copy.
+An uploaded checkpoint is not verified until retrieval and integrity checks
+succeed.
+
+Document the exact restore procedure in a fresh session.
+
+H. ANALYZE ONLY COMPLETED, VALID EVIDENCE
+
+Generate tables and figures from retained artifacts, not manual numbers.
+
+Report:
+- Per-condition and per-repetition outcomes.
+- Baseline-relative effects with their direction clearly defined.
+- Appropriate uncertainty and its statistical unit.
+- Runtime, memory, and training-budget comparisons.
+- Ablation and stress-test outcomes.
+- Failed, missing, interrupted, and excluded cells with reasons.
+- Limitations and the exact scope supported by the data.
+
+Do not treat correlated timesteps, batches, or overlapping financial windows
+as independent repetitions. Use an analysis suited to the actual dependency
+structure.
+
+Do not interpret an inconclusive result as proof of equivalence.
+Do not hide baseline wins or select only the best seed.
+Do not claim a general architecture ranking from a narrow benchmark.
+
+Validate expected versus completed manifest cells. Incomplete mandatory
+comparisons must block a “complete confirmatory study” label.
+
+Any reused artifact must match the frozen source, configuration, data, and
+evaluation identity. Historical results belong in a separate section.
+
+I. DELIVER THE TONIGHT PACKAGE
+
+Produce:
+- Executable Kaggle notebook.
+- Frozen experiment manifest.
+- Actual run ledger and budget ledger.
+- Environment/source/data manifests.
+- Persisted checkpoints and retrieval instructions.
+- Raw and aggregated metrics.
+- Generated tables and figures.
+- Research report with methods, results, limitations, and claim/evidence map.
+- A reproducibility README with exact commands.
+- A compact evidence archive with checksums.
+
+Where evidence supports it, prepare manuscript-ready methods and results
+text. Do not invent findings, authorship, affiliations, citations, novelty,
+or venue compliance. Do not submit or publish anything.
+
+Give the project one accurate end state:
+1. COMPLETE BOUNDED STUDY.
+2. COMPLETE ENGINEERING/PILOT VALIDATION ONLY.
+3. PARTIAL CAMPAIGN.
+4. BLOCKED BEFORE EXECUTION.
+
+State separately:
+- Whether a preprint draft is supported by the evidence.
+- What remains before targeting a particular conference.
+- Which judgments still require expert or venue-specific review.
+
+Finish with:
+- What actually ran.
+- What was learned, including negative findings.
+- Which comparisons remain incomplete.
+- Measured GPU/session time and the observed final quota balance.
+- Estimated values clearly separated from observed values.
+- Where durable artifacts are stored and whether retrieval was verified.
+- Whether every campaign GPU session was confirmed stopped.
+
+If the full intended study does not fit tonight, deliver the strongest
+complete narrower study that fits a prospectively frozen protocol.
+Do not sacrifice scientific integrity or my protected GPU reserve to make
+the completion report sound better.
+
+Begin with the readiness and quota checks, then proceed as far as real
+access, validated code, deadline, and authorized budget permit.

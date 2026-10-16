@@ -1,0 +1,62 @@
+{
+  "schema": "s10-semantic-mutants-v1",
+  "scope": "GENERATED_ENGINEERING",
+  "baseline_passed": true,
+  "source_unchanged": true,
+  "mutants": [
+    {
+      "name": "maturity_equality",
+      "file": "model/feedback.py",
+      "before": "if outcome.available_us >= decision_us:",
+      "after": "if outcome.available_us > decision_us:",
+      "test": "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+      "original_sha256": "633dd1acfd2e64e3ae52649110ff614009fe19f230fc5abc4b0a64004c08bc2d",
+      "mutated_sha256": "2ac0652fda04123e7c924bc863fd9d2af5fff597c4caf13c111a19b140eeea16",
+      "returncode": 1,
+      "failures": 1,
+      "errors": 0,
+      "status": "KILLED"
+    },
+    {
+      "name": "omit_exit_cost",
+      "file": "portfolio/policy.py",
+      "before": "terminal = (1.0 - one_way_cost) * forecast.g + forecast.d",
+      "after": "terminal = forecast.g + forecast.d",
+      "test": "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+      "original_sha256": "f33a903f3a5a045a48133cd26c3297064d442f2451d35362a5a5dbc4ecdfb8cc",
+      "mutated_sha256": "3c65a7ca71674d0cf0d361346d28837aaa8569ea4912ed66d285fa7422ee48db",
+      "returncode": 1,
+      "failures": 1,
+      "errors": 0,
+      "status": "KILLED"
+    },
+    {
+      "name": "omit_cross_expert_terms",
+      "file": "math/scores.py",
+      "before": "weights @ self.a - 0.5 * weights @ self.b @ weights",
+      "after": "weights @ self.a - 0.5 * weights @ np.diag(self.b)",
+      "test": "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance",
+      "original_sha256": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61",
+      "mutated_sha256": "b6df46b2d0bdbd7de27b66695d6ba7002654cea771ad01119d1a9abc1e2bd340",
+      "returncode": 1,
+      "failures": 1,
+      "errors": 0,
+      "status": "KILLED"
+    },
+    {
+      "name": "publish_before_consumption_validation",
+      "file": "runtime/worker.py",
+      "before": "    if (\n        marker.get(\"state\"),",
+      "after": "    publish_json(output, \"premature-output.json\", {\"mutant\": True})\n    if (\n        marker.get(\"state\"),",
+      "test": "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+      "original_sha256": "d96e0062e0e3d99e36006e4e157b463e6cf117a68374083ca889df034dd624bf",
+      "mutated_sha256": "7a7976d2cb8a05947f29f8bc6730715a054f01f47f5b4f3498fb85c2292b3c87",
+      "returncode": 1,
+      "failures": 1,
+      "errors": 0,
+      "status": "KILLED"
+    }
+  ],
+  "all_killed": true,
+  "independent_empirical_verification": false
+}

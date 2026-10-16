@@ -1,0 +1,79 @@
+{
+  "scope": "SMALL_GENERATED_METADATA_TESTS_NO_RESEARCH_NO_BUILD",
+  "commands": [
+    {
+      "name": "tests",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/tests/test_verification_receipts_audit.py",
+        "-q",
+        "-W",
+        "error",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/root_quality_attempt2/fixtures"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.3583678750146646,
+      "log_sha256": "c98726dcb0c9f0252e8160d23de79ed048961494c9d2bff5c5f7d6fc6c831163"
+    },
+    {
+      "name": "lint",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.01595479200477712,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "name": "format",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.015153749991441146,
+      "log_sha256": "eee76f865de5a9f2456950f710ae5d5f9b5bd0ea02aa54f614c5eed6642a0bfd"
+    },
+    {
+      "name": "types",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/root_quality_attempt2/mypy",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 3.455936999991536,
+      "log_sha256": "73378407315baceaf42d1c5493106d5ed4c756031348a0179ced3b8d2eedca2a"
+    }
+  ],
+  "files": {
+    "successors/frem_s10/src/frem_s10/runtime/verification.py": "7bc4cca4bf9dc7e90536934a273fb4b6c6b05583833f33bf154dc5cb7b6d398f",
+    "successors/frem_s10/src/frem_s10/runtime/provenance.py": "0738b0f8be9aad491e22c023da41529439365889c92079ec404c69bb37fbc212",
+    "successors/frem_s10/tests/test_verification_receipts_audit.py": "c6cc75f41dd2920f3f82b6cec0c127e53e01e7acd7b4d4674696d504ad57941f"
+  }
+}

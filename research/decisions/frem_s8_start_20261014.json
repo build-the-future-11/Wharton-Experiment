@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-14T14:39:09.962369+00:00",
+  "observation": "S7 retained 2018 half gains positive but below 0.01; retained 2019 ex-ante utilities below two-way fees on all dates. No 2019 retest.",
+  "hypothesized_cause": "Hard claim-sized gate suppresses modest gains; coarse targets and single-week cost hurdle prevent partial, longer-hold exposure.",
+  "change": "Add S8 delayed fixed-share soft density gate and continuous four-interval committed allocation with one-interval and frozen predecessor controls.",
+  "predicted_effect": "May retain modest density gains and lower per-interval transaction burden; improved prediction and wealth remain falsifiable.",
+  "discriminating_experiment": "Three seeds; frozen-before-acquisition 2020-2022 ETF evaluation; train/calibration/init through 2018 only; all policies/costs/ablations retained.",
+  "result": "SPECIFIED_BEFORE_NEW_DATA_ACQUISITION",
+  "specification": "research/frem_s8_20261014/SPECIFICATION.md"
+}

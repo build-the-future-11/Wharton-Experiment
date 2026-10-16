@@ -1,0 +1,45 @@
+{
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "Retained generated integration lacks an executable source-bound production chain, full-calendar scale qualification, and actual per-obligation verification evidence. The real resource reserve remains below its fixed admission floor.",
+  "hypothesized_cause": "Disconnected artifact producers and structural PASS receipts did not establish actual engineering execution or full-shape feasibility.",
+  "change": "Implement exact source/environment/catalog verification; immutable source/calendar admission; one-use supervised pilot, generated qualification, campaign and saved-output audit; weekly state/certificate retention; fail-closed continuation with retry only for proven unconsumed resource refusal. Add exact archive and offline clean-install verification.",
+  "predicted_effect": "Invalid, altered, partially verified, resource-blocked or already consumed work is rejected; successful runs preserve enough evidence for independent reproduction. No score or wealth improvement is predicted from these engineering changes.",
+  "discriminating_experiment": "Adversarial metadata/archive/receipt tests, full unchanged scientific and numerical tests, fixed actual build/install and denied-boundary probes, followed by the fixed generated qualification and real research only after each applicable gate.",
+  "resource_contract": {
+    "admission": "Three free-plus-speculative >=512MiB samples at least1s apart with unchanged pageouts before each workload; live guard for numerical operations",
+    "scientific_worker_threads": 1,
+    "scientific_owned_group_rss_mib": 256,
+    "precision_wall_seconds": 600,
+    "campaign_wall_seconds": 3600,
+    "qualification_wall_seconds": 3600,
+    "precision_output_bytes": 536870912,
+    "campaign_and_qualification_output_bytes": 2147483648,
+    "storage_reserve": "max(256MiB,20% of declared output allowance) in addition to the allowance",
+    "one_consumed_precision": true,
+    "one_consumed_generated_qualification": true,
+    "one_consumed_campaign": true,
+    "saved_audit": "separate one-use engineering namespace; no fitting; same256MiB/3600s guard"
+  },
+  "engineering_contract": {
+    "tests_timeout_seconds": 600,
+    "package_timeout_seconds": 600,
+    "other_command_timeout_seconds": 120,
+    "peak_rss": "post-exit observed cumulative child high-water;256MiB before type/build stages,512MiB thereafter; not live enforcement",
+    "network_and_raw_data": "denied during fixed verification commands; explicit boundary probes required",
+    "full_verification_must_pass": true,
+    "partial_scoped_tests_do_not_authorize_science": true
+  },
+  "stopping_rules": [
+    "Resource refusal with proof of no consumption can be attempted later in a new output",
+    "Consumed or ambiguous failure stops automatically",
+    "Inadequate or unidentifiable precision is retained and stops the campaign",
+    "Negative or mixed scientific outcomes remain valid outcomes; no metric-driven retry",
+    "Candidate source changes invalidate prior verification and require a new candidate plan"
+  ],
+  "scope": "RETROSPECTIVE_DEVELOPMENT using existing current-vintage pre2017 sources; generated qualification is engineering only",
+  "protected_access": false,
+  "primary_thresholds_changed": false,
+  "new_model_mechanism": false,
+  "result": "PROSPECTIVE_PRODUCTION_INTEGRATION_AND_ENGINEERING_BUDGET_BEFORE_ANY_S10_MARKET_EVALUATION"
+}

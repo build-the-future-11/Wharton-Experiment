@@ -1,0 +1,6 @@
+{
+  "error": "Child failed: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s2_development_20261011_attempt1/verification; exit=1; reason=None",
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py\", line 325, in run\n    bounded_process(\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py\", line 110, in bounded_process\n    raise RuntimeError(f\"Child failed: {directory}; exit={process.returncode}; reason={reason}\")\nRuntimeError: Child failed: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s2_development_20261011_attempt1/verification; exit=1; reason=None\n",
+  "completed_cells": [],
+  "incomplete_matrix": true
+}

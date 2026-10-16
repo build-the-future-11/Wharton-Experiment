@@ -1,0 +1,47 @@
+test_count_and_duplicate_errors_are_not_ignored (tests.test_release_tooling.ReleaseToolingTests.test_count_and_duplicate_errors_are_not_ignored) ... ok
+test_empty_inventory_does_not_pass (tests.test_release_tooling.ReleaseToolingTests.test_empty_inventory_does_not_pass) ... ok
+test_empty_source_package_is_rejected (tests.test_release_tooling.ReleaseToolingTests.test_empty_source_package_is_rejected) ... ok
+test_excluded_trees_are_pruned_before_reading (tests.test_release_tooling.ReleaseToolingTests.test_excluded_trees_are_pruned_before_reading) ... ok
+test_hashing_does_not_read_whole_files (tests.test_release_tooling.ReleaseToolingTests.test_hashing_does_not_read_whole_files) ... ok
+test_inventory_never_claims_runtime_verification (tests.test_release_tooling.ReleaseToolingTests.test_inventory_never_claims_runtime_verification) ... ok
+test_inventory_order_is_repeatable (tests.test_release_tooling.ReleaseToolingTests.test_inventory_order_is_repeatable) ... ok
+test_json_rejects_nonfinite_and_duplicate_nested_values (tests.test_release_tooling.ReleaseToolingTests.test_json_rejects_nonfinite_and_duplicate_nested_values) ... ok
+test_missing_and_changed_files_fail_verification (tests.test_release_tooling.ReleaseToolingTests.test_missing_and_changed_files_fail_verification) ... ok
+test_output_cannot_contain_source (tests.test_release_tooling.ReleaseToolingTests.test_output_cannot_contain_source) ... ok
+test_path_escape_is_rejected_before_read (tests.test_release_tooling.ReleaseToolingTests.test_path_escape_is_rejected_before_read) ... ok
+test_previous_manifest_identity_is_verified (tests.test_release_tooling.ReleaseToolingTests.test_previous_manifest_identity_is_verified) ... ok
+test_snapshot_is_fresh_and_previous_manifests_are_preserved (tests.test_release_tooling.ReleaseToolingTests.test_snapshot_is_fresh_and_previous_manifests_are_preserved) ... ok
+test_source_directory_symlinks_are_rejected (tests.test_release_tooling.ReleaseToolingTests.test_source_directory_symlinks_are_rejected) ... ok
+test_source_file_symlinks_are_rejected (tests.test_release_tooling.ReleaseToolingTests.test_source_file_symlinks_are_rejected) ... ok
+test_static_validation_passes_valid_fixture (tests.test_release_tooling.ReleaseToolingTests.test_static_validation_passes_valid_fixture) ... ok
+test_static_validation_rejects_duplicate_keys (tests.test_release_tooling.ReleaseToolingTests.test_static_validation_rejects_duplicate_keys) ... ok
+test_static_validation_rejects_missing_package (tests.test_release_tooling.ReleaseToolingTests.test_static_validation_rejects_missing_package) ... ok
+test_static_validation_rejects_nonfinite_canonical_state (tests.test_release_tooling.ReleaseToolingTests.test_static_validation_rejects_nonfinite_canonical_state) ... ok
+test_verifier_rejects_symlink_substitution (tests.test_release_tooling.ReleaseToolingTests.test_verifier_rejects_symlink_substitution) ... ok
+test_changed_archive_is_rejected (tests.test_evidence_source_archive.SourceArchiveTests.test_changed_archive_is_rejected) ... ok
+test_missing_archive_file_is_rejected (tests.test_evidence_source_archive.SourceArchiveTests.test_missing_archive_file_is_rejected) ... ok
+test_original_archive_matches_even_when_live_source_changed (tests.test_evidence_source_archive.SourceArchiveTests.test_original_archive_matches_even_when_live_source_changed) ... ok
+test_path_escaping_archive_is_rejected (tests.test_evidence_source_archive.SourceArchiveTests.test_path_escaping_archive_is_rejected) ... ok
+test_source_root_outside_repository_is_rejected (tests.test_evidence_source_archive.SourceArchiveTests.test_source_root_outside_repository_is_rejected) ... ok
+test_cauchy_density_at_origin (tests.test_evidence_audit.EvidenceAuditTests.test_cauchy_density_at_origin) ... ok
+test_duplicate_prediction_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_duplicate_prediction_rejected) ... ok
+test_empty_evidence_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_empty_evidence_rejected) ... ok
+test_invalid_distribution_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_invalid_distribution_rejected) ... ok
+test_protected_or_unmatured_observations_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_protected_or_unmatured_observations_rejected) ... ok
+test_scale_jacobian (tests.test_evidence_audit.EvidenceAuditTests.test_scale_jacobian) ... ok
+test_unequal_asset_observation_counts (tests.test_evidence_audit.EvidenceAuditTests.test_unequal_asset_observation_counts) ... ok
+test_wrong_model_or_seed_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_wrong_model_or_seed_rejected) ... ok
+test_additive_decomposition_recovers_known_effects (tests.test_frem_loss_diagnosis.LossDiagnosisTests.test_additive_decomposition_recovers_known_effects) ... ok
+test_incomplete_decomposition_rejected (tests.test_frem_loss_diagnosis.LossDiagnosisTests.test_incomplete_decomposition_rejected) ... ok
+test_interaction_is_shared_across_replacement_orders (tests.test_frem_loss_diagnosis.LossDiagnosisTests.test_interaction_is_shared_across_replacement_orders) ... ok
+test_pairing_aligns_by_key_and_rejects_outcome_changes (tests.test_frem_loss_diagnosis.LossDiagnosisTests.test_pairing_aligns_by_key_and_rejects_outcome_changes) ... ok
+test_weighting_does_not_overweight_dense_dates (tests.test_frem_loss_diagnosis.LossDiagnosisTests.test_weighting_does_not_overweight_dense_dates) ... ok
+test_annual_section_ignored (tests.test_public_regional_factors.RegionalFactorTests.test_annual_section_ignored) ... ok
+test_excluded_values_not_parsed (tests.test_public_regional_factors.RegionalFactorTests.test_excluded_values_not_parsed) ... ok
+test_missing_duplicate_bad_date_or_nonfinite_rejected (tests.test_public_regional_factors.RegionalFactorTests.test_missing_duplicate_bad_date_or_nonfinite_rejected) ... ok
+test_percent_units_and_market_return (tests.test_public_regional_factors.RegionalFactorTests.test_percent_units_and_market_return) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.177s
+
+OK

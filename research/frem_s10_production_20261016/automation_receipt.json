@@ -1,0 +1,13 @@
+{
+  "schema": "s10-conditional-continuation-schedule-v1",
+  "automation_id": "frem-s10-guarded-research-continuation",
+  "status": "ACTIVE",
+  "kind": "heartbeat",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "target_thread_id": "01a14078-44a2-76a0-88e2-1ff105f065a4",
+  "observed_configuration_sha256": "b065cc125b4e82aa3898b855ed6694e42a7da25e9fbc3227a4124dcbdf812333",
+  "configuration_is_live_and_may_change": true,
+  "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "created_by_app_tool": true,
+  "execution_requires_running_local_app_and_host": true
+}

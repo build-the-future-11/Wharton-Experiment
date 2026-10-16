@@ -1,0 +1,45 @@
+{
+  "status": "CACHE_PURGE_REQUIRES_LOCAL_ADMIN_AUTHENTICATION",
+  "process_rss_mib": {
+    "Codex_ChatGPT": 5392.546875,
+    "Chrome": 3475.15625
+  },
+  "purge_attempts": [
+    {
+      "command": "/usr/bin/purge",
+      "result": "path absent"
+    },
+    {
+      "command": "/usr/sbin/purge",
+      "result": "Operation not permitted"
+    },
+    {
+      "command": "sudo -n /usr/sbin/purge",
+      "result": "password required; no prompt or credential collected"
+    }
+  ],
+  "applications_terminated": 0,
+  "user_work_discarded": false,
+  "guard_modified": false,
+  "latest_admission": {
+    "checked_at": "2026-10-14T10:11:38.290660+00:00",
+    "samples": [
+      {
+        "available_mib": 87.609375,
+        "pageouts": 245370
+      },
+      {
+        "available_mib": 91.75,
+        "pageouts": 245377
+      },
+      {
+        "available_mib": 80.171875,
+        "pageouts": 245384
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "market_fits_started": 0,
+  "protected_access": false
+}

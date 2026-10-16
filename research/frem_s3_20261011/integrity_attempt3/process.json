@@ -1,0 +1,23 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_s3.py",
+    "-W",
+    "error::DeprecationWarning"
+  ],
+  "returncode": 0,
+  "termination": null,
+  "elapsed_seconds": 15.984900417010067,
+  "sampled_peak_rss_mib": 404.953125,
+  "rss_ceiling_mib": 768,
+  "wall_ceiling_seconds": 180,
+  "threads": 1,
+  "nice": 10,
+  "memory_snapshot_after": {
+    "available_mib": 392.15625,
+    "pageouts": 930610
+  }
+}

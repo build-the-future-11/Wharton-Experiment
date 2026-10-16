@@ -1,0 +1,8 @@
+{
+  "observation": "New synchronization test first failed because availability was intentionally left before its changed maturity, triggering the earlier valid chronology guard.",
+  "hypothesized_cause": "Test fixture did not isolate synchronization condition.",
+  "change": "Advance fixture availability with changed maturity. Preserve first test output and test source snapshot. Freeze2 replaces test identity only; model and scientific protocol unchanged.",
+  "predicted_effect": "Test isolates intended guard without weakening validation.",
+  "discriminating_experiment": "Full S6/S7 suite",
+  "result": "125 passed before fresh 2019 acquisition; freeze2 recorded before acquisition."
+}

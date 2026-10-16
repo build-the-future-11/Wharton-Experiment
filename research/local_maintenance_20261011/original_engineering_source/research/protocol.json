@@ -1,0 +1,22 @@
+{
+  "protocol_id": "FREM-P0",
+  "version": 1,
+  "status": "PROPOSED_NOT_FROZEN",
+  "question": "Does delayed utility-weighted causal spectral memory improve out-of-time predictive log score under equal information and declared resource budgets?",
+  "primary_comparison": {"candidate": "frem", "control": "no_memory", "endpoint": "mean_date_level_student_t_negative_log_likelihood", "direction": "lower_is_better", "minimum_practical_improvement_nats": 0.01},
+  "mechanism_comparisons": ["fifo_memory", "uniform_memory", "no_spectral", "no_jepa", "no_reservoir", "no_controller", "no_gate"],
+  "strong_baselines": ["zero", "ridge", "reservoir_ridge", "xgboost", "gru", "dlinear", "patch_transformer"],
+  "protected_boundary": "Must be assigned to an untouched chronological tail in config before inspecting outcomes; final values are frozen with data and code hashes.",
+  "default_seed_policy": {"development": [11, 29, 47], "confirmatory": [11, 29, 47, 71, 97], "interpretation": "Optimization randomness, not independent financial histories"},
+  "statistical_unit": "A decision date with all contemporaneous assets retained together",
+  "statistics": {"method": "paired circular moving-date-block percentile interval with a centered-bootstrap null test", "block_dates": 20, "bootstrap_repetitions": 5000, "bootstrap_seed": 1901, "confidence": 0.95, "sensitivity_block_dates": [5, 60], "multiplicity": "Holm correction for predeclared secondary mechanism family", "seed_aggregation": "Average complete predeclared seeds per observation, repeated observations per UTC date and asset, assets equally per date, then dates equally; incomplete seed families are not silently dropped"},
+  "decision_rule": {"supported": "Valid paired 95% interval for control NLL minus candidate NLL is entirely above 0.01 nats per observation, with completed declared seeds and no integrity defect", "mixed": "A predefined secondary setting improves but the primary claim does not meet its threshold; scope must be narrowed explicitly", "negative": "Valid interval upper endpoint is at or below zero", "inconclusive": "All other valid outcomes or missing planned evidence", "invalid": "Leakage, broken metric/baseline, split violation, corrupted data, or protocol mismatch"},
+  "secondary_endpoints": ["MAE", "rank correlation by decision date", "directional Brier score", "interval coverage", "interval width", "net certainty equivalent from a nonoverlapping realizable ledger", "maximum drawdown", "turnover", "liability funding shortfall", "wall time", "process peak RSS", "parameter counts", "memory occupancy and retrieval utility"],
+  "data_efficiency": {"train_date_fractions": [0.1, 0.25, 0.5, 1.0], "policy": "Use chronological suffixes of training segment only; keep validation and protected endpoints fixed; every model receives identical data"},
+  "robustness": {"input_noise_std": [0.01, 0.05], "missing_feature_probability": [0.1, 0.3], "cost_multipliers": [1.0, 2.0, 4.0], "corruption_scope": "Evaluation inputs only, features scaled by train-only statistics; labels unchanged"},
+  "ood": ["predeclared held-out market", "predeclared held-out sector", "predeclared chronological crisis/recovery intervals with real-time macro vintages"],
+  "sensitivity": {"context": [32, 64, 128], "memory_capacity": [128, 512, 2048], "spectral_bands": [4, 8, 16], "forecast_horizon": [1, 5, 20]},
+  "compute_control": "Identical information, search-trial budget and early-stopping rules; report actual gradient steps, parameters, wall time and memory. A method that needs more compute does not earn an efficiency claim merely by winning predictive score.",
+  "stopping": "No protected retries to obtain a favorable result; valid negative results are terminal for this version. Failed and invalid executions remain in the evidence ledger.",
+  "no_current_results": true
+}

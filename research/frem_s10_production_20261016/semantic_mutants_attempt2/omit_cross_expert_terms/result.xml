@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="4.056" timestamp="2026-10-16T08:26:37.327290+05:30" hostname="Ryans-Macbook-Air.local"><testcase classname="tests.test_math_audit" name="test_energy_score_cross_terms_and_law_invariance" time="0.085"><failure message="assert 1.0 == 0.5 ± 5.0e-07&#10;  &#10;  comparison failed&#10;  Obtained: 1.0&#10;  Expected: 0.5 ± 5.0e-07">def test_energy_score_cross_terms_and_law_invariance() -&gt; None:
+        """TEST-025/027/029: complementarity is lost if cross terms are omitted."""
+        atoms = np.array([[-1.0, 0, 0], [1.0, 0, 0]])
+        outcome = np.zeros(3)
+        experts = np.array([[1.0, 0], [0.0, 1], [0.5, 0.5]])
+        alpha = np.array([0.5, 0.5, 0.0])
+        coefficients = score_coefficients(atoms, experts, outcome)
+&gt;       assert coefficients.score(alpha) == pytest.approx(0.5)
+E       assert 1.0 == 0.5 ± 5.0e-07
+E         
+E         comparison failed
+E         Obtained: 1.0
+E         Expected: 0.5 ± 5.0e-07
+
+tests/test_math_audit.py:50: AssertionError</failure></testcase></testsuite></testsuites>

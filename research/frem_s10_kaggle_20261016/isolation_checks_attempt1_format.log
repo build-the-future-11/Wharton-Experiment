@@ -1,0 +1,65 @@
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/runtime/isolation.py:18:62
+   |
+17 | LINUX_PROBE_MESSAGE = (
+   -     "NETWORK_NAMESPACE_ISOLATED DATA_OUTPUTS_RESEARCH_MASKED "
+   -     "DENIED_FIXTURE_HIDDEN PROTECTED_FIXTURE_EMPTY"
+18 +     "NETWORK_NAMESPACE_ISOLATED DATA_OUTPUTS_RESEARCH_MASKED DENIED_FIXTURE_HIDDEN PROTECTED_FIXTURE_EMPTY"
+19 | )
+   |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/src/frem_s10/runtime/verification.py:125:81
+    |
+124 |         return tuple(
+    -             (name, (*prefix, *(probe if name == "boundary_probe" else command)))
+    -             for name, command in commands
+125 +             (name, (*prefix, *(probe if name == "boundary_probe" else command))) for name, command in commands
+126 |         )
+--------------------------------------------------------------------------------
+417 |             raise IntegrityError("engineering command exceeded its declared timeout plus cleanup")
+    -         rss = strict_int(
+    -             row[rss_field], name="observed command cumulative RSS", minimum=1
+    -         )
+418 +         rss = strict_int(row[rss_field], name="observed command cumulative RSS", minimum=1)
+419 |         if rss > (512 if name in ("types", "packaging", "mutations", "boundary_probe") else 256) * 2**20:
+    |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/tests/test_isolation_audit.py:160:14
+    |
+159 | @pytest.mark.parametrize(
+    -     "defect", (None, "same_namespace", "external_interface", "generic_refusal", "mask", "writable_root", "leak")
+160 +     "defect",
+161 +     (None, "same_namespace", "external_interface", "generic_refusal", "mask", "writable_root", "leak"),
+162 | )
+--------------------------------------------------------------------------------
+172 |     denied = [tmp_path / name for name in ("data", "outputs", "research")]
+    -     rows = [("/", "rootfs", "rw" if defect == "writable_root" else "ro"),
+    -             (str(work), "ext4", "rw"), (str(wheel), "ext4", "ro")]
+173 +     rows = [
+174 +         ("/", "rootfs", "rw" if defect == "writable_root" else "ro"),
+175 +         (str(work), "ext4", "rw"),
+176 +         (str(wheel), "ext4", "ro"),
+177 +     ]
+178 |     rows.extend((str(path), "tmpfs", "ro") for path in [*denied, fixture])
+--------------------------------------------------------------------------------
+192 |     monkeypatch.setattr(os, "readlink", lambda path: "net:[1]" if defect == "same_namespace" else "net:[2]")
+    -     monkeypatch.setattr(socket, "if_nameindex", lambda: [(1, "eth0" if defect == "external_interface" else "lo")])
+193 |     monkeypatch.setattr(
+    -         socket, "socket", lambda: _NoRouteSocket(errno.ECONNREFUSED if defect == "generic_refusal" else errno.ENETUNREACH)
+194 +         socket, "if_nameindex", lambda: [(1, "eth0" if defect == "external_interface" else "lo")]
+195 +     )
+196 +     monkeypatch.setattr(
+197 +         socket,
+198 +         "socket",
+199 +         lambda: _NoRouteSocket(errno.ECONNREFUSED if defect == "generic_refusal" else errno.ENETUNREACH),
+200 |     )
+    -     monkeypatch.setattr(sys, "argv", ["probe", "net:[1]", str(work), str(wheel), *(str(path) for path in denied)])
+201 +     monkeypatch.setattr(
+202 +         sys, "argv", ["probe", "net:[1]", str(work), str(wheel), *(str(path) for path in denied)]
+203 +     )
+204 |     if defect == "leak":
+    |
+
+3 files would be reformatted

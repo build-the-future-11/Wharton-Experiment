@@ -1,0 +1,104 @@
+\section{Completed public exploratory studies}
+These studies are distinct from the proposed canonical confirmation and from the synthetic fixture above. They use public current-survivor histories, current-vintage adjustments and research-coordinate timestamps. They do not establish historical eligibility, executable global holdings, or investment profitability. No protected 2025 onward outcomes were accessed. Valid completed protocols are closed; no favorable arm replaces a predeclared primary.
+
+\subsection{S2: improved fitting without a memory advantage}
+The S2 campaign completed 22 learned fits and 24 prediction cells on 23 survivor stocks, 19 crisis months and two optimization seeds. Lower Student-t NLL is better. These are date-balanced descriptive scores; no significance test was performed. Both seeds selected zero residual-memory correction.
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Model & NLL \\
+\midrule
+legacy\_frem & -0.490295 \\
+legacy\_no\_memory & -0.481158 \\
+standardized\_frem & -0.559094 \\
+standardized\_no\_memory & -0.558770 \\
+frozen\_residual & -0.603182 \\
+frozen\_no\_memory & -0.603182 \\
+zero & -0.709526 \\
+ridge & -0.425342 \\
+xgboost & -0.453538 \\
+gru & -0.325352 \\
+dlinear & -0.383834 \\
+patch\_transformer & -0.392630 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Scaling improved optimization relative to legacy FREM, but the zero-return control remained best. The frozen residual and memory-off successor are identical in score. This does not support a memory-benefit or state-of-the-art claim.
+
+\subsection{Six-window public slow study}
+All 24 declared fits completed: six windows, four methods, seed 11 and five neural epochs. An explicitly recorded whole-month missing-data amendment was used; the strict original zero-quote rejection and earlier failures remain preserved. These single-seed comparisons have exploratory unadjusted uncertainty. Positive gain below is no-memory NLL minus FREM NLL.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Window & FREM & No memory & Gain \\
+\midrule
+great\_recession & -0.489055 & -0.451771 & +0.037284 \\
+recovery & -1.196772 & -1.161821 & +0.034950 \\
+year\_2011 & -1.235244 & -1.231032 & +0.004212 \\
+years\_2015\_2016 & -1.115238 & -1.082327 & +0.032911 \\
+year\_2020 & -0.784608 & -0.792614 & -0.008006 \\
+year\_2022 & -0.981086 & -1.019331 & -0.038245 \\
+\bottomrule
+\end{tabular}
+\end{center}
+FREM improved point NLL in four windows and worsened in 2020 and 2022. There is no pooled confirmatory or profitability conclusion.
+
+\subsection{S3: primary memory result and uncertainty}
+S3 freezes a calibrated base and applies causal delayed, versioned residual replay. It completed 24 learned public fits, 12 constant-baseline cells and 15 generated mechanism cells. The public sample contains twelve US current-survivor stocks, with 144 asset-month outcomes in January--December 2023 and 120 in January--October 2024. Seeds 11, 29 and 47 are optimization repeats, averaged before date-level inference. The primary remains combined memory versus the identical calibrated memory-off base. The practical threshold is 0.01 nats.
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Window & Gain & Exploratory 95\% interval & Months \\
+\midrule
+2023 & -0.014116 & [-0.036455, +0.006302] & 12 \\
+2024 & +0.007006 & [-0.007940, +0.022561] & 10 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Both three-month block intervals include zero and fail the practical-support criterion. The declared family retains Holm adjustment. The 2024 six-month sensitivity is unavailable because ten months cannot supply two six-month blocks; no block was shortened to force a result.
+
+\subsection{Complete S3 memory arms}
+The following gains use the same calibrated checkpoint with memory off as control. No tested arm improved both windows. Secondary point gains do not replace the primary comparison.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Arm & 2023 gain & 2024 gain \\
+\midrule
+off & +0.000000 & +0.000000 \\
+frozen & +0.000000 & +0.000000 \\
+recent & -0.000705 & +0.000000 \\
+random & -0.010605 & +0.006841 \\
+mean & -0.010366 & +0.008279 \\
+risk & +0.002436 & -0.001244 \\
+combined & -0.014116 & +0.007006 \\
+no\_confidence & -0.021568 & +0.003633 \\
+balanced & -0.014116 & +0.007006 \\
+larger & -0.005289 & +0.012700 \\
+dual & -0.006473 & +0.013683 \\
+cross\_asset & +0.007388 & -0.001506 \\
+learned & -0.006754 & +0.000564 \\
+utility & -0.002627 & +0.002309 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection{Base controls and calibration}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Model & 2023 NLL & 2024 NLL \\
+\midrule
+frem/off & -1.345176 & -1.437064 \\
+no\_jepa/off & -1.349918 & -1.447446 \\
+ridge/off & -1.255116 & -1.247335 \\
+xgboost/off & -1.209832 & -1.334934 \\
+zero/off & -1.254592 & -1.361529 \\
+historical\_mean/off & -1.271172 & -1.393529 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Raw FREM before extra calibration scored -1.354994 and -1.455920. Extra calibration worsened both windows. The no-JEPA control also had better point scores than calibrated FREM in both windows. These observations do not establish causal attribution or authorize retrospective primary selection.
+\subsection{Mechanism evidence and failure diagnosis}
+Generated recurrence demonstrates behavior under planted information, not financial predictability. Its retrieval keys directly include the planted regime state. The null showed small harm within the declared tolerance. In real S3 predictions, retrieval and nonzero gates execute; selected corrections fail to transfer consistently. A later descriptive audit identifies tiny validation advantages, old base/calibration blocks and nearly flat within-neighbor similarity weighting. For unit-normalized 103-dimensional keys, mean squared distance is at most $4/103$, so $\exp(-d)$ is at least 0.9619. This is a scale-design concern, not proof that the completed experiment is invalid. A successor must test altered distance scaling and recent chronological fitting separately, retaining zero correction and matched-random controls.
+
+\subsection{Provenance and evidence boundary}
+Tables are generated directly from retained S2, slow-study and S3 JSON summaries by \path{research/checklist_completion_20261012/generate_paper_results.py}. Their input identities are saved in \path{research/checklist_completion_20261012/table_sources.json}. Raw predictions, freezes, calibration choices, failed attempts and source archives remain in their original run directories. The S3 receipt records 217 regression passes, not a fresh test run for this paper edit. Independent score reconstruction is distinct from retraining. Canonical confirmation, independent training reproduction, broad robustness and executable portfolio evidence remain incomplete.

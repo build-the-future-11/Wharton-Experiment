@@ -1,0 +1,9 @@
+{
+  "observation": "Attempt1 supervisor failed before outputs because sandbox denies ps. No mechanism or market outputs exist; failure and exact source snapshot retained.",
+  "hypothesized_cause": "Process inspection unavailable in sandbox; implementation monitoring incompatibility.",
+  "change": "Use SIGALRM getrusage self peak checks every50ms and parent wall timer. Same128MiB/300second ceilings. No scientific setting changes.",
+  "predicted_effect": "Enforce original resource cap without external process inspection.",
+  "discriminating_experiment": "New uniquely named attempt2 with new source freeze, unchanged scientific specification and tests.",
+  "result": "PRE_EXECUTION_INFRASTRUCTURE_REPAIR",
+  "status": "FAILED_ATTEMPT_PRESERVED"
+}

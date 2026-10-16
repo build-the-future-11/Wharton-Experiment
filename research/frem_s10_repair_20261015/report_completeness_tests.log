@@ -1,0 +1,65 @@
+F..F......                                                               [100%]
+=================================== FAILURES ===================================
+___ test_report_retains_all_comparisons_and_rejects_unsupported_claim_scope ____
+
+    def test_report_retains_all_comparisons_and_rejects_unsupported_claim_scope() -> None:
+        study = assess_study((fold("A"), fold("B")), integrity_verified=True, complete_matrix=True)
+        ablations = assess_ablations((ablation_fold("A", 24), ablation_fold("B", 24)))
+>       text = render_statistics(study, ablations, evidence_sha256="a" * 64, scope="GENERATED_ENGINEERING")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_report_audit.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/analysis/report.py:127: in render_statistics
+    _validate_completeness(study, ablations)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+study = StudyResult(disposition='SUPPORTED', h1=HypothesisResult(status='PASS', comparisons=(Comparison(control='global_stack'...UTHORITY_UNVERIFIED', original_nll_hypothesis_satisfied=False, confirmation_claim=False, profitability_guarantee=False)
+ablations = AblationResult(comparisons=(AblationComparison(ablation_id='A1', block=2, fold_means=(0.10000000000000009, 0.300000000...evidence_scope='COMPUTATIONAL_STATISTICS_SOURCE_AUTHORITY_UNVERIFIED', confirmation_claim=False, changes_primary=False)
+
+    def _validate_completeness(study: StudyResult, ablations: AblationResult) -> None:
+        expected = {(f"A{number}", block) for number in range(1, 9) for block in (2, 4)}
+        actual = [(row.ablation_id, row.block) for row in ablations.comparisons]
+        if len(actual) != 16 or set(actual) != expected:
+            raise ContractError("report requires all sixteen distinct ablation comparisons")
+        if study.disposition == "INVALID":
+            if study.h1 is not None or study.h2 is not None or study.h3 or study.bootstrap or not study.reason:
+                raise ContractError("invalid study must retain its reason without unsupported primary endpoints")
+            return
+        if study.h1 is None or study.h2 is None or tuple(row.fold_id for row in study.h3) != ("A", "B"):
+>           raise ContractError("complete H1/H2 and ordered A/B descriptive utility required")
+E           frem_s10.errors.ContractError: complete H1/H2 and ordered A/B descriptive utility required
+
+successors/frem_s10/src/frem_s10/analysis/report.py:73: ContractError
+_______ test_report_rejects_missing_or_duplicate_required_rows[drop-h3] ________
+
+part = 'h3', mutation = 'drop'
+
+    @pytest.mark.parametrize("part", ("h1", "h2", "h3", "ablations"))
+    @pytest.mark.parametrize("mutation", ("drop", "duplicate"))
+    def test_report_rejects_missing_or_duplicate_required_rows(part: str, mutation: str) -> None:
+        study = assess_study((fold("A"), fold("B")), integrity_verified=True, complete_matrix=True)
+        ablations = assess_ablations((ablation_fold("A", 24), ablation_fold("B", 24)))
+        if part in ("h1", "h2"):
+            hypothesis = study.h1 if part == "h1" else study.h2
+            assert hypothesis is not None
+            rows = hypothesis.comparisons
+            changed = rows[:-1] if mutation == "drop" else (rows[0], *rows[:-1])
+            hypothesis = replace(hypothesis, comparisons=changed)
+            study = replace(study, h1=hypothesis) if part == "h1" else replace(study, h2=hypothesis)
+        elif part == "h3":
+            utilities = study.h3[:-1] if mutation == "drop" else (study.h3[0], study.h3[0])
+            study = replace(study, h3=utilities)
+        else:
+            comparisons = ablations.comparisons
+            comparisons = comparisons[:-1] if mutation == "drop" else (comparisons[0], *comparisons[:-1])
+            ablations = replace(ablations, comparisons=comparisons)
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_report_audit.py:63: Failed
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_report_audit.py::test_report_retains_all_comparisons_and_rejects_unsupported_claim_scope
+FAILED successors/frem_s10/tests/test_report_audit.py::test_report_rejects_missing_or_duplicate_required_rows[drop-h3]
+2 failed, 8 passed in 0.42s

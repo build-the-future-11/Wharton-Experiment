@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-14T14:52:54.949445+00:00",
+  "source": "legacy/wharton_lab_v0/data/manifests/DATA_MANIFEST.yaml",
+  "sha256": "3d8a68fb3a431c4a9a00f0b9772c869109ff6673d247b36164cf9d58e6da7771",
+  "finding": "Legacy ETF cache metadata lists SPY and GLD as feature columns from 2020 onward; legacy label asset inferred AGG. No legacy price values or protected outcomes read in this check.",
+  "consequence": "The 2020-2022 evaluation is newly acquired and held out from S6/S7 fitting/selection, but cannot be described as globally untouched data in this repository. This is a development successor, not independent confirmation.",
+  "protocol_change": false,
+  "2019_tuning": false
+}

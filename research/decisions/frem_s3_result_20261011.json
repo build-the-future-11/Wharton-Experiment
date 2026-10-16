@@ -1,0 +1,8 @@
+{
+  "observation": "S3 generated recurrence tests pass, but combined public memory gains are -0.014116 in 2023 and +0.007006 in 2024, both intervals include zero. No memory arm improves both. Extra base calibration also worsens both fresh windows.",
+  "hypothesized_cause": "Validation-selected corrections/calibration do not transfer consistently; market recurrence not established. No post-outcome causal attribution or tuning.",
+  "change": "Close this fixed S3 exploratory protocol; preserve all artifacts and retain canonical protected boundary.",
+  "predicted_effect": "No further runs under the completed protocol to manufacture support.",
+  "discriminating_experiment": "Completed frozen mechanism/public matrix, all seeds and arms retained.",
+  "result": "research/frem_s3_20261011/completion_receipt.json"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "FAILED",
+  "reason": "Audit assumed per-period sums exhaust terminal wealth; inspecting liquidation fee treatment",
+  "largest_residual": [
+    382.144994602495,
+    [
+      "full_width8",
+      "40",
+      "equal_weight",
+      "balance",
+      {
+        "time": 1545652800.0,
+        "end": 1546257600.0,
+        "nav_start": 93930.14980069484,
+        "nav_end": 95154.10365602063,
+        "fee": 16.69517512307175,
+        "notional": 4173.793780767937,
+        "weights": {
+          "SPY": 0.3333333333333333,
+          "TLT": 0.3333333333333333,
+          "GLD": 0.3333333333333333
+        },
+        "cash": 0.0,
+        "holdings": {
+          "SPY": 32682.176156498455,
+          "TLT": 31180.43617269235,
+          "GLD": 31673.636321432314
+        },
+        "net_factor": 1.0130304684696323,
+        "liquidation_fee": 382.1449946024925
+      }
+    ]
+  ]
+}

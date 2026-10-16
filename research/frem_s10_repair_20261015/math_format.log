@@ -1,0 +1,5 @@
+ENGINEERING_ONLY; constructed arrays, no market values.
+['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python', '-B', '-m', 'ruff', 'format', '--check', 'successors/frem_s10/src/frem_s10/math', 'successors/frem_s10/src/frem_s10/portfolio/actions.py', 'successors/frem_s10/tests/test_math_audit.py', 'successors/frem_s10/tests/test_actions_audit.py']
+9 files already formatted
+
+exit_code=0

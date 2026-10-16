@@ -1,0 +1,260 @@
+"""Explicit local research operations with immutable evidence and fail-closed admission."""
+
+from __future__ import annotations
+
+import argparse
+import json
+from importlib.resources import files
+from pathlib import Path
+
+from frem_s10.errors import ExecutionStateError, IntegrityError, ResourceLimitError, S10Error
+from frem_s10.identities import canonical_bytes, checked_json, digest_bytes, object_json, parse_json
+from frem_s10.runtime.artifacts import publish_json
+from frem_s10.runtime.resources import check_host
+
+
+def plan(manifest: Path) -> dict[str, object]:
+    """Validate exact design bytes semantically and enumerate all proposed cells.
+
+    Reads only the explicit metadata document, never source financial values.
+    A plan does not grant scientific execution or certify implementation.
+    """
+    payload = manifest.read_bytes()
+    declaration = object_json(parse_json(payload))
+    expected = object_json(parse_json(files("frem_s10").joinpath("science.json").read_bytes()))
+    if canonical_bytes(declaration) != canonical_bytes(expected):
+        raise S10Error("manifest must match the declared S10 design; changes need a recorded design revision")
+    forecasts = declaration["forecast_arms"]
+    policies = declaration["policy_arms"]
+    benchmarks = declaration["benchmarks"]
+    ablations = declaration["ablations"]
+    assert isinstance(forecasts, list) and isinstance(policies, list)
+    assert isinstance(benchmarks, list) and isinstance(ablations, list)
+    cells: list[str] = []
+    for fold in ("A", "B"):
+        for cost in (0, 10, 20, 40):
+            cells.extend(f"{fold}/strategy/{f}/{p}/{cost}" for f in forecasts for p in policies)
+            cells.extend(f"{fold}/benchmark/{b}/{cost}" for b in benchmarks)
+        cells.extend(f"{fold}/ablation/{a}/10" for a in ablations)
+    return {
+        "status": "PLAN_ONLY",
+        "manifest_sha256": digest_bytes(payload),
+        "cells": cells,
+        "planned_ledgers": len(cells),
+        "market_fits": 0,
+        "market_ledgers": 0,
+        "protected_access": False,
+        "scientific_freeze": False,
+        "scientific_status": "NOT_EVALUATED",
+        "execution_available": False,
+        "implemented_operations": [
+            "admit",
+            "freeze",
+            "prepare-precision",
+            "run",
+            "qualify",
+            "audit",
+            "report",
+            "advance",
+        ],
+        "execution_route_status": "IMPLEMENTED_REQUIRES_EXACT_ADMISSION",
+        "remaining_gates": [
+            "S10 source/calendar admission",
+            "complete engineering verification",
+            "pre-2010 precision",
+            "passing full-scale qualification and saved-output scientific audit",
+            "exact source/data/environment freeze",
+            "untouched confirmation and independent reproduction",
+        ],
+    }
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Dispatch explicit manifests; real work always passes the fixed production gate."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+    planner = sub.add_parser("plan", help="validate exact design and enumerate the proposed matrix")
+    planner.add_argument("--manifest", type=Path, required=True)
+    _engineering_parsers(sub)
+    for command in (planner, sub.add_parser("check-host", help="read host memory without model imports")):
+        command.add_argument(
+            "--output", type=Path, help="new receipt in an existing directory; never overwritten"
+        )
+    for name in ("admit", "freeze", "prepare-precision", "run", "qualify", "audit", "report", "advance"):
+        command = sub.add_parser(name)
+        command.add_argument("--manifest", type=Path, required=True)
+        if name in ("prepare-precision", "run", "qualify", "advance", "audit"):
+            command.add_argument("--execute", action="store_true", required=True)
+    args = parser.parse_args(argv)
+    try:
+        result = (
+            _engineering(args)
+            if args.command == "preflight" or args.command.startswith("smoke")
+            else (_dispatch(args.command, getattr(args, "manifest", None)))
+        )
+        if getattr(args, "output", None) is not None:
+            publish_json(args.output.parent, args.output.name, checked_json(result))
+        print(json.dumps(result, indent=2, allow_nan=False))
+        return _result_exit(result)
+    except ResourceLimitError as exc:
+        print(json.dumps({"status": "RESOURCE_REJECTED", "error": str(exc)}))
+        return 3
+    except ExecutionStateError as exc:
+        print(json.dumps({"status": "CONSUMPTION_REFUSED", "error": str(exc)}))
+        return 5
+    except (S10Error, OSError) as exc:
+        print(json.dumps({"status": "REJECTED_UNCONSUMED", "error": str(exc)}))
+        return 2
+
+
+def _engineering_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser]) -> None:
+    preflight = sub.add_parser("preflight", help="portable metadata observations; no scientific admission")
+    preflight.add_argument("--device", choices=("cpu", "cuda", "mps"), default="cpu")
+    preflight.add_argument("--output", type=Path)
+    smoke_plan = sub.add_parser("smoke-plan", help="enumerate a finite generated engineering manifest")
+    smoke_plan.add_argument("--manifest", type=Path, required=True)
+    for name in ("smoke", "smoke-resume"):
+        command = sub.add_parser(
+            name, help="generated CPU kernel exercise; cannot read or resume market runs"
+        )
+        command.add_argument("--manifest", type=Path, required=True)
+        command.add_argument("--directory", type=Path, required=True)
+        command.add_argument("--stop-after", type=int, help="stop at a completed-origin checkpoint")
+        command.add_argument("--execute", action="store_true", required=True)
+    for name in ("smoke-evaluate", "smoke-export"):
+        command = sub.add_parser(name, help="verify saved generated checkpoints without refitting")
+        command.add_argument("--directory", type=Path, required=True)
+        if name == "smoke-export":
+            command.add_argument("--archive", type=Path, required=True)
+
+
+def _result_exit(result: dict[str, object]) -> int:
+    state = result.get("state", result.get("status"))
+    return {
+        "BLOCKED": 3,
+        "REJECTED_UNCONSUMED": 3,
+        "FAILED": 6,
+        "FAILED_CONSUMED": 6,
+        "BUDGET_EXCEEDED": 7,
+        "INTERRUPTED": 130,
+        "PARTIAL": 4,
+    }.get(str(state), 0)
+
+
+def _engineering(args: argparse.Namespace) -> dict[str, object]:
+    if args.command == "preflight":
+        from frem_s10.runtime.preflight import preflight
+
+        return dict(preflight(args.device))
+    if args.command == "smoke-plan":
+        from frem_s10.runtime.smoke_contract import smoke_plan
+
+        return dict(smoke_plan(args.manifest))
+    if args.command == "smoke-export":
+        from frem_s10.runtime.smoke_export import export_smoke
+
+        return dict(export_smoke(args.directory, args.archive))
+    if args.command == "smoke-evaluate":
+        from frem_s10.runtime.smoke import evaluate_smoke
+
+        return dict(evaluate_smoke(args.directory))
+    from frem_s10.runtime.smoke import run_smoke
+
+    return dict(
+        run_smoke(
+            args.manifest,
+            args.directory,
+            resume=args.command == "smoke-resume",
+            stop_after=args.stop_after,
+        )
+    )
+
+
+def _dispatch(command: str, manifest: Path | None) -> dict[str, object]:
+    if command == "check-host":
+        return check_host()
+    if manifest is None:
+        raise IntegrityError("explicit operation manifest required")
+    if command == "plan":
+        return plan(manifest)
+    if command == "advance":
+        from frem_s10.runtime.continuation import advance
+
+        return dict(advance(manifest))
+    if command == "audit":
+        from frem_s10.runtime.saved_audit import run_saved_audit
+
+        return dict(run_saved_audit(manifest))
+    if command == "qualify":
+        from frem_s10.runtime.qualification import run_qualification
+
+        return dict(run_qualification(manifest))
+    if command in ("prepare-precision", "run"):
+        from frem_s10.runtime.pipeline import run_declared
+
+        return dict(
+            run_declared(
+                manifest,
+                expected_operation="prepare-precision"
+                if command == "prepare-precision"
+                else "development-campaign",
+            )
+        )
+    if command in ("admit", "freeze"):
+        return _prepare(command, manifest)
+    return _saved(command, manifest)
+
+
+def _prepare(command: str, manifest: Path) -> dict[str, object]:
+    from frem_s10.runtime.declarations import _schema
+
+    request = _schema(
+        parse_json(manifest.read_bytes()),
+        {"schema", "request", "artifact_root", "source_root", "consumption_root", "output_name"},
+        "preparation manifest",
+    )
+    if request["schema"] != "s10-preparation-manifest-v1":
+        raise IntegrityError("exact preparation manifest required")
+    kwargs = {
+        "artifact_root": Path(str(request["artifact_root"])),
+        "source_root": Path(str(request["source_root"])),
+    }
+    reference: object
+    if command == "admit":
+        from frem_s10.data.production import create_source_admission
+
+        reference = create_source_admission(
+            Path(str(request["request"])), **kwargs, output_name=str(request["output_name"])
+        )
+    else:
+        from frem_s10.runtime.pipeline import create_declaration
+
+        reference = create_declaration(
+            Path(str(request["request"])),
+            **kwargs,
+            consumption_root=Path(str(request["consumption_root"])),
+            output_name=str(request["output_name"]),
+        )
+    return {"status": "COMPLETE", "operation": command, "reference": reference, "scientific_execution": False}
+
+
+def _saved(command: str, manifest: Path) -> dict[str, object]:
+    from frem_s10.runtime.claims import read_saved_report
+    from frem_s10.runtime.declarations import _schema
+
+    request = _schema(
+        parse_json(manifest.read_bytes()),
+        {"schema", "directory", "sha256", "output_directory"},
+        "saved evidence operation",
+    )
+    if request["schema"] != "s10-saved-evidence-request-v1":
+        raise IntegrityError("exact saved-evidence manifest required")
+    directory, output = Path(str(request["directory"])), Path(str(request["output_directory"]))
+    output.mkdir(exist_ok=False)
+    report, claims = read_saved_report(directory, str(request["sha256"]))
+    identity = publish_json(output, "report.json", report)
+    return {"status": "COMPLETE", "report_sha256": identity, "scientific_execution": False, "claims": claims}
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

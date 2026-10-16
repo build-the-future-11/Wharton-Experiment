@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "scripts.run_frem_s3",
+    "--output",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1",
+    "--stage",
+    "mechanism",
+    "--family",
+    "missing_delayed",
+    "--seed",
+    "101"
+  ],
+  "returncode": 0,
+  "termination": null,
+  "elapsed_seconds": 14.344256249984028,
+  "sampled_peak_rss_mib": 152.53125,
+  "rss_ceiling_mib": 768,
+  "wall_ceiling_seconds": 360,
+  "threads": 1,
+  "nice": 10,
+  "memory_snapshot_after": {
+    "available_mib": 191.375,
+    "pageouts": 932411
+  }
+}

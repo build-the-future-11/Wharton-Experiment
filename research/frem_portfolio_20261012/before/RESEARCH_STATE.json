@@ -1,0 +1,570 @@
+{
+  "project": "FREM: Causal Fourier-Reservoir Engram Memory",
+  "version": "0.1.1-runtime-gated",
+  "created": "2026-10-10",
+  "updated": "2026-10-12",
+  "phase": "frem_s4_development_complete_memory_rejected_by_validation",
+  "scientific_status": "NOT_EVALUATED",
+  "global_crisis_request": {
+    "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
+    "priority": "Worldwide historical equities, especially the 2007-2009 crisis and calendar 2008",
+    "readiness_record": "research/global_equity_crisis_readiness_2026-10-11.json",
+    "market_cells_started": 0,
+    "required_input": "Historical market export or accessible provider including inactive securities, terminal outcomes, corporate actions, timestamps, historical membership and FX",
+    "required_implementation": "Explicit terminal-loss treatment, named-date fold orchestration, global portfolio accounting and measured scalable execution"
+  },
+  "public_crisis_study": {
+    "status": "AMENDED_SLOW_EXPLORATORY_MATRIX_COMPLETE",
+    "scope": "Retrospective public sample of 24 currently listed stocks across 12 listing markets; worldwide completeness is not claimed",
+    "receipt": "research/public_equity_intake_2026-10-11.json",
+    "configuration": "configs/public_equity_crises.json",
+    "data_manifest": "data/public_equity_crises_v1/manifest.json",
+    "market_cells_completed": 24,
+    "new_runtime_tests": "Six original adapter tests now passed within the 194-test FREM suite. Original strict campaign still rejects the ENB.TO zero quote; the separate S2 study used a recorded whole-month missing-data amendment.",
+    "canonical_market_admission": false,
+    "related_successor_execution": "research/frem_rebuild_20261011/completion_receipt_v2.json",
+    "execution_receipt": "outputs/public_equity_slow_20261011_attempt1/completion_receipt.json",
+    "data_amendment": "Separate slow campaign extends recorded all-zero entire-month quarantine; strict original adapter and failed attempts unchanged."
+  },
+  "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
+  "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
+  "compute_authorized_this_session": "User explicitly authorized remaining public experiments under S2-style slow limits. Completed six folds times four methods, seed11, five epochs, batch32, nice10, one worker/thread, 768 MiB sampled RSS ceiling; maximum observed 386.65625 MiB. Normal memory gate failure retained as authorized deviation.",
+  "development_budget_proposed": {
+    "max_trials": 24,
+    "max_wall_clock_hours": 12,
+    "status": "authorized_but_unspent_data_blocked",
+    "interpretation": "The optional robustness suite remains a separately declared 36-trial/12-hour market matrix. A separate four-cell synthetic engineering matrix completed and does not consume or satisfy this scientific development budget."
+  },
+  "protected_evaluation": {
+    "status": "not accessed",
+    "freeze_required": true
+  },
+  "claims": {
+    "novelty": "candidate; not established",
+    "performance": "FREM-S2 exploratory public crisis NLL improved over legacy FREM and the trained local controls; a zero-return control remained best. Both seeds selected zero residual correction. No SOTA, admitted-market, confirmatory or profitability claim. Separate six-window public slow study completed: FREM point NLL improved against no-memory in four windows and worsened in 2020/2022; exploratory single-seed results with unadjusted intervals only. FREM-S3 completed a separately frozen fresh-public-sample study: combined memory worsened 2023 by 0.014116 nats and improved Jan-Oct2024 by 0.007006, both paired intervals include zero. No memory arm improved both windows; extra calibration worsened both. Generated recurrence gain does not establish financial predictability. No protected confirmation or profitability claim.",
+    "profitability": "unproven",
+    "data_efficiency": "hypothesis only",
+    "current_watchlist": "fundamentals-based provisional GYIC research ranking; not a FREM prediction or approved allocation"
+  },
+  "decisions": [
+    "Keep original negative and failed results",
+    "Never assume recession certainty",
+    "No live trading",
+    "Separate model research from Laura-specific mandate certification",
+    "Do not substitute casual adjusted-close downloads for the canonical point-in-time data contract",
+    "Do not rerun the spent legacy lockbox or the completed one-path synthetic amendment",
+    "Publish the 2026-10-11 stock ranking only as a provisional watchlist pending the team-only approved universe",
+    "Treat the successor RE-JEPA v0.3 synthetic run as engineering compatibility evidence only; it does not unlock market, protected, or competition claims",
+    "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
+    "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
+    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result",
+    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request",
+    "Following the user's public-only access clarification, treat the 24-stock public crisis study as exploratory retrospective evidence with explicit survivor/revision/timing limits and separate local-currency ledgers",
+    "Use the retained loss diagnosis to distinguish numerical failure from causal training hypotheses; do not retune the completed synthetic result or equate arithmetic parameter swaps with new experiments",
+    "Treat FREM-S2 as an additive development successor: train-only output units, frozen-base later-holdout residuals and validation NLL calibration. Preserve original negative evidence. Accept zero memory benefit and the stronger zero-return control in the completed fixed matrix; do not iterate on this evaluated crisis fold to manufacture a win.",
+    "User-directed slow execution below the normal 512 MiB floor was a recorded deviation, not a passing normal admission check. Preserve the original zero-quote rejection and the exploratory-only whole-month missing-data amendment; do not infer historical holiday status or rule out a terminal loss."
+  ],
+  "failures": [
+    {
+      "date": "2026-10-11",
+      "stage": "dependency_install",
+      "status": "resolved_infrastructure_failure",
+      "detail": "Initial uv install failed because the OS temporary volume filled while extracting PyTorch. The disposable task cache was removed and the cache was relocated to PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "runtime_tests_attempt_1",
+      "status": "retained_infrastructure_failure",
+      "detail": "151 tests passed and 12 tests errored during tmp_path setup because the OS temporary volume could not create directories. The unchanged suite passed 163/163 with TMPDIR on PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "first_execution",
+      "status": "blocked_before_model_execution",
+      "detail": "data/raw/panel.parquet is absent. Zero model cells started and no protected outcomes were accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "deprecation_cleanup_attempt",
+      "status": "retained_failed_regression_attempt",
+      "detail": "An initial duration-parser warning repair caused 32 failures with 131 passes because constructing pandas Timedelta values still entered the deprecated NumPy conversion path. The defect was corrected with fixed-frequency offsets and explicit NumPy timedeltas; the full 163-test suite then passed with DeprecationWarning treated as an error."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "package_build_cleanup_attempt",
+      "status": "resolved_environment_failure",
+      "detail": "The first no-isolation builds failed before artifact creation because wheel was absent. wheel 0.48.0 was installed into the ignored local environment and all three package wheel/source builds then passed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "data_admission_search",
+      "status": "blocked_before_model_execution",
+      "detail": "Local repositories, indexed user files, connected Google Drive, and configured-provider credentials contained no canonical point-in-time panel and manifest. Two Yahoo-derived candidates were rejected for explicit timestamp, actions, eligibility, survivorship, license/provenance, and terminal-outcome gaps. Zero model cells started."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "engineering_panel_generation_attempt_1",
+      "status": "retained_repaired_warning",
+      "detail": "The first generator invocation completed but emitted pandas and NumPy deprecation warnings for Timedelta construction. The generator was repaired to use explicit NumPy timedeltas; the deterministic output was preserved rather than overwritten."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s2_integrity_attempt1",
+      "status": "retained_repaired_compatibility_failure",
+      "detail": "191 passed and two public-adapter tests failed on implicit NumPy duration conversion. Replaced with explicit two-day timedelta; later 194-test full suite passed. outputs/frem_s2_development_20261011_attempt1"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s2_data_attempt2",
+      "status": "retained_data_rejection_before_fit",
+      "detail": "All-zero ENB.TO OHLC/adjusted close/volume on 2003-05-19 rejected by strict adapter before any fit. Recorded exploratory-only entire-month quarantine as missing, no forward fill, no claim that terminal loss is ruled out. All raw data and failed receipt preserved. outputs/frem_s2_development_20261011_attempt2"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s3_integrity_attempt2",
+      "status": "retained_repaired_before_research_outcomes",
+      "detail": "15 passed / 4 failed: hardcoded horizon mismatch and descriptor float32/float64 checkpoint difference. Infer horizon and use consistent float64 preprocessing; then 19 S3 tests and full 217-test suite passed. research/frem_s3_20261011/integrity_attempt2"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "historical_synthetic_audit_against_live_source",
+      "status": "retained_and_resolved_with_exact_historical_source",
+      "detail": "The original run audit rejected modified live model.py/training.py hashes. Recovered all 36 original source/config files from Git 09268ecb01ac645eeee18cc9fcbc6db247b6ec89 and passed the unchanged data/score checks against their exact saved hashes; first failure log retained under research/local_maintenance_20261011/engineering_audit_attempt1.log."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-10",
+      "event": "Research restart requested; source protocol preserved; implementation contract specified before coding."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Recovered current Laura case reproduction and preserved earlier reported negative memory evidence; no new experiments executed."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Integrated independent source review corrections; preserved 130 authored unrun test functions; rendered and visually reviewed the 21-page methods/protocol manuscript. No empirical evaluation performed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Installed a resolved Python 3.12 environment, passed 163 runtime tests and package build, retained the first temp-volume failure, planned all declared matrices, attempted the four-cell compatibility run, and stopped before fitting because the canonical market panel is absent. Legacy invalid/negative/null evidence was reconciled without reruns."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Advanced the clean successor under successors/rejepa_v1 to v0.3: tightened validation and mathematical contracts, replaced heuristic scenario CVaR with an exact linear program, added causal retrieval and streaming-residual controls, generated an explicitly non-scientific deterministic engineering fixture, completed two identical numerical smoke runs using canonical tensor-state hashes, passed 67 successor tests and package verification, and retained the admitted-market-data and official-rules block. No protected outcome was defined or accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Created the additive RENG-JEPA v0.1 manuscript lineage under successors/reng_jepa_v01 without rewriting FREM or RE-JEPA. The current implementation passed 43 integrity/mathematical/accounting tests and a four-fixture synthetic engineering matrix; both earlier implementation failures were retained and repaired. All fixtures are labeled non-scientific, untrained collapse diagnostics remain visible, no market or protected data was accessed, and full development execution remains blocked on admitted data and resource headroom."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Reconciled the repository into explicit FREM, RE-JEPA v0.3, RENG-JEPA v0.1, and byte-preserved legacy boundaries; passed 163, 67, and 45 tests respectively with deprecations treated as errors; passed full-scope Ruff and all three package builds; and verified graph and funding optimizations against scalar references. Synthetic timing evidence is engineering-only and scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Searched local repositories, indexed user files, connected Google Drive, and configured provider credentials for a runnable market panel. Rejected the available Yahoo adjusted-close and monthly-return candidates under the declared information/provenance contract. No dataset was relabeled, no model cell started, and no protected outcome was accessed; the exact intake audit is research/data_admission_audit_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "After explicit user execution authorization and resource admission, generated an explicitly synthetic Yahoo-calibrated engineering fixture and completed 10 bounded cells: four FREM compatibility cells, two RE-JEPA v0.3 cells, and four RENG-JEPA v0.1 regimes. FREM was worse than no-memory on the synthetic fixture and that negative result was preserved. No admitted-market, robustness, confirmatory, protected, portfolio, or competition execution occurred; scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all-world equity backtests, especially 2008. Rechecked missing canonical data and provider environment access, inspected terminal-loss, split and global-ledger limitations, verified historical recession announcement dates and candidate provider scope, and recorded proposed crisis windows and exact blockers. No new market cells ran and no protected outcomes were accessed. Receipt: research/global_equity_crisis_readiness_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User clarified public/free access only. Predeclared a separate retrospective 24-stock, 12-market crisis study, downloaded all 24 histories with 158,760 daily observations and verified source hashes. Added dated monthly folds, causal input gaps, coverage receipts, local-stock cost accounting and six authored tests. Static checks passed; resource admission stopped execution before model import. Canonical scientific status and protected boundary are unchanged."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Acquired seven official public regional factor datasets (3,666 pre-2025 monthly rows), independently recomputed four retained synthetic cells, passed 12 offline audit/parser tests, and updated/compiled/visually reviewed the 23-page paper and source review archive. Preserved the original manuscript, negative evidence and earlier build/lint diagnostics. Resource checks failed at 328/254/163 MiB with rising pageouts; zero new model cells ran. No canonical protected outcomes were accessed. Scientific status remains NOT_EVALUATED and arXiv readiness false. Receipt: research/completion_20261011/COMPLETION_RECEIPT.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Diagnosed the saved negative FREM run using source-hash checks and standard-library arithmetic. All forecasts are negative; 63.12% of squared error is overall bias, and location accounts for 78.79% of the neural NLL gap in an order-averaged field-swap decomposition. The same-checkpoint memory correction improves NLL by 0.002855; the no-memory control is separately trained. Preserved controller/residual/optimization hypotheses, all comparisons and 13 passing tests; no new fit, protected access or scientific promotion."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Implemented training-target output units and diagnostics plus additive FREM-S2 frozen-base residual successor, with no legacy default/checkpoint break. Preserved two failed prefit attempts and recorded user-directed slow execution and source quarantine deviations. Passed 194 tests and changed-file lint; completed all 22 declared fits / 24 prediction cells on 23 public survivor stocks across 19 crisis months and seeds 11,29. Standardized head improved legacy NLL by 0.068799 nats; frozen successor scored -0.603182 versus zero control -0.709526. Both memory gates selected zero. Independently reconstructed every saved NLL within 1.78e-15 and verified complete pairing/source hashes. No SOTA claim or protected evaluation; canonical scientific status remains NOT_EVALUATED. Receipt: research/frem_rebuild_20261011/completion_receipt_v2.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all experiments now. Attempted original 24-cell public six-window launcher in a fresh directory; memory admission failed at 103.42/125.06/118.05 MiB with increasing pageouts before scientific imports. Zero new fits. Canonical panel and sidecar remain absent; protocol remains PROPOSED_NOT_FROZEN. Preserved completed FREM-S2 and predecessor results. Receipt: outputs/public_equity_allnow_20261011_attempt1/execution_receipt.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User explicitly authorized remaining public study under S2-style slow limits. Recorded hash-chained amendment, launched fresh 24-cell six-window campaign after integrity verification, preserving normal admission failure and whole-month zero-quote missingness. Run directory: outputs/public_equity_slow_20261011_attempt1"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Completed all 24 public slow-study fits and comparisons after 194 tests. Verified 8684 prediction rows with independent Student-t NLL reconstruction, maximum difference 1.9984e-15, and unchanged source hashes. All workers exited zero; maximum sampled model RSS 386.65625 MiB. Mixed exploratory memory comparison; no protected data or canonical admitted-market evidence. Receipt: outputs/public_equity_slow_20261011_attempt1/completion_receipt.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Audited completed S2 zero baseline versus every saved variant and seed; verified hashes, paired outcomes and reconstructed NLL. Zero won 12/19 month-level comparisons. Diagnosed location/uncertainty mismatch and validation rejection of nonzero memory. Added reporting-only calibration/retrieval diagnostics with four focused tests and lint; no new fit or performance repair claim. Decision recorded with record-decision; report research/public_zero_diagnosis_20261011/REPORT.md."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Implemented additive FREM-S3 calibrated base, delayed versioned residual replay, 14 memory controls/ablations and frozen new-sample experiment. Full217 tests pass. Completed15 generated mechanism cells,24 learned public fits plus12 constant cells (114 variant outputs), all seeds/folds retained. Primary memory effects -0.014116/+0.007006 with both intervals including zero; no memory arm improved both windows; extra calibration hurt both. Independent arithmetic verified133844 rows to2.22e-15,49 frozen sources and582 unchanged predecessor artifacts. One worker/thread,nice10,max sampled407.672MiB,12.39min. Closed fixed exploratory protocol without tuning/reruns; protected2025+ untouched. Receipt research/frem_s3_20261011/completion_receipt.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Completed local release/evidence maintenance: replaced hard-coded release PASS claims with immutable source-only inventories, hardened static JSON/package validation, recovered 36 exact original source/config files from Git and restored old synthetic audit without changing its negative result, checked S3 arithmetic plus complete seed/arm/outcome grids, and reconciled stale status pages. Passed 42 stdlib tests (25 new) and full active/successor source lint. Retained the first live-source audit mismatch. No new fits or protected access. Receipt: research/local_maintenance_20261011/RECEIPT.json."
+    }
+  ],
+  "prior_reported_evidence": [
+    {
+      "source": "docs/laura_case_evidence.json",
+      "finding": "User preparation document reports negative synthetic APEN-memory and graph-memory comparisons.",
+      "verification": "Reported history only; raw runs not independently re-audited in the source-authoring session.",
+      "interpretation": "New source implementation does not establish these failures are solved."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/RESEARCH_AUDIT.md and legacy/wharton_lab_v0/EXECUTION_STATE.json",
+      "finding": "The 1181-cell legacy matrix is leakage/degeneracy contaminated; the spent lockbox synthetic arm is invalid, the ETF arm is negative, and the repaired study is null versus historical mean.",
+      "verification": "Reconciled from retained local reports on 2026-10-11; no old lockbox rerun was performed.",
+      "interpretation": "These results cannot support a stock forecast or a positive memory claim."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/candidates/engram-reservoir-jepa-20261008/prospective/results/WHARTON-A20261008-R2-SYNTH-CV-001/FINAL_DISPOSITION.json",
+      "finding": "On one fixed synthetic path, candidate memory MSE was 9.269584365779265 percent worse than memory-off.",
+      "verification": "Retained completed receipt read on 2026-10-11; no rerun.",
+      "interpretation": "Synthetic negative evidence only; not market performance."
+    }
+  ],
+  "authoring_gates": {
+    "idea": "specified; novelty candidate, not established",
+    "model_contract": "written and statically cross-reviewed",
+    "methodology": "prospective protocol written, not frozen",
+    "model_source": "implemented; runtime compatibility verified by tests",
+    "experiment_source": "implemented; runtime compatibility verified by tests",
+    "dry_run": "synthetic engineering integration complete; admitted-market dry run remains blocked by absent canonical panel",
+    "development_matrix": "authorized but not started; admitted data absent",
+    "confirmatory_freeze": "not created",
+    "protected_evaluation": "not executed",
+    "empirical_paper": "not completed",
+    "delivery": "source, prospective manuscript, runtime receipt, and provisional current GYIC watchlist"
+  },
+  "successor_lineages": {
+    "rejepa_v1": {
+      "path": "successors/rejepa_v1",
+      "status": "fresh_engineering_matrix_complete_external_market_data_and_rules_block_scientific_execution",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "67 passed",
+      "engineering_matrix": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
+      "protected_outcomes_accessed": false
+    },
+    "reng_jepa_v01": {
+      "path": "successors/reng_jepa_v01",
+      "status": "fresh_engineering_matrix_complete_waiting_for_admitted_data_and_freeze",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "45 passed",
+      "engineering_matrix": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
+      "protected_outcomes_accessed": false
+    },
+    "frem_s2": {
+      "path": "src/frem/frozen_residual.py",
+      "specification": "research/frem_rebuild_20261011/specification.json",
+      "status": "EXPLORATORY_DEVELOPMENT_COMPLETE_MEMORY_UNSUPPORTED_ZERO_CONTROL_BEST",
+      "scientific_status": "EXPLORATORY_ONLY_NOT_CONFIRMATORY",
+      "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json",
+      "run_directory": "outputs/frem_s2_development_20261011_attempt3",
+      "fits_completed": 22,
+      "prediction_cells": 24,
+      "stocks": 23,
+      "months": 19,
+      "seeds": [
+        11,
+        29
+      ],
+      "date_balanced_nll": {
+        "legacy_frem": -0.49029534171284456,
+        "standardized_frem": -0.5590940377046204,
+        "frozen_residual": -0.6031824693860103,
+        "zero": -0.7095258233964543
+      },
+      "same_checkpoint_memory_gain_nats": 0.0,
+      "tests": "194 passed; eight new redesign/data tests",
+      "maximum_sampled_worker_rss_mib": 404.1875,
+      "sota_established": false,
+      "protected_outcomes_accessed": false
+    },
+    "frem_s3": {
+      "status": "COMPLETE_EXPLORATORY_PRIMARY_MEMORY_NOT_SUPPORTED",
+      "created_at": "2026-10-11T16:30:37.919632+00:00",
+      "report": "research/frem_s3_20261011/REPORT.md",
+      "run_directory": "outputs/frem_s3_20261011_attempt1",
+      "regression_tests_passed": 217,
+      "new_tests": 19,
+      "learned_fits": 24,
+      "constant_cells": 12,
+      "public_variant_cells": 114,
+      "mechanism_cells": 15,
+      "mechanism_arms": 14,
+      "primary_gains": {
+        "fresh_2023": {
+          "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+          "estimate": -0.014116494092332047,
+          "ci": [
+            -0.03645502585680375,
+            0.006302281951330126
+          ],
+          "months": 12,
+          "paired_rows": 144,
+          "settings": {
+            "block_months": 3,
+            "repetitions": 2000,
+            "seed": 1901,
+            "confidence": 0.95
+          },
+          "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+          "p_value": 0.02848575712143928,
+          "null_effect": 0.01,
+          "holm_p_value": 0.20789605197401298
+        },
+        "fresh_2024": {
+          "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+          "estimate": 0.007006371212704009,
+          "ci": [
+            -0.007940276974063376,
+            0.02256118009754681
+          ],
+          "months": 10,
+          "paired_rows": 120,
+          "settings": {
+            "block_months": 3,
+            "repetitions": 2000,
+            "seed": 1901,
+            "confidence": 0.95
+          },
+          "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+          "p_value": 0.7131434282858571,
+          "null_effect": 0.01,
+          "holm_p_value": 1.0
+        }
+      },
+      "no_memory_variant_improves_both_windows": true,
+      "calibration_worsened_both_windows": true,
+      "verification": "research/frem_s3_20261011/verification.json",
+      "protected_outcomes_accessed": false,
+      "canonical_confirmation": "NOT_EXECUTED",
+      "profitability": "UNPROVEN",
+      "old_results_preserved": true,
+      "path": "src/frem/s3.py",
+      "scientific_status": "EXPLORATORY_ONLY_PRIMARY_INCONCLUSIVE",
+      "specification": "research/frem_s3_20261011/specification.json",
+      "source_archive": "research/frem_s3_20261011/source",
+      "execution_wall_seconds": 743.1872778329998,
+      "maximum_sampled_worker_rss_mib": 407.671875
+    }
+  },
+  "remaining_external_inputs": [
+    "Licensed canonical asset panel and truthful point-in-time provenance",
+    "Current official participant approved universe and trading requirements",
+    "Team numerical concentration, liquidity, risk, funding-confidence and flexibility policy",
+    "Declared current holdings, dated metadata and synchronized forecast-to-portfolio horizon"
+  ],
+  "authoring_verification": {
+    "static_record": "docs/STATIC_VERIFICATION.cleanup_2026-10-11.json",
+    "runtime_record": "research/runtime_verification_2026-10-11.json",
+    "repository_cleanup_record": "research/repository_cleanup_verification_2026-10-11.json",
+    "efficiency_record": "research/efficiency_verification_2026-10-11.json",
+    "data_admission_record": "research/data_admission_audit_2026-10-11.json",
+    "engineering_execution_record": "research/all_admissible_runs_2026-10-11.json",
+    "python_files": 37,
+    "authored_test_functions": 130,
+    "tests_executed": true,
+    "runtime_test_result": "163 passed in 8.64 seconds with warnings treated as errors",
+    "successor_test_results": "RE-JEPA v0.3: 67 passed in 5.23 seconds; RENG-JEPA v0.1: 45 passed in 5.23 seconds; warnings treated as errors",
+    "package_build": "PASS for FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
+    "market_data_downloaded": true,
+    "market_data_download_scope": "Public retrospective 24-stock histories; not the canonical point-in-time global panel",
+    "engineering_model_runs_executed": true,
+    "engineering_cells_completed": 10,
+    "market_model_or_portfolio_runs_executed": true,
+    "paper_pages": 23,
+    "bibliographic_references": 24,
+    "paper_status": "methods_and_engineering_evidence_review_draft_compiled_visually_reviewed_not_submission_ready",
+    "paper_release_record": "paper/release_review_20261011/MANIFEST.json",
+    "market_execution_scope": "22 exploratory public-history model fits in FREM-S2; no canonical admitted-market fit, protected confirmation, or portfolio run",
+    "latest_frem_runtime_tests": "194 passed in 7.80 seconds, DeprecationWarning as error; retained first attempt 191 passed / 2 failures",
+    "frem_s2_receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+  },
+  "completion_request": {
+    "receipt": "research/completion_20261011/COMPLETION_RECEIPT.json",
+    "new_model_cells_started": 0,
+    "new_tests_passed": 12,
+    "scientific_status": "NOT_EVALUATED",
+    "arxiv_submission_ready": false,
+    "paper": "paper/main.pdf",
+    "paper_status": "23-page compiled methods and engineering evidence review draft",
+    "resource_check": "research/completion_20261011/final_resource_check.json"
+  },
+  "public_regional_benchmarks": {
+    "status": "ACQUIRED_NOT_MODEL_EVALUATED",
+    "manifest": "data/public_regional_factors_20261011/manifest.json",
+    "datasets": 7,
+    "pre_2025_monthly_rows": 3666,
+    "canonical_market_admission": false,
+    "license_status": "Publicly accessible; redistribution not verified",
+    "provider_access_statement": "User reports no licensed dataset currently available and authorizes public internet collection."
+  },
+  "loss_diagnosis": {
+    "status": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_OF_RETAINED_SYNTHETIC_RUN",
+    "report": "research/frem_loss_diagnosis_20261011/REPORT.md",
+    "receipt": "research/frem_loss_diagnosis_20261011/diagnosis.json",
+    "verification": "research/frem_loss_diagnosis_20261011/verification.json",
+    "scope": "Four synthetic assets, 92 held-out development dates, seed 11; no admitted market conclusion",
+    "main_finding": "Downward mean bias dominates the saved loss; fixed-checkpoint memory correction slightly improves NLL",
+    "nll_gap_frem_minus_no_memory": 0.564926857349982,
+    "fixed_checkpoint_memory_nll_improvement": 0.002854824521729582,
+    "location_gap_share_descriptive": 0.7879045708608131,
+    "upstream_causes": "Short optimization, evolving residual reference and mismatched controller objective are plausible but not experimentally isolated",
+    "tests_passed": 13,
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "resource_admission": "Not satisfied; standard-library diagnosis only"
+  },
+  "latest_all_experiments_request": {
+    "created_at": "2026-10-11T14:21:39.883029+00:00",
+    "user_request": "run all experiments now",
+    "status": "BLOCKED_BEFORE_NEW_MODEL_EXECUTION",
+    "new_fits_started": 0,
+    "protected_outcomes_accessed": false,
+    "public_six_window_matrix": {
+      "planned_cells": 24,
+      "status": "BLOCKED_BEFORE_MODEL_IMPORT",
+      "failure": "outputs/public_equity_allnow_20261011_attempt1/failure.json",
+      "error": "RESOURCE_ADMISSION_FAILED [{\"available_mib\": 103.421875, \"pageouts\": 874841}, {\"available_mib\": 125.0625, \"pageouts\": 874844}, {\"available_mib\": 118.046875, \"pageouts\": 874844}]"
+    },
+    "canonical_development_and_robustness": {
+      "status": "BLOCKED_MISSING_CANONICAL_PANEL",
+      "panel_exists": false,
+      "manifest_exists": false
+    },
+    "confirmation": {
+      "status": "BLOCKED_DEVELOPMENT_AND_FREEZE_INCOMPLETE",
+      "protocol_status": "PROPOSED_NOT_FROZEN"
+    },
+    "frem_s2": {
+      "status": "ALREADY_COMPLETED_NOT_RERUN",
+      "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+    },
+    "regional_factors": {
+      "status": "ACQUISITION_ONLY_NO_DECLARED_MODEL_EXPERIMENT"
+    },
+    "prior_results": "Preserved completed synthetic, legacy and successor evidence; no repeat to seek a favorable result.",
+    "resource_deviation_scope": "Prior slow-mode deviation was declared for the completed FREM-S2 22-fit matrix; this attempt preserved the public six-window launcher gate."
+  },
+  "public_slow_execution": {
+    "status": "COMPLETE_VERIFIED",
+    "run_directory": "outputs/public_equity_slow_20261011_attempt1",
+    "declared_cells": 24,
+    "amendment": "research/decisions/public_slow_execution_20261011.json",
+    "workers_concurrent": 1,
+    "threads_per_worker": 1,
+    "rss_ceiling_mib": 768,
+    "batch_size": 32,
+    "protected_outcomes_accessed": false,
+    "completed_cells": 24,
+    "folds": 6,
+    "tests_passed": 194,
+    "prediction_rows_verified": 8684,
+    "max_nll_reconstruction_error": 1.9984014443252818e-15,
+    "source_hashes_verified": true,
+    "maximum_sampled_model_rss_mib": 386.65625,
+    "summed_model_worker_seconds": 489.05448449900723,
+    "all_workers_exit_zero": true,
+    "summary": "outputs/public_equity_slow_20261011_attempt1/summary.json",
+    "receipt": "outputs/public_equity_slow_20261011_attempt1/completion_receipt.json",
+    "finding": "Mixed exploratory evidence: FREM point NLL improves over no_memory in 4/6 windows; worse in 2020 and 2022. Single seed, survivor sample, unadjusted intervals; not confirmatory."
+  },
+  "public_zero_diagnosis": {
+    "status": "COMPLETE_DESCRIPTIVE_AUDIT",
+    "report": "research/public_zero_diagnosis_20261011/REPORT.md",
+    "data": "research/public_zero_diagnosis_20261011/diagnosis.json",
+    "zero_monthly_wins_all_variants": 12,
+    "months": 19,
+    "zero_evaluated_scope": "S2 Great Recession only; absent from six-window study",
+    "gap_decomposition_fraction": {
+      "location": 0.2944830118935133,
+      "scale": 0.6328129084858415,
+      "df": 0.07270407962063712
+    },
+    "memory": "All nonzero declared weights worsened validation; populated but sparse old bank. Upstream causality not isolated.",
+    "changes": "Future validation diagnostics only; forecasts and grids unchanged",
+    "new_tests_passed": 4,
+    "new_fits": 0,
+    "protected_outcomes_accessed": false
+  },
+  "local_maintenance": {
+    "status": "COMPLETE_LOCAL_ENGINEERING_AND_EVIDENCE_MAINTENANCE",
+    "date": "2026-10-11",
+    "receipt": "research/local_maintenance_20261011/RECEIPT.json",
+    "report": "research/local_maintenance_20261011/REPORT.md",
+    "new_regression_tests": 25,
+    "offline_tests_passed": 42,
+    "lint_scope": "scripts, active src/tests, and both successor src/tests; PASS",
+    "historical_source_archive": "research/local_maintenance_20261011/original_engineering_source/ARCHIVE_RECEIPT.json",
+    "historical_source_files_verified": 36,
+    "synthetic_evidence_audit": "research/local_maintenance_20261011/engineering_audit_attempt2/audit.json",
+    "s3_score_audit": "research/local_maintenance_20261011/s3_score_audit.json",
+    "s3_completeness_audit": "research/local_maintenance_20261011/s3_completeness.json",
+    "release_snapshot_directory": "research/local_maintenance_20261011/release_snapshot",
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "limitation": "Source inventories and score reconstruction are engineering evidence; canonical confirmation, global accounting, paper integration and external mandate inputs remain incomplete."
+  },
+  "memory_diagnosis_20261012": {
+    "status": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_AND_RESEARCH_CHECKLIST",
+    "report": "docs/FREM_MEMORY_DIAGNOSIS_AND_CHECKLIST_20261012.md",
+    "receipt": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+    "decision": "research/decisions/frem_memory_diagnosis_20261012.json",
+    "frozen_sources_verified": 49,
+    "prediction_rows_reconstructed": 11880,
+    "max_nll_reconstruction_error": 2.220446049250313e-15,
+    "finding": "Active S3 memory lacks consistent benefit. Old base/calibration, small validation gains and nearly flat similarity weighting are measured design conditions; causal attribution and remedy benefit remain unproved.",
+    "new_model_fits": 0,
+    "model_behavior_changed": false,
+    "protected_outcomes_accessed": false,
+    "future_work": "Proposed only: separately declared fresh successor with recent base/calibration, dimension-independent distance and conservative memory selection. No completed outcome reopened.",
+    "lint": "PASS on new diagnostic script after retained style-only failure; no model tests rerun"
+  },
+  "paper_and_checklist_20261012": {
+    "status": "PUBLIC_RESULTS_INTEGRATED_REMAINING_GATES_EXPLICIT",
+    "paper": "paper/main.pdf",
+    "pages": 27,
+    "report": "research/checklist_completion_20261012/CHECKLIST_DISPOSITION.md",
+    "laura": "research/checklist_completion_20261012/LAURA_FUNDING_AND_BLOCKERS.md",
+    "fresh_audit_rows": 133844,
+    "max_nll_error": 2.220446049250313e-15,
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "remaining": [
+      "canonical panel and sidecar",
+      "resource admission",
+      "successor novelty and exact chronology",
+      "independent training reproduction",
+      "confirmation",
+      "participant rules/universe, holdings and team funding/risk policy",
+      "current forecast/risk inputs",
+      "scientific and release review"
+    ]
+  },
+  "s4_development_20261012": {
+    "status": "COMPLETE_NO_MEMORY_GAIN",
+    "fits": 6,
+    "prediction_cells": 24,
+    "tests_passed": 247,
+    "elapsed_seconds": 64.7623288750001,
+    "max_sampled_rss_mib": 401.84375,
+    "all_nonoff_selected_weights": 0,
+    "audit_rows": 3168,
+    "protected_access": false,
+    "report": "research/frem_s4_20261012/REPORT.md",
+    "allocation_report": "research/frem_s4_20261012/PUBLIC_RULES_AND_LAURA.md",
+    "scope": "Development reuse of spent S3 public 2023/2024 survivor histories; no fresh confirmation or investment inference"
+  }
+}

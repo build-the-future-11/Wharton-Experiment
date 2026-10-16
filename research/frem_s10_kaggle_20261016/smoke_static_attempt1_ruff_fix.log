@@ -1,0 +1,58 @@
+C901 `main` is too complex (11 > 10)
+  --> successors/frem_s10/src/frem_s10/cli.py:70:5
+   |
+70 | def main(argv: list[str] | None = None) -> int:
+   |     ^^^^
+71 |     """Dispatch explicit manifests; real work always passes the fixed production gate."""
+72 |     parser = argparse.ArgumentParser(description=__doc__)
+   |
+
+C401 Unnecessary generator (rewrite as a set comprehension)
+  --> successors/frem_s10/src/frem_s10/runtime/smoke_contract.py:45:33
+   |
+43 |         not isinstance(variants, list) or not variants
+44 |         or any(not isinstance(item, str) or item not in VARIANTS for item in variants)
+45 |         or len(variants) != len(set(str(item) for item in variants))
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+46 |     ):
+47 |         raise ContractError("unique declared model variants required")
+   |
+help: Rewrite as a set comprehension
+   |
+44 |         or any(not isinstance(item, str) or item not in VARIANTS for item in variants)
+   -         or len(variants) != len(set(str(item) for item in variants))
+45 +         or len(variants) != len({str(item) for item in variants})
+46 |     ):
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+RUF005 Consider iterable unpacking instead of concatenation
+  --> successors/frem_s10/src/frem_s10/runtime/smoke_contract.py:68:15
+   |
+66 |     """Bind the installed source bytes and numeric environment, excluding file paths."""
+67 |     package = Path(__file__).resolve().parents[1]
+68 |     members = sorted(package.rglob("*.py")) + [package / "science.json"]
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+69 |     if any(path.is_symlink() for path in members):
+70 |         raise IntegrityError("source symlinks cannot identify a generated replay")
+   |
+help: Replace with iterable unpacking
+   |
+67 |     package = Path(__file__).resolve().parents[1]
+   -     members = sorted(package.rglob("*.py")) + [package / "science.json"]
+68 +     members = [*sorted(package.rglob("*.py")), package / "science.json"]
+69 |     if any(path.is_symlink() for path in members):
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C901 `export_smoke` is too complex (11 > 10)
+  --> successors/frem_s10/src/frem_s10/runtime/smoke_export.py:14:5
+   |
+14 | def export_smoke(directory: Path, destination: Path) -> JSONObject:
+   |     ^^^^^^^^^^^^
+15 |     """Create one new local ZIP after reconstructing all committed scores."""
+16 |     _threads()
+   |
+
+Found 5 errors (1 fixed, 4 remaining).
+2 unsafe fixes available with `--fix --unsafe-fixes`.

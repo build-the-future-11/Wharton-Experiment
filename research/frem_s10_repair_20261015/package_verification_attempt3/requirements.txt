@@ -1,0 +1,2 @@
+numpy @ https://files.pythonhosted.org/packages/31/2f/5ea3570fcb8ccd0882bea99436a513b2c85dad8f774a2057849130a8fb99/numpy-2.5.4-cp312-cp312-macosx_14_0_arm64.whl --hash=sha256:9cb18a327b49c5c337f972b03682f6a49855525faaf3c0d3e9c96cd0fd8880a8
+/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/final_verification_attempt2/dist/frem_s10-0.1.0-py3-none-any.whl --hash=sha256:f29dd32a4ff68cd4bd22dad4b4f4f36ebcf9b279c1606c4fbf62f6122cc4e187

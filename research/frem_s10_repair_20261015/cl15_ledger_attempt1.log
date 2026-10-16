@@ -1,0 +1,29 @@
+ENGINEERING_ONLY CL-15; no market sources
+['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python', '-B', '-m', 'pytest', '-q', '-W', 'error', '-p', 'no:cacheprovider', 'successors/frem_s10/tests/test_ledger_audit.py']
+......F..                                                                [100%]
+=================================== FAILURES ===================================
+___ test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend ___
+
+    def test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend():
+        """TEST-050/060, CL-15: ordered same-open sale precedes policy reentry."""
+        initial = initial_ledger(cell_id="A4", start_us=OPEN - 1, initial_cash=100.0,
+                                 forced_liquidation_enabled=True)
+        first = opening(initial)
+        empty_sale = forced_liquidation_open(first.state, event_id="mandatory_sale1", one_way_cost=0.01)
+        assert empty_sale.state.cash == 100 and empty_sale.event.fee == 0
+        bought = fill(empty_sale.state, cost=0.01)
+        q1 = 100 / 1.004
+        shares = 0.4 * q1 / 10
+>       assert bought.state.shares[0] == pytest.approx(shares, abs=1e-10)
+E       assert np.float64(3.984063745243475) == 3.984063745019921 ± 1.0e-10
+E         
+E         comparison failed
+E         Obtained: 3.984063745243475
+E         Expected: 3.984063745019921 ± 1.0e-10
+
+successors/frem_s10/tests/test_ledger_audit.py:208: AssertionError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend
+1 failed, 8 passed in 0.39s
+
+exit_code=1

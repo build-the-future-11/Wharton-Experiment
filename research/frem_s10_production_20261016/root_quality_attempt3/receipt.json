@@ -1,0 +1,54 @@
+{
+  "scope": "STATIC_ONLY_NO_RERUN_OF_UNCHANGED_METADATA_TEST_BEHAVIOR",
+  "commands": [
+    {
+      "name": "types",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/tmp/frem-s10-production-root-mypy",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.7626052910054568
+    },
+    {
+      "name": "lint",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.023280708002857864
+    },
+    {
+      "name": "format",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/provenance.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_verification_receipts_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.016337583016138524
+    }
+  ],
+  "files": {
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/verification.py": "7bc4cca4bf9dc7e90536934a273fb4b6c6b05583833f33bf154dc5cb7b6d398f",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/provenance.py": "0738b0f8be9aad491e22c023da41529439365889c92079ec404c69bb37fbc212",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_verification_receipts_audit.py": "c30c8eb72ce6f490ce61f067df275e98dc2a0a40ee5e24a4718bb07269bbeb03"
+  }
+}

@@ -1,0 +1,13 @@
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:43: error: Argument 1 to "validate_source_admission" has incompatible type "dict[str, JSONValue]"; expected "dict[str, object]"  [arg-type]
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:43: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:43: note: Consider using "Mapping" instead, which is covariant in the value type
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:72: error: Argument 1 to "validate_source_admission" has incompatible type "dict[str, JSONValue]"; expected "dict[str, object]"  [arg-type]
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:72: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/src/frem_s10/runtime/pipeline.py:72: note: Consider using "Mapping" instead, which is covariant in the value type
+successors/frem_s10/src/frem_s10/runtime/results.py:93: error: Too many arguments for "assess_precision"  [call-arg]
+successors/frem_s10/src/frem_s10/runtime/results.py:93: error: Argument 1 to "assess_precision" has incompatible type "*tuple[ndarray[tuple[int, ...], dtype[float64]], ...]"; expected "int"  [arg-type]
+successors/frem_s10/src/frem_s10/cli.py:150: error: Incompatible types in assignment (expression has type "dict[str, JSONValue]", variable has type "dict[str, str]")  [assignment]
+successors/frem_s10/src/frem_s10/runtime/worker.py:60: error: Argument 1 to "validate_source_admission" has incompatible type "dict[str, JSONValue]"; expected "dict[str, object]"  [arg-type]
+successors/frem_s10/src/frem_s10/runtime/worker.py:60: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/src/frem_s10/runtime/worker.py:60: note: Consider using "Mapping" instead, which is covariant in the value type
+Found 6 errors in 4 files (checked 7 source files)

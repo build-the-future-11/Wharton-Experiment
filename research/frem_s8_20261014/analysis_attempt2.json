@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "research.frem_s8_20261014.analyze",
+    "--root",
+    "outputs/frem_s8_2020_2022_20261014_attempt1",
+    "--output",
+    "research/frem_s8_20261014"
+  ],
+  "returncode": 0,
+  "seconds": 0.8804497079981957,
+  "invocation_repair": "Use module invocation so repository imports resolve; frozen source and all market outputs unchanged."
+}

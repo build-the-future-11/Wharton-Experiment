@@ -1,0 +1,20 @@
+{
+  "schema": "s10-tonight-archive-verification-v1",
+  "recorded_at": "2026-10-16T08:00:42.818857+00:00",
+  "status": "PASS",
+  "scope": "Local compact evidence archive CRC, member set, sizes and SHA256 readback; not independent empirical validation",
+  "archive": "evidence.zip",
+  "sha256": "d3eb3bfa3f7fb7c5fd868581cae3d1db8f829688994e40b932dfebdabdf206e3",
+  "bytes": 4132058,
+  "members": 67,
+  "checksummed_files": 66,
+  "checksums_sha256": "a143c7685983b70c9daffede9b313a066d1e3bb7916fe01b4d02cc99f1617a60",
+  "all_member_hashes_match": true,
+  "crc": "PASS",
+  "campaign_status": "PARTIAL CAMPAIGN",
+  "scientific_status": "NOT_EVALUATED",
+  "remote_retrieval_record": "retrieved/version1/RETRIEVAL_VERIFICATION.json",
+  "main_receipt_sha256": "9a2474c96094f3fd2f7dbee6e3af3c20c22229aecd36d6905dbd2494094f6a8f",
+  "canonical_closure_sha256": "38b1700094518754d88f4a5f7b89924aacac00c5e82a3e5b74a899d3cdd6ccbd",
+  "final_cpu_inactivity_and_postrun_quota_unverified": true
+}

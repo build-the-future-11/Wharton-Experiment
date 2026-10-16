@@ -1,0 +1,4 @@
+successors/frem_s10/tests/test_production_runtime.py:213: error: Argument 1 to "audit_precision_prerequisite" has incompatible type "dict[str, dict[str, JSONValue]]"; expected "dict[str, JSONValue]"  [arg-type]
+successors/frem_s10/tests/test_production_runtime.py:213: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/tests/test_production_runtime.py:213: note: Consider using "Mapping" instead, which is covariant in the value type
+Found 1 error in 1 file (checked 9 source files)

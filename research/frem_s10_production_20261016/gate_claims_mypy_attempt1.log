@@ -1,0 +1,5 @@
+successors/frem_s10/tests/test_production_gate_catalog.py:163: error: Module "frem_s10.runtime.supervisor" does not explicitly export attribute "time"  [attr-defined]
+successors/frem_s10/tests/test_report_claims_audit.py:175: error: Argument 3 to "publish_json" has incompatible type "dict[str, str]"; expected "JSONValue"  [arg-type]
+successors/frem_s10/tests/test_report_claims_audit.py:175: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/tests/test_report_claims_audit.py:175: note: Consider using "Mapping" instead, which is covariant in the value type
+Found 2 errors in 2 files (checked 5 source files)

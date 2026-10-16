@@ -1,0 +1,25 @@
+RUF043 Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
+  --> successors/frem_s10/tests/test_ablations_audit.py:89:45
+   |
+87 | def test_incomplete_family_wrong_pairing_and_policy_only_variation_fail() -> None:
+88 |     first, second = fold("A", 24), fold("B", 25)
+89 |     with pytest.raises(ContractError, match="A1..A8"):
+   |                                             ^^^^^^^^
+90 |         replace(first, scores=first.scores[:-1])
+91 |     with pytest.raises(ContractError, match="A1..A8"):
+   |
+help: Use a raw string or `re.escape()` to make the intention explicit
+
+RUF043 Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
+  --> successors/frem_s10/tests/test_ablations_audit.py:91:45
+   |
+89 |     with pytest.raises(ContractError, match="A1..A8"):
+90 |         replace(first, scores=first.scores[:-1])
+91 |     with pytest.raises(ContractError, match="A1..A8"):
+   |                                             ^^^^^^^^
+92 |         replace(first, scores=first.scores[::-1])
+93 |     for identity in ("A4", "A5"):
+   |
+help: Use a raw string or `re.escape()` to make the intention explicit
+
+Found 2 errors.

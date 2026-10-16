@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "saved_ledgers_verified": 240,
+  "period_records_verified": 36720,
+  "preserved_file_identities": 49,
+  "max_absolute_accounting_error": 8.294591680169106e-10,
+  "predictive_intervals_vs_equal": {
+    "6": {
+      "status": "DESCRIPTIVE_DEPENDENT_DATE_INTERVAL",
+      "mean": 0.0013674996853025958,
+      "interval95": [
+        -0.0037489799298092044,
+        0.005494434960005422
+      ],
+      "block_dates": 6,
+      "scope": "Conditional development comparison, not confirmatory significance or a causal effect"
+    },
+    "12": {
+      "status": "DESCRIPTIVE_DEPENDENT_DATE_INTERVAL",
+      "mean": 0.0013674996853025958,
+      "interval95": [
+        -0.003185569058352858,
+        0.005202727069774156
+      ],
+      "block_dates": 12,
+      "scope": "Conditional development comparison, not confirmatory significance or a causal effect"
+    }
+  },
+  "both_predictive_upper_bounds_below_0_01": true,
+  "equal_asset_wealth_10bps": 104927.24674610677,
+  "primary_zero_cost_wealth": 99990.33315642031,
+  "primary_zero_cost_asset_contributions": {
+    "GLD": -203.19898471176202,
+    "SPY": 6234.137375965255,
+    "TLT": -6040.605234833081
+  },
+  "scope": "Saved-output arithmetic and descriptive attribution only; no policy replay, new model fit, protected access, or independent retraining.",
+  "completed_at": "2026-10-15T14:13:55.313016+00:00",
+  "seconds": 4.291812417010078,
+  "peak_rss_mib": 40.453125,
+  "market_fits": 0,
+  "new_policy_replays": 0,
+  "protected_access": false
+}

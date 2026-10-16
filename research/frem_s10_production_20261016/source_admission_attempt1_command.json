@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "reference": {
+    "path": "research/frem_s10_production_20261016/source_admission_attempt1/admission.json",
+    "sha256": "93a52fa8b85c5b2cb25f7a4cf41f034f6202670c34362a6f7d063eb8bb3ff3c7"
+  },
+  "wall_seconds": 0.49344212500727735,
+  "maxrss_bytes": 41861120,
+  "model_module_imported": false,
+  "market_fits": 0,
+  "market_precision_runs": 0,
+  "market_campaigns": 0
+}

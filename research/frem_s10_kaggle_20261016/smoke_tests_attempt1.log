@@ -1,0 +1,13 @@
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_smoke_audit.py __________________
+successors/frem_s10/tests/test_smoke_audit.py:10: in <module>
+    from frem_s10.cli import main
+successors/frem_s10/src/frem_s10/cli.py:108: in <module>
+    def _engineering_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser]) -> None:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: type '_SubParsersAction' is not subscriptable
+=========================== short test summary info ============================
+ERROR successors/frem_s10/tests/test_smoke_audit.py - TypeError: type '_SubPa...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 3.17s

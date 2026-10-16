@@ -1,0 +1,6 @@
+Using Python 3.12.14 environment at: clean_env
+Resolved 2 packages in 16ms
+Prepared 2 packages in 270ms
+Installed 2 packages in 22ms
+ + frem-s10==0.1.0 (from file:///Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/final_verification_attempt2/dist/frem_s10-0.1.0-py3-none-any.whl)
+ + numpy==2.5.4 (from file:///Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/numpy-2.5.4-cp312-cp312-macosx_14_0_arm64.whl)

@@ -1,0 +1,10 @@
+{
+  "observation": "User explicitly requests real data, frozen protocol, adequate compute and actual S6 experiments. Local admission fails; SSH runner times out; gcloud credentials are expired; HF Jobs backend unavailable.",
+  "hypothesized_cause": "Missing admitted input and compute access prevent measurement; architecture quality remains unknown.",
+  "change": "Prepare S6-R1 retrospective USD ETF price-return study: SPY, TLT and GLD selected for equity, Treasury and gold exposure before downloading their observations. Download only 2005 through 2018. Train origins through 2014 with future-target purge; calibrate 2015-2016; evaluate 2017-2018 Mondays with both endpoint opens available. Reserve 2019 and later from acquisition. Eight daily close-return context steps; fixed seven-day Monday-open label horizon. No adjustment, forward fill or invented observations.",
+  "predicted_effect": "Unknown; report all 24 fixed cells and all seeds, including losses. No claim of perfection or market manipulation.",
+  "discriminating_experiment": "Existing S6 fixed development matrix, date-level NLL, full/half/zero context, JEPA and ripple ablations, fixed controls, both prescribed bootstrap blocks and all transaction-cost sensitivities. Economic ledgers are price-only retrospective diagnostics, excluding dividends and actual execution.",
+  "status": "INTAKE_PLAN_FIXED_BEFORE_ACQUISITION; final source-bound freeze follows data integrity checks; training remains resource/access gated",
+  "deviation": "Explicit narrow retrospective admission rather than claiming historical point-in-time certification. Current-vintage unadjusted historical prices and conservative availability conventions cannot certify historical vendor release times. Prior studies may have used these calendar dates in training; this is exploratory development, never independent confirmation. Spent outer calendar periods excluded, without timestamp relabeling.",
+  "protected_access": false
+}

@@ -1,0 +1,412 @@
+{
+  "base": {
+    "status": "fitted",
+    "return_parameterization": "train_standardized",
+    "return_reference": {
+      "center": 0.007705396041274071,
+      "unit": 0.04735732451081276,
+      "rows": 552,
+      "source": "training_targets_only"
+    },
+    "scientific_claim": "training completed; held-out evidence required",
+    "stop_reason": "early_stopping",
+    "requested_epochs": 5,
+    "completed_epochs": 4,
+    "attempted_epochs": 4,
+    "selected_epoch": 1,
+    "gradient_steps_executed": 64,
+    "best_validation_nll": -1.4397008951873562,
+    "validation_selection_completed": true,
+    "validation_weighting": "equal_UTC_date_then_equal_asset_then_equal_within_asset_rows",
+    "elapsed_seconds": 0.6527566249969823,
+    "training_cutoff": 1504396800000000000,
+    "fitted_through": 1535932800000000000,
+    "train_rows": 552,
+    "validation_rows": 120,
+    "validation_dates": 10,
+    "validation_timestamps": 10,
+    "trainable_parameters": 15018,
+    "total_parameters": 20892,
+    "fixed_buffer_elements": 1266,
+    "memory": {
+      "capacity": 128,
+      "occupancy": 0,
+      "pending": 0,
+      "total_matured": 0,
+      "total_evicted": 0,
+      "total_write_filtered": 0,
+      "credited_uses": 0,
+      "mean_utility": 0.0,
+      "policy": "utility"
+    },
+    "history": [
+      {
+        "loss": -1.6401442302309948,
+        "predictive_loss": -1.644493421782618,
+        "jepa_loss": 0.03160198970252405,
+        "variance_penalty": 0.07523426640292873,
+        "covariance_penalty": 0.43664504620044126,
+        "latent_variance": 0.27121417742708454,
+        "gate_entropy": 0.6647087063478387,
+        "gradient_norm": 1.8829191378925159,
+        "gradient_clipped": 0.9347826086956522,
+        "location_head_gradient_norm": 1.457059956115225,
+        "scale_head_gradient_norm": 0.9874337341474451,
+        "df_head_gradient_norm": 0.04978750407209863,
+        "mean_prediction": 0.007430238244326219,
+        "mean_target": 0.007705395967881803,
+        "epoch": 1,
+        "rows": 552,
+        "gradient_steps": 16,
+        "memory_hit_fraction": 0.0,
+        "memory": {
+          "capacity": 128,
+          "occupancy": 0,
+          "pending": 0,
+          "total_matured": 0,
+          "total_evicted": 0,
+          "total_write_filtered": 0,
+          "credited_uses": 0,
+          "mean_utility": 0.0,
+          "policy": "utility"
+        },
+        "complete_epoch": true,
+        "regularizer_samples": 552,
+        "validation_nll": -1.4397008951873562,
+        "validation_mean_prediction": 0.007415233432160069,
+        "validation_mean_target": 0.0028784557056175148,
+        "validation_mean_bias": 0.004536777726542553,
+        "validation_rows": 120,
+        "validation_dates": 10,
+        "validation_timestamps": 10,
+        "validation_weighting": "equal_UTC_date_then_equal_asset_then_equal_within_asset_rows",
+        "controller": {
+          "validation_score": -1.4397008951873562,
+          "learning_rate": 0.001,
+          "jepa_weight": 0.1,
+          "memory_weight": 0.5
+        }
+      },
+      {
+        "loss": -1.6518388105475383,
+        "predictive_loss": -1.653876948615779,
+        "jepa_loss": 0.008923264787248943,
+        "variance_penalty": 0.06938278197270373,
+        "covariance_penalty": 0.45197428730518924,
+        "latent_variance": 0.2770160430151483,
+        "gate_entropy": 0.6647767631903939,
+        "gradient_norm": 1.8985268292219744,
+        "gradient_clipped": 1.0,
+        "location_head_gradient_norm": 1.468020913393601,
+        "scale_head_gradient_norm": 0.9778627772694048,
+        "df_head_gradient_norm": 0.04833617907665346,
+        "mean_prediction": 0.00803515978117028,
+        "mean_target": 0.007705395967881803,
+        "epoch": 2,
+        "rows": 552,
+        "gradient_steps": 32,
+        "memory_hit_fraction": 0.0,
+        "memory": {
+          "capacity": 128,
+          "occupancy": 0,
+          "pending": 0,
+          "total_matured": 0,
+          "total_evicted": 0,
+          "total_write_filtered": 0,
+          "credited_uses": 0,
+          "mean_utility": 0.0,
+          "policy": "utility"
+        },
+        "complete_epoch": true,
+        "regularizer_samples": 552,
+        "validation_nll": -1.4163730480720775,
+        "validation_mean_prediction": 0.008894034277182073,
+        "validation_mean_target": 0.0028784557056175148,
+        "validation_mean_bias": 0.006015578571564556,
+        "validation_rows": 120,
+        "validation_dates": 10,
+        "validation_timestamps": 10,
+        "validation_weighting": "equal_UTC_date_then_equal_asset_then_equal_within_asset_rows",
+        "controller": {
+          "validation_score": -1.4163730480720775,
+          "learning_rate": 0.001,
+          "jepa_weight": 0.1,
+          "memory_weight": 0.5
+        }
+      },
+      {
+        "loss": -1.6564240300137063,
+        "predictive_loss": -1.6582231055135312,
+        "jepa_loss": 0.006550020366178259,
+        "variance_penalty": 0.056135077150943485,
+        "covariance_penalty": 0.5826988955554755,
+        "latent_variance": 0.29297345585149265,
+        "gate_entropy": 0.6649198700552401,
+        "gradient_norm": 1.9202439759088599,
+        "gradient_clipped": 1.0,
+        "location_head_gradient_norm": 1.4800989472347756,
+        "scale_head_gradient_norm": 0.9590377166219379,
+        "df_head_gradient_norm": 0.04685152087198651,
+        "mean_prediction": 0.008367516697667863,
+        "mean_target": 0.007705395967881803,
+        "epoch": 3,
+        "rows": 552,
+        "gradient_steps": 48,
+        "memory_hit_fraction": 0.0,
+        "memory": {
+          "capacity": 128,
+          "occupancy": 0,
+          "pending": 0,
+          "total_matured": 0,
+          "total_evicted": 0,
+          "total_write_filtered": 0,
+          "credited_uses": 0,
+          "mean_utility": 0.0,
+          "policy": "utility"
+        },
+        "complete_epoch": true,
+        "regularizer_samples": 552,
+        "validation_nll": -1.392379041911005,
+        "validation_mean_prediction": 0.008025081599286447,
+        "validation_mean_target": 0.0028784557056175148,
+        "validation_mean_bias": 0.005146625893668931,
+        "validation_rows": 120,
+        "validation_dates": 10,
+        "validation_timestamps": 10,
+        "validation_weighting": "equal_UTC_date_then_equal_asset_then_equal_within_asset_rows",
+        "controller": {
+          "validation_score": -1.392379041911005,
+          "learning_rate": 0.0005,
+          "jepa_weight": 0.05,
+          "memory_weight": 0.5
+        }
+      },
+      {
+        "loss": -1.6677266786927762,
+        "predictive_loss": -1.6691324982954108,
+        "jepa_loss": 0.006065542961511275,
+        "variance_penalty": 0.05191866267958413,
+        "covariance_penalty": 0.5833569117214369,
+        "latent_variance": 0.2989148102376772,
+        "gate_entropy": 0.6651417496411697,
+        "gradient_norm": 1.9490051321361377,
+        "gradient_clipped": 1.0,
+        "location_head_gradient_norm": 1.4805076640585195,
+        "scale_head_gradient_norm": 0.971190354746321,
+        "df_head_gradient_norm": 0.04483389558837465,
+        "mean_prediction": 0.008044959228161884,
+        "mean_target": 0.007705395967881803,
+        "epoch": 4,
+        "rows": 552,
+        "gradient_steps": 64,
+        "memory_hit_fraction": 0.0,
+        "memory": {
+          "capacity": 128,
+          "occupancy": 0,
+          "pending": 0,
+          "total_matured": 0,
+          "total_evicted": 0,
+          "total_write_filtered": 0,
+          "credited_uses": 0,
+          "mean_utility": 0.0,
+          "policy": "utility"
+        },
+        "complete_epoch": true,
+        "regularizer_samples": 552,
+        "validation_nll": -1.3778824317566662,
+        "validation_mean_prediction": 0.008248028228990734,
+        "validation_mean_target": 0.0028784557056175148,
+        "validation_mean_bias": 0.005369572523373219,
+        "validation_rows": 120,
+        "validation_dates": 10,
+        "validation_timestamps": 10,
+        "validation_weighting": "equal_UTC_date_then_equal_asset_then_equal_within_asset_rows",
+        "controller": {
+          "validation_score": -1.3778824317566662,
+          "learning_rate": 0.0005,
+          "jepa_weight": 0.05,
+          "memory_weight": 0.5
+        }
+      }
+    ],
+    "memory_residual_reference": "training-trajectory base forecasts; fixed keys, evolving readout residuals"
+  },
+  "calibration": {
+    "selected": {
+      "alpha": 1.0,
+      "scale": 1.5,
+      "nll": -1.207576612335607
+    },
+    "candidates": [
+      {
+        "alpha": 0.0,
+        "scale": 0.5,
+        "nll": -0.031060631140957657
+      },
+      {
+        "alpha": 0.0,
+        "scale": 0.75,
+        "nll": -0.7203166040545432
+      },
+      {
+        "alpha": 0.0,
+        "scale": 1.0,
+        "nll": -1.0147076153066528
+      },
+      {
+        "alpha": 0.0,
+        "scale": 1.5,
+        "nll": -1.1823342343783299
+      },
+      {
+        "alpha": 0.0,
+        "scale": 2.0,
+        "nll": -1.1580694330573469
+      },
+      {
+        "alpha": 0.5,
+        "scale": 0.5,
+        "nll": -0.09467631145032858
+      },
+      {
+        "alpha": 0.5,
+        "scale": 0.75,
+        "nll": -0.7605035242549423
+      },
+      {
+        "alpha": 0.5,
+        "scale": 1.0,
+        "nll": -1.0417210769788914
+      },
+      {
+        "alpha": 0.5,
+        "scale": 1.5,
+        "nll": -1.1963144471158775
+      },
+      {
+        "alpha": 0.5,
+        "scale": 2.0,
+        "nll": -1.1663283285770696
+      },
+      {
+        "alpha": 1.0,
+        "scale": 0.5,
+        "nll": -0.15126651509113637
+      },
+      {
+        "alpha": 1.0,
+        "scale": 0.75,
+        "nll": -0.7951371229950059
+      },
+      {
+        "alpha": 1.0,
+        "scale": 1.0,
+        "nll": -1.0644115397142744
+      },
+      {
+        "alpha": 1.0,
+        "scale": 1.5,
+        "nll": -1.207576612335607
+      },
+      {
+        "alpha": 1.0,
+        "scale": 2.0,
+        "nll": -1.17277155989714
+      }
+    ]
+  },
+  "partition_rows": [
+    552,
+    120,
+    120,
+    288
+  ],
+  "partition_max_label": [
+    1504396800000000000,
+    1535932800000000000,
+    1567468800000000000,
+    1635897600000000000
+  ],
+  "base_frozen_before_residuals": true,
+  "metric": {
+    "center": [
+      0.07732797703880248,
+      0.19347209750222433,
+      0.19562359382149816,
+      1.1266578116007198,
+      0.04671857700762009,
+      0.06277505459838745,
+      -0.10756055687697207,
+      1.2392138583029377,
+      1.4039528699356207,
+      1.365116816102977,
+      0.8807644503967589,
+      0.9740111351487162
+    ],
+    "unit": [
+      1.5410466064684134,
+      1.7676237866274074,
+      1.7637560513088881,
+      1.702317279123381,
+      0.431020905565676,
+      0.7689421869449569,
+      1.3035024303587583,
+      1.4640194419016672,
+      0.6004814220330326,
+      0.8001688038784404,
+      0.5650026033386902,
+      0.5087226369579828
+    ],
+    "coef": [
+      [
+        0.0020233593966825056,
+        -0.3202710600298386
+      ],
+      [
+        0.09094709878463589,
+        0.2788639906511426
+      ],
+      [
+        0.0509776530481433,
+        1.0555042090915008
+      ],
+      [
+        -0.39400156022681915,
+        0.16010683047329322
+      ],
+      [
+        0.050977467085130075,
+        1.0555118906434393
+      ],
+      [
+        -0.590246235086375,
+        -3.768187929661365
+      ],
+      [
+        0.47018403842944345,
+        1.778347011361719
+      ],
+      [
+        -0.4524483085309864,
+        2.6741813369600766
+      ],
+      [
+        0.6612022144562032,
+        -2.1763890726730284
+      ],
+      [
+        0.21120787026352209,
+        -0.37417809880136055
+      ],
+      [
+        0.05568754393782881,
+        0.8653464915407748
+      ],
+      [
+        0.05606905076503022,
+        0.3558377495220883
+      ]
+    ],
+    "fitted_through": 1635897600000000000
+  }
+}

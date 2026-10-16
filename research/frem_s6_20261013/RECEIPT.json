@@ -1,0 +1,39 @@
+{
+  "study": "FREM-S6-D0",
+  "created_at": "2026-10-13T15:13:58.276217+00:00",
+  "status": "IMPLEMENTED_INTEGRITY_VERIFIED_MARKET_EXECUTION_BLOCKED",
+  "requested_ultimate_model_complete": false,
+  "tests_passed": 115,
+  "pytest_seconds": 0.5,
+  "test_peak_rss_mib": 59.0,
+  "integrity_receipt": "research/frem_s6_20261013/integrity_attempt4/receipt.json",
+  "lint": "PASS: successors/frem_s6 and tests/s6",
+  "source_hashes": "research/frem_s6_20261013/integrity_attempt4/source_hashes.json",
+  "predecessor_frozen_identities_verified": 111,
+  "predecessor_changes": [],
+  "market_fits": 0,
+  "market_backtests": 0,
+  "protected_access": false,
+  "tiny_test_fits": "Executed numerical integrity fixtures only; not an experiment matrix or financial evidence",
+  "planned_development_cells": 24,
+  "optional_additional_tree_fits": 24,
+  "training_attempt": "outputs/frem_s6_20261013_attempt1/admission.json",
+  "blockers": [
+    "RESOURCE_ADMISSION_FAILED: 512MiB floor or pageouts",
+    "MISSING_ADMITTED_WINDOW_DATA_AND_MANIFEST",
+    "MISSING_FROZEN_DEVELOPMENT_PROTOCOL"
+  ],
+  "independent_review": "Separate agents reviewed model/kernel/data/policy/launcher source and authored adversarial tests; no independent retraining",
+  "xgboost_runtime_exercised": false,
+  "performance_improvement": "UNESTABLISHED",
+  "novelty": "UNESTABLISHED",
+  "laura_allocation": "UNRESOLVED_INPUTS_AND_NO_MARKET_TRAINED_CHECKPOINT",
+  "scientific_status": "NOT_EVALUATED",
+  "failure_retention": [
+    "research/frem_s6_20261013/integrity_attempt1",
+    "research/frem_s6_20261013/integrity_attempt2",
+    "research/frem_s6_20261013/integrity_attempt3"
+  ],
+  "report": "research/frem_s6_20261013/REPORT.md",
+  "features": "research/frem_s6_20261013/FEATURE_DISPOSITION.json"
+}

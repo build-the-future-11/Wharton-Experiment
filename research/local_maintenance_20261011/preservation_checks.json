@@ -1,0 +1,10 @@
+{
+  "journal_events_verified": 24,
+  "journal_last_hash": "197383fe26e8ca8abdf88d2d1aec39a443ac9d4d6c1ea1d558c21d8d4b5b6f1b",
+  "original_release_manifest_unchanged": true,
+  "s3_frozen_sources_unchanged": 49,
+  "pending_receipt_links": [
+    "research/local_maintenance_20261011/RECEIPT.json"
+  ],
+  "new_model_fits": 0
+}

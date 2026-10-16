@@ -1,0 +1,5 @@
+ENGINEERING_ONLY CL-15; no market sources
+['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python', '-B', '-m', 'mypy', '--no-incremental', '--cache-dir=/dev/null', 'successors/frem_s10/src/frem_s10/math', 'successors/frem_s10/src/frem_s10/portfolio']
+Success: no issues found in 9 source files
+
+exit_code=0

@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-14T11:31:37.034542+00:00",
+  "status": "BLOCKED_LOCAL_MEMORY_REMOTE_AUTH_AND_CONNECTIVITY",
+  "local_admission": {
+    "checked_at": "2026-10-14T11:30:26.584732+00:00",
+    "samples": [
+      {
+        "available_mib": 164.4375,
+        "pageouts": 266510
+      },
+      {
+        "available_mib": 180.5,
+        "pageouts": 266513
+      },
+      {
+        "available_mib": 145.203125,
+        "pageouts": 266535
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "gcloud_instance_describe": {
+    "instance": "project-2024-runner",
+    "zone": "asia-south1-c",
+    "project": "calcium-blend-498208-e0",
+    "exit_code": 1,
+    "error": "invalid_grant: Bad Request"
+  },
+  "ssh": {
+    "exit_code": 255,
+    "error": "8.234.70.151 port 22: Operation timed out"
+  },
+  "market_fits_started": 0,
+  "remote_jobs_created": 0,
+  "protected_access": false,
+  "guard_modified": false,
+  "required_action": "Complete gcloud auth login locally; do not share credentials in chat."
+}

@@ -1,0 +1,11 @@
+{
+  "decision_id": "FREM-EVIDENCE-PAPER-PUBLIC-INTAKE-20261011",
+  "observation": "The paper lagged completed engineering evidence; no licensed dataset is available; public acquisition was explicitly authorized; resource admission continues to fail.",
+  "hypothesized_cause": "Reporting drift and external data/resource limits, rather than evidence of market success.",
+  "decision": "Preserve prior results, independently audit existing scores, acquire seven documented public regional datasets without relabeling them as canonical, and release a clearly marked methods/evidence review draft. Do not start model cells below the resource floor or access the protected tail.",
+  "predicted_effect": "Auditable current paper and input inventory without a fabricated completion claim.",
+  "discriminating_experiment": "Hash checks, independent score equations, 12 offline tests, fresh document compilation, and visual page review.",
+  "result": "PUBLIC_DATA_AND_REVIEW_PAPER_COMPLETE_MARKET_EXECUTION_BLOCKED",
+  "receipt": "research/completion_20261011/COMPLETION_RECEIPT.json",
+  "status": "LOCAL_WORK_COMPLETE_SCIENTIFIC_AND_SUBMISSION_GATES_OPEN"
+}

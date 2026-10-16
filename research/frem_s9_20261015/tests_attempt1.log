@@ -1,0 +1,37 @@
+test_calendar_omission_rejected (test_s9.DataTests.test_calendar_omission_rejected) ... ok
+test_dividend_boundary_and_no_reinvestment (test_s9.DataTests.test_dividend_boundary_and_no_reinvestment) ... ok
+test_future_fold_and_insufficient_samples_rejected (test_s9.DataTests.test_future_fold_and_insufficient_samples_rejected) ... ok
+test_hash_corruption_rejected_before_parse (test_s9.DataTests.test_hash_corruption_rejected_before_parse) ... ok
+test_source_adapter_calendar_and_maturity (test_s9.DataTests.test_source_adapter_calendar_and_maturity) ... ok
+test_split_purges_four_interval_outcomes (test_s9.DataTests.test_split_purges_four_interval_outcomes) ... ok
+test_checkpoint_leakage_rejected (test_s9.ModelTests.test_checkpoint_leakage_rejected) ... ok
+test_checkpoint_roundtrip_exact (test_s9.ModelTests.test_checkpoint_roundtrip_exact) ... ok
+test_constant_features_and_tie_order (test_s9.ModelTests.test_constant_features_and_tie_order) ... ok
+test_constant_repetition_price_and_dividend_formula (test_s9.ModelTests.test_constant_repetition_price_and_dividend_formula) ... ok
+test_global_retains_every_training_origin (test_s9.ModelTests.test_global_retains_every_training_origin) ... ok
+test_horizons_use_identical_neighbors (test_s9.ModelTests.test_horizons_use_identical_neighbors) ... ok
+test_nonfinite_features_and_invalid_support_rejected (test_s9.ModelTests.test_nonfinite_features_and_invalid_support_rejected) ... ok
+test_query_leakage_rejected (test_s9.ModelTests.test_query_leakage_rejected) ... ok
+test_scaling_uses_train_only (test_s9.ModelTests.test_scaling_uses_train_only) ... ok
+test_unmatured_training_rejected (test_s9.ModelTests.test_unmatured_training_rejected) ... ok
+test_buy_hold_costs_only_entry_and_exit (test_s9.PolicyTests.test_buy_hold_costs_only_entry_and_exit) ... ok
+test_buy_hold_dividends_are_not_reinvested (test_s9.PolicyTests.test_buy_hold_dividends_are_not_reinvested) ... ok
+test_cash_is_exact_and_has_zero_fees (test_s9.PolicyTests.test_cash_is_exact_and_has_zero_fees) ... ok
+test_continuous_simulation_and_final_cash (test_s9.PolicyTests.test_continuous_simulation_and_final_cash) ... ok
+test_entry_exit_and_dividend_cash_not_taxed_as_sale (test_s9.PolicyTests.test_entry_exit_and_dividend_cash_not_taxed_as_sale) ... ok
+test_finite_grid_optimum_and_limits (test_s9.PolicyTests.test_finite_grid_optimum_and_limits) ... ok
+test_invalid_fee_weight_and_return_rejected (test_s9.PolicyTests.test_invalid_fee_weight_and_return_rejected) ... ok
+test_joint_objective_equals_direct_scenario_variance (test_s9.PolicyTests.test_joint_objective_equals_direct_scenario_variance) ... ok
+test_ledger_gap_rejected (test_s9.PolicyTests.test_ledger_gap_rejected) ... ok
+test_negative_covariance_changes_risk (test_s9.PolicyTests.test_negative_covariance_changes_risk) ... ok
+test_tie_chooses_cash (test_s9.PolicyTests.test_tie_chooses_cash) ... ok
+test_block_validation (test_s9.StatisticsAndExecutionTests.test_block_validation) ... ok
+test_complete_constructed_system_and_regenerated_report (test_s9.StatisticsAndExecutionTests.test_complete_constructed_system_and_regenerated_report) ... ok
+test_constant_date_blocks_and_determinism (test_s9.StatisticsAndExecutionTests.test_constant_date_blocks_and_determinism) ... ok
+test_host_admission_floor_and_pageouts (test_s9.StatisticsAndExecutionTests.test_host_admission_floor_and_pageouts) ... ok
+test_percentile_interpolation (test_s9.StatisticsAndExecutionTests.test_percentile_interpolation) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.180s
+
+OK

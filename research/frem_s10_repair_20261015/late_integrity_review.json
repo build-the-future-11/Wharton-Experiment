@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-15",
+  "finding": "Internal adversarial review found semantic tape metadata identity/completeness and report comparison completeness gaps after passing252generatedtests.",
+  "repair": "Recompute verified tape identity from bounded canonical metadata; enforce exact origin/variant structure; enforce H1/H2/H3/16-ablation report registries and preserve invalid branch.",
+  "retained_failures": [
+    "integrated_verification_attempt1/commands.json",
+    "integrated_verification_attempt1/lint.log",
+    "report_completeness_tests.log"
+  ],
+  "empirical_evidence": false,
+  "post_repair_combined_receipt": "RECEIPT.json"
+}

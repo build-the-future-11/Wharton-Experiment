@@ -1,0 +1,188 @@
+{
+  "status": "EXACT_ORIGINAL_RUN_SOURCE_RECOVERED",
+  "original_run": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e",
+  "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "files": [
+    {
+      "path": "configs/confirmatory.json",
+      "sha256": "71bf444503e22e6b0bcfc66465d9034c041af18dd991b029ee73b43828fcc836",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/data/fred_request.example.json",
+      "sha256": "f01931a975a4c768145dc57f9e3a56dc3422eb6fe8e322eeeab76da2e2dd438b",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/development.json",
+      "sha256": "768c975e5199052aee9b143cf6a78633a34d03e657913d142c78f8d0011b57b2",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/engineering_yahoo_calibrated.json",
+      "sha256": "fb198761f3895265f55e2e44d6e7a5d739e01bdd4c35517c21bd8befd1a331f2",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/first_execution.json",
+      "sha256": "a35c83d45ad88e1663f049cadcb626f8541eb00197931cd01b3766b3c41429d9",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/mandates/allocation_request.template.json",
+      "sha256": "91335eda475efadb9aa3cd3d65f30d799ea8da494c4599c2bb3318f9dcb61a69",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/mandates/decision_request.template.json",
+      "sha256": "843fc836790e1595dbd19870f1ee456a72f2fd21e72d995d734d3950a1466f0b",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/mandates/instrument_master.template.json",
+      "sha256": "8a504f5b43b42edef657be19b1bd00766f45dbb49b27dc45958cac5520e62c5e",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/mandates/laura_gao.pending.json",
+      "sha256": "e8d44d4110a58cac08c1a2b8497fce01e9e9afd40ed21cbc63765fc96438f6cc",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "configs/robustness_suite.json",
+      "sha256": "c243f7193165573ec608f697f40984a84950686eba3f8431670ac0dd972b86c2",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "6b569d290b7da09b1adbcaaa0f81b32c80f1189ded27973fdef90f9db9caad0c",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "research/protocol.json",
+      "sha256": "833100ef8ff8b0a6ca568bfba1d8601c6f115b3bab11705d7876aa978360763c",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/__init__.py",
+      "sha256": "a80cb5a07cc95027621d3443aaaf9f38804127205509af1b3bf6262a6dde73a8",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/__main__.py",
+      "sha256": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/artifacts.py",
+      "sha256": "b30e9f3a70a473c539059f7c98712e859ab20887a3a7b6c4c697cf8c21feb487",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/baselines.py",
+      "sha256": "3ad850db0b390e53238a47758e3be62a736f5bf59e0c56d64e02d3ebabc1e46e",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/cli.py",
+      "sha256": "7e2517344f6a87897bb6ed959db200ae81b3bed3cd446add029c8bb6e17c5c6e",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/config.py",
+      "sha256": "975ff050d227b61acabbc66c383c6bbc5ad0f2969ba7a89834c2255110f604fc",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/controller.py",
+      "sha256": "df4acffc1908f2b1bddad146d1fb7412ea62dcb19daf03e2da2c6cb6d45c9773",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/data.py",
+      "sha256": "888e772097d468b528fb53ee2ced7d01c050c1803f17decf7af3e90645b0654d",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/data_sources.py",
+      "sha256": "67ad1178f5356eb64c9912a919476989b2688e4b62ba0396ff90f67fb5349918",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/decision.py",
+      "sha256": "cc27615b637a6d2d9f2cea70ca326f00cdbf83a8b195f2d851c3288d6140649d",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/evaluation.py",
+      "sha256": "782b1ae1a7818b8448e83312606aa6f67ec8326f30d3ded668b1cd0186946285",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/experiments.py",
+      "sha256": "70e16fd12346836863364667a60ca2990211ac33c6472bfd4a40cb3e51cabe54",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/governance.py",
+      "sha256": "83f7cf6ea88b02811cdb7e7d02745410831e75959f0524940ed6a3e50d7c3807",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/mandate.py",
+      "sha256": "3a00893af4635bfbaf867a79893cda7ee21e2ddd5947c89eedab675b253857e7",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/memory.py",
+      "sha256": "c55fb99f9aa9d2e2b547a668147fc550e689c94f5ff1411a60e74aa01d7db5a7",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/metrics.py",
+      "sha256": "30faca0c7ef46b5f408ef11235f1ad57f9bf39f6f03215974c77e533abb98b15",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/model.py",
+      "sha256": "cc892baf9cab5163555418d703da4969d07de0aac81665af80c7dd0870f76966",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/portfolio.py",
+      "sha256": "941becf8b39bfa0785fb03bb24c0096df30738430546a36a3682efb0ca2e8ffc",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/reporting.py",
+      "sha256": "c49f615a4c49f73d97e0a7ef9dd49697a284db120a1d57da2d02a455c00fdb5a",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/risk.py",
+      "sha256": "b00359adb6944245ae1208806b6efd1b5e269e292e39335a5f6a0459ddfa67b2",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/robustness.py",
+      "sha256": "e6710de1c9b1a6fcd306dd8e23c014120b2686525e0cdcc9dda6f5a820740098",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/splits.py",
+      "sha256": "cc1fefbe5a54c9673df1c31ccb52cea8cabb8aab619d4e651fd417baab34bc97",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/statistics.py",
+      "sha256": "61b1f3e2dd6719e00be12fe1acee6101cf7ae2e495b146b62818b9e21239ccd6",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    },
+    {
+      "path": "src/frem/training.py",
+      "sha256": "087ba770f6c0e48e783d2e83dd1d4495a91ab30e296dc5317336495123c9ca86",
+      "git_revision": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89"
+    }
+  ],
+  "source_files_executed": false
+}

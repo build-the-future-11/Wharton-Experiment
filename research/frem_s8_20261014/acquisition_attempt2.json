@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "successors.frem_s8.prepare",
+    "--root",
+    "data/s8_etf_2020_2022_20261014_attempt2",
+    "--freeze",
+    "research/frem_s8_20261014/freeze.json"
+  ],
+  "returncode": 1,
+  "seconds": 1.282691957996576
+}

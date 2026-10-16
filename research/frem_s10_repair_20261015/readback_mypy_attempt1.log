@@ -1,0 +1,4 @@
+successors/frem_s10/tests/test_readback_audit.py:64: error: Incompatible types in assignment (expression has type "ForecastScore", variable has type "LedgerEvent")  [assignment]
+successors/frem_s10/tests/test_readback_audit.py:65: error: "LedgerEvent" has no attribute "energy"  [attr-defined]
+successors/frem_s10/tests/test_readback_audit.py:66: error: "LedgerEvent" has no attribute "interval_coverage"  [attr-defined]
+Found 3 errors in 1 file (checked 2 source files)

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "seconds": 0.968734707996191,
+  "metadata": {
+    "schema_version": "s7-variable-week-v1",
+    "return_units": "log_return",
+    "currency": "USD",
+    "horizon_seconds": 604800.0,
+    "protected_start": 1735689600.0,
+    "fit_cutoff": 1483228800.0,
+    "asset_universe": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "last_outcome_time": 1672151400.0,
+    "last_available_time": 1672165800.0,
+    "calibration_cutoff": 1546281000.0,
+    "input_dim": 1,
+    "window_length": 8,
+    "admission_scope": "validated declared window contract; provenance assertions require external verification"
+  },
+  "coverage": {
+    "dates": {
+      "train": 623,
+      "calibration": 104,
+      "evaluation": 153
+    },
+    "exclusions": [
+      {
+        "start": "2005-01-03",
+        "reason": "warmup_or_train_target_purge"
+      },
+      {
+        "start": "2005-01-10",
+        "reason": "warmup_or_train_target_purge"
+      },
+      {
+        "start": "2016-12-27",
+        "reason": "warmup_or_train_target_purge"
+      },
+      {
+        "start": "2020-01-02",
+        "reason": "warmup_or_train_target_purge"
+      },
+      {
+        "start": "2020-01-06",
+        "reason": "warmup_or_train_target_purge"
+      },
+      {
+        "start": "2020-01-13",
+        "reason": "warmup_or_train_target_purge"
+      }
+    ],
+    "evaluation_start": 1579617000.0,
+    "evaluation_end": 1672151400.0,
+    "2019_rows_used": 0,
+    "limitation": "No year-gap bridging. Fresh evaluation starts after eight 2020 daily returns. Last interval requires both endpoints before 2023. Assumed availability; weekly dividend accrual/reinvestment; zero cash yield."
+  },
+  "market_fits": 0,
+  "scope": "Construction and chronology validation only; outcomes not scored."
+}

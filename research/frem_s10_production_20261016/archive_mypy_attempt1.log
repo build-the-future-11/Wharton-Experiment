@@ -1,0 +1,6 @@
+successors/frem_s10/src/frem_s10/experiment/model_archive.py:283: error: Argument 1 to "len" has incompatible type "int | float | str | list[JSONValue] | dict[str, JSONValue]"; expected "Sized"  [arg-type]
+successors/frem_s10/src/frem_s10/experiment/model_archive.py:290: error: Value of type "int | float | str | list[JSONValue] | dict[str, JSONValue]" is not indexable  [index]
+successors/frem_s10/src/frem_s10/experiment/model_archive.py:290: error: Invalid index type "int" for "dict[str, JSONValue]"; expected type "str"  [index]
+successors/frem_s10/src/frem_s10/experiment/model_archive.py:290: error: Argument 1 to "len" has incompatible type "int | float | str | list[JSONValue] | dict[str, JSONValue]"; expected "Sized"  [arg-type]
+successors/frem_s10/src/frem_s10/experiment/model_archive.py:302: error: Argument 1 to "len" has incompatible type "int | float | str | list[JSONValue] | dict[str, JSONValue]"; expected "Sized"  [arg-type]
+Found 5 errors in 1 file (checked 1 source file)

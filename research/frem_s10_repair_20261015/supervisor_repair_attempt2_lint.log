@@ -1,0 +1,49 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_supervisor_audit.py:3:1
+   |
+ 1 |   """Generated engineering lifecycle tests; synthetic counters never admit real work."""
+ 2 |
+ 3 | / import hashlib
+ 4 | | import json
+ 5 | | import os
+ 6 | | import subprocess
+ 7 | | import sys
+ 8 | | from dataclasses import replace
+ 9 | | from pathlib import Path
+10 | | from typing import cast
+11 | |
+12 | | import frem_s10.runtime.supervisor as supervisor
+13 | | import pytest
+14 | | from frem_s10.errors import (
+15 | |     ArtifactIOError,
+16 | |     ContractError,
+17 | |     ExecutionStateError,
+18 | |     IntegrityError,
+19 | |     ResourceLimitError,
+20 | | )
+21 | | from frem_s10.runtime.artifacts import publish_json
+22 | | from frem_s10.runtime.journal import Journal, inspect_journal
+23 | | from frem_s10.runtime.resources import MemorySample
+24 | | from frem_s10.runtime.supervisor import (
+25 | |     Budget,
+26 | |     MonotonicClock,
+27 | |     OwnedTree,
+28 | |     ProcessRecord,
+29 | |     directory_bytes,
+30 | |     execute_operation,
+31 | |     owned_processes,
+32 | |     parse_processes,
+33 | | )
+   | |_^
+help: Organize imports
+   |
+11 |
+   - import frem_s10.runtime.supervisor as supervisor
+12 | import pytest
+13 +
+14 + import frem_s10.runtime.supervisor as supervisor
+15 | from frem_s10.errors import (
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

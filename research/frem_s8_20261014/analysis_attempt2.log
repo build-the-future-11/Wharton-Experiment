@@ -1,0 +1,24 @@
+{
+  "prediction_practical_support": false,
+  "economic_point_win": false,
+  "primary": {
+    "terminal_wealth": 98745.27368214123,
+    "net_return": -0.012547263178587786,
+    "fees": 810.2415304526492,
+    "max_drawdown": 0.12257422475905788,
+    "average_risky_weight": 0.6369398796498609,
+    "cash_only_dates": 0,
+    "trade_dates": 38,
+    "traded_notional": 810241.5304526492,
+    "annual_carried_path_returns": {
+      "2020": 0.009904021043260824,
+      "2021": 0.07351178425222615,
+      "2022": -0.0891866233126597
+    }
+  },
+  "nll": {
+    "s8": -1.9920650737334378,
+    "equal": -1.9906975740481352,
+    "memory": -1.9913812857728548
+  }
+}

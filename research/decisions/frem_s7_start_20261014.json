@@ -1,0 +1,9 @@
+{
+  "observation": "S6 expert-loss softmax suppresses a complementary narrow-density expert; restoring its weight removes almost all deficit. Omitted holiday intervals and gross negative selected returns dominate wealth loss, with additional cost drag.",
+  "hypothesized_cause": "Individual-expert likelihood is mismatched to mixture contribution; episode selection and high persistent exposure undermine interpretation and portfolio utility.",
+  "change": "Additive S7 mixture-likelihood memory with inner chronological gate; continuous variable-week dividend accounting; crossed cost-aware policy. Original S6 artifacts unchanged.",
+  "predicted_effect": "Potential better calibration and lower turnover; improved NLL/wealth not assumed.",
+  "discriminating_experiment": "Frozen three-seed 2019 development test, equal mixture primary, all controls and crossed policies.",
+  "result": "FROZEN_BEFORE_FRESH_DATA_ACQUISITION",
+  "protocol": "research/frem_s7_20261014/freeze1.json"
+}

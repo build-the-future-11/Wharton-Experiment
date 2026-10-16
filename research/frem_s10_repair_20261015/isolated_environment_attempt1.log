@@ -1,0 +1,9 @@
+Using CPython 3.12.14 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12
+Creating virtual environment at: successors/frem_s10/.venv
+Resolved 21 packages in 109ms
+  × Failed to download `ruff==0.17.0`
+  ╰─▶ Network connectivity is disabled, but the
+      requested data wasn't found in the cache for:
+      `https://files.pythonhosted.org/packages/a7/20/643f3c8f75594f937b2bf74801241c56a2e2b8e139d24dff8b66b28cdd7f/ruff-0.17.0-py3-none-macosx_11_0_arm64.whl`
+
+hint: `ruff` (v0.17.0) was included because `frem-s10:quality` (v0.1.0) depends on `ruff`

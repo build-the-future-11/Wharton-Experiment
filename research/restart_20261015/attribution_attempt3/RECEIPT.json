@@ -1,0 +1,11 @@
+{
+  "status": "FAILED",
+  "error": "liquidation fee mismatch: 0.0 != 98.09350597536981",
+  "exception": "ValueError",
+  "completed_at": "2026-10-15T14:11:22.686753+00:00",
+  "seconds": 4.665665541004273,
+  "peak_rss_mib": 38.84375,
+  "market_fits": 0,
+  "new_policy_replays": 0,
+  "protected_access": false
+}

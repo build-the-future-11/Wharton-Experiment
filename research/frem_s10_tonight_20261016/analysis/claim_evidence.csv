@@ -1,0 +1,8 @@
+claim,status,evidence,limitation
+Sealed source unchanged,VERIFIED,manifests/SOURCE_VERIFICATION.json,133 files; no complete-suite claim
+Private Kaggle CPU probe executed,OBSERVED,observations/CPU_PROBE_CONSOLE.txt,Metadata only; no numerical model
+Kaggle runtime compatible,FAILED,observations/CPU_PROBE_RESULT.json,Python3.13.15/NumPy2.1.3 differ from3.12/2.5.4
+Private output retrieval,VERIFIED,retrieved/version1/RETRIEVAL_VERIFICATION.json,3 producer hashes match; no model checkpoint
+CPU allocation stopped,REQUESTED_UI_OFF,observations/SESSION_CLOSEOUT.json,Final active-events check unavailable
+Postrun account quota,UNVERIFIED,observations/SESSION_CLOSEOUT.json,"Last observed30remaining at07:16:41UTC, beforeCPUprobe"
+Scientific improvement,NOT_EVALUATED,manifests/SCIENTIFIC_MANIFEST_UNFROZEN.json,All model/market comparisons incomplete

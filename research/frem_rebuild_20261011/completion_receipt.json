@@ -1,0 +1,147 @@
+{
+  "status": "VERIFIED_COMPLETE_EXPLORATORY_MATRIX",
+  "verified_at": "2026-10-11T13:37:34.958397+00:00",
+  "run_directory": "outputs/frem_s2_development_20261011_attempt3",
+  "fits_completed": 22,
+  "prediction_cells": 24,
+  "prediction_rows_per_cell": 437,
+  "independent_calendar_months": 19,
+  "optimization_seeds": [
+    11,
+    29
+  ],
+  "admitted_stocks": 23,
+  "runtime_tests": "194 passed in 7.80 seconds with DeprecationWarning treated as an error",
+  "new_tests": 8,
+  "lint": "Changed source and tests passed Ruff",
+  "student_t_nll_max_reconstruction_error": 1.7763568394002505e-15,
+  "source_and_prediction_hashes_verified": true,
+  "complete_seed_model_outcome_grid_verified": true,
+  "maximum_sampled_process_rss_mib": 404.1875,
+  "sequential_model_process_wall_seconds": 218.90224479307653,
+  "process_rss_limit_mib": 768,
+  "threads_per_model_process": 1,
+  "niceness": 10,
+  "normal_resource_gate_passed": false,
+  "slow_mode_authorization": "User: just run it slowly but efficently; research/frem_rebuild_20261011/slow_execution_amendment.json",
+  "summary": {
+    "status": "COMPLETE",
+    "fit_cells": 22,
+    "prediction_cells": 24,
+    "date_balanced_nll": {
+      "legacy_frem": -0.49029534171284456,
+      "legacy_no_memory": -0.4811575694332404,
+      "standardized_frem": -0.5590940377046204,
+      "standardized_no_memory": -0.5587698648374606,
+      "frozen_residual": -0.6031824693860103,
+      "frozen_no_memory": -0.6031824693860103,
+      "zero": -0.7095258233964543,
+      "ridge": -0.42534195719043183,
+      "xgboost": -0.45353798486317953,
+      "gru": -0.3253524509672296,
+      "dlinear": -0.3838337433892092,
+      "patch_transformer": -0.3926301776356885
+    },
+    "same_checkpoint_memory_gain_nats": 0.0,
+    "scope": "Exploratory public survivor sample, 19 crisis months, two optimization seeds",
+    "sota_established": false,
+    "significance_test_performed": false,
+    "protected_outcomes_accessed": false
+  },
+  "trajectories": {
+    "legacy_frem_seed_11": {
+      "selected_epoch": 8,
+      "completed_epochs": 11,
+      "gradient_steps": 429,
+      "row_weighted_gradient_norm": 39.52043740989609,
+      "row_weighted_clip_indicator": 1.0,
+      "selected_validation_mean_bias": 0.00626053975199016
+    },
+    "standardized_frem_seed_11": {
+      "selected_epoch": 7,
+      "completed_epochs": 10,
+      "gradient_steps": 390,
+      "row_weighted_gradient_norm": 2.454923474660888,
+      "row_weighted_clip_indicator": 0.9870113493064313,
+      "selected_validation_mean_bias": -0.0007119487174135628
+    },
+    "legacy_frem_seed_29": {
+      "selected_epoch": 5,
+      "completed_epochs": 8,
+      "gradient_steps": 312,
+      "row_weighted_gradient_norm": 40.69110218085076,
+      "row_weighted_clip_indicator": 1.0,
+      "selected_validation_mean_bias": 0.005963897258371588
+    },
+    "standardized_frem_seed_29": {
+      "selected_epoch": 5,
+      "completed_epochs": 8,
+      "gradient_steps": 312,
+      "row_weighted_gradient_norm": 2.4241256235451596,
+      "row_weighted_clip_indicator": 0.9719419924337958,
+      "selected_validation_mean_bias": -0.0002831520120691134
+    }
+  },
+  "selected_calibration": {
+    "11": {
+      "memory": {
+        "weight": 0.0,
+        "scale_multiplier": 1.0,
+        "validation_nll": -1.4518528612548316
+      },
+      "no_memory": {
+        "weight": 0.0,
+        "scale_multiplier": 1.0,
+        "validation_nll": -1.4518528612548316
+      }
+    },
+    "29": {
+      "memory": {
+        "weight": 0.0,
+        "scale_multiplier": 1.0,
+        "validation_nll": -1.4657271646879972
+      },
+      "no_memory": {
+        "weight": 0.0,
+        "scale_multiplier": 1.0,
+        "validation_nll": -1.4657271646879972
+      }
+    }
+  },
+  "result_interpretation": {
+    "training_scale": "Improved legacy FREM held-out development NLL by 0.06879869599177585 nats, averaged over both seeds.",
+    "successor": "Frozen-base calibrated variant outscored all trained baselines in this declared local matrix, but the zero-return baseline outscored it.",
+    "memory": "Both validation searches selected weight zero; same-checkpoint memory gain is zero. Memory contribution unsupported in this setting.",
+    "sota": "NOT_ESTABLISHED; local architecture controls are not published SOTA reproductions.",
+    "statistical_scope": "Descriptive only: 19 correlated crisis months and two optimization seeds are not independent market replications. No new significance test or threshold change."
+  },
+  "data_limitations": [
+    "Retrospective present-day survivor sample and provider-adjusted local-currency prices.",
+    "Research-coordinate times are not verified exchange/publication or execution timestamps.",
+    "ENB.TO May2003 all-zero quote month quarantined as unknown; no forward filling. Terminal loss is not ruled out; canonical adapter rejection unchanged.",
+    "Tencent excluded by original minimum training-coverage rule.",
+    "No admitted canonical market panel, protected evaluation, portfolio simulation or live trading."
+  ],
+  "preserved_failures": [
+    {
+      "attempt": "outputs/frem_s2_development_20261011_attempt1",
+      "result": "191 passed,2 failed; explicit-duration compatibility repair before fitting"
+    },
+    {
+      "attempt": "outputs/frem_s2_development_20261011_attempt2",
+      "result": "193 passed; zero-quote source rejection before fitting; explicit missing-month amendment before retry"
+    }
+  ],
+  "dependencies": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pytest": "8.4.2"
+  },
+  "protected_outcomes_accessed": false,
+  "canonical_scientific_status": "NOT_EVALUATED",
+  "predecessor_preserved": true
+}

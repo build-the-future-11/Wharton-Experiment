@@ -1,0 +1,55 @@
+C901 `_validate_transition` is too complex (11 > 10)
+   --> successors/frem_s10/src/frem_s10/experiment/model_archive.py:98:5
+    |
+ 98 | def _validate_transition(step: ForecastTransition) -> None:
+    |     ^^^^^^^^^^^^^^^^^^^^
+ 99 |     if tuple(item.arm for item in step.batch.forecasts) != FORECAST_ARMS:
+100 |         raise IntegrityError("weekly archive requires all eight original issued arms")
+    |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_model_archive_audit.py:3:1
+   |
+ 1 |   """Generated weekly archival, retention and fail-stop evidence."""
+ 2 |
+ 3 | / from dataclasses import replace
+ 4 | | from pathlib import Path
+ 5 | |
+ 6 | | import numpy as np
+ 7 | | import pytest
+ 8 | |
+ 9 | | from frem_s10.data.calendar import build_calendar_schedule
+10 | | from frem_s10.data.features import build_origin_records, fit_burnin_transform
+11 | | from frem_s10.errors import ArtifactIOError, IntegrityError
+12 | | from frem_s10.experiment.forecasts import build_forecast_tape
+13 | | from frem_s10.experiment.matrix import MODEL_VARIANTS
+14 | | from frem_s10.experiment.model_archive import (
+15 | |     ModelArchiveWriter,
+16 | |     _payload,
+17 | |     _unpack,
+18 | |     decode_transition,
+19 | |     verify_model_archive,
+20 | | )
+21 | | from frem_s10.identities import JSONValue, object_json
+22 | | from frem_s10.model.checkpoint import dump_state
+23 | | from frem_s10.model.engine import advance
+24 | | from frem_s10.model.records import ForecastTransition
+25 | | from frem_s10.runtime.artifacts import read_verified_json
+26 | | from test_experiment_audit import generated_panel
+27 | | from test_model_audit import first_transition, record, request
+   | |______________________________________________________________^
+help: Organize imports
+   |
+7  | import pytest
+8  + from test_experiment_audit import generated_panel
+9  + from test_model_audit import first_transition, record, request
+10 |
+--------------------------------------------------------------------------------
+27 | from frem_s10.runtime.artifacts import read_verified_json
+   - from test_experiment_audit import generated_panel
+   - from test_model_audit import first_transition, record, request
+28 |
+   |
+
+Found 2 errors.
+[*] 1 fixable with `--fix`.

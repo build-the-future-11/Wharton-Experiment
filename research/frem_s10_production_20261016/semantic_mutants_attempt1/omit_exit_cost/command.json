@@ -1,0 +1,15 @@
+{
+  "label": "omit_exit_cost",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash"
+  ],
+  "returncode": 0,
+  "scope": "GENERATED_ENGINEERING"
+}

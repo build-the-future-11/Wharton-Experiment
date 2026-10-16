@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/pytest",
+    "-q",
+    "successors/frem_s10/tests/test_packaging_audit.py"
+  ],
+  "exit": 1,
+  "seconds": 0.656066291994648,
+  "source_sha256_before": "95d2d895904a580c37ef3fa70b14dbd43a1e7bab998204ef46da6f7ada19cfbe",
+  "source_sha256_after": "95d2d895904a580c37ef3fa70b14dbd43a1e7bab998204ef46da6f7ada19cfbe",
+  "test_sha256": "3e2c0a34504f5aa25601824c56450a0fea92858fe81a8db4d0f5b2ff9ab01403",
+  "log_sha256": "3edef8f3450c63263f35e47b08735b836f3297ba3adf598ee2ead21abcd98f14",
+  "scope": "FAKE_ARCHIVE_BOUNDARY_TESTS",
+  "builds": 0,
+  "market_runs": 0
+}

@@ -1,0 +1,31 @@
+{
+  "status": "BLOCKED_RESOURCE_ADMISSION",
+  "attempt": "outputs/frem_s6_real_20261014_local_attempt3",
+  "checked_at": "2026-10-14T09:44:41.377233+00:00",
+  "requested_cells": 24,
+  "market_fits_started": 0,
+  "comparisons_available": false,
+  "protected_access": false,
+  "admission": {
+    "checked_at": "2026-10-14T09:44:41.377233+00:00",
+    "samples": [
+      {
+        "available_mib": 157.875,
+        "pageouts": 222878
+      },
+      {
+        "available_mib": 212.5,
+        "pageouts": 222878
+      },
+      {
+        "available_mib": 155.078125,
+        "pageouts": 222945
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "frozen_protocol": "research/frem_s6_real_20261014/freeze2/protocol.json",
+  "source_data_identity_verification": "PASSED_BY_FROZEN_RUNNER_BEFORE_ADMISSION",
+  "preservation": "New attempt directory; no predecessor results or frozen source changed."
+}

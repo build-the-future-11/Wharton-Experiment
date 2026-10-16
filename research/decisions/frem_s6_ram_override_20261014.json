@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-14T11:43:50.407582+00:00",
+  "observation": "Repeated RAM admission failures; user explicitly requested execution without RAM guard.",
+  "hypothesized_cause": "System memory pressure prevents launch, not model validity.",
+  "change": "Separate launcher bypasses RAM floor/pageout admission and training RSS limit; original frozen sources unchanged. Two-hour runtime budget and integrity/protected checks retained.",
+  "predicted_effect": "Full declared matrix can attempt execution under memory pressure; may slow or fail.",
+  "discriminating_experiment": "Unchanged 24-cell S6 ETF matrix, all seeds/controls/costs, primary fixed expert averaging.",
+  "result": "AUTHORIZED_BEFORE_EXECUTION",
+  "runner": "successors/frem_s6_real/run_ram_override_20261014.py",
+  "runner_sha256": "5f980cc0698b4c676e76f36ec53625be6aebd03d76c6dbe7fe929cb5f3cfae1b",
+  "original_runner_sha256": "124c2d20916c1f77f7b0d9ce0a9cd9a66fdf50095c14db08033a3593ee09d812"
+}

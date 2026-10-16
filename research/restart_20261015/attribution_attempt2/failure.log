@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 153, in main
+    result = audit(args.root, args.manifest, args.output)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 75, in audit
+    item = audit_ledger(ledger, cost_bps=float(cost), decision_assets=assets)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/ledger.py", line 128, in audit_ledger
+    close(ledger["max_drawdown"], max_drawdown, "drawdown")
+          ~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'max_drawdown'

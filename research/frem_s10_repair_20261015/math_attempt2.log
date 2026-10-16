@@ -1,0 +1,6 @@
+Constructed engineering tests only.
+Command: ['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python', '-B', '-m', 'pytest', '-q', '-W', 'error', '-p', 'no:cacheprovider', 'successors/frem_s10/tests/test_math_audit.py', 'successors/frem_s10/tests/test_actions_audit.py']
+...........................                                              [100%]
+27 passed in 0.24s
+
+exit_code=0

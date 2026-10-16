@@ -1,0 +1,96 @@
+..............F.................                                         [100%]
+=================================== FAILURES ===================================
+_________ test_all_controllers_import_with_only_import_machinery_reads _________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-103/test_all_controllers_import_wi0')
+
+    def test_all_controllers_import_with_only_import_machinery_reads(tmp_path: Path) -> None:
+        script = r'''
+    import _thread, importlib, os, sys, threading
+    def reject_thread(*args, **kwargs):
+        raise RuntimeError('unexpected thread start')
+    _thread.start_new_thread = reject_thread
+    threading.Thread.start = reject_thread
+    def guard(event, args):
+        if event == 'open':
+            path, mode, flags = args
+            if flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC | os.O_APPEND):
+                raise RuntimeError('unexpected write open')
+            frame = sys._getframe(1)
+            permitted = False
+            while frame:
+                if (frame.f_globals.get('__name__') == 'importlib._bootstrap_external'
+                        and frame.f_code.co_name == 'get_data'):
+                    permitted = True
+                    break
+                frame = frame.f_back
+            if not permitted or not isinstance(path, str) or not path.endswith(('.py', '.pyc')):
+                raise RuntimeError('non-import file read')
+        elif event in ('socket.connect', 'socket.bind', 'subprocess.Popen', 'os.system',
+                       'os.mkdir', 'os.remove', 'os.rename', 'os.rmdir', 'os.unlink'):
+            raise RuntimeError('unexpected import side effect: ' + event)
+    sys.addaudithook(guard)
+    for probe in (lambda: open('forbidden-market-values.json'),
+                  lambda: _thread.start_new_thread(lambda: None, ()),
+                  lambda: threading.Thread(target=lambda: None).start()):
+        try:
+            probe()
+        except RuntimeError:
+            pass
+        else:
+            raise AssertionError('restriction probe did not reject')
+    for suffix in ('artifacts', 'catalog', 'claims', 'consumption', 'continuation', 'declarations',
+                   'journal', 'packaging', 'pipeline', 'preservation', 'provenance', 'qualification',
+                   'qualification_worker', 'receipts', 'resources', 'saved_audit', 'supervisor',
+                   'verification', 'worker'):
+        importlib.import_module('frem_s10.runtime.' + suffix)
+    importlib.import_module('frem_s10.data.production')
+    importlib.import_module('frem_s10.cli')
+    assert 'numpy' not in sys.modules
+    assert not any(name.startswith(('frem_s10.model.', 'frem_s10.experiment.', 'frem_s10.analysis.',
+                                    'torch', 'pandas', 'sklearn', 'scipy', 'frem.')) for name in sys.modules)
+    '''
+        env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+        env.pop("PYTHONPATH", None)
+        result = subprocess.run(
+            [sys.executable, "-B", "-X", f"pycache_prefix={tmp_path / 'never-written'}", "-c", script],
+            cwd=tmp_path,
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=15,
+        )
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "<string>", line 39, in <module>
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+E           File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+E           File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+E           File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+E           File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+E           File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+E           File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+E           File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/claims.py", line 14, in <module>
+E           File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/declarations.py", line 16, in <module>
+E           File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/metadata.py", line 7, in <module>
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zoneinfo/__init__.py", line 10, in <module>
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zoneinfo/_tzpath.py", line 181, in <module>
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/zoneinfo/_tzpath.py", line 22, in _reset_tzpath
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/sysconfig.py", line 770, in get_config_var
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/sysconfig.py", line 744, in get_config_vars
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/sysconfig.py", line 718, in _init_config_vars
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/_osx_support.py", line 463, in customize_config_vars
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/_osx_support.py", line 185, in _supports_universal_builds
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/_osx_support.py", line 126, in _get_system_version_tuple
+E           File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/_osx_support.py", line 99, in _get_system_version
+E           File "<string>", line 21, in guard
+E         RuntimeError: non-import file read
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python', '-B',...port.py", line 99, in _get_system_version\n  File "<string>", line 21, in guard\nRuntimeError: non-import file read\n').returncode
+
+successors/frem_s10/tests/test_production_gate_catalog.py:242: AssertionError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_production_gate_catalog.py::test_all_controllers_import_with_only_import_machinery_reads
+1 failed, 31 passed in 0.81s

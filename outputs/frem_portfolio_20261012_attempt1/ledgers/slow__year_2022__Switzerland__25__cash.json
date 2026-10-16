@@ -1,0 +1,229 @@
+{
+  "policy": "cash",
+  "currency": "CHF",
+  "terminal_wealth": 100000.0,
+  "net_return": 0.0,
+  "max_drawdown": 0.0,
+  "fees": 0.0,
+  "traded_notional": 0.0,
+  "periods": [
+    {
+      "time": 1640995200,
+      "end": 1643673600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1643673600,
+      "end": 1646092800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1646092800,
+      "end": 1648771200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1648771200,
+      "end": 1651363200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1651363200,
+      "end": 1654041600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1654041600,
+      "end": 1656633600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1656633600,
+      "end": 1659312000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1659312000,
+      "end": 1661990400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1661990400,
+      "end": 1664582400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1664582400,
+      "end": 1667260800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1667260800,
+      "end": 1669852800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1669852800,
+      "end": 1672531200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "NESN.SW": 0.0,
+        "NOVN.SW": 0.0
+      },
+      "net_factor": 1.0,
+      "liquidation_fee": 0.0
+    }
+  ],
+  "defaults": []
+}

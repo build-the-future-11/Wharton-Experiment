@@ -1,0 +1,90 @@
+{
+  "scope": "Deterministic assumptions, not market predictions, yields or funding probabilities",
+  "case_source": "laura_case_copy_20261010",
+  "rows": [
+    {
+      "assumed_growth": 0,
+      "assumed_reserve_discount": 0,
+      "wealth_before_2033_payment": 450000,
+      "reserve_before_2033_payment": 500000.0,
+      "net_surplus_before_buffer": -50000.0
+    },
+    {
+      "assumed_growth": 0,
+      "assumed_reserve_discount": 0.02,
+      "wealth_before_2033_payment": 450000,
+      "reserve_before_2033_payment": 458111.835318354,
+      "net_surplus_before_buffer": -8111.835318354017
+    },
+    {
+      "assumed_growth": 0,
+      "assumed_reserve_discount": 0.04,
+      "wealth_before_2033_payment": 450000,
+      "reserve_before_2033_payment": 421766.5805264614,
+      "net_surplus_before_buffer": 28233.419473538583
+    },
+    {
+      "assumed_growth": 0.02,
+      "assumed_reserve_discount": 0,
+      "wealth_before_2033_payment": 503460.8462592,
+      "reserve_before_2033_payment": 500000.0,
+      "net_surplus_before_buffer": 3460.846259200014
+    },
+    {
+      "assumed_growth": 0.02,
+      "assumed_reserve_discount": 0.02,
+      "wealth_before_2033_payment": 503460.8462592,
+      "reserve_before_2033_payment": 458111.835318354,
+      "net_surplus_before_buffer": 45349.010940846
+    },
+    {
+      "assumed_growth": 0.02,
+      "assumed_reserve_discount": 0.04,
+      "wealth_before_2033_payment": 503460.8462592,
+      "reserve_before_2033_payment": 421766.5805264614,
+      "net_surplus_before_buffer": 81694.2657327386
+    },
+    {
+      "assumed_growth": 0.04,
+      "assumed_reserve_discount": 0,
+      "wealth_before_2033_payment": 562093.6409088002,
+      "reserve_before_2033_payment": 500000.0,
+      "net_surplus_before_buffer": 62093.64090880018
+    },
+    {
+      "assumed_growth": 0.04,
+      "assumed_reserve_discount": 0.02,
+      "wealth_before_2033_payment": 562093.6409088002,
+      "reserve_before_2033_payment": 458111.835318354,
+      "net_surplus_before_buffer": 103981.80559044617
+    },
+    {
+      "assumed_growth": 0.04,
+      "assumed_reserve_discount": 0.04,
+      "wealth_before_2033_payment": 562093.6409088002,
+      "reserve_before_2033_payment": 421766.5805264614,
+      "net_surplus_before_buffer": 140327.06038233876
+    },
+    {
+      "assumed_growth": 0.06,
+      "assumed_reserve_discount": 0,
+      "wealth_before_2033_payment": 626289.5703168001,
+      "reserve_before_2033_payment": 500000.0,
+      "net_surplus_before_buffer": 126289.57031680015
+    },
+    {
+      "assumed_growth": 0.06,
+      "assumed_reserve_discount": 0.02,
+      "wealth_before_2033_payment": 626289.5703168001,
+      "reserve_before_2033_payment": 458111.835318354,
+      "net_surplus_before_buffer": 168177.73499844613
+    },
+    {
+      "assumed_growth": 0.06,
+      "assumed_reserve_discount": 0.04,
+      "wealth_before_2033_payment": 626289.5703168001,
+      "reserve_before_2033_payment": 421766.5805264614,
+      "net_surplus_before_buffer": 204522.98979033873
+    }
+  ]
+}

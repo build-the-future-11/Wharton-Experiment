@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-13T14:49:04.499331+00:00",
+  "samples": [
+    {
+      "available_mib": 277.234375,
+      "pageouts": 143301
+    },
+    {
+      "available_mib": 210.328125,
+      "pageouts": 143301
+    },
+    {
+      "available_mib": 95.078125,
+      "pageouts": 143358
+    }
+  ],
+  "normal_floor_mib": 512,
+  "fresh_training_admitted": false,
+  "fresh_market_fits": 0,
+  "protected_access": false,
+  "integrity_test_budget": {
+    "workers": 1,
+    "rss_mib": 128,
+    "seconds_per_process": 60,
+    "scope": "tiny deterministic unit/integration checks; no market training or generated performance campaign"
+  }
+}

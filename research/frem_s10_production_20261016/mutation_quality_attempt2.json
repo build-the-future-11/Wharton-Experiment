@@ -1,0 +1,22 @@
+{
+  "schema": "s10-bounded-mutation-check-quality-v1",
+  "scope": "GENERATED_METADATA_AND_STATIC_CHECKS_ONLY",
+  "status": "PASS",
+  "tests_passed": 23,
+  "source_sha256": {
+    "successors/frem_s10/src/frem_s10/runtime/mutation_check.py": "5c3767938372f8fb9533f50513a728173e22b6ceaec3af7abfbc46c5cb3c01ef",
+    "successors/frem_s10/tests/test_mutation_check_audit.py": "47c5f433cc63e27e3a4a2bf57823b0b96c3d0b6892eb19cfb84fd941c4601c85",
+    "successors/frem_s10/tests/test_production_verification_audit.py": "7a4219b30fcbe4155514269c837b117efe5ed68d65afedd6bd887913e88bc8a0"
+  },
+  "log_sha256": {
+    "research/frem_s10_production_20261016/mutation_quality_attempt2_lint.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "research/frem_s10_production_20261016/mutation_quality_attempt2_format.log": "eee76f865de5a9f2456950f710ae5d5f9b5bd0ea02aa54f614c5eed6642a0bfd",
+    "research/frem_s10_production_20261016/mutation_quality_attempt2_tests.log": "f8277ad17f8a5df588003f513c081462c3a20441d226c0005072a00410299fea",
+    "research/frem_s10_production_20261016/mutation_quality_attempt2_types.log": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  },
+  "actual_mutation_campaign_executed": false,
+  "numerical_model_execution": false,
+  "fresh_host_guard_required": true,
+  "prior_type_failure_retained": "research/frem_s10_production_20261016/mutation_quality_attempt1_types.log",
+  "read_only_anchor_syntax": "research/frem_s10_production_20261016/mutation_anchor_syntax_attempt1.json"
+}

@@ -1,0 +1,124 @@
+UP040 Type alias `JSONValue` uses `TypeAlias` annotation instead of the `type` keyword
+  --> successors/frem_s10/src/frem_s10/identities.py:12:1
+   |
+10 | from frem_s10.errors import ContractError
+11 |
+12 | JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+13 | JSONObject: TypeAlias = dict[str, JSONValue]
+   |
+help: Use the `type` keyword
+   |
+11 |
+   - JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+12 + type JSONValue = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+13 | JSONObject: TypeAlias = dict[str, JSONValue]
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+RUF036 `None` not at the end of the type union.
+  --> successors/frem_s10/src/frem_s10/identities.py:12:24
+   |
+10 | from frem_s10.errors import ContractError
+11 |
+12 | JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+13 | JSONObject: TypeAlias = dict[str, JSONValue]
+   |
+help: Move `None` to the end of the type union
+   |
+11 |
+   - JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+12 + JSONValue: TypeAlias = bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"] | None
+13 | JSONObject: TypeAlias = dict[str, JSONValue]
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+UP040 Type alias `JSONObject` uses `TypeAlias` annotation instead of the `type` keyword
+  --> successors/frem_s10/src/frem_s10/identities.py:13:1
+   |
+12 | JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+13 | JSONObject: TypeAlias = dict[str, JSONValue]
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: Use the `type` keyword
+   |
+12 | JSONValue: TypeAlias = None | bool | int | float | str | list["JSONValue"] | dict[str, "JSONValue"]
+   - JSONObject: TypeAlias = dict[str, JSONValue]
+13 + type JSONObject = dict[str, JSONValue]
+14 |
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+B905 `zip()` without an explicit `strict=` parameter
+  --> successors/frem_s10/src/frem_s10/runtime/resources.py:62:49
+   |
+60 |     if any(sample.available_mib < 512 for sample in samples):
+61 |         reasons.append("FREE_PLUS_SPECULATIVE_BELOW_512_MIB")
+62 |     if any(b.pageouts != a.pageouts for a, b in zip(samples, samples[1:])):
+   |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+63 |         reasons.append("PAGEOUT_COUNTER_CHANGED")
+64 |     return {"status": "BLOCKED" if reasons else "PASS", "reasons": reasons,
+   |
+help: Add explicit value for parameter `strict=`
+   |
+61 |         reasons.append("FREE_PLUS_SPECULATIVE_BELOW_512_MIB")
+   -     if any(b.pageouts != a.pageouts for a, b in zip(samples, samples[1:])):
+62 +     if any(b.pageouts != a.pageouts for a, b in zip(samples, samples[1:], strict=False)):
+63 |         reasons.append("PAGEOUT_COUNTER_CHANGED")
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+  --> successors/frem_s10/src/frem_s10/runtime/resources.py:62:49
+   |
+60 |     if any(sample.available_mib < 512 for sample in samples):
+61 |         reasons.append("FREE_PLUS_SPECULATIVE_BELOW_512_MIB")
+62 |     if any(b.pageouts != a.pageouts for a, b in zip(samples, samples[1:])):
+   |                                                 ^^^
+63 |         reasons.append("PAGEOUT_COUNTER_CHANGED")
+64 |     return {"status": "BLOCKED" if reasons else "PASS", "reasons": reasons,
+   |
+help: Replace `zip()` with `itertools.pairwise()`
+   |
+10 | from frem_s10.errors import ResourceLimitError
+11 + import itertools
+12 |
+--------------------------------------------------------------------------------
+62 |         reasons.append("FREE_PLUS_SPECULATIVE_BELOW_512_MIB")
+   -     if any(b.pageouts != a.pageouts for a, b in zip(samples, samples[1:])):
+63 +     if any(b.pageouts != a.pageouts for a, b in itertools.pairwise(samples)):
+64 |         reasons.append("PAGEOUT_COUNTER_CHANGED")
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_operations_audit.py:3:1
+   |
+ 1 |   """Adversarial metadata and durable-evidence cases; no market observations."""
+ 2 |
+ 3 | / import json
+ 4 | | import os
+ 5 | | import subprocess
+ 6 | | import sys
+ 7 | | from pathlib import Path
+ 8 | |
+ 9 | | import pytest
+10 | |
+11 | | from frem_s10.cli import main, plan
+12 | | from frem_s10.errors import ArtifactIOError, ContractError, IntegrityError, ResourceLimitError, S10Error
+13 | | from frem_s10.identities import parse_json, scientific_digest
+14 | | from frem_s10.runtime.artifacts import publish_json, read_verified_json
+15 | | from frem_s10.runtime.resources import MemorySample, assess, parse_vm_stat
+   | |__________________________________________________________________________^
+16 |
+17 |   SCIENCE = Path(__file__).parents[1] / "src/frem_s10/science.json"
+   |
+help: Organize imports
+   |
+9  | import pytest
+   -
+10 | from frem_s10.cli import main, plan
+   |
+
+Found 6 errors.
+[*] 1 fixable with `--fix` (5 unsafe fixes available with `--fix --unsafe-fixes`).

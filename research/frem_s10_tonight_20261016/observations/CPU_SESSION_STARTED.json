@@ -1,0 +1,12 @@
+{
+  "launch_click_utc": "2026-10-16T07:35:55.150Z",
+  "observed_state": "Starting Draft Session Starting; Kaggle console Session is starting",
+  "mode": "interactive CPU; accelerator None",
+  "source_transport_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+  "planned_work": "probe-only metadata and persistence",
+  "gpu_sessions_started": 0,
+  "model_execution_authorized_by_transport": false,
+  "initial_locator_click_at_utc": "2026-10-16T07:35:35.618Z",
+  "initial_locator_outcome": "timeout, followed by observed session Off; distinct native-button click started session",
+  "platform_stop_confirmed": false
+}

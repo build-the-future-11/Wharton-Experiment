@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN_REAL_DATA_PACKAGE_VERIFIED_COMPUTE_BLOCKED",
+  "files_verified": 37,
+  "archive_bytes": 474580,
+  "archive_sha256": "3993df43606f6953c8b466b2915296b68622523fead902068e265b50581f8614",
+  "new_engineering_tests_passed": 6,
+  "real_rows_reconciled": 1770,
+  "market_fits": 0,
+  "remote_runtime_verified": false,
+  "protected_access": false,
+  "admission": "outputs/frem_s6_real_20261014_attempt1/admission.json"
+}

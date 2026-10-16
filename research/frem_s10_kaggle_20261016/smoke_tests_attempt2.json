@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-c",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_audit.py",
+    "-q",
+    "-W",
+    "error",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/smoke_fixtures_attempt2"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 15.12107541700243,
+  "child_peak_rss_mib": 51.1875,
+  "log": "research/frem_s10_kaggle_20261016/smoke_tests_attempt2.log"
+}

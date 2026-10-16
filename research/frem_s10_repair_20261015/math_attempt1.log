@@ -1,0 +1,227 @@
+Reproduced original 16-failure audit against preserved before-source; constructed engineering tests only.
+Command: ['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python', '-B', '-m', 'pytest', '-q', '-p', 'no:cacheprovider', 'successors/frem_s10/tests/test_math_audit.py', 'successors/frem_s10/tests/test_actions_audit.py']
+.....FFFFFF.F..FFF.FFF..FFF                                              [100%]
+=================================== FAILURES ===================================
+_________________ test_solver_tolerances_fail_closed[kwargs0] __________________
+
+kwargs = {'kkt': nan}
+
+    @pytest.mark.parametrize("kwargs", [{"kkt": float("nan")}, {"condition_limit": float("inf")},
+                                         {"feasibility": -1}, {"symmetry": True}])
+    def test_solver_tolerances_fail_closed(kwargs):
+        """TEST-003: invalid numerical certificates cannot silently loosen checking."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:92: Failed
+_________________ test_solver_tolerances_fail_closed[kwargs1] __________________
+
+kwargs = {'condition_limit': inf}
+
+    @pytest.mark.parametrize("kwargs", [{"kkt": float("nan")}, {"condition_limit": float("inf")},
+                                         {"feasibility": -1}, {"symmetry": True}])
+    def test_solver_tolerances_fail_closed(kwargs):
+        """TEST-003: invalid numerical certificates cannot silently loosen checking."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:92: Failed
+_________________ test_solver_tolerances_fail_closed[kwargs2] __________________
+
+kwargs = {'feasibility': -1}
+
+    @pytest.mark.parametrize("kwargs", [{"kkt": float("nan")}, {"condition_limit": float("inf")},
+                                         {"feasibility": -1}, {"symmetry": True}])
+    def test_solver_tolerances_fail_closed(kwargs):
+        """TEST-003: invalid numerical certificates cannot silently loosen checking."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:92: Failed
+_________________ test_solver_tolerances_fail_closed[kwargs3] __________________
+
+kwargs = {'symmetry': True}
+
+    @pytest.mark.parametrize("kwargs", [{"kkt": float("nan")}, {"condition_limit": float("inf")},
+                                         {"feasibility": -1}, {"symmetry": True}])
+    def test_solver_tolerances_fail_closed(kwargs):
+        """TEST-003: invalid numerical certificates cannot silently loosen checking."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:92: Failed
+_________________ test_probability_tolerance_fail_closed[nan] __________________
+
+tolerance = nan
+
+    @pytest.mark.parametrize("tolerance", [float("nan"), float("inf"), -1, True])
+    def test_probability_tolerance_fail_closed(tolerance):
+        """TEST-003: NaN tolerance must not admit a vector with twice unit mass."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:99: Failed
+_________________ test_probability_tolerance_fail_closed[inf] __________________
+
+tolerance = inf
+
+    @pytest.mark.parametrize("tolerance", [float("nan"), float("inf"), -1, True])
+    def test_probability_tolerance_fail_closed(tolerance):
+        """TEST-003: NaN tolerance must not admit a vector with twice unit mass."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:99: Failed
+_________________ test_probability_tolerance_fail_closed[True] _________________
+
+tolerance = True
+
+    @pytest.mark.parametrize("tolerance", [float("nan"), float("inf"), -1, True])
+    def test_probability_tolerance_fail_closed(tolerance):
+        """TEST-003: NaN tolerance must not admit a vector with twice unit mass."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:99: Failed
+____________ test_utility_rejects_implicit_dtype_changes[invalid0] _____________
+
+invalid = array([ True])
+
+    @pytest.mark.parametrize("invalid", [np.array([True]), np.array([1], dtype=np.float32)])
+    def test_utility_rejects_implicit_dtype_changes(invalid):
+        """TEST-002: float64/bool contract must also hold at utility boundaries."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:139: Failed
+____________ test_utility_rejects_implicit_dtype_changes[invalid1] _____________
+
+invalid = array([1.], dtype=float32)
+
+    @pytest.mark.parametrize("invalid", [np.array([True]), np.array([1], dtype=np.float32)])
+    def test_utility_rejects_implicit_dtype_changes(invalid):
+        """TEST-002: float64/bool contract must also hold at utility boundaries."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:139: Failed
+______________________ test_utility_outputs_are_immutable ______________________
+
+    def test_utility_outputs_are_immutable():
+        """TEST-005: immutable scientific arrays cannot be altered through return values."""
+        for output in (crra_utility(np.array([1.0])), robust_objective(np.array([0.0]), np.array([1.0]))):
+>           with pytest.raises(ValueError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+successors/frem_s10/tests/test_math_audit.py:148: Failed
+_________ test_overflowing_scores_fail_explicitly[mean_squared_error] __________
+
+scorer = <function mean_squared_error at 0x1085da700>
+
+    @pytest.mark.parametrize("scorer", [mean_squared_error, variogram_score])
+    def test_overflowing_scores_fail_explicitly(scorer):
+        """TEST-003: finite inputs with unrepresentable arithmetic cannot yield inf."""
+>       with pytest.raises(NumericalError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.NumericalError'>
+
+successors/frem_s10/tests/test_math_audit.py:167: Failed
+___________ test_overflowing_scores_fail_explicitly[variogram_score] ___________
+
+scorer = <function variogram_score at 0x1085da8e0>
+
+    @pytest.mark.parametrize("scorer", [mean_squared_error, variogram_score])
+    def test_overflowing_scores_fail_explicitly(scorer):
+        """TEST-003: finite inputs with unrepresentable arithmetic cannot yield inf."""
+>       with pytest.raises(NumericalError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.NumericalError'>
+
+successors/frem_s10/tests/test_math_audit.py:167: Failed
+_____________ test_reject_bool_neighbor_count_and_noninteger_clock _____________
+
+    def test_reject_bool_neighbor_count_and_noninteger_clock():
+        """TEST-002/012: bool-as-count and fractional clocks are not valid metadata."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_math_audit.py:173: Failed
+______________________ test_hold_switch_is_strict_boolean ______________________
+
+    def test_hold_switch_is_strict_boolean():
+        """TEST-002: string/number switches must not alter a named ablation."""
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_actions_audit.py:40: Failed
+_______________ test_action_set_rejects_invalid_indices_and_cash _______________
+
+    def test_action_set_rejects_invalid_indices_and_cash():
+        """TEST-002: invalid registry metadata must fail at construction."""
+        valid = enumerate_actions(Valuation(np.zeros(3), 100))
+>       with pytest.raises(ContractError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ContractError'>
+
+successors/frem_s10/tests/test_actions_audit.py:47: Failed
+__________________ test_public_grid_and_targets_are_immutable __________________
+
+    def test_public_grid_and_targets_are_immutable():
+        """TEST-005: candidate arrays cannot mutate after identity creation."""
+        action_set = enumerate_actions(Valuation(np.zeros(3), 100))
+        for values in (grid_weights(), action_set.targets, Valuation(np.zeros(3), 100).weights):
+>           with pytest.raises(ValueError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+successors/frem_s10/tests/test_actions_audit.py:57: Failed
+=============================== warnings summary ===============================
+tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]
+  /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/before/successors/frem_s10/src/frem_s10/math/scores.py:78: RuntimeWarning: overflow encountered in subtract
+    return float(np.mean((p @ z - y) ** 2))
+
+tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]
+  /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/before/successors/frem_s10/src/frem_s10/math/scores.py:87: RuntimeWarning: overflow encountered in scalar subtract
+    (np.sqrt(abs(y[a] - y[b])) - float(p @ np.sqrt(np.abs(z[:, a] - z[:, b])))) ** 2
+
+tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]
+  /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/before/successors/frem_s10/src/frem_s10/math/scores.py:87: RuntimeWarning: overflow encountered in subtract
+    (np.sqrt(abs(y[a] - y[b])) - float(p @ np.sqrt(np.abs(z[:, a] - z[:, b])))) ** 2
+
+tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]
+  /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/before/successors/frem_s10/src/frem_s10/math/scores.py:87: RuntimeWarning: invalid value encountered in scalar subtract
+    (np.sqrt(abs(y[a] - y[b])) - float(p @ np.sqrt(np.abs(z[:, a] - z[:, b])))) ** 2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs0]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs1]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs2]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs3]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_probability_tolerance_fail_closed[nan]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_probability_tolerance_fail_closed[inf]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_probability_tolerance_fail_closed[True]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid0]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid1]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_utility_outputs_are_immutable
+FAILED successors/frem_s10/tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]
+FAILED successors/frem_s10/tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock
+FAILED successors/frem_s10/tests/test_actions_audit.py::test_hold_switch_is_strict_boolean
+FAILED successors/frem_s10/tests/test_actions_audit.py::test_action_set_rejects_invalid_indices_and_cash
+FAILED successors/frem_s10/tests/test_actions_audit.py::test_public_grid_and_targets_are_immutable
+16 failed, 11 passed, 4 warnings in 0.32s
+
+exit_code=1

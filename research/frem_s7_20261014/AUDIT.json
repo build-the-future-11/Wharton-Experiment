@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_identities_verified": 16,
+  "S6_frozen_identities_unchanged": 22,
+  "nll_values_recomputed": 7344,
+  "max_nll_error": 4.440892098500626e-15,
+  "ledgers_verified": 108,
+  "max_ledger_residual": 2.9103830456733704e-11,
+  "raw_price_dividend_labels_reconciled": 2334,
+  "max_return_error": 6.938893903907228e-18,
+  "scope": "Arithmetic/provenance reconciliation, not independent retraining, provider verification, or future performance guarantee"
+}

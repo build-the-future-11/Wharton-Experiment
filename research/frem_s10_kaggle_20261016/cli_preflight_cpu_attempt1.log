@@ -1,0 +1,63 @@
+{
+  "schema": "s10-portable-preflight-v1",
+  "timestamp": "2026-10-16T06:48:39.171790+00:00",
+  "status": "READY_FOR_CPU_SMOKE_METADATA_ONLY",
+  "reasons": [],
+  "requested_device": "cpu",
+  "effective_device": "cpu",
+  "supported_devices": [
+    "cpu"
+  ],
+  "precision": "float64",
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "system": "Darwin",
+  "machine": "arm64",
+  "kernel_release": "25.5.0",
+  "numpy": {
+    "status": "METADATA_OBSERVED",
+    "version": "2.5.4",
+    "runtime_import_tested": false
+  },
+  "pytorch": {
+    "status": "NOT_INSTALLED",
+    "version": null,
+    "required_for_s10": false
+  },
+  "cuda": {
+    "backend_implemented": false,
+    "nvidia_smi_available": false,
+    "nvidia_smi_executed": false,
+    "cuda_runtime_version": null,
+    "runtime_version_status": "NOT_OBSERVED_WITHOUT_NUMERICAL_IMPORT",
+    "gpu_test": "NOT_RUN",
+    "gpu_pass": false
+  },
+  "cpu_smoke": {
+    "metadata_compatible": true,
+    "runtime_test": "NOT_RUN",
+    "resource_admission": "NOT_PERFORMED"
+  },
+  "resources": {
+    "status": "NOT_SAMPLED",
+    "production_admission": false,
+    "instruction": "Use the existing guarded production host-admission command"
+  },
+  "production": {
+    "status": "BLOCKED",
+    "platform_matches_supported_contract": true,
+    "required_environment": "Darwin arm64, Python 3.12, complete exact resolved macOS lock",
+    "reasons": [
+      "EXACT_RESOLVED_ENVIRONMENT_LOCK_NOT_VERIFIED",
+      "FRESH_PRODUCTION_RESOURCE_ADMISSION_NOT_RUN",
+      "CURRENT_SOURCE_VERIFICATION_AND_OPERATION_DECLARATION_REQUIRED"
+    ],
+    "production_admission": false
+  },
+  "data": {
+    "status": "NOT_INSPECTED",
+    "instruction": "Use admit and the exact operation declaration for data admission"
+  },
+  "scientific_execution": false,
+  "dependencies_changed": false
+}

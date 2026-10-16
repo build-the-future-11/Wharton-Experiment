@@ -1,0 +1,2 @@
+{"event":{"state":"PREFLIGHT","time":"2026-10-15T18:19:47.749438+00:00"},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}
+{"event":{"consumed":null,"error_type":"ExecutionStateError","replay_permitted":false,"state":"CONSUMPTION_REFUSED","worker_dispatched":false},"previous":"6d4cd55d76d44d7378edf6f06756128be97e97aaeb09d73def3546fb24f45759","sequence":1}

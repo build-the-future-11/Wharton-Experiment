@@ -1,0 +1,1056 @@
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/__init__.py:6:12
+   |
+5  |
+   - __all__ = ["ForecastState", "ForecastTransition", "IssueRequest", "advance", "initial_state", "state_identity"]
+6  + __all__ = [
+7  +     "ForecastState",
+8  +     "ForecastTransition",
+9  +     "IssueRequest",
+10 +     "advance",
+11 +     "initial_state",
+12 +     "state_identity",
+13 + ]
+   |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/src/frem_s10/model/checkpoint.py:22:11
+    |
+21  |
+    - _TYPES = {kind.__name__: kind for kind in (
+    -     Transform, ScenarioLibrary, ForecastDistribution, ForecastConfig, IssueRequest,
+    -     ExpertSet, MaturedFeedback, IssuedForecast, ForecastState, CertifiedMixture, FaceCertificate)}
+22  + _TYPES = {
+23  +     kind.__name__: kind
+24  +     for kind in (
+25  +         Transform,
+26  +         ScenarioLibrary,
+27  +         ForecastDistribution,
+28  +         ForecastConfig,
+29  +         IssueRequest,
+30  +         ExpertSet,
+31  +         MaturedFeedback,
+32  +         IssuedForecast,
+33  +         ForecastState,
+34  +         CertifiedMixture,
+35  +         FaceCertificate,
+36  +     )
+37  + }
+38  |
+--------------------------------------------------------------------------------
+42  |         dtype = "<i8" if value.dtype.kind in "iu" else "<f8"
+    -         return {"array": dtype, "shape": list(value.shape),
+    -                 "hex": value.astype(dtype, copy=False).tobytes(order="C").hex()}
+43  +         return {
+44  +             "array": dtype,
+45  +             "shape": list(value.shape),
+46  +             "hex": value.astype(dtype, copy=False).tobytes(order="C").hex(),
+47  +         }
+48  |     if is_dataclass(value) and not isinstance(value, type):
+    -         return {"record": type(value).__name__,
+    -                 "fields": {field.name: _encode(getattr(value, field.name)) for field in fields(value)}}
+49  +         return {
+50  +             "record": type(value).__name__,
+51  +             "fields": {field.name: _encode(getattr(value, field.name)) for field in fields(value)},
+52  +         }
+53  |     if isinstance(value, (tuple, frozenset)):
+54  |         elements = sorted(value) if isinstance(value, frozenset) else value
+    -         return {"container": "set" if isinstance(value, frozenset) else "tuple",
+    -                 "items": [_encode(item) for item in elements]}
+55  +         return {
+56  +             "container": "set" if isinstance(value, frozenset) else "tuple",
+57  +             "items": [_encode(item) for item in elements],
+58  +         }
+59  |     if value is None or isinstance(value, (str, bool, int, float)):
+--------------------------------------------------------------------------------
+64  | def _decode_record(value: dict[str, object], depth: int) -> object:
+    -         kind, members = value["record"], value["fields"]
+    -         if not isinstance(kind, str) or kind not in _TYPES or not isinstance(members, dict):
+    -             raise ContractError("unknown checkpoint record")
+    -         cls = _TYPES[kind]
+    -         if set(members) != {field.name for field in fields(cls)}:
+    -             raise ContractError("checkpoint fields differ from exact record schema")
+    -         try:
+    -             constructor = cast(Callable[..., object], cls)
+    -             return constructor(**{key: _decode(item, depth + 1) for key, item in members.items()})
+    -         except (AttributeError, TypeError, ValueError, OverflowError) as exc:
+    -             raise ContractError("checkpoint record constructor rejected values") from exc
+65  +     kind, members = value["record"], value["fields"]
+66  +     if not isinstance(kind, str) or kind not in _TYPES or not isinstance(members, dict):
+67  +         raise ContractError("unknown checkpoint record")
+68  +     cls = _TYPES[kind]
+69  +     if set(members) != {field.name for field in fields(cls)}:
+70  +         raise ContractError("checkpoint fields differ from exact record schema")
+71  +     try:
+72  +         constructor = cast(Callable[..., object], cls)
+73  +         return constructor(**{key: _decode(item, depth + 1) for key, item in members.items()})
+74  +     except (AttributeError, TypeError, ValueError, OverflowError) as exc:
+75  +         raise ContractError("checkpoint record constructor rejected values") from exc
+76  |
+77  |
+78  | def _decode_array(value: dict[str, object]) -> NDArray[np.float64] | NDArray[np.int64]:
+    -         dtype, shape, hex_data = value["array"], value["shape"], value["hex"]
+    -         if (not isinstance(dtype, str) or dtype not in ("<f8", "<i8") or not isinstance(shape, list)
+    -                 or any(type(dim) is not int or dim < 0 for dim in shape)
+    -                 or not isinstance(hex_data, str)):
+    -             raise ContractError("checkpoint array schema rejected")
+    -         try:
+    -             array = np.frombuffer(bytes.fromhex(hex_data), dtype=dtype).reshape(tuple(shape))
+    -         except (ValueError, OverflowError) as exc:
+    -             raise ContractError("checkpoint array bytes rejected") from exc
+    -         return array
+79  +     dtype, shape, hex_data = value["array"], value["shape"], value["hex"]
+80  +     if (
+81  +         not isinstance(dtype, str)
+82  +         or dtype not in ("<f8", "<i8")
+83  +         or not isinstance(shape, list)
+84  +         or any(type(dim) is not int or dim < 0 for dim in shape)
+85  +         or not isinstance(hex_data, str)
+86  +     ):
+87  +         raise ContractError("checkpoint array schema rejected")
+88  +     try:
+89  +         array = np.frombuffer(bytes.fromhex(hex_data), dtype=dtype).reshape(tuple(shape))
+90  +     except (ValueError, OverflowError) as exc:
+91  +         raise ContractError("checkpoint array bytes rejected") from exc
+92  +     return array
+93  |
+--------------------------------------------------------------------------------
+130 |     payload = json.dumps(_encode(state), sort_keys=True, separators=(",", ":"), allow_nan=False)
+    -     envelope = {"schema": "S10-FORECAST-ENGINEERING-CHECKPOINT-1",
+    -                 "market_resume_allowed": False, "payload": payload,
+    -                 "sha256": hashlib.sha256(payload.encode()).hexdigest()}
+131 +     envelope = {
+132 +         "schema": "S10-FORECAST-ENGINEERING-CHECKPOINT-1",
+133 +         "market_resume_allowed": False,
+134 +         "payload": payload,
+135 +         "sha256": hashlib.sha256(payload.encode()).hexdigest(),
+136 +     }
+137 |     return json.dumps(envelope, sort_keys=True, separators=(",", ":"), allow_nan=False)
+138 |
+139 |
+    - def load_state(text: str, *, expected_state_id: str, expected_transform_id: str,
+    -                expected_config: ForecastConfig) -> ForecastState:
+140 + def load_state(
+141 +     text: str, *, expected_state_id: str, expected_transform_id: str, expected_config: ForecastConfig
+142 + ) -> ForecastState:
+143 |     """Validate exact identities before enabling constructed engineering replay."""
+144 |     if not isinstance(text, str) or len(text.encode()) > 16 * 1024 * 1024:
+145 |         raise ContractError("checkpoint exceeds 16 MiB byte bound")
+146 |     envelope = _parse_document(text)
+    -     if (set(envelope) != {"schema", "market_resume_allowed", "payload", "sha256"}
+    -             or envelope["schema"] != "S10-FORECAST-ENGINEERING-CHECKPOINT-1"
+    -             or envelope["market_resume_allowed"] is not False
+    -             or not isinstance(envelope["payload"], str)):
+147 +     if (
+148 +         set(envelope) != {"schema", "market_resume_allowed", "payload", "sha256"}
+149 +         or envelope["schema"] != "S10-FORECAST-ENGINEERING-CHECKPOINT-1"
+150 +         or envelope["market_resume_allowed"] is not False
+151 +         or not isinstance(envelope["payload"], str)
+152 +     ):
+153 |         raise ContractError("checkpoint envelope rejected")
+--------------------------------------------------------------------------------
+159 |         raise ContractError("checkpoint root is not a forecast state")
+    -     if (state.record_id != expected_state_id or state.record_id != state_identity(state)
+    -             or state.transform.record_id != expected_transform_id or state.config != expected_config):
+160 +     if (
+161 +         state.record_id != expected_state_id
+162 +         or state.record_id != state_identity(state)
+163 +         or state.transform.record_id != expected_transform_id
+164 +         or state.config != expected_config
+165 +     ):
+166 |         raise IntegrityError("checkpoint scientific identity mismatch")
+    |
+
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/config.py:34:22
+   |
+33 |         """Reject undeclared parameters and combined ablations."""
+   -         for name in ("library_minimum", "library_window", "neighbors", "concentration_floor",
+   -                      "feedback_window", "global_minimum"):
+34 +         for name in (
+35 +             "library_minimum",
+36 +             "library_window",
+37 +             "neighbors",
+38 +             "concentration_floor",
+39 +             "feedback_window",
+40 +             "global_minimum",
+41 +         ):
+42 |             strict_int(getattr(self, name), name=name, minimum=1)
+   -         fixed = (self.library_minimum == 64, self.library_window in (260, 520),
+   -                  (self.neighbors, self.concentration_floor) in ((16, 8), (32, 16), (64, 32)),
+   -                  self.half_life_weeks == 52.0, self.feedback_window == 104,
+   -                  self.global_minimum == 26, self.l2_coefficient == 0.05,
+   -                  self.shrink_pseudocount == 64.0, self.maximum_blend == 0.5,
+   -                  isinstance(self.no_shrink, bool), isinstance(self.repeat_h1, bool))
+43 +         fixed = (
+44 +             self.library_minimum == 64,
+45 +             self.library_window in (260, 520),
+46 +             (self.neighbors, self.concentration_floor) in ((16, 8), (32, 16), (64, 32)),
+47 +             self.half_life_weeks == 52.0,
+48 +             self.feedback_window == 104,
+49 +             self.global_minimum == 26,
+50 +             self.l2_coefficient == 0.05,
+51 +             self.shrink_pseudocount == 64.0,
+52 +             self.maximum_blend == 0.5,
+53 +             isinstance(self.no_shrink, bool),
+54 +             isinstance(self.repeat_h1, bool),
+55 +         )
+56 |         if not all(fixed):
+   |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/src/frem_s10/model/engine.py:29:27
+    |
+28  |     library = state.library
+    -     feedback_meta = tuple((item.record_id, item.issued_id, item.outcome_id,
+    -                            item.origin_us, item.available_us) for item in state.feedback)
+    -     pending_meta = tuple((item.record_id, item.arm, item.state_before_id, item.distribution.record_id,
+    -                           item.request.record_id, item.request.origin_us, item.request.endpoint_us,
+    -                           item.request.available_us, item.request.feature_available_us,
+    -                           item.request.anchor_index, item.experts.record_id,
+    -                           item.experts.library.record_ids,
+    -                           tuple(int(x) for x in item.experts.library.origin_us),
+    -                           tuple(int(x) for x in item.experts.library.available_us),
+    -                           item.experts.neighbor_indices, item.experts.neighbor_distance,
+    -                           item.experts.extrapolation_threshold, item.experts.fallback_reason)
+    -                          for item in state.pending)
+    -     metadata = (state.transform.record_id, state.transform.record_ids, asdict(state.config), library.record_ids,
+    -                 tuple(int(x) for x in library.origin_us), tuple(int(x) for x in library.available_us),
+    -                 feedback_meta, pending_meta, state.cursor_us,
+    -                 tuple(sorted(state.consumed_event_ids)), tuple(sorted(state.issued_origin_ids)),
+    -                 state.previous_state_id)
+    -     arrays = [library.g, library.d, library.contexts, state.transform.feature_mean,
+    -               state.transform.feature_scale, state.transform.score_scale]
+29  +     feedback_meta = tuple(
+30  +         (item.record_id, item.issued_id, item.outcome_id, item.origin_us, item.available_us)
+31  +         for item in state.feedback
+32  +     )
+33  +     pending_meta = tuple(
+34  +         (
+35  +             item.record_id,
+36  +             item.arm,
+37  +             item.state_before_id,
+38  +             item.distribution.record_id,
+39  +             item.request.record_id,
+40  +             item.request.origin_us,
+41  +             item.request.endpoint_us,
+42  +             item.request.available_us,
+43  +             item.request.feature_available_us,
+44  +             item.request.anchor_index,
+45  +             item.experts.record_id,
+46  +             item.experts.library.record_ids,
+47  +             tuple(int(x) for x in item.experts.library.origin_us),
+48  +             tuple(int(x) for x in item.experts.library.available_us),
+49  +             item.experts.neighbor_indices,
+50  +             item.experts.neighbor_distance,
+51  +             item.experts.extrapolation_threshold,
+52  +             item.experts.fallback_reason,
+53  +         )
+54  +         for item in state.pending
+55  +     )
+56  +     metadata = (
+57  +         state.transform.record_id,
+58  +         state.transform.record_ids,
+59  +         asdict(state.config),
+60  +         library.record_ids,
+61  +         tuple(int(x) for x in library.origin_us),
+62  +         tuple(int(x) for x in library.available_us),
+63  +         feedback_meta,
+64  +         pending_meta,
+65  +         state.cursor_us,
+66  +         tuple(sorted(state.consumed_event_ids)),
+67  +         tuple(sorted(state.issued_origin_ids)),
+68  +         state.previous_state_id,
+69  +     )
+70  +     arrays = [
+71  +         library.g,
+72  +         library.d,
+73  +         library.contexts,
+74  +         state.transform.feature_mean,
+75  +         state.transform.feature_scale,
+76  +         state.transform.score_scale,
+77  +     ]
+78  |     for item in state.feedback:
+79  |         arrays.extend((item.context, item.a, item.b))
+80  |     for issued in state.pending:
+    -         arrays.extend((issued.request.x, issued.g, issued.d, issued.probabilities, issued.alpha,
+    -                        issued.experts.context, issued.experts.probabilities,
+    -                        issued.experts.library.g, issued.experts.library.d, issued.experts.library.contexts))
+81  +         arrays.extend(
+82  +             (
+83  +                 issued.request.x,
+84  +                 issued.g,
+85  +                 issued.d,
+86  +                 issued.probabilities,
+87  +                 issued.alpha,
+88  +                 issued.experts.context,
+89  +                 issued.experts.probabilities,
+90  +                 issued.experts.library.g,
+91  +                 issued.experts.library.d,
+92  +                 issued.experts.library.contexts,
+93  +             )
+94  +         )
+95  |     return scientific_id("forecast-state-v2", metadata, *arrays)
+--------------------------------------------------------------------------------
+99  |     """Construct an empty causal state; market source admission is external."""
+    -     state = ForecastState("pending", transform, config or ForecastConfig(), empty_library(), (), (), -2**63,
+    -                           frozenset(), frozenset(), None)
+100 +     state = ForecastState(
+101 +         "pending",
+102 +         transform,
+103 +         config or ForecastConfig(),
+104 +         empty_library(),
+105 +         (),
+106 +         (),
+107 +         -(2**63),
+108 +         frozenset(),
+109 +         frozenset(),
+110 +         None,
+111 +     )
+112 |     return replace(state, record_id=state_identity(state))
+113 |
+114 |
+115 | def _issue(state: ForecastState, request: IssueRequest) -> IssuanceBatch:
+    -     experts = issue_experts(state.library, request.x, decision_us=request.decision_us,
+    -                             transform=state.transform, config=state.config)
+    -     mixture = fit_mixtures(state.feedback, experts.context, decision_us=request.decision_us,
+    -                            config=state.config)
+    -     weights = (("unconditional", np.array([1., 0., 0.])), ("recent", np.array([0., 1., 0.])),
+    -                ("context", np.array([0., 0., 1.])), ("equal", np.full(3, 1 / 3)),
+    -                ("global_stack", mixture.global_alpha), ("contextual_stack", mixture.contextual_alpha),
+    -                ("individual_score_mix", mixture.individual_alpha), ("zero", np.full(3, 1 / 3)))
+116 +     experts = issue_experts(
+117 +         state.library,
+118 +         request.x,
+119 +         decision_us=request.decision_us,
+120 +         transform=state.transform,
+121 +         config=state.config,
+122 +     )
+123 +     mixture = fit_mixtures(
+124 +         state.feedback, experts.context, decision_us=request.decision_us, config=state.config
+125 +     )
+126 +     weights = (
+127 +         ("unconditional", np.array([1.0, 0.0, 0.0])),
+128 +         ("recent", np.array([0.0, 1.0, 0.0])),
+129 +         ("context", np.array([0.0, 0.0, 1.0])),
+130 +         ("equal", np.full(3, 1 / 3)),
+131 +         ("global_stack", mixture.global_alpha),
+132 +         ("contextual_stack", mixture.contextual_alpha),
+133 +         ("individual_score_mix", mixture.individual_alpha),
+134 +         ("zero", np.full(3, 1 / 3)),
+135 +     )
+136 |     forecasts = []
+    -     request_meta = (request.record_id, request.origin_us, request.endpoint_us, request.available_us,
+    -                     request.feature_available_us, request.anchor_index)
+137 +     request_meta = (
+138 +         request.record_id,
+139 +         request.origin_us,
+140 +         request.endpoint_us,
+141 +         request.available_us,
+142 +         request.feature_available_us,
+143 +         request.anchor_index,
+144 +     )
+145 |     for arm, alpha in weights:
+--------------------------------------------------------------------------------
+149 |             g, d, p = np.ones((1, 3)), np.zeros((1, 3)), np.ones(1)
+    -         identity = scientific_id("issued-forecast-v2", (arm, request_meta, experts.record_id,
+    -                                  state.record_id), request.x, g, d, p, alpha)
+150 +         identity = scientific_id(
+151 +             "issued-forecast-v2",
+152 +             (arm, request_meta, experts.record_id, state.record_id),
+153 +             request.x,
+154 +             g,
+155 +             d,
+156 +             p,
+157 +             alpha,
+158 +         )
+159 |         distribution = ForecastDistribution(identity, g, d, p)
+    -         forecasts.append(IssuedForecast(identity, arm, request, distribution, experts, alpha, state.record_id))
+160 +         forecasts.append(
+161 +             IssuedForecast(identity, arm, request, distribution, experts, alpha, state.record_id)
+162 +         )
+163 |     return IssuanceBatch(tuple(forecasts), mixture)
+164 |
+165 |
+    - def advance(state: ForecastState, request: IssueRequest,
+    -             matured: tuple[OriginRecord, ...]) -> ForecastTransition:
+166 + def advance(
+167 +     state: ForecastState, request: IssueRequest, matured: tuple[OriginRecord, ...]
+168 + ) -> ForecastTransition:
+169 |     """Apply every newly mature label once, then issue without the current outcome.
+--------------------------------------------------------------------------------
+182 |         raise ChronologyError("duplicate applied outcome, including evicted history")
+    -     if any(item.available_us >= request.decision_us or item.available_us < state.cursor_us for item in ordered):
+183 +     if any(
+184 +         item.available_us >= request.decision_us or item.available_us < state.cursor_us for item in ordered
+185 +     ):
+186 |         raise ChronologyError("new outcome is immature or precedes the prior cursor")
+187 |     pending = {item.request.record_id: item for item in state.pending}
+    -     if any(item.request.available_us < request.decision_us and item.request.record_id not in ids
+    -            for item in state.pending):
+188 +     if any(
+189 +         item.request.available_us < request.decision_us and item.request.record_id not in ids
+190 +         for item in state.pending
+191 +     ):
+192 |         raise ChronologyError("a due issued outcome was omitted")
+    -     new_feedback = tuple(mature_forecast(pending[item.record_id], item,
+    -                                         decision_us=request.decision_us, transform=state.transform)
+    -                          for item in ordered if item.record_id in pending)
+    -     feedback = tuple(sorted((*state.feedback, *new_feedback),
+    -                             key=lambda item: (item.available_us, item.origin_us, item.record_id)))
+    -     feedback = feedback[-state.config.feedback_window:]
+193 +     new_feedback = tuple(
+194 +         mature_forecast(
+195 +             pending[item.record_id], item, decision_us=request.decision_us, transform=state.transform
+196 +         )
+197 +         for item in ordered
+198 +         if item.record_id in pending
+199 +     )
+200 +     feedback = tuple(
+201 +         sorted(
+202 +             (*state.feedback, *new_feedback),
+203 +             key=lambda item: (item.available_us, item.origin_us, item.record_id),
+204 +         )
+205 +     )
+206 +     feedback = feedback[-state.config.feedback_window :]
+207 |     library = update_library(state.library, ordered, decision_us=request.decision_us, config=state.config)
+    -     working = replace(state, library=library, feedback=feedback,
+    -                       pending=tuple(item for item in state.pending if item.request.record_id not in ids),
+    -                       consumed_event_ids=state.consumed_event_ids | frozenset(ids),
+    -                       previous_state_id=state.record_id)
+208 +     working = replace(
+209 +         state,
+210 +         library=library,
+211 +         feedback=feedback,
+212 +         pending=tuple(item for item in state.pending if item.request.record_id not in ids),
+213 +         consumed_event_ids=state.consumed_event_ids | frozenset(ids),
+214 +         previous_state_id=state.record_id,
+215 +     )
+216 |     working = replace(working, record_id=state_identity(working))
+217 |     batch = _issue(working, request)
+218 |     # All arms share expert coefficients. Retain one exact issued representative.
+    -     result = replace(working, pending=(*working.pending, batch.get("contextual_stack")),
+    -                      cursor_us=request.decision_us,
+    -                      issued_origin_ids=state.issued_origin_ids | frozenset((request.record_id,)))
+219 +     result = replace(
+220 +         working,
+221 +         pending=(*working.pending, batch.get("contextual_stack")),
+222 +         cursor_us=request.decision_us,
+223 +         issued_origin_ids=state.issued_origin_ids | frozenset((request.record_id,)),
+224 +     )
+225 |     result = replace(result, record_id=state_identity(result))
+    |
+
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/experts.py:18:30
+   |
+17 | def issue_experts(
+   -     library: ScenarioLibrary, context: ArrayLike, *, decision_us: int,
+   -     transform: Transform, config: ForecastConfig,
+18 +     library: ScenarioLibrary,
+19 +     context: ArrayLike,
+20 +     *,
+21 +     decision_us: int,
+22 +     transform: Transform,
+23 +     config: ForecastConfig,
+24 | ) -> ExpertSet:
+--------------------------------------------------------------------------------
+34 |     uniform = np.full(n, 1.0 / n, dtype=np.float64)
+   -     recent = recency_weights(library.origin_us, decision_us=decision_us,
+   -                              half_life_weeks=config.half_life_weeks)
+35 +     recent = recency_weights(
+36 +         library.origin_us, decision_us=decision_us, half_life_weeks=config.half_life_weeks
+37 +     )
+38 |     distances = pairwise_distances(scaled[None, :], candidates, squared=True)[0]
+39 |     order = neighbor_order(distances, library.origin_us, library.record_ids)
+   -     selected = order[:config.neighbors]
+40 +     selected = order[: config.neighbors]
+41 |     cutoff: float | None = None
+--------------------------------------------------------------------------------
+55 |     probabilities = np.stack((uniform, recent, contextual))
+   -     identity = scientific_id("experts-v2", (library.record_ids, decision_us,
+   -                              config.neighbors, transform.record_id), probabilities, scaled)
+56 +     identity = scientific_id(
+57 +         "experts-v2",
+58 +         (library.record_ids, decision_us, config.neighbors, transform.record_id),
+59 +         probabilities,
+60 +         scaled,
+61 +     )
+62 |     return ExpertSet(identity, library, probabilities, scaled, selected, kth, cutoff, reason)
+   |
+
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/feedback.py:13:21
+   |
+12 |
+   - def mature_forecast(issued: IssuedForecast, outcome: OriginRecord, *,
+   -                     decision_us: int, transform: Transform) -> MaturedFeedback:
+13 + def mature_forecast(
+14 +     issued: IssuedForecast, outcome: OriginRecord, *, decision_us: int, transform: Transform
+15 + ) -> MaturedFeedback:
+16 |     """Use stored atoms/probabilities; never regenerate an earlier forecast."""
+17 |     request = issued.request
+18 |     if outcome.available_us >= decision_us:
+19 |         raise ChronologyError("outcome is unavailable at feedback processing")
+   -     if (request.record_id, request.origin_us, request.endpoint_us, request.available_us,
+   -         request.feature_available_us, request.anchor_index) != (
+   -             outcome.record_id, outcome.origin_us, outcome.endpoint_us, outcome.available_us,
+   -             outcome.feature_available_us, outcome.anchor_index):
+20 +     if (
+21 +         request.record_id,
+22 +         request.origin_us,
+23 +         request.endpoint_us,
+24 +         request.available_us,
+25 +         request.feature_available_us,
+26 +         request.anchor_index,
+27 +     ) != (
+28 +         outcome.record_id,
+29 +         outcome.origin_us,
+30 +         outcome.endpoint_us,
+31 +         outcome.available_us,
+32 +         outcome.feature_available_us,
+33 +         outcome.anchor_index,
+34 +     ):
+35 |         raise IntegrityError("matured outcome does not match issued target metadata")
+36 |     if not np.array_equal(request.x, outcome.x):
+37 |         raise IntegrityError("issued feature context differs from target context")
+   -     coefficients = score_coefficients(issued.experts.library.r / transform.score_scale,
+   -                                      issued.experts.probabilities, outcome.r / transform.score_scale)
+38 +     coefficients = score_coefficients(
+39 +         issued.experts.library.r / transform.score_scale,
+40 +         issued.experts.probabilities,
+41 +         outcome.r / transform.score_scale,
+42 +     )
+43 |     outcome_id = scientific_id("matured-outcome-v2", (outcome.record_id,), outcome.g, outcome.d)
+   -     record_id = scientific_id("matured-feedback-v2", (issued.record_id, outcome_id,
+   -                                transform.record_id), coefficients.a, coefficients.b)
+   -     return MaturedFeedback(record_id, issued.record_id, outcome_id, outcome.origin_us,
+   -                            outcome.available_us, issued.experts.context, coefficients.a, coefficients.b)
+44 +     record_id = scientific_id(
+45 +         "matured-feedback-v2",
+46 +         (issued.record_id, outcome_id, transform.record_id),
+47 +         coefficients.a,
+48 +         coefficients.b,
+49 +     )
+50 +     return MaturedFeedback(
+51 +         record_id,
+52 +         issued.record_id,
+53 +         outcome_id,
+54 +         outcome.origin_us,
+55 +         outcome.available_us,
+56 +         issued.experts.context,
+57 +         coefficients.a,
+58 +         coefficients.b,
+59 +     )
+   |
+
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/library.py:15:28
+   |
+14 |     """Construct the zero-member library before causal warm-up."""
+   -     return ScenarioLibrary((), np.empty(0, dtype=np.int64), np.empty(0, dtype=np.int64),
+   -                            np.empty((0, 3), dtype=np.float64), np.empty((0, 3), dtype=np.float64),
+   -                            np.empty((0, 12), dtype=np.float64))
+15 +     return ScenarioLibrary(
+16 +         (),
+17 +         np.empty(0, dtype=np.int64),
+18 +         np.empty(0, dtype=np.int64),
+19 +         np.empty((0, 3), dtype=np.float64),
+20 +         np.empty((0, 3), dtype=np.float64),
+21 +         np.empty((0, 12), dtype=np.float64),
+22 +     )
+23 |
+24 |
+25 | def update_library(
+   -     previous: ScenarioLibrary, matured: tuple[OriginRecord, ...], *,
+   -     decision_us: int, config: ForecastConfig,
+26 +     previous: ScenarioLibrary,
+27 +     matured: tuple[OriginRecord, ...],
+28 +     *,
+29 +     decision_us: int,
+30 +     config: ForecastConfig,
+31 | ) -> ScenarioLibrary:
+32 |     """Append only newly admitted mature records; eviction follows stable origin order."""
+33 |     identities = set(previous.record_ids)
+34 |     rows: list[tuple[int, str, int, NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]] = [
+   -         (int(previous.origin_us[i]), record_id, int(previous.available_us[i]),
+   -          previous.g[i], previous.d[i], previous.contexts[i])
+35 +         (
+36 +             int(previous.origin_us[i]),
+37 +             record_id,
+38 +             int(previous.available_us[i]),
+39 +             previous.g[i],
+40 +             previous.d[i],
+41 +             previous.contexts[i],
+42 +         )
+43 |         for i, record_id in enumerate(previous.record_ids)
+--------------------------------------------------------------------------------
+56 |             with np.errstate(over="raise", invalid="raise"):
+   -                 g, d = g1 ** 4, d1 * (1 + g1 + g1 ** 2 + g1 ** 3)
+57 +                 g, d = g1**4, d1 * (1 + g1 + g1**2 + g1**3)
+58 |         rows.append((record.origin_us, record.record_id, record.available_us, g, d, record.x))
+--------------------------------------------------------------------------------
+62 |         return empty_library()
+   -     return ScenarioLibrary(tuple(row[1] for row in rows),
+   -                            np.array([row[0] for row in rows], dtype=np.int64),
+   -                            np.array([row[2] for row in rows], dtype=np.int64),
+   -                            np.stack([row[3] for row in rows]),
+   -                            np.stack([row[4] for row in rows]),
+   -                            np.stack([row[5] for row in rows]))
+63 +     return ScenarioLibrary(
+64 +         tuple(row[1] for row in rows),
+65 +         np.array([row[0] for row in rows], dtype=np.int64),
+66 +         np.array([row[2] for row in rows], dtype=np.int64),
+67 +         np.stack([row[3] for row in rows]),
+68 +         np.stack([row[4] for row in rows]),
+69 +         np.stack([row[5] for row in rows]),
+70 +     )
+   |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/src/frem_s10/model/records.py:92:12
+    |
+91  |             raise ContractError("expert identity is required")
+    -         if (len(set(self.neighbor_indices)) != len(self.neighbor_indices)
+    -                 or any(type(i) is not int or not 0 <= i < len(self.library.record_ids)
+    -                        for i in self.neighbor_indices)):
+92  +         if len(set(self.neighbor_indices)) != len(self.neighbor_indices) or any(
+93  +             type(i) is not int or not 0 <= i < len(self.library.record_ids) for i in self.neighbor_indices
+94  +         ):
+95  |             raise ContractError("expert neighbor indices are invalid")
+--------------------------------------------------------------------------------
+120 |         """Own finite coefficients and reject impossible maturity order."""
+    -         if any(not isinstance(value, str) or not value
+    -                for value in (self.record_id, self.issued_id, self.outcome_id)):
+121 +         if any(
+122 +             not isinstance(value, str) or not value
+123 +             for value in (self.record_id, self.issued_id, self.outcome_id)
+124 +         ):
+125 |             raise ContractError("maturity identities are required")
+--------------------------------------------------------------------------------
+152 |             object.__setattr__(self, field, validate_probabilities(getattr(self, field), size=3))
+    -         if (not np.isfinite(self.beta) or not 0 <= self.beta <= .5
+    -                 or not np.isfinite(self.effective_count) or self.effective_count < 0):
+153 +         if (
+154 +             not np.isfinite(self.beta)
+155 +             or not 0 <= self.beta <= 0.5
+156 +             or not np.isfinite(self.effective_count)
+157 +             or self.effective_count < 0
+158 +         ):
+159 |             raise ContractError("invalid mixture concentration or blend")
+--------------------------------------------------------------------------------
+177 |         _require_identity(self.state_before_id, "issued parent state")
+    -         if (not isinstance(self.request, IssueRequest)
+    -                 or not isinstance(self.distribution, ForecastDistribution)
+    -                 or not isinstance(self.experts, ExpertSet)):
+178 +         if (
+179 +             not isinstance(self.request, IssueRequest)
+180 +             or not isinstance(self.distribution, ForecastDistribution)
+181 +             or not isinstance(self.experts, ExpertSet)
+182 +         ):
+183 |             raise ContractError("issued forecast contains an invalid nested record")
+184 |         if self.distribution.record_id != self.record_id:
+185 |             raise ContractError("issued distribution identity mismatch")
+    -         if self.arm not in ("unconditional", "recent", "context", "equal", "global_stack",
+    -                             "contextual_stack", "individual_score_mix", "zero"):
+186 +         if self.arm not in (
+187 +             "unconditional",
+188 +             "recent",
+189 +             "context",
+190 +             "equal",
+191 +             "global_stack",
+192 +             "contextual_stack",
+193 +             "individual_score_mix",
+194 +             "zero",
+195 +         ):
+196 |             raise ContractError("unknown issued forecast arm")
+--------------------------------------------------------------------------------
+250 |         strict_int(self.cursor_us, name="state cursor")
+    -         if (not isinstance(self.transform, Transform) or not isinstance(self.config, ForecastConfig)
+    -                 or not isinstance(self.library, ScenarioLibrary)):
+251 +         if (
+252 +             not isinstance(self.transform, Transform)
+253 +             or not isinstance(self.config, ForecastConfig)
+254 +             or not isinstance(self.library, ScenarioLibrary)
+255 +         ):
+256 |             raise ContractError("state transform, configuration and scenario library must be typed records")
+--------------------------------------------------------------------------------
+265 |     def _validate_record_queues(self) -> None:
+    -         if (not isinstance(self.feedback, tuple)
+    -                 or any(not isinstance(item, MaturedFeedback) for item in self.feedback)):
+266 +         if not isinstance(self.feedback, tuple) or any(
+267 +             not isinstance(item, MaturedFeedback) for item in self.feedback
+268 +         ):
+269 |             raise ContractError("feedback must be an immutable tuple of matured records")
+    -         if (not isinstance(self.pending, tuple)
+    -                 or any(not isinstance(item, IssuedForecast) for item in self.pending)):
+270 +         if not isinstance(self.pending, tuple) or any(
+271 +             not isinstance(item, IssuedForecast) for item in self.pending
+272 +         ):
+273 |             raise ContractError("pending must be an immutable tuple of issued forecasts")
+274 |         order = tuple((item.available_us, item.origin_us, item.record_id) for item in self.feedback)
+    -         if order != tuple(sorted(order)) or len({item.record_id for item in self.feedback}) != len(self.feedback):
+275 +         if order != tuple(sorted(order)) or len({item.record_id for item in self.feedback}) != len(
+276 +             self.feedback
+277 +         ):
+278 |             raise ContractError("feedback order or identity uniqueness is invalid")
+    |
+
+unformatted: File would be reformatted
+  --> successors/frem_s10/src/frem_s10/model/stacking.py:17:10
+   |
+16 |
+   - def _fit(records: tuple[MaturedFeedback, ...], weights: ArrayLike,
+   -          center: ArrayLike, config: ForecastConfig) -> CertifiedMixture:
+17 + def _fit(
+18 +     records: tuple[MaturedFeedback, ...], weights: ArrayLike, center: ArrayLike, config: ForecastConfig
+19 + ) -> CertifiedMixture:
+20 |     p = frozen_f64(weights, shape=(len(records),), name="feedback weights")
+21 |     a = np.stack([record.a for record in records])
+22 |     b = np.stack([record.b for record in records])
+   -     return solve_simplex(p @ a, np.einsum("i,ijk->jk", p, b), center,
+   -                          l2_coefficient=config.l2_coefficient)
+23 +     return solve_simplex(p @ a, np.einsum("i,ijk->jk", p, b), center, l2_coefficient=config.l2_coefficient)
+24 |
+25 |
+   - def _individual(records: tuple[MaturedFeedback, ...], decision_us: int,
+   -                 config: ForecastConfig) -> NDArray[np.float64]:
+26 + def _individual(
+27 +     records: tuple[MaturedFeedback, ...], decision_us: int, config: ForecastConfig
+28 + ) -> NDArray[np.float64]:
+29 |     if len(records) < config.global_minimum:
+30 |         return np.full(3, 1 / 3)
+   -     recent = records[-config.global_minimum:]
+   -     weights = recency_weights(np.array([item.origin_us for item in recent], dtype=np.int64),
+   -                               decision_us=decision_us, half_life_weeks=config.half_life_weeks)
+   -     standalone = np.stack([item.a - .5 * np.diag(item.b) for item in recent])
+31 +     recent = records[-config.global_minimum :]
+32 +     weights = recency_weights(
+33 +         np.array([item.origin_us for item in recent], dtype=np.int64),
+34 +         decision_us=decision_us,
+35 +         half_life_weeks=config.half_life_weeks,
+36 +     )
+37 +     standalone = np.stack([item.a - 0.5 * np.diag(item.b) for item in recent])
+38 |     return softmax(-(weights @ standalone))
+39 |
+40 |
+   - def fit_mixtures(records: tuple[MaturedFeedback, ...], scaled_context: ArrayLike, *,
+   -                  decision_us: int, config: ForecastConfig) -> MixtureBundle:
+41 + def fit_mixtures(
+42 +     records: tuple[MaturedFeedback, ...],
+43 +     scaled_context: ArrayLike,
+44 +     *,
+45 +     decision_us: int,
+46 +     config: ForecastConfig,
+47 + ) -> MixtureBundle:
+48 |     """Fit declared mixtures; all contexts supplied here use the fixed transform."""
+--------------------------------------------------------------------------------
+62 |     if len(records) <= config.neighbors:
+   -         return MixtureBundle(global_alpha, global_alpha, global_alpha, individual, 0, 0,
+   -                              "INSUFFICIENT_LOCAL_RECORDS", global_fit, None)
+63 +         return MixtureBundle(
+64 +             global_alpha,
+65 +             global_alpha,
+66 +             global_alpha,
+67 +             individual,
+68 +             0,
+69 +             0,
+70 +             "INSUFFICIENT_LOCAL_RECORDS",
+71 +             global_fit,
+72 +             None,
+73 +         )
+74 |     contexts = np.stack([record.context for record in records])
+75 |     distances = pairwise_distances(context[None, :], contexts, squared=True)[0]
+76 |     origins = np.array([record.origin_us for record in records], dtype=np.int64)
+   -     selected = neighbor_order(distances, origins, tuple(r.record_id for r in records))[:config.neighbors]
+77 +     selected = neighbor_order(distances, origins, tuple(r.record_id for r in records))[: config.neighbors]
+78 |     local_records = tuple(records[i] for i in selected)
+   -     weights = recency_weights(origins[list(selected)], decision_us=decision_us,
+   -                               half_life_weeks=config.half_life_weeks)
+79 +     weights = recency_weights(
+80 +         origins[list(selected)], decision_us=decision_us, half_life_weeks=config.half_life_weeks
+81 +     )
+82 |     effective = 1 / float(weights @ weights)
+--------------------------------------------------------------------------------
+88 |     if reason:
+   -         return MixtureBundle(global_alpha, global_alpha, global_alpha, individual, 0, effective,
+   -                              reason, global_fit, None)
+89 +         return MixtureBundle(
+90 +             global_alpha, global_alpha, global_alpha, individual, 0, effective, reason, global_fit, None
+91 +         )
+92 |     local_fit = _fit(local_records, weights, global_alpha, config)
+93 |     beta = min(config.maximum_blend, effective / (effective + config.shrink_pseudocount))
+   -     contextual = (local_fit.alpha if config.no_shrink else
+   -                   (1 - beta) * global_alpha + beta * local_fit.alpha)
+   -     return MixtureBundle(global_alpha, local_fit.alpha, contextual, individual, beta, effective,
+   -                          None, global_fit, local_fit)
+94 +     contextual = local_fit.alpha if config.no_shrink else (1 - beta) * global_alpha + beta * local_fit.alpha
+95 +     return MixtureBundle(
+96 +         global_alpha, local_fit.alpha, contextual, individual, beta, effective, None, global_fit, local_fit
+97 +     )
+   |
+
+unformatted: File would be reformatted
+   --> successors/frem_s10/tests/test_model_audit.py:26:23
+    |
+25  |     origin = BASE + index * WEEK
+    -     g = np.array([1 + .03 * np.sin(index), 1 + .02 * np.cos(index), 1 + .01 * np.sin(index / 2)])
+    -     return OriginRecord(f"origin-{index:04}", index, origin, origin + 4 * WEEK,
+    -                         origin + 4 * WEEK + WEEK // 2, origin - WEEK // 2,
+    -                         np.full(12, np.sin(index / 10)), g, np.array([.001, .002, 0.]),
+    -                         np.ones(3) + (g - 1) / 4, np.array([.00025, .0005, 0.]))
+26  +     g = np.array([1 + 0.03 * np.sin(index), 1 + 0.02 * np.cos(index), 1 + 0.01 * np.sin(index / 2)])
+27  +     return OriginRecord(
+28  +         f"origin-{index:04}",
+29  +         index,
+30  +         origin,
+31  +         origin + 4 * WEEK,
+32  +         origin + 4 * WEEK + WEEK // 2,
+33  +         origin - WEEK // 2,
+34  +         np.full(12, np.sin(index / 10)),
+35  +         g,
+36  +         np.array([0.001, 0.002, 0.0]),
+37  +         np.ones(3) + (g - 1) / 4,
+38  +         np.array([0.00025, 0.0005, 0.0]),
+39  +     )
+40  |
+41  |
+42  | def request(index: int) -> IssueRequest:
+43  |     item = record(index)
+    -     return IssueRequest(item.record_id, item.origin_us, item.endpoint_us, item.available_us,
+    -                         item.feature_available_us, item.x, item.anchor_index)
+44  +     return IssueRequest(
+45  +         item.record_id,
+46  +         item.origin_us,
+47  +         item.endpoint_us,
+48  +         item.available_us,
+49  +         item.feature_available_us,
+50  +         item.x,
+51  +         item.anchor_index,
+52  +     )
+53  |
+54  |
+55  | def transform() -> Transform:
+    -     return Transform(np.zeros(12), np.ones(12), np.full(3, .05),
+    -                      tuple(f"burnin-{i}" for i in range(64)), "constructed-transform")
+56  +     return Transform(
+57  +         np.zeros(12),
+58  +         np.ones(12),
+59  +         np.full(3, 0.05),
+60  +         tuple(f"burnin-{i}" for i in range(64)),
+61  +         "constructed-transform",
+62  +     )
+63  |
+--------------------------------------------------------------------------------
+87  |     changed = replace(target, g=target.g * 1.4)
+    -     changed_feedback = mature_forecast(issued, changed, decision_us=target.available_us + 1,
+    -                                       transform=transform())
+88  +     changed_feedback = mature_forecast(
+89  +         issued, changed, decision_us=target.available_us + 1, transform=transform()
+90  +     )
+91  |     assert issued.record_id == first.batch.get("contextual_stack").record_id
+92  |     assert not np.array_equal(feedback.a, changed_feedback.a)
+    -     expected = score_coefficients(issued.experts.library.r / transform().score_scale,
+    -                                   issued.experts.probabilities, target.r / transform().score_scale)
+93  +     expected = score_coefficients(
+94  +         issued.experts.library.r / transform().score_scale,
+95  +         issued.experts.probabilities,
+96  +         target.r / transform().score_scale,
+97  +     )
+98  |     np.testing.assert_array_equal(feedback.a, expected.a)
+99  |     np.testing.assert_array_equal(feedback.b, expected.b)
+100 |     with pytest.raises(IntegrityError):
+    -         mature_forecast(issued, replace(target, x=np.zeros(12)),
+    -                         decision_us=target.available_us + 1, transform=transform())
+101 +         mature_forecast(
+102 +             issued,
+103 +             replace(target, x=np.zeros(12)),
+104 +             decision_us=target.available_us + 1,
+105 +             transform=transform(),
+106 +         )
+107 |
+--------------------------------------------------------------------------------
+111 |     issued = first.batch.get("contextual_stack")
+    -     expected = mature_forecast(issued, record(70), decision_us=record(70).available_us + 1,
+    -                                transform=transform())
+112 +     expected = mature_forecast(
+113 +         issued, record(70), decision_us=record(70).available_us + 1, transform=transform()
+114 +     )
+115 |     current = first.state
+--------------------------------------------------------------------------------
+144 |     payload = dump_state(current)
+    -     restored = load_state(payload, expected_state_id=current.record_id,
+    -                           expected_transform_id=current.transform.record_id, expected_config=current.config)
+145 +     restored = load_state(
+146 +         payload,
+147 +         expected_state_id=current.record_id,
+148 +         expected_transform_id=current.transform.record_id,
+149 +         expected_config=current.config,
+150 +     )
+151 |     assert dump_state(restored) == payload
+--------------------------------------------------------------------------------
+159 |     with pytest.raises(IntegrityError):
+    -         load_state(payload, expected_state_id="wrong", expected_transform_id="constructed-transform",
+    -                    expected_config=current.config)
+160 +         load_state(
+161 +             payload,
+162 +             expected_state_id="wrong",
+163 +             expected_transform_id="constructed-transform",
+164 +             expected_config=current.config,
+165 +         )
+166 |     with pytest.raises(IntegrityError):
+    -         load_state(payload.replace("origin-0000", "origin-0001", 1),
+    -                    expected_state_id=current.record_id, expected_transform_id="constructed-transform",
+    -                    expected_config=current.config)
+167 +         load_state(
+168 +             payload.replace("origin-0000", "origin-0001", 1),
+169 +             expected_state_id=current.record_id,
+170 +             expected_transform_id="constructed-transform",
+171 +             expected_config=current.config,
+172 +         )
+173 |
+--------------------------------------------------------------------------------
+177 |     for index in range(count):
+    -         output.append(MaturedFeedback(f"feedback-{index}", f"issued-{index}", f"outcome-{index}",
+    -                                      BASE + index * WEEK, BASE + (index + 5) * WEEK,
+    -                                      np.zeros(12), np.array([.1, .2, .3]), np.zeros((3, 3))))
+178 +         output.append(
+179 +             MaturedFeedback(
+180 +                 f"feedback-{index}",
+181 +                 f"issued-{index}",
+182 +                 f"outcome-{index}",
+183 +                 BASE + index * WEEK,
+184 +                 BASE + (index + 5) * WEEK,
+185 +                 np.zeros(12),
+186 +                 np.array([0.1, 0.2, 0.3]),
+187 +                 np.zeros((3, 3)),
+188 +             )
+189 +         )
+190 |     return tuple(output)
+--------------------------------------------------------------------------------
+194 |     records = feedback_records()
+    -     mixture = fit_mixtures(records, np.zeros(12), decision_us=BASE + 100 * WEEK,
+    -                            config=ForecastConfig())
+195 +     mixture = fit_mixtures(records, np.zeros(12), decision_us=BASE + 100 * WEEK, config=ForecastConfig())
+196 |     assert mixture.fallback_reason is None
+197 |     assert mixture.global_certificate is not None
+198 |     assert mixture.local_certificate is not None
+    -     expected_beta = min(.5, mixture.effective_count / (mixture.effective_count + 64))
+199 +     expected_beta = min(0.5, mixture.effective_count / (mixture.effective_count + 64))
+200 |     assert mixture.beta == expected_beta
+    -     np.testing.assert_allclose(mixture.contextual_alpha,
+    -                                (1 - expected_beta) * mixture.global_alpha + expected_beta * mixture.local_alpha)
+    -     expected_individual = np.exp(-np.array([.1, .2, .3]))
+201 +     np.testing.assert_allclose(
+202 +         mixture.contextual_alpha,
+203 +         (1 - expected_beta) * mixture.global_alpha + expected_beta * mixture.local_alpha,
+204 +     )
+205 +     expected_individual = np.exp(-np.array([0.1, 0.2, 0.3]))
+206 |     expected_individual /= expected_individual.sum()
+207 |     np.testing.assert_allclose(mixture.individual_alpha, expected_individual)
+    -     unshrunk = fit_mixtures(records, np.zeros(12), decision_us=BASE + 100 * WEEK,
+    -                             config=ForecastConfig(no_shrink=True))
+208 +     unshrunk = fit_mixtures(
+209 +         records, np.zeros(12), decision_us=BASE + 100 * WEEK, config=ForecastConfig(no_shrink=True)
+210 +     )
+211 |     np.testing.assert_array_equal(unshrunk.contextual_alpha, unshrunk.local_alpha)
+    -     extrapolated = fit_mixtures(records, np.ones(12), decision_us=BASE + 100 * WEEK,
+    -                                 config=ForecastConfig())
+212 +     extrapolated = fit_mixtures(records, np.ones(12), decision_us=BASE + 100 * WEEK, config=ForecastConfig())
+213 |     assert extrapolated.fallback_reason == "LOCAL_EXTRAPOLATION"
+--------------------------------------------------------------------------------
+224 | def test_duplicate_is_rejected_after_library_eviction():
+    -     first = advance(initial_state(transform(), ForecastConfig(library_window=260)),
+    -                     request(400), tuple(record(i) for i in range(396)))
+225 +     first = advance(
+226 +         initial_state(transform(), ForecastConfig(library_window=260)),
+227 +         request(400),
+228 +         tuple(record(i) for i in range(396)),
+229 +     )
+230 |     assert record(0).record_id not in first.state.library.record_ids
+--------------------------------------------------------------------------------
+237 |     original = first_transition().state
+    -     altered_request = replace(original.pending[0].request, available_us=original.pending[0].request.available_us + 1)
+238 +     altered_request = replace(
+239 +         original.pending[0].request, available_us=original.pending[0].request.available_us + 1
+240 +     )
+241 |     forged = replace(original, pending=(replace(original.pending[0], request=altered_request),))
+--------------------------------------------------------------------------------
+247 |     # Equal total returns imply identical ES, while price-only liquidation fees differ.
+    -     g1, d1 = np.array([[1.01, 1., 1.]]), np.zeros((1, 3))
+    -     g2, d2 = np.ones((1, 3)), np.array([[.01, 0., 0.]])
+248 +     g1, d1 = np.array([[1.01, 1.0, 1.0]]), np.zeros((1, 3))
+249 +     g2, d2 = np.ones((1, 3)), np.array([[0.01, 0.0, 0.0]])
+250 |     outcome = np.zeros(3)
+    -     assert energy_score(g1 + d1 - 1, [1.], outcome) == energy_score(g2 + d2 - 1, [1.], outcome)
+    -     difference = ((1 - .001) * g2 + d2) - ((1 - .001) * g1 + d1)
+    -     np.testing.assert_allclose(difference, [[.001 * .01, 0., 0.]], rtol=0, atol=1e-15)
+251 +     assert energy_score(g1 + d1 - 1, [1.0], outcome) == energy_score(g2 + d2 - 1, [1.0], outcome)
+252 +     difference = ((1 - 0.001) * g2 + d2) - ((1 - 0.001) * g1 + d1)
+253 +     np.testing.assert_allclose(difference, [[0.001 * 0.01, 0.0, 0.0]], rtol=0, atol=1e-15)
+254 |
+255 |
+    - @pytest.mark.parametrize("field,value", [
+    -     ("transform", None), ("library", None), ("config", "not-a-config"),
+    -     ("feedback", {"container": "tuple", "items": [None]}),
+    -     ("pending", {"container": "tuple", "items": [None]}),
+    -     ("cursor_us", "not-an-integer"), ("previous_state_id", 5),
+    -     ("consumed_event_ids", {"container": "tuple", "items": []}),
+    - ])
+256 + @pytest.mark.parametrize(
+257 +     "field,value",
+258 +     [
+259 +         ("transform", None),
+260 +         ("library", None),
+261 +         ("config", "not-a-config"),
+262 +         ("feedback", {"container": "tuple", "items": [None]}),
+263 +         ("pending", {"container": "tuple", "items": [None]}),
+264 +         ("cursor_us", "not-an-integer"),
+265 +         ("previous_state_id", 5),
+266 +         ("consumed_event_ids", {"container": "tuple", "items": []}),
+267 +     ],
+268 + )
+269 | def test_checkpoint_rejects_malformed_nested_state_with_typed_error(field, value):
+--------------------------------------------------------------------------------
+276 |     with pytest.raises(ContractError):
+    -         load_state(json.dumps(envelope), expected_state_id=state.record_id,
+    -                    expected_transform_id=state.transform.record_id, expected_config=state.config)
+277 +         load_state(
+278 +             json.dumps(envelope),
+279 +             expected_state_id=state.record_id,
+280 +             expected_transform_id=state.transform.record_id,
+281 +             expected_config=state.config,
+282 +         )
+283 |
+--------------------------------------------------------------------------------
+299 |         fields["consumed_event_ids"]["items"].append(
+    -             {"array": "<f8", "shape": [1], "hex": np.zeros(1).tobytes().hex()})
+300 +             {"array": "<f8", "shape": [1], "hex": np.zeros(1).tobytes().hex()}
+301 +         )
+302 |     envelope["payload"] = json.dumps(document)
+303 |     envelope["sha256"] = hashlib.sha256(envelope["payload"].encode()).hexdigest()
+304 |     with pytest.raises(ContractError):
+    -         load_state(json.dumps(envelope), expected_state_id=state.record_id,
+    -                    expected_transform_id=state.transform.record_id, expected_config=state.config)
+305 +         load_state(
+306 +             json.dumps(envelope),
+307 +             expected_state_id=state.record_id,
+308 +             expected_transform_id=state.transform.record_id,
+309 +             expected_config=state.config,
+310 +         )
+311 |
+312 |
+313 | def test_checkpoint_rejects_excessive_json_nesting_with_typed_error():
+314 |     with pytest.raises(ContractError):
+    -         load_state('{"nested":' + '[' * 2000 + '0' + ']' * 2000 + '}', expected_state_id="unused",
+    -                    expected_transform_id="unused", expected_config=ForecastConfig())
+315 +         load_state(
+316 +             '{"nested":' + "[" * 2000 + "0" + "]" * 2000 + "}",
+317 +             expected_state_id="unused",
+318 +             expected_transform_id="unused",
+319 +             expected_config=ForecastConfig(),
+320 +         )
+321 |
+    |
+
+10 files would be reformatted, 37 files already formatted

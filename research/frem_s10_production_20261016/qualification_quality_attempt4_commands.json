@@ -1,0 +1,79 @@
+{
+  "commands": [
+    {
+      "cmd": [
+        "pytest",
+        "-q",
+        "successors/frem_s10/tests/test_qualification_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 1.4471601250115782,
+      "log": "research/frem_s10_production_20261016/qualification_quality_attempt4_0.log",
+      "sha256": "a4cb761ad0e22ce7ee10d1e95c757eaf283a0d5d593f56f19deb6b0fc18d029d"
+    },
+    {
+      "cmd": [
+        "ruff",
+        "check",
+        "successors/frem_s10/src/frem_s10/runtime/qualification.py",
+        "successors/frem_s10/src/frem_s10/runtime/qualification_worker.py",
+        "successors/frem_s10/tests/test_qualification_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.08778983398224227,
+      "log": "research/frem_s10_production_20261016/qualification_quality_attempt4_1.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "cmd": [
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/src/frem_s10/runtime/qualification.py",
+        "successors/frem_s10/src/frem_s10/runtime/qualification_worker.py",
+        "successors/frem_s10/tests/test_qualification_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 0.024324708007043228,
+      "log": "research/frem_s10_production_20261016/qualification_quality_attempt4_2.log",
+      "sha256": "177f260a5645724013185e4b140c7045cc39e56c0c97b120f5cb23599f85f0de"
+    },
+    {
+      "cmd": [
+        "mypy",
+        "--strict",
+        "successors/frem_s10/src/frem_s10/runtime/qualification.py",
+        "successors/frem_s10/src/frem_s10/runtime/qualification_worker.py",
+        "successors/frem_s10/tests/test_qualification_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 1.366385542001808,
+      "log": "research/frem_s10_production_20261016/qualification_quality_attempt4_3.log",
+      "sha256": "71144743c83babea384888a735db0c4daba3d4d7b7942b6839984bd5c21b52bb"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/qualification.py",
+      "sha256": "96b0b8c7f491376993fcaa56c936b09285e72ebdc030b983c027472ce09e73c3"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/qualification_worker.py",
+      "sha256": "8113350c86655c2c44cd67db72bf6ba2a33ca20ba43eacd700cac32f7ea9103e"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_qualification_audit.py",
+      "sha256": "fc0954ee6cd52156c92093452eb2d24164bc4d1535b95febb99f249f82daaf71"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_production_verification_audit.py",
+      "sha256": "866073fb2bf90b15befee78d4f43d60b0f7e0d61c7690e387e18fbe046912180"
+    }
+  ],
+  "full_generated_qualification_executed": false,
+  "market_runs": 0
+}

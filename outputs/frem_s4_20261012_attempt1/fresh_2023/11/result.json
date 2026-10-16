@@ -1,0 +1,69 @@
+{
+  "fold": "fresh_2023",
+  "seed": 11,
+  "results": {
+    "off": {
+      "nll": -1.3295479085937656,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.1755678328374377,
+        "half_gains": [
+          0.0,
+          0.0
+        ],
+        "eligible": true
+      },
+      "rows": 144,
+      "sha256": "234bc746d49d0b7f8423fb51f8bf7bacbfa06710110e3c7e09a6ed59b2a11271"
+    },
+    "old_distance": {
+      "nll": -1.3295479085937656,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.1755678328374377,
+        "half_gains": [
+          0.0,
+          0.0
+        ],
+        "eligible": true
+      },
+      "rows": 144,
+      "sha256": "af1ad07b75532bbf24b83e02052f4c26c8e08aee9b58a33d9e71d04a9ee0c08f"
+    },
+    "euclidean_distance": {
+      "nll": -1.3295479085937656,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.1755678328374377,
+        "half_gains": [
+          0.0,
+          0.0
+        ],
+        "eligible": true
+      },
+      "rows": 144,
+      "sha256": "0f7c457497fef7a6bcc9e1d1025182d23159dfbdcfe5d5fb36050d07dbd81c0b"
+    },
+    "matched_random": {
+      "nll": -1.3295479085937656,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.1755678328374377,
+        "half_gains": [
+          0.0,
+          0.0
+        ],
+        "eligible": true
+      },
+      "rows": 144,
+      "sha256": "51e3125f2b1f55f63660d6c0d3830e8e4ef12b1092b2aa8b50c26e0287cfdf62"
+    }
+  },
+  "raw_nll": -1.281120390620999,
+  "protected_access": false,
+  "scope": "Spent-window public development; no confirmation"
+}

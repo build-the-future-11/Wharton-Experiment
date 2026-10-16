@@ -1,0 +1,98 @@
+{
+  "ABT": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "CAT": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "GE": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "HON": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "IBM": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "MCD": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "MMM": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "MSFT": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "PEP": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "PG": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "WMT": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  },
+  "XOM": {
+    "first_month": "2000-01",
+    "last_month": "2024-11",
+    "source_months": 299,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 273
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "created_at": "2026-10-12T17:58:44.450338+00:00",
+  "specification": {
+    "study_id": "FREM-PORTFOLIO-V1-20261012",
+    "created_at": "2026-10-12T16:31:21.812363+00:00",
+    "phase": "development_reanalysis",
+    "target": {
+      "metric": "ending_wealth / paired_benchmark_ending_wealth - 1",
+      "minimum": 0.06,
+      "stretch": 0.36,
+      "scope": "All finite declared cases; not all possible futures; no guaranteed floor.",
+      "primary": "S4 euclidean_distance versus equal-weight identical basket",
+      "mechanism_control": "S4 off identical checkpoint and policy"
+    },
+    "existing_model_runs": {
+      "S4": "outputs/frem_s4_20261012_attempt1",
+      "S3": "outputs/frem_s3_20261011_attempt1",
+      "slow": "outputs/public_equity_slow_20261011_attempt1"
+    },
+    "primary_folds": [
+      "fresh_2023",
+      "fresh_2024"
+    ],
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "s4_arms": [
+      "off",
+      "old_distance",
+      "euclidean_distance",
+      "matched_random"
+    ],
+    "s3_controls": {
+      "frem": [
+        "off",
+        "combined"
+      ],
+      "no_jepa": [
+        "off"
+      ],
+      "ridge": [
+        "off"
+      ],
+      "xgboost": [
+        "off"
+      ],
+      "zero": [
+        "off"
+      ],
+      "historical_mean": [
+        "off"
+      ]
+    },
+    "supplemental": "All six slow-study windows, all four methods, each listing market separately; never aggregate currencies or call these Laura portfolio evidence. Incomplete market-time grids fail and remain in report.",
+    "policy": {
+      "name": "anchored_risk_adjusted_log_signal",
+      "anchor_weight": 0.8,
+      "active_budget": 0.2,
+      "risk_aversion": 8.0,
+      "max_asset_weight": 0.15,
+      "small_basket_cap": "max(0.15, 1/n) so equal-weight reference remains feasible; no diversification claim for two-stock baskets",
+      "no_trade_band": 0.02,
+      "cash_return": 0,
+      "cost_bps": [
+        0,
+        10,
+        25,
+        50
+      ],
+      "initial_wealth": 100000,
+      "leverage": false,
+      "holding_accounting": "Self-financing long-only post-fee weights; preserve drifted holdings and cash; cost per dollar bought/sold; terminal liquidation charged.",
+      "signal": "positive log-location divided by risk_aversion*Student-t log-variance; clipped at1; distribute only 20% risk sleeve; not an arithmetic expected-return estimate",
+      "seed_ensemble": "Equal average of log-location; total variance includes within-seed predictive variance and between-seed location dispersion; no winning seed selection"
+    },
+    "stress_paths": {
+      "flat": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bull": [
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03
+      ],
+      "bear": [
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03,
+        -0.03
+      ],
+      "crash_recovery": [
+        -0.4,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.04
+      ],
+      "late_crash": [
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        0.03,
+        -0.4
+      ],
+      "single_default": "one asset loses100% in month1 and remains untradable; other asset returns zero; fixed forecast policy; engineering counterexample only"
+    },
+    "statistics": {
+      "paired_circular_blocks": [
+        3,
+        6
+      ],
+      "resamples": 2000,
+      "seed": 1901,
+      "confidence": 0.95,
+      "endpoint": "bootstrap of saved paired log net-wealth increments, conditional policy path; not policy retraining or future coverage",
+      "joint_claim": "No support unless all declared primary cases complete and each empirical uplift >=6%; always exploratory."
+    },
+    "laura": {
+      "contributions": {
+        "2027": 300000,
+        "2028": 150000
+      },
+      "operating_payments": {
+        "start": 2033,
+        "end": 2042,
+        "amount": 50000,
+        "timing": "beginning_of_year"
+      },
+      "growth_sensitivities": [
+        -0.02,
+        0,
+        0.02,
+        0.04,
+        0.06,
+        0.08
+      ],
+      "reserve_discount_sensitivities": [
+        0,
+        0.02,
+        0.04
+      ],
+      "funding_confidence": null,
+      "flexibility_buffer": null,
+      "facility_contribution": "not certified; reserve first, then stated buffer; no distribution-free probability",
+      "current_calls": "research shortlist only pending participant universe/holdings and reviewed policy"
+    },
+    "new_quant_ml_framework": {
+      "status": "AWAITING_EXACT_SOURCE",
+      "integration": "Strict dated forecast JSON contract; no speculative import from unrelated research projects"
+    },
+    "execution": {
+      "new_model_fits": 0,
+      "workers": 1,
+      "thread_policy": "standard library only",
+      "process_rss_ceiling_mib": 128,
+      "max_wall_seconds": 300,
+      "protected_prices_accessed": false,
+      "no_outcome_based_retuning": true
+    },
+    "limitations": [
+      "Previously inspected public survivor histories, retrospective adjusted-price proxies, no historical membership or verified executable timestamps.",
+      "Costs are sensitivity assumptions, not measured fills. Zero cash return is a declared benchmark assumption.",
+      "Source forecasts use a blind month; trading occurs at next month-end under research coordinates. Orders committed from forecast without reacting to later-known observations.",
+      "No order placement, public submission or third-party messages."
+    ]
+  },
+  "sources": {
+    "successors/frem_portfolio_v1/__init__.py": "fb91575cfe2c3ee6616784d6746ca2d2091e90027dcc63a5309ea22873b5e5eb",
+    "successors/frem_portfolio_v1/engine.py": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237",
+    "successors/frem_portfolio_v1/evidence.py": "9b0d60bf09d238dcc507deae17a5af074aa46915a4ffd9882c2c49f19c9b92fd",
+    "successors/frem_portfolio_v1/run.py": "764dcc517a76f4c77dfc5ee02a1134f3f381a6dddff6a4510ce6c2eeb89324ca",
+    "successors/frem_portfolio_v1/specification.json": "b82eb9e00c3237771cf08a22ec4d8703015d0f4e83009bb6f625ff82cd0c6552",
+    "successors/frem_portfolio_v1/tests/test_engine.py": "3164d6c34ff3160ca6ba5aed5945e9feaae9081c679494a738aa5ad9dee16aec"
+  },
+  "scope": "Development reanalysis declaration, not a confirmatory freeze"
+}

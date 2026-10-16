@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/bin/sandbox-exec",
+    "-p",
+    "(version 1)(allow default)(deny network*)(deny file-read* (subpath \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/data\")(subpath \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs\")(subpath \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research\"))(allow file-read* (subpath \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/boundary_probe_attempt1\")(literal \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/numpy-2.5.4-cp312-cp312-macosx_14_0_arm64.whl\"))",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-B",
+    "-X",
+    "pycache_prefix=/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/boundary_probe_attempt1/empty_bytecode",
+    "-c",
+    "import errno, os, pathlib, socket, sys\ntry:\n    with socket.socket() as connection:\n        connection.connect((\"127.0.0.1\", 1))\nexcept OSError as error:\n    assert error.errno in (errno.EPERM, errno.EACCES), repr(error)\nelse:\n    raise AssertionError(\"network boundary absent\")\nfor denied in sys.argv[1:4]:\n    try:\n        list(os.scandir(denied))\n    except PermissionError:\n        pass\n    else:\n        raise AssertionError(\"source evidence boundary absent: \" + denied)\nassert list(pathlib.Path(sys.argv[4]).iterdir()) == []\nprint(\"NETWORK_DENIED DATA_OUTPUTS_RESEARCH_DENIED PROTECTED_FIXTURE_EMPTY\")\n",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/data",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/boundary_probe_attempt1/protected_empty"
+  ],
+  "returncode": 0,
+  "stdout": "NETWORK_DENIED DATA_OUTPUTS_RESEARCH_DENIED PROTECTED_FIXTURE_EMPTY\n",
+  "stderr": "",
+  "scope": "BOUNDARY_ONLY_NO_FULL_SUITE_OR_SCIENCE"
+}

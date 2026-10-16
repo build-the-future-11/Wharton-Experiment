@@ -1,0 +1,113 @@
+{
+  "scope": "ENGINEERING_ONLY_CL15_FORCED_LIQUIDATION_AND_NUMERICAL_LEDGER_VERIFICATION",
+  "decision_journal_sha256": "8c175034653491381cfd14b119d18d84710bd7a388e53bf0b035c4a80ef1f7fa",
+  "scientific_design_id": "FREM-S10-DESIGN-3-CL15",
+  "market_values_accessed": false,
+  "scientific_runs": 0,
+  "independent_empirical_replication": false,
+  "results": [
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error",
+        "-p",
+        "no:cacheprovider",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/cl15_all_owned_tests.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/cl15_lint_final.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/cl15_format_final.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "--no-incremental",
+        "--cache-dir=/dev/null",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/cl15_strict_mypy_final.log"
+    }
+  ],
+  "source_sha256": {
+    "research/frem_s10_repair_20261015/DESIGN_ADDENDUM_CL15.md": "dc3388bab76b3d200ccb4bc30755ce0eac09a6a42d59e408f7c21fd71ae83a04",
+    "successors/frem_s10/src/frem_s10/math/distances.py": "ff533a62be774383d66b02610c5335ee127790cb5110b7b3016c239444bb02bd",
+    "successors/frem_s10/src/frem_s10/math/fees.py": "8e56ac3d1412c70d5c5b6b4deed1a4ede210dd0e31830c91f81b83544b7e5aca",
+    "successors/frem_s10/src/frem_s10/math/probabilities.py": "1ae3ca45c567a9daf80fcba6427c947ec8eef6bfd5723789ba650d25f572745b",
+    "successors/frem_s10/src/frem_s10/math/scores.py": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61",
+    "successors/frem_s10/src/frem_s10/math/simplex.py": "ebfbf5914fdad93684603c1fc6dd13587a2d5697f5fd1864de5ee5210af0f5cd",
+    "successors/frem_s10/src/frem_s10/math/utility.py": "02cd10108764d552bdbd1854d19032fd51b061a9c52d45161ceb2ef7fc33b533",
+    "successors/frem_s10/src/frem_s10/portfolio/__init__.py": "c682e37319b66e2432c82aac57eeb4c3d2dd28952fc55519bcf13d46a0cdf1fd",
+    "successors/frem_s10/src/frem_s10/portfolio/actions.py": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655",
+    "successors/frem_s10/src/frem_s10/portfolio/ledger.py": "e3c3fdbf567a18f1c60a710640c9d76ec6b401cbc389bdc05971df58f1c7eb0d",
+    "successors/frem_s10/src/frem_s10/science.json": "1d2caabd73e13a35d84035f13410395d0b71a8bdda892959c18b7838ecd0136b",
+    "successors/frem_s10/tests/test_actions_audit.py": "47ddb10b5fe57decb2aef175fa383880fede2b6c131972a73a116d3fa23f163b",
+    "successors/frem_s10/tests/test_ledger_audit.py": "3c214c4e437285b9bf2d8efe070537cd1d843ef90df26164397b10c6edf44a10",
+    "successors/frem_s10/tests/test_math_audit.py": "5fb2f8568d244c5f44d75f825d497621ad7f0baab91546e7418af32e4b2f729d"
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "max_child_rss_raw": 236322816,
+  "rss_units": "bytes",
+  "retained_failures": [
+    "math_attempt1.log",
+    "ledger_attempt1.log",
+    "cl15_ledger_attempt1.log"
+  ],
+  "cl15_test_repair": "First CL15 assertion expected 1e-10 share precision, tighter than the frozen 1e-10*V dollar root tolerance. Retained original test. Corrected assertions propagate that fixed tolerance through price conversion and three solves; no algorithmic tolerance changed.",
+  "verification_correction": "Earlier ledger_mypy.log and cl15_mypy_attempt1.log omitted the package config and establish default-mode checks only. cl15_strict_mypy_final.log explicitly loads the isolated strict configuration and checks all owned source plus all three typed test files.",
+  "remaining": "No complete policy/benchmark/matrix campaign, precision feasibility, scientific freeze/run or independent empirical reproduction is certified."
+}

@@ -1,0 +1,112 @@
+.FFF.F..                                                                 [100%]
+=================================== FAILURES ===================================
+_ test_importable_nonpython_member_cannot_escape_code_inventory[.cpython-312-darwin.so] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-73/test_importable_nonpython_memb0')
+suffix = '.cpython-312-darwin.so'
+
+    @pytest.mark.parametrize("suffix", [importlib.machinery.EXTENSION_SUFFIXES[0], ".pyc"])
+    def test_importable_nonpython_member_cannot_escape_code_inventory(tmp_path: Path, suffix: str) -> None:
+        package = _package(tmp_path)
+        ref = provenance.create_code_manifest(tmp_path, tmp_path)
+        # This is inert text. Its importable filename must still invalidate the freeze.
+        (package / f"src/frem_s10/operator{suffix}").write_bytes(b"never executed native/bytecode fixture")
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_production_verification_audit.py:62: Failed
+_____ test_importable_nonpython_member_cannot_escape_code_inventory[.pyc] ______
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-73/test_importable_nonpython_memb1')
+suffix = '.pyc'
+
+    @pytest.mark.parametrize("suffix", [importlib.machinery.EXTENSION_SUFFIXES[0], ".pyc"])
+    def test_importable_nonpython_member_cannot_escape_code_inventory(tmp_path: Path, suffix: str) -> None:
+        package = _package(tmp_path)
+        ref = provenance.create_code_manifest(tmp_path, tmp_path)
+        # This is inert text. Its importable filename must still invalidate the freeze.
+        (package / f"src/frem_s10/operator{suffix}").write_bytes(b"never executed native/bytecode fixture")
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_production_verification_audit.py:62: Failed
+___________ test_environment_rejects_non_numpy_locked_version_drift ____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-73/test_environment_rejects_non_n0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x108ad3710>
+
+    def test_environment_rejects_non_numpy_locked_version_drift(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        package = _package(tmp_path)
+        spec = importlib.machinery.ModuleSpec(
+            "frem_s10", loader=None, origin=str(package / "src/frem_s10/__init__.py")
+        )
+        monkeypatch.setattr(provenance.importlib.util, "find_spec", lambda name: spec)
+        monkeypatch.setattr(provenance.platform, "system", lambda: "Darwin")
+        monkeypatch.setattr(provenance.platform, "machine", lambda: "arm64")
+        monkeypatch.setattr(
+            provenance.importlib.metadata,
+            "distributions",
+            lambda: [_Distribution({"Name": "numpy"}, "2.5.4"), _Distribution({"Name": "pytest"}, "999.0")],
+        )
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_production_verification_audit.py:87: Failed
+_______ test_structural_v1_pass_never_certifies_production_verification ________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-73/test_structural_v1_pass_never_0')
+
+    def test_structural_v1_pass_never_certifies_production_verification(tmp_path: Path) -> None:
+        bindings: JSONObject = {role: str(index) * 64 for index, role in enumerate(verification.BOUND_ROLES)}
+        old = provenance.save_object(
+            tmp_path,
+            {
+                "schema": "s10-test-result-v1",
+                "status": "PASS",
+                "code_sha256": bindings["code"],
+                "environment_sha256": bindings["environment"],
+            },
+        )
+        ref = provenance.save_object(
+            tmp_path,
+            {
+                "schema": "s10-verification-receipt-v1",
+                "design_id": DESIGN,
+                "operation": "prepare-precision",
+                "evidence_scope": "RETROSPECTIVE_DEVELOPMENT",
+                "bindings": bindings,
+                "status": "PASS",
+                "logs": [old],
+            },
+        )
+        with pytest.raises(IntegrityError, match="structural v1 PASS"):
+>           verification.audit_verification(ref, artifact_root=tmp_path, source_root=tmp_path)
+
+successors/frem_s10/tests/test_production_verification_audit.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/verification.py:280: in audit_verification
+    _schema(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = {'code_sha256': '0000000000000000000000000000000000000000000000000000000000000000', 'environment_sha256': '4444444444444444444444444444444444444444444444444444444444444444', 'schema': 's10-test-result-v1', 'status': 'PASS'}
+fields = {'code_sha256', 'environment_sha256', 'evidence', 'schema', 'status'}
+label = 'observed test result'
+
+    def _schema(value: JSONValue, fields: set[str], label: str) -> JSONObject:
+        result = object_json(value)
+        if set(result) != fields:
+>           raise ContractError(f"{label}: exact schema fields required")
+E           frem_s10.errors.ContractError: observed test result: exact schema fields required
+
+successors/frem_s10/src/frem_s10/runtime/declarations.py:42: ContractError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory[.cpython-312-darwin.so]
+FAILED successors/frem_s10/tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory[.pyc]
+FAILED successors/frem_s10/tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift
+FAILED successors/frem_s10/tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification
+4 failed, 4 passed in 0.76s

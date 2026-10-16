@@ -1,0 +1,197 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "-B",
+      "-m",
+      "pytest",
+      "-c",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/tests",
+      "-q",
+      "-W",
+      "error",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/pytest_artifacts"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 43.293791417003376,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/tests.log",
+    "log_sha256": "b2198974a5aca4073480d564e78039e8762f33a11a7deb3e672501c7e1a67e90",
+    "cumulative_max_child_rss_bytes_macos": 132300800
+  },
+  {
+    "name": "lint",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 0.09590149999712594,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/lint.log",
+    "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "cumulative_max_child_rss_bytes_macos": 132300800
+  },
+  {
+    "name": "format",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "format",
+      "--check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 0.013918542012106627,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/format.log",
+    "log_sha256": "7586f3a0d458f21b4bd49fa3262806c13262c3000e0b29a6e9ec969c0419b2ab",
+    "cumulative_max_child_rss_bytes_macos": 132300800
+  },
+  {
+    "name": "source_types",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+      "--config-file",
+      "successors/frem_s10/pyproject.toml",
+      "--cache-dir",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/mypy_cache",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 2.493201459001284,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/source_types.log",
+    "log_sha256": "4ef32b02733c640ba275e5de2c0f630d3ea2a6293bb124ad0dc2173d46e40541",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "plan",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/s10-research",
+      "plan",
+      "--manifest",
+      "successors/frem_s10/src/frem_s10/science.json",
+      "--output",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/plan.json"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 0.09000037499936298,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/plan.log",
+    "log_sha256": "e7f00d1401acd396740529f7020fa8828f1021a5fc1491a142be1b552c20412e",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "build",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "-m",
+      "build",
+      "--no-isolation",
+      "--outdir",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/dist",
+      "successors/frem_s10"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 2.130655333996401,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/build.log",
+    "log_sha256": "27d42d2c24d739bf98ff59e319635f57c2df9a6f8ea82a2e430711dc526aa878",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "clean_environment",
+    "command": [
+      "uv",
+      "venv",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 0.09145241699297912,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_environment.log",
+    "log_sha256": "aecfaf50700fbd9e6be2df3c37c0d460c73392125f572a3def8a137c87358047",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "wheel_install",
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env/bin/python",
+      "--offline",
+      "--no-index",
+      "--require-hashes",
+      "-r",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/requirements.txt"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 0.18308708300173748,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/wheel_install.log",
+    "log_sha256": "eee7a5e448f01e83509aa617b9a7a61a6e31a214dbb883d28f9fa7c17e1a465e",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "wheel_smoke",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env/bin/python",
+      "-I",
+      "-c",
+      "import sys,json,numpy; import frem_s10; import frem_s10.experiment.precision; import frem_s10.experiment.artifacts; from importlib.resources import files; p=files('frem_s10'); s=json.loads(p.joinpath('science.json').read_text()); assert s['design_id']=='FREM-S10-DESIGN-4-CL16'; assert 'site-packages' in str(p); assert 'frem' not in sys.modules; print(json.dumps({'module':str(p),'numpy':numpy.__version__,'design_id':s['design_id'],'status':'PASS'}))"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2",
+    "exit_code": 0,
+    "wall_seconds": 3.204140624991851,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/wheel_smoke.log",
+    "log_sha256": "7148f72c4b448fe115d4ecce35373a5e4d83fd9b04e550fbdf397d051c30c3ed",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "wheel_help",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env/bin/s10-research",
+      "--help"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2",
+    "exit_code": 0,
+    "wall_seconds": 0.5698900410061469,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/wheel_help.log",
+    "log_sha256": "0a9111278c558a4557cb7a16719ef93e28b7c2a6bfd46a9b774eeb4d13b6598d",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  },
+  {
+    "name": "wheel_plan",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env/bin/s10-research",
+      "plan",
+      "--manifest",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/science.json",
+      "--output",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2/wheel_plan.json"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt2",
+    "exit_code": 0,
+    "wall_seconds": 0.09361404099036008,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt2/wheel_plan.log",
+    "log_sha256": "e7f00d1401acd396740529f7020fa8828f1021a5fc1491a142be1b552c20412e",
+    "cumulative_max_child_rss_bytes_macos": 236552192
+  }
+]

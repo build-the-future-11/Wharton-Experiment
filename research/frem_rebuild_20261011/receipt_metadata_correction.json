@@ -1,0 +1,7 @@
+{
+  "decision_id": "FREM-S2-RECEIPT-METADATA-CORRECTION-20261011",
+  "observation": "The first completion receipt used an imprecise field name independent_calendar_months despite explicitly stating correlation and no significance claim.",
+  "decision": "Preserve v1 and issue v2 with calendar_months=19 and independence_established=false. No source, checkpoint, prediction, metric, or disposition changes.",
+  "result": "METADATA_CORRECTED_ORIGINAL_RETAINED",
+  "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+}

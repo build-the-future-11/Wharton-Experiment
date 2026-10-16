@@ -1,0 +1,9 @@
+Retained observation reconstructed from this session's tool outputs; not a raw command log.
+Initial constructed model verification: 8 tests passed in 0.41 seconds using root .venv.
+Initial strict Ruff check: exit 1, 27 findings (import ordering, public docstrings,
+checkpoint decoder complexity, immutable config default-call rule).
+No scientific outcomes were used. Imports/docstrings were repaired, the decoder
+was factored, and initial_state now creates its optional config inside the function.
+Subsequent checks passed. Exact later outputs are preserved in model_attempt3_*.
+Two additional constructed invariants cover duplicate labels after library eviction
+and changed pending chronology invalidating the state identity; current count is 10.

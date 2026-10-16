@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-16T07:48:05.261226+00:00",
+  "launch_clicked_utc": "2026-10-16T07:35:55.150Z",
+  "stop_clicked_utc": "2026-10-16T07:40:28.196Z",
+  "ui_after_stop": "off (run a cell to start) Draft Session off; Session is stopping...",
+  "observed_seconds_from_launch_to_stop_click": 273.046,
+  "provider_notebook_runtime_display_seconds": 11,
+  "final_account_active_events_check": "UNVERIFIED_BROWSER_TOOL_UNAVAILABLE",
+  "final_postrun_quota_balance": null,
+  "reason": "Browser runtime reset on final Active Events query, then twice failed to initialize: No space left on device. No unrelated files or permissions changed.",
+  "cpu_platform_stop_requested": true,
+  "cpu_platform_stop_final_confirmation": false,
+  "gpu_allocations_this_campaign": 0,
+  "gpu_stop_status": "NOT_APPLICABLE_NONE_ALLOCATED",
+  "last_successful_quota_observation": "observations/ACCOUNT_OBSERVATION_FINAL.json",
+  "last_observed_remaining_hours": 30,
+  "last_quota_timestamp_utc": "2026-10-16T07:16:41.504321+00:00",
+  "estimated_gpu_device_hours": 0,
+  "actual_provider_gpu_debit_after_probe": null,
+  "manual_followup": "Verify Wharton is inactive and read current quota after browser access is restored; do not terminate unrelated jobs.",
+  "cleanup": "Removed only this task duplicate Downloads/results.zip after SHA256 matched retained repository copy bc34f904b4258a85b44fcdd742653a0b91601ded1715141217f6dfec9fbf54a5; 2452422 bytes; no evidence lost."
+}

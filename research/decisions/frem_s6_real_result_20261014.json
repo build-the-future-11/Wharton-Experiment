@@ -1,0 +1,21 @@
+{
+  "observation": "All 24 frozen S6 ETF fits complete; primary memory gain versus equal mixing -0.005106787 nats.",
+  "hypothesized_cause": "No demonstrated incremental retrieval value in this sample; unique cause unproved.",
+  "change": "Close completed development without tuning; retain explicit user resource deviation and all outputs.",
+  "predicted_effect": "No memory superiority claim or favorable rerun.",
+  "discriminating_experiment": "Eight families, three seeds, all controls, costs and both block lengths.",
+  "result": {
+    "status": "COMPLETE_MEMORY_ADVANTAGE_UNSUPPORTED",
+    "report": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+    "audit": {
+      "status": "PASS",
+      "prediction_values_recomputed": 72576,
+      "max_nll_error": 4.218847493575595e-15,
+      "ensemble_ledgers_verified": 288,
+      "max_accounting_residual": 5.684341886080802e-14,
+      "frozen_identities_verified": 22,
+      "scope": "Standard-library arithmetic verification, not independent retraining",
+      "prior_audit_failure": "Retained; initial audit omitted explicit terminal liquidation fee. Model accounting unchanged."
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "lineage": "FREM-S3",
+  "declared_at": "2026-10-11T16:06:10.037842+00:00",
+  "status": "PRE_IMPLEMENTATION_PROTOCOL",
+  "primary": "Paired fresh-data NLL gain of combined confidence-gated delayed residual memory versus same calibrated FREM checkpoint with memory off; threshold remains 0.01 nat. Secondary comparisons cannot replace a failed primary.",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "public_config": "configs/frem_s3_public.json",
+  "freshness": "New stock histories not found in local study metadata. Pre2025 only. Known economic dates and survivor selection prevent independent-confirmatory claims. No completed outputs used for selection.",
+  "training": "Outer train split 50/15/15/20 by dates with strict maturity purge: base fitting, checkpoint selection, shared distribution calibration, residual/key-metric fitting. Outer validation only chooses memory gate and risk multiplier. Base never refit after residuals.",
+  "base": "FREM standardized head; 12 epochs max, batch32, patience3, CPU single-thread. no_jepa control same. Ridge/XGBoost same earlier training partition, shared later calibration. Zero and historical-mean controls.",
+  "calibration": "Common NLL grid: mean shrink alpha[0,.5,1] toward zero, scale[.5,.75,1,1.5,2]; ties smaller alpha then scale nearer1. Preserve raw base forecasts for calibration comparison.",
+  "memory": "Versioned normalized residual z=(y-mu)/scale; fixed base/scaler/key versions. Only strictly matured labels enter. capacity128, neighbors4; separately balanced same-capacity, larger512, dual recent/archive, cross-asset standardized, learned diagonal/key projection, frozen, random age-matched and recent-average controls.",
+  "keys": "Fixed current keys plus separately declared learned ridge projection of simple raw causal descriptors to normalized residual and squared residual; fit only residual training partition, freeze thereafter.",
+  "gate": "Weights[0,.25,.5,1] and risk powers[0,.5,1] on validation NLL; mean-only/risk-only/combined separate. Confidence effective neighbor count/4 times inverse residual disagreement times absolute-age decay exp(-ln2*weighted_age/180), clipped[0,1]. Utilities based on matured deployed NLL differences, bounded; utility retention optional separate arm.",
+  "risk": "Scale factor from weighted second normalized residual moment divided by Student-t variance df/(df-2), with four pseudo-observations at unit factor; bounded [.5,2].",
+  "synthetic": "Predeclared null, recurring mean, recurring variance, abrupt change, and missing/delayed families; 3 independent path seeds 101,211,307; 4 assets; 420 times. 180 initial episodes, 100 validation, remainder eval. Oracle distribution saved only as diagnostic. Not market evidence.",
+  "stages": "A integrity; C mechanism matrix. If recurrence benefit or null nonharm fails, mark mechanism gate failed and do not run market promotion. No code/parameter retuning based on synthetic or market outcomes. Engineering defects may be repaired with a new receipt.",
+  "mechanism_gate": "All families finite and complete; combined NLL gain vs off positive on mean-recurrence average; null combined minus off NLL <=0.01 averaged across fixed seeds. No significance claim.",
+  "statistics": "Equal date/asset weighting, average seeds per paired date. Per-fold 3-month circular blocks, 2000 repetitions seed1901, 95% interval; 6-month sensitivity also always reported. Holm secondary family. Short windows force exploratory interpretation; no invented independent replicates.",
+  "budget": {
+    "max_market_learned_fits": 24,
+    "max_total_seconds": 7200,
+    "worker_rss_mib": 768,
+    "worker_seconds": 360,
+    "single_worker": true,
+    "threads": 1,
+    "nice": 10,
+    "slow_mode_authorized_by_current_request": true
+  },
+  "protected_boundary": "2025-01-01 unchanged; no protected acquisition or evaluation",
+  "later_stages": "Confirmation blocked pending unseen admitted data/protocol; portfolio claims blocked pending executable price/action/FX/eligibility data. Implement local hypothetical research ledger only with explicit limitations.",
+  "stopping": "No result-driven retries, omitted seeds, favorable-fold selection or post-hoc threshold changes."
+}

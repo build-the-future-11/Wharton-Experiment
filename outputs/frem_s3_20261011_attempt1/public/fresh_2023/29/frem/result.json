@@ -1,0 +1,180 @@
+{
+  "status": "COMPLETE",
+  "name": "frem",
+  "fold": "fresh_2023",
+  "seed": 29,
+  "base_version": "350cbc3fc2c9cfc4642035cd9eeafa7f0909f9b90ea722d2bd86e20fb8b5026b",
+  "results": {
+    "off": {
+      "nll": -1.3612547031938025,
+      "sha256": "c6696ddbf62dbff7ce8aaeb0edbe3a4252e601b7fa96a5befe8f758b674b4546",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.106198894669384
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    },
+    "frozen": {
+      "nll": -1.3612547031938025,
+      "sha256": "89b065c73b77bc3e5a85e4e8f08ce384f571df718c266be4e6e95dcd9db35f7e",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.106198894669384
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    },
+    "recent": {
+      "nll": -1.3612547031938025,
+      "sha256": "cec20dfdc108a68f2348d9c260b0225936a18c71bbf04bc3aa61e6b2b5a3c375",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.106198894669384
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    },
+    "random": {
+      "nll": -1.3431592581943697,
+      "sha256": "8cb73396a4b1b529b29d31ce8418a0d76faa3851b118aaea68c266db7c842bf3",
+      "rows": 144,
+      "selected": {
+        "weight": 1.0,
+        "power": 0.0,
+        "nll": -1.1109328980065365
+      },
+      "mean_gate": 0.2362050145912104,
+      "mean_risk_power": 0.0
+    },
+    "mean": {
+      "nll": -1.352067045872421,
+      "sha256": "fb629b13168f981d13553846d62f9a4e1a3087e8c9b065343b89985558cf7c3c",
+      "rows": 144,
+      "selected": {
+        "weight": 0.5,
+        "power": 0.0,
+        "nll": -1.1106231191819076
+      },
+      "mean_gate": 0.11724947053297846,
+      "mean_risk_power": 0.0
+    },
+    "risk": {
+      "nll": -1.3620623880624978,
+      "sha256": "cc3a9e416c0ded4b193f678bbcd5d9e9b3be4a2fc173e3732ea1494833db23e1",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.5,
+        "nll": -1.1070053381764893
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.11724947053297846
+    },
+    "combined": {
+      "nll": -1.334436008785417,
+      "sha256": "a67938a3d66ea2cc219f84c7ed2dd4d7a5fc84990aa97d41b8ddc89b3aacb9b3",
+      "rows": 144,
+      "selected": {
+        "weight": 1.0,
+        "power": 1.0,
+        "nll": -1.1122603645649909
+      },
+      "mean_gate": 0.23449894106595692,
+      "mean_risk_power": 0.23449894106595692
+    },
+    "no_confidence": {
+      "nll": -1.3043842634187304,
+      "sha256": "5fc88ff9f0fe922f0416c33338a7a081c0db7de62f2dcfc6db769e2a231222e0",
+      "rows": 144,
+      "selected": {
+        "weight": 0.25,
+        "power": 1.0,
+        "nll": -1.1284481047946289
+      },
+      "mean_gate": 0.25,
+      "mean_risk_power": 1.0
+    },
+    "balanced": {
+      "nll": -1.334436008785417,
+      "sha256": "ecffff2f1cb725c711d55b3674dbf1253725d7a7b043c1425eaec15387f5c6b6",
+      "rows": 144,
+      "selected": {
+        "weight": 1.0,
+        "power": 1.0,
+        "nll": -1.1122603645649909
+      },
+      "mean_gate": 0.23449894106595692,
+      "mean_risk_power": 0.23449894106595692
+    },
+    "larger": {
+      "nll": -1.3578810667283758,
+      "sha256": "f70ae0146741c9e5664d073a6cd5dbe513a7c3ec13d0de3b0741bdc94ba6928d",
+      "rows": 144,
+      "selected": {
+        "weight": 0.5,
+        "power": 1.0,
+        "nll": -1.1075716906559714
+      },
+      "mean_gate": 0.06575486122526389,
+      "mean_risk_power": 0.13150972245052778
+    },
+    "dual": {
+      "nll": -1.3575156480713926,
+      "sha256": "ca63e3f130ebf14269dbddcec07c1458498f1762dd9325d5f169e2b3780350ad",
+      "rows": 144,
+      "selected": {
+        "weight": 0.25,
+        "power": 0.0,
+        "nll": -1.1069019534105171
+      },
+      "mean_gate": 0.06582060952308885,
+      "mean_risk_power": 0.0
+    },
+    "cross_asset": {
+      "nll": -1.3654410330682303,
+      "sha256": "5e277ad132b63a31ac1a031101655857c661071cbf206ccc76fbb4d19a2c3f84",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 1.0,
+        "nll": -1.1104513071658155
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.24459343164979078
+    },
+    "learned": {
+      "nll": -1.3573544605201409,
+      "sha256": "3b886e44d1869455921708728dd7366c0ae8ac55140662a64e97f8b83e96a9ec",
+      "rows": 144,
+      "selected": {
+        "weight": 0.25,
+        "power": 0.0,
+        "nll": -1.1062031740235523
+      },
+      "mean_gate": 0.03508847788746968,
+      "mean_risk_power": 0.0
+    },
+    "utility": {
+      "nll": -1.3612547031938025,
+      "sha256": "121cb4feff6f45d0c2dbefe0fa8d4f2512718d44c6c89546d4266eb98e3a9ba1",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.106198894669384
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.3700002327971255,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

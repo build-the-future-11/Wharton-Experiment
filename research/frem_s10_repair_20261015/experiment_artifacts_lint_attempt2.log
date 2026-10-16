@@ -1,0 +1,10 @@
+C901 `verify_publication` is too complex (11 > 10)
+   --> successors/frem_s10/src/frem_s10/experiment/artifacts.py:247:5
+    |
+247 | def verify_publication(directory: Path, manifest_sha256: str) -> JSONObject:
+    |     ^^^^^^^^^^^^^^^^^^
+248 |     """Re-read every hash and reject missing, extra, misordered or mislabeled cells."""
+249 |     manifest = object_json(read_verified_json(directory / "manifest.json", manifest_sha256))
+    |
+
+Found 1 error.

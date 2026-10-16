@@ -1,0 +1,183 @@
+{
+  "status": "COMPLETE_DEVELOPMENT_CELL",
+  "scores": {
+    "memory": -2.7484045286010037,
+    "equal": -2.75165345697549,
+    "recent": -2.749854154218685,
+    "zero": -2.7369061856358163,
+    "ridge": -2.7339505366037775,
+    "trend": -2.7369061856358163,
+    "adaptive_volatility": -1.7379514066106876,
+    "reservoir_jepa": -2.7339505366037775,
+    "xgboost_hist": -2.733950536225449
+  },
+  "evaluation_dates": 84,
+  "training_history": [
+    {
+      "step": 0,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 1,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 2,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 3,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 4,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 5,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 6,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 7,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 8,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 9,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 10,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 11,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 12,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 13,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 14,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 15,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 16,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 17,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 18,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 19,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 20,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 21,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 22,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 23,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 24,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 25,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 26,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 27,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 28,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    },
+    {
+      "step": 29,
+      "loss": 0.50019980005,
+      "min_latent_std": 0.0001
+    }
+  ],
+  "terminal_wealth_10bps": {
+    "memory": 96317.78925867748,
+    "equal": 96319.89607422877,
+    "recent": 96318.12711667348,
+    "zero": 96752.59272865247,
+    "ridge": 96073.1746783494,
+    "trend": 96752.59272865247,
+    "adaptive_volatility": 96752.59272865247,
+    "reservoir_jepa": 96073.17467834949,
+    "xgboost_hist": 96073.17462112877,
+    "equal_weight": 95958.63006757047,
+    "buy_hold": 95387.24500413574,
+    "cash": 100000.0
+  },
+  "scope": "Dated custom admitted input, retrospective research ledger; no actual fills or causal claim",
+  "protected_access": false
+}

@@ -1,0 +1,21 @@
+{
+  "warning": "Post-hoc arithmetic only, not a fitted model or selected gate. Do not use these known outcomes to tune a gate or claim a new experiment. Full residual is inferred with saved float rounding. Complete balanced grid means equal-row and equal-date/asset weighting agree.",
+  "predictions_sha256": "95f5180c30596fd38551d9bef0a89f13df14ee12ec278df85889ec174b924f2d",
+  "checks": {
+    "base": {
+      "mean": -0.0459655437760217,
+      "mse": 0.004011155263262018,
+      "nll": -0.8985071122190632
+    },
+    "gated": {
+      "mean": -0.04588397473360047,
+      "mse": 0.004003856209223633,
+      "nll": -0.9013619367407929
+    },
+    "full_residual_inferred_from_saved_correction_divided_by_gate": {
+      "mean": -0.03547847893315442,
+      "mse": 0.0038015202136242087,
+      "nll": -1.0596575414866392
+    }
+  }
+}

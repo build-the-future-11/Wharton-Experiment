@@ -1,0 +1,14 @@
+{
+  "decision_id": "FREM-S2-SLOW-EXECUTION-20261011",
+  "declared_at": "2026-10-11T13:27:47.495413+00:00",
+  "observation": "Normal memory admission failed and user replied: just run it slowly but efficently",
+  "decision": "Proceed under user-directed slow mode; retain failed 512 MiB admission rather than relabeling it as PASS. One low-priority process, one compute thread, 32-row neural minibatches, subprocess RSS ceiling 768 MiB, 120-second fit ceiling, 3600-second campaign ceiling. Tests precede data fits. Each process exits after its cell; no concurrent model jobs.",
+  "hypothesized_cause": "Accumulated chronological neural graphs and threaded libraries can amplify transient memory and CPU demand.",
+  "predicted_effect": "Bound peak process memory and CPU contention; no guaranteed throughput or improved score.",
+  "discriminating_experiment": "Run integrity tests and the same predeclared 22-fit public development matrix; retain all process limits, resource observations, failures and predictions.",
+  "result": "AUTHORIZED_NOT_EXECUTED",
+  "normal_floor_mib": 512,
+  "slow_mode_batch_size": 32,
+  "process_rss_limit_mib": 768,
+  "protected_outcomes_accessed": false
+}

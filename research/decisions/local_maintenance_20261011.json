@@ -1,0 +1,13 @@
+{
+  "decision_id": "LOCAL-MAINTENANCE-20261011",
+  "created_at": "2026-10-11T16:35:44.282193+00:00",
+  "observation": "Release builder hard-coded passing evidence and overwrote prior manifests; public-run status pages were stale; original synthetic audit failed against live S2 source changes.",
+  "hypothesized_cause": "Historical execution identity and current checkout identity were conflated in release/audit tooling and prose.",
+  "change": "Immutable source-only manifest snapshots with explicit byte verification; strict JSON and missing-package checks; explicit original-source archive for old-run arithmetic; reconcile status to retained S2/slow/S3 receipts.",
+  "predicted_effect": "Byte inventory cannot manufacture runtime success, old evidence remains reproducible under its exact original hashes, and status pages distinguish exploratory outcomes from canonical confirmation.",
+  "discriminating_experiment": "Adversarial stdlib tests plus fresh old-run score reconstruction against a 36-file Git archive, S3 score and complete-cell checks, static/lint validation and three package inventory verifications.",
+  "result": "42 offline tests passed including 25 new regression cases; original synthetic negative effect remains -0.5649268573499813; 133844 S3 score rows checked; complete public/mechanism matrix verified. Final source inventories have separate byte-verification receipts.",
+  "scope": "Engineering/evidence maintenance only; no new fit, freeze amendment, threshold change or protected access.",
+  "evidence": "research/local_maintenance_20261011/RECEIPT.json",
+  "preserved_failure": "research/local_maintenance_20261011/engineering_audit_attempt1.log"
+}

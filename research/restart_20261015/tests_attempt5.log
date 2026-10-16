@@ -1,0 +1,45 @@
+test_entry_exact_post_fee_basis (test_restart_audit.AccountingReferenceTests.test_entry_exact_post_fee_basis) ... ok
+test_exit_exact (test_restart_audit.AccountingReferenceTests.test_exit_exact) ... ok
+test_hold_has_no_fee (test_restart_audit.AccountingReferenceTests.test_hold_has_no_fee) ... ok
+test_long_only_cash_budget_rejections (test_restart_audit.AccountingReferenceTests.test_long_only_cash_budget_rejections) ... ok
+test_compounding_is_not_sum (test_restart_audit.HorizonTests.test_compounding_is_not_sum) ... ok
+test_future_and_same_time_outcome_rejected (test_restart_audit.HorizonTests.test_future_and_same_time_outcome_rejected) ... ok
+test_gap_and_overlap_rejected (test_restart_audit.HorizonTests.test_gap_and_overlap_rejected) ... ok
+test_impossible_sum_variance_rejected (test_restart_audit.HorizonTests.test_impossible_sum_variance_rejected) ... ok
+test_invalid_intervals_rejected (test_restart_audit.HorizonTests.test_invalid_intervals_rejected) ... ok
+test_missing_lags_rejected (test_restart_audit.HorizonTests.test_missing_lags_rejected) ... ok
+test_serial_covariance_changes_horizon_risk (test_restart_audit.HorizonTests.test_serial_covariance_changes_horizon_risk) ... ok
+test_total_loss_preserved (test_restart_audit.HorizonTests.test_total_loss_preserved) ... ok
+test_variable_length_intervals (test_restart_audit.HorizonTests.test_variable_length_intervals) ... ok
+test_wrong_end_rejected (test_restart_audit.HorizonTests.test_wrong_end_rejected) ... ok
+test_corrupted_contribution_rejected (test_restart_audit.LedgerTests.test_corrupted_contribution_rejected) ... ok
+test_corrupted_nav_rejected (test_restart_audit.LedgerTests.test_corrupted_nav_rejected) ... ok
+test_dimensionless_ratio_requires_tight_tolerance (test_restart_audit.LedgerTests.test_dimensionless_ratio_requires_tight_tolerance) ... ok
+test_dollar_attribution_telescope (test_restart_audit.LedgerTests.test_dollar_attribution_telescope) ... ok
+test_drawdown_reconstructed_when_not_stored (test_restart_audit.LedgerTests.test_drawdown_reconstructed_when_not_stored) ... ok
+test_duplicate_positional_asset_identity_rejected (test_restart_audit.LedgerTests.test_duplicate_positional_asset_identity_rejected) ... ok
+test_missing_weights_recovered_from_saved_contributions (test_restart_audit.LedgerTests.test_missing_weights_recovered_from_saved_contributions) ... ok
+test_new_peak_before_final_liquidation (test_restart_audit.LedgerTests.test_new_peak_before_final_liquidation) ... ok
+test_nonfinite_values_rejected (test_restart_audit.LedgerTests.test_nonfinite_values_rejected) ... ok
+test_positional_decisions_require_explicit_asset_order (test_restart_audit.LedgerTests.test_positional_decisions_require_explicit_asset_order) ... ok
+test_root_only_liquidation_schema (test_restart_audit.LedgerTests.test_root_only_liquidation_schema) ... ok
+test_temporal_gap_rejected (test_restart_audit.LedgerTests.test_temporal_gap_rejected) ... ok
+test_terminal_fee_not_omitted (test_restart_audit.LedgerTests.test_terminal_fee_not_omitted) ... ok
+test_covariance_quadratic_matches_scenario_variance (test_restart_audit.ScenarioTests.test_covariance_quadratic_matches_scenario_variance) ... ok
+test_exp_mean_log_is_not_mean_simple (test_restart_audit.ScenarioTests.test_exp_mean_log_is_not_mean_simple) ... ok
+test_invalid_probability_support_and_shape_rejected (test_restart_audit.ScenarioTests.test_invalid_probability_support_and_shape_rejected) ... ok
+test_joint_covariance_detects_offsetting_assets (test_restart_audit.ScenarioTests.test_joint_covariance_detects_offsetting_assets) ... ok
+test_array_records_and_numeric_chunk_boundaries (test_restart_audit.StreamingTests.test_array_records_and_numeric_chunk_boundaries) ... ok
+test_array_trailing_comma_and_wrong_container_rejected (test_restart_audit.StreamingTests.test_array_trailing_comma_and_wrong_container_rejected) ... ok
+test_duplicate_top_key_rejected (test_restart_audit.StreamingTests.test_duplicate_top_key_rejected) ... ok
+test_empty_and_surrounding_whitespace (test_restart_audit.StreamingTests.test_empty_and_surrounding_whitespace) ... ok
+test_every_small_chunk_preserves_nested_strings_and_numbers (test_restart_audit.StreamingTests.test_every_small_chunk_preserves_nested_strings_and_numbers) ... ok
+test_large_value_is_bounded (test_restart_audit.StreamingTests.test_large_value_is_bounded) ... ok
+test_malformed_and_trailing_data_rejected (test_restart_audit.StreamingTests.test_malformed_and_trailing_data_rejected) ... ok
+test_nested_duplicate_rejected (test_restart_audit.StreamingTests.test_nested_duplicate_rejected) ... ok
+test_nonfinite_numbers_rejected (test_restart_audit.StreamingTests.test_nonfinite_numbers_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.037s
+
+OK

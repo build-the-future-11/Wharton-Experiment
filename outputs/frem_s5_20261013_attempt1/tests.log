@@ -1,0 +1,20 @@
+test_full_exposure_volatility_control_matches_equal_weight (test_accounting.AccountingTests.test_full_exposure_volatility_control_matches_equal_weight) ... ok
+test_high_volatility_leaves_cash (test_accounting.AccountingTests.test_high_volatility_leaves_cash) ... ok
+test_checkpoint_roundtrip (test_router.RouterTests.test_checkpoint_roundtrip) ... ok
+test_clock_and_dimensions (test_router.RouterTests.test_clock_and_dimensions) ... ok
+test_exact_mixture_density (test_router.RouterTests.test_exact_mixture_density) ... ok
+test_extreme_losses_stable (test_router.RouterTests.test_extreme_losses_stable) ... ok
+test_future_outcome_invariance (test_router.RouterTests.test_future_outcome_invariance) ... ok
+test_invalid_distributions_rejected (test_router.RouterTests.test_invalid_distributions_rejected) ... ok
+test_invalid_feedback_order (test_router.RouterTests.test_invalid_feedback_order) ... ok
+test_linear_solver (test_router.RouterTests.test_linear_solver) ... ok
+test_random_count_and_age_bucket_match (test_router.RouterTests.test_random_count_and_age_bucket_match) ... ok
+test_restore_does_not_alias_original (test_router.RouterTests.test_restore_does_not_alias_original) ... ok
+test_strict_maturity (test_router.RouterTests.test_strict_maturity) ... ok
+test_student_t_known_density (test_router.RouterTests.test_student_t_known_density) ... ok
+test_weights_bounded_and_normalized (test_router.RouterTests.test_weights_bounded_and_normalized) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.022s
+
+OK

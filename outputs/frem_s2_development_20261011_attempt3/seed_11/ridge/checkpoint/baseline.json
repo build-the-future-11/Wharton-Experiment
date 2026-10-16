@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "name": "ridge",
+  "parameters": {
+    "seed": 11,
+    "alpha": 1.0,
+    "hidden_dim": 64,
+    "reservoir_dim": 64,
+    "epochs": 12,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "scale_floor": 0.0001,
+    "calibration_fraction": 0.2,
+    "max_wall_seconds": 120,
+    "device": "cpu",
+    "n_estimators": 200,
+    "max_depth": 3,
+    "patch_length": 8
+  },
+  "context": 12,
+  "features": 4,
+  "feature_names": [
+    "local_log_return",
+    "trailing_3m_log_return",
+    "trailing_12m_log_return",
+    "trailing_6m_vol"
+  ],
+  "asset_names": [
+    "0005.HK",
+    "0700.HK",
+    "2317.TW",
+    "2330.TW",
+    "6758.T",
+    "7203.T",
+    "AAPL",
+    "BHP.AX",
+    "BNP.PA",
+    "BP.L",
+    "CBA.AX",
+    "DTE.DE",
+    "ENB.TO",
+    "HSBA.L",
+    "INFY.NS",
+    "JPM",
+    "NESN.SW",
+    "NOVN.SW",
+    "PETR4.SA",
+    "RELIANCE.NS",
+    "RY.TO",
+    "SAN.PA",
+    "SAP.DE",
+    "VALE3.SA"
+  ],
+  "fitted_through": 1159833600000000000,
+  "scale": 0.05021432317103807,
+  "student_df": 5.0,
+  "scaler": {
+    "clip": 12.0,
+    "eps": 1e-08,
+    "median": [
+      0.010928777046501637,
+      0.029156556352972984,
+      0.10647187381982803,
+      0.06466376036405563
+    ],
+    "scale": [
+      0.0928998589515686,
+      0.16796064749360085,
+      0.3551814705133438,
+      0.056758057326078415
+    ],
+    "mask": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "feature_names": [
+      "local_log_return",
+      "trailing_3m_log_return",
+      "trailing_12m_log_return",
+      "trailing_6m_vol"
+    ],
+    "fit_metadata": {
+      "fit_time_max": 1154390400000000000,
+      "fit_label_time_max": 1159833600000000000,
+      "fit_rows": 1586,
+      "fit_source": "training context x only",
+      "overlapping_context_observations_repeated": true,
+      "all_missing_features": [],
+      "panel_fingerprint": null,
+      "training_context_fingerprint": "230bc00216fd7a1c5a1b4e0155a255e905950596472aa2b821bcf3d637da2575"
+    }
+  },
+  "fit_report": {
+    "baseline": "ridge",
+    "status": "fitted",
+    "train_rows": 1586,
+    "fitted_through": 1159833600000000000,
+    "scale": 0.05021432317103807,
+    "scale_calibration": "purged_chronological_training_tail_with_earlier_only_scaler",
+    "passes": [
+      {
+        "pass": "inner_scale_fit",
+        "rows": 1176,
+        "epochs": null,
+        "gradient_steps": 0,
+        "wall_limited": false
+      },
+      {
+        "pass": "full_training_refit",
+        "rows": 1586,
+        "epochs": null,
+        "gradient_steps": 0,
+        "wall_limited": false
+      }
+    ],
+    "trainable_parameters": null,
+    "elapsed_seconds": 0.47740154099301435,
+    "max_wall_seconds": 120,
+    "budget_note": "Wall clock checked between neural minibatches and estimator calls; a single tree/linear fit cannot be forcibly interrupted here"
+  }
+}

@@ -1,0 +1,31 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/runtime/declarations.py:9:1
+   |
+ 7 |   """
+ 8 |
+ 9 | / from dataclasses import dataclass
+10 | | from importlib.resources import files
+11 | | from pathlib import Path
+12 | | import re
+13 | |
+14 | | from frem_s10.errors import ContractError, ExecutionStateError, IntegrityError
+15 | | from frem_s10.identities import JSONObject, JSONValue, canonical_bytes, digest_bytes, object_json
+16 | | from frem_s10.metadata import parse_utc_timestamp, strict_int
+17 | | from frem_s10.runtime.artifacts import _plain_directory, read_verified_json
+   | |___________________________________________________________________________^
+18 |
+19 |   DESIGN = "FREM-S10-DESIGN-4-CL16"
+   |
+help: Organize imports
+   |
+8  |
+9  + import re
+10 | from dataclasses import dataclass
+11 | from importlib.resources import files
+12 | from pathlib import Path
+   - import re
+13 |
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

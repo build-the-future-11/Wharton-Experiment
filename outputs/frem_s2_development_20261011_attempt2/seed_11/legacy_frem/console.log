@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py", line 392, in <module>
+    main()
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py", line 384, in main
+    worker(args.output.resolve(), args.worker, args.seed)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py", line 161, in worker
+    cfg, (train, validation, evaluation), split, coverage, months = load_fold()
+                                                                    ^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py", line 135, in load_fold
+    prices[record["symbol"]] = monthly_prices(chart, cfg)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/public_equity_backtests.py", line 129, in monthly_prices
+    raise ValueError(
+ValueError: Nonpositive/invalid prices: terminal losses require a different model; never drop them

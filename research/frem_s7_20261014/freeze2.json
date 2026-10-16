@@ -1,0 +1,63 @@
+{
+  "id": "S7-MIXTURE-CONTINUOUS-2019-20261014-R2",
+  "created_at": "2026-10-14T14:06:46.882918+00:00",
+  "status": "FROZEN_BEFORE_2019_ACQUISITION",
+  "hypothesis": "Mixture-objective contextual routing with conservative inner chronological selection avoids discarding complementary experts and improves fresh development NLL over fixed equal mixing. Cost-aware candidate selection reduces unnecessary trades under continuous-week accounting.",
+  "train": "2005-2016 purged",
+  "scale_calibration": "2017 mature before 2018",
+  "selection": "2018 chronological halves",
+  "evaluation": "2019 only; never previously acquired by this S6/S7 campaign; not universally unseen across all research",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "base_fits": 3,
+  "with_xgboost": true,
+  "primary": "s7 vs equal, mean date NLL; practical gain 0.01 nats; both prescribed 95% interval lower endpoints must exceed 0.01",
+  "secondary": [
+    "S6 memory",
+    "recent routing",
+    "ungated contextual mixture",
+    "global mixture",
+    "all six individual experts"
+  ],
+  "block_dates": [
+    3,
+    6
+  ],
+  "costs_bps": [
+    0,
+    10,
+    20,
+    40
+  ],
+  "economic_primary": "S7 cost-aware vs equal-expert cost-aware at 10bps; also cross every forecast with legacy signal and cost-aware policies",
+  "economic_benchmarks": [
+    "cash",
+    "buy_hold",
+    "equal_weight"
+  ],
+  "data": "Continuous first-common-session weekly intervals, variable 3-10-day horizons, dividend cash accrued on ex-date and reinvested at interval endpoint; no daily or holiday price imputation",
+  "budget": "3 base fits, 3 seeds, one thread, two-hour maximum; explicit user RAM override retained for this directly continued research task",
+  "no_retry": "No outcome-driven changes or retest of 2019; retain failures and negative outcomes",
+  "sources": {
+    "successors/frem_portfolio_v1/engine.py": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237",
+    "successors/frem_s6/__init__.py": "971e0c1053cc4d8ca2e58f15e53009d64b40912eaee788d4d0d3e4542270e759",
+    "successors/frem_s6/check.py": "1c77c7c8bd9386fa776351e32d39a3dc295fb4e83eef0c9cec4aac4b9887052f",
+    "successors/frem_s6/data.py": "ae7e412727304e06d21e7517959d08b27c64c657996cb1150b45e81b0ff71807",
+    "successors/frem_s6/experiment.py": "797d08a075d8343a791a950fe778393da2c79e1f7c24886ce120a9c82e5dd062",
+    "successors/frem_s6/kernel.py": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f",
+    "successors/frem_s6/model.py": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf",
+    "successors/frem_s6/policy.py": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf",
+    "successors/frem_s6/run.py": "f2b3fb7b9f8060745bb02e43a86a087a9ed3d6b34cb8747c42aa99c4734164ac",
+    "successors/frem_s6_real/prepare.py": "b12eb649334c15a86860b70084fcfc9c03d90a3c2b4f6e1e8b568540c769f556",
+    "successors/frem_s7/__init__.py": "9a93de424d4fce1a30f71d522fe3508259b34723e64a45e60062fc5fb6ddd730",
+    "successors/frem_s7/data.py": "97a654f17bf0ca82b224fce08411e6c315b81eef1dded1844df341ebb4d4f2e8",
+    "successors/frem_s7/prepare.py": "32f6b9878de8164489e084b9f377c5b40c514dbf44ccaaf2726a221bb1ccfc17",
+    "successors/frem_s7/router.py": "acb9bd7c9a2f14324e021e4d2e0ed1b21fadc62405bee36f553f7a2500a74508",
+    "successors/frem_s7/run.py": "712860d18b81d3dd82a84d4d483d1fdfa96416663bb1b28a50e6a2c037337e26",
+    "tests/s7/test_successor.py": "36702475cad7bf4995cc10e3b696d4567a48d91e5f1360ae4c7db6ee0a63e716"
+  },
+  "amendment": "Test fixture corrected to advance availability with maturity so synchronization guard is isolated. 125 tests pass. No model/protocol or outcomes changed; no fresh data acquired."
+}

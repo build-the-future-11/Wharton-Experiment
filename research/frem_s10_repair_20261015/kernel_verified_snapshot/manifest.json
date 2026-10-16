@@ -1,0 +1,201 @@
+{
+  "status": "119_TEST_KERNEL_BEFORE_INTEGRATION",
+  "entries": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/arrays.py",
+      "sha256": "c620c978d194d84ec6b905cbdbb5aa9a7f96e645588839435c4d69ba74b436a8"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/metadata.py",
+      "sha256": "c6b5b52558db193627747a67bb660cf6fe85c1291ea75e8faae0bef8db3c9428"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/domain.py",
+      "sha256": "852c6a043c0497258fbb22fbb882ed7607c0bd84c8e94b12b723c3aca99c27e1"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/__init__.py",
+      "sha256": "f002e5829f7bdbe9cdfe88331b38ea785c881943941bce9f9135f4e9fea2b884"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/identities.py",
+      "sha256": "344ac771295650125971bc67e723f05dc258ce1c9e05e6f2701a2bd610c0c9d2"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/cli.py",
+      "sha256": "ba0f75635b872b638c8d68487856c764117081b3ccaa8d75bcbc7b8fbdb18bdc"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/errors.py",
+      "sha256": "8502d666313e5d66750df51d2ffac522789b47282f535aa76b4e836e9c213da9"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/__main__.py",
+      "sha256": "104db816d559ad4f1d44e66f14a373d9234a8dc548dd1d64272a503a55d88a9a"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/reporting/__init__.py",
+      "sha256": "2858e2f38d79c64f97a647fd1a618be066c92e6871d8db73542dcf0944285771"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/analysis/bootstrap.py",
+      "sha256": "10c0a51afef5709011e556192375cd9aaa4ca0e20a450929bbd1c21142a77b81"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/analysis/__init__.py",
+      "sha256": "93cb402c2e7f1aac7c4057993b8610fe1ba1f3d591b854395ca4d767d47be0f3"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/__init__.py",
+      "sha256": "ea6dc3c4c2933606c9557252a50d02c819b7bf2c50595533b5177490f566627f"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/resources.py",
+      "sha256": "25bd732ebc3a7cbca06374b0f009cd136f00d7694ea5371a3b3959ff627649c0"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/artifacts.py",
+      "sha256": "39651f01ecb6b023c2483022ccc1c4394ddeb91ab1682cb8980dca5973cc5be6"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/consumption.py",
+      "sha256": "fdf2c3c8a90bd44009ccc13928784b16546ad3d9e68a9b1a33bdd1f2b4c993cb"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/fees.py",
+      "sha256": "d388fff2253799692d78906ac07337edd0fed3c50270a868bf4c837acb8258a9"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/distances.py",
+      "sha256": "4ae764d9082486cfc5a86a440dc6e956a57e20a3dd9b8c47cd2400f36b526be5"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/utility.py",
+      "sha256": "77ed6c8f00289e2ea5a38361be551bd10c7a61ece49d724cbffd177fa417610d"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/probabilities.py",
+      "sha256": "5891ab5c135409e1a1f9ec3b679ee454b2638c70b28eef2f0666fe1f8048473e"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/simplex.py",
+      "sha256": "255fc24012773982135ed8688a020b90d7a2a2f3aa0cb897ae694401a2517d58"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/scores.py",
+      "sha256": "e75c81d1fb5dbca9929ddcb2f1bb4b6ca56a1cc52d3ec9ff833d5ef89a9a674a"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/config.py",
+      "sha256": "27de1628bc9881d6abb306e5a3e94a2b9b556c189317ff07e039f1409dc50e58"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/library.py",
+      "sha256": "09e0902ea5742a2d43a0ee7e499468e676c22d5e446597dfc8d2a4a1dfc1ded4"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/checkpoint.py",
+      "sha256": "010451c2a22afdaf9635826c02094dff2d2148288077147221df2f898a72dae8"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/feedback.py",
+      "sha256": "633dd1acfd2e64e3ae52649110ff614009fe19f230fc5abc4b0a64004c08bc2d"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/records.py",
+      "sha256": "9d7e53224b7ffc52c1b061203117d1161482b2b010c6a030b8e56556783d643d"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/__init__.py",
+      "sha256": "91a07ab81c486b5ba2a94c0167d1c86a33878668fc52a9c609b46342d9ba1781"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/engine.py",
+      "sha256": "99d2c9bcde1f6bd32f0b59da3888c41e9c62d349cbe9ce78e9f540b606f3c6dc"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/stacking.py",
+      "sha256": "4fe40ee49db40e6aebf6c90d88ecdc2a3c791d72c203f202456575dc8bc5e078"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/model/experts.py",
+      "sha256": "ea2b7fc44df2476c5a0f505e9dcb2a6a935470472b4305b4a8887b5ef747ab0e"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/portfolio/ledger.py",
+      "sha256": "e3c3fdbf567a18f1c60a710640c9d76ec6b401cbc389bdc05971df58f1c7eb0d"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/portfolio/actions.py",
+      "sha256": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/portfolio/__init__.py",
+      "sha256": "c682e37319b66e2432c82aac57eeb4c3d2dd28952fc55519bcf13d46a0cdf1fd"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/__init__.py",
+      "sha256": "4678612109ea2819e2c87f591cec377fc024a3e9bbd33cdeb9e53f98539ad617"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/targets.py",
+      "sha256": "96584f8d0ddfad512fdccefc67cbd57843f53150a4e0107cef9690db7489c119"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/__init__.py",
+      "sha256": "c58cbd49744977a6120b28ce56098ed0a8b5e16f1fb6f1340a9948fc956a90c1"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/features.py",
+      "sha256": "9edcd59cc7302fea286b790f366fc380d93fdbff6223f1cc303a66f1d2a48e13"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/source_reader.py",
+      "sha256": "80d0ead6cfb070ac8078d31eeadfece6925de7667a38764f111315633b90ca60"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/calendar.py",
+      "sha256": "6c40596637f7d69ece166c2956d7643d1d64c74217c618896817ed8dae9d10fc"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/data/admission.py",
+      "sha256": "f2f44a6673f5565304635aa9999cc5c8ca18f5532791f8cb3179f7aa2e9af3dc"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_operations_audit.py",
+      "sha256": "c24ce04954be0aa94c20d8ae01a60128f4db55c743ddeb4d2db5ca72123604c9"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_statistics_audit.py",
+      "sha256": "a92a34a496b4c290984c0344d2273d9a096a8bd76f21c9dc101f693425e5e32d"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_math_audit.py",
+      "sha256": "a875bb4db80ca1aaf753fdb13e575e06b642e0bb5c948d08d471aa333225caab"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_ledger_audit.py",
+      "sha256": "6ac7eb96cb478de465b2c29624c01ff6fbb583dce50d02c83d985568e094d4e7"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_actions_audit.py",
+      "sha256": "de41b37751376a9439d4c5c5cbca235382f18fe267df3b1626674dbf0e7694f0"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_model_audit.py",
+      "sha256": "cf8c98977f3a3e5e02bf8eb9c181b9a5f5ee8594f1e241165c4bf156c6d6237e"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_data_audit.py",
+      "sha256": "0138a974804735ad898fbc817b6b1022528b12ce1a4bf7cf8c36800b6f649685"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/science.json",
+      "sha256": "1d2caabd73e13a35d84035f13410395d0b71a8bdda892959c18b7838ecd0136b"
+    },
+    {
+      "path": "successors/frem_s10/pyproject.toml",
+      "sha256": "b6c72cf5dc321d33df7bc5a573f951058bf8d46a0c51241e514b25a873f97625"
+    }
+  ]
+}

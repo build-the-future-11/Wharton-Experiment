@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE_REUSED",
+  "completed": 12,
+  "planned": 12,
+  "state_ids": {
+    "primary": "07aaf17d7658d4a35560612d8d5c127134a9c9f55a39eca4ae0678b5dcda1727"
+  },
+  "mean_contextual_energy_score": {
+    "primary": 1.1777172432170022
+  },
+  "evidence_scope": "GENERATED_ENGINEERING",
+  "scientific_status": "NOT_EVALUATED",
+  "score_reconstruction": "exact binary64 equality in the bound environment",
+  "output": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1",
+  "validated": true
+}

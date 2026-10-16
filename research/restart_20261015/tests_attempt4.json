@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/restart",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "seconds": 0.13348729099379852,
+  "peak_rss_mib": 23.90625,
+  "scope": "Engineering checks only; no market fitting."
+}

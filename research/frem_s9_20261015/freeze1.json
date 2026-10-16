@@ -1,0 +1,48 @@
+{
+  "kind": "S9_RETROSPECTIVE_DEVELOPMENT_FREEZE",
+  "created_at": "2026-10-15T15:12:05.320266+00:00",
+  "confirmation": false,
+  "protected_access_authorized": false,
+  "claim": "Separate exploratory horizon/risk comparison only; no canonical memory or original-algorithm claim.",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "git_base": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "dirty_tree": true,
+  "identities": {
+    "successors/frem_s9/__init__.py": "66cb6e649151ea1e73474800d35c73c23362c21cb67a2d3d1b3fb76e2f0072b3",
+    "successors/frem_s9/data.py": "5fa68de7f65297ef1e69009dca4cd749bee9b4731c26e297a4a1dc1f72410523",
+    "successors/frem_s9/experiment.py": "e40f12a6ef75a14485301b5a5d5a8f6ec73d40af5897d95118a71bee5108196b",
+    "successors/frem_s9/model.py": "87b21a6e450e25d8d0f8d112e4320c87937a0f3e911d950091da0ab2edca31f9",
+    "successors/frem_s9/policy.py": "805d89651310ba72f7ab35310f3fb156698fd41fad9decd1fcbf553d042c6cd9",
+    "successors/frem_s9/run.py": "f71850b076c759ddbd6177272270fb4b4ee5cb9050e1b0dc372584934a86bbf4",
+    "successors/frem_audit_v1/__init__.py": "01568e80630b0a36b9e4df616a83a9572f5105e77c45ea180b7e6507544f8299",
+    "successors/frem_audit_v1/audit.py": "aa99f51e67ad75082163a7c5f2e12ea6043ae8249fdfa9b0fdd4d04a01f34532",
+    "successors/frem_audit_v1/contracts.py": "a8fb6e99f69142cecd118055916deee3752edb5d6fbb57617a7b65c5e8fec7b0",
+    "successors/frem_audit_v1/ledger.py": "7d94e4c0a3297f41f3ef6f651c1b029bf5e2666d5a8f672fc928d8684108644d",
+    "successors/frem_audit_v1/stream.py": "8452078467ab4d648e9b05acb3f5ae1047504d89c83f366cf968d821e1208f8e",
+    "tests/s9/test_s9.py": "b40debe033469959ba7928b3fa417ddbe40312efa02cb69113490dddca60ab6d",
+    "data/s6_real_etf_20261014/SPY.json": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+    "data/s6_real_etf_20261014/TLT.json": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+    "data/s6_real_etf_20261014/GLD.json": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+    "data/s6_real_etf_20261014/acquisition.json": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+    "research/frem_s9_20261015/SPECIFICATION.md": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+    "research/frem_s9_20261015/REVIEW.md": "4343c2bf7da73a8596b7d66e3a22cacaad03949bed6a06df410b2fa78935a235",
+    "research/frem_s9_20261015/DATA_ADMISSION.json": "5f03ccd6ae529c4f3b6516ec3f9741793162ade384d2d7e33db2aa01accfd992",
+    "successors/frem_s9/README.md": "e0de9c58cb223ad4f38fedfa496064bacd0c1fd5125d92f582a72844c982e835"
+  },
+  "source_archive": "research/frem_s9_20261015/freeze1_sources.zip",
+  "budget": {
+    "fits": 2,
+    "wall_seconds": 600,
+    "peak_rss_mib": 128,
+    "host_floor_mib": 512,
+    "workers": 1,
+    "paid_compute": false
+  },
+  "tests": {
+    "passed": 37,
+    "log": "research/frem_s9_20261015/tests_attempt2.log"
+  },
+  "lint": "research/frem_s9_20261015/lint_attempt2.log",
+  "source_archive_sha256": "53ff9aceff354290c0b476cb560cc8a65b47a8a6f1af26c660007cf3dfc25e95"
+}

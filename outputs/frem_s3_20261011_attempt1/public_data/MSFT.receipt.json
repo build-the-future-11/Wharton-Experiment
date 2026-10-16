@@ -1,0 +1,13 @@
+{
+  "symbol": "MSFT",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:20.967066+00:00",
+  "http_status": 200,
+  "path": "MSFT.json",
+  "sha256": "d4858d16699eba8d7ee06e184187d94bba250fdcba348069499fbe3d89fdb09a",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

@@ -1,0 +1,3 @@
+successors/frem_s10/src/frem_s10/runtime/results.py:195: error: Dict entry 0 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+successors/frem_s10/src/frem_s10/runtime/results.py:223: error: Module "frem_s10.model.engine" does not explicitly export attribute "ForecastTransition"  [attr-defined]
+Found 2 errors in 1 file (checked 9 source files)

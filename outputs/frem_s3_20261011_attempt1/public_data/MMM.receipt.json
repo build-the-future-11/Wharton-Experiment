@@ -1,0 +1,13 @@
+{
+  "symbol": "MMM",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MMM?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:36.225768+00:00",
+  "http_status": 200,
+  "path": "MMM.json",
+  "sha256": "cf2f06ddfe7009bda121ebdd5bac073fd14f7d44516342f0c9aabca010b67664",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

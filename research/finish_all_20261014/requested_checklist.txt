@@ -1,0 +1,88 @@
+The model is currently failing your target of 6%–36% higher ending wealth after costs. The biggest unresolved problems are weak investment signals, a forecast-to-allocation objective that does not reliably produce wealth, and memory mechanisms that add very little demonstrated value.
+I checked the latest S6–S8 evidence. This checklist separates measured failures, plausible causes, proposed improvements, and fixes already completed. No evidence currently establishes a combination that will guarantee your margins.
+Your target means:
+\[
+\text{Uplift}=\frac{\text{model ending wealth}}{\text{matched benchmark ending wealth}}-1
+\]
+It is not an annualized return or a percentage improvement in prediction loss.
+Latest S8 comparison, starting with $100,000	Ending wealth	S8 relative advantage
+S8 primary policy, 10 bps costs	$98,745	—
+Equal expert forecasts, identical policy	$96,212	+2.63%
+S6 memory forecasts, identical policy	$97,134	+1.66%
+Cash	$100,000	−1.25%
+Equal-weight assets	$104,927	−5.89%
+
+
+Against that equal-weight benchmark, your target requires approximately $111,223–$142,701. That is $12,478–$43,956 above S8’s result, or a 12.64%–44.51% improvement over its current ending wealth. [Latest results (line 19)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s8_20261014/FINAL_REPORT.md:19)
+The following are the main failure-and-fix items, in priority order.
+- [ ] 1. Establish profitable gross decisions. Even with zero transaction costs, S8 finished at $99,990. Fix: attribute losses to asset selection, position size, timing, cash exposure, and holding duration. A fee reduction alone cannot close the target gap.
+- [ ] 2. Align predictions with the wealth objective. Better probability scores have not consistently produced better allocations. Fix: evaluate expected return, ranking, uncertainty, and portfolio utility separately; cross each forecast with the same policies so improvements can be attributed correctly.
+- [ ] 3. Validate the conversion from forecasts to portfolio decisions. The current policy optimizes an approximation based on log-return means and variances. It does not calculate exact expected portfolio utility. Fix: compare that approximation with a properly specified simple-return or bounded-scenario decision model.
+- [ ] 4. Correct the holding-horizon assumptions. S8 effectively extends weekly forecast coefficients across four committed intervals. Signal persistence over that period is unproved. Fix: directly forecast the holding horizon or validate a path model against the existing approximation.
+- [ ] 5. Resolve daily-versus-weekly expert calibration. The trend and volatility experts derive quantities from daily returns while predicting weekly intervals of varying duration. Fix: make actual horizon explicit and calibrate on matching targets. Multiplying volatility by √5 already worsened a saved comparison; that is not an established repair.
+- [ ] 6. Test scheduled base-model refreshes. S8’s base training ends before 2017, with scale calibration in 2017, followed by evaluation through 2022. Only routing adapts. Fix: predeclare rolling or expanding refits and delayed recalibration; compare refreshed and frozen models under identical budgets. Staleness is verified; its contribution to the loss is not yet isolated.
+- [ ] 7. Expand useful information beyond the current narrow input. The latest experiment uses one input channel: eight daily close returns per asset. Fix: test longer trends, realized volatility, downside variation, and cross-asset context one group at a time. Keep a feature group only if it improves genuinely subsequent development performance.
+- [ ] 8. Improve specialist experts before expanding the router. Several experts share the same limited information. Fix: introduce distinct, justified mean, trend, volatility, and relative-value specialists. Measure each expert’s contribution to the complete mixture; standalone performance alone can miss complementary value.
+- [ ] 9. Separate mean calibration from uncertainty calibration. A well-shaped density can still have an economically useless mean. Fix: diagnose mean bias, predicted-versus-realized opportunity size, interval coverage, and tail errors separately. Compare changes to unchanged forecasts.
+- [ ] 10. Make calibration earn its place. Earlier S3 calibration worsened both evaluation windows. Fix: retain raw forecasts and identity-shrunk calibration as controls; select calibration using chronological inner data rather than automatically adding another calibration layer.
+These items follow the [current model source (line 261)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s6/model.py:261), [S7 diagnosis (line 7)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s7_20261014/REPORT.md:7), and [S8 policy specification (line 13)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s8_20261014/SPECIFICATION.md:13).
+Memory needs its own evidence-based checklist.
+- [ ] 11. Require a meaningful improvement over fixed mixing. S8’s soft adaptation adds only 0.0000615 nats over a fixed half-and-half blend; uncertainty includes zero. Fix: retain the fixed blend as an incumbent and remove adaptive complexity if it cannot beat it reliably.
+- [ ] 12. Prove that context predicts which expert will help. Local context adds only 0.0000255 nats over global routing; the global version actually ended slightly wealthier. Fix: test whether context predicts future differences in expert performance beyond recent average losses.
+- [ ] 13. Test asset-specific routing with shrinkage. Current routing averages asset context and applies shared expert weights across SPY, TLT, and GLD. Fix: compare global weights with asset-specific weights shrunk toward the global estimate. More specialization may also overfit, so support must be measured.
+- [ ] 14. Measure retrieval relevance directly. Earlier S3 retrieval operated, but matched random retrieval was competitive and residual correlations were weak. Fix: compare real keys with shuffled keys, age-matched retrieval, recent averaging, and unconditional residual estimates.
+- [ ] 15. Measure effective support before increasing capacity. More stored rows do not necessarily mean more independent useful examples. Fix: record neighbor ages, concentration, effective sample size, regime diversity, and realized delayed contribution.
+- [ ] 16. Justify distance, recency, and forgetting choices. The current memory uses a bounded history and fixed kernel; these choices do not establish informative matching. Fix: test one clearly motivated change against equal-capacity global/recent controls.
+- [ ] 17. Keep residual banks compatible with their base model. A future refitting system must not mix residuals from incompatible model or calibration versions. Fix: version banks and define rebuilding or migration rules at every model transition.
+- [ ] 18. Make JEPA, reservoir branches, and delayed quantized updates justify their cost. Fix: compare matched supervised-only, no-JEPA, simpler-branch, and immediate/unquantized variants. Expand complexity only after diagnosing underfitting or demonstrating a useful efficiency benefit.
+- [ ] 19. Preserve a valid simple fallback. Zero memory weight can be the correct decision. Fix: make the fallback a properly evaluated incumbent; do not force memory activity merely to make the architecture appear useful.
+The latest results support a small overall point gain, but not a practically established memory advantage. [Memory and adaptation findings (line 81)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s8_20261014/FINAL_REPORT.md:81)
+The allocation layer needs these improvements and controls.
+- [ ] 20. Model joint risk. S8’s primary policy uses diagonal risk, omitting correlations and joint losses. Fix: integrate and test the covariance/scenario/CVaR machinery already present elsewhere in S6 against the diagonal policy. This is an integration experiment, not wholly missing code.
+- [ ] 21. Match trading speed to signal persistence. Fix: estimate decay on development data and compare partial adjustment, no-trade regions, and different predeclared review schedules. Cost-aware dynamic trading explicitly depends on signal persistence and existing holdings. Gârleanu and Pedersen
+- [ ] 22. Diagnose missed upside as well as avoided losses. S8 returned roughly 0.99% versus 19.93% for equal-weight assets in 2020. Its later downside reduction did not recover that gap. Fix: attribute the missed gains to forecasts, risk penalties, allocation, and commitment duration. Do not turn that historical observation into a hindsight regime rule.
+- [ ] 23. Add exposure-matched passive controls. S8 caps total risky exposure at 80%; its asset benchmark has different exposure. Fix: retain the original benchmark and add controls with matching exposure and constraints to distinguish forecasting value from risk-budget effects.
+- [ ] 24. Test uncertainty-aware position sizing. Fix: shrink poorly supported expected returns and compare robust sizing with ordinary point estimates. Require improved net utility or funding shortfall; merely taking less risk is not proof of better prediction.
+- [ ] 25. Use realistic execution and cash assumptions. Current results assume zero cash yield and simplified dividends, costs, and fills. Fix: include dated cash returns, spreads, slippage, liquidity/impact, and payment timing where the intended scope requires them, equally for candidate and benchmarks.
+- [ ] 26. Separate fees from cost-induced allocation changes. The zero-cost and charged-cost runs choose different positions. Fix: report both fixed-position fee attribution and the complete policy response. Their wealth difference is not a pure fee bill.
+- [ ] 27. Treat multi-period optimization as a testable decision layer. Compare it against simple allocation rules with the same forecasts and constraints. Better optimization cannot manufacture predictive information; the established framework itself separates these tasks. Boyd and colleagues
+- [ ] 28. Preserve the actual client objective. For Laura, terminal wealth must coexist with dated liabilities, flexibility, and protected facility commitments. Fix: evaluate joint funding shortfall and restrict discretionary risk to the permitted surplus. The proposed 99% funding target remains uncalibrated. [Laura policy (line 67)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md:67)
+Additional research options worth considering—but only when the simpler tests justify them—are:
+- [ ] 29. Multi-horizon prediction heads: distinct near-term risk and longer-horizon return forecasts, trained and evaluated at their actual horizons.
+- [ ] 30. Relative-return or ranking models: test whether choosing among assets is more predictable than estimating absolute returns.
+- [ ] 31. Point-in-time macro, rates, and cross-asset features: use actual release availability and historical vintages.
+- [ ] 32. Fundamental, valuation, earnings, and breadth features: require an appropriate equity universe and dated source records; these are not currently available through the three-ETF experiment.
+- [ ] 33. Regime-aware adaptation: detect changes from information available at the time, with global and no-regime controls.
+- [ ] 34. Hierarchical pooling: share information across related assets while retaining asset-specific behavior and preventing cross-asset timestamp leakage.
+- [ ] 35. Better tail and default models: test flexible tails or explicit total-loss mass where the asset universe requires them. Finite log returns cannot represent exact total loss.
+- [ ] 36. Larger sequence models or learned retrieval: consider only after simpler models demonstrate useful signal and capacity diagnostics justify expansion; match information and tuning budgets.
+- [ ] 37. News or text features: require publication timestamps and contamination checks. A modern language model can encode knowledge of historical outcomes.
+- [ ] 38. Reinforcement learning or learned allocation: consider only after the simulator, costs, chronology, and simpler policies are validated. Simulator exploitation can create misleading apparent wins.
+- [ ] 39. External quant/ML frameworks: integrate the exact supplied source through the existing forecast contract and compare fairly; do not invent a substitute for an unspecified framework.
+Every addition should have a declared expected effect, a matched ablation, a fixed budget, and a criterion for dropping it.
+The remaining evidence requirements matter because an apparent win can otherwise disappear.
+- [ ] 40. Freeze the actual success contract. Specify benchmark family, horizon, costs, cash flows, risk constraints, and the 6% minimum / 36% stretch wealth targets. The latest S8 economic gate only required positive differences; that was weaker than your requested margin.
+- [ ] 41. Keep the predictive requirement separate. S8 gained 0.0013675 nats over equal mixing and 0.0006838 over S6 memory. Both primary uncertainty families include zero; the required lower bounds above 0.01 were not achieved.
+- [ ] 42. Use enough independent market evidence. Three ETFs, 153 weekly intervals, and three seeds do not establish broad reliability. Plan precision before expanding the experiment; seeds are optimization repeats, not independent financial histories.
+- [ ] 43. Improve historical data admissibility. Broader claims require trustworthy availability, corporate actions, inactive securities, terminal outcomes, historical membership, identifiers, and FX. Current survivor histories cannot establish that scope.
+- [ ] 44. Preserve a repository-wide exposure inventory. Legacy caches already contain SPY/GLD data from 2020. Newly downloaded data are not necessarily untouched evidence.
+- [ ] 45. Use nested chronological model selection. Keep feature, calibration, expert, and policy selection inside development. Repeated selection on noisy validation data can itself overfit. Cawley and Talbot
+- [ ] 46. Retain every declared comparison and failure. Keep all seeds, costs, ablations, exclusions, and fixed interval choices. A favorable secondary configuration cannot replace the primary after results are known.
+- [ ] 47. Account for selection and refitting uncertainty. Current portfolio intervals are conditional on saved forecasts and decisions; they do not represent uncertainty from retraining and choosing the entire procedure.
+- [ ] 48. Reproduce independently. Saved-score and ledger reconstruction are valuable checks, but independent retraining in a clean environment remains a separate requirement.
+- [ ] 49. Verify current mandate inputs for executable use. Official eligibility, trading rules, costs, and dated prices remain necessary; current holdings are needed for transaction-specific work. They do not block preparing the strategic contribution plan.
+- [ ] 50. Reconcile stale status summaries. Some older fields still say training was blocked. Latest receipts establish completed S6–S8 exploratory runs. Future decisions should resolve to the latest evidence without deleting historical failures.
+Several frequently proposed “fixes” have already been implemented or tested:
+- [x] Real training: S6 completed all 24 fits; S7 and S8 also completed.
+- [x] XGBoost baseline: exercised in the later studies.
+- [x] Mixture-aware routing: replaced S6’s independently scored expert weighting.
+- [x] Continuous weekly accounting and dividends: addressed the earlier omitted holiday intervals and price-only accounting.
+- [x] Continuous partial positions and optional cash: removed the forced risky anchor/coarse candidate restriction.
+- [x] Soft routing: replaced S7’s all-or-nothing deployment gate while retaining the scientific threshold.
+- [x] Cash trap: S8 averaged 63.69% risky exposure, with no cash-only dates at the primary cost.
+- [x] Recent bases and revised retrieval distance: already explored in S4; all selected corrections were zero.
+- [x] Arithmetic verification: the latest audit reconciled 34,560 NLL values and 252 ledgers. The valid negative result remains.
+[Completed repairs and audit (line 75)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s8_20261014/FINAL_REPORT.md:75)
+My recommended next sequence is: diagnose horizon-specific means and scales → improve one source of predictive information → test one joint-risk allocation policy → require memory to beat simple mixtures → evaluate the selected procedure on genuinely fresh evidence.
+Some secondary forecast-policy combinations performed substantially better—for example, ridge with the one-interval policy ended at $122,905. That is useful evidence that the decision layer deserves attention, but selecting that combination now would be retrospective selection. It needs a separately frozen test.
+This was a fresh read-only review of the current evidence. No model changes, new experiments, or protected-outcome access occurred.

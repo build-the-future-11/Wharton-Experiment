@@ -1,0 +1,1 @@
+Ruff failed C901 audit_qualification complexity11; extracted lifecycle audit helper, no semantic change.

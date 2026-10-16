@@ -1,0 +1,20 @@
+{
+  "schema": "s10-generated-smoke-v1",
+  "scope": "development-engineering",
+  "device": "cpu",
+  "precision": "float64",
+  "seed": 11,
+  "steps": 72,
+  "variants": [
+    "primary",
+    "repeat_h1",
+    "no_shrink",
+    "window260",
+    "neighbors16",
+    "neighbors64"
+  ],
+  "budget_seconds": 300,
+  "dataset": "s10-generated-smoke-data-v1",
+  "checkpoint_every_origins": 1,
+  "threads": 1
+}

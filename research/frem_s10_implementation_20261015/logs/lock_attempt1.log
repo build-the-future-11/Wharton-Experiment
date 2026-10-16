@@ -1,0 +1,28 @@
+Using CPython 3.12.14 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12
+WARN Retry attempt #0. Sleeping 1.767703329s before the next attempt
+WARN Retry attempt #0. Sleeping 1.777525614s before the next attempt
+WARN Retry attempt #0. Sleeping 1.584639467s before the next attempt
+WARN Retry attempt #0. Sleeping 1.896275295s before the next attempt
+WARN Retry attempt #0. Sleeping 1.861175422s before the next attempt
+WARN Retry attempt #0. Sleeping 1.639286501s before the next attempt
+WARN Retry attempt #0. Sleeping 1.540666082s before the next attempt
+WARN Retry attempt #0. Sleeping 1.348118822s before the next attempt
+WARN Retry attempt #0. Sleeping 1.360949715s before the next attempt
+WARN Retry attempt #1. Sleeping 2.592796189s before the next attempt
+WARN Retry attempt #1. Sleeping 1.696262565s before the next attempt
+WARN Retry attempt #1. Sleeping 1.11155899s before the next attempt
+WARN Retry attempt #1. Sleeping 2.215546794s before the next attempt
+WARN Retry attempt #1. Sleeping 2.2660252s before the next attempt
+WARN Retry attempt #1. Sleeping 2.099981503s before the next attempt
+WARN Retry attempt #1. Sleeping 3.795667384s before the next attempt
+WARN Retry attempt #1. Sleeping 1.546584893s before the next attempt
+WARN Retry attempt #1. Sleeping 2.824560033s before the next attempt
+WARN Retry attempt #2. Sleeping 1.048821987s before the next attempt
+WARN Retry attempt #2. Sleeping 3.909241139s before the next attempt
+WARN Retry attempt #2. Sleeping 5.178627245s before the next attempt
+error: Request failed after 3 retries in 3.8s
+  Caused by: Failed to fetch: `https://pypi.org/simple/mypy/`
+  Caused by: error sending request for url (https://pypi.org/simple/mypy/)
+  Caused by: client error (Connect)
+  Caused by: dns error
+  Caused by: failed to lookup address information: nodename nor servname provided, or not known

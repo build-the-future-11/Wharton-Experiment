@@ -1,0 +1,70 @@
+{
+  "scope": "simulated Linux proc/cgroup fixtures and preserved mac parser; no Linux live execution",
+  "checks": [
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/tests/test_linux_resources_audit.py",
+        "successors/frem_s10/tests/test_operations_audit.py::test_memory_threshold_pageouts_and_required_counters",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/private/tmp/frem-s10-linux-resources-20261016-attempt2"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7164779159938917,
+      "stdout": "..............................                                           [100%]\n30 passed in 0.29s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.0961813330068253,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.022956208005780354,
+      "stdout": "2 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/private/tmp/frem-s10-linux-resources-mypy-20261016-attempt1",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.9165083330008201,
+      "stdout": "Success: no issues found in 2 source files\n",
+      "stderr": ""
+    }
+  ]
+}

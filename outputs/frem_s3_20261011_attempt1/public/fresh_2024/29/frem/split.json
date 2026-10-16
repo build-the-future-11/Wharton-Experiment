@@ -1,0 +1,40 @@
+{
+  "name": "fresh_2024",
+  "included_stocks": [
+    "ABT",
+    "CAT",
+    "GE",
+    "HON",
+    "IBM",
+    "MCD",
+    "MMM",
+    "MSFT",
+    "PEP",
+    "PG",
+    "WMT",
+    "XOM"
+  ],
+  "excluded_stocks": {},
+  "expected_target_months": [
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10"
+  ],
+  "validation_start_ns": 1638316800000000000,
+  "evaluation_decision_start_ns": 1701388800000000000,
+  "max_training_label_ns": 1635897600000000000,
+  "max_validation_label_ns": 1698969600000000000,
+  "row_counts": [
+    2832,
+    264,
+    120
+  ],
+  "exclusion_policy": "Predetermined completeness/coverage only; no outcome-based exclusions"
+}

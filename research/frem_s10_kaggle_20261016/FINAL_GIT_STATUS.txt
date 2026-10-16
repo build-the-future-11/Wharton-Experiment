@@ -1,0 +1,176 @@
+ M .gitignore
+ M README.md
+ M RELEASE_MANIFEST.json
+ M RESEARCH_STATE.json
+ M docs/CODEX_HANDOFF.md
+ M docs/STATIC_VERIFICATION.md
+ M paper/main.pdf
+ M paper/main.tex
+ M paper/references.bib
+ M research/current_gyic_watchlist_2026-10-11.md
+ M research/events.jsonl
+ M scripts/build_paper.py
+ M scripts/build_release_manifests.py
+ M scripts/public_equity_backtests.py
+ M scripts/validate_source.py
+ M src/frem/model.py
+ M src/frem/training.py
+?? configs/frem_s3_public.json
+?? configs/generated_development.json
+?? configs/generated_smoke.json
+?? configs/public_regional_factors.json
+?? data/public_regional_factors_20261011/
+?? data/s6_real_etf_20261014/
+?? data/s7_etf_2019_20261014/
+?? data/s8_etf_2020_2022_20261014_attempt1/
+?? data/s8_etf_2020_2022_20261014_attempt2/
+?? docs/FREM_LOSS_REPAIR_CHECKLIST_20261015.md
+?? docs/FREM_MEMORY_DIAGNOSIS_AND_CHECKLIST_20261012.md
+?? docs/FREM_S10_DESIGN.md
+?? docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md
+?? docs/FREM_S3.md
+?? docs/RELEASE_INVENTORY.md
+?? docs/RESEARCH_COMPLETION_STATUS.md
+?? outputs/frem_portfolio_20261012_attempt1/
+?? outputs/frem_s2_development_20261011_attempt1/
+?? outputs/frem_s2_development_20261011_attempt2/
+?? outputs/frem_s2_development_20261011_attempt3/
+?? outputs/frem_s3_20261011_attempt1/
+?? outputs/frem_s4_20261012_attempt1/
+?? outputs/frem_s5_20261013_attempt1/
+?? outputs/frem_s5_20261013_attempt2/
+?? outputs/frem_s6_20261013_attempt1/
+?? outputs/frem_s6_20261013_attempt2/
+?? outputs/frem_s6_real_20261014_attempt1/
+?? outputs/frem_s6_real_20261014_local_attempt2/
+?? outputs/frem_s6_real_20261014_local_attempt3/
+?? outputs/frem_s6_real_20261014_local_attempt4/
+?? outputs/frem_s6_real_20261014_local_attempt5/
+?? outputs/frem_s6_real_20261014_local_attempt6/
+?? outputs/frem_s6_real_20261014_local_attempt7/
+?? outputs/frem_s6_real_20261014_local_attempt8/
+?? outputs/frem_s6_real_20261014_ram_override_attempt1/
+?? outputs/frem_s7_2019_20261014_attempt1/
+?? outputs/frem_s8_2020_2022_20261014_attempt1/
+?? outputs/frem_s9_20261015_attempt1/
+?? outputs/public_equity_allnow_20261011_attempt1/
+?? outputs/public_equity_slow_20261011_attempt1/
+?? paper/archive/
+?? paper/engineering_results.tex
+?? paper/public_results.tex
+?? paper/release_review_20261011/
+?? paper/results_review_20261012/
+?? paper/review_20261011/
+?? paper/review_20261011_v2/
+?? paper/s4_results.tex
+?? paper/s4_review_20261012/
+?? research/checklist_completion_20261012/
+?? research/completion_20261011/
+?? research/decisions/completion_evidence_20261011.json
+?? research/decisions/frem_loss_diagnosis_20261011.json
+?? research/decisions/frem_loss_repair_checklist_20261015.json
+?? research/decisions/frem_memory_diagnosis_20261012.json
+?? research/decisions/frem_rebuild_20261011.json
+?? research/decisions/frem_rebuild_result_20261011.json
+?? research/decisions/frem_restart_audit_20261015.json
+?? research/decisions/frem_s10_cl15_20261015.json
+?? research/decisions/frem_s10_cl16_20261015.json
+?? research/decisions/frem_s10_design_20261015.json
+?? research/decisions/frem_s10_design_v2_20261015.json
+?? research/decisions/frem_s10_kaggle_20261016.json
+?? research/decisions/frem_s10_repair_20261015.json
+?? research/decisions/frem_s3_result_20261011.json
+?? research/decisions/frem_s3_start_20261011.json
+?? research/decisions/frem_s6_execution_attempt2_20261013.json
+?? research/decisions/frem_s6_ram_override_20261014.json
+?? research/decisions/frem_s6_real_freeze_20261014.json
+?? research/decisions/frem_s6_real_intake_20261014.json
+?? research/decisions/frem_s6_real_result_20261014.json
+?? research/decisions/frem_s6_result_20261013.json
+?? research/decisions/frem_s6_start_20261013.json
+?? research/decisions/frem_s7_prefit_repair_20261014.json
+?? research/decisions/frem_s7_result_20261014.json
+?? research/decisions/frem_s7_start_20261014.json
+?? research/decisions/frem_s8_intake_repair_20261014.json
+?? research/decisions/frem_s8_result_20261014.json
+?? research/decisions/frem_s8_start_20261014.json
+?? research/decisions/frem_s9_result_20261015.json
+?? research/decisions/frem_s9_start_20261015.json
+?? research/decisions/laura_planning_result_20261013.json
+?? research/decisions/laura_planning_start_20261013.json
+?? research/decisions/local_maintenance_20261011.json
+?? research/decisions/public_regional_intake_20261011.json
+?? research/decisions/public_slow_execution_20261011.json
+?? research/decisions/public_slow_result_20261011.json
+?? research/decisions/public_zero_diagnosis_20261011.json
+?? research/evidence_audit_20261011/
+?? research/evidence_audit_20261011_v2/
+?? research/finish_all_20261014/
+?? research/frem_loss_diagnosis_20261011/
+?? research/frem_memory_diagnosis_20261012/
+?? research/frem_portfolio_20261012/
+?? research/frem_rebuild_20261011/
+?? research/frem_s10_20261015/
+?? research/frem_s10_implementation_20261015/
+?? research/frem_s10_kaggle_20261016/
+?? research/frem_s10_objects/
+?? research/frem_s10_production_20261016/
+?? research/frem_s10_repair_20261015/
+?? research/frem_s3_20261011/
+?? research/frem_s4_20261012/
+?? research/frem_s5_20261013/
+?? research/frem_s6_20261013/
+?? research/frem_s6_execution_20261013_attempt2/
+?? research/frem_s6_real_20261014/
+?? research/frem_s7_20261014/
+?? research/frem_s8_20261014/
+?? research/frem_s9_20261015/
+?? research/laura_plan_20261013/
+?? research/local_maintenance_20261011/
+?? research/loss_repair_checklist_20261015/
+?? research/public_zero_diagnosis_20261011/
+?? research/restart_20261015/
+?? research/s6_memory_cleanup_20261014/
+?? scripts/acquire_public_regional_factors.py
+?? scripts/audit_engineering_evidence.py
+?? scripts/audit_frem_s3.py
+?? scripts/diagnose_frem_loss.py
+?? scripts/diagnose_public_zero.py
+?? scripts/diagnose_s8_completion.py
+?? scripts/run_frem_rebuild.py
+?? scripts/run_frem_s3.py
+?? scripts/run_frem_s4.py
+?? scripts/run_public_slow.py
+?? src/frem/calibration_diagnostics.py
+?? src/frem/frozen_residual.py
+?? src/frem/s3.py
+?? src/frem/s3_forecaster.py
+?? src/frem/s4.py
+?? src/frem/s4_forecaster.py
+?? successors/frem_audit_v1/
+?? successors/frem_portfolio_v1/
+?? successors/frem_s10/
+?? successors/frem_s5/
+?? successors/frem_s6/
+?? successors/frem_s6_real/
+?? successors/frem_s7/
+?? successors/frem_s8/
+?? successors/frem_s9/
+?? successors/laura_planning_v1/
+?? tests/restart/
+?? tests/s5/
+?? tests/s6/
+?? tests/s7/
+?? tests/s8/
+?? tests/s9/
+?? tests/test_evidence_audit.py
+?? tests/test_evidence_source_archive.py
+?? tests/test_frem_loss_diagnosis.py
+?? tests/test_frem_rebuild.py
+?? tests/test_public_regional_factors.py
+?? tests/test_public_zero_diagnostics.py
+?? tests/test_release_tooling.py
+?? tests/test_s3.py
+?? tests/test_s4.py
+?? tests/test_s6_real_intake.py
+?? tests/test_s8_completion_diagnostics.py

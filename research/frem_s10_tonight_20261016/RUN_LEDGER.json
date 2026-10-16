@@ -1,0 +1,51 @@
+{
+  "schema": "s10-tonight-run-ledger-v1",
+  "recorded_at": "2026-10-16T07:48:05.261226+00:00",
+  "campaign_status": "PARTIAL CAMPAIGN",
+  "project": "Wharton/FREM-S10",
+  "actual_cloud_runs": 1,
+  "actual_market_runs": 0,
+  "protected_access": false,
+  "cells": [
+    {
+      "run_id": "s10-20261016-cpu-persistence-probe",
+      "state": "SUCCEEDED",
+      "scope": "Metadata plus private persistence validation only; incompatible runtime observed",
+      "started_at_utc": "2026-10-16T07:35:55.150Z",
+      "probe_created_utc": "2026-10-16T07:36:19.654117+00:00",
+      "saved_version": 1,
+      "script_version_id": 358930173,
+      "retrieval_verified": true,
+      "receipt": "retrieved/version1/RETRIEVAL_VERIFICATION.json"
+    },
+    {
+      "run_id": "s10-20261016-cpu-smoke12-seed11",
+      "state": "PENDING",
+      "blocker": "Observed Kaggle Python3.13.15/NumPy2.1.3 differ from sealed Python3.12/NumPy2.5.4; target host admission and runtime verification not performed"
+    },
+    {
+      "run_id": "s10-20261016-scientific-development",
+      "state": "PENDING",
+      "blocker": "Unfrozen; unsupported Linux production contract; full exact-source qualification and measured costs missing"
+    }
+  ],
+  "failed_attempts": [
+    {
+      "id": "local-host-admission",
+      "status": "BLOCKED",
+      "exit_code": 3,
+      "receipt": "observations/LOCAL_HOST_ADMISSION.json"
+    }
+  ],
+  "allowed_cell_states": [
+    "PENDING",
+    "RUNNING",
+    "SUCCEEDED",
+    "FAILED",
+    "INTERRUPTED",
+    "SKIPPED_BUDGET"
+  ],
+  "missing_metrics": "No numerical kernel or scientific campaign executed; no raw/aggregate scientific metrics or figures exist.",
+  "actual_model_runs": 0,
+  "platform_closeout": "observations/SESSION_CLOSEOUT.json"
+}

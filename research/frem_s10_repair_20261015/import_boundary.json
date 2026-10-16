@@ -1,0 +1,7 @@
+{
+  "source_files": 40,
+  "prohibited_imports": [],
+  "cycles": [],
+  "status": "PASS",
+  "scope": "static source import graph only; numerical and artifact behavior covered separately"
+}

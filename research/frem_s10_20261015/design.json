@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "id": "FREM-S10-DESIGN-1",
+  "date": "2026-10-15",
+  "status": "DESIGN_COMPLETE_REVIEW_AND_FEASIBILITY_PENDING",
+  "executable": false,
+  "implementation_complete": false,
+  "scientific_freeze": false,
+  "current_scope": "Map and specify S10 before implementation; no experiment launch.",
+  "model": "Delayed contextual stacking of joint finite holding-period price/dividend scenarios",
+  "claim_scope": "Retrospective empirical successor; algorithm novelty and original FREM mechanism not established",
+  "assets": [
+    "SPY",
+    "TLT",
+    "GLD"
+  ],
+  "currency": "USD",
+  "horizon_weekly_intervals": 4,
+  "source_identities": {
+    "data/s6_real_etf_20261014/SPY.json": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+    "data/s6_real_etf_20261014/TLT.json": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+    "data/s6_real_etf_20261014/GLD.json": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+    "data/s6_real_etf_20261014/acquisition.json": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562"
+  },
+  "source_value_access_this_session": false,
+  "cutoffs": {
+    "scaler_labels_available_before": "2008-01-01",
+    "prequential_origins_from": "2008-01-01",
+    "source_observations_before": "2017-01-01",
+    "protected_canonical_start": "2025-01-01"
+  },
+  "folds": [
+    {
+      "id": "A",
+      "evaluation_start": "2010-01-01",
+      "evaluation_end_exclusive": "2013-01-01"
+    },
+    {
+      "id": "B",
+      "evaluation_start": "2013-01-01",
+      "evaluation_end_exclusive": "2017-01-01"
+    }
+  ],
+  "features": {
+    "dimension": 12,
+    "history_weeks": 13,
+    "per_asset": [
+      "last_total_log_return",
+      "sum_4",
+      "sum_13",
+      "population_sd_13"
+    ],
+    "transform": "fixed_pre2008_matured_burnin",
+    "minimum_burnin_records": 64,
+    "score_sd_floor": 0.0001
+  },
+  "library": {
+    "minimum_records": 64,
+    "maximum_records": 520,
+    "experts": [
+      "unconditional",
+      "recent",
+      "context"
+    ],
+    "neighbor_count": 32,
+    "recency_half_life_weeks": 52,
+    "extrapolation_distance_quantile": 0.95
+  },
+  "stacking": {
+    "score": "energy_score_exponent_1_on_fixed_standardized_total_returns",
+    "global_minimum_records": 26,
+    "feedback_maximum_records": 104,
+    "local_neighbor_count": 32,
+    "local_concentration_floor": 16,
+    "l2_coefficient": 0.05,
+    "local_shrink_pseudocount": 64,
+    "local_maximum_blend": 0.5,
+    "optimizer": "deterministic_seven_nonempty_active_faces_with_KKT_certificate"
+  },
+  "policy": {
+    "initial_usd": 100000,
+    "grid_step": 0.05,
+    "asset_cap": 0.4,
+    "risky_cap": 0.8,
+    "include_exact_hold": true,
+    "crra_gamma": 4,
+    "contamination_rho": 0.05,
+    "carry_holdings": true,
+    "dividends": "cash_ex_date_accrual",
+    "cash_yield": 0,
+    "actual_liquidation": "fold_end_only_unless_decision_sells",
+    "primary": "contextual_robust",
+    "costs_bps": [
+      0,
+      10,
+      20,
+      40
+    ],
+    "primary_cost_bps": 10
+  },
+  "forecast_arms": [
+    "unconditional",
+    "recent",
+    "context",
+    "equal",
+    "global_stack",
+    "contextual_stack",
+    "individual_score_mix",
+    "zero"
+  ],
+  "policy_arms": [
+    "nominal",
+    "robust"
+  ],
+  "benchmarks": [
+    "cash",
+    "equal100",
+    "equal80",
+    "buy_hold100",
+    "inverse_vol80",
+    "shrink_min_variance80"
+  ],
+  "ablations": [
+    "repeat_h1",
+    "frozen_state",
+    "no_shrink",
+    "force_liquidate",
+    "no_exact_hold",
+    "window260",
+    "neighbors16",
+    "neighbors64"
+  ],
+  "matrix": {
+    "core_strategy_ledgers": 128,
+    "benchmark_ledgers": 48,
+    "ablation_ledgers": 16,
+    "total_ledgers": 192
+  },
+  "statistics": {
+    "unit": "complete four-interval decision with all assets/methods retained",
+    "bootstrap_draws": 5000,
+    "seed": 1901,
+    "block_decisions": [
+      2,
+      4
+    ],
+    "primary_comparisons": 2,
+    "one_sided_lower_quantile": 0.025,
+    "primary_family": "Bonferroni two comparisons; both block families required",
+    "secondary_family": "Holm eight fixed ablation ES comparisons; structural zero comparisons retained"
+  },
+  "success": {
+    "new_distribution_relative_margin": 0.05,
+    "each_fold_positive": true,
+    "old_nll_margin_nats": 0.01,
+    "old_nll_satisfied_by_this_model": false,
+    "wealth_uplift_each_fold": 0.06,
+    "wealth_controls": [
+      "equal100",
+      "buy_hold100"
+    ],
+    "beats_cash_each_fold": true,
+    "daily_close_drawdown_not_worse_than": "equal80",
+    "confirmation_claim": false
+  },
+  "proposed_budget": {
+    "execution_authorized_by_this_design": false,
+    "fold_campaigns": 2,
+    "maximum_weekly_origins_per_arm_across_folds": 1000,
+    "max_ledgers": 192,
+    "workers": 1,
+    "threads": 1,
+    "paid_compute": false,
+    "campaign_wall_seconds": 3600,
+    "process_rss_mib": 256,
+    "host_memory_floor_mib": 512,
+    "pageouts_must_not_rise": true,
+    "separate_precision_wall_seconds": 600,
+    "extra_hyperparameter_trials": 0
+  },
+  "current_results": {
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "implementation_tests_run": 0,
+    "protected_access": false,
+    "independent_review": false
+  },
+  "readiness": {
+    "empirical_question": "SPECIFIED",
+    "novelty": "NOT_ESTABLISHED",
+    "model_specification": "REVIEW_DRAFT_COMPLETE",
+    "data_admission": "PENDING",
+    "precision": "PENDING",
+    "implementation": "NOT_STARTED",
+    "run_ready": false,
+    "confirmation_ready": false
+  },
+  "preservation": {
+    "s9": "Preserved unconsumed; no run or presumed success",
+    "s6_s7_s8": "Closed findings unchanged",
+    "original_protocol": "Unchanged",
+    "protected_access": "Closed"
+  },
+  "documents": [
+    "../../docs/FREM_S10_DESIGN.md",
+    "MODEL_SPECIFICATION.md",
+    "EXPERIMENT_PROTOCOL.md",
+    "FAILURE_REPAIR_MAP.md",
+    "PRIOR_ART.md",
+    "IMPLEMENTATION_PLAN.md"
+  ]
+}

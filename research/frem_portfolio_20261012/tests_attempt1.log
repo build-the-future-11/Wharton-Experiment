@@ -1,0 +1,36 @@
+test_cash_no_trading_fees (test_engine.AccountingTests.test_cash_no_trading_fees) ... ok
+test_cost_and_leverage_invalid (test_engine.AccountingTests.test_cost_and_leverage_invalid) ... ok
+test_default_retained_and_not_rebought (test_engine.AccountingTests.test_default_retained_and_not_rebought) ... ok
+test_drifted_holdings_not_reset (test_engine.AccountingTests.test_drifted_holdings_not_reset) ... ok
+test_flat_zero_cost_is_counterexample_to_six_percent (test_engine.AccountingTests.test_flat_zero_cost_is_counterexample_to_six_percent) ... ok
+test_future_outcomes_do_not_change_first_weights (test_engine.AccountingTests.test_future_outcomes_do_not_change_first_weights) ... ok
+test_missing_return_is_not_zero_imputed (test_engine.AccountingTests.test_missing_return_is_not_zero_imputed) ... ok
+test_mixed_currency_rejected (test_engine.AccountingTests.test_mixed_currency_rejected) ... ok
+test_no_trade_band_accounts_for_drift (test_engine.AccountingTests.test_no_trade_band_accounts_for_drift) ... ok
+test_one_asset_round_trip_exact_cost_basis (test_engine.AccountingTests.test_one_asset_round_trip_exact_cost_basis) ... ok
+test_overlap_and_unavailable_forecast (test_engine.AccountingTests.test_overlap_and_unavailable_forecast) ... ok
+test_return_below_total_loss_rejected (test_engine.AccountingTests.test_return_below_total_loss_rejected) ... ok
+test_ruin_and_undefined_relative_denominator (test_engine.AccountingTests.test_ruin_and_undefined_relative_denominator) ... ok
+test_sell_and_buy_self_finance (test_engine.AccountingTests.test_sell_and_buy_self_finance) ... ok
+test_missing_grid_not_silently_removed (test_engine.EvidenceTests.test_missing_grid_not_silently_removed) ... ok
+test_nonoverwrite_receipts (test_engine.EvidenceTests.test_nonoverwrite_receipts) ... ok
+test_pairing_checks_outcomes (test_engine.EvidenceTests.test_pairing_checks_outcomes) ... ok
+test_prediction_hash_and_protected_boundary (test_engine.EvidenceTests.test_prediction_hash_and_protected_boundary) ... ok
+test_future_information_rejected (test_engine.ExternalContractTests.test_future_information_rejected) ... ok
+test_unknown_horizon_and_missing_hash (test_engine.ExternalContractTests.test_unknown_horizon_and_missing_hash) ... ok
+test_valid_framework_forecast (test_engine.ExternalContractTests.test_valid_framework_forecast) ... ok
+test_contribution_timing_and_annuity_due (test_engine.FundingTests.test_contribution_timing_and_annuity_due) ... ok
+test_sequence_risk_not_geometric_average_shortcut (test_engine.FundingTests.test_sequence_risk_not_geometric_average_shortcut) ... ok
+test_zero_growth_obligation_shortfall (test_engine.FundingTests.test_zero_growth_obligation_shortfall) ... ok
+test_bootstrap_identity_and_short_block (test_engine.SignalTests.test_bootstrap_identity_and_short_block) ... ok
+test_ensemble_includes_model_disagreement (test_engine.SignalTests.test_ensemble_includes_model_disagreement) ... ok
+test_ensemble_missing_assets_rejected (test_engine.SignalTests.test_ensemble_missing_assets_rejected) ... ok
+test_invalid_distribution_rejected (test_engine.SignalTests.test_invalid_distribution_rejected) ... ok
+test_negative_signal_falls_to_anchor_cash (test_engine.SignalTests.test_negative_signal_falls_to_anchor_cash) ... ok
+test_signal_cap_and_no_leverage (test_engine.SignalTests.test_signal_cap_and_no_leverage) ... ok
+test_student_scale_is_not_standard_deviation (test_engine.SignalTests.test_student_scale_is_not_standard_deviation) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.005s
+
+OK

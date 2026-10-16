@@ -1,0 +1,61 @@
+{
+  "status": "PLAN_ONLY",
+  "configuration": {
+    "schema": "s10-generated-smoke-v1",
+    "scope": "development-engineering",
+    "device": "cpu",
+    "precision": "float64",
+    "seed": 11,
+    "steps": 72,
+    "variants": [
+      "primary",
+      "repeat_h1",
+      "no_shrink",
+      "window260",
+      "neighbors16",
+      "neighbors64"
+    ],
+    "budget_seconds": 300,
+    "dataset": "s10-generated-smoke-data-v1",
+    "checkpoint_every_origins": 1,
+    "threads": 1
+  },
+  "configuration_sha256": "2e0199dc3b3c2443b98190317b2c0c1be4b3eaeda16ce23a4ae69a775e8dcd98",
+  "cells": [
+    {
+      "variant": "primary",
+      "seed": 11,
+      "origins": 72
+    },
+    {
+      "variant": "repeat_h1",
+      "seed": 11,
+      "origins": 72
+    },
+    {
+      "variant": "no_shrink",
+      "seed": 11,
+      "origins": 72
+    },
+    {
+      "variant": "window260",
+      "seed": 11,
+      "origins": 72
+    },
+    {
+      "variant": "neighbors16",
+      "seed": 11,
+      "origins": 72
+    },
+    {
+      "variant": "neighbors64",
+      "seed": 11,
+      "origins": 72
+    }
+  ],
+  "market_execution": false,
+  "gpu_execution": false,
+  "scientific_status": "NOT_EVALUATED",
+  "resume_boundary": "all declared variants committed at one completed origin",
+  "budget_semantics": "cumulative active wall time; checked between origins; no runtime promise"
+}

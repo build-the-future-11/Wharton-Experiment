@@ -1,0 +1,692 @@
+"""Descriptive audit of CLOSED S8 artifacts; stdlib only, no model/policy imports.
+
+The fee rebate keeps every saved post-trade dollar position fixed and credits
+fees to zero-yield cash. It is an accounting attribution, not a new policy.
+Mixture PITs use the saved Student-t densities; no calibration is fitted.
+"""
+
+import argparse
+import csv
+import hashlib
+import json
+import math
+import resource
+import statistics
+import time
+import traceback
+from collections import Counter, defaultdict
+from datetime import UTC, datetime
+from itertools import pairwise
+from pathlib import Path
+
+ASSETS = ("SPY", "TLT", "GLD")
+SEEDS = (11, 29, 47)
+
+
+def digest(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def day(stamp):
+    return datetime.fromtimestamp(stamp, UTC).date()
+
+
+def average(values):
+    return statistics.fmean(values) if values else None
+
+
+def describe(values):
+    return (
+        {
+            "count": len(values),
+            "min": min(values),
+            "mean": average(values),
+            "median": statistics.median(values),
+            "max": max(values),
+        }
+        if values
+        else {"count": 0}
+    )
+
+
+def pearson(left, right):
+    require(len(left) == len(right) and len(left) > 0, "paired nonempty correlation inputs required")
+    a, b = average(left), average(right)
+    xx = sum((x - a) ** 2 for x in left)
+    yy = sum((y - b) ** 2 for y in right)
+    return (
+        sum((x - a) * (y - b) for x, y in zip(left, right, strict=True)) / math.sqrt(xx * yy)
+        if xx * yy > 0
+        else None
+    )
+
+
+def ranks(values):
+    result = [0.0] * len(values)
+    for value in set(values):
+        below = sum(x < value for x in values)
+        equal = sum(x == value for x in values)
+        for i, x in enumerate(values):
+            if x == value:
+                result[i] = below + (equal + 1) / 2
+    return result
+
+
+def beta_fraction(a, b, x):
+    """Continued fraction for regularized incomplete beta, double precision."""
+    tiny = 1e-300
+    qab, qap, qam = a + b, a + 1, a - 1
+    c, d = 1.0, 1 - qab * x / qap
+    d = 1 / (d if abs(d) > tiny else tiny)
+    h = d
+    for m in range(1, 201):
+        aa = m * (b - m) * x / ((qam + 2 * m) * (a + 2 * m))
+        d, c = 1 + aa * d, 1 + aa / c
+        d = 1 / (d if abs(d) > tiny else tiny)
+        c = c if abs(c) > tiny else tiny
+        h *= d * c
+        aa = -(a + m) * (qab + m) * x / ((a + 2 * m) * (qap + 2 * m))
+        d, c = 1 + aa * d, 1 + aa / c
+        d = 1 / (d if abs(d) > tiny else tiny)
+        c = c if abs(c) > tiny else tiny
+        delta = d * c
+        h *= delta
+        if abs(delta - 1) < 3e-14:
+            return h
+    raise ValueError("beta continued fraction did not converge")
+
+
+def beta_cdf(x, a, b):
+    if x <= 0:
+        return 0.0
+    if x >= 1:
+        return 1.0
+    factor = math.exp(
+        math.lgamma(a + b) - math.lgamma(a) - math.lgamma(b) + a * math.log(x) + b * math.log1p(-x)
+    )
+    if x < (a + 1) / (a + b + 2):
+        return factor * beta_fraction(a, b, x) / a
+    return 1 - factor * beta_fraction(b, a, 1 - x) / b
+
+
+def student_cdf(value, df):
+    require(math.isfinite(value) and math.isfinite(df) and df > 0, "invalid Student CDF input")
+    tail = 0.5 * beta_cdf(df / (df + value * value), df / 2, 0.5)
+    return tail if value < 0 else 1 - tail
+
+
+def moments_and_pit(means, scales, dfs, weights, y):
+    require(len(means) > 0 and len({len(x) for x in (means, scales, dfs, weights)}) == 1, "mixture shape")
+    require(all(math.isfinite(x) for xs in (means, scales, dfs, weights) for x in xs), "nonfinite mixture")
+    require(all(s > 0 for s in scales) and all(df > 2 for df in dfs), "invalid density")
+    require(all(w >= 0 for w in weights) and abs(sum(weights) - 1) < 1e-10, "invalid weights")
+    mu = sum(w * m for w, m in zip(weights, means, strict=True))
+    var = sum(
+        w * (s * s * df / (df - 2) + (m - mu) ** 2)
+        for w, m, s, df in zip(weights, means, scales, dfs, strict=True)
+    )
+    pit = sum(
+        w * student_cdf((y - m) / s, df) for w, m, s, df in zip(weights, means, scales, dfs, strict=True) if w
+    )
+    return mu, var, pit
+
+
+def forecast_metrics(records):
+    groups, date_ranks = defaultdict(list), defaultdict(list)
+    for r in records:
+        mus, ys = [], []
+        for j, asset in enumerate(r["assets"]):
+            y = r["y"][j]
+            mu, var, pit = moments_and_pit(*(r[k][j] for k in ("mean", "scale", "df", "weights")), y)
+            v = {"y": y, "mean": mu, "variance": var, "pit": pit, "error": mu - y, "nll": r["nll"][j]}
+            for scope in ("all", asset, str(day(r["date"]).year)):
+                groups[(r["variant"], scope)].append(v)
+            mus.append(mu)
+            ys.append(y)
+        correlation = pearson(ranks(mus), ranks(ys))
+        date_ranks[(r["variant"], "all")].append(correlation)
+        date_ranks[(r["variant"], str(day(r["date"]).year))].append(correlation)
+    answer = []
+    for (variant, scope), values in sorted(groups.items()):
+        rank_values = [x for x in date_ranks[(variant, scope)] if x is not None]
+        errors = [v["error"] for v in values]
+        mean_abs_y = average([abs(v["y"]) for v in values])
+        mean_abs_mu = average([abs(v["mean"]) for v in values])
+        answer.append(
+            {
+                "forecast": variant,
+                "scope": scope,
+                "observations": len(values),
+                "mean_log_return_forecast": average([v["mean"] for v in values]),
+                "mean_log_return_realized": average([v["y"] for v in values]),
+                "bias_forecast_minus_realized": average(errors),
+                "mse": average([x * x for x in errors]),
+                "mae": average([abs(x) for x in errors]),
+                "nll": average([v["nll"] for v in values]),
+                "mean_abs_forecast": mean_abs_mu,
+                "mean_abs_realized": mean_abs_y,
+                "forecast_to_realized_absolute_magnitude": mean_abs_mu / mean_abs_y if mean_abs_y else None,
+                "mean_forecast_sd": average([math.sqrt(v["variance"]) for v in values]),
+                "mean_squared_standardized_error": average([v["error"] ** 2 / v["variance"] for v in values]),
+                "coverage_central80": average([0.1 <= v["pit"] <= 0.9 for v in values]),
+                "coverage_central95": average([0.025 <= v["pit"] <= 0.975 for v in values]),
+                "lower_tail_rate_2_5pct": average([v["pit"] < 0.025 for v in values]),
+                "upper_tail_rate_2_5pct": average([v["pit"] > 0.975 for v in values]),
+                "mean_pit": average([v["pit"] for v in values]),
+                "direction_accuracy": average([(v["mean"] > 0) == (v["y"] > 0) for v in values]),
+                "cross_asset_rank_correlation_mean": average(rank_values),
+                "rank_dates_defined": len(rank_values),
+                "rank_dates_undefined": len(date_ranks[(variant, scope)]) - len(rank_values),
+            }
+        )
+    return answer
+
+
+def audit_ledger(ledger, cost_bps, returns):
+    rate = cost_bps / 10000
+    holdings, cash = dict.fromkeys(ASSETS, 0.0), 100000.0
+    totals, years, exposure, out = dict.fromkeys(ASSETS, 0.0), {}, [], []
+    max_residual = 0.0
+    expected_times = list(returns)
+    require([r["time"] for r in ledger["periods"]] == expected_times, "ledger date mismatch")
+    for index, row in enumerate(ledger["periods"]):
+        t = row["time"]
+        realized = returns[t]
+        require(row["end"] == realized["end"], "ledger maturity mismatch")
+        nav = cash + sum(holdings.values())
+        post = {a: row["holdings"][a] / (1 + realized[a]) for a in ASSETS}
+        contribution = {a: post[a] * realized[a] for a in ASSETS}
+        notional = sum(abs(post[a] - holdings[a]) for a in ASSETS)
+        liquidation = rate * sum(row["holdings"].values()) if index == len(expected_times) - 1 else 0.0
+        fee = rate * notional
+        net = sum(contribution.values()) - fee - liquidation
+        residuals = [
+            abs(nav - row["nav_start"]),
+            abs(notional - row["notional"]),
+            abs(fee - row["fee"]),
+            abs(row["cash"] + sum(post.values()) - (nav - fee)),
+            abs(nav + sum(contribution.values()) - fee - row.get("liquidation_fee", 0) - row["nav_end"]),
+        ]
+        if "liquidation_fee" in row:
+            residuals.append(abs(liquidation - row["liquidation_fee"]))
+        for a in ASSETS:
+            if "contributions" in row:
+                residuals.append(abs(contribution[a] - row["contributions"][a]))
+            if "weights" in row:
+                require(abs(row["weights"][a] - post[a] / (nav - fee)) < 1e-10, "saved exposure mismatch")
+            totals[a] += contribution[a]
+        max_residual = max(max_residual, *residuals)
+        weight = sum(post.values()) / (nav - fee)
+        exposure.append(weight)
+        year = str(day(t).year)
+        if year not in years:
+            years[year] = {
+                "nav_start": nav,
+                "gross_pnl_by_asset": dict.fromkeys(ASSETS, 0.0),
+                "fees": 0.0,
+                "exposures": [],
+                "dates": 0,
+            }
+        annual = years[year]
+        for a in ASSETS:
+            annual["gross_pnl_by_asset"][a] += contribution[a]
+        annual["fees"] += fee + liquidation
+        annual["nav_end"] = nav + net
+        annual["dates"] += 1
+        annual["exposures"].append(weight)
+        out.append(
+            {
+                "date": day(t).isoformat(),
+                "end": day(row["end"]).isoformat(),
+                "gross_pnl": sum(contribution.values()),
+                "fee": fee,
+                "liquidation_fee": liquidation,
+                "net_pnl": net,
+                "risky_exposure": weight,
+                **{f"pnl_{a}": contribution[a] for a in ASSETS},
+            }
+        )
+        holdings, cash = row["holdings"], row["cash"]
+    total_fees = sum(x["fees"] for x in years.values())
+    max_residual = max(
+        max_residual,
+        abs(total_fees - ledger["fees"]),
+        abs(100000 + sum(totals.values()) - total_fees - ledger["terminal_wealth"]),
+    )
+    require(max_residual < 1e-7, f"saved ledger accounting discrepancy: {max_residual}")
+    for annual in years.values():
+        annual["gross_pnl"] = sum(annual["gross_pnl_by_asset"].values())
+        annual["net_pnl"] = annual["gross_pnl"] - annual["fees"]
+        annual["net_return"] = annual["nav_end"] / annual["nav_start"] - 1
+        annual["average_risky_exposure"] = average(annual.pop("exposures"))
+    return {
+        "terminal_wealth": ledger["terminal_wealth"],
+        "gross_pnl_by_asset": totals,
+        "gross_pnl": sum(totals.values()),
+        "net_pnl": ledger["terminal_wealth"] - 100000,
+        "fees": total_fees,
+        "fixed_dollar_positions_fees_rebated_to_cash_wealth": ledger["terminal_wealth"] + total_fees,
+        "average_risky_exposure": average(exposure),
+        "average_cash_exposure": 1 - average(exposure),
+        "cash_only_dates": sum(v < 1e-12 for v in exposure),
+        "years": years,
+        "max_accounting_residual": max_residual,
+        "period_attribution": out,
+    }
+
+
+def retrieval_support(records, trace):
+    by_available = {r["available"]: r for r in records}
+    require(len(by_available) == len(records), "ambiguous memory availability key")
+    rows = []
+    for t in trace:
+        if t["stage"] != "evaluation":
+            continue
+        query = by_available[t["available"]]
+        mature = sorted([r for r in records if r["available"] < t["date"]], key=lambda r: r["available"])[
+            -60:
+        ]
+        require(mature and query not in mature, "query or unavailable outcome in retrieval")
+        distance = [
+            average([(a - b) ** 2 for a, b in zip(r["key"], query["key"], strict=True)]) for r in mature
+        ]
+        raw = [math.exp(-0.5 * d) for d in distance]
+        total = sum(raw)
+        q = [v / total for v in raw]
+        ages = [(t["date"] - r["available"]) / 86400 for r in mature]
+        by_year = defaultdict(float)
+        for r, w in zip(mature, q, strict=True):
+            by_year[str(day(r["available"]).year)] += w
+        rows.append(
+            {
+                "date": day(t["date"]).isoformat(),
+                "mature_rows": len(mature),
+                "effective_weight_support": 1 / sum(v * v for v in q),
+                "largest_date_weight": max(q),
+                "youngest_age_days": min(ages),
+                "oldest_age_days": max(ages),
+                "weighted_age_days": sum(w * a for w, a in zip(q, ages, strict=True)),
+                "distance_min": min(distance),
+                "distance_max": max(distance),
+                "weight_by_availability_year": dict(by_year),
+                "local_global_expert_weight_l1": sum(
+                    abs(a - b)
+                    for a, b in zip(t["local_expert_weights"], t["global_expert_weights"], strict=True)
+                ),
+            }
+        )
+    return {
+        "saved_rows": len(records),
+        "evaluation_dates": len(rows),
+        **{
+            k: describe([r[k] for r in rows])
+            for k in (
+                "mature_rows",
+                "effective_weight_support",
+                "largest_date_weight",
+                "weighted_age_days",
+                "oldest_age_days",
+                "local_global_expert_weight_l1",
+            )
+        },
+        "rows": rows,
+        "scope": "Kernel weight concentration on last 60 strictly mature dates; not an independent sample size or causal retrieval value. No declared regime labels exist.",
+    }
+
+
+def write_json(path, value):
+    with path.open("x") as handle:
+        json.dump(value, handle, indent=2, allow_nan=False)
+        handle.write("\n")
+
+
+def write_csv(path, rows):
+    with path.open("x", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def diagnose(root, output, freeze):
+    identities = {}
+    historical_manifest = {}
+
+    def read(path):
+        identities[str(path)] = digest(path)
+        if str(path) in historical_manifest:
+            require(identities[str(path)] == historical_manifest[str(path)], f"closed artifact drift: {path}")
+        elif path.is_relative_to(root):
+            require(not historical_manifest, f"output absent from closed manifest: {path}")
+        return json.loads(path.read_text())
+
+    frozen = read(freeze)
+    historical_manifest = read(freeze.parent / "FINAL_MANIFEST_v2.json")["files"]
+    for path, expected in frozen["sources"].items():
+        require(digest(path) == expected, f"frozen source drift: {path}")
+    identity = read(root / "data_identity.json")
+    require(identity["freeze_sha256"] == digest(freeze), "freeze mismatch")
+    for path, expected in identity["files"].items():
+        require(digest(path) == expected, f"saved input drift: {path}")
+    complete = read(root / "completion.json")
+    require(complete["status"] == "COMPLETE" and complete["seeds"] == list(SEEDS), "incomplete seed family")
+    variants, dates = set(complete["variants"]), complete["evaluation_dates"]
+    require(
+        len(variants) == 15 and dates == 153 and complete["costs"] == [0, 10, 20, 40],
+        "unexpected closed matrix",
+    )
+    combined = read(root / "ensembles.json")
+    reference = {(r["date"], r["variant"]): r for r in combined}
+
+    def validate(rows):
+        require(
+            len(rows) == dates * len(variants)
+            and len({(r["date"], r["variant"]) for r in rows}) == len(rows),
+            "incomplete or duplicated forecast grid",
+        )
+        require({r["variant"] for r in rows} == variants, "missing forecast variant")
+        for r in rows:
+            require(
+                r["assets"] == list(ASSETS) and 2020 <= day(r["date"]).year <= 2022,
+                "unexpected assets or dates",
+            )
+            require(
+                r["feature_available_max"] < r["date"] < r["end"] <= r["available"], "forecast chronology"
+            )
+            ref = reference.get((r["date"], r["variant"]))
+            require(
+                ref is not None
+                and all(r[k] == ref[k] for k in ("end", "available", "assets", "y", "simple_returns")),
+                "unpaired forecast outcomes",
+            )
+            require(
+                max(abs(math.expm1(y) - s) for y, s in zip(r["y"], r["simple_returns"], strict=True)) < 1e-12,
+                "return units",
+            )
+
+    validate(combined)
+    metrics, support, cutoffs = [], {}, {}
+    # Each ensemble component must be the corresponding saved seed density / 3.
+    offsets = {(r["date"], r["variant"]): [0] * len(ASSETS) for r in combined}
+    for seed in SEEDS:
+        rows = read(root / f"seed{seed}/evaluation_predictions.json")
+        validate(rows)
+        for r in rows:
+            key = (r["date"], r["variant"])
+            ref = reference[key]
+            for j in range(len(ASSETS)):
+                size, start = len(r["mean"][j]), offsets[key][j]
+                for field in ("mean", "scale", "df", "weights"):
+                    expected = [v / 3 if field == "weights" else v for v in r[field][j]]
+                    require(
+                        all(
+                            abs(a - b) < 1e-12
+                            for a, b in zip(ref[field][j][start : start + size], expected, strict=True)
+                        ),
+                        "seed ensemble mismatch",
+                    )
+                offsets[key][j] += size
+        metrics.extend({"family": f"seed{seed}", **r} for r in forecast_metrics(rows))
+        state = read(root / f"seed{seed}/mixture_state.json")
+        support[str(seed)] = retrieval_support(state["records"], read(root / f"seed{seed}/trace.json"))
+        checkpoint = read(root / f"seed{seed}/fit_checkpoint.json")
+        cutoffs[str(seed)] = {
+            "fit_cutoff": day(checkpoint["fit_cutoff"]).isoformat(),
+            "calibration_cutoff": day(checkpoint["calibration_cutoff"]).isoformat(),
+        }
+    for key, counts in offsets.items():
+        require(counts == [len(a) for a in reference[key]["mean"]], "extra ensemble component")
+    metrics.extend({"family": "ensemble", **r} for r in forecast_metrics(combined))
+    base = sorted([r for r in combined if r["variant"] == "equal"], key=lambda r: r["date"])
+    require(all(a["end"] == b["date"] for a, b in pairwise(base)), "noncontinuous outcomes")
+    returns = {
+        r["date"]: {"end": r["end"], **dict(zip(ASSETS, r["simple_returns"], strict=True))} for r in base
+    }
+    economics, benchmarks = read(root / "economics.json"), read(root / "benchmarks.json")
+    for name, costs in economics.items():
+        require(set(costs) == {"0", "10", "20", "40"}, f"incomplete cost family: {name}")
+        require(
+            all(set(policies) == {"signal", "cost_aware", "s8_h4", "s8_h1"} for policies in costs.values()),
+            f"incomplete policy family: {name}",
+        )
+    require(set(benchmarks) == {"cash", "buy_hold", "equal_weight"}, "incomplete benchmarks")
+    require(
+        all(set(costs) == {"0", "10", "20", "40"} for costs in benchmarks.values()),
+        "incomplete benchmark costs",
+    )
+    audited, ledger_rows, year_rows = {}, [], []
+    all_ledgers = [(v, c, p, l) for v, cs in economics.items() for c, ps in cs.items() for p, l in ps.items()]
+    all_ledgers += [(v, c, "benchmark", l) for v, cs in benchmarks.items() for c, l in cs.items()]
+    require(len(all_ledgers) == 252 and set(economics) == variants, "incomplete ledger family")
+    for forecast, cost, policy, ledger in all_ledgers:
+        value = audit_ledger(ledger, int(cost), returns)
+        audited[(forecast, cost, policy)] = value
+        ledger_rows.append(
+            {
+                "forecast": forecast,
+                "cost_bps": cost,
+                "policy": policy,
+                **{
+                    k: v
+                    for k, v in value.items()
+                    if k not in ("years", "period_attribution", "gross_pnl_by_asset")
+                },
+                **{f"gross_pnl_{a}": value["gross_pnl_by_asset"][a] for a in ASSETS},
+            }
+        )
+        for year, annual in value["years"].items():
+            year_rows.append(
+                {
+                    "forecast": forecast,
+                    "cost_bps": cost,
+                    "policy": policy,
+                    "year": year,
+                    **{k: v for k, v in annual.items() if k != "gross_pnl_by_asset"},
+                    **{f"gross_pnl_{a}": annual["gross_pnl_by_asset"][a] for a in ASSETS},
+                }
+            )
+    primary = audited[("s8", "10", "s8_h4")]
+    zero = audited[("s8", "0", "s8_h4")]
+    passive = audited[("equal_weight", "10", "benchmark")]
+    fee_attribution = {
+        "charged_cost_bps": 10,
+        "observed_wealth": primary["terminal_wealth"],
+        "same_dollar_positions_rebated_fee_wealth": primary["terminal_wealth"] + primary["fees"],
+        "direct_fee_bill": primary["fees"],
+        "zero_cost_policy_wealth": zero["terminal_wealth"],
+        "zero_minus_charged_policy_wealth": zero["terminal_wealth"] - primary["terminal_wealth"],
+        "position_path_gross_pnl_difference": zero["gross_pnl"] - primary["gross_pnl"],
+        "interpretation": "Fixed saved dollar positions, fees credited to zero-yield cash without reinvestment. Difference from separately optimized zero-cost ledger includes endogenous allocations, sizing and wealth effects; not a pure fee bill.",
+    }
+    gaps = []
+    for year in ("2020", "2021", "2022"):
+        a, b = primary["years"][year], passive["years"][year]
+        gaps.append(
+            {
+                "year": year,
+                "s8_return": a["net_return"],
+                "equal_weight_return": b["net_return"],
+                "return_difference": a["net_return"] - b["net_return"],
+                "s8_gross_pnl": a["gross_pnl"],
+                "equal_weight_gross_pnl": b["gross_pnl"],
+                "gross_pnl_difference_by_asset": {
+                    asset: a["gross_pnl_by_asset"][asset] - b["gross_pnl_by_asset"][asset] for asset in ASSETS
+                },
+                "fee_difference": a["fees"] - b["fees"],
+                "net_pnl_difference": a["net_pnl"] - b["net_pnl"],
+                "s8_average_risky_exposure": a["average_risky_exposure"],
+                "equal_weight_average_risky_exposure": b["average_risky_exposure"],
+            }
+        )
+    data_root = next(Path(p).parent for p in identity["files"] if p.endswith("/windows.json"))
+    raw_dates = {a: [day(row["timestamp"]) for row in read(data_root / f"{a}.json")["rows"]] for a in ASSETS}
+    horizon_rows = []
+    for r in base:
+        sessions = {a: sum(day(r["date"]) < d <= day(r["end"]) for d in raw_dates[a]) for a in ASSETS}
+        require(len(set(sessions.values())) == 1, "asset session mismatch")
+        horizon_rows.append(
+            {
+                "date": day(r["date"]).isoformat(),
+                "end": day(r["end"]).isoformat(),
+                "calendar_days": (day(r["end"]) - day(r["date"])).days,
+                "trading_sessions": sessions["SPY"],
+            }
+        )
+    decisions = economics["s8"]["10"]["s8_h4"]["periods"]
+    spans = [
+        {
+            "decision_date": day(row["time"]).isoformat(),
+            "intervals": row["decision"]["horizon"],
+            "calendar_days": (day(decisions[min(i + 3, len(decisions) - 1)]["end"]) - day(row["time"])).days,
+            "trading_sessions": sum(r["trading_sessions"] for r in horizon_rows[i : i + 4]),
+        }
+        for i, row in enumerate(decisions)
+        if row["decision"] is not None
+    ]
+    horizon = {
+        "weekly_calendar_days": dict(Counter(r["calendar_days"] for r in horizon_rows)),
+        "weekly_trading_sessions": dict(Counter(r["trading_sessions"] for r in horizon_rows)),
+        "h4_calendar_days": dict(Counter(r["calendar_days"] for r in spans)),
+        "h4_trading_sessions": dict(Counter(r["trading_sessions"] for r in spans)),
+        "fit_and_calibration_cutoffs": cutoffs,
+        "decisions": spans,
+        "interpretation": "Saved target is a variable-duration weekly open-to-open dividend-inclusive log return. Source trend uses the mean of eight daily close returns, and adaptive volatility uses their weighted RMS. H4 multiplies the current weekly surrogate by up to four; no direct four-interval mean or joint path is saved. This is a verified specification mismatch, not an isolated causal loss explanation.",
+    }
+    result = {
+        "status": "PASS",
+        "scope": "Descriptive reconstruction of closed development evidence; zero fits, zero policy replays, no selection, no protected access.",
+        "seeds": list(SEEDS),
+        "forecast_variants": len(variants),
+        "evaluation_dates": dates,
+        "ledgers_verified": len(all_ledgers),
+        "max_accounting_residual": max(r["max_accounting_residual"] for r in audited.values()),
+        "primary": {k: v for k, v in primary.items() if k != "period_attribution"},
+        "fee_attribution": fee_attribution,
+        "annual_benchmark_gaps": gaps,
+        "horizon": horizon,
+        "retrieval": support,
+        "limitations": [
+            "All analyses are retrospective descriptions of the closed 2020-2022 development path. No causal attribution or future improvement is established.",
+            "Seeds are initialization repeats. Rank correlations use three assets and share the same 153 market intervals.",
+            "Absolute forecast/realized magnitude measures signal scale, not attainable trading profit. Log means are not expected simple returns.",
+            "PIT coverage is marginal per saved density. It does not validate joint risk, temporal calibration or funding probability.",
+            "Exposure is measured from saved positions; original full-exposure passive benchmark is retained. No new exposure-matched policy is run.",
+            "Retrieval ESS is kernel concentration only. Regime labels, shuffled-key and age-matched counterfactuals are unavailable in this closed matrix.",
+            "Zero cash yield, source dividend assumptions, simplified fills and the survivor ETF universe are inherited unchanged.",
+        ],
+    }
+    write_csv(output / "forecast_diagnostics.csv", metrics)
+    write_csv(output / "ledger_attribution.csv", ledger_rows)
+    write_csv(output / "annual_attribution.csv", year_rows)
+    write_csv(output / "primary_period_attribution.csv", primary["period_attribution"])
+    write_csv(output / "actual_horizons.csv", horizon_rows)
+    write_json(output / "DIAGNOSTICS.json", result)
+    selected = {r["forecast"]: r for r in metrics if r["family"] == "ensemble" and r["scope"] == "all"}
+    lines = [
+        "# Closed S8 descriptive diagnosis",
+        "",
+        result["scope"],
+        "",
+        f"Verified all {len(all_ledgers)} ledgers; maximum dollar accounting residual {result['max_accounting_residual']:.3g}.",
+        "",
+        f"The primary's gross P&L at its saved 10-bps positions was ${primary['gross_pnl']:,.2f}; fees including liquidation were ${primary['fees']:,.2f}; net P&L was ${primary['net_pnl']:,.2f}. Rebate those fees to cash while fixing the dollar positions and ending wealth is ${primary['terminal_wealth'] + primary['fees']:,.2f}.",
+        "",
+        f"The separately chosen zero-cost positions end at ${zero['terminal_wealth']:,.2f}. The zero-minus-charged wealth gap is ${fee_attribution['zero_minus_charged_policy_wealth']:,.2f}: ${primary['fees']:,.2f} direct fees plus ${fee_attribution['position_path_gross_pnl_difference']:,.2f} gross P&L difference between the saved position paths. The latter includes endogenous allocation and sizing effects.",
+        "",
+        "| Asset | Primary gross P&L |",
+        "|---|---:|",
+        *[f"| {a} | ${primary['gross_pnl_by_asset'][a]:,.2f} |" for a in ASSETS],
+        "",
+        "| Year | S8 return | Equal-weight return | S8 risky exposure |",
+        "|---|---:|---:|---:|",
+        *[
+            f"| {r['year']} | {r['s8_return']:.2%} | {r['equal_weight_return']:.2%} | {r['s8_average_risky_exposure']:.2%} |"
+            for r in gaps
+        ],
+        "",
+        "Annual returns use the exact saved carried path and common dates, grouping by interval start year. Dollar contributions use different carried NAVs and therefore do not isolate a causal allocation effect.",
+        "",
+        "| Forecast | Mean bias | MSE | Mean rank correlation | 80% coverage | 95% coverage |",
+        "|---|---:|---:|---:|---:|---:|",
+        *[
+            f"| {v} | {selected[v]['bias_forecast_minus_realized']:.6f} | {selected[v]['mse']:.6f} | {str(selected[v]['cross_asset_rank_correlation_mean'])[:8]} | {selected[v]['coverage_central80']:.2%} | {selected[v]['coverage_central95']:.2%} |"
+            for v in ("s8", "equal", "memory", "fixed_half", "trend", "adaptive_volatility", "ridge", "zero")
+        ],
+        "",
+        "All 15 forecasts, all three seeds, ensemble, individual assets and each year are retained in forecast_diagnostics.csv. These are descriptive metrics with no newly selected winner or recalibration.",
+        "",
+        f"Weekly trading-session counts: {horizon['weekly_trading_sessions']}. H4 trading-session spans: {horizon['h4_trading_sessions']}. "
+        + horizon["interpretation"],
+        "",
+        *[
+            f"Seed {seed}: effective kernel support mean {v['effective_weight_support']['mean']:.4f} of 60 dates (minimum {v['effective_weight_support']['min']:.4f}); largest normalized date weight maximum {v['largest_date_weight']['max']:.4f}; weighted mean age {v['weighted_age_days']['mean']:.1f} days."
+            for seed, v in support.items()
+        ],
+        "",
+        "Near-uniform kernel weights are evidence about weak localization, not proof that context cannot help. Saved bank records allow support and age measurement; no new shuffled-key policy is evaluated.",
+        "",
+        *["- " + v for v in result["limitations"]],
+    ]
+    with (output / "REPORT.md").open("x") as handle:
+        handle.write("\n".join(lines) + "\n")
+    require(all(digest(p) == h for p, h in identities.items()), "input changed during diagnosis")
+    write_json(
+        output / "INPUT_IDENTITIES.json",
+        {
+            "files": identities,
+            "frozen_sources_verified": len(frozen["sources"]),
+            "saved_data_files_verified": len(identity["files"]),
+            "consumed_files_matched_to_closed_manifest": sum(
+                path in historical_manifest for path in identities
+            ),
+            "diagnostic_source_sha256": digest(__file__),
+        },
+    )
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=Path, default=Path("outputs/frem_s8_2020_2022_20261014_attempt1"))
+    parser.add_argument("--freeze", type=Path, default=Path("research/frem_s8_20261014/freeze2.json"))
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    args.output.mkdir(parents=True, exist_ok=False)
+    started = time.monotonic()
+    try:
+        result = diagnose(args.root, args.output, args.freeze)
+        print(
+            json.dumps(
+                {
+                    k: result[k]
+                    for k in ("status", "ledgers_verified", "max_accounting_residual", "fee_attribution")
+                },
+                indent=2,
+            )
+        )
+    except BaseException:
+        write_json(
+            args.output / "FAILURE.json",
+            {"traceback": traceback.format_exc(), "source_sha256": digest(__file__)},
+        )
+        raise
+    finally:
+        write_json(
+            args.output / "RESOURCES.json",
+            {
+                "seconds": time.monotonic() - started,
+                "peak_rss_raw": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                "libraries": "Python standard library only",
+                "model_fits": 0,
+                "policy_replays": 0,
+                "protected_access": False,
+            },
+        )
+
+
+if __name__ == "__main__":
+    main()

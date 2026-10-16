@@ -1,0 +1,1 @@
+{"attempt_id":"attempt","consumed":true,"elapsed_seconds":2.0,"freeze_id":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","maximum_observed_owned_rss_mib":16.0,"operation":"precision","output_limit_bytes":536870912,"resource_observations":1,"rss_limit_mib":256,"state":"COMPLETE","wall_limit_seconds":600,"worker_exit_code":0}

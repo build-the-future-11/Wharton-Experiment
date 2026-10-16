@@ -1,0 +1,10 @@
+C901 `_decode` is too complex (11 > 10)
+  --> successors/frem_s10/src/frem_s10/model/checkpoint.py:71:5
+   |
+71 | def _decode(value: object, depth: int = 0) -> object:
+   |     ^^^^^^^
+72 |     if depth > 32:
+73 |         raise ContractError("checkpoint nesting exceeds schema limit")
+   |
+
+Found 2 errors (1 fixed, 1 remaining).

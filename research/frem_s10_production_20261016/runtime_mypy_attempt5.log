@@ -1,0 +1,2 @@
+successors/frem_s10/tests/test_production_runtime.py:294: error: Argument 1 to "append" of "Journal" has incompatible type "dict[str, JSONValue] | dict[str, str]"; expected "JSONValue"  [arg-type]
+Found 1 error in 1 file (checked 9 source files)

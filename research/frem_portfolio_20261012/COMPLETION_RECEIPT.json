@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-12T18:06:09.062700+00:00",
+  "status": "COMPLETE_EXPLORATORY_REANALYSIS",
+  "verdict": "REQUESTED_ALL_CASE_6PCT_TARGET_NOT_MET",
+  "package": "successors/frem_portfolio_v1",
+  "run_directory": "outputs/frem_portfolio_20261012_attempt1",
+  "report": "outputs/frem_portfolio_20261012_attempt1/REPORT.md",
+  "tests": {
+    "passed": 31,
+    "log": "research/frem_portfolio_20261012/tests_final.log"
+  },
+  "lint": "PASS",
+  "portfolio_cases": 1424,
+  "primary_cases": 32,
+  "primary_pass6pct": 0,
+  "primary_relative_wealth_range": [
+    -0.029565878320196415,
+    0.003477615145270452
+  ],
+  "forecast_files": 90,
+  "forecast_rows": 17396,
+  "accounting_audit": {
+    "status": "PASS_INDEPENDENT_ACCOUNTING_RECONSTRUCTION",
+    "ledgers": 2276,
+    "periods": 34276,
+    "comparisons": 1424,
+    "max_absolute_arithmetic_residual": 4.0745362639427185e-10,
+    "new_fits": 0,
+    "independent_training_reproduction": false,
+    "source_files": 6,
+    "prediction_files": 90
+  },
+  "new_model_fits": 0,
+  "s4_in_other_chat": {
+    "fits": 6,
+    "cells": 24,
+    "all_memory_weights_zero": true,
+    "source": "outputs/frem_s4_20261012_attempt1/completion.json"
+  },
+  "framework_source_integrated": false,
+  "current_allocation": "UNRESOLVED_INPUTS_RESEARCH_SHORTLIST_ONLY",
+  "laura_report": "research/frem_portfolio_20261012/LAURA_CURRENT_RESEARCH.md",
+  "protected_outcomes_accessed": false,
+  "universal_guarantee": false,
+  "automation_id": "frem-overnight-integration-and-morning-review",
+  "morning_review": "2026-10-13T07:00:00+05:30"
+}

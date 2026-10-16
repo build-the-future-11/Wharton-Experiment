@@ -1,0 +1,30 @@
+{
+  "baseline": "patch_transformer",
+  "status": "fitted",
+  "train_rows": 1586,
+  "fitted_through": 1159833600000000000,
+  "scale": 0.08872395748063865,
+  "scale_calibration": "purged_chronological_training_tail_with_earlier_only_scaler",
+  "passes": [
+    {
+      "pass": "inner_scale_fit",
+      "rows": 1176,
+      "epochs": 12,
+      "gradient_steps": 444,
+      "last_batch_mse": 0.008117280900478363,
+      "wall_limited": false
+    },
+    {
+      "pass": "full_training_refit",
+      "rows": 1586,
+      "epochs": 12,
+      "gradient_steps": 600,
+      "last_batch_mse": 0.0026846358086913824,
+      "wall_limited": false
+    }
+  ],
+  "trainable_parameters": 69249,
+  "elapsed_seconds": 4.41099795899936,
+  "max_wall_seconds": 120,
+  "budget_note": "Wall clock checked between neural minibatches and estimator calls; a single tree/linear fit cannot be forcibly interrupted here"
+}

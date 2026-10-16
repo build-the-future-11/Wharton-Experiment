@@ -1,0 +1,19 @@
+{
+  "samples": [
+    {
+      "free_speculative_mib": 404.875,
+      "pageouts": 659310
+    },
+    {
+      "free_speculative_mib": 365.671875,
+      "pageouts": 659310
+    },
+    {
+      "free_speculative_mib": 292.828125,
+      "pageouts": 659310
+    }
+  ],
+  "admitted": false,
+  "floor_mib": 512,
+  "new_model_cells_started": 0
+}

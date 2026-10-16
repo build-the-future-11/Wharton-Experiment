@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prediction_values_recomputed": 72576,
+  "max_nll_error": 4.218847493575595e-15,
+  "ensemble_ledgers_verified": 288,
+  "max_accounting_residual": 5.684341886080802e-14,
+  "frozen_identities_verified": 22,
+  "scope": "Standard-library arithmetic verification, not independent retraining",
+  "prior_audit_failure": "Retained; initial audit omitted explicit terminal liquidation fee. Model accounting unchanged."
+}

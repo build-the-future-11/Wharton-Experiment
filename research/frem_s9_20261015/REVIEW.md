@@ -1,0 +1,15 @@
+# S9 adversarial implementation review
+
+2026-10-15. Local source/numerical review by the implementing assistant; **not an independent external review or independent reproduction**.
+
+The specification was recorded before implementing the model. Review traced each component to its equations: strict feature/label maturity, train-only scales, shared neighbor identities across horizons, constant-repetition dividend arithmetic, finite joint scenarios, diagonal-only risk ablation, exact cash-funded entry, price-only exit fees, cash dividends, complete action enumeration, date-block uncertainty and full crossed output coverage.
+
+Corrections before the development freeze: checkpoints now retain and revalidate maturity/feature timestamps; the launcher records persistent consumption before fitting; admission failures return nonzero without preparing/fitting market data; the periodic runtime/RSS timer is disabled before recording an exception. Initial style failures are retained. No market output existed during these repairs.
+
+Evidence: 37 tests pass. These include future-input perturbation, source hash/calendar corruption, horizon pairing, checkpoint equivalence and leakage, correlated-risk counterexamples, exact objective versus direct scenario variance, exhaustive grid optimality, cash/dividend fees, no-reinvestment buy-and-hold, fold-weighted uncertainty, environment/source freeze validation and blocked/consumed launcher behavior. Constructed end-to-end tests generate two fits and all 96 ledgers solely in temporary directories; these are engineering fixtures, not experimental market results.
+
+Real-data preparation independently of fitting reconciles 3,021 daily sessions, 626 weekly anchors and 608 eligible examples. Fold A has 243 training examples and 38 evaluation blocks; fold B has 399 and 51. Source hashes and original retrieval timestamps are retained. Availability conventions remain assumptions, and the dataset is neither point-in-time certified nor untouched confirmation.
+
+Residual objections: only three surviving ETFs; prior researcher exposure; dependent overlapping training labels; 12-dimensional neighbor distances with limited examples; finite empirical tails omit unseen shocks; no calibrated predictive probability claim; no trading-time fill verification; ex-date dividend accrual ignores payment delays; no taxes or sourced cash yield; monthly full liquidation differs from a continuously held portfolio; discrete action grid may leave utility unrealized; endpoint drawdown omits intraperiod losses; the period count does not by itself establish statistical power. Both prescribed descriptive block intervals must be reported, and neither establishes confirmation. A positive exploratory result would require new independent, admitted evidence before deployment or the original scientific claim could advance.
+
+No guarantee of profit follows from the mathematical proofs or tests. Valid negative/inconclusive outcomes close this diagnostic version. The original 0.01-nat criterion and 6% objective are not weakened; S9's separate MSE endpoint cannot satisfy either by relabeling.

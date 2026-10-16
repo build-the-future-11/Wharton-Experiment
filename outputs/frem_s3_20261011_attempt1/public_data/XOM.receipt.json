@@ -1,0 +1,13 @@
+{
+  "symbol": "XOM",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/XOM?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:22.643769+00:00",
+  "http_status": 200,
+  "path": "XOM.json",
+  "sha256": "1b3515249ae80c6b9049e1768fc2519f14055d2e4c742dccc27514f1c7d05b8c",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

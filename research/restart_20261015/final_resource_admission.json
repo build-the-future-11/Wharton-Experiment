@@ -1,0 +1,25 @@
+{
+  "sampled_at": "2026-10-15T14:28:28.753806+00:00",
+  "minimum_free_plus_speculative_mib": 512,
+  "samples": [
+    {
+      "timestamp": "2026-10-15T14:28:27.099844+00:00",
+      "free_plus_speculative_mib": 146.671875,
+      "pageouts": 632255
+    },
+    {
+      "timestamp": "2026-10-15T14:28:27.722661+00:00",
+      "free_plus_speculative_mib": 197.4375,
+      "pageouts": 632256
+    },
+    {
+      "timestamp": "2026-10-15T14:28:28.253477+00:00",
+      "free_plus_speculative_mib": 146.578125,
+      "pageouts": 632261
+    }
+  ],
+  "admitted": false,
+  "market_fits": 0,
+  "scientific_imports": 0,
+  "scope": "Standard admission only; historical S6-specific override retained unchanged."
+}

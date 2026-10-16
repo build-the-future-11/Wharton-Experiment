@@ -1,0 +1,70 @@
+{
+  "scope": "simulated Linux proc/cgroup fixtures and preserved mac parser; no Linux live execution",
+  "checks": [
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/tests/test_linux_resources_audit.py",
+        "successors/frem_s10/tests/test_operations_audit.py::test_memory_threshold_pageouts_and_required_counters",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/private/tmp/frem-s10-linux-resources-20261016-attempt1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.7182321250147652,
+      "stdout": "..............................                                           [100%]\n30 passed in 0.33s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.10537441697670147,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.027374083001632243,
+      "stdout": "2 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/private/tmp/frem-s10-linux-resources-mypy-20261016-attempt1",
+        "successors/frem_s10/src/frem_s10/runtime/resources.py",
+        "successors/frem_s10/tests/test_linux_resources_audit.py"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 3.9868402919964865,
+      "stdout": "successors/frem_s10/tests/test_linux_resources_audit.py:206: error: Module \"frem_s10.runtime.resources\" does not explicitly export attribute \"sys\"  [attr-defined]\nsuccessors/frem_s10/tests/test_linux_resources_audit.py:208: error: Module \"frem_s10.runtime.resources\" does not explicitly export attribute \"time\"  [attr-defined]\nFound 2 errors in 1 file (checked 2 source files)\n",
+      "stderr": ""
+    }
+  ]
+}

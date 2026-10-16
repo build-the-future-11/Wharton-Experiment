@@ -1,0 +1,54 @@
+{
+  "active_implementation": "successors/frem_s10/src/frem_s10",
+  "head": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "checkout": "executable dirty development checkout; current candidate is not in HEAD",
+  "question": "Does delayed contextual mixture-level proper-score fitting improve total-return forecasting and fee-aware decisions over the fixed simple references?",
+  "claimed_novelty": "Not established; close to contextual/hierarchical stacking and proper scoring",
+  "computation": "CPU NumPy binary64 finite scenario and simplex optimization, deterministic online state; no neural epochs, batches, optimizer, scheduler, AMP, CUDA backend",
+  "current_design": {
+    "assets": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "source_scope": "retrospective current-vintage development 2005-2016",
+    "pilot_values": "before 2010",
+    "campaign_values": "before 2017",
+    "forecast_variants": 6,
+    "ledgers": 192,
+    "costs_bps": [
+      0,
+      10,
+      20,
+      40
+    ],
+    "pilot_ceiling_seconds": 600,
+    "qualification_ceiling_seconds": 3600,
+    "campaign_ceiling_seconds": 3600
+  },
+  "existing_environment_metadata": {
+    "s10_python": "3.12",
+    "s10_numpy": "2.5.4",
+    "s10_torch": "not installed or required",
+    "root_torch": "2.14.1 metadata only; no CUDA runtime import",
+    "nvidia_smi_available": false
+  },
+  "primary_sources_checked_2026_10_16": [
+    {
+      "url": "https://sites.stat.washington.edu/people/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "publication": "JASA 2007",
+      "relevance": "Energy-score propriety; does not establish fitted forecast calibration or separate price/dividend identification."
+    },
+    {
+      "url": "https://arxiv.org/abs/2101.08954",
+      "submitted": "2021-01-22",
+      "revised": "2021-05-20",
+      "relevance": "Context-varying partially pooled mixture weights are established prior art; S10 uses causal matured score records and a non-Bayesian constrained finite mixture."
+    },
+    {
+      "url": "https://github.com/Kaggle/docker-python",
+      "relevance": "Official CPU/GPU image source; no claim about the user account quota or currently allocated runtime."
+    }
+  ],
+  "historical_results": "S6/S7 unsupported; S8 predictive inconclusive/economic gate failed; historical S10 generated test counts are not current-source confirmation. No closed study rerun."
+}

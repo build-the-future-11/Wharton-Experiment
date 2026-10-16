@@ -1,0 +1,47 @@
+{
+  "tests": {
+    "command": [
+      "successors/frem_s10/.venv/bin/python",
+      "-B",
+      "-m",
+      "pytest",
+      "-c",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/tests/test_supervisor_audit.py",
+      "-q",
+      "-W",
+      "error",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "sha256": "4d292a94f0165c02c50520f33a20b1eece312b4a14b6da4114725cbfd9f832c5"
+  },
+  "lint": {
+    "command": [
+      "successors/frem_s10/.venv/bin/ruff",
+      "check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10/runtime/journal.py",
+      "successors/frem_s10/src/frem_s10/runtime/supervisor.py",
+      "successors/frem_s10/tests/test_supervisor_audit.py"
+    ],
+    "exit_code": 0,
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "types": {
+    "command": [
+      "successors/frem_s10/.venv/bin/mypy",
+      "--config-file",
+      "successors/frem_s10/pyproject.toml",
+      "--cache-dir",
+      "research/frem_s10_repair_20261015/mypy_cache",
+      "successors/frem_s10/src/frem_s10/runtime/journal.py",
+      "successors/frem_s10/src/frem_s10/runtime/supervisor.py",
+      "successors/frem_s10/tests/test_supervisor_audit.py"
+    ],
+    "exit_code": 0,
+    "sha256": "8228fcc5ce46d42d01caf3cd941f4e9c5f2bcc372bb5b147a2f0572d2dd675a8"
+  }
+}

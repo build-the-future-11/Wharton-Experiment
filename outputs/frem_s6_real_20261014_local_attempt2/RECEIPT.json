@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-14T01:12:55.304833+00:00",
+  "user_scope": "Run locally; full frozen 24-cell matrix",
+  "source_and_data_verification": "Passed launcher verify() before resource admission",
+  "admission": {
+    "checked_at": "2026-10-14T01:12:07.505504+00:00",
+    "samples": [
+      {
+        "available_mib": 326.875,
+        "pageouts": 137880
+      },
+      {
+        "available_mib": 197.953125,
+        "pageouts": 137882
+      },
+      {
+        "available_mib": 169.109375,
+        "pageouts": 137882
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "market_results_available": false,
+  "process_inspection": "Read-only; no processes stopped",
+  "next_action": "Retry only after local memory is freed",
+  "protected_access": false
+}

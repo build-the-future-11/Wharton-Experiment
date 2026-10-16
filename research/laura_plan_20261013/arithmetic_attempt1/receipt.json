@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-13T15:55:33.243809+00:00",
+  "status": "CONDITIONAL_ARITHMETIC_COMPLETE",
+  "grid_cells": 18,
+  "model_fit_or_backtest": false,
+  "source_and_output_sha256": {
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/laura_planning_v1/run.py": "94daa918a43cc69a1b1d3321bccfa7287606d478362c0593d17c176b23b9792c",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/laura_planning_v1/core.py": "0179800b2e7d43055c12d85660e3689291c5e9f518e80f5745f46cc70c2708c8",
+    "research/laura_plan_20261013/arithmetic_attempt1/scenarios.json": "1518dd56313be2ff19bdd32f4d5be09ca7f3ad5ab479ddbba2b02ac88f83e191",
+    "research/laura_plan_20261013/arithmetic_attempt1/SENSITIVITY_TABLE.md": "ba9a36d4291b5dc0df836155b399980fc44f86515c8015f387aa9fc204d098a7"
+  }
+}

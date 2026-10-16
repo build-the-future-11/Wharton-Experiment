@@ -1,0 +1,11 @@
+{
+  "status": "FAILED",
+  "error": "'max_drawdown'",
+  "exception": "KeyError",
+  "completed_at": "2026-10-15T14:10:13.744346+00:00",
+  "seconds": 0.37042350000410806,
+  "peak_rss_mib": 32.8125,
+  "market_fits": 0,
+  "new_policy_replays": 0,
+  "protected_access": false
+}

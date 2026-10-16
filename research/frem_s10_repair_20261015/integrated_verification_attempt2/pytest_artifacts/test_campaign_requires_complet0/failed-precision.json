@@ -1,0 +1,1 @@
+{"completion":{"path":"pilot-completed.json","sha256":"2342a81097b469b4f6b27c5e3a33a73ba00012c966c0f34ed374d7d00331c309"},"declaration":{"path":"pilot.json","sha256":"9e8c978888570437081965ae6962b8c438939b194b058898e78f5462ca9f17f5"},"evidence_scope":"GENERATED_ENGINEERING","schema":"s10-precision-prerequisite-v1","state":"COMPLETE","status":"PRECISION_INADEQUATE"}

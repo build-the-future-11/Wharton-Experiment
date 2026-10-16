@@ -1,0 +1,20 @@
+{
+  "metadata_files": 58,
+  "candidate_symbol_hits": {
+    "MSFT": [],
+    "XOM": [],
+    "PG": [],
+    "WMT": [],
+    "MCD": [],
+    "CAT": [],
+    "IBM": [],
+    "GE": [],
+    "KO": [
+      "data/engineering/yahoo_calibrated_v1/panel.parquet.manifest.json"
+    ],
+    "PEP": [],
+    "ABT": [],
+    "MMM": []
+  },
+  "scope": "Repository metadata check; not global proof of human ignorance or independent economic histories"
+}

@@ -1,0 +1,13 @@
+{
+  "symbol": "GE",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/GE?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:29.920158+00:00",
+  "http_status": 200,
+  "path": "GE.json",
+  "sha256": "3ed5c915879827cdd76a48b34d34bed3b6247d214e9745287bca93ee8d1f8abc",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

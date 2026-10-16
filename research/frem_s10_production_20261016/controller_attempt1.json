@@ -1,0 +1,14 @@
+{
+  "command": "rtk proxy successors/frem_s10/.venv/bin/python -B -m frem_s10 advance --manifest research/frem_s10_production_20261016/EXECUTION_PLAN.json --execute",
+  "exit_code": 3,
+  "status": "BLOCKED",
+  "stage": "verification",
+  "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "host": {
+    "path": "research/frem_s10_production_20261016/execution/controller/verification-000001/host.json",
+    "sha256": "72d9b63266ae64a663d5d31c323394179ce817a3392d3374b904246b4f4b3f4f"
+  },
+  "consumed": false,
+  "automatic_retry_permitted": true,
+  "scope": "ACTUAL_CONTROLLER_RESOURCE_REFUSAL_BEFORE_FULL_VERIFICATION_OR_RESEARCH"
+}

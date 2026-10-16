@@ -1,0 +1,20 @@
+{
+  "status": "DEVELOPMENT_ONLY_UNRUN",
+  "max_variants": 12,
+  "max_total_runs": 36,
+  "max_wall_seconds": 43200,
+  "variants": [
+    {"name": "low_data_10pct", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"training_fraction": 0.1}},
+    {"name": "low_data_25pct", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"training_fraction": 0.25}},
+    {"name": "low_data_50pct", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"training_fraction": 0.5}},
+    {"name": "noise_small", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"noise_std": 0.01}},
+    {"name": "noise_large", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"noise_std": 0.05}},
+    {"name": "missing_10pct", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"missing_probability": 0.1}},
+    {"name": "missing_30pct", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "evaluation": {"missing_probability": 0.3}},
+    {"name": "short_context", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "data": {"context": 32}},
+    {"name": "long_context", "models": ["frem", "no_memory", "xgboost"], "seeds": [11], "data": {"context": 128}},
+    {"name": "small_memory", "models": ["frem", "no_memory", "fifo_memory"], "seeds": [11], "model": {"memory_capacity": 128}},
+    {"name": "large_memory", "models": ["frem", "no_memory", "fifo_memory"], "seeds": [11], "model": {"memory_capacity": 2048}},
+    {"name": "hybrid_residual_tree", "models": ["frem", "hybrid_xgboost", "xgboost"], "seeds": [11]}
+  ]
+}

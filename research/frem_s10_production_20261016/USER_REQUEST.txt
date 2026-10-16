@@ -1,0 +1,1 @@
+Finish the remaining production integration, verification and data admission. Fix every remaining flaw you can, preserve all old results, and run the fixed research protocol once the resource gate passes.

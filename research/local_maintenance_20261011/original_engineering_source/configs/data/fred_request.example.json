@@ -1,0 +1,11 @@
+{
+  "series_id": "UNRATE",
+  "observation_start": "1990-01-01",
+  "observation_end": "2025-12-31",
+  "realtime_start": "1776-07-04",
+  "realtime_end": "9999-12-31",
+  "api_key_env": "FRED_API_KEY",
+  "availability_delay_days": 2,
+  "timeout_seconds": 30,
+  "page_size": 100000
+}

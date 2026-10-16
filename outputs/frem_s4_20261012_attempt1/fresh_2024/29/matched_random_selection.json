@@ -1,0 +1,55 @@
+{
+  "selected": {
+    "weight": 0.0,
+    "power": 0.0,
+    "nll": -1.1608617776913925,
+    "half_gains": [
+      0.0,
+      0.0
+    ],
+    "eligible": true
+  },
+  "candidates": [
+    {
+      "weight": 0.0,
+      "power": 0.0,
+      "nll": -1.1608617776913925,
+      "half_gains": [
+        0.0,
+        0.0
+      ],
+      "eligible": true
+    },
+    {
+      "weight": 0.25,
+      "power": 0.0,
+      "nll": -1.1607749606005062,
+      "half_gains": [
+        0.0005684507603895638,
+        -0.0007420849421623802
+      ],
+      "eligible": false
+    },
+    {
+      "weight": 0.5,
+      "power": 0.0,
+      "nll": -1.1588884712256078,
+      "half_gains": [
+        7.951240751026167e-05,
+        -0.004026125339079655
+      ],
+      "eligible": false
+    },
+    {
+      "weight": 1.0,
+      "power": 0.0,
+      "nll": -1.1498997229877714,
+      "half_gains": [
+        -0.003984089592006217,
+        -0.01794001981523619
+      ],
+      "eligible": false
+    }
+  ],
+  "validation_boundary": 1667260800000000000
+}

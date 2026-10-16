@@ -1,0 +1,157 @@
+{
+  "status": "BOUNDED_REPOSITORY_METADATA_INVENTORY_COMPLETE",
+  "as_of": "2026-10-14",
+  "method": "Read source/manifest/freeze metadata and completed reports; no raw quote/cache arrays or protected outcomes opened.",
+  "protected_outcomes_read_by_this_audit": false,
+  "claim_limit": "Authoritative known lineage metadata only; absence of recorded exposure is not proof of global ignorance or independent financial histories.",
+  "windows": [
+    {
+      "scope": "SPY/TLT/GLD",
+      "window": "2005-2016",
+      "status": "EXPOSED_TRAINING",
+      "evidence": [
+        "research/frem_s8_20261014/freeze2.json"
+      ],
+      "eligible_as_untouched_outer_test": false
+    },
+    {
+      "scope": "SPY/TLT/GLD",
+      "window": "2017-2018",
+      "status": "EXPOSED_CALIBRATION_SELECTION_AND_S6_EVALUATION",
+      "evidence": [
+        "research/frem_s6_real_20261014/freeze2/protocol.json",
+        "research/frem_s7_20261014/freeze2.json"
+      ],
+      "eligible_as_untouched_outer_test": false
+    },
+    {
+      "scope": "SPY/TLT/GLD",
+      "window": "2019",
+      "status": "CLOSED_S7_EVALUATION_NO_RETUNING",
+      "evidence": [
+        "research/frem_s7_20261014/freeze2.json",
+        "docs/CODEX_HANDOFF.md"
+      ],
+      "eligible_as_untouched_outer_test": false
+    },
+    {
+      "scope": "SPY/TLT/GLD",
+      "window": "2020-2022",
+      "status": "CLOSED_S8_EVALUATION_NO_RETUNING",
+      "evidence": [
+        "research/frem_s8_20261014/freeze2.json",
+        "research/frem_s8_20261014/FRESHNESS_AUDIT.json"
+      ],
+      "eligible_as_untouched_outer_test": false
+    },
+    {
+      "scope": "SPY/GLD legacy feature cache",
+      "window": "2020 onward through historical download day",
+      "status": "LEGACY_CACHE_EXPOSURE_DECLARED_IN_METADATA",
+      "evidence": [
+        "legacy/wharton_lab_v0/data/manifests/DATA_MANIFEST.yaml"
+      ],
+      "eligible_as_untouched_outer_test": false,
+      "note": "Metadata mtime 2026-09-26; no cache values opened. Legacy presence does not authorize access to original 2025+ protected outcomes."
+    },
+    {
+      "scope": "Twelve current-survivor US equities",
+      "window": "2023-October2024",
+      "status": "CLOSED_S3_AND_EXPLICIT_REUSED_S4_DEVELOPMENT",
+      "evidence": [
+        "research/frem_s3_20261011/REPORT.md",
+        "research/frem_s4_20261012/REPORT.md"
+      ],
+      "eligible_as_untouched_outer_test": false
+    },
+    {
+      "scope": "Public 24-stock survivor crisis sample",
+      "window": "Requested 1998-2024 histories; six historical crisis/recovery windows studied",
+      "status": "ACQUIRED_AND_PARTLY_EVALUATED_CURRENT_VINTAGE_DATA",
+      "evidence": [
+        "data/public_equity_crises_v1/manifest.json",
+        "docs/CODEX_HANDOFF.md"
+      ],
+      "eligible_as_untouched_outer_test": false,
+      "note": "No remaining segment is certified untouched merely because it lacks a named experiment here."
+    },
+    {
+      "scope": "Seven regional factor research portfolios",
+      "window": "1926/1990-December2024 normalized metadata coverage",
+      "status": "ACQUIRED_NUMERICALLY_PARSED_ZERO_MODEL_CELLS_IN_MANIFEST",
+      "evidence": [
+        "data/public_regional_factors_20261011/manifest.json"
+      ],
+      "eligible_as_untouched_outer_test": null,
+      "note": "Potential separately scoped research data, not a certified unseen tradable-wealth test. Current-vintage revisions, overlapping regions and unverified historical availability remain. Raw archives may contain 2025+ and remain opaque."
+    },
+    {
+      "scope": "All original protected data",
+      "window": "2025 onward",
+      "status": "PROTECTED_DO_NOT_ACCESS",
+      "evidence": [
+        "research/protocol.json",
+        "docs/CODEX_HANDOFF.md"
+      ],
+      "eligible_as_untouched_outer_test": false,
+      "note": "No mature supported candidate, full confirmatory freeze or precision justification has established a reason to spend it."
+    }
+  ],
+  "uninspected_development_window_identified": false,
+  "run_ready": false,
+  "decision": "No new ETF evaluation window is certified available. Close current studies honestly and require new data/exposure/precision admission for a successor.",
+  "source_identities": [
+    {
+      "path": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+      "sha256": "f8692f6aee524dd3d3396213affab48d353e7810de82d79d17fb412894d9e462"
+    },
+    {
+      "path": "research/frem_s8_20261014/freeze2.json",
+      "sha256": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457"
+    },
+    {
+      "path": "research/frem_s7_20261014/freeze2.json",
+      "sha256": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14"
+    },
+    {
+      "path": "research/frem_s6_real_20261014/freeze2/protocol.json",
+      "sha256": "fc08a5b75573118ff9f58027b0b73d23aed3c3d53b2b1bf1732fab87cf1c7d77"
+    },
+    {
+      "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+      "sha256": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e"
+    },
+    {
+      "path": "research/frem_s3_20261011/freshness_inventory.json",
+      "sha256": "4b27f3d01013506e473689154789a65bdc5ade94cd01d4e424976456d2820693"
+    },
+    {
+      "path": "research/frem_s3_20261011/freshness_output_check.json",
+      "sha256": "7b9d06fbaf6585c4c3e2c75f5753acd9b9f3dc88bff5b5008812ed8fe35778f0"
+    },
+    {
+      "path": "research/frem_s3_20261011/REPORT.md",
+      "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+    },
+    {
+      "path": "research/frem_s4_20261012/REPORT.md",
+      "sha256": "2b0d34a50a2dd419600f152ae4e793dabb4d9c3927b1c199665fae1959752c3f"
+    },
+    {
+      "path": "configs/frem_s3_public.json",
+      "sha256": "128f938eab6f87b51490236a838c6c9eef6cc622a88db57b6c93de31ca4ed121"
+    },
+    {
+      "path": "data/public_equity_crises_v1/manifest.json",
+      "sha256": "e3458a7a2e9b8396ae1c63309a8f2f9e3f63923288e4461284e4b74b2235b817"
+    },
+    {
+      "path": "data/public_regional_factors_20261011/manifest.json",
+      "sha256": "01ef22b9704314b2bb40aefd69899e49bb1a376b95999faba479edb4493a7514"
+    },
+    {
+      "path": "legacy/wharton_lab_v0/data/manifests/DATA_MANIFEST.yaml",
+      "sha256": "3d8a68fb3a431c4a9a00f0b9772c869109ff6673d247b36164cf9d58e6da7771"
+    }
+  ]
+}

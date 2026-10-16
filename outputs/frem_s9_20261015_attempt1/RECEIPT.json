@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_RESOURCE_ADMISSION",
+  "market_fits": 0,
+  "completed_at": "2026-10-15T15:12:07.069027+00:00",
+  "exit_code": 3,
+  "seconds": 1.5661778329958906,
+  "peak_rss_mib": 27.53125,
+  "protected_access": false,
+  "confirmatory": false,
+  "independent_reproduction": false
+}

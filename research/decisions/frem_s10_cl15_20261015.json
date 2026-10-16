@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-15T17:11:36.974002+00:00",
+  "iteration": "FREM-S10",
+  "design_revision": 3,
+  "observation": "A4 requires full liquidation before the next decision, but revision-2 q+1 decision/q+2 fill ordering omitted its precommitted sale subphase. Internal review found this before any S10 scientific evaluation.",
+  "hypothesized_cause": "Unspecified phase ordering makes the required ablation impossible with the ordinary one-rebalance transition.",
+  "change": "Add prospective CL-15 ordered forced-sale subphase, preserve the original design and science declaration, and implement/test it separately.",
+  "predicted_effect": "Makes A4 fees/ownership and policy information explicit; no predicted investment gain.",
+  "discriminating_experiment": "Constructed hand-accounting cases and later fixed A4 ablation only after all campaign gates pass.",
+  "result": "CLARIFIED_BEFORE_IMPLEMENTATION_NOT_MARKET_EVALUATED",
+  "addendum": "research/frem_s10_repair_20261015/DESIGN_ADDENDUM_CL15.md",
+  "previous_science_sha256": "e98657749f8a4318e8f4a85c31c87c040d9d28874c027fe85f701fc4ee46555e",
+  "new_scientific_freeze": false,
+  "market_fits": 0,
+  "protected_access": false,
+  "thresholds_changed": false
+}

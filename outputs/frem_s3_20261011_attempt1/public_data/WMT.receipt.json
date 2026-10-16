@@ -1,0 +1,13 @@
+{
+  "symbol": "WMT",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/WMT?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:24.741865+00:00",
+  "http_status": 200,
+  "path": "WMT.json",
+  "sha256": "5ccf20a9feb37393ed26a15e34bfe8926066f0dd5f125a750fb44cfaa74385a6",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

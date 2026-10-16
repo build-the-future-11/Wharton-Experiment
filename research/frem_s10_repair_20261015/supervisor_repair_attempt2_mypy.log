@@ -1,0 +1,5 @@
+successors/frem_s10/tests/test_supervisor_audit.py:323: error: Module "frem_s10.runtime.supervisor" does not explicitly export attribute "time"  [attr-defined]
+successors/frem_s10/tests/test_supervisor_audit.py:339: error: Module "frem_s10.runtime.supervisor" does not explicitly export attribute "publish_json"  [attr-defined]
+successors/frem_s10/tests/test_supervisor_audit.py:341: error: Name "supervisor.JSONValue" is not defined  [name-defined]
+successors/frem_s10/tests/test_supervisor_audit.py:351: error: Name "supervisor.JSONValue" is not defined  [name-defined]
+Found 4 errors in 1 file (checked 3 source files)

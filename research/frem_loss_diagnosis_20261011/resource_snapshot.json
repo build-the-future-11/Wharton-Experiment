@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-11T12:58:12.773931+00:00",
+  "page_size": 16384,
+  "free_plus_speculative_mib": 202.125,
+  "pageouts": 684054,
+  "admission_floor_mib": 512,
+  "new_model_fits": 0,
+  "scope": "One snapshot, below floor; no claim of three-sample admission"
+}

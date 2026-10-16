@@ -1,0 +1,218 @@
+{
+  "complete_candidate_verification": false,
+  "created_at": "2026-10-16T03:51:12.918279+00:00",
+  "current_metadata_suite": {
+    "deselected": 1,
+    "passed": 46,
+    "seconds": 5.36
+  },
+  "evidence": [
+    {
+      "path": "research/frem_s10_production_20261016/runtime_metadata_tests_attempt3.log",
+      "sha256": "fa65fd351bbb5ce0ab1b8063a04a3edc4a146030e40e5d5b9376f774289b4fc6"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/continuation_tests_attempt2.log",
+      "sha256": "d4bc856ea64014f30cb57ed7b3607f2a2a693d625a00a3aa2d8980200bccd95d"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_mypy.log",
+      "sha256": "8f3f4c0ebcb835e848682f2c6610a1bf32c86a993bdb626d9ff36e3a49408398"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_format.log",
+      "sha256": "04eb0d6e6734823dcd2b2b704729e976f683df7a8f334da7216520ef1cb319bf"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_tests_attempt5.log",
+      "sha256": "0b050bd3773415884ad80a02103e478adcd007d1cb558febf62dfa3c4ab13acc"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_existing_tests_attempt1.log",
+      "sha256": "95abc4e221464bd69fefb5f97188e4ad6b026a2c0ba33963ca205f463e1440c3"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_metadata_tests_attempt2.log",
+      "sha256": "07f9526d1f370fecf196514aece782d30594374d00766708d00e4930ef2071cd"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/freeze_inventory_regression_attempt1.log",
+      "sha256": "52cf7e4c42b8965f54bc9ff8e35d7cf83176a5c6d02851b3520ce1b8e3638f43"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/freeze_inventory_mypy_attempt1.log",
+      "sha256": "f9b031e5c45aa702cd4fef028d465551cb20a2c4698e0913c7b00766b20ac4d8"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/freeze_inventory_lint_attempt1.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/freeze_inventory_format_attempt1.log",
+      "sha256": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_format_attempt1.log",
+      "sha256": "8e2386a91e134d7c59880fba6492f92667e157bfb1bbece84b5f0b61066c4964"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_format_attempt2.log",
+      "sha256": "f114d83b30c5c657ee43a847a45bafccaea255d82673feb87c26d252c61e29c1"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_lint_attempt1.log",
+      "sha256": "7afc522070235dd08fc89efb761fecfc1611d854db078d4733d4cb77efd6fb88"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_lint_attempt2.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_lint_fix_attempt1.log",
+      "sha256": "e1e5f1a743cbe32ff5f783a099049cd764e164ca7e389624bb18ac625f6d82d9"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_mypy_attempt1.log",
+      "sha256": "e4b0b02a47ff55d62ce023e5c40d8dcb1d1ab82ea2399f1037df461673156b80"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_mypy_attempt2.log",
+      "sha256": "e317872697c2cbfdefa321527a6efe73290dff3a390b0fa8723b87092eccba6a"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_tests_attempt1.log",
+      "sha256": "7f31184a406f51862693bc1351db705bb527ff04f97e4d42efec466002f4bdb8"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_tests_attempt2.log",
+      "sha256": "f3325d01201ecf68f0137e28d2cbf993d73152ed2da403a76ec5413663a4c7bf"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_tests_attempt3.log",
+      "sha256": "17d41b0ebeab1007f4db5bf35eda710e7e837a0266b277b5cf80aa3907504f88"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/gate_claims_tests_attempt4.log",
+      "sha256": "dee1c492dc77948256996b8a57cf57d4d43da3bfafcd8d7d971ad34f79bf6ff7"
+    }
+  ],
+  "final_continuation_subset": {
+    "passed": 15,
+    "seconds": 0.71
+  },
+  "format": "PASS",
+  "full_scale_qualification_executed": false,
+  "lint": "PASS",
+  "market_value_fits": 0,
+  "post_report_catalog_closure": {
+    "claims_validation": "existing audit/report envelope and exact refs; no independent or empirical authority",
+    "current_changed_files_strict_mypy": 5,
+    "focused_passed": 32,
+    "focused_seconds": 1.21,
+    "runtime_observers": "constructed only; no numerical worker or live scientific admission",
+    "scientific_method_changed": false,
+    "serialization_changed": false,
+    "test_ids": [
+      "TEST-076",
+      "TEST-080",
+      "TEST-084",
+      "TEST-095"
+    ]
+  },
+  "post_report_correction": {
+    "files": [
+      "runtime/declarations.py",
+      "tests/test_production_runtime.py"
+    ],
+    "focused_regression_passed": 1,
+    "other_tests_deselected": 24,
+    "reason": "complete provenance inventory includes README.md and MANIFEST.in; freeze allowlist must accept those exact build-contract names",
+    "scientific_method_changed": false,
+    "source_behavior_changed": false
+  },
+  "predecessor": {
+    "path": "research/frem_s10_production_20261016/IMPLEMENTATION_INTEGRATION_RECEIPT_V2.json",
+    "sha256": "a100b64ebacb6b6c0c47d03e8a42aa3e507d6db48f0c07af38b91109079efe81"
+  },
+  "protected_access": false,
+  "report": {
+    "path": "research/frem_s10_production_20261016/IMPLEMENTATION_INTEGRATION_REPORT_V3.md",
+    "sha256": "0349fec3efea8097c4a6442a4850b5eb36831fec837395832175c8d831ef6916"
+  },
+  "schema": "s10-runtime-integration-receipt-v3",
+  "scientific_runs": 0,
+  "scope": "BOUNDED_ENGINEERING_INTEGRATION",
+  "source_files": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/pipeline.py",
+      "sha256": "2daa130ca73a82a3874fa6a3c973be490af9359ed17f77210a7e247020c3cc8b"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/receipts.py",
+      "sha256": "69780b330121a43b6269070a4b51f8cb08ea8c4adde8f2ee695c0a5aa09f1ba5"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/saved_audit.py",
+      "sha256": "bed576ba293d167bd00c151cf06b085a85935023088f7eca9458861a43775819"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/continuation.py",
+      "sha256": "feed6d06798ba460cfd7e5cfa7dc6e585f094602c3428da843dee685c3905538"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/supervisor.py",
+      "sha256": "7502613f1ed38696cffb01195300cd49736a4edd380f703b0d9932a64ef8059f"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/consumption.py",
+      "sha256": "ddaf2c68674d7c6805c52a931af9d3600b7e272e223a2aa32e6b8f12fade69af"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/results.py",
+      "sha256": "ef2b55f23daf22c4f529918c3c35ab4ee53b5c381f812255ec0d4b7a219318b6"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/worker.py",
+      "sha256": "9ca5d243b8ab22365f4a77668edd6cea59934587414fa67db07b9d042804b3ce"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/declarations.py",
+      "sha256": "ff749dc5b38b01e440217a29f457bea283d6d02e5368c2cb6950cf1bac6ca786"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/cli.py",
+      "sha256": "e2a2fb142263e07120f97dc735a089302a7711d8b69ef5533df6574e13d54209"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_production_runtime.py",
+      "sha256": "7d7989aff4d57d256893225c1e65bb55d2598465db6c20bfe924ff66155f820a"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_continuation_audit.py",
+      "sha256": "00a2fe7f7db2b264837bb0d8275227ba25ddd742f52397dbfd41b3d292081118"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_saved_audit_runtime.py",
+      "sha256": "376c7a3e7c162d42c2e5cfe4df33d31b322e85edf151b48f0e16fee2cc98fad0"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/claims.py",
+      "sha256": "c617847bc4d1ee4afc7a943374aee72f8ece33476ef1299b4d35b7dc993e9061"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_production_gate_catalog.py",
+      "sha256": "215ee4961961b25cebccdf66249c3eed698bc4efcc0d35d4b706bd1409d4aef3"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_report_claims_audit.py",
+      "sha256": "9280056923b781a9d73a69b7e3921b5af56bbcdaa0a02e51f5c04d6faff5be96"
+    }
+  ],
+  "source_inventory_sha256": "4d6d79b7c4227dc5971d7b46295b48744cdfc1b9e7f2e378c879d9e842bc1bd5",
+  "strict_mypy_files": null,
+  "strict_mypy_scope": "Prior13-file receipt plus current5 changed source/test files; whole-candidate verification pending"
+}

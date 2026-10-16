@@ -1,0 +1,12 @@
+{
+  "observation": "The completed S3 memory is active but does not show consistent public gain. A standard-library audit verified 49 frozen source hashes and reconstructed 11880 saved rows (maximum NLL error 2.22e-15). The base fit ends in 2011, calibration ends in 2016/2017, memory weights are selected from 22 validation months with 0.000925-0.006061 nat gains, and 103-dimensional unit keys use mean squared distance that nearly flattens similarity weighting.",
+  "hypothesized_cause": "Stale base/calibration, noisy selection and weak retrieval relevance are competing explanations. Source/algebraic and descriptive evidence does not isolate a causal driver or prove a performance remedy.",
+  "change": "Save a dated diagnosis, reproducible artifact audit and full research-completion checklist. Add the diagnosis to canonical state. No model, protocol, grid, threshold, seed, data, or completed-run changes; no new experiment is declared or executed.",
+  "predicted_effect": "Future successor work can test recent fitting/calibration, dimension-independent similarity and conservative memory selection separately, while preserving valid predecessor outcomes and the protected boundary.",
+  "discriminating_experiment": "Proposed only: fixed-budget fresh rolling-origin successor with same-checkpoint off, matched random/recent controls, isolated interventions and zero fallback. Requires a separately specified protocol and fresh evidence; benefit is unknown.",
+  "result": "research/frem_memory_diagnosis_20261012/diagnosis.json",
+  "checklist": "docs/FREM_MEMORY_DIAGNOSIS_AND_CHECKLIST_20261012.md",
+  "new_model_fits": 0,
+  "protected_outcomes_accessed": false,
+  "predecessor_disposition": "S2 and S3 remain closed with their existing mixed/unsupported exploratory results; canonical scientific status remains NOT_EVALUATED"
+}

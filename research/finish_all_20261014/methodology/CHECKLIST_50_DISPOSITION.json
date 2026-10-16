@@ -1,0 +1,1490 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "title": "All 50 requested failure/fix items: evidence-linked disposition",
+  "scope": "Current-source and retained-evidence audit. Proposed or deferred work is never counted as executed scientific completion.",
+  "checklist_attachment_sha256": "3d06c0e4403b4d3d637de54cb694d36352dbf81bc7e3c719d9212e61c61c8bd5",
+  "overall": "CURRENT_RESEARCH_INCONCLUSIVE_PREDICTIVE_TARGET_NOT_MET_SUCCESSOR_NOT_RUN_READY",
+  "new_market_fits": 0,
+  "protected_outcomes_accessed": false,
+  "assessment_count": 50,
+  "scientific_requirement_completed_count": 4,
+  "status_counts": {
+    "PARTIAL_EMPIRICAL_TARGET_NOT_MET": 1,
+    "PARTIAL_CROSSED_CONTROLS_COMPLETE": 1,
+    "SPECIFIED_NOT_VALIDATED": 2,
+    "PARTIAL_DIAGNOSIS_NO_VALIDATED_REPAIR": 1,
+    "UNTESTED_SUCCESSOR_HYPOTHESIS": 2,
+    "UNTESTED_INCREMENTAL_SPECIALIZATION": 1,
+    "PARTIAL_DIAGNOSTICS_REQUIRED": 1,
+    "PARTIAL_NEGATIVE_CONTROL_EVIDENCE": 1,
+    "EMPIRICAL_REQUIREMENT_NOT_MET": 2,
+    "DEFERRED_CONDITIONAL": 5,
+    "PARTIAL_PRIOR_CONTROLS_INCONCLUSIVE": 1,
+    "PARTIAL_SUPPORT_MEASURED": 1,
+    "PARTIAL_TESTED_NO_ESTABLISHED_BENEFIT": 1,
+    "SPECIFIED_FOR_FUTURE_REFITS": 1,
+    "PARTIAL_ABLATIONS_NO_USEFUL_EFFECT": 1,
+    "COMPLETE_BOUNDED_SCOPE": 3,
+    "PARTIAL_IMPLEMENTED_NOT_INTEGRATED": 1,
+    "UNTESTED_SIGNAL_DECAY_POLICY": 1,
+    "PARTIAL_DESCRIPTIVE_ATTRIBUTION": 1,
+    "NOT_YET_MATCHED_CONTROL": 1,
+    "UNTESTED_ROBUST_SIZING": 1,
+    "BLOCKED_REALISTIC_INPUTS": 1,
+    "PARTIAL_FEE_BILL_DISTINGUISHED": 1,
+    "PARTIAL_IMPLEMENTED_NOT_VALIDATED": 1,
+    "PARTIAL_STRATEGIC_PLAN_COMPLETE": 1,
+    "BLOCKED_TIMESTAMPED_INPUTS": 1,
+    "BLOCKED_DATA_AND_UNIVERSE": 1,
+    "PARTIAL_IMPLEMENTATION_SCOPE_LIMITED": 1,
+    "DEFERRED_NO_CAPACITY_JUSTIFICATION": 1,
+    "BLOCKED_PROVENANCE_AND_CONTAMINATION": 1,
+    "DEFERRED_SIMULATOR_NOT_VALIDATED_FOR_RL": 1,
+    "BLOCKED_UNSPECIFIED_SOURCE": 1,
+    "SPECIFIED_NOT_EMPIRICALLY_PASSED": 1,
+    "NOT_ENOUGH_INDEPENDENT_EVIDENCE": 1,
+    "BLOCKED_CANONICAL_DATA": 1,
+    "COMPLETE_BOUNDED_METADATA_INVENTORY": 1,
+    "SPECIFIED_NOT_EXECUTED": 1,
+    "NOT_PROCEDURE_LEVEL_UNCERTAINTY": 1,
+    "NOT_INDEPENDENTLY_RETRAINED": 1,
+    "BLOCKED_CURRENT_MANDATE_INPUTS": 1,
+    "PENDING_CANONICAL_RECONCILIATION": 1
+  },
+  "current_session_addenda": [],
+  "items": [
+    {
+      "id": 1,
+      "request": "Establish profitable gross decisions. Even with zero transaction costs, S8 finished at $99,990. Fix: attribute losses to asset selection, position size, timing, cash exposure, and holding duration. A fee reduction alone cannot close the target gap.",
+      "status": "PARTIAL_EMPIRICAL_TARGET_NOT_MET",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 zero-cost terminal wealth is 99,990.33 from 100,000. Existing year/fee summaries establish weak gross decisions, not profitable gross signals.",
+      "scope_decision": "Complete retained-decision attribution; do not retune closed prices.",
+      "exact_completion_criterion": "A new frozen candidate achieves positive gross utility and the declared net uplift on genuinely subsequent evidence; attribution must reconcile asset, exposure, schedule and cost effects.",
+      "dependencies": [
+        2,
+        4,
+        7,
+        40,
+        42
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "request": "Align predictions with the wealth objective. Better probability scores have not consistently produced better allocations. Fix: evaluate expected return, ranking, uncertainty, and portfolio utility separately; cross each forecast with the same policies so improvements can be attributed correctly.",
+      "status": "PARTIAL_CROSSED_CONTROLS_COMPLETE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 already crosses all fifteen forecasts with four policies and four costs. Density ranking and ending wealth disagree.",
+      "scope_decision": "Preserve crossing; add separate mean/rank/scale diagnostics to retained evidence.",
+      "exact_completion_criterion": "Mean/rank/uncertainty diagnostics and complete crossed controls explain the tradeoff, then the whole selected procedure passes its new economic contract.",
+      "dependencies": [
+        1,
+        3,
+        9,
+        40,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "request": "Validate the conversion from forecasts to portfolio decisions. The current policy optimizes an approximation based on log-return means and variances. It does not calculate exact expected portfolio utility. Fix: compare that approximation with a properly specified simple-return or bounded-scenario decision model.",
+      "status": "SPECIFIED_NOT_VALIDATED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 is explicitly a log-moment surrogate. Existing S6 simple-return scenarios are a separate, unintegrated decision model. Student-t log-return exponential moments diverge.",
+      "scope_decision": "Use a direct-simple-return or fully declared finite joint scenario law in a new version.",
+      "exact_completion_criterion": "Equation/code agreement and numerical integration/optimizer tests pass; the same forecasts are compared under both policies on an unconsumed outer window.",
+      "dependencies": [
+        4,
+        20,
+        25,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "successors/frem_s6/policy.py",
+          "sha256": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "request": "Correct the holding-horizon assumptions. S8 effectively extends weekly forecast coefficients across four committed intervals. Signal persistence over that period is unproved. Fix: directly forecast the holding horizon or validate a path model against the existing approximation.",
+      "status": "SPECIFIED_NOT_VALIDATED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "H4 holds weekly coefficients constant; H1 is only a declared ablation. No direct H4 target or calibrated path law was evaluated.",
+      "scope_decision": "Directly forecast actual holding endpoints; no retrospective selection of H1.",
+      "exact_completion_criterion": "Issue, execution, label maturity and feedback availability align for each horizon, with matched-target calibration and a frozen future comparison against unchanged approximation.",
+      "dependencies": [
+        3,
+        5,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "request": "Resolve daily-versus-weekly expert calibration. The trend and volatility experts derive quantities from daily returns while predicting weekly intervals of varying duration. Fix: make actual horizon explicit and calibrate on matching targets. Multiplying volatility by \u221a5 already worsened a saved comparison; that is not an established repair.",
+      "status": "PARTIAL_DIAGNOSIS_NO_VALIDATED_REPAIR",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Daily trend/rms feed weekly targets; actual weekly duration varies. A fixed square-root-five scale change was not established as beneficial.",
+      "scope_decision": "Replace a constant conversion guess with actual-horizon target calibration in a new version.",
+      "exact_completion_criterion": "Forecast scale and mean calibrate at the same target horizon; all unchanged and duration-aware controls are evaluated without using closed outcomes for selection.",
+      "dependencies": [
+        4,
+        9,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/frem_s7_20261014/freeze2.json",
+          "sha256": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "request": "Test scheduled base-model refreshes. S8\u2019s base training ends before 2017, with scale calibration in 2017, followed by evaluation through 2022. Only routing adapts. Fix: predeclare rolling or expanding refits and delayed recalibration; compare refreshed and frozen models under identical budgets. Staleness is verified; its contribution to the loss is not yet isolated.",
+      "status": "UNTESTED_SUCCESSOR_HYPOTHESIS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 bases stop before 2017; only routing adapts during 2020-2022. Staleness is real, causal contribution unisolated.",
+      "scope_decision": "Predeclare expanding quarterly refresh against frozen bases; reset versioned residual bank.",
+      "exact_completion_criterion": "Matched refreshed/frozen procedure executes on new outer data with identical information/search budget, mature-label purge and complete model-transition receipts.",
+      "dependencies": [
+        17,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "request": "Expand useful information beyond the current narrow input. The latest experiment uses one input channel: eight daily close returns per asset. Fix: test longer trends, realized volatility, downside variation, and cross-asset context one group at a time. Keep a feature group only if it improves genuinely subsequent development performance.",
+      "status": "UNTESTED_SUCCESSOR_HYPOTHESIS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S6/S8 use one channel of eight daily close returns; no longer-context group has established incremental value in this ETF lineage.",
+      "scope_decision": "One fixed additional historical-context group first; reject unhelpful groups.",
+      "exact_completion_criterion": "Added-feature and unchanged-feature models have identical chronology, capacity/search allowance and policy; the group improves predefined subsequent predictive and economic endpoints.",
+      "dependencies": [
+        4,
+        8,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "request": "Improve specialist experts before expanding the router. Several experts share the same limited information. Fix: introduce distinct, justified mean, trend, volatility, and relative-value specialists. Measure each expert\u2019s contribution to the complete mixture; standalone performance alone can miss complementary value.",
+      "status": "UNTESTED_INCREMENTAL_SPECIALIZATION",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Six experts exist including ridge, trend, volatility, reservoir-JEPA and XGBoost; useful specialist complementarity is not established by their names.",
+      "scope_decision": "Improve one source of information and measure complete-mixture contribution before expanding router.",
+      "exact_completion_criterion": "Leave-one-expert and information-matched controls quantify each expert contribution in the complete mixture on a new frozen outer window.",
+      "dependencies": [
+        7,
+        9,
+        11,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "request": "Separate mean calibration from uncertainty calibration. A well-shaped density can still have an economically useless mean. Fix: diagnose mean bias, predicted-versus-realized opportunity size, interval coverage, and tail errors separately. Compare changes to unchanged forecasts.",
+      "status": "PARTIAL_DIAGNOSTICS_REQUIRED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Density losses and annual economics are retained; S8 scale calibration uses 2017 and does not establish economically calibrated means.",
+      "scope_decision": "Report bias, opportunity magnitude, ranking, coverage and tails independently using retained outputs.",
+      "exact_completion_criterion": "Complete issued forecast-to-realized mean/scale diagnostic tables with uncertainty and unchanged-forecast controls; any calibrated successor must pass chronological outer checks.",
+      "dependencies": [
+        2,
+        4,
+        10
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+          "sha256": "2435ef1e1fc9353801132f5e0594e3ffec53880b5888e910a3ccb26de6ef3382"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "request": "Make calibration earn its place. Earlier S3 calibration worsened both evaluation windows. Fix: retain raw forecasts and identity-shrunk calibration as controls; select calibration using chronological inner data rather than automatically adding another calibration layer.",
+      "status": "PARTIAL_NEGATIVE_CONTROL_EVIDENCE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S3 additional calibration worsened both public windows relative to raw forecasts. Raw and identity controls are necessary.",
+      "scope_decision": "Identity calibration remains incumbent; any extra calibration is an inner-selection hypothesis.",
+      "exact_completion_criterion": "Raw, identity-shrunk and selected calibrators are retained and chosen strictly within chronological inner data, then evaluated untouched; no automatic calibrated-win claim.",
+      "dependencies": [
+        9,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s3_20261011/REPORT.md",
+          "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+        },
+        {
+          "path": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+          "sha256": "2435ef1e1fc9353801132f5e0594e3ffec53880b5888e910a3ccb26de6ef3382"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "request": "Require a meaningful improvement over fixed mixing. S8\u2019s soft adaptation adds only 0.0000615 nats over a fixed half-and-half blend; uncertainty includes zero. Fix: retain the fixed blend as an incumbent and remove adaptive complexity if it cannot beat it reliably.",
+      "status": "EMPIRICAL_REQUIREMENT_NOT_MET",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 improves fixed-half blend by only 0.000061525 nats, with both interval families spanning zero.",
+      "scope_decision": "Keep fixed blending as incumbent and do not add adaptive complexity.",
+      "exact_completion_criterion": "A separate memory candidate exceeds fixed blend by a predeclared practical lower confidence bound on unconsumed data under matched budgets.",
+      "dependencies": [
+        12,
+        14,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "request": "Prove that context predicts which expert will help. Local context adds only 0.0000255 nats over global routing; the global version actually ended slightly wealthier. Fix: test whether context predicts future differences in expert performance beyond recent average losses.",
+      "status": "EMPIRICAL_REQUIREMENT_NOT_MET",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Local-versus-global gain is 0.000025527 nats; global S8 ends 12.84 dollars wealthier. Tiny positive conditional score intervals do not establish useful context.",
+      "scope_decision": "Test context predicting future expert-loss differences beyond recent/global loss, not just retrieval activity.",
+      "exact_completion_criterion": "Delayed context model beats global/recent/shuffled controls by the frozen practical threshold on new outer dates; report calibration and wealth separately.",
+      "dependencies": [
+        11,
+        14,
+        15,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "successors/frem_s8/router.py",
+          "sha256": "507428d6675647690bb0dcf1069d2bfdfbb610cec1cf8980290caa92bd683a96"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "request": "Test asset-specific routing with shrinkage. Current routing averages asset context and applies shared expert weights across SPY, TLT, and GLD. Fix: compare global weights with asset-specific weights shrunk toward the global estimate. More specialization may also overfit, so support must be measured.",
+      "status": "DEFERRED_CONDITIONAL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Routing uses date-level averaged asset features and shared expert weights. Asset-specific shrinkage is a new capacity increase.",
+      "scope_decision": "Defer until context usefulness is established; then compare one fixed hierarchical shrinkage rule.",
+      "exact_completion_criterion": "A global/asset/shrunk comparison with identical information, delayed labels and regularization budget passes outer evaluation.",
+      "dependencies": [
+        12,
+        15,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "successors/frem_s8/router.py",
+          "sha256": "507428d6675647690bb0dcf1069d2bfdfbb610cec1cf8980290caa92bd683a96"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "request": "Measure retrieval relevance directly. Earlier S3 retrieval operated, but matched random retrieval was competitive and residual correlations were weak. Fix: compare real keys with shuffled keys, age-matched retrieval, recent averaging, and unconditional residual estimates.",
+      "status": "PARTIAL_PRIOR_CONTROLS_INCONCLUSIVE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S3 compared real, random, recent and other memory arms; matched random was competitive and no arm improved both windows.",
+      "scope_decision": "Retain those negatives; age-matched and unconditional controls belong to a separately justified memory test.",
+      "exact_completion_criterion": "All real/shuffled/age-matched/recent/unconditional controls use equal support and delayed availability; meaningful held-out relevance and contribution is demonstrated.",
+      "dependencies": [
+        12,
+        15,
+        16,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s3_20261011/REPORT.md",
+          "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+        },
+        {
+          "path": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+          "sha256": "2435ef1e1fc9353801132f5e0594e3ffec53880b5888e910a3ccb26de6ef3382"
+        },
+        {
+          "path": "research/frem_s4_20261012/REPORT.md",
+          "sha256": "2b0d34a50a2dd419600f152ae4e793dabb4d9c3927b1c199665fae1959752c3f"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "request": "Measure effective support before increasing capacity. More stored rows do not necessarily mean more independent useful examples. Fix: record neighbor ages, concentration, effective sample size, regime diversity, and realized delayed contribution.",
+      "status": "PARTIAL_SUPPORT_MEASURED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S3 diagnosis records neighbor age, effective count, occupancy and gate behavior. Support is small and not independent merely because rows are stored.",
+      "scope_decision": "Do not increase capacity; add support/contribution diagnostics before a new memory hypothesis.",
+      "exact_completion_criterion": "Every retrieval reports normalized weight concentration, effective support, age and regime coverage, plus delayed realized incremental contribution; limits and correlations explicit.",
+      "dependencies": [
+        14,
+        16
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+          "sha256": "2435ef1e1fc9353801132f5e0594e3ffec53880b5888e910a3ccb26de6ef3382"
+        },
+        {
+          "path": "successors/frem_s6/kernel.py",
+          "sha256": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "request": "Justify distance, recency, and forgetting choices. The current memory uses a bounded history and fixed kernel; these choices do not establish informative matching. Fix: test one clearly motivated change against equal-capacity global/recent controls.",
+      "status": "PARTIAL_TESTED_NO_ESTABLISHED_BENEFIT",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S4 altered distance but all corrections selected zero; deployed equality cannot identify whether distance itself helps.",
+      "scope_decision": "Do not repeat S4 or tune its gates; only one theory-motivated retention/kernel change in a new memory version.",
+      "exact_completion_criterion": "Equal-capacity global/recent/old-kernel controls and the new rule are fixed before a new window and show meaningful incremental benefit.",
+      "dependencies": [
+        12,
+        14,
+        15,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s4_20261012/REPORT.md",
+          "sha256": "2b0d34a50a2dd419600f152ae4e793dabb4d9c3927b1c199665fae1959752c3f"
+        },
+        {
+          "path": "successors/frem_s6/kernel.py",
+          "sha256": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "request": "Keep residual banks compatible with their base model. A future refitting system must not mix residuals from incompatible model or calibration versions. Fix: version banks and define rebuilding or migration rules at every model transition.",
+      "status": "SPECIFIED_FOR_FUTURE_REFITS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Current frozen-base banks avoid transition mixing, but a rolling-refit bank compatibility contract is absent.",
+      "scope_decision": "Version model, feature scaler, calibration, horizon and target definition on every residual row; rebuild with out-of-fit predictions.",
+      "exact_completion_criterion": "Transition tests reject incompatible residuals; a new-model bank has documented strictly historical out-of-fit residual construction and no future-label access.",
+      "dependencies": [
+        6
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "request": "Make JEPA, reservoir branches, and delayed quantized updates justify their cost. Fix: compare matched supervised-only, no-JEPA, simpler-branch, and immediate/unquantized variants. Expand complexity only after diagnosing underfitting or demonstrating a useful efficiency benefit.",
+      "status": "PARTIAL_ABLATIONS_NO_USEFUL_EFFECT",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S6 completed no-JEPA and immediate/unquantized arms across seeds; effects were nearly identical and did not establish useful benefit. Full simpler-branch/compute-matched attribution remains open.",
+      "scope_decision": "Preserve negative ablations; exclude extra components from minimal successor.",
+      "exact_completion_criterion": "Complete matched supervised/simple-branch/JEPA/update controls with actual resources and useful outer effect, or retain simpler incumbent and make no component-benefit claim.",
+      "dependencies": [
+        7,
+        8,
+        42
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+          "sha256": "0620fbe0d87ab0da9eab1172ed7d5c3bcda80e99678f4cb61ec87546ef4e2b8b"
+        },
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "request": "Preserve a valid simple fallback. Zero memory weight can be the correct decision. Fix: make the fallback a properly evaluated incumbent; do not force memory activity merely to make the architecture appear useful.",
+      "status": "COMPLETE_BOUNDED_SCOPE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": true,
+      "finding": "Zero correction is accepted in S3/S4; equal forecasts and fixed-half blend are evaluated incumbents in S8. No compulsory memory activation.",
+      "scope_decision": "Preserve the simple fallback as a legitimate result.",
+      "exact_completion_criterion": "Already satisfied for completed exploratory comparisons; future versions must keep the incumbent and cannot force memory to pass a cosmetic activity test.",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "research/frem_s3_20261011/REPORT.md",
+          "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+        },
+        {
+          "path": "research/frem_s4_20261012/REPORT.md",
+          "sha256": "2b0d34a50a2dd419600f152ae4e793dabb4d9c3927b1c199665fae1959752c3f"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "request": "Model joint risk. S8\u2019s primary policy uses diagonal risk, omitting correlations and joint losses. Fix: integrate and test the covariance/scenario/CVaR machinery already present elsewhere in S6 against the diagonal policy. This is an integration experiment, not wholly missing code.",
+      "status": "PARTIAL_IMPLEMENTED_NOT_INTEGRATED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S6 provides shrinkage covariance and joint heavy-tail/simple-return/CVaR machinery; S8 primary remains diagonal.",
+      "scope_decision": "Integrate one joint scenario decision rule under an additive source freeze, not into closed S8.",
+      "exact_completion_criterion": "Covariance chronology/PSD and actual scenario moment/tail checks pass; common forecasts cross diagonal/joint policy under identical horizon, costs and constraints.",
+      "dependencies": [
+        3,
+        4,
+        25,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/policy.py",
+          "sha256": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "request": "Match trading speed to signal persistence. Fix: estimate decay on development data and compare partial adjustment, no-trade regions, and different predeclared review schedules. Cost-aware dynamic trading explicitly depends on signal persistence and existing holdings. G\u00e2rleanu and Pedersen",
+      "status": "UNTESTED_SIGNAL_DECAY_POLICY",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "H1/H4 and costs were compared, but signal-persistence estimation, partial adjustment and no-trade regions were not jointly validated.",
+      "scope_decision": "Estimate decay only inside permitted development and predeclare one trade-speed rule.",
+      "exact_completion_criterion": "Decay estimate uncertainty and identical-forecast hold/partial/no-trade controls are retained; new net utility improves beyond simply reducing exposure.",
+      "dependencies": [
+        4,
+        6,
+        20,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "request": "Diagnose missed upside as well as avoided losses. S8 returned roughly 0.99% versus 19.93% for equal-weight assets in 2020. Its later downside reduction did not recover that gap. Fix: attribute the missed gains to forecasts, risk penalties, allocation, and commitment duration. Do not turn that historical observation into a hindsight regime rule.",
+      "status": "PARTIAL_DESCRIPTIVE_ATTRIBUTION",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 2020 path gains 0.990 percent versus equal-weight 19.929 percent; later downside reduction does not recover that deficit.",
+      "scope_decision": "Complete saved-decision asset/exposure/holding-duration attribution; never add a hindsight 2020 regime rule.",
+      "exact_completion_criterion": "Attribution reconciles all interval contributions, costs and terminal wealth and separates forecast misses from policy/risk-budget effects.",
+      "dependencies": [
+        1,
+        2,
+        23,
+        26
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "request": "Add exposure-matched passive controls. S8 caps total risky exposure at 80%; its asset benchmark has different exposure. Fix: retain the original benchmark and add controls with matching exposure and constraints to distinguish forecasting value from risk-budget effects.",
+      "status": "NOT_YET_MATCHED_CONTROL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Original equal-weight asset benchmark has different risky exposure than S8 capped at 80 percent.",
+      "scope_decision": "Retain original benchmark and add 80/20 cash/equal-weight plus same-constraint passive diagnostics under a new diagnostic label.",
+      "exact_completion_criterion": "New benchmark accounting passes exact same dates, costs, review schedule, caps and liquidation checks; original primary result is not overwritten or promoted.",
+      "dependencies": [
+        25,
+        26,
+        40
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "request": "Test uncertainty-aware position sizing. Fix: shrink poorly supported expected returns and compare robust sizing with ordinary point estimates. Require improved net utility or funding shortfall; merely taking less risk is not proof of better prediction.",
+      "status": "UNTESTED_ROBUST_SIZING",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Density calibration and restrained exposures do not establish that uncertainty-aware mean sizing improves net utility.",
+      "scope_decision": "Use one predeclared shrinkage control in the simple successor.",
+      "exact_completion_criterion": "Point/shrunk sizing use identical forecasts, support, joint-risk/cost constraints and outer data; utility or dated shortfall improves with exposure reduction separately reported.",
+      "dependencies": [
+        9,
+        20,
+        23,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/policy.py",
+          "sha256": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "request": "Use realistic execution and cash assumptions. Current results assume zero cash yield and simplified dividends, costs, and fills. Fix: include dated cash returns, spreads, slippage, liquidity/impact, and payment timing where the intended scope requires them, equally for candidate and benchmarks.",
+      "status": "BLOCKED_REALISTIC_INPUTS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 assumes zero cash yield, ex-date cash dividends, weekly reinvestment, no payment delay/taxes and simplified costs/fills.",
+      "scope_decision": "Maintain this narrow exploratory label; acquire dated cash/execution/action inputs before executable claims.",
+      "exact_completion_criterion": "Cash returns, spread/slippage/impact, settlement/payment timing and actual availability are sourced and matched across candidate/benchmarks, with sensitivity and accounting tests.",
+      "dependencies": [
+        43,
+        49
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+          "sha256": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "request": "Separate fees from cost-induced allocation changes. The zero-cost and charged-cost runs choose different positions. Fix: report both fixed-position fee attribution and the complete policy response. Their wealth difference is not a pure fee bill.",
+      "status": "PARTIAL_FEE_BILL_DISTINGUISHED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 report correctly states zero-cost versus 10-bps paths differ in decisions and the 810.24 dollar fee bill is not their terminal-wealth difference.",
+      "scope_decision": "Add fixed-decision fee and policy-response bridge without new policy selection.",
+      "exact_completion_criterion": "A fixed-weight/cost counterfactual reconciles cash-flow timing and compounding, with direct fees, fee opportunity cost and changed-policy response separately reported.",
+      "dependencies": [
+        1,
+        23
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "successors/frem_s8/policy.py",
+          "sha256": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c"
+        },
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "request": "Treat multi-period optimization as a testable decision layer. Compare it against simple allocation rules with the same forecasts and constraints. Better optimization cannot manufacture predictive information; the established framework itself separates these tasks. Boyd and colleagues",
+      "status": "PARTIAL_IMPLEMENTED_NOT_VALIDATED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S6 includes multi-period scenario machinery; no validated wealth advantage follows from optimizer correctness.",
+      "scope_decision": "Keep a simple rule and unchanged surrogate under identical forecasts/constraints.",
+      "exact_completion_criterion": "End-to-end crossed one-/multi-period/simple policy comparison and solver audits complete on a new window; claim limited to measured decision-layer increment.",
+      "dependencies": [
+        3,
+        4,
+        20,
+        25
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/policy.py",
+          "sha256": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "request": "Preserve the actual client objective. For Laura, terminal wealth must coexist with dated liabilities, flexibility, and protected facility commitments. Fix: evaluate joint funding shortfall and restrict discretionary risk to the permitted surplus. The proposed 99% funding target remains uncalibrated. [Laura policy (line 67)](/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md:67)",
+      "status": "PARTIAL_STRATEGIC_PLAN_COMPLETE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Liability-first 2027/2028 contribution plan, dated reserves, 2031 protected minimum and conditional facility arithmetic are implemented; 99 percent joint funding is uncalibrated.",
+      "scope_decision": "Preserve strategic plan; do not reinterpret ETF terminal wealth as Laura funding success.",
+      "exact_completion_criterion": "Actual mandate/holdings/prices and dated cash flows drive a verified joint-shortfall simulation or conditional cash-flow match; no probability certification from arithmetic tests.",
+      "dependencies": [
+        25,
+        49
+      ],
+      "evidence": [
+        {
+          "path": "research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md",
+          "sha256": "2c4881542c2dc2f94959da44edcd83964cd14dd5f5d7178b9418c5bdb81259d0"
+        },
+        {
+          "path": "research/laura_plan_20261013/RECEIPT.json",
+          "sha256": "b366aa6122aeab1e9f809fd108bff54058203f995ffd795789791b6e8f0c0022"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "request": "Multi-horizon prediction heads: distinct near-term risk and longer-horizon return forecasts, trained and evaluated at their actual horizons.",
+      "status": "DEFERRED_CONDITIONAL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Current experts have a single weekly target; distinct direct multi-horizon heads are not validated.",
+      "scope_decision": "Allow only H1 primary and H4 diagnostic in the proposed bounded horizon study; no architecture expansion.",
+      "exact_completion_criterion": "Each head has actual-horizon targets, purged chronology, calibration and frozen metric; new outer results justify retaining each head.",
+      "dependencies": [
+        4,
+        5,
+        7,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "request": "Relative-return or ranking models: test whether choosing among assets is more predictable than estimating absolute returns.",
+      "status": "DEFERRED_CONDITIONAL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Within-date relative rankings are plausible but unproved, especially with only three ETFs.",
+      "scope_decision": "Do retained rank diagnostics first; relative-return model is a separate later hypothesis.",
+      "exact_completion_criterion": "Relative and absolute models share data/search budget; held-out rank and economic increments beat simple equal/risk controls.",
+      "dependencies": [
+        2,
+        7,
+        9,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "request": "Point-in-time macro, rates, and cross-asset features: use actual release availability and historical vintages.",
+      "status": "BLOCKED_TIMESTAMPED_INPUTS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "No verified real-time macro/rate vintage pipeline is attached to the S8 ETF forecasts. Existing regional factor data are current-vintage aggregates.",
+      "scope_decision": "Exclude from first successor; do not backfill current releases.",
+      "exact_completion_criterion": "Exact publication/vintage timestamps and transformations pass availability checks; a single added feature group shows incremental subsequent value.",
+      "dependencies": [
+        7,
+        43,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "data/public_regional_factors_20261011/manifest.json",
+          "sha256": "01ef22b9704314b2bb40aefd69899e49bb1a376b95999faba479edb4493a7514"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "request": "Fundamental, valuation, earnings, and breadth features: require an appropriate equity universe and dated source records; these are not currently available through the three-ETF experiment.",
+      "status": "BLOCKED_DATA_AND_UNIVERSE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Three ETFs cannot supply company valuation/earnings/breadth with historical universe eligibility.",
+      "scope_decision": "Exclude until point-in-time equity source and universe are supplied.",
+      "exact_completion_criterion": "Dated fundamentals, reporting lags, identifier/membership history and inactive/terminal securities support an appropriately frozen universe and incremental group test.",
+      "dependencies": [
+        31,
+        43
+      ],
+      "evidence": [
+        {
+          "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+          "sha256": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "request": "Regime-aware adaptation: detect changes from information available at the time, with global and no-regime controls.",
+      "status": "DEFERRED_CONDITIONAL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 soft adaptation is delayed but does not establish a separately calibrated regime detector.",
+      "scope_decision": "No hindsight regime labels; global/no-regime incumbents remain.",
+      "exact_completion_criterion": "A time-available detector and fixed transition rule outperform global/no-regime controls on new dates with identical information/tuning budget.",
+      "dependencies": [
+        12,
+        21,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s8/router.py",
+          "sha256": "507428d6675647690bb0dcf1069d2bfdfbb610cec1cf8980290caa92bd683a96"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "request": "Hierarchical pooling: share information across related assets while retaining asset-specific behavior and preventing cross-asset timestamp leakage.",
+      "status": "DEFERRED_CONDITIONAL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Asset-specific hierarchical sharing has not been established; existing averaging shares information across contemporaneous assets.",
+      "scope_decision": "Defer until there is enough cross-asset evidence and context signal.",
+      "exact_completion_criterion": "All pooled/unpooled/shrunk models respect common availability, report effective independent support and show an outer increment.",
+      "dependencies": [
+        13,
+        42,
+        43,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_s6/model.py",
+          "sha256": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "request": "Better tail and default models: test flexible tails or explicit total-loss mass where the asset universe requires them. Finite log returns cannot represent exact total loss.",
+      "status": "PARTIAL_IMPLEMENTATION_SCOPE_LIMITED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Finite log return cannot encode total loss; portfolio engine accepts simple return -1 and S6 scenario generator has floor/default behavior. Historical inactive-security coverage is absent.",
+      "scope_decision": "Preserve loss handling and do not invent default frequency; broaden only with appropriate data.",
+      "exact_completion_criterion": "Zero-recovery/default accounting and actual post-floor distribution calibrate against terminal-outcome data; no disappearing default rows or log-transform loss deletion.",
+      "dependencies": [
+        3,
+        20,
+        43
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        },
+        {
+          "path": "successors/frem_s6/policy.py",
+          "sha256": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf"
+        },
+        {
+          "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+          "sha256": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "request": "Larger sequence models or learned retrieval: consider only after simpler models demonstrate useful signal and capacity diagnostics justify expansion; match information and tuning budgets.",
+      "status": "DEFERRED_NO_CAPACITY_JUSTIFICATION",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "No evidence shows useful signals are capacity-limited; no-JEPA/immediate controls are almost identical.",
+      "scope_decision": "Do not add larger sequence models or learned retrieval now.",
+      "exact_completion_criterion": "Simpler models first demonstrate useful signal and capacity diagnostics predict a specific failure; a compute/information/search-matched expansion then wins on a new outer window.",
+      "dependencies": [
+        7,
+        8,
+        18,
+        42
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+          "sha256": "0620fbe0d87ab0da9eab1172ed7d5c3bcda80e99678f4cb61ec87546ef4e2b8b"
+        },
+        {
+          "path": "research/frem_s3_20261011/REPORT.md",
+          "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "request": "News or text features: require publication timestamps and contamination checks. A modern language model can encode knowledge of historical outcomes.",
+      "status": "BLOCKED_PROVENANCE_AND_CONTAMINATION",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "No timestamped news corpus or model-training contamination audit was supplied.",
+      "scope_decision": "Exclude from first successor; modern model historical knowledge cannot be treated as contemporaneously available.",
+      "exact_completion_criterion": "Publication timestamps, revision history, model knowledge-cutoff/exposure assessment and matched text-off controls support a valid new study.",
+      "dependencies": [
+        31,
+        43,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "request": "Reinforcement learning or learned allocation: consider only after the simulator, costs, chronology, and simpler policies are validated. Simulator exploitation can create misleading apparent wins.",
+      "status": "DEFERRED_SIMULATOR_NOT_VALIDATED_FOR_RL",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Simple execution assumptions and absent admitted new evidence make learned allocation premature.",
+      "scope_decision": "Do not deploy RL; first validate simulator and simple policies.",
+      "exact_completion_criterion": "Simulator/accounting/cost/timing adversarial tests and held-out behavior pass; a fixed-budget RL study beats simple policies without exploiting simulator artifacts.",
+      "dependencies": [
+        3,
+        20,
+        25,
+        27,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "request": "External quant/ML frameworks: integrate the exact supplied source through the existing forecast contract and compare fairly; do not invent a substitute for an unspecified framework.",
+      "status": "BLOCKED_UNSPECIFIED_SOURCE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "External forecast adapter exists; the exact new framework repository/model/source was not supplied.",
+      "scope_decision": "Do not invent a substitute or arbitrary framework.",
+      "exact_completion_criterion": "Receive exact source/version and forecast semantics, then implement adapter, audit horizon/availability/asset/currency contract and run a fair frozen comparison.",
+      "dependencies": [
+        4,
+        43,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "successors/frem_portfolio_v1/engine.py",
+          "sha256": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "request": "Freeze the actual success contract. Specify benchmark family, horizon, costs, cash flows, risk constraints, and the 6% minimum / 36% stretch wealth targets. The latest S8 economic gate only required positive differences; that was weaker than your requested margin.",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_PASSED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 original gate only required positive differences; the requested 6 percent minimum and 36 percent stretch were stronger. New proposal states full benchmark/cost/risk/cash-flow contract.",
+      "scope_decision": "Preserve S8 original gate and separately report whether the requested wealth margins are met.",
+      "exact_completion_criterion": "Freeze exact candidate, required benchmarks, outer horizon, cash flows, costs, liquidation, constraints and point/reliability thresholds before new outcome access.",
+      "dependencies": [
+        23,
+        25,
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "request": "Keep the predictive requirement separate. S8 gained 0.0013675 nats over equal mixing and 0.0006838 over S6 memory. Both primary uncertainty families include zero; the required lower bounds above 0.01 were not achieved.",
+      "status": "COMPLETE_BOUNDED_SCOPE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": true,
+      "finding": "S8 prediction and economic gates are separately reported. Gains 0.0013675 and 0.0006838 do not meet 0.01-nat lower-bound requirement.",
+      "scope_decision": "Retain original predictive threshold and INCONCLUSIVE disposition; no weakening to obtain support.",
+      "exact_completion_criterion": "Already satisfied as evidence separation; a future performance claim requires the preserved predictive gate under the correct comparable density target.",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "research/protocol.json",
+          "sha256": "833100ef8ff8b0a6ca568bfba1d8601c6f115b3bab11705d7876aa978360763c"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "request": "Use enough independent market evidence. Three ETFs, 153 weekly intervals, and three seeds do not establish broad reliability. Plan precision before expanding the experiment; seeds are optimization repeats, not independent financial histories.",
+      "status": "NOT_ENOUGH_INDEPENDENT_EVIDENCE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "153 common weekly dates from three ETFs and three optimization seeds do not establish broad independent-market reliability.",
+      "scope_decision": "Perform procedure-level precision planning before choosing any new outer study.",
+      "exact_completion_criterion": "Document serial/cross-asset dependence, effective blocks, expected interval width/power and actual data availability; reject a design unable to resolve the practical claim within budget.",
+      "dependencies": [
+        40,
+        43,
+        44,
+        47
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "request": "Improve historical data admissibility. Broader claims require trustworthy availability, corporate actions, inactive securities, terminal outcomes, historical membership, identifiers, and FX. Current survivor histories cannot establish that scope.",
+      "status": "BLOCKED_CANONICAL_DATA",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Public quotes are current-vintage survivor histories; vendor publication timing, inactive securities, historical membership, FX and terminal completeness are not certified.",
+      "scope_decision": "Keep retrospective sample scope; do not relabel it point-in-time global data.",
+      "exact_completion_criterion": "Provider/rights/provenance/action/availability/universe/terminal/FX contracts pass for the specific intended claim before canonical execution.",
+      "dependencies": [
+        25,
+        31,
+        32,
+        35
+      ],
+      "evidence": [
+        {
+          "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+          "sha256": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        },
+        {
+          "path": "data/public_regional_factors_20261011/manifest.json",
+          "sha256": "01ef22b9704314b2bb40aefd69899e49bb1a376b95999faba479edb4493a7514"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "request": "Preserve a repository-wide exposure inventory. Legacy caches already contain SPY/GLD data from 2020. Newly downloaded data are not necessarily untouched evidence.",
+      "status": "COMPLETE_BOUNDED_METADATA_INVENTORY",
+      "assessment_complete": true,
+      "scientific_requirement_completed": true,
+      "finding": "Known S6/S7/S8 windows, S3/S4 windows and legacy ETF-cache coverage are recorded; current new-download freshness is not global freshness.",
+      "scope_decision": "Maintain metadata inventory with scope caveat; no protected raw reads.",
+      "exact_completion_criterion": "This bounded inventory is complete for checked authoritative manifests and freezes; any new source requires a fresh identity/exposure admission before being called untouched.",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+          "sha256": "f8692f6aee524dd3d3396213affab48d353e7810de82d79d17fb412894d9e462"
+        },
+        {
+          "path": "legacy/wharton_lab_v0/data/manifests/DATA_MANIFEST.yaml",
+          "sha256": "3d8a68fb3a431c4a9a00f0b9772c869109ff6673d247b36164cf9d58e6da7771"
+        },
+        {
+          "path": "research/frem_s8_20261014/freeze2.json",
+          "sha256": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457"
+        },
+        {
+          "path": "research/frem_s7_20261014/freeze2.json",
+          "sha256": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14"
+        },
+        {
+          "path": "research/frem_s3_20261011/REPORT.md",
+          "sha256": "513f88be070d903a0a88cf0f7f66ccac89113011449d0b108dd1f456ca14d3d9"
+        },
+        {
+          "path": "research/frem_s4_20261012/REPORT.md",
+          "sha256": "2b0d34a50a2dd419600f152ae4e793dabb4d9c3927b1c199665fae1959752c3f"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/EXPOSURE_INVENTORY.json",
+          "sha256": "d450dae68bf148015b6949af70e0eca619b519c0c4f99bac1c1655253fe3c898"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "request": "Use nested chronological model selection. Keep feature, calibration, expert, and policy selection inside development. Repeated selection on noisy validation data can itself overfit. Cawley and Talbot",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Earlier calibration/selection uses chronological partitions, but no complete new nested feature/model/calibration/policy selection procedure has been executed.",
+      "scope_decision": "Specify all selection inside inner time folds; no secondary winner promotion.",
+      "exact_completion_criterion": "An implemented outer-temporal harness repeats every selected operation using only earlier data and preserves complete selection history under a fixed budget.",
+      "dependencies": [
+        42,
+        44,
+        47
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s7_20261014/freeze2.json",
+          "sha256": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14"
+        },
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "request": "Retain every declared comparison and failure. Keep all seeds, costs, ablations, exclusions, and fixed interval choices. A favorable secondary configuration cannot replace the primary after results are known.",
+      "status": "COMPLETE_BOUNDED_SCOPE",
+      "assessment_complete": true,
+      "scientific_requirement_completed": true,
+      "finding": "S8 retains all declared seeds, fifteen forecasts, four policies, four costs, interval families and failures; audit verifies 319 predecessor identities.",
+      "scope_decision": "Keep append-only freeze/result history; do not drop arms or overwrite repaired runs.",
+      "exact_completion_criterion": "Satisfied for completed S8 artifacts subject to continuing preservation; new work must retain the same completeness and source identity discipline.",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/AUDIT.json",
+          "sha256": "5e081f8d7ced391df0236afede8c701245f16fa01635ba446019ffea2ad0ede3"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/frem_s8_20261014/freeze2.json",
+          "sha256": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "request": "Account for selection and refitting uncertainty. Current portfolio intervals are conditional on saved forecasts and decisions; they do not represent uncertainty from retraining and choosing the entire procedure.",
+      "status": "NOT_PROCEDURE_LEVEL_UNCERTAINTY",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "S8 intervals are conditional on saved forecasts/decisions and omit retraining/model-selection uncertainty.",
+      "scope_decision": "State this limit and design procedure-level outer evaluation; no bootstrap relabeling.",
+      "exact_completion_criterion": "Every resampled/outer evaluation used for the procedure claim includes fitting and inner selection with justified time dependence; coverage assumptions and precision limitations are explicit.",
+      "dependencies": [
+        42,
+        45
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/SPECIFICATION.md",
+          "sha256": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/PRIOR_ART_AND_ADVERSARIAL_REVIEW.md",
+          "sha256": "f557489e89b6e48701312d2ceaf8670fdfa10a8fc279f92649103a1e08071701"
+        },
+        {
+          "path": "research/finish_all_20261014/methodology/SUCCESSOR_RECOMMENDATION.json",
+          "sha256": "3578d690b61da00841e59bb0f1e715faa5c484fc965a76e157b811d8c989791d"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "request": "Reproduce independently. Saved-score and ledger reconstruction are valuable checks, but independent retraining in a clean environment remains a separate requirement.",
+      "status": "NOT_INDEPENDENTLY_RETRAINED",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Same-host arithmetic reconstruction verifies values and ledgers; independent clean-environment retraining is not recorded.",
+      "scope_decision": "Prepare reproducibility package and separate engineering review from retraining.",
+      "exact_completion_criterion": "An independent environment/runner executes unchanged frozen source/data/protocol in new output directories and reconciles major predictions, analyses, figures and resource receipts.",
+      "dependencies": [
+        43,
+        46
+      ],
+      "evidence": [
+        {
+          "path": "research/frem_s8_20261014/AUDIT.json",
+          "sha256": "5e081f8d7ced391df0236afede8c701245f16fa01635ba446019ffea2ad0ede3"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        },
+        {
+          "path": "docs/STATIC_VERIFICATION.md",
+          "sha256": "fcc38a8ff1901104d9afef3a628f072bcfb3619b07d2b1415fc6aec811cf62d9"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "request": "Verify current mandate inputs for executable use. Official eligibility, trading rules, costs, and dated prices remain necessary; current holdings are needed for transaction-specific work. They do not block preparing the strategic contribution plan.",
+      "status": "BLOCKED_CURRENT_MANDATE_INPUTS",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Current eligibility, executable prices, holdings and instrument-specific costs are not verified; strategic contribution plan exists.",
+      "scope_decision": "Complete strategic local plan; require actual participant materials only for executable allocation.",
+      "exact_completion_criterion": "Current dated approved universe/rules, holdings/NAV, prices, costs, settlement, risk/liquidity/FX constraints and team mandate supplied and validated.",
+      "dependencies": [
+        25,
+        28
+      ],
+      "evidence": [
+        {
+          "path": "research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md",
+          "sha256": "2c4881542c2dc2f94959da44edcd83964cd14dd5f5d7178b9418c5bdb81259d0"
+        },
+        {
+          "path": "research/laura_plan_20261013/RECEIPT.json",
+          "sha256": "b366aa6122aeab1e9f809fd108bff54058203f995ffd795789791b6e8f0c0022"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "request": "Reconcile stale status summaries. Some older fields still say training was blocked. Latest receipts establish completed S6\u2013S8 exploratory runs. Future decisions should resolve to the latest evidence without deleting historical failures.",
+      "status": "PENDING_CANONICAL_RECONCILIATION",
+      "assessment_complete": true,
+      "scientific_requirement_completed": false,
+      "finding": "Canonical state and older summaries retain historical zero-fit/blocker fields even though S6/S7/S8 completed. Latest explicit sections supersede them.",
+      "scope_decision": "Add unambiguous latest-evidence pointers and mark historical fields as historical; preserve failures.",
+      "exact_completion_criterion": "Canonical current status resolves to S6 24 fits, S7 3 fits and S8 3 fits and their terminal outcomes; historical blocked attempts are retained with dates and supersession links.",
+      "dependencies": [],
+      "evidence": [
+        {
+          "path": "research/finish_all_20261014/before/RESEARCH_STATE.json",
+          "sha256": "c04fed0553b87577fc62811ee5d5193264adfe44a76e5f0efbb04feb83fda653"
+        },
+        {
+          "path": "docs/CODEX_HANDOFF.md",
+          "sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a"
+        },
+        {
+          "path": "docs/STATIC_VERIFICATION.md",
+          "sha256": "fcc38a8ff1901104d9afef3a628f072bcfb3619b07d2b1415fc6aec811cf62d9"
+        },
+        {
+          "path": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+          "sha256": "0620fbe0d87ab0da9eab1172ed7d5c3bcda80e99678f4cb61ec87546ef4e2b8b"
+        },
+        {
+          "path": "research/frem_s7_20261014/REPORT.md",
+          "sha256": "bb92587080c126aec817f53326d05220b385b9216cf5bbe46f00eeff0d07d0cc"
+        },
+        {
+          "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+          "sha256": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44"
+        }
+      ]
+    }
+  ]
+}

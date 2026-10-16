@@ -1,0 +1,542 @@
+[
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/11/off.csv",
+    "sha256": "234bc746d49d0b7f8423fb51f8bf7bacbfa06710110e3c7e09a6ed59b2a11271",
+    "rows": 144,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/29/off.csv",
+    "sha256": "a8a7718c0decde1391791148dd4573aa6f4f64f76b78b604b1f35cbe091ecbed",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/47/off.csv",
+    "sha256": "c45608d8fdf3b6e280114c192607dc70b81dce12348ae09e60789f24ca11def3",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/11/old_distance.csv",
+    "sha256": "af1ad07b75532bbf24b83e02052f4c26c8e08aee9b58a33d9e71d04a9ee0c08f",
+    "rows": 144,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/29/old_distance.csv",
+    "sha256": "a8a7718c0decde1391791148dd4573aa6f4f64f76b78b604b1f35cbe091ecbed",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/47/old_distance.csv",
+    "sha256": "c45608d8fdf3b6e280114c192607dc70b81dce12348ae09e60789f24ca11def3",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/11/euclidean_distance.csv",
+    "sha256": "0f7c457497fef7a6bcc9e1d1025182d23159dfbdcfe5d5fb36050d07dbd81c0b",
+    "rows": 144,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/29/euclidean_distance.csv",
+    "sha256": "8704295f1b91dd239a1f5c1faed2261a466701ea29f719aeac9fc4291ef16367",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/47/euclidean_distance.csv",
+    "sha256": "4f5f09f0428bf7540e0f57f96e92c9ab0bc4e3bca4befee51239f9df958b3a4b",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/11/matched_random.csv",
+    "sha256": "51e3125f2b1f55f63660d6c0d3830e8e4ef12b1092b2aa8b50c26e0287cfdf62",
+    "rows": 144,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/29/matched_random.csv",
+    "sha256": "e67736e10fdeab3dd2279d8718b76c7f0e3de0d6602e5d520c929de7652e80dd",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2023/47/matched_random.csv",
+    "sha256": "7832cc0a143102f967f9d802d6ddcd9a2b670ae618b805e07b7edbac8ff91b35",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/11/off.csv",
+    "sha256": "31e5920649b3253cae8a479aeb604b03216d5779b2d3d91d7ef2ede44c30df6f",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/29/off.csv",
+    "sha256": "0dfb868ac556ee0176840b4cdd7c9eefa0b2cf161ae745dcaef215277c02a3fa",
+    "rows": 120,
+    "max_nll_error": 1.9984014443252818e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/47/off.csv",
+    "sha256": "b123e8b0f261029c3a6c9eb1cfaa8633f716f4d2622e97701356a9c7d6a3dac1",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/11/old_distance.csv",
+    "sha256": "31e5920649b3253cae8a479aeb604b03216d5779b2d3d91d7ef2ede44c30df6f",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/29/old_distance.csv",
+    "sha256": "0dfb868ac556ee0176840b4cdd7c9eefa0b2cf161ae745dcaef215277c02a3fa",
+    "rows": 120,
+    "max_nll_error": 1.9984014443252818e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/47/old_distance.csv",
+    "sha256": "b123e8b0f261029c3a6c9eb1cfaa8633f716f4d2622e97701356a9c7d6a3dac1",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/11/euclidean_distance.csv",
+    "sha256": "221f34954e7a65a63532af739fd37e0b3bfb9c451da1bcc373c2d78166f3443f",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/29/euclidean_distance.csv",
+    "sha256": "605285be1f91e2ca9b23df4a88b0efba2d59ffefa61a5bacda28c47ebe0f97bb",
+    "rows": 120,
+    "max_nll_error": 1.9984014443252818e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/47/euclidean_distance.csv",
+    "sha256": "18bbdd9b236258f5a5c8578ab9bc9a4bfde39f08036ead074f8efc601612a634",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/11/matched_random.csv",
+    "sha256": "68589d76c38d33a67d959f630d534d9b17350238b633176634a0a1b4755887c1",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/29/matched_random.csv",
+    "sha256": "785cd6c69f8bd738a9cba0013b22f4ab78130cf9ae8ee2ad4ffdcb4313bdfb72",
+    "rows": 120,
+    "max_nll_error": 1.9984014443252818e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s4_20261012_attempt1/fresh_2024/47/matched_random.csv",
+    "sha256": "c3a368aad68657b80516b959e987286a1929b3caa651966cf39ba372d5318138",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/frem/off.csv",
+    "sha256": "aee4a9db4862c97350471e897e5ae4957b66f7e7134f2753e40c50598ba0e4b1",
+    "rows": 144,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/frem/off.csv",
+    "sha256": "c6696ddbf62dbff7ce8aaeb0edbe3a4252e601b7fa96a5befe8f758b674b4546",
+    "rows": 144,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/frem/off.csv",
+    "sha256": "3fc3f697da9bb5e4cb87931d9f7bee7407057a3fb855e842f5c12d834833f317",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/frem/combined.csv",
+    "sha256": "561fcfe04fe6a3828da20fa7e25fc54e2afa729cd6a7ebf295ddc2b7ca04f613",
+    "rows": 144,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/frem/combined.csv",
+    "sha256": "a67938a3d66ea2cc219f84c7ed2dd4d7a5fc84990aa97d41b8ddc89b3aacb9b3",
+    "rows": 144,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/frem/combined.csv",
+    "sha256": "67be8f5892e7c4068e44b2535c28aa8eea39b283f7671c0317bd6eec69010d15",
+    "rows": 144,
+    "max_nll_error": 2.220446049250313e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/no_jepa/off.csv",
+    "sha256": "d37ae9fc15d674922369e3a1e4e6df6521653e3ade4f8248c1f71fdd16dec75d",
+    "rows": 144,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/no_jepa/off.csv",
+    "sha256": "227c93d61eb9899330fe5aa14ff000f519d3498fa2e9016256cef0fcb026f626",
+    "rows": 144,
+    "max_nll_error": 1.9984014443252818e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/no_jepa/off.csv",
+    "sha256": "3f324e9bb3179296c91ae24c97bbc2d8c9228251da14fc61819b7ef587b8dcf6",
+    "rows": 144,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/ridge/off.csv",
+    "sha256": "1f19ee74cf0618d1685d1218cba04a702bce0486d2c828bbc0d5eb3435a7e9c8",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/ridge/off.csv",
+    "sha256": "af2794754115323c5a3ddd6a5e22de5067969d62ce03ade5d5430c04c2e924c8",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/ridge/off.csv",
+    "sha256": "a6990fb7f214b9d980e05dca1212727c9aa3aa58c3ef9d4c223f24dfc944b9bc",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/xgboost/off.csv",
+    "sha256": "fdd5cfd29b806c3261be1dca19f86f8203c8260edf59b085fe384e7f38a6d33e",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/xgboost/off.csv",
+    "sha256": "288f3bdda52867e8db404607fef5b7e2b9930cb974729b26622b0926b0a8dc2d",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/xgboost/off.csv",
+    "sha256": "a89cb4740ea7630f7060160bbdbe85d8cc36fe9feec64b336fea424147749dc4",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/zero/off.csv",
+    "sha256": "2b1a670a9004c2c62c52559445707a5103bc403ff4bf5d44ee5b9ca64b470c3e",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/zero/off.csv",
+    "sha256": "975535a8da08fee218895cc5a428f3e15e141fa5afd1c1ba6735344421540ea5",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/zero/off.csv",
+    "sha256": "d7648b23eda9fde91d52a547a08e4c431f1b5c23de6e999073eac46992408bf1",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/11/historical_mean/off.csv",
+    "sha256": "57e300760448c6fefd24b48a4ccad8f7b5f75cc816cf2c8f0c78d0f3c2f08a49",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/29/historical_mean/off.csv",
+    "sha256": "2afc8dea45570b579b3b5fe4c9dbfb8b0d309fecda4220f3e1f8d0d09d29142a",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2023/47/historical_mean/off.csv",
+    "sha256": "73ea3d973f590aac719a44ff50ab14ac86d8ba23d1a27799a2ad07ed29fafa20",
+    "rows": 144,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/frem/off.csv",
+    "sha256": "a83ddabb2d58254d1839ed8ea986c064b6d22bf7e12bcc45557ca7f0f264096e",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/frem/off.csv",
+    "sha256": "b0b46423bc973b2fd180986f1a63c865e7485c2afdc0da0f09a5ab592173c2f8",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/frem/off.csv",
+    "sha256": "f11c759d10f013a969c4a4b1a0b46dae02138926b198ad6584450de8d014c410",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/frem/combined.csv",
+    "sha256": "86d4dd583bd476de5fcee7c38b1b07a2747d8a1ef32b9df27c1220d9e91d0fd4",
+    "rows": 120,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/frem/combined.csv",
+    "sha256": "ce58cfbaf336bdce1907f8478028abf2087f16f1456860353ef60d3bbd3c39fe",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/frem/combined.csv",
+    "sha256": "70fe08d378424b6d7d3429ee0b3a087ae11f498feb8d16278ba5d953cd6e9df0",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/no_jepa/off.csv",
+    "sha256": "53c6f34ee92bc631222046f4cacfb0bde451dd53d6f06c2768e16e387fb280e4",
+    "rows": 120,
+    "max_nll_error": 1.5543122344752192e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/no_jepa/off.csv",
+    "sha256": "d663a9574bd56c9b83e9deba5ca29dd8d4125c929332770d3c16978382661d1f",
+    "rows": 120,
+    "max_nll_error": 1.7763568394002505e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/no_jepa/off.csv",
+    "sha256": "3c1fd00d169eb491f91494eb707a6f4a39f3a41072d3bce9b4c9f89b27dcc2cc",
+    "rows": 120,
+    "max_nll_error": 1.3322676295501878e-15
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/ridge/off.csv",
+    "sha256": "995b534d5bd1de59291a1e36fc5e1a431d55595700c1910c831ffb4738dd962a",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/ridge/off.csv",
+    "sha256": "f90cafab667b7fe309959d79f63dbf4f5f1e313c364b2a7fdf07e5f0348491a5",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/ridge/off.csv",
+    "sha256": "5eac26d3dcc518d9bf6bb74be88ba0921c33ec5c4fcccfa1a2b5dd6d81786896",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/xgboost/off.csv",
+    "sha256": "ca1f476eb410197d0da60e4081f296be5de58ad9f72168b4c1d938a5e722ae82",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/xgboost/off.csv",
+    "sha256": "e7b9198f2331464ef6034a7052003dac5b46f696fa425693c046f143aed5c1d1",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/xgboost/off.csv",
+    "sha256": "db5d3eb1e3242f02a1c39a43ed7137c88e47afe414a5040de3c6afe52ec62650",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/zero/off.csv",
+    "sha256": "7b3e1be38dc369e396cbfdb05ba98ebf748c1a51aaf994e67310ec71c007dd87",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/zero/off.csv",
+    "sha256": "5f230d0e4f27233278e1c581c93e69f5c10b2b335ce60aa5f18ec30da4623a94",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/zero/off.csv",
+    "sha256": "30f45479d9df92616b5dbc8db324a09ddf1b36e1f9599fcac97cd2a1b91c36ab",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/11/historical_mean/off.csv",
+    "sha256": "8ee977e9335b72d4e5bbdfe1e4830fa1ae31a2e8bfaac6537d2b06fece0164de",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/29/historical_mean/off.csv",
+    "sha256": "bc5c044f6e18485919988599bba38dee0d7acdf190f956a01b25a8af0b2ce14e",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s3_20261011_attempt1/public/fresh_2024/47/historical_mean/off.csv",
+    "sha256": "a99dc788787c58b95af7c727385d400dd9aafceb4b832cb6a1621e85c3ce9c41",
+    "rows": 120,
+    "max_nll_error": 8.881784197001252e-16
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/great_recession/frem/predictions.csv",
+    "sha256": "268e7a1625aec40d6f4f4e39f23e413f4d2738665568ac2699aeada6e392a373",
+    "rows": 437,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/great_recession/no_memory/predictions.csv",
+    "sha256": "f3861a407552961d2b33adee4297622bab6409a1705f832ba7362e1b1687bdf4",
+    "rows": 437,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/great_recession/ridge/predictions.csv",
+    "sha256": "ced5833da728558e87ff36ef0fe98591cf115d8b378f174400770f5b11c771bd",
+    "rows": 437,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/great_recession/xgboost/predictions.csv",
+    "sha256": "d112ba9198896bf073936e3d66ba9a651ee4b32d654179e2c990974c78fa1b99",
+    "rows": 437,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/recovery/frem/predictions.csv",
+    "sha256": "1b3ca7df2c428974dd44dc00a62ecda22f696818fb9f673b2d55f1c7156ef144",
+    "rows": 414,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/recovery/no_memory/predictions.csv",
+    "sha256": "7b519f2fb4468b6d07d7e3869cf2354dd9a11037231178d62c40d778fc5ee833",
+    "rows": 414,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/recovery/ridge/predictions.csv",
+    "sha256": "086b30f1f42daabce9597b96652f5dba3abfe87eddcdcb4dcbe88aa066cd4337",
+    "rows": 414,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/recovery/xgboost/predictions.csv",
+    "sha256": "ddb08b3ece3c4611e4d21bfa17328637ffe11c8e14ea7e55a36687df83deb31a",
+    "rows": 414,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2011/frem/predictions.csv",
+    "sha256": "3034109cfc142002a7fc5e9e3b1413776538a98f38e833361a1df7d28c9309f7",
+    "rows": 264,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2011/no_memory/predictions.csv",
+    "sha256": "58888b9ca733f78f0c18cfe9ec775c7453dc87ba0a4a0bf6ce2b0ab8033a6d51",
+    "rows": 264,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2011/ridge/predictions.csv",
+    "sha256": "c3d51e77a0f6063d2d623a8acdb856bab0648f2c773254760168fbfff8286eb3",
+    "rows": 264,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2011/xgboost/predictions.csv",
+    "sha256": "834bc108cd6a5f52dadb165f536ac35ea1d75d56edc8d57bc03eee1fb91a55b8",
+    "rows": 264,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/years_2015_2016/frem/predictions.csv",
+    "sha256": "f7492040ab5fec1c75e22687f6680a865512ef02172627034b0a0bc092680c74",
+    "rows": 480,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/years_2015_2016/no_memory/predictions.csv",
+    "sha256": "6c816443042a5d89f450f823940a2608baac9487f7dc717e6ec824a68e8bed24",
+    "rows": 480,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/years_2015_2016/ridge/predictions.csv",
+    "sha256": "7a6eca8a36c8cb3d7a78835616557da5db5286b9126b74a644aa793f453ec805",
+    "rows": 480,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/years_2015_2016/xgboost/predictions.csv",
+    "sha256": "8120aaad99497e55fe480a657fedfb1c3d8733a665660b70886807965621421f",
+    "rows": 480,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2020/frem/predictions.csv",
+    "sha256": "3f07d02f5408c4f6dc0778b45447f564773c84d273bfaa825a972cbba22bdff6",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2020/no_memory/predictions.csv",
+    "sha256": "f1b7042768f2f35430ccb2873f511019cf18643ed94f8077075242a4970e2bd3",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2020/ridge/predictions.csv",
+    "sha256": "9bedb1d1033dabeccf1b78f1dcd4ac31e6e77b090e89eee04a2e119ebe7d71e6",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2020/xgboost/predictions.csv",
+    "sha256": "839b2e7051212db3f73d21b2f13142af0e01be5244b6286df8152084f7f61785",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2022/frem/predictions.csv",
+    "sha256": "f1def4b8975d76dcb5ed1e91abb3535bd534270938079951e3548e665d2b6f6c",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2022/no_memory/predictions.csv",
+    "sha256": "5c9db33cc590e52b57961592e96a2e31bf6cc1612a99a7daceae2ad04743ce52",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2022/ridge/predictions.csv",
+    "sha256": "3e0a1109a9c358488938fbee1e5d3db197da519b1e6d429e4b295db44d977b26",
+    "rows": 288,
+    "max_nll_error": 0.0
+  },
+  {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1/year_2022/xgboost/predictions.csv",
+    "sha256": "e4ee1df28c4881590a98f9295475e69df4d817b0ba1eff9f028c95e034166bbf",
+    "rows": 288,
+    "max_nll_error": 0.0
+  }
+]

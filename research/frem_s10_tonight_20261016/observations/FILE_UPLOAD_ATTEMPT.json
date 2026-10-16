@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-16T07:30:02.672216+00:00",
+  "status": "BLOCKED_BROWSER_FILE_UPLOAD",
+  "notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+  "filechooser_result": "Chrome extension file-URL access disabled",
+  "native_picker_result": "Computer Use permissions not granted",
+  "settings_changed": false,
+  "source_uploaded_by_filechooser": false,
+  "cloud_session_started": false,
+  "next_action": "Prepare supported browser code-cell paste of exact hash-bound notebook; no permission expansion."
+}

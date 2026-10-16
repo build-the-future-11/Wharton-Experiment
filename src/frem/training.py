@@ -371,6 +371,12 @@ class Trainer:
             raise FloatingPointError("Non-finite training objective; the run must be recorded as failed")
         self.optimizer.zero_grad(set_to_none=True)
         loss.backward()
+        head_gradient = self.model.return_head.weight.grad
+        head_norms = (
+            head_gradient.detach().norm(dim=1).cpu().tolist()
+            if head_gradient is not None
+            else [0.0, 0.0, 0.0]
+        )
         norm = torch.nn.utils.clip_grad_norm_(
             self.model.parameters(), self.training_config.gradient_clip, error_if_nonfinite=True
         )
@@ -399,6 +405,12 @@ class Trainer:
             "latent_variance": float(output["latent"].detach().var(0, unbiased=False).mean()),
             "gate_entropy": float(gate_entropy),
             "gradient_norm": float(norm),
+            "gradient_clipped": float(norm > self.training_config.gradient_clip),
+            "location_head_gradient_norm": head_norms[0],
+            "scale_head_gradient_norm": head_norms[1],
+            "df_head_gradient_norm": head_norms[2],
+            "mean_prediction": float(output["prediction"].detach().mean()),
+            "mean_target": float(target.detach().mean()),
             "rows": len(target),
             "regularizer_samples": int(regularizers["regularizer_samples"].detach()),
         }
@@ -450,6 +462,8 @@ class Trainer:
             if not self.model_config.residual_xgboost:
                 raise ValueError("Calibration was supplied but residual_xgboost is disabled")
         scaled_train = self.scaler.fit_transform(train)
+        if self.model_config.return_parameterization == "train_standardized":
+            self.model.fit_return_reference(self._tensor(train.y, torch.float64))
         if self.model.spectral is not None:
 
             def reference_batches() -> Iterator[Tensor]:
@@ -560,6 +574,9 @@ class Trainer:
                 if not math.isfinite(score):
                     raise FloatingPointError("Validation log score is non-finite")
                 summary["validation_nll"] = score
+                summary["validation_mean_prediction"] = float(forecasts.prediction.mean())
+                summary["validation_mean_target"] = float(validation.y.mean())
+                summary["validation_mean_bias"] = float((forecasts.prediction - validation.y).mean())
                 summary["validation_rows"] = len(validation)
                 summary["validation_dates"] = len(np.unique(validation.time // DAY_NS))
                 summary["validation_timestamps"] = len(np.unique(validation.time))
@@ -609,6 +626,17 @@ class Trainer:
         self.online_watermark = self.fitted_through
         self.fit_report = {
             "status": "fitted",
+            "return_parameterization": self.model_config.return_parameterization,
+            "return_reference": (
+                {
+                    "center": float(self.model.return_center),
+                    "unit": float(self.model.return_unit),
+                    "rows": int(self.model.return_reference_count),
+                    "source": "training_targets_only",
+                }
+                if self.model_config.return_parameterization == "train_standardized"
+                else None
+            ),
             "scientific_claim": "training completed; held-out evidence required",
             "stop_reason": stop_reason,
             "requested_epochs": self.training_config.epochs,

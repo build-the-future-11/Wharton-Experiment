@@ -1,0 +1,158 @@
+...............FFFF                                                      [100%]
+=================================== FAILURES ===================================
+__________ test_base_families_fit_causal_partitions_and_reload[frem] ___________
+
+name = 'frem'
+tmp_path = PosixPath('/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.tmp/frem_s2/pytest-of-ryan/pytest-5/test_base_families_fit_causal_0')
+
+    @pytest.mark.parametrize("name", ["frem", "no_jepa", "ridge", "xgboost"])
+    def test_base_families_fit_causal_partitions_and_reload(name, tmp_path):
+        from test_model_contracts import windows
+    
+        base = S3Base(name, 11)
+>       base.fit(windows(100))
+
+tests/test_s3.py:165: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/frem/s3_forecaster.py:71: in fit
+    fit = self.predictor.fit(core, selection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/frem/training.py:441: in fit
+    self._validate_schema(train, labeled=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <frem.training.Trainer object at 0x11ad21b50>
+data = WindowData(x=array([[[-0.6664369 ,  0.09745096, -1.8996469 ],
+        [-1.9400698 , -1.4105191 , -0.8005887 ],
+       ... 4147200000000000,
+       4233600000000000, 4233600000000000, 4320000000000000,
+       4320000000000000]), metadata={})
+
+    def _validate_schema(self, data: WindowData, *, labeled: bool) -> None:
+        if len(data) == 0:
+            raise ValueError("Empty window sets cannot train or produce forecasts")
+        if data.x.shape[1:] != (self.model_config.context_length, self.model_config.input_dim):
+            raise ValueError("Window context shape does not match ModelConfig")
+        if labeled and data.future_x.shape[1:] != (self.model_config.horizon, self.model_config.input_dim):
+>           raise ValueError("Future target shape does not match ModelConfig")
+E           ValueError: Future target shape does not match ModelConfig
+
+src/frem/training.py:269: ValueError
+_________ test_base_families_fit_causal_partitions_and_reload[no_jepa] _________
+
+name = 'no_jepa'
+tmp_path = PosixPath('/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.tmp/frem_s2/pytest-of-ryan/pytest-5/test_base_families_fit_causal_1')
+
+    @pytest.mark.parametrize("name", ["frem", "no_jepa", "ridge", "xgboost"])
+    def test_base_families_fit_causal_partitions_and_reload(name, tmp_path):
+        from test_model_contracts import windows
+    
+        base = S3Base(name, 11)
+>       base.fit(windows(100))
+
+tests/test_s3.py:165: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/frem/s3_forecaster.py:71: in fit
+    fit = self.predictor.fit(core, selection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/frem/training.py:441: in fit
+    self._validate_schema(train, labeled=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <frem.training.Trainer object at 0x11fe4b4d0>
+data = WindowData(x=array([[[-0.6664369 ,  0.09745096, -1.8996469 ],
+        [-1.9400698 , -1.4105191 , -0.8005887 ],
+       ... 4147200000000000,
+       4233600000000000, 4233600000000000, 4320000000000000,
+       4320000000000000]), metadata={})
+
+    def _validate_schema(self, data: WindowData, *, labeled: bool) -> None:
+        if len(data) == 0:
+            raise ValueError("Empty window sets cannot train or produce forecasts")
+        if data.x.shape[1:] != (self.model_config.context_length, self.model_config.input_dim):
+            raise ValueError("Window context shape does not match ModelConfig")
+        if labeled and data.future_x.shape[1:] != (self.model_config.horizon, self.model_config.input_dim):
+>           raise ValueError("Future target shape does not match ModelConfig")
+E           ValueError: Future target shape does not match ModelConfig
+
+src/frem/training.py:269: ValueError
+__________ test_base_families_fit_causal_partitions_and_reload[ridge] __________
+
+name = 'ridge'
+tmp_path = PosixPath('/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.tmp/frem_s2/pytest-of-ryan/pytest-5/test_base_families_fit_causal_2')
+
+    @pytest.mark.parametrize("name", ["frem", "no_jepa", "ridge", "xgboost"])
+    def test_base_families_fit_causal_partitions_and_reload(name, tmp_path):
+        from test_model_contracts import windows
+    
+        base = S3Base(name, 11)
+        base.fit(windows(100))
+        later = windows(8, start=130)
+        original = base.predict(later)
+        base.save(tmp_path / name)
+        restored = S3Base.load(tmp_path / name, trust_joblib=True)
+        pd.testing.assert_frame_equal(original, restored.predict(later))
+>       np.testing.assert_allclose(base.keys(later, True), restored.keys(later, True))
+E       AssertionError: 
+E       Not equal to tolerance rtol=1e-07, atol=0
+E       
+E       Mismatched elements: 11 / 32 (34.4%)
+E       First 5 mismatches are at indices:
+E        [0, 1]: 0.4058075638960822 (ACTUAL), 0.4058077695444211 (DESIRED)
+E        [1, 1]: 0.6540362908401488 (ACTUAL), 0.6540360811719365 (DESIRED)
+E        [2, 1]: 0.5072478871921987 (ACTUAL), 0.5072477988850213 (DESIRED)
+E        [3, 1]: -1.0329062194398861 (ACTUAL), -1.0329060752031933 (DESIRED)
+E        [4, 1]: -0.23918853748291893 (ACTUAL), -0.2391885939001429 (DESIRED)
+E       Max absolute difference among violations: 4.04486015e-07
+E       Max relative difference among violations: 4.9212889e-06
+E        ACTUAL: array([[ 0.348525,  0.405808],
+E              [ 1.404194,  0.654036],
+E              [ 0.883343,  0.507248],...
+E        DESIRED: array([[ 0.348525,  0.405808],
+E              [ 1.404194,  0.654036],
+E              [ 0.883343,  0.507248],...
+
+tests/test_s3.py:171: AssertionError
+_________ test_base_families_fit_causal_partitions_and_reload[xgboost] _________
+
+name = 'xgboost'
+tmp_path = PosixPath('/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.tmp/frem_s2/pytest-of-ryan/pytest-5/test_base_families_fit_causal_3')
+
+    @pytest.mark.parametrize("name", ["frem", "no_jepa", "ridge", "xgboost"])
+    def test_base_families_fit_causal_partitions_and_reload(name, tmp_path):
+        from test_model_contracts import windows
+    
+        base = S3Base(name, 11)
+        base.fit(windows(100))
+        later = windows(8, start=130)
+        original = base.predict(later)
+        base.save(tmp_path / name)
+        restored = S3Base.load(tmp_path / name, trust_joblib=True)
+        pd.testing.assert_frame_equal(original, restored.predict(later))
+>       np.testing.assert_allclose(base.keys(later, True), restored.keys(later, True))
+E       AssertionError: 
+E       Not equal to tolerance rtol=1e-07, atol=0
+E       
+E       Mismatched elements: 20 / 32 (62.5%)
+E       First 5 mismatches are at indices:
+E        [0, 0]: 0.5969398274782292 (ACTUAL), 0.5969399738471958 (DESIRED)
+E        [0, 1]: 12.51109366756623 (ACTUAL), 12.511096989881537 (DESIRED)
+E        [1, 0]: 1.203081354962508 (ACTUAL), 1.2030810309156141 (DESIRED)
+E        [1, 1]: 13.70001810302133 (ACTUAL), 13.700011402843677 (DESIRED)
+E        [2, 0]: 1.0423521718563755 (ACTUAL), 1.0423519850865453 (DESIRED)
+E       Max absolute difference among violations: 6.70017765e-06
+E       Max relative difference among violations: 1.66470781e-05
+E        ACTUAL: array([[ 5.969398e-01,  1.251109e+01],
+E              [ 1.203081e+00,  1.370002e+01],
+E              [ 1.042352e+00,  1.994845e+01],...
+E        DESIRED: array([[ 5.969400e-01,  1.251110e+01],
+E              [ 1.203081e+00,  1.370001e+01],
+E              [ 1.042352e+00,  1.994845e+01],...
+
+tests/test_s3.py:171: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_s3.py::test_base_families_fit_causal_partitions_and_reload[frem]
+FAILED tests/test_s3.py::test_base_families_fit_causal_partitions_and_reload[no_jepa]
+FAILED tests/test_s3.py::test_base_families_fit_causal_partitions_and_reload[ridge]
+FAILED tests/test_s3.py::test_base_families_fit_causal_partitions_and_reload[xgboost]
+4 failed, 15 passed in 8.55s

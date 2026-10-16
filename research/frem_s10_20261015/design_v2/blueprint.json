@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "id": "FREM-S10-DESIGN-2",
+  "date": "2026-10-15",
+  "status": "EXTENDED_DESIGN_COMPLETE_IMPLEMENTATION_AND_EMPIRICAL_GATES_PENDING",
+  "scope": "Model, software architecture, quality, verification, operations and delivery planning only.",
+  "executable": false,
+  "implementation_complete": false,
+  "scientific_freeze": false,
+  "authority_order": [
+    "Repository evidence and protected-data rules",
+    "MODEL_CLARIFICATIONS.md numbered overrides",
+    "Inherited revision-1 MODEL_SPECIFICATION.md and EXPERIMENT_PROTOCOL.md",
+    "Engineering contracts and requirement traceability"
+  ],
+  "inherits": {
+    "research/frem_s10_20261015/design.json": "c344616faf89c035f89869b617e79c2fc7563ef9e60cb050091741888b3a05d8",
+    "research/frem_s10_20261015/MODEL_SPECIFICATION.md": "782ce8485691050f254b9e24a8e560c2237f2fe5414b920828b835447c2c769e",
+    "research/frem_s10_20261015/EXPERIMENT_PROTOCOL.md": "760cb4309611e05cf6ec5a35065fe931bfc0b0aa9b32f3b4c7e3066e08f1f6bb",
+    "research/frem_s10_20261015/RECEIPT.json": "115d6026c9a73ca0f004455f8760f9a82d9a6a6f4fbc5cbfbe3270f2f5b9a485"
+  },
+  "clarifications": [
+    {
+      "id": "CL-01",
+      "title": "Decision information and ideal execution",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-02",
+      "title": "Dividends and event ownership",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-03",
+      "title": "Calendar and fold indices",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-04",
+      "title": "Frozen-state ablation",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-05",
+      "title": "Neighbor sensitivities",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-06",
+      "title": "Exact grid and benchmark projection",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-07",
+      "title": "Stacking solve",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-08",
+      "title": "Shared bootstrap and multiplicity",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-09",
+      "title": "Precision gate without a circular prerequisite",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-10",
+      "title": "Checkpoints and consumed attempts",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-11",
+      "title": "Budgets, source scope and failure classification",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-12",
+      "title": "Diagnostic units, utility and calibration",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-13",
+      "title": "Package and verification ownership",
+      "document": "MODEL_CLARIFICATIONS.md"
+    },
+    {
+      "id": "CL-14",
+      "title": "Remaining numerical and event boundaries",
+      "document": "MODEL_CLARIFICATIONS.md"
+    }
+  ],
+  "resolved_overrides": {
+    "quote_clock": {
+      "timezone": "America/New_York",
+      "assumed_open": "09:30:00",
+      "decision_offset_microseconds": 1,
+      "ideal_same_quote_fill_offset_microseconds": 2,
+      "observed_latency": false,
+      "current_quote_enters_forecast_features": false
+    },
+    "dividend_target_interval": "origin < ex_date <= endpoint; entering-share entitlement before trade; cash-on-ex-date assumption",
+    "calendar": "identical source session sequences; earliest observed common session per ISO week; frozen i0+4k with endpoint strictly before fold end",
+    "frozen_ablation": "first-fold-decision complete atom array and final probabilities remain fixed within that fold",
+    "neighbor_sensitivities": {
+      "k_values": [
+        16,
+        32,
+        64
+      ],
+      "concentration_floors": [
+        8,
+        16,
+        32
+      ],
+      "reference_minimum": "k+1",
+      "pseudocount": 64
+    },
+    "actions": {
+      "integer_units_per_asset": [
+        0,
+        8
+      ],
+      "denominator": 20,
+      "total_units_maximum": 16,
+      "grid_count": 609,
+      "maximum_with_distinct_hold": 610,
+      "min_variance_grid_count": 45
+    },
+    "projection": {
+      "method": "capped Euclidean projection with monotone scalar bisection",
+      "maximum_iterations": 100,
+      "sum_residual": 1e-12,
+      "kkt_residual": 1e-10
+    },
+    "simplex_solve": {
+      "active_faces": 7,
+      "curvature_space": "simplex tangent",
+      "condition_scale": "H,a divided by max(1,maxabs(H),maxabs(a)); equality row and column unit",
+      "maximum_bordered_cond2": 1000000000000.0,
+      "uncertified_candidate": "terminal numerical error",
+      "original_multiplier": "nu_original=s*nu_scaled"
+    },
+    "bootstrap": {
+      "draws": 5000,
+      "seed_sequence": 1901,
+      "children": [
+        [
+          "A",
+          2
+        ],
+        [
+          "B",
+          2
+        ],
+        [
+          "A",
+          4
+        ],
+        [
+          "B",
+          4
+        ]
+      ],
+      "bit_generator": "PCG64",
+      "starts_dtype": "int64",
+      "paired_indices_saved": true,
+      "secondary_family_size": 16
+    },
+    "precision": {
+      "after_verified_minimal_kernel": true,
+      "origins_from": "2008-01-01",
+      "labels_available_before": "2010-01-01",
+      "minimum_blocks_including_cold_start": 24,
+      "design_alternative_relative_gain": 0.1,
+      "null_margin": 0.05,
+      "formula": "(1.96+0.84)*sd(bootstrap_relative_gains,ddof=1)*sqrt(n/N)<=0.10-0.05 for all 2 controls x 2 block lengths",
+      "zero_variability_or_no_context_global_difference": "PRECISION_UNIDENTIFIABLE",
+      "joint_power_established": false,
+      "pilot_seed_sequence": 1902,
+      "pilot_children": [
+        [
+          "PILOT",
+          2
+        ],
+        [
+          "PILOT",
+          4
+        ]
+      ],
+      "sample_sd_ddof": 1,
+      "projected_evaluation_count": "N_A+N_B",
+      "production_guard_subset_verified_before_precision": true,
+      "own_prior_precision_result_required": false
+    },
+    "market_resume_supported": false,
+    "resources": {
+      "workers": 1,
+      "numerical_threads": 1,
+      "precision_wall_seconds": 600,
+      "campaign_wall_seconds": 3600,
+      "worker_rss_limit_mib": 256,
+      "owned_process_tree_rss_limit_mib": 256,
+      "host_memory_floor_mib": 512,
+      "pageouts_must_not_rise": true
+    },
+    "diagnostics": {
+      "liquidatable_nav_deductions_are_hypothetical": true,
+      "h3": "mean dated CRRA of liquidatable NAV ratios; terminal utility separate",
+      "loss_events": [
+        "each_asset_return<0",
+        "separate_equal_basket_return<0"
+      ],
+      "calibration_bins": 10,
+      "sparse_bin_below_count": 10,
+      "central_interval_coverage": [
+        0.5,
+        0.8,
+        0.95
+      ],
+      "robust_minimum_includes_zero_nominal_mass_atoms": true
+    },
+    "numeric_boundaries": {
+      "relative_es_control_mean_must_exceed": 1e-12,
+      "weight_feasibility_absolute": 1e-12,
+      "objective_tie_absolute": 1e-10,
+      "turnover_tie": "1e-10*max(1,V)",
+      "drawdown": "actual daily closes plus labeled initial capital and final-liquidation anchors",
+      "duplicate_applied_event": "reject even when identical"
+    }
+  },
+  "unchanged": {
+    "matrix": {
+      "core_strategy_ledgers": 128,
+      "benchmark_ledgers": 48,
+      "ablation_ledgers": 16,
+      "total_ledgers": 192
+    },
+    "primary_margins": {
+      "new_distribution_relative_margin": 0.05,
+      "each_fold_positive": true,
+      "old_nll_margin_nats": 0.01,
+      "old_nll_satisfied_by_this_model": false,
+      "wealth_uplift_each_fold": 0.06,
+      "wealth_controls": [
+        "equal100",
+        "buy_hold100"
+      ],
+      "beats_cash_each_fold": true,
+      "daily_close_drawdown_not_worse_than": "equal80",
+      "confirmation_claim": false
+    },
+    "folds": [
+      {
+        "id": "A",
+        "evaluation_start": "2010-01-01",
+        "evaluation_end_exclusive": "2013-01-01"
+      },
+      {
+        "id": "B",
+        "evaluation_start": "2013-01-01",
+        "evaluation_end_exclusive": "2017-01-01"
+      }
+    ],
+    "assets": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ],
+    "forecast_arms": [
+      "unconditional",
+      "recent",
+      "context",
+      "equal",
+      "global_stack",
+      "contextual_stack",
+      "individual_score_mix",
+      "zero"
+    ],
+    "policy_arms": [
+      "nominal",
+      "robust"
+    ],
+    "benchmarks": [
+      "cash",
+      "equal100",
+      "equal80",
+      "buy_hold100",
+      "inverse_vol80",
+      "shrink_min_variance80"
+    ],
+    "ablations": [
+      "repeat_h1",
+      "frozen_state",
+      "no_shrink",
+      "force_liquidate",
+      "no_exact_hold",
+      "window260",
+      "neighbors16",
+      "neighbors64"
+    ]
+  },
+  "engineering": {
+    "package_root": "successors/frem_s10",
+    "source_root": "successors/frem_s10/src/frem_s10",
+    "tests_root": "successors/frem_s10/tests",
+    "target_python": "3.12",
+    "runtime_third_party_dependencies": [
+      "numpy"
+    ],
+    "dependency_groups": [
+      "quality",
+      "build"
+    ],
+    "lock_created": false,
+    "cli": "s10-research",
+    "commands": [
+      "plan",
+      "admit",
+      "verify-engineering",
+      "prepare-precision",
+      "freeze",
+      "run",
+      "audit",
+      "report",
+      "package"
+    ],
+    "lifecycle": [
+      "CREATED",
+      "PREFLIGHT",
+      "ADMITTED",
+      "CONSUMED",
+      "RUNNING",
+      "COMPLETE",
+      "FAILED",
+      "INTERRUPTED",
+      "BUDGET_EXCEEDED",
+      "REJECTED_UNCONSUMED"
+    ],
+    "quality_tiers": [
+      "Q0",
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4"
+    ],
+    "requirements": 60,
+    "planned_verification_ids": 96,
+    "implementation_work_packages": 19,
+    "review_findings": 19
+  },
+  "gates": {
+    "internal_design_review": "DOCUMENTED_NOT_EXTERNAL",
+    "source_admission": "PENDING",
+    "minimal_kernel": "NOT_IMPLEMENTED",
+    "precision": "NOT_MEASURED",
+    "full_implementation": "NOT_IMPLEMENTED",
+    "engineering_runtime_verification": "NOT_RUN",
+    "resource_feasibility": "NOT_MEASURED",
+    "scientific_freeze": "NOT_CREATED",
+    "development_campaign": "NOT_RUN",
+    "untouched_confirmation": "NOT_ADMITTED",
+    "algorithmic_novelty": "NOT_ESTABLISHED",
+    "independent_reproduction": "NOT_RUN",
+    "release": "NOT_CREATED"
+  },
+  "this_session": {
+    "new_model_code": false,
+    "new_test_code": false,
+    "model_tests_run": 0,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "source_value_analysis": false,
+    "protected_access": false,
+    "independent_review": false,
+    "internal_collaborating_agent_review": true,
+    "original_thresholds_changed": false,
+    "completed_studies_reopened": false
+  },
+  "documents_sha256": {
+    "research/frem_s10_20261015/design_v2/ADVERSARIAL_FINDINGS.md": "6bbf82d18102f5494c0d5b8eb76a6d1011e04e854fd7ec096eacf7cb782370e7",
+    "research/frem_s10_20261015/design_v2/ARCHITECTURE_AND_INTERFACES.md": "77934e962dc5ce6e622368e26da2821367ffca66c741828b51d142913ae64323",
+    "research/frem_s10_20261015/design_v2/CODE_QUALITY_AND_CI.md": "f3ed9be21914fd94a54dda5f761d99de0456009eb330d8dbe066d9162bcb8288",
+    "research/frem_s10_20261015/design_v2/DELIVERY_PLAN.md": "f6b28d0ea0155ff1edc42f6b512b65c29778a326650fb3449901a4243f4ec9a4",
+    "research/frem_s10_20261015/design_v2/MODEL_CLARIFICATIONS.md": "13981354354e992bf788f3b6e695f571977ef84714935fbe15108bda2cff1b06",
+    "research/frem_s10_20261015/design_v2/OPERATIONS_AND_ARTIFACTS.md": "3f71578ba8a534ab6693d58fb68747edcfd64d601eb4a71fc1dfcbab6147ef9e",
+    "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md": "6297841c351133a468a0706d5f4227cc460aca0f24dc6e383f2dfe677635dcd3",
+    "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md": "e2a2f6c7ad4d233831a8678e19799596987977409cc4d8d2002b2fe148efbcd6",
+    "research/frem_s10_20261015/design_v2/requirements.json": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+    "research/frem_s10_20261015/design_v2/USER_REQUEST.txt": "64dd65aa1b0a7d4244ba02641885236fbef74225ad60ff3ceb064435db0884de",
+    "research/frem_s10_20261015/design_v2/before_manifest.json": "c224274bfb724e365f1eb4ced9f229b474e60fad7c0240847f93c51424244fb0"
+  },
+  "next_action": "WP01/WP02 internal requirement sign-off and isolated configuration/metadata/package implementation; no execution authorized by this planning manifest."
+}

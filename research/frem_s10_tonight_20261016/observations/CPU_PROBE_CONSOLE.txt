@@ -1,0 +1,125 @@
+{"transport": "EXACT_NOTEBOOK_CPU_PROBE_ONLY", "notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3", "notebook_path": "/kaggle/working/frem_s10_tonight_20261016/FREM_S10_TONIGHT_CPU.ipynb", "code_cells_ast_verified": 8, "scientific_status": "NOT_EVALUATED"}
+
+# 1. Source retrieval and Wharton / FREM-S10 identity
+
+# 2. Resolved configuration, manifests and deadline
+Executing exact notebook code cell 1/8
+
+# 3. Dependencies and exact CPU environment
+Executing exact notebook code cell 2/8
+{
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "system": "Linux",
+  "machine": "x86_64",
+  "numpy": "2.1.3",
+  "torch": "2.11.0+cpu",
+  "torch_required": false,
+  "numerical_imports_performed": false
+}
+
+# 4. Data integrity and verified source setup
+Executing exact notebook code cell 3/8
+{'source_bundle_sha256': 'a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a', 'runner_sha256': 'dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1', 'candidate': '6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031', 'mode': 'probe'}
+
+# 5. Small CPU preflight and persistence probe
+Executing exact notebook code cell 4/8
+{"status": "BLOCKED", "python": "3.13.15", "numpy": "2.1.3", "reasons": ["PYTHON_3_12_REQUIRED", "NUMPY_2_5_4_METADATA_REQUIRED"], "runtime_import_tested": false, "scientific_status": "NOT_EVALUATED", "source": "stdlib wrapper compatibility gate before importing Python3.12 package"}
+{
+  "schema": "s10-tonight-persistence-probe-v1",
+  "nonce": "92ae412dd3b34812854f1660c48edf9c",
+  "created_utc": "2026-10-16T07:36:19.654117+00:00",
+  "binding": {
+    "source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+    "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+    "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+    "deadline": "2026-10-16T16:30:00+00:00",
+    "total_reserved_seconds_cap": 600
+  },
+  "preflight": {
+    "status": "BLOCKED",
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "reasons": [
+      "PYTHON_3_12_REQUIRED",
+      "NUMPY_2_5_4_METADATA_REQUIRED"
+    ],
+    "runtime_import_tested": false,
+    "scientific_status": "NOT_EVALUATED",
+    "source": "stdlib wrapper compatibility gate before importing Python3.12 package"
+  },
+  "runtime_identity": null,
+  "host_admission": {
+    "status": "NOT_RUN_PYTHON_INCOMPATIBLE",
+    "reason": "maintained package requires Python3.12; no unsupported package import"
+  },
+  "command_reservation_plan": {
+    "probe_seconds": 78,
+    "smoke_seconds": 515,
+    "total_seconds": 593,
+    "cap_seconds": 600
+  },
+  "plan": {
+    "status": "SEALED_MANIFEST_READ_ONLY_CLI_NOT_RUN",
+    "configuration": {
+      "schema": "s10-generated-smoke-v1",
+      "scope": "smoke",
+      "device": "cpu",
+      "precision": "float64",
+      "seed": 11,
+      "steps": 12,
+      "variants": [
+        "primary"
+      ],
+      "budget_seconds": 60,
+      "dataset": "s10-generated-smoke-data-v1",
+      "checkpoint_every_origins": 1,
+      "threads": 1
+    },
+    "configuration_bytes_sha256": "42589baa1c69f60519241601824e4e0b09c2a694a866be32cc388bcff3c85fcb"
+  },
+  "reserved_seconds": 0,
+  "wrapper_reserved_seconds": 240,
+  "scientific_status": "NOT_EVALUATED",
+  "gpu_execution": false,
+  "status": "PERSISTENCE_RETRIEVAL_REQUIRED"
+}
+{"probe_sha256": "18229e7b5e29fa9416233d6d383d5aa400555eae20d97681f2a2d9fff361c67a", "path": "session/persistence-probe.json"}
+{"saved_full_state": {"archive": "state-5c6c61614e45491fbe7726bf2015e12b.zip", "sha256": "8f87cbf3a5e081732ae3a16588d07a4714296ad632021bb3376726ceaa1b0733", "files": 6, "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600}, "created_utc": "2026-10-16T07:36:19.665767+00:00"}}
+
+# 6. GPU preflight and profiling: not applicable
+
+# 7. Credentials and the declared generated experiment
+Executing exact notebook code cell 5/8
+{
+  "schema": "s10-generated-smoke-v1",
+  "scope": "smoke",
+  "device": "cpu",
+  "precision": "float64",
+  "seed": 11,
+  "steps": 12,
+  "variants": [
+    "primary"
+  ],
+  "budget_seconds": 60,
+  "dataset": "s10-generated-smoke-data-v1",
+  "checkpoint_every_origins": 1,
+  "threads": 1
+}
+
+
+# 8. Persisted-output retrieval and resume gate
+Executing exact notebook code cell 6/8
+
+# 9. Bounded execution, interruption and full-state resume
+Executing exact notebook code cell 7/8
+
+# 10. Analysis, frozen evaluation and export
+
+# 11. Live status, persistence and full-state restore
+Executing exact notebook code cell 8/8
+state-5c6c61614e45491fbe7726bf2015e12b.json {"archive":"state-5c6c61614e45491fbe7726bf2015e12b.zip","binding":{"candidate_identity":"6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031","deadline":"2026-10-16T16:30:00+00:00","runner_sha256":"dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1","source_bundle_sha256":"a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a","total_reserved_seconds_cap":600},"created_utc":"2026-10-16T07:36:19.665767+00:00","files":6,"sha256":"8f87cbf3a5e081732ae3a16588d07a4714296ad632021bb3376726ceaa1b0733"}
+
+Output root: /kaggle/working/frem_s10_tonight_20261016
+
+# 12. Save, retrieve, verify and explicitly stop
+Probe cells finished. Save output for this private version, retrieve and hash-check the probe, then explicitly stop the platform session. No numerical campaign was authorized by this transport.

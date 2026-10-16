@@ -1,0 +1,18 @@
+{
+  "schema": "s10-heartbeat-observation-v1",
+  "scheduled_at": "2026-10-16T06:36:32.319Z",
+  "automation_id": "frem-s10-guarded-research-continuation",
+  "controller_invocations": 1,
+  "exit_code": 2,
+  "outcome": {
+    "status": "REJECTED_UNCONSUMED",
+    "error": "complete current code inventory differs from verified snapshot"
+  },
+  "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "expected_code_identity": "11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696",
+  "canonical_update_required": true,
+  "automatic_retry_permitted": false,
+  "automation_status_after_tool_update": "PAUSED",
+  "source_changed_by_this_heartbeat": false,
+  "reason": "Source inventory drift requires review; no controller retry or automatic candidate revision is authorized."
+}

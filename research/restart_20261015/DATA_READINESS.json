@@ -1,0 +1,54 @@
+{
+  "recorded_at": "2026-10-15T14:31:56.686298+00:00",
+  "status": "NOT_ADMITTED",
+  "canonical_files": {
+    "data/raw/panel.parquet": {
+      "exists": false
+    },
+    "data/raw/panel.parquet.manifest.json": {
+      "exists": false
+    }
+  },
+  "known_exposure_metadata": [
+    {
+      "lineage": "S6",
+      "exposure": "Train 2005-2016, calibration 2017, selection/development through 2018",
+      "source": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+      "disposition": "Completed; preserve negative memory finding. Training history may support explicitly labeled development; used evaluations are not fresh confirmation."
+    },
+    {
+      "lineage": "S7",
+      "exposure": "2019 evaluation",
+      "source": "research/frem_s7_20261014/REPORT.md",
+      "disposition": "Closed; no outcome-driven retuning or replay."
+    },
+    {
+      "lineage": "S8",
+      "exposure": "2020-2022 evaluation; legacy SPY/GLD feature exposure also recorded",
+      "source": "research/frem_s8_20261014/FINAL_REPORT.md",
+      "disposition": "Closed; not globally untouched confirmation."
+    },
+    {
+      "lineage": "S3",
+      "exposure": "2023 and January-October 2024 public-stock evaluation",
+      "source": "research/frem_s3_20261011/REPORT.md",
+      "disposition": "Already evaluated; cannot declare those years fresh from calendar labels alone."
+    },
+    {
+      "lineage": "Regional factors",
+      "exposure": "Pre-2025 normalized research-factor data; source archives may contain later outcomes",
+      "source": "research/decisions/public_regional_intake_20261011.json",
+      "disposition": "Acquisition evidence only; not an executable asset universe or historical-availability contract. Source archives were not opened for this inventory."
+    }
+  ],
+  "inventory_scope": "Existing lineage receipts only; not an exhaustive all-cache exposure audit. No new source archive or protected outcomes inspected.",
+  "remaining": [
+    "Verify historical observation availability and source vintage",
+    "Complete asset/date exposure inventory before any new outcome access",
+    "Identify admissible evaluation data and truthful claim scope",
+    "Freeze source, timing, horizon, costs and missingness conventions"
+  ],
+  "protected_start": "2025-01-01",
+  "protected_access": false,
+  "fresh_confirmation_claimed": false
+}

@@ -1,0 +1,1 @@
+{"audit":{"path":"admitted/integrity.json","sha256":"d6b6ff355e22fc1bf366d078d04e8707d32cb0a5dc67735ce0b7d69df7b75e76"},"request":{"path":"admitted/request.json","sha256":"011b8cc16fd459e636920234208678f1f9c8cddabf6bd1871d665d0a69f63d29"},"schema":"s10-source-admission-v1","status":"PASS"}

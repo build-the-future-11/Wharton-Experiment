@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-14T14:54:29.878746+00:00",
+  "observation": "Downloaded window retained, but build failed on old TLT dividend dated 2004-12-31 before declared historical source start. Zero market fits or evaluation scores.",
+  "hypothesized_cause": "Overly broad intake rejection of irrelevant pre-window action.",
+  "change": "Ignore retained 2004-12-31 TLT dividend before amount access: it precedes every possible training holding and contributes to no label. Original acquisition and construction failure retained. No evaluation forecasts, fitting or score inspection occurred. Hypothesis, dates, seeds, algorithms and comparison thresholds unchanged.",
+  "predicted_effect": "Construct the same valid interval returns; no scientific model or policy change.",
+  "discriminating_experiment": "Regression verifies pre-window amount is never read; S8 18/18 tests passed before corrected-source freeze.",
+  "result": "REFROZEN_BEFORE_FITTING",
+  "freeze": "research/frem_s8_20261014/freeze2.json"
+}

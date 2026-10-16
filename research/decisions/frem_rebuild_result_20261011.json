@@ -1,0 +1,12 @@
+{
+  "decision_id": "FREM-S2-DEVELOPMENT-RESULT-20261011",
+  "observation": "Completed declared matrix: scaled FREM improves legacy NLL; frozen successor beats trained local controls but loses to zero-return control; both calibration gates select zero.",
+  "hypothesized_cause": "Training scale was an optimization weakness supported by reduced gradients and validation bias. No positive memory contribution was observed; public crisis regime shift and small validation remain plausible generalization limits, not isolated causal conclusions.",
+  "decision": "Keep the trained redesign and all 22 fits /24 prediction artifacts. Do not claim SOTA or tune this completed fold. Preserve raw zero quote, source quarantine amendment, normal gate failure, and both failed prefit attempts. Leave protected boundary and canonical FREM protocol unchanged.",
+  "predicted_effect": "Next studies can use the stable output units while testing any new recurrence hypothesis on fresh predeclared development data.",
+  "discriminating_experiment": "22 fixed fits, seeds11/29,19 crisis months,23stocks; 194 integrity tests; independent saved-NLL reconstruction and full pairing/source identity verification.",
+  "result": "COMPLETE_EXPLORATORY_OPTIMIZATION_IMPROVEMENT_MEMORY_UNSUPPORTED_ZERO_CONTROL_BEST",
+  "receipt": "research/frem_rebuild_20261011/completion_receipt.json",
+  "protected_outcomes_accessed": false,
+  "sota_established": false
+}

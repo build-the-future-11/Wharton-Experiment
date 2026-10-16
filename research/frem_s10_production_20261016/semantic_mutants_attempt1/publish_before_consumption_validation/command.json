@@ -1,0 +1,15 @@
+{
+  "label": "publish_before_consumption_validation",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values"
+  ],
+  "returncode": 0,
+  "scope": "GENERATED_ENGINEERING"
+}

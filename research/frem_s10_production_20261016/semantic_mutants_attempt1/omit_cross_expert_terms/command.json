@@ -1,0 +1,15 @@
+{
+  "label": "omit_cross_expert_terms",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+  ],
+  "returncode": 0,
+  "scope": "GENERATED_ENGINEERING"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "command": ".venv/bin/ruff check research/frem_memory_diagnosis_20261012/diagnose.py",
+  "observed_findings": [
+    "I001 import formatting",
+    "UP017 datetime.UTC alias at line 52",
+    "UP017 datetime.UTC alias at line 128"
+  ],
+  "interpretation": "Style issues only; original successful arithmetic audit and original script preserved."
+}

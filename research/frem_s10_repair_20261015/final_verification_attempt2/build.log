@@ -1,0 +1,279 @@
+running egg_info
+writing src/frem_s10.egg-info/PKG-INFO
+writing dependency_links to src/frem_s10.egg-info/dependency_links.txt
+writing entry points to src/frem_s10.egg-info/entry_points.txt
+writing requirements to src/frem_s10.egg-info/requires.txt
+writing top-level names to src/frem_s10.egg-info/top_level.txt
+reading manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+running sdist
+running egg_info
+writing src/frem_s10.egg-info/PKG-INFO
+writing dependency_links to src/frem_s10.egg-info/dependency_links.txt
+writing entry points to src/frem_s10.egg-info/entry_points.txt
+writing requirements to src/frem_s10.egg-info/requires.txt
+writing top-level names to src/frem_s10.egg-info/top_level.txt
+reading manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+running check
+creating frem_s10-0.1.0
+creating frem_s10-0.1.0/src/frem_s10
+creating frem_s10-0.1.0/src/frem_s10.egg-info
+creating frem_s10-0.1.0/src/frem_s10/analysis
+creating frem_s10-0.1.0/src/frem_s10/data
+creating frem_s10-0.1.0/src/frem_s10/experiment
+creating frem_s10-0.1.0/src/frem_s10/math
+creating frem_s10-0.1.0/src/frem_s10/model
+creating frem_s10-0.1.0/src/frem_s10/portfolio
+creating frem_s10-0.1.0/src/frem_s10/reporting
+creating frem_s10-0.1.0/src/frem_s10/runtime
+creating frem_s10-0.1.0/tests
+copying files to frem_s10-0.1.0...
+copying README.md -> frem_s10-0.1.0
+copying pyproject.toml -> frem_s10-0.1.0
+copying src/frem_s10/__init__.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/__main__.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/arrays.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/cli.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/domain.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/errors.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/identities.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/metadata.py -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/py.typed -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10/science.json -> frem_s10-0.1.0/src/frem_s10
+copying src/frem_s10.egg-info/PKG-INFO -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10.egg-info/SOURCES.txt -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10.egg-info/dependency_links.txt -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10.egg-info/entry_points.txt -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10.egg-info/requires.txt -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10.egg-info/top_level.txt -> frem_s10-0.1.0/src/frem_s10.egg-info
+copying src/frem_s10/analysis/__init__.py -> frem_s10-0.1.0/src/frem_s10/analysis
+copying src/frem_s10/analysis/bootstrap.py -> frem_s10-0.1.0/src/frem_s10/analysis
+copying src/frem_s10/data/__init__.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/data/admission.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/data/calendar.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/data/features.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/data/source_reader.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/data/targets.py -> frem_s10-0.1.0/src/frem_s10/data
+copying src/frem_s10/experiment/__init__.py -> frem_s10-0.1.0/src/frem_s10/experiment
+copying src/frem_s10/math/distances.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/math/fees.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/math/probabilities.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/math/scores.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/math/simplex.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/math/utility.py -> frem_s10-0.1.0/src/frem_s10/math
+copying src/frem_s10/model/__init__.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/checkpoint.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/config.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/engine.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/experts.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/feedback.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/library.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/records.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/model/stacking.py -> frem_s10-0.1.0/src/frem_s10/model
+copying src/frem_s10/portfolio/__init__.py -> frem_s10-0.1.0/src/frem_s10/portfolio
+copying src/frem_s10/portfolio/actions.py -> frem_s10-0.1.0/src/frem_s10/portfolio
+copying src/frem_s10/portfolio/ledger.py -> frem_s10-0.1.0/src/frem_s10/portfolio
+copying src/frem_s10/reporting/__init__.py -> frem_s10-0.1.0/src/frem_s10/reporting
+copying src/frem_s10/runtime/__init__.py -> frem_s10-0.1.0/src/frem_s10/runtime
+copying src/frem_s10/runtime/artifacts.py -> frem_s10-0.1.0/src/frem_s10/runtime
+copying src/frem_s10/runtime/consumption.py -> frem_s10-0.1.0/src/frem_s10/runtime
+copying src/frem_s10/runtime/resources.py -> frem_s10-0.1.0/src/frem_s10/runtime
+copying tests/test_actions_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_data_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_ledger_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_math_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_model_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_operations_audit.py -> frem_s10-0.1.0/tests
+copying tests/test_statistics_audit.py -> frem_s10-0.1.0/tests
+Writing frem_s10-0.1.0/setup.cfg
+Creating tar archive
+removing 'frem_s10-0.1.0' (and everything under it)
+running egg_info
+writing src/frem_s10.egg-info/PKG-INFO
+writing dependency_links to src/frem_s10.egg-info/dependency_links.txt
+writing entry points to src/frem_s10.egg-info/entry_points.txt
+writing requirements to src/frem_s10.egg-info/requires.txt
+writing top-level names to src/frem_s10.egg-info/top_level.txt
+reading manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+creating build/lib/frem_s10
+copying src/frem_s10/arrays.py -> build/lib/frem_s10
+copying src/frem_s10/metadata.py -> build/lib/frem_s10
+copying src/frem_s10/domain.py -> build/lib/frem_s10
+copying src/frem_s10/__init__.py -> build/lib/frem_s10
+copying src/frem_s10/identities.py -> build/lib/frem_s10
+copying src/frem_s10/cli.py -> build/lib/frem_s10
+copying src/frem_s10/errors.py -> build/lib/frem_s10
+copying src/frem_s10/__main__.py -> build/lib/frem_s10
+creating build/lib/frem_s10/reporting
+copying src/frem_s10/reporting/__init__.py -> build/lib/frem_s10/reporting
+creating build/lib/frem_s10/analysis
+copying src/frem_s10/analysis/bootstrap.py -> build/lib/frem_s10/analysis
+copying src/frem_s10/analysis/__init__.py -> build/lib/frem_s10/analysis
+creating build/lib/frem_s10/runtime
+copying src/frem_s10/runtime/__init__.py -> build/lib/frem_s10/runtime
+copying src/frem_s10/runtime/resources.py -> build/lib/frem_s10/runtime
+copying src/frem_s10/runtime/artifacts.py -> build/lib/frem_s10/runtime
+copying src/frem_s10/runtime/consumption.py -> build/lib/frem_s10/runtime
+creating build/lib/frem_s10/math
+copying src/frem_s10/math/fees.py -> build/lib/frem_s10/math
+copying src/frem_s10/math/distances.py -> build/lib/frem_s10/math
+copying src/frem_s10/math/utility.py -> build/lib/frem_s10/math
+copying src/frem_s10/math/probabilities.py -> build/lib/frem_s10/math
+copying src/frem_s10/math/simplex.py -> build/lib/frem_s10/math
+copying src/frem_s10/math/scores.py -> build/lib/frem_s10/math
+creating build/lib/frem_s10/model
+copying src/frem_s10/model/config.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/library.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/checkpoint.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/feedback.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/records.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/__init__.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/engine.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/stacking.py -> build/lib/frem_s10/model
+copying src/frem_s10/model/experts.py -> build/lib/frem_s10/model
+creating build/lib/frem_s10/portfolio
+copying src/frem_s10/portfolio/ledger.py -> build/lib/frem_s10/portfolio
+copying src/frem_s10/portfolio/actions.py -> build/lib/frem_s10/portfolio
+copying src/frem_s10/portfolio/__init__.py -> build/lib/frem_s10/portfolio
+creating build/lib/frem_s10/experiment
+copying src/frem_s10/experiment/__init__.py -> build/lib/frem_s10/experiment
+creating build/lib/frem_s10/data
+copying src/frem_s10/data/targets.py -> build/lib/frem_s10/data
+copying src/frem_s10/data/__init__.py -> build/lib/frem_s10/data
+copying src/frem_s10/data/features.py -> build/lib/frem_s10/data
+copying src/frem_s10/data/source_reader.py -> build/lib/frem_s10/data
+copying src/frem_s10/data/calendar.py -> build/lib/frem_s10/data
+copying src/frem_s10/data/admission.py -> build/lib/frem_s10/data
+running egg_info
+writing src/frem_s10.egg-info/PKG-INFO
+writing dependency_links to src/frem_s10.egg-info/dependency_links.txt
+writing entry points to src/frem_s10.egg-info/entry_points.txt
+writing requirements to src/frem_s10.egg-info/requires.txt
+writing top-level names to src/frem_s10.egg-info/top_level.txt
+reading manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s10.egg-info/SOURCES.txt'
+copying src/frem_s10/py.typed -> build/lib/frem_s10
+copying src/frem_s10/science.json -> build/lib/frem_s10
+installing to build/bdist.macosx-26.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-26.0-arm64/wheel
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10
+copying build/lib/frem_s10/arrays.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/reporting
+copying build/lib/frem_s10/reporting/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/reporting
+copying build/lib/frem_s10/metadata.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/analysis
+copying build/lib/frem_s10/analysis/bootstrap.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/analysis
+copying build/lib/frem_s10/analysis/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/analysis
+copying build/lib/frem_s10/domain.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/runtime
+copying build/lib/frem_s10/runtime/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/runtime
+copying build/lib/frem_s10/runtime/resources.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/runtime
+copying build/lib/frem_s10/runtime/artifacts.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/runtime
+copying build/lib/frem_s10/runtime/consumption.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/runtime
+copying build/lib/frem_s10/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+copying build/lib/frem_s10/identities.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/math
+copying build/lib/frem_s10/math/fees.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/math/distances.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/math/utility.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/math/probabilities.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/math/simplex.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/math/scores.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/math
+copying build/lib/frem_s10/cli.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/model
+copying build/lib/frem_s10/model/config.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/library.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/checkpoint.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/feedback.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/records.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/engine.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/stacking.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+copying build/lib/frem_s10/model/experts.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/model
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/portfolio
+copying build/lib/frem_s10/portfolio/ledger.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/portfolio
+copying build/lib/frem_s10/portfolio/actions.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/portfolio
+copying build/lib/frem_s10/portfolio/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/portfolio
+copying build/lib/frem_s10/py.typed -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/experiment
+copying build/lib/frem_s10/experiment/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/experiment
+copying build/lib/frem_s10/errors.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10/data
+copying build/lib/frem_s10/data/targets.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/data/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/data/features.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/data/source_reader.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/data/calendar.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/data/admission.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10/data
+copying build/lib/frem_s10/__main__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+copying build/lib/frem_s10/science.json -> build/bdist.macosx-26.0-arm64/wheel/./frem_s10
+running install_egg_info
+Copying src/frem_s10.egg-info to build/bdist.macosx-26.0-arm64/wheel/./frem_s10-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s10-0.1.0.dist-info/WHEEL
+creating '/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/final_verification_attempt2/dist/.tmp-c0z2gplh/frem_s10-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-26.0-arm64/wheel' to it
+adding 'frem_s10/__init__.py'
+adding 'frem_s10/__main__.py'
+adding 'frem_s10/arrays.py'
+adding 'frem_s10/cli.py'
+adding 'frem_s10/domain.py'
+adding 'frem_s10/errors.py'
+adding 'frem_s10/identities.py'
+adding 'frem_s10/metadata.py'
+adding 'frem_s10/py.typed'
+adding 'frem_s10/science.json'
+adding 'frem_s10/analysis/__init__.py'
+adding 'frem_s10/analysis/bootstrap.py'
+adding 'frem_s10/data/__init__.py'
+adding 'frem_s10/data/admission.py'
+adding 'frem_s10/data/calendar.py'
+adding 'frem_s10/data/features.py'
+adding 'frem_s10/data/source_reader.py'
+adding 'frem_s10/data/targets.py'
+adding 'frem_s10/experiment/__init__.py'
+adding 'frem_s10/math/distances.py'
+adding 'frem_s10/math/fees.py'
+adding 'frem_s10/math/probabilities.py'
+adding 'frem_s10/math/scores.py'
+adding 'frem_s10/math/simplex.py'
+adding 'frem_s10/math/utility.py'
+adding 'frem_s10/model/__init__.py'
+adding 'frem_s10/model/checkpoint.py'
+adding 'frem_s10/model/config.py'
+adding 'frem_s10/model/engine.py'
+adding 'frem_s10/model/experts.py'
+adding 'frem_s10/model/feedback.py'
+adding 'frem_s10/model/library.py'
+adding 'frem_s10/model/records.py'
+adding 'frem_s10/model/stacking.py'
+adding 'frem_s10/portfolio/__init__.py'
+adding 'frem_s10/portfolio/actions.py'
+adding 'frem_s10/portfolio/ledger.py'
+adding 'frem_s10/reporting/__init__.py'
+adding 'frem_s10/runtime/__init__.py'
+adding 'frem_s10/runtime/artifacts.py'
+adding 'frem_s10/runtime/consumption.py'
+adding 'frem_s10/runtime/resources.py'
+adding 'frem_s10-0.1.0.dist-info/METADATA'
+adding 'frem_s10-0.1.0.dist-info/WHEEL'
+adding 'frem_s10-0.1.0.dist-info/entry_points.txt'
+adding 'frem_s10-0.1.0.dist-info/top_level.txt'
+adding 'frem_s10-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-26.0-arm64/wheel
+Successfully built frem_s10-0.1.0.tar.gz and frem_s10-0.1.0-py3-none-any.whl
+* Getting build dependencies for sdist...
+* Building sdist...
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+* Building wheel...
+warning: build_py: byte-compiling is disabled, skipping.
+
+warning: install_lib: byte-compiling is disabled, skipping.
+

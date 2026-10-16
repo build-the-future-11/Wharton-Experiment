@@ -1,0 +1,63 @@
+B905 `zip()` without an explicit `strict=` parameter
+   --> successors/frem_s10/src/frem_s10/experiment/readback.py:216:24
+    |
+214 |     if len({event.event_id for event in events}) != len(events):
+215 |         raise IntegrityError("saved cell contains duplicate events")
+216 |     for left, right in zip(events, events[1:]):
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^
+217 |         if left.after_id != right.before_id or (left.timestamp_us, left.phase_order) >= (right.timestamp_us, right.phase_order):
+218 |             raise IntegrityError("saved event hash chain or phase chronology is broken")
+    |
+help: Add explicit value for parameter `strict=`
+    |
+215 |         raise IntegrityError("saved cell contains duplicate events")
+    -     for left, right in zip(events, events[1:]):
+216 +     for left, right in zip(events, events[1:], strict=False):
+217 |         if left.after_id != right.before_id or (left.timestamp_us, left.phase_order) >= (right.timestamp_us, right.phase_order):
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+   --> successors/frem_s10/src/frem_s10/experiment/readback.py:216:24
+    |
+214 |     if len({event.event_id for event in events}) != len(events):
+215 |         raise IntegrityError("saved cell contains duplicate events")
+216 |     for left, right in zip(events, events[1:]):
+    |                        ^^^
+217 |         if left.after_id != right.before_id or (left.timestamp_us, left.phase_order) >= (right.timestamp_us, right.phase_order):
+218 |             raise IntegrityError("saved event hash chain or phase chronology is broken")
+    |
+help: Replace `zip()` with `itertools.pairwise()`
+    |
+21  | from .replay import CampaignResult, CellFailure, CellResult, DecisionRecord, ForecastScore
+22  + import itertools
+23  |
+--------------------------------------------------------------------------------
+216 |         raise IntegrityError("saved cell contains duplicate events")
+    -     for left, right in zip(events, events[1:]):
+217 +     for left, right in itertools.pairwise(events):
+218 |         if left.after_id != right.before_id or (left.timestamp_us, left.phase_order) >= (right.timestamp_us, right.phase_order):
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+B905 `zip()` without an explicit `strict=` parameter
+   --> successors/frem_s10/src/frem_s10/experiment/readback.py:249:28
+    |
+247 |         if decision.forecast_id != decision.selection.forecast_id or decision.forecast_decision_us > decision.decision_us:
+248 |             raise IntegrityError("saved decision forecast identity or causal issue time is invalid")
+249 |     for decision, score in zip(cell.decisions, cell.scores):
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+250 |         if (decision.origin_id, decision.anchor_index, decision.forecast_id) != (score.origin_id, score.anchor_index, score.forecast_…
+251 |             raise IntegrityError("saved score does not match its issued decision")
+    |
+help: Add explicit value for parameter `strict=`
+    |
+248 |             raise IntegrityError("saved decision forecast identity or causal issue time is invalid")
+    -     for decision, score in zip(cell.decisions, cell.scores):
+249 +     for decision, score in zip(cell.decisions, cell.scores, strict=False):
+250 |         if (decision.origin_id, decision.anchor_index, decision.forecast_id) != (score.origin_id, score.anchor_index, score.forecast_id):
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 5 errors (2 fixed, 3 remaining).
+3 unsafe fixes available with `--fix --unsafe-fixes`.

@@ -1,0 +1,411 @@
+..........F...FFFF..F....FFFFF                                           [100%]
+=================================== FAILURES ===================================
+_______________ test_complete_generated_attempt_is_consumed_once _______________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_complete_generated_attemp0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aa2d280>
+
+    def test_complete_generated_attempt_is_consumed_once(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            "import os,time; assert os.environ['OPENBLAS_NUM_THREADS']=='1'; time.sleep(.05)",
+        )
+>       assert result["state"] == "COMPLETE" and result["consumed"] is True
+E       AssertionError: assert ('FAILED' == 'COMPLETE'
+E         
+E         - COMPLETE
+E         + FAILED)
+
+successors/frem_s10/tests/test_supervisor_audit.py:148: AssertionError
+____________________ test_timeout_and_cancel_retain_markers ____________________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_timeout_and_cancel_retain0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aaea510>
+
+    def test_timeout_and_cancel_retain_markers(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+    
+        def expired(*args: object) -> float:
+            raise ResourceLimitError("injected time ceiling", details={"observed_rss_mib": 49.0})
+    
+        monkeypatch.setattr(supervisor, "_sample_guard", expired)
+        result = run_generated(tmp_path, output, markers, identity, "import time;time.sleep(30)")
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:203: AssertionError
+______________________ test_cancel_terminates_owned_child ______________________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_cancel_terminates_owned_c0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aa2fdd0>
+
+    def test_cancel_terminates_owned_child(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        result = execute_operation(
+            command=(sys.executable, "-I", "-c", "import time;time.sleep(30)"),
+            operation="precision",
+            freeze_id="a" * 64,
+            attempt_id="cancel",
+            output_root=output,
+            consumption_root=markers,
+            input_hashes=((tmp_path / "fixture.json", identity),),
+            estimated_output_bytes=1024,
+            budget=Budget(5, grace_seconds=0.1),
+            cancelled=lambda: True,
+        )
+>       assert result["state"] == "INTERRUPTED"
+E       AssertionError: assert 'FAILED' == 'INTERRUPTED'
+E         
+E         - INTERRUPTED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:224: AssertionError
+_____ test_parent_exit_and_group_escape_cannot_leave_observed_child[False] _____
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_parent_exit_and_group_esc0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10aa53d40>
+escape = False
+
+    @pytest.mark.parametrize("escape", [False, True])
+    def test_parent_exit_and_group_escape_cannot_leave_observed_child(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        escape: bool,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        code = (
+            "import os,time,pathlib\n"
+            "pid=os.fork()\n"
+            "if pid == 0:\n"
+            + (" os.setsid()\n" if escape else "")
+            + " pathlib.Path('child.pid').write_text(str(os.getpid()))\n"
+            " time.sleep(30)\n"
+            " os._exit(0)\n"
+            "time.sleep(.15)\n"
+        )
+        result = run_generated(tmp_path, output, markers, identity, code)
+        pid = int((output / "attempt/child.pid").read_text())
+        current = supervisor.read_processes().get(pid)
+        assert current is None or current.state.startswith("Z")
+>       assert result["state"] == ("BUDGET_EXCEEDED" if escape else "COMPLETE")
+E       AssertionError: assert 'FAILED' == 'COMPLETE'
+E         
+E         - COMPLETE
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:255: AssertionError
+_____ test_parent_exit_and_group_escape_cannot_leave_observed_child[True] ______
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_parent_exit_and_group_esc1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a947380>
+escape = True
+
+    @pytest.mark.parametrize("escape", [False, True])
+    def test_parent_exit_and_group_escape_cannot_leave_observed_child(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        escape: bool,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        code = (
+            "import os,time,pathlib\n"
+            "pid=os.fork()\n"
+            "if pid == 0:\n"
+            + (" os.setsid()\n" if escape else "")
+            + " pathlib.Path('child.pid').write_text(str(os.getpid()))\n"
+            " time.sleep(30)\n"
+            " os._exit(0)\n"
+            "time.sleep(.15)\n"
+        )
+        result = run_generated(tmp_path, output, markers, identity, code)
+        pid = int((output / "attempt/child.pid").read_text())
+        current = supervisor.read_processes().get(pid)
+        assert current is None or current.state.startswith("Z")
+>       assert result["state"] == ("BUDGET_EXCEEDED" if escape else "COMPLETE")
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:255: AssertionError
+_____________ test_no_resource_observations_cannot_report_complete _____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_no_resource_observations_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10abcbc50>
+
+    def test_no_resource_observations_cannot_report_complete(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+    
+        def no_journal(
+            ownership: OwnedTree,
+            output: Path,
+            budget: Budget,
+            baseline: int,
+            elapsed: float,
+            journal: Journal,
+            clock: MonotonicClock,
+        ) -> float:
+            ownership.observe(supervisor.read_processes())
+            return 0.0
+    
+        monkeypatch.setattr(supervisor, "_sample_guard", no_journal)
+        result = run_generated(tmp_path, output, markers, identity, "pass")
+        assert result["state"] != "COMPLETE" and result["resource_observations"] == 0
+>       assert "no resource observations" in str(result["error"])
+E       AssertionError: assert 'no resource observations' in 'cleanup: [Errno 1] Operation not permitted'
+E        +  where 'cleanup: [Errno 1] Operation not permitted' = str('cleanup: [Errno 1] Operation not permitted')
+
+successors/frem_s10/tests/test_supervisor_audit.py:320: AssertionError
+__ test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss] ___
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_resource_faults_terminate0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a96ac60>
+fault = 'rss'
+
+    @pytest.mark.parametrize("fault", ["rss", "free", "pageouts", "output", "wall"])
+    def test_resource_faults_terminate_owned_worker_and_preserve_consumption(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        fault: str,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        original_processes = supervisor.read_processes
+    
+        def sample() -> MemorySample:
+            running = (output / "attempt/worker.stdout").exists()
+            free = 1 if running and fault == "free" else 262144
+            pageouts = 11 if running and fault == "pageouts" else 10
+            return MemorySample("constructed counter injection", 4096, free, 0, pageouts)
+    
+        def processes() -> dict[int, ProcessRecord]:
+            rows = original_processes()
+            if fault == "rss" and (output / "attempt/worker.stdout").exists():
+                rows[os.getpid()] = replace(rows[os.getpid()], rss_bytes=257 * 2**20)
+            return rows
+    
+        monkeypatch.setattr(supervisor, "sample_memory", sample)
+        monkeypatch.setattr(supervisor, "read_processes", processes)
+        code = "import pathlib,time;pathlib.Path('generated.bin').write_bytes(b'x'*16384);time.sleep(30)"
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            code,
+            wall=0.4 if fault == "wall" else 5.0,
+            output_bytes=8192 if fault == "output" else 268_435_456,
+        )
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:403: AssertionError
+__ test_resource_faults_terminate_owned_worker_and_preserve_consumption[free] __
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_resource_faults_terminate1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10a9468a0>
+fault = 'free'
+
+    @pytest.mark.parametrize("fault", ["rss", "free", "pageouts", "output", "wall"])
+    def test_resource_faults_terminate_owned_worker_and_preserve_consumption(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        fault: str,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        original_processes = supervisor.read_processes
+    
+        def sample() -> MemorySample:
+            running = (output / "attempt/worker.stdout").exists()
+            free = 1 if running and fault == "free" else 262144
+            pageouts = 11 if running and fault == "pageouts" else 10
+            return MemorySample("constructed counter injection", 4096, free, 0, pageouts)
+    
+        def processes() -> dict[int, ProcessRecord]:
+            rows = original_processes()
+            if fault == "rss" and (output / "attempt/worker.stdout").exists():
+                rows[os.getpid()] = replace(rows[os.getpid()], rss_bytes=257 * 2**20)
+            return rows
+    
+        monkeypatch.setattr(supervisor, "sample_memory", sample)
+        monkeypatch.setattr(supervisor, "read_processes", processes)
+        code = "import pathlib,time;pathlib.Path('generated.bin').write_bytes(b'x'*16384);time.sleep(30)"
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            code,
+            wall=0.4 if fault == "wall" else 5.0,
+            output_bytes=8192 if fault == "output" else 268_435_456,
+        )
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:403: AssertionError
+_ test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_resource_faults_terminate2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10abcb650>
+fault = 'pageouts'
+
+    @pytest.mark.parametrize("fault", ["rss", "free", "pageouts", "output", "wall"])
+    def test_resource_faults_terminate_owned_worker_and_preserve_consumption(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        fault: str,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        original_processes = supervisor.read_processes
+    
+        def sample() -> MemorySample:
+            running = (output / "attempt/worker.stdout").exists()
+            free = 1 if running and fault == "free" else 262144
+            pageouts = 11 if running and fault == "pageouts" else 10
+            return MemorySample("constructed counter injection", 4096, free, 0, pageouts)
+    
+        def processes() -> dict[int, ProcessRecord]:
+            rows = original_processes()
+            if fault == "rss" and (output / "attempt/worker.stdout").exists():
+                rows[os.getpid()] = replace(rows[os.getpid()], rss_bytes=257 * 2**20)
+            return rows
+    
+        monkeypatch.setattr(supervisor, "sample_memory", sample)
+        monkeypatch.setattr(supervisor, "read_processes", processes)
+        code = "import pathlib,time;pathlib.Path('generated.bin').write_bytes(b'x'*16384);time.sleep(30)"
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            code,
+            wall=0.4 if fault == "wall" else 5.0,
+            output_bytes=8192 if fault == "output" else 268_435_456,
+        )
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:403: AssertionError
+_ test_resource_faults_terminate_owned_worker_and_preserve_consumption[output] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_resource_faults_terminate3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10abca6f0>
+fault = 'output'
+
+    @pytest.mark.parametrize("fault", ["rss", "free", "pageouts", "output", "wall"])
+    def test_resource_faults_terminate_owned_worker_and_preserve_consumption(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        fault: str,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        original_processes = supervisor.read_processes
+    
+        def sample() -> MemorySample:
+            running = (output / "attempt/worker.stdout").exists()
+            free = 1 if running and fault == "free" else 262144
+            pageouts = 11 if running and fault == "pageouts" else 10
+            return MemorySample("constructed counter injection", 4096, free, 0, pageouts)
+    
+        def processes() -> dict[int, ProcessRecord]:
+            rows = original_processes()
+            if fault == "rss" and (output / "attempt/worker.stdout").exists():
+                rows[os.getpid()] = replace(rows[os.getpid()], rss_bytes=257 * 2**20)
+            return rows
+    
+        monkeypatch.setattr(supervisor, "sample_memory", sample)
+        monkeypatch.setattr(supervisor, "read_processes", processes)
+        code = "import pathlib,time;pathlib.Path('generated.bin').write_bytes(b'x'*16384);time.sleep(30)"
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            code,
+            wall=0.4 if fault == "wall" else 5.0,
+            output_bytes=8192 if fault == "output" else 268_435_456,
+        )
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:403: AssertionError
+__ test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall] __
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-46/test_resource_faults_terminate4')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10abb8620>
+fault = 'wall'
+
+    @pytest.mark.parametrize("fault", ["rss", "free", "pageouts", "output", "wall"])
+    def test_resource_faults_terminate_owned_worker_and_preserve_consumption(
+        tmp_path: Path,
+        monkeypatch: pytest.MonkeyPatch,
+        fault: str,
+    ) -> None:
+        output, markers, identity = setup_generated(tmp_path, monkeypatch)
+        original_processes = supervisor.read_processes
+    
+        def sample() -> MemorySample:
+            running = (output / "attempt/worker.stdout").exists()
+            free = 1 if running and fault == "free" else 262144
+            pageouts = 11 if running and fault == "pageouts" else 10
+            return MemorySample("constructed counter injection", 4096, free, 0, pageouts)
+    
+        def processes() -> dict[int, ProcessRecord]:
+            rows = original_processes()
+            if fault == "rss" and (output / "attempt/worker.stdout").exists():
+                rows[os.getpid()] = replace(rows[os.getpid()], rss_bytes=257 * 2**20)
+            return rows
+    
+        monkeypatch.setattr(supervisor, "sample_memory", sample)
+        monkeypatch.setattr(supervisor, "read_processes", processes)
+        code = "import pathlib,time;pathlib.Path('generated.bin').write_bytes(b'x'*16384);time.sleep(30)"
+        result = run_generated(
+            tmp_path,
+            output,
+            markers,
+            identity,
+            code,
+            wall=0.4 if fault == "wall" else 5.0,
+            output_bytes=8192 if fault == "output" else 268_435_456,
+        )
+>       assert result["state"] == "BUDGET_EXCEEDED"
+E       AssertionError: assert 'FAILED' == 'BUDGET_EXCEEDED'
+E         
+E         - BUDGET_EXCEEDED
+E         + FAILED
+
+successors/frem_s10/tests/test_supervisor_audit.py:403: AssertionError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_timeout_and_cancel_retain_markers
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_cancel_terminates_owned_child
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]
+FAILED successors/frem_s10/tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]
+11 failed, 19 passed in 3.85s

@@ -1,0 +1,56 @@
+{
+  "schema": "s10-tonight-closure-v1",
+  "recorded_at": "2026-10-16T08:00:12.748844+00:00",
+  "status": "PASS",
+  "status_scope": "Artifact integrity and canonical evidence preservation only; not scientific or platform-shutdown success",
+  "campaign_status": "PARTIAL CAMPAIGN",
+  "scientific_status": "NOT_EVALUATED",
+  "main_receipt": "RECEIPT.json",
+  "main_receipt_sha256": "9a2474c96094f3fd2f7dbee6e3af3c20c22229aecd36d6905dbd2494094f6a8f",
+  "main_evidence_files_reverified": 58,
+  "all_main_evidence_hashes_match": true,
+  "source_files_reverified": 133,
+  "all_source_file_hashes_match": true,
+  "code_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "prior_canonical_research_fields_preserved": true,
+  "prior_history_and_decisions_preserved": true,
+  "prior_docs_and_journal_prefixes_preserved": true,
+  "journal_records_verified": 65,
+  "journal_tip": "edccabfdbaf4c9ccd3e05ade27fbf3e0e903eff170533941aa96f905726d599d",
+  "record_decision_exit_code": 0,
+  "git_head_unchanged": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "canonical_files": [
+    {
+      "path": "RESEARCH_STATE.json",
+      "sha256": "192b6e51c39585c640d58efd6b251f2c99f2ed16df9fa111e5c68a674ccce7c1",
+      "archived_copy": "after/RESEARCH_STATE.json"
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "sha256": "5b34043710c754337913ca3fc1063a1cef422a52001db31fbffc47de95479177",
+      "archived_copy": "after/docs/CODEX_HANDOFF.md"
+    },
+    {
+      "path": "docs/STATIC_VERIFICATION.md",
+      "sha256": "b6136595533f80e44955ce6cd5cfd9eb2e5571e86b9a0584e3aad31be65092e1",
+      "archived_copy": "after/docs/STATIC_VERIFICATION.md"
+    },
+    {
+      "path": "research/events.jsonl",
+      "sha256": "bd1edeaa909da40e5613564b36e6d98bac466ff53528ba4f326cd4dfd9dfc99a",
+      "archived_copy": "after/research/events.jsonl"
+    },
+    {
+      "path": "research/decisions/frem_s10_tonight_20261016.json",
+      "sha256": "465f0b4478e222e9b76eb34ce56ae2c0531ad4c5f4fec5006b67f9bce7c46fde",
+      "archived_copy": "after/research/decisions/frem_s10_tonight_20261016.json"
+    }
+  ],
+  "cpu_probe_ran": true,
+  "model_or_scientific_run": false,
+  "gpu_allocations": 0,
+  "retrieval_verified": true,
+  "cpu_platform_final_stop_confirmed": false,
+  "postrun_quota_balance": null,
+  "preservation_scope": "Precampaign canonical snapshots, exact sealed source and main receipt evidence; historical data/result trees not recursively re-audited"
+}

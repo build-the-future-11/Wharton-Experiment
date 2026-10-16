@@ -1,0 +1,1331 @@
+{
+  "schema_version": 1,
+  "mapping_id": "FREM-S10-VERIFICATION-SUPPLEMENT213-20261015",
+  "date": "2026-10-15",
+  "scope": "Supplementary constructed-test review at213 collected nodes. Baseline119 mapping is preserved byte-for-byte. Collection count is not a passing execution receipt. Later changes need their own receipts.",
+  "baseline_path": "research/frem_s10_repair_20261015/VERIFICATION_MAPPING.json",
+  "baseline_sha256": "e502cf743ee1b8e9103681be3b01d71c92d3dc515653f26a159afd2efc06ddfd",
+  "collection_receipt": "research/frem_s10_repair_20261015/supplement_collect_attempt1.log",
+  "collected_count": 213,
+  "new_since_baseline": 94,
+  "empirical_evidence": false,
+  "market_values_read": false,
+  "full_requirement_completion_asserted": false,
+  "run_ready": false,
+  "status_definitions": {
+    "VERIFIED": "The reviewed assertions or retained command receipts exercise the catalog's stated bounded constructed case. This does not complete the broader REQ or prove scientific validity.",
+    "PARTIAL": "Related implementation assertions/receipts exist, but one or more specified discriminating cases, boundaries or integration checks are missing.",
+    "PENDING": "No reviewed discriminating test/receipt establishes this catalog obligation."
+  },
+  "effective_catalog_status_counts": {
+    "VERIFIED": 16,
+    "PARTIAL": 67,
+    "PENDING": 13
+  },
+  "method": "Read actual new test assertions, source adapter paths and normative CL03/08/09/11/12/14. Map concrete cases rather than names alone. Inherit unchanged baseline gaps; new group test logs are scoped execution evidence, not a213-test combined pass or complete scientific pipeline. All fixture inputs are constructed.",
+  "scoped_execution_receipts": [
+    {
+      "path": "research/frem_s10_repair_20261015/data_asset_ids_tests_attempt1.log",
+      "passing_tests": 34,
+      "scope": "data adapter only"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/endpoints_tests_attempt3.log",
+      "passing_tests": 13,
+      "scope": "conditional numeric endpoints, source authority explicitly unverified"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/experiment_final_tests.log",
+      "passing_tests": 51,
+      "scope": "math/actions/ledger/generated experiment group; weekly-only generated source rows"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/policy_attempt4_tests.log",
+      "passing_tests": 29,
+      "scope": "finite policy/benchmark references"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/precision_generated_attempt1/receipt.json",
+      "passing_tests": 3,
+      "scope": "constructed source cutoff/count checks and actual primary pilot kernel; no empirical preparation"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/supervisor_repair_attempt5_tests.log",
+      "passing_tests": 33,
+      "scope": "generic generated workers; mocked host counters never authorize real work"
+    },
+    {
+      "path": "research/frem_s10_repair_20261015/supplement_adapter_review_attempt1.log",
+      "passing_tests": 4,
+      "scope": "Updated precision evidence scope/retained pilot indices/cold-start assertions plus generated/incomplete/unpaired/H3 law-identity adapter rejection; constructed values only."
+    }
+  ],
+  "new_collected_nodeids": [
+    "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+    "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+    "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+    "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+    "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+    "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+    "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+    "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+    "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices",
+    "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+    "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+    "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted",
+    "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+    "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units",
+    "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+    "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+    "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+    "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+    "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+    "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts",
+    "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+    "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic",
+    "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+    "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold",
+    "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+    "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_all_six_names_and_immutable_decision_arrays",
+    "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+    "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+    "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+    "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash",
+    "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]",
+    "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent",
+    "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+    "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+    "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+    "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]",
+    "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance",
+    "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision",
+    "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+    "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+    "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values0]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values1]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values2]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values3]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values4]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values5]",
+    "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+    "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+    "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once",
+    "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+    "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+    "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+    "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+    "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+    "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure",
+    "tests/test_supervisor_audit.py::test_output_quota_rejects_symlinks",
+    "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+    "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+    "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+    "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+    "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption",
+    "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+    "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure",
+    "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure",
+    "tests/test_supervisor_audit.py::test_timeout_and_cancel_retain_markers"
+  ],
+  "new_mapped_nodeids": [
+    "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+    "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+    "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+    "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+    "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+    "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+    "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+    "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+    "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+    "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices",
+    "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+    "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+    "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted",
+    "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+    "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units",
+    "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+    "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+    "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+    "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+    "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+    "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts",
+    "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+    "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic",
+    "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+    "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold",
+    "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+    "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+    "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+    "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+    "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+    "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash",
+    "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+    "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]",
+    "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent",
+    "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+    "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+    "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+    "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]",
+    "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance",
+    "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision",
+    "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+    "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+    "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks",
+    "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+    "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+    "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once",
+    "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+    "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+    "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+    "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+    "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+    "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure",
+    "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+    "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+    "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+    "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+    "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+    "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption",
+    "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+    "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+    "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure",
+    "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+  ],
+  "new_unmapped_nodeids": [
+    "tests/test_policy_benchmarks_audit.py::test_all_six_names_and_immutable_decision_arrays",
+    "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values0]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values1]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values2]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values3]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values4]",
+    "tests/test_supervisor_audit.py::test_budget_cannot_relax_frozen_ceiling[values5]",
+    "tests/test_supervisor_audit.py::test_output_quota_rejects_symlinks",
+    "tests/test_supervisor_audit.py::test_timeout_and_cancel_retain_markers"
+  ],
+  "snapshot_sha256": {
+    "successors/frem_s10/src/frem_s10/__init__.py": "f002e5829f7bdbe9cdfe88331b38ea785c881943941bce9f9135f4e9fea2b884",
+    "successors/frem_s10/src/frem_s10/__main__.py": "104db816d559ad4f1d44e66f14a373d9234a8dc548dd1d64272a503a55d88a9a",
+    "successors/frem_s10/src/frem_s10/analysis/__init__.py": "93cb402c2e7f1aac7c4057993b8610fe1ba1f3d591b854395ca4d767d47be0f3",
+    "successors/frem_s10/src/frem_s10/analysis/bootstrap.py": "10c0a51afef5709011e556192375cd9aaa4ca0e20a450929bbd1c21142a77b81",
+    "successors/frem_s10/src/frem_s10/analysis/endpoints.py": "b42d2424589dd119adde07f9b7d9822b51fbc9c891cbe6ba8d08288a3800aedd",
+    "successors/frem_s10/src/frem_s10/analysis/precision.py": "dd281afb60608434f6b46f14f855e31bcdfef1d70d4223cf046446f87fa751b4",
+    "successors/frem_s10/src/frem_s10/arrays.py": "c620c978d194d84ec6b905cbdbb5aa9a7f96e645588839435c4d69ba74b436a8",
+    "successors/frem_s10/src/frem_s10/cli.py": "ba0f75635b872b638c8d68487856c764117081b3ccaa8d75bcbc7b8fbdb18bdc",
+    "successors/frem_s10/src/frem_s10/data/__init__.py": "c58cbd49744977a6120b28ce56098ed0a8b5e16f1fb6f1340a9948fc956a90c1",
+    "successors/frem_s10/src/frem_s10/data/admission.py": "4521a8b522d21ca8b59cbed317b979c2c9bc06a42333ec79601e0d5b38fbd133",
+    "successors/frem_s10/src/frem_s10/data/calendar.py": "6c40596637f7d69ece166c2956d7643d1d64c74217c618896817ed8dae9d10fc",
+    "successors/frem_s10/src/frem_s10/data/features.py": "9edcd59cc7302fea286b790f366fc380d93fdbff6223f1cc303a66f1d2a48e13",
+    "successors/frem_s10/src/frem_s10/data/precision.py": "8305a526baab25b2410644c93ad95096e9bcc17128082b0ab97ff36a5e755eaf",
+    "successors/frem_s10/src/frem_s10/data/source_reader.py": "80d0ead6cfb070ac8078d31eeadfece6925de7667a38764f111315633b90ca60",
+    "successors/frem_s10/src/frem_s10/data/targets.py": "96584f8d0ddfad512fdccefc67cbd57843f53150a4e0107cef9690db7489c119",
+    "successors/frem_s10/src/frem_s10/domain.py": "4d5f959e3b55ff2e434bd96cf7d03d3daba09e27746e372573abb1fa4cbe9f95",
+    "successors/frem_s10/src/frem_s10/errors.py": "8502d666313e5d66750df51d2ffac522789b47282f535aa76b4e836e9c213da9",
+    "successors/frem_s10/src/frem_s10/experiment/__init__.py": "4678612109ea2819e2c87f591cec377fc024a3e9bbd33cdeb9e53f98539ad617",
+    "successors/frem_s10/src/frem_s10/experiment/artifacts.py": "02fec54257275ab7fd4a372fae2e99ddd93c4c8347b2a2699a0c0e0241b92f90",
+    "successors/frem_s10/src/frem_s10/experiment/evidence.py": "d54e7bb5625b81856bb8b0c81ffe6930efcf23faf96cdf22f60dea65a6ec7ac2",
+    "successors/frem_s10/src/frem_s10/experiment/forecasts.py": "7a8e042d7056763ca15d2d35d9288543a60286009f613e9e8e3ad6c95fe787e8",
+    "successors/frem_s10/src/frem_s10/experiment/matrix.py": "e7d5d334a831564af897f5606a3dd6826ebea8ac3d6d3fdd39399b2cd5d03a61",
+    "successors/frem_s10/src/frem_s10/experiment/replay.py": "d150152693222062f46a2e0f11eef4a98779d0c5fca3dd5dac1a50c5cf3dd2a7",
+    "successors/frem_s10/src/frem_s10/identities.py": "344ac771295650125971bc67e723f05dc258ce1c9e05e6f2701a2bd610c0c9d2",
+    "successors/frem_s10/src/frem_s10/math/distances.py": "4ae764d9082486cfc5a86a440dc6e956a57e20a3dd9b8c47cd2400f36b526be5",
+    "successors/frem_s10/src/frem_s10/math/fees.py": "d388fff2253799692d78906ac07337edd0fed3c50270a868bf4c837acb8258a9",
+    "successors/frem_s10/src/frem_s10/math/probabilities.py": "5891ab5c135409e1a1f9ec3b679ee454b2638c70b28eef2f0666fe1f8048473e",
+    "successors/frem_s10/src/frem_s10/math/scores.py": "e75c81d1fb5dbca9929ddcb2f1bb4b6ca56a1cc52d3ec9ff833d5ef89a9a674a",
+    "successors/frem_s10/src/frem_s10/math/simplex.py": "255fc24012773982135ed8688a020b90d7a2a2f3aa0cb897ae694401a2517d58",
+    "successors/frem_s10/src/frem_s10/math/utility.py": "77ed6c8f00289e2ea5a38361be551bd10c7a61ece49d724cbffd177fa417610d",
+    "successors/frem_s10/src/frem_s10/metadata.py": "c6b5b52558db193627747a67bb660cf6fe85c1291ea75e8faae0bef8db3c9428",
+    "successors/frem_s10/src/frem_s10/model/__init__.py": "91a07ab81c486b5ba2a94c0167d1c86a33878668fc52a9c609b46342d9ba1781",
+    "successors/frem_s10/src/frem_s10/model/checkpoint.py": "010451c2a22afdaf9635826c02094dff2d2148288077147221df2f898a72dae8",
+    "successors/frem_s10/src/frem_s10/model/config.py": "27de1628bc9881d6abb306e5a3e94a2b9b556c189317ff07e039f1409dc50e58",
+    "successors/frem_s10/src/frem_s10/model/engine.py": "99d2c9bcde1f6bd32f0b59da3888c41e9c62d349cbe9ce78e9f540b606f3c6dc",
+    "successors/frem_s10/src/frem_s10/model/experts.py": "ea2b7fc44df2476c5a0f505e9dcb2a6a935470472b4305b4a8887b5ef747ab0e",
+    "successors/frem_s10/src/frem_s10/model/feedback.py": "633dd1acfd2e64e3ae52649110ff614009fe19f230fc5abc4b0a64004c08bc2d",
+    "successors/frem_s10/src/frem_s10/model/library.py": "09e0902ea5742a2d43a0ee7e499468e676c22d5e446597dfc8d2a4a1dfc1ded4",
+    "successors/frem_s10/src/frem_s10/model/records.py": "9d7e53224b7ffc52c1b061203117d1161482b2b010c6a030b8e56556783d643d",
+    "successors/frem_s10/src/frem_s10/model/stacking.py": "4fe40ee49db40e6aebf6c90d88ecdc2a3c791d72c203f202456575dc8bc5e078",
+    "successors/frem_s10/src/frem_s10/portfolio/__init__.py": "c682e37319b66e2432c82aac57eeb4c3d2dd28952fc55519bcf13d46a0cdf1fd",
+    "successors/frem_s10/src/frem_s10/portfolio/actions.py": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655",
+    "successors/frem_s10/src/frem_s10/portfolio/benchmarks.py": "8f573d5d96488b26c258d3f0728aae1002b2defabfddd5c8141505b47463aae4",
+    "successors/frem_s10/src/frem_s10/portfolio/ledger.py": "65f74f601f9cee4d6c545d466331a7282d9d35d4ac625ad46c246d66dbd6d945",
+    "successors/frem_s10/src/frem_s10/portfolio/policy.py": "f33a903f3a5a045a48133cd26c3297064d442f2451d35362a5a5dbc4ecdfb8cc",
+    "successors/frem_s10/src/frem_s10/reporting/__init__.py": "2858e2f38d79c64f97a647fd1a618be066c92e6871d8db73542dcf0944285771",
+    "successors/frem_s10/src/frem_s10/runtime/__init__.py": "ea6dc3c4c2933606c9557252a50d02c819b7bf2c50595533b5177490f566627f",
+    "successors/frem_s10/src/frem_s10/runtime/artifacts.py": "39651f01ecb6b023c2483022ccc1c4394ddeb91ab1682cb8980dca5973cc5be6",
+    "successors/frem_s10/src/frem_s10/runtime/consumption.py": "fdf2c3c8a90bd44009ccc13928784b16546ad3d9e68a9b1a33bdd1f2b4c993cb",
+    "successors/frem_s10/src/frem_s10/runtime/journal.py": "5f5b2eb30f447cb6f4424902f700e9f0a6d3b282c81d6d29d01ed46bc770a3ea",
+    "successors/frem_s10/src/frem_s10/runtime/resources.py": "25bd732ebc3a7cbca06374b0f009cd136f00d7694ea5371a3b3959ff627649c0",
+    "successors/frem_s10/src/frem_s10/runtime/supervisor.py": "256549d10545b62c931b750258636ed43b1375b42f186e538f9133cc15b00221",
+    "successors/frem_s10/tests/test_actions_audit.py": "de41b37751376a9439d4c5c5cbca235382f18fe267df3b1626674dbf0e7694f0",
+    "successors/frem_s10/tests/test_data_audit.py": "9de8a5e2bbdfca95f9b71847cb97bf78be093f7bc5246f2dc8dcc8c2411bde96",
+    "successors/frem_s10/tests/test_endpoints_audit.py": "4eef64e6d388f04e2283e9c5ca82dac89139d3d21877c66f364ec2865869a47f",
+    "successors/frem_s10/tests/test_experiment_audit.py": "49f2a0b9bf0e853e6493fabf83197005b78dda4775ac79aa859e47ff111b88dd",
+    "successors/frem_s10/tests/test_ledger_audit.py": "ee8c17921b0702a265d53c4367f5e927b07f28742d367c9328f08d29a5fe0a9d",
+    "successors/frem_s10/tests/test_math_audit.py": "a875bb4db80ca1aaf753fdb13e575e06b642e0bb5c948d08d471aa333225caab",
+    "successors/frem_s10/tests/test_model_audit.py": "cf8c98977f3a3e5e02bf8eb9c181b9a5f5ee8594f1e241165c4bf156c6d6237e",
+    "successors/frem_s10/tests/test_operations_audit.py": "c24ce04954be0aa94c20d8ae01a60128f4db55c743ddeb4d2db5ca72123604c9",
+    "successors/frem_s10/tests/test_policy_benchmarks_audit.py": "cdeffd75229f01d116ef78957baa8609e61c32497dde6d657c2e502e1f28f8a2",
+    "successors/frem_s10/tests/test_precision_inputs_audit.py": "3322269d5913fd5312b8de5f45578776450794f213caedfa7742a4d21baf553b",
+    "successors/frem_s10/tests/test_statistics_audit.py": "a92a34a496b4c290984c0344d2273d9a096a8bd76f21c9dc101f693425e5e32d",
+    "successors/frem_s10/tests/test_supervisor_audit.py": "1778953d9932d0bddf492c659d42d835b4332cc6ebe1ace853e6c21a8ceaa1f7"
+  },
+  "obligation_updates": [
+    {
+      "test_id": "TEST-001",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add explicit unit-confusion boundary cases; shape agreement alone is insufficient."
+    },
+    {
+      "test_id": "TEST-002",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Wrong asset/feature order, rank/length/empty/object/complex cases are not exhaustively exercised."
+    },
+    {
+      "test_id": "TEST-003",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Direct NaN/infinity/domain cases at every shares/cash/probability/weight boundary remain incomplete."
+    },
+    {
+      "test_id": "TEST-004",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Timezone-free timestamp parsing and the full malformed manifest/schema-version matrix are not covered."
+    },
+    {
+      "test_id": "TEST-005",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified for the constructed aliasing/write cases, not a universal absence-of-mutation proof."
+    },
+    {
+      "test_id": "TEST-006",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io"
+      ],
+      "evidence_scope": "Generated sources prove exact prefix/count identity and per-asset dividend IDs, including zero amounts.",
+      "remaining_evidence": "Actual retained source identity/calendar/rights admission is not established; supplied metadata has no independent authority certificate."
+    },
+    {
+      "test_id": "TEST-007",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold"
+      ],
+      "evidence_scope": "Replay rejects wrong source-event asset ownership and missing provenance, alongside existing missing-calendar checks.",
+      "remaining_evidence": "Full historical source calendar completeness, terminal events and observed close-timestamp provenance remain external."
+    },
+    {
+      "test_id": "TEST-008",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified reader cases only; real source admission and rights are separate."
+    },
+    {
+      "test_id": "TEST-009",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add nonzero feature scales immediately below/at/above 1e-12 and full retained fitting metadata checks."
+    },
+    {
+      "test_id": "TEST-010",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified constructed fixed-provenance prefix cases only; full engine/action invariance is TEST-017."
+    },
+    {
+      "test_id": "TEST-011",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Historical exchange/calendar/provider timing is not certified by these generated dates."
+    },
+    {
+      "test_id": "TEST-012",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add explicit feature availability after decision and integrated quote-valuation versus forecast-input boundary cases."
+    },
+    {
+      "test_id": "TEST-013",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "The complete thirteen-week irregular holiday-aware context fixture is not yet tested."
+    },
+    {
+      "test_id": "TEST-014",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified direct-target construction on generated positive-price data only."
+    },
+    {
+      "test_id": "TEST-015",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail"
+      ],
+      "evidence_scope": "Exact per-asset IDs survive admission; source credit precedes forced sale/re-entry and duplicate grouped IDs fail.",
+      "remaining_evidence": "Bounded generated accounting evidence only; actual corporate-action provenance is unverified."
+    },
+    {
+      "test_id": "TEST-016",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Constructed strict-maturity behavior only."
+    },
+    {
+      "test_id": "TEST-017",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "evidence_scope": "Perturbing unavailable labels leaves the first retained forecast/state identity unchanged across model variants.",
+      "remaining_evidence": "Not a full campaign future-raw-price/dividend perturbation through all adapters, policies and reports."
+    },
+    {
+      "test_id": "TEST-018",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Several issued forecasts maturing together and all transition/restart boundaries still need explicit ordering cases."
+    },
+    {
+      "test_id": "TEST-019",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verifies saved-forecast scoring for the constructed transition."
+    },
+    {
+      "test_id": "TEST-020",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No explicit 520-library and 104-feedback over-capacity/staggered-maturity audit or overlap-metadata check."
+    },
+    {
+      "test_id": "TEST-021",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Actual weekly kernel completes the constructed pilot and feeds two generated one-block policy/ledger paths.",
+      "remaining_evidence": "No independent batch reference over full warmup and both complete folds."
+    },
+    {
+      "test_id": "TEST-022",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Restore at every event boundary across combined model/dividend/trade state and duplicate rejection after each restore remain untested."
+    },
+    {
+      "test_id": "TEST-023",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No independent exact U/R/C probability, age-tie and distance-tie fixture."
+    },
+    {
+      "test_id": "TEST-024",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add leave-one-out percentile, tie, OOD and no-label-distance discriminating cases."
+    },
+    {
+      "test_id": "TEST-025",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Moment and portfolio-objective invariance plus canonical-ID handling are not tested jointly."
+    },
+    {
+      "test_id": "TEST-026",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "evidence_scope": "Singleton atom equal to target gives exactly zero energy/variogram/MSE and raw CRPS.",
+      "remaining_evidence": "Catalog also requires an independent shifted-singleton score reference."
+    },
+    {
+      "test_id": "TEST-027",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified constructed cross-expert score case only."
+    },
+    {
+      "test_id": "TEST-028",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add general interior mixtures, explicit B symmetry and zero-diagonal assertions."
+    },
+    {
+      "test_id": "TEST-029",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Orthogonal rotation and positive rescaling metamorphic checks are missing."
+    },
+    {
+      "test_id": "TEST-030",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add independent covariance PSD and joint dependence fixtures."
+    },
+    {
+      "test_id": "TEST-031",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "evidence_scope": "Singleton raw/standardized diagnostics and inclusive interval endpoint ties have explicit zero/one references.",
+      "remaining_evidence": "Full two-atom, opposing-asset, all-bin-edge and calibration aggregation matrix still incomplete."
+    },
+    {
+      "test_id": "TEST-032",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Near-identical large vectors, tiny finite distances and extreme-but-valid scales lack independent distance reference cases."
+    },
+    {
+      "test_id": "TEST-033",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "All orientations, small scales and explicit original multiplier recovery checks remain incomplete."
+    },
+    {
+      "test_id": "TEST-034",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add an instance where naive clipping produces a measurably nonoptimal boundary solution."
+    },
+    {
+      "test_id": "TEST-035",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add regularization anchor and deterministic certificate checks."
+    },
+    {
+      "test_id": "TEST-036",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Singular/asymmetric/condition-boundary cases and valid tangent convexity with indefinite full-space Hessian remain untested."
+    },
+    {
+      "test_id": "TEST-037",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Exercise permitted roundoff correction and post-correction objective/KKT checks versus substantive infeasibility."
+    },
+    {
+      "test_id": "TEST-038",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Exact global 25/26 counts and local count/concentration boundaries remain missing."
+    },
+    {
+      "test_id": "TEST-039",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add independent recency-weight and no-label-routing metamorphic cases."
+    },
+    {
+      "test_id": "TEST-040",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Complete generated ledger registry shares laws and actual pilot selects contextual/equal/global arms at fixed dates.",
+      "remaining_evidence": "Full-size production model-to-ledger fairness across every arm/cost and work counters is not yet verified."
+    },
+    {
+      "test_id": "TEST-041",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified independent fee root at the specified constructed point."
+    },
+    {
+      "test_id": "TEST-042",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add the specified $40/$60 sale and broader zero-fee/sign-region boundary coverage."
+    },
+    {
+      "test_id": "TEST-043",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Exercise both bracket/accounting tolerances and explicit exhaustion failure."
+    },
+    {
+      "test_id": "TEST-044",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "Policy exact hold preserves actual cash/dollars; over-cap hold is excluded while buy-hold benchmark drift remains supported.",
+      "remaining_evidence": "Exact within/equal/outside 1e-12 per-asset and total-cap ladder remains missing."
+    },
+    {
+      "test_id": "TEST-045",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified finite grid enumeration, not action objective optimization."
+    },
+    {
+      "test_id": "TEST-046",
+      "baseline_status": "PENDING",
+      "supplement_status": "VERIFIED",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent"
+      ],
+      "evidence_scope": "Every full-grid policy candidate is checked against independent sign-region fee and scalar CRRA references at four costs and nominal/robust settings; nontransitive ties and permutation invariance are explicit.",
+      "remaining_evidence": "Verification covers these constructed laws/holdings; broader resource feasibility and economic benefit are not implied."
+    },
+    {
+      "test_id": "TEST-047",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "evidence_scope": "Flat zero-cost atoms yield exact zero utility for all actions; positive-cost cash is optimal and adverse zero-mass support changes robust decisions.",
+      "remaining_evidence": "Explicit all-atoms-strictly-adverse catalog case is not independently covered."
+    },
+    {
+      "test_id": "TEST-048",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "evidence_scope": "Independent CRRA scalar arithmetic and an explicit overflowing H3 failure are covered.",
+      "remaining_evidence": "Full near-one/tiny-positive/zero/negative numerical boundary ladder remains incomplete."
+    },
+    {
+      "test_id": "TEST-049",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "evidence_scope": "Nominal and robust utilities match independent scalar formulas; zero nominal mass does not remove adverse support.",
+      "remaining_evidence": "No independent contamination-mass-at-each-atom optimization proof fixture."
+    },
+    {
+      "test_id": "TEST-050",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "Generated multi-block A4 path accounts for dividend, sale and re-entry fees; failure retains precommitted source credit/sale.",
+      "remaining_evidence": "A full independent hand-path carried-hold-versus-forced-liquidation NAV reference remains absent."
+    },
+    {
+      "test_id": "TEST-051",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Verified constructed ledger arithmetic; all market paths and every campaign event are not thereby certified."
+    },
+    {
+      "test_id": "TEST-052",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Fixed-target full-ledger scaling and zero-cost replay without reoptimization are missing."
+    },
+    {
+      "test_id": "TEST-053",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Every generated ledger starts from cash, ends with one liquidation, and reports bounded drawdown.",
+      "remaining_evidence": "Generated matrix uses weekly-only observations; no new independent intrablock daily-trough fixture or authoritative calendar."
+    },
+    {
+      "test_id": "TEST-054",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]"
+      ],
+      "evidence_scope": "Fixed benchmark entry weights/fees have scalar references; buy-hold preserves dividend cash and drift; all six execute.",
+      "remaining_evidence": "No complete independent hand path for all four named benchmark NAV sequences."
+    },
+    {
+      "test_id": "TEST-055",
+      "baseline_status": "PENDING",
+      "supplement_status": "VERIFIED",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]"
+      ],
+      "evidence_scope": "Floored volatility and over-cap vector are checked against independent active-face projection at four target cases with residuals.",
+      "remaining_evidence": "Generated mathematical reference only, not benchmark economic effectiveness."
+    },
+    {
+      "test_id": "TEST-056",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+        "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+        "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance"
+      ],
+      "evidence_scope": "Population covariance, declared shrink and full grid minimum are independently checked; CL16 exact variance ties differ from utility tolerance.",
+      "remaining_evidence": "No explicit catalog fixture demonstrating different joint-versus-shrink rankings."
+    },
+    {
+      "test_id": "TEST-057",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Exactly192 unique declared cells execute:128 strategy,48 benchmark,16 ablation, with fixed costs/policies.",
+      "remaining_evidence": "Identity list is not generated by a wholly independent Cartesian oracle; full production dated artifact inventory remains pending."
+    },
+    {
+      "test_id": "TEST-058",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence"
+      ],
+      "evidence_scope": "Missing matrix cell and incomplete/unaligned endpoint evidence fail; failed cell preserves prior prefix.",
+      "remaining_evidence": "No full deletion/duplication/truncated-event-table matrix covering primary,zero,ablation,cost in artifact audit."
+    },
+    {
+      "test_id": "TEST-059",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "evidence_scope": "A1 atoms equal g1^4 and d1*(1+g1+g1^2+g1^3); direct-H4 maturity gates all variants.",
+      "remaining_evidence": "No complete independent nonconstant-price/dividend direct-versus-repeat scoring campaign."
+    },
+    {
+      "test_id": "TEST-060",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "A2 full laws are frozen separately per fold; A4/A5 reuse primary laws; A4 transaction ordering/fees and no-hold policy choice are explicit.",
+      "remaining_evidence": "Full A3 local eligibility/no-shrink discriminating boundary and complete true-kernel multi-fold ablation run remain incomplete."
+    },
+    {
+      "test_id": "TEST-061",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Exact 260-versus-520 retention and matched k=16/64 lookup/routing/fallback propagation require tests."
+    },
+    {
+      "test_id": "TEST-062",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+      ],
+      "evidence_scope": "Fixed index arrays are reused over all required H1/H2 controls and folds; observed date weighting is independently recalculated.",
+      "remaining_evidence": "No all-asset/method/cost identity-tagged resampling fixture across complete raw artifact tensors."
+    },
+    {
+      "test_id": "TEST-063",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Bounded independent index-construction case only; statistical validity is separate."
+    },
+    {
+      "test_id": "TEST-064",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+      ],
+      "evidence_scope": "Unequal24/25 fold counts yield the ratio of pooled sums and independently computed5000-draw quantiles.",
+      "remaining_evidence": "Catalog five-value linear-quantile boundary fixture remains absent."
+    },
+    {
+      "test_id": "TEST-065",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+        "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+      ],
+      "evidence_scope": "Exact5% fails strict gate; zero observed/resampled denominators are retained as inconclusive; favorable block2 cannot replace block4.",
+      "remaining_evidence": "Full just-below/equal/just-above1e-12 observed and resampled denominator ladder remains incomplete."
+    },
+    {
+      "test_id": "TEST-066",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Exact 5000-draw replay and running pilot/campaign in both orders with shared pilot-control arrays remain untested."
+    },
+    {
+      "test_id": "TEST-067",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Add known delta and exact-zero policy-only ablation cases."
+    },
+    {
+      "test_id": "TEST-068",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No full rejection-sequence first-failure test or explicit deterministic tie-order evidence."
+    },
+    {
+      "test_id": "TEST-069",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Every generated ledger log-increment sequence telescopes to actual final wealth; H3 uses date-weighted block utility and separate terminal utility.",
+      "remaining_evidence": "No explicit invalid concatenated holdings replay counterexample; full saved-artifact reconstruction not implemented."
+    },
+    {
+      "test_id": "TEST-070",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Out-of-scope numeric sentinels cannot enter target construction; pilot counts and projected A/B plans are exact; actual fixed kernel runs all selected generated pilot blocks. Updated pilot output retains both exact seed1902 arrays, cold-start flags and exact zero-difference counts; evidence scope is inherited and authorizes_campaign is forced false.",
+      "remaining_evidence": "Production consumed precision launcher/source authority missing; complete dispersion/threshold boundary matrix and empirical precision remain unresolved."
+    },
+    {
+      "test_id": "TEST-071",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+      ],
+      "evidence_scope": "Constructed H1/H2 pass, mixed, inconclusive and invalid gates cover all controls/blocks, cash,6%wealth and drawdown; source authority is explicitly unverified. Robust/nominal adapter now rejects a consistently relinked different law before H3 evaluation.",
+      "remaining_evidence": "No complete exhaustive decision-table oracle including both-fail negative, full-size retained campaign adapter and claim ledger validation."
+    },
+    {
+      "test_id": "TEST-072",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Array endianness, full schema/unit preservation and numerical-versus-path/timing payload partition cases are missing."
+    },
+    {
+      "test_id": "TEST-073",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Complete source/config/data/environment envelope and array-shape/version corruption matrix remains unfinished."
+    },
+    {
+      "test_id": "TEST-074",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+        "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure"
+      ],
+      "evidence_scope": "Hash-chain tamper/partial journal rejection and post-consumption failure receipts retain markers and clean child processes.",
+      "remaining_evidence": "Temp-publication crash boundaries and real failed-failure-receipt disk exhaustion remain unverified."
+    },
+    {
+      "test_id": "TEST-075",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once"
+      ],
+      "evidence_scope": "Generated operation consumes once; second attempt refuses without dispatch and preserves marker bytes.",
+      "remaining_evidence": "No new simultaneous-process race fixture or production operation-specific frozen identity integration."
+    },
+    {
+      "test_id": "TEST-076",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+        "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption"
+      ],
+      "evidence_scope": "Host/process preflight failures remain unconsumed; launch and post-consumption persistence faults retain consumed state.",
+      "remaining_evidence": "No production precision/campaign preflight binds reviewed source/calendar/rights, kernel receipts, scientific freeze and passing empirical precision."
+    },
+    {
+      "test_id": "TEST-077",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+        "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "evidence_scope": "Generated owned process/descendant cancellation and clock-failure cleanup are executed; observed escaped children are killed.",
+      "remaining_evidence": "No SIGINT/termination injection at actual forecast/ledger/analysis operation boundaries; short unobserved descendants cannot be guaranteed by polling."
+    },
+    {
+      "test_id": "TEST-078",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No dedicated market-resume/delete-marker misuse workflow test; no market executor is exposed."
+    },
+    {
+      "test_id": "TEST-079",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]"
+      ],
+      "evidence_scope": "Injected journal/resource/completion publication failures retain independent failure receipt and consumption.",
+      "remaining_evidence": "Not a real disk-full/permission-denied test; failure of failure receipt itself remains missing."
+    },
+    {
+      "test_id": "TEST-080",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+        "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+        "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+        "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "evidence_scope": "Generated RSS/free/pageout/output/wall faults terminate worker; no-observation success and clock regression fail; PID-start identity prevents replacement signaling.",
+      "remaining_evidence": "Only generic precision-shaped worker orchestration tested; operation-specific full scientific campaign and polling blind spots remain unverified."
+    },
+    {
+      "test_id": "TEST-081",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Implement saved-artifact-only reports and reject altered rows or missing controls."
+    },
+    {
+      "test_id": "TEST-082",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+        "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure"
+      ],
+      "evidence_scope": "Numerical/contract/nonzero-worker failures remain explicit and partial scientific events survive.",
+      "remaining_evidence": "Complete unexpected-exception chaining/warning integration matrix still absent."
+    },
+    {
+      "test_id": "TEST-083",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only"
+      ],
+      "evidence_scope": "All192 two-block generated-tape ledgers execute; injected fourth-cell failure retains prefix; actual kernel separately bridges one block per named fixture fold.",
+      "remaining_evidence": "No single source->actual kernel->full N>=24 folds->guarded192cells->saved artifacts->analysis->report execution or near-final-cell fault."
+    },
+    {
+      "test_id": "TEST-084",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Full restricted import-graph/cycle test and denied filesystem/network/thread/freeze mutation guards are missing."
+    },
+    {
+      "test_id": "TEST-085",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No intentional misspelled pytest marker and complete invalid fixture-schema verification."
+    },
+    {
+      "test_id": "TEST-086",
+      "baseline_status": "VERIFIED",
+      "supplement_status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Packaging evidence is local to this macOS environment; no cross-platform or empirical reproducibility claim."
+    },
+    {
+      "test_id": "TEST-087",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "A complete automated comparison of every lock/metadata/installed distribution and imported dependency inventory is not represented by a test."
+    },
+    {
+      "test_id": "TEST-088",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic"
+      ],
+      "evidence_scope": "Same provided-data ledger replays bitwise identically with event/state IDs and log increments.",
+      "remaining_evidence": "No cross-process PYTHONHASHSEED and input-order full-campaign comparison."
+    },
+    {
+      "test_id": "TEST-089",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Run the same constructed suite on claimed Linux target and compare residuals/decisions before making that claim."
+    },
+    {
+      "test_id": "TEST-090",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Retained generated pilot and matrix tests measure small-fixture child RSS/time.",
+      "remaining_evidence": "No maximum library/action/history workload ladder and aggregate supervisor+worker campaign profiling;60minute/256MiB feasibility unproven."
+    },
+    {
+      "test_id": "TEST-091",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "evidence_scope": "Shared-score cache reduces duplicate calls and matches uncached values exactly; vectorized policy matches independent scalar arithmetic.",
+      "remaining_evidence": "No complete before/after allocation/time benchmark or full worst-case equivalence receipt."
+    },
+    {
+      "test_id": "TEST-092",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Full S6-S9 and revision-1 source/evidence identity inventory is broader than this receipt and lacks a named regression nodeid."
+    },
+    {
+      "test_id": "TEST-093",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Run the suite under explicit denied external/data access with complete generated fixtures."
+    },
+    {
+      "test_id": "TEST-094",
+      "baseline_status": "PARTIAL",
+      "supplement_status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "No automated readiness validator rejects missing/orphaned IDs, unjustified skips or expired exceptions; this review artifact alone does not pass that gate."
+    },
+    {
+      "test_id": "TEST-095",
+      "baseline_status": "PENDING",
+      "supplement_status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence"
+      ],
+      "evidence_scope": "Pure numeric endpoints explicitly disclaim source authority; engineering-scope/small/incomplete adapter inputs reject. Precision input/output accepts only GENERATED_ENGINEERING or SOURCE_VIEW_WITHOUT_SCIENTIFIC_ADMISSION, rejects self-declared REAL_ADMITTED, and cannot authorize campaign.",
+      "remaining_evidence": "No claim-ledger/report validator: full-size generated input can reach pure numeric predicates without source authority; caller must not infer empirical support."
+    },
+    {
+      "test_id": "TEST-096",
+      "baseline_status": "PENDING",
+      "supplement_status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+      "remaining_evidence": "Run the bounded reviewed mutants only in a disposable S10 source copy; retain killed/surviving mutant evidence."
+    }
+  ],
+  "review_findings": [
+    {
+      "id": "DATA-ALIGNMENT-001",
+      "status": "REPAIRED_BOUNDED_TESTS",
+      "finding": "Admission now retains exact asset-aligned source event IDs; replay crossvalidates them.",
+      "limit": "Real retained source actions were not inspected."
+    },
+    {
+      "id": "PRECISION-CUTOFF-001",
+      "status": "NO_TEMPORAL_DEFECT_FOUND_IN_REVIEW",
+      "finding": "Pilot values end before2010; future numeric sentinels are filtered before targets. Transform is pre2008; fixed pilot issuance begins2008; advance receives only strictly mature records. Projected counts derive solely from exact timestamp plans.",
+      "limit": "Supplied calendar authority and original source hashes require production admission, not merely self-consistent metadata."
+    },
+    {
+      "id": "CLAIM-AUTHORITY-001",
+      "status": "OPEN_PRODUCTION_GATE",
+      "finding": "Pure numerical support and precision pass do not establish empirical source authority. KERNEL_REPLAY labels can describe complete constructed panels; source/freeze/rights validation must be external.",
+      "repair": "Bind guarded launch and immutable result manifest to approved source hashes, calendar provenance, actual consumed operation, frozen code/environment and evidence type.",
+      "labeling_resolution": "Pure endpoint scope is COMPUTATIONAL_STATISTICS_SOURCE_AUTHORITY_UNVERIFIED. Precision scope is inherited, restricted to generated/unadmitted, and authorizes_campaign=False is enforced. These labels now prevent default empirical claims; actual source authority/production launch gate remains open."
+    },
+    {
+      "id": "H3-PAIRED-LAW-001",
+      "status": "REPAIRED_BOUNDED_TEST",
+      "finding": "At review start endpoint adapter compares dates/origin/anchor but not robust/nominal forecast identity equality. Consistently changed nominal score/decision identity can violate H3 paired-law assumption.",
+      "repair": "Owner alerted to require identical law IDs and add adversarial test before using H3.",
+      "resolution": "Owner added robust/nominal forecast-ID sequence equality and an adversarial test changing nominal decision, selection and score law identity consistently; adapter rejects. Four scoped review tests pass.",
+      "receipt": "research/frem_s10_repair_20261015/supplement_adapter_review_attempt1.log"
+    }
+  ],
+  "remaining_run_readiness_gates": [
+    "Operation-specific production launcher/preflight and full frozen-source/environment binding are absent; CLI still offers plan/check-host only.",
+    "No actual retained-source calendar/quote/action/close-clock/rights admission; hash consistency does not certify authoritative historical completeness.",
+    "No real pre2010 precision preparation result; generated pilot execution is engineering only and cannot authorize campaign.",
+    "No single full production-sized actual-kernel192-ledger saved-artifact campaign through independent analysis and report regeneration.",
+    "No complete immutable raw event/forecast/model/checkpoint/failure manifest plus report/claims provenance validation pipeline.",
+    "Ablation centered-bootstrap family, full diagnostics/calibration/report exports and hostile missing-artifact checks remain incomplete.",
+    "No worst-case resource ladder or verified full-budget feasibility, no cross-platform independent reproduction, no denied-network CI or targeted semantic mutation campaign.",
+    "No scientific freeze, protected confirmation or empirical outcome. SUPPORTED numeric predicates are conditional on supplied arrays only."
+  ],
+  "review_resolution_snapshot_sha256": {
+    "successors/frem_s10/src/frem_s10/data/precision.py": "8305a526baab25b2410644c93ad95096e9bcc17128082b0ab97ff36a5e755eaf",
+    "successors/frem_s10/src/frem_s10/analysis/precision.py": "dd281afb60608434f6b46f14f855e31bcdfef1d70d4223cf046446f87fa751b4",
+    "successors/frem_s10/src/frem_s10/analysis/endpoints.py": "b42d2424589dd119adde07f9b7d9822b51fbc9c891cbe6ba8d08288a3800aedd",
+    "successors/frem_s10/src/frem_s10/experiment/evidence.py": "d54e7bb5625b81856bb8b0c81ffe6930efcf23faf96cdf22f60dea65a6ec7ac2",
+    "successors/frem_s10/tests/test_precision_inputs_audit.py": "3322269d5913fd5312b8de5f45578776450794f213caedfa7742a4d21baf553b",
+    "successors/frem_s10/tests/test_endpoints_audit.py": "4eef64e6d388f04e2283e9c5ca82dac89139d3d21877c66f364ec2865869a47f",
+    "successors/frem_s10/tests/test_experiment_audit.py": "49f2a0b9bf0e853e6493fabf83197005b78dda4775ac79aa859e47ff111b88dd"
+  },
+  "review_resolution_receipt": "research/frem_s10_repair_20261015/supplement_adapter_review_attempt1.log"
+}

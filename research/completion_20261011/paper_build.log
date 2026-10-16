@@ -1,0 +1,20 @@
+Rendered document: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/paper/review_20261011/main.pdf
+Inspect rendered pages and the LaTeX log before publication.
+       24.59 real         3.59 user         0.77 sys
+           183500800  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               38444  page reclaims
+                 969  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  55  messages sent
+                 229  messages received
+                   0  signals received
+                 559  voluntary context switches
+               26728  involuntary context switches
+           401658235  instructions retired
+           399007502  cycles elapsed
+            11600352  peak memory footprint

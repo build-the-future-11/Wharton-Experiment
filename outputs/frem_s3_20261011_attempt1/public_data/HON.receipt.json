@@ -1,0 +1,13 @@
+{
+  "symbol": "HON",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/HON?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:30.736083+00:00",
+  "http_status": 200,
+  "path": "HON.json",
+  "sha256": "6fb41835b42ce20acdf0263cc63c8adc69b3bc32cbb4cd33f2cf27cca896cf8c",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

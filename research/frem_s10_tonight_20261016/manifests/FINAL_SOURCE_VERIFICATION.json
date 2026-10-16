@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-16T07:55:23.285970+00:00",
+  "status": "PASS",
+  "code_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "source_files": 133,
+  "source_mismatches": [],
+  "prior_phase_evidence_files": 19,
+  "prior_phase_evidence_mismatches": [],
+  "prior_phase_main_receipt_sha256": "712bbcebc5d979ac33ad1ba11c4a1c5eefa7673d973decc1d0efa33225422b88",
+  "source_bundle_matches": true,
+  "canonical_unchanged_before_campaign_merge": {
+    "RESEARCH_STATE.json": true,
+    "docs/CODEX_HANDOFF.md": true,
+    "docs/STATIC_VERIFICATION.md": true,
+    "research/events.jsonl": true
+  }
+}

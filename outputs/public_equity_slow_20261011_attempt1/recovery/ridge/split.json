@@ -1,0 +1,71 @@
+{
+  "name": "recovery",
+  "included_stocks": [
+    "0005.HK",
+    "2317.TW",
+    "2330.TW",
+    "6758.T",
+    "7203.T",
+    "AAPL",
+    "BHP.AX",
+    "BNP.PA",
+    "BP.L",
+    "CBA.AX",
+    "DTE.DE",
+    "ENB.TO",
+    "HSBA.L",
+    "INFY.NS",
+    "JPM",
+    "NESN.SW",
+    "NOVN.SW",
+    "PETR4.SA",
+    "RELIANCE.NS",
+    "RY.TO",
+    "SAN.PA",
+    "SAP.DE",
+    "VALE3.SA"
+  ],
+  "excluded_stocks": {
+    "0700.HK": {
+      "reasons": [
+        "insufficient pre-validation training"
+      ],
+      "train_validation_test_rows": [
+        21,
+        10,
+        18
+      ],
+      "missing_target_months": []
+    }
+  },
+  "expected_target_months": [
+    "2009-07",
+    "2009-08",
+    "2009-09",
+    "2009-10",
+    "2009-11",
+    "2009-12",
+    "2010-01",
+    "2010-02",
+    "2010-03",
+    "2010-04",
+    "2010-05",
+    "2010-06",
+    "2010-07",
+    "2010-08",
+    "2010-09",
+    "2010-10",
+    "2010-11",
+    "2010-12"
+  ],
+  "validation_start_ns": 1212278400000000000,
+  "evaluation_decision_start_ns": 1243814400000000000,
+  "max_training_label_ns": 1209772800000000000,
+  "max_validation_label_ns": 1241308800000000000,
+  "row_counts": [
+    2023,
+    230,
+    414
+  ],
+  "exclusion_policy": "Predetermined completeness/coverage only; no outcome-based exclusions"
+}

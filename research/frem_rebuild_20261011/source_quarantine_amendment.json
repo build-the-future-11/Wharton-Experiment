@@ -1,0 +1,27 @@
+{
+  "decision_id": "FREM-S2-ZERO-QUOTE-QUARANTINE-20261011",
+  "declared_at": "2026-10-11T13:32:17.191533+00:00",
+  "observation": {
+    "symbol": "ENB.TO",
+    "timestamp": 1053351000,
+    "date_utc": "2003-05-19T13:30:00+00:00",
+    "adjusted_close": 0,
+    "open": 0.0,
+    "close": 0.0,
+    "volume": 0,
+    "high": 0.0,
+    "low": 0.0
+  },
+  "source_path": "data/public_equity_crises_v1/ENB.TO.json",
+  "source_sha256": "8294da49c790c5541e24a7d3016fedd043c81339e7bfd621c3772cdc093c3821",
+  "hypothesized_cause": "All OHLC fields and volume are exactly zero: non-traded/malformed provider row is plausible; no verified historical exchange-calendar or default classification is claimed.",
+  "decision": "Keep canonical default rejection unchanged. For the separate exploratory S2 study only, quarantine the entire calendar month containing an all-zero OHLC/adjusted-close/volume row as missing. Never substitute a prior close, remove the day and stitch returns, or classify the zero as a harmless holiday. All other zero/negative/infinite prices still fail. Record missing months and all windows lost through rolling features.",
+  "predicted_effect": "No invented price or log return crosses the unknown month. Earlier successful daily observations and the raw zero remain archived. Results retain survivor/missing-data limitations.",
+  "discriminating_experiment": "Tests assert whole-month missingness including a midmonth zero, fail on traded/nonplaceholder zero and unchanged strict default. Rerun same declared matrix after prefit validity correction; no model fit or model outcome yet exists.",
+  "result": "DECLARED_BEFORE_ANY_FIT",
+  "public_scope_only": true,
+  "missing_month": "2003-05",
+  "historical_holiday_verified": false,
+  "terminal_loss_ruled_out": false,
+  "original_failed_attempt": "outputs/frem_s2_development_20261011_attempt2"
+}

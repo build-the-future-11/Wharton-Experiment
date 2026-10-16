@@ -1,3 +1,5 @@
+> 12 October status correction: exploratory public fitted checkpoints now exist. The earlier statement below that no fitted checkpoint exists is historical and superseded. These checkpoints do not establish a current admitted forecast or compliant Laura allocation. This dated ranking and its market figures have not been revalidated in this pass. See `research/checklist_completion_20261012/LAURA_FUNDING_AND_BLOCKERS.md`.
+
 # GYIC current equity watchlist — 11 October 2026
 
 ## Verdict

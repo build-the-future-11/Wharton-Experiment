@@ -1,0 +1,64 @@
+ M .gitignore
+ M README.md
+ M RELEASE_MANIFEST.json
+ M RESEARCH_STATE.json
+ M docs/CODEX_HANDOFF.md
+ M paper/main.pdf
+ M paper/main.tex
+ M paper/references.bib
+ M research/events.jsonl
+ M scripts/build_paper.py
+ M scripts/public_equity_backtests.py
+ M src/frem/model.py
+ M src/frem/training.py
+?? configs/frem_s3_public.json
+?? configs/public_regional_factors.json
+?? data/public_regional_factors_20261011/
+?? docs/FREM_S3.md
+?? docs/RESEARCH_COMPLETION_STATUS.md
+?? outputs/frem_s2_development_20261011_attempt1/
+?? outputs/frem_s2_development_20261011_attempt2/
+?? outputs/frem_s2_development_20261011_attempt3/
+?? outputs/frem_s3_20261011_attempt1/
+?? outputs/public_equity_allnow_20261011_attempt1/
+?? outputs/public_equity_slow_20261011_attempt1/
+?? paper/archive/
+?? paper/engineering_results.tex
+?? paper/release_review_20261011/
+?? paper/review_20261011/
+?? paper/review_20261011_v2/
+?? research/completion_20261011/
+?? research/decisions/completion_evidence_20261011.json
+?? research/decisions/frem_loss_diagnosis_20261011.json
+?? research/decisions/frem_rebuild_20261011.json
+?? research/decisions/frem_rebuild_result_20261011.json
+?? research/decisions/frem_s3_start_20261011.json
+?? research/decisions/public_regional_intake_20261011.json
+?? research/decisions/public_slow_execution_20261011.json
+?? research/decisions/public_slow_result_20261011.json
+?? research/decisions/public_zero_diagnosis_20261011.json
+?? research/evidence_audit_20261011/
+?? research/evidence_audit_20261011_v2/
+?? research/frem_loss_diagnosis_20261011/
+?? research/frem_rebuild_20261011/
+?? research/frem_s3_20261011/
+?? research/local_maintenance_20261011/
+?? research/public_zero_diagnosis_20261011/
+?? scripts/acquire_public_regional_factors.py
+?? scripts/audit_engineering_evidence.py
+?? scripts/audit_frem_s3.py
+?? scripts/diagnose_frem_loss.py
+?? scripts/diagnose_public_zero.py
+?? scripts/run_frem_rebuild.py
+?? scripts/run_frem_s3.py
+?? scripts/run_public_slow.py
+?? src/frem/calibration_diagnostics.py
+?? src/frem/frozen_residual.py
+?? src/frem/s3.py
+?? src/frem/s3_forecaster.py
+?? tests/test_evidence_audit.py
+?? tests/test_frem_loss_diagnosis.py
+?? tests/test_frem_rebuild.py
+?? tests/test_public_regional_factors.py
+?? tests/test_public_zero_diagnostics.py
+?? tests/test_s3.py

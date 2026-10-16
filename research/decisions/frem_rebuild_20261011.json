@@ -1,0 +1,42 @@
+{
+  "decision_id": "FREM-S2-REDESIGN-20261011",
+  "observation": "Retained synthetic negative result: location bias dominates; direct memory correction helps slightly.",
+  "hypothesized_cause": [
+    "Training-target units reduce excessive location gradients and initial scale mismatch.",
+    "Residuals from a selected frozen base on a later purged holdout avoid mixed evolving/dropout references.",
+    "Validation selection of the deployed correction and scale by Student-t NLL aligns the controller objective with evaluation."
+  ],
+  "decision": "Implement the additive training-scaled head and frozen-reference residual successor under a fixed fresh exploratory development protocol. Preserve predecessor and canonical hypothesis.",
+  "predicted_effect": "Better centering and interpretable same-checkpoint residual comparison; no guaranteed improvement.",
+  "discriminating_experiment": {
+    "data": "Existing public_equity_crises_v1, same previously declared 24 present-day listings, hash verified, pre2025 only. Exploratory survivor sample with retrospective adjustments and research-coordinate timing.",
+    "fold": "great_recession (2007-12 through 2009-06), predeclared for economic relevance before new fits; no outcomes viewed for selection.",
+    "seeds": [
+      11,
+      29
+    ],
+    "epochs": 12,
+    "models": [
+      "legacy_frem",
+      "legacy_no_memory",
+      "standardized_frem",
+      "standardized_no_memory",
+      "frozen_residual",
+      "zero",
+      "ridge",
+      "xgboost",
+      "gru",
+      "dlinear",
+      "patch_transformer"
+    ],
+    "max_fit_cells": 22,
+    "paired_control_outputs": 2,
+    "max_wall_seconds": 3600,
+    "max_fit_seconds": 120,
+    "memory_floor_mib": 512,
+    "stopping": "One fixed matrix; all failures retained, no metric-driven retry or favorable seed deletion. No protected outcomes. No significance or SOTA claim from this short exploratory matrix.",
+    "fairness": "All methods share outer information boundary; frozen pair shares exact base weights and residual-holdout allocation. Other methods use more base-fitting rows. Calibration/search counts and actual compute reported; no matched-search or efficiency claim."
+  },
+  "result": "DECLARED_NOT_EXECUTED",
+  "specification": "research/frem_rebuild_20261011/specification.json"
+}

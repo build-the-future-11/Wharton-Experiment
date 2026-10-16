@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-16T07:19:54.387082+00:00",
+  "event": "EDITOR_BECAME_AVAILABLE",
+  "url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-cpu-readiness-2026-10-16/edit",
+  "observed_controls": [
+    "Import Notebook enabled",
+    "Run All enabled",
+    "Start session enabled"
+  ],
+  "draft_session": "off (run a cell to start)",
+  "input": "No input attached",
+  "cloud_execution_started": false,
+  "note": "Reopened user tab became available after initial blocker. Initial blocked observation preserved. Previous draft remains default example until reviewed notebook upload. No session-token/iframe URL copied into evidence."
+}

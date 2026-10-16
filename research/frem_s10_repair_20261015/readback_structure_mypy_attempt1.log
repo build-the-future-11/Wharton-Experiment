@@ -1,0 +1,2 @@
+successors/frem_s10/tests/test_readback_audit.py:290: error: Incompatible types in assignment (expression has type "list[dict[str, JSONValue]]", target has type "JSONValue")  [assignment]
+Found 1 error in 1 file (checked 3 source files)

@@ -1,0 +1,4 @@
+successors/frem_s10/tests/test_model_audit.py:221: error: Argument "library_window" to "replace" of "ForecastConfig" has incompatible type "float"; expected "int"  [arg-type]
+successors/frem_s10/tests/test_model_audit.py:324: error: Argument "pending" to "replace" of "ForecastState" has incompatible type "tuple[None]"; expected "tuple[IssuedForecast, ...]"  [arg-type]
+successors/frem_s10/tests/test_model_audit.py:326: error: Argument "feedback" to "replace" of "ForecastState" has incompatible type "list[None]"; expected "tuple[MaturedFeedback, ...]"  [arg-type]
+Found 3 errors in 1 file (checked 10 source files)

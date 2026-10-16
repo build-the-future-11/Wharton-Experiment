@@ -1,0 +1,66 @@
+{
+  "earlier_combined_tests": {
+    "log": "readback_tests_attempt1.log",
+    "note": "Earlier version before extra scalar type test and final accounting/mark refinements; retained without relabeling.",
+    "passed": 28,
+    "seconds": 29.69
+  },
+  "evidence_scope": "GENERATED_ENGINEERING_ONLY",
+  "files": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/readback.py",
+      "sha256": "d9e972f690874f9583e4f29f1ebca26b764eaea78ae5094f3d7b54ecaef14f40"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_readback_audit.py",
+      "sha256": "d6bdd870f967b86ca97929162a353282e83b94f20c55cd095a7aec25d52be5a4"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_experiment_audit.py",
+      "sha256": "faa5df14481222c8d7e495952e65dc7089f8bf0838ffbdda0ed52984c7ee38a5"
+    }
+  ],
+  "fixture": {
+    "blocks_per_fold": 2,
+    "fixture_lifetime_change": "inputs/tape/campaign are session-scoped and immutable, avoiding duplicate full192 setup; no scientific effect",
+    "forecast_laws": "three-atom constructed immutable tapes",
+    "ledgers": 192,
+    "policies_and_accounting": "real policy selectors, benchmarks, exact fees, ordered ledger events"
+  },
+  "limitations": [
+    "No source authority or empirical support established.",
+    "Actual saved replay roundtrip has two blocks per fold; endpoint analysis uses separate 24/25-row constructed retained fixtures.",
+    "No market-length/520-atom memory or runtime feasibility claim.",
+    "Source provenance, resource admission, precision and scientific freeze remain separate gates."
+  ],
+  "market_fits_run": false,
+  "market_or_protected_values_read": false,
+  "quality": {
+    "format_log": "readback_format_final.log",
+    "ruff_log": "readback_lint_final.log",
+    "strict_mypy_log": "readback_mypy_final2.log"
+  },
+  "readback_validates": [
+    "all inventory hashes and exact matrix membership",
+    "saved forecast frame semantic identities through verify_publication",
+    "exact allowlisted dataclass fields and constructor validations",
+    "typed array dtype/shape/unit/context and immutable arrays",
+    "terminal semantic state hash and ordered event hash links",
+    "dollar accounting, attribution, fees, chosen fill and NAV mark certificates",
+    "paired decision/score axes and causal forecast issue times",
+    "complete versus retained failure prefix semantics",
+    "numeric scalar representation for typed semantic hashes"
+  ],
+  "retained_diagnostics": [
+    "readback_mypy_attempt1.log",
+    "readback_lint_attempt1.log",
+    "readback_lint_attempt2.log"
+  ],
+  "schema": "s10-generated-readback-engineering-receipt-v1",
+  "tests": {
+    "log": "readback_tests_final.log",
+    "passed": 9,
+    "seconds": 14.2,
+    "warnings": "error"
+  }
+}

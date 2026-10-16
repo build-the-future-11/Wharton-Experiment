@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-10-13T16:03:04.286028+00:00",
+  "status": "PLANNING_IMPLEMENTED_AND_VERIFIED_STRATEGIC_POLICY_PROPOSED",
+  "requested_ultimate_model_complete": false,
+  "scientific_status": "NOT_EVALUATED",
+  "new_runtime_tests": {
+    "run": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "resources": {
+    "peak_rss_mib": 25.546875,
+    "seconds": 0.04478033399936976,
+    "rss_limit_mib": 128,
+    "seconds_limit": 60,
+    "guard": "50ms sampled peak RSS and elapsed guard; 60s parent subprocess timeout"
+  },
+  "source_hashes": {
+    "successors/laura_planning_v1/check.py": "b8777f09452722b2c71b00b0dade5a230e1ae9b8f961e8ec273627e6bcb6b667",
+    "successors/laura_planning_v1/core.py": "48e91a775f856db7425ea128671b4beffef746491a2165ebf7110986eb37c44b",
+    "successors/laura_planning_v1/run.py": "a752d08f76daad72e18ce96f476f2cd9d76dd39ac5208ed523647dcf0433ec5e",
+    "successors/laura_planning_v1/tests/test_core.py": "3be259ccddbd8033871b32bb0270d56070baa0a056a6008ade70dd260bc660b8"
+  },
+  "lint": "PASS successors/laura_planning_v1; lint_attempt3.txt empty with exit0",
+  "arithmetic": {
+    "path": "research/laura_plan_20261013/arithmetic_attempt3",
+    "growth_reserve_cells": 18,
+    "dated_reserve_prices": 12,
+    "required_return_brackets": 3,
+    "cost_flexibility_sensitivities": 9,
+    "conditional_communication_scenarios": 5,
+    "protection_breach_counterexample": true,
+    "probability": null,
+    "market_forecast": false
+  },
+  "review": {
+    "independent_financial_review": "458monetary fields recomputed with zero discrepancies before protected-surplus-floor addition; retained outputs have same monetary values",
+    "fixes": [
+      "Explicit deterministic rounding",
+      "Required cost shortfalls and combinedsignedgap",
+      "Future versus observed2031gate",
+      "Cashflowfloor cap and violation evidence",
+      "Protected surplus floor enforced in rebalancing;28finaltests passed"
+    ]
+  },
+  "s6_delivery_identities_reverified": 43,
+  "s6_files_changed": [],
+  "market_fits_this_followup": 0,
+  "market_backtests_this_followup": 0,
+  "protected_access": false,
+  "s6_training_status": "BLOCKED: fresh resourcefloor failed; admitted window data and separately frozen protocol absent",
+  "resource_check": "research/laura_plan_20261013/resource_check.json",
+  "current_competition_universe_verified": false,
+  "specific_trade_quantities_generated": false,
+  "policy_source": "Team proposal using user-supplied case; notadvisorapproved. Strategicplanning does not require WInS PnL.",
+  "case_and_definitions": "research/laura_plan_20261013/CASE_AND_POLICY.json",
+  "policy": "research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md",
+  "failures_and_versions_retained": [
+    "integrity_attempt1",
+    "integrity_attempt2",
+    "arithmetic_attempt1",
+    "arithmetic_attempt2",
+    "Initial lint identified2importorder findings and1dictstylefinding; repaired beforefinalcheck"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 410.53125,
+    "pageouts": 892032
+  },
+  "fold": "year_2020",
+  "model": "xgboost"
+}

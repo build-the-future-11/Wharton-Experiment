@@ -1,0 +1,225 @@
+{
+  "schema": "s10-kaggle-preliminary-planning-metadata-v1",
+  "readiness": "BLOCKED",
+  "executable_production_manifest": false,
+  "scientific_status": "NOT_EVALUATED",
+  "final_integrated_verification": "SCOPED_CPU_CHECKS_AND_CLI_PASSED; FULL_PRODUCTION_VERIFICATION_NOT_EXECUTED",
+  "final_receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json",
+  "cloud_execution_authorized_this_session": false,
+  "cloud_gpu_quota_used_this_session_hours": 0,
+  "recommended_accelerator": "None",
+  "implemented_device": "cpu",
+  "precision": "float64",
+  "gpu_checks_executed": false,
+  "gpu_pass": false,
+  "runtime_estimate_seconds": null,
+  "environment": {
+    "python": ">=3.12,<3.13",
+    "numpy": "2.5.4",
+    "existing_lock": "successors/frem_s10/uv.lock",
+    "hash_pinned_cpu_requirements": "research/frem_s10_kaggle_20261016/requirements-cpu.txt",
+    "cpu_requirements_are_complete_production_environment": false,
+    "pytorch_required": false,
+    "dependency_installs_or_upgrades_performed": false,
+    "dependency_changes_authorized_by_this_manifest": false,
+    "production_environment": "Exact resolved macOS lock, Darwin arm64 Python3.12; Linux binding unimplemented"
+  },
+  "engineering_adapters": {
+    "linux_host_admission": {
+      "implementation": "AUTHORED_FIXTURE_TESTED",
+      "contract": "s10-linux-memory-admission-v1",
+      "semantics": "Three samples at least one second apart; minimum of MemAvailable and each visible cgroup-v2 ancestor hard-limit headroom at least 512 MiB; stable pswpout and constraint identity",
+      "unsupported_conditions": [
+        "cgroup-v1 or hybrid",
+        "hidden ancestor constraints",
+        "ambiguous membership or mounts",
+        "missing required counters"
+      ],
+      "receipt": "research/frem_s10_kaggle_20261016/linux_resources_checks_attempt2.json",
+      "actual_linux_execution": false,
+      "certifies_production_supervision": false
+    },
+    "linux_isolation": {
+      "implementation": "AUTHORED_SIMULATED_CONTRACT_TESTED",
+      "backend": "bubblewrap with mandatory namespaces and evidence mounts",
+      "unsandboxed_fallback": false,
+      "receipt": "research/frem_s10_kaggle_20261016/isolation_checks_attempt2.json",
+      "actual_linux_probe_execution": false
+    },
+    "linux_offline_packaging": {
+      "implementation": "LOCKED_WHEEL_SELECTION_AND_WRITABLE_BUILD_STAGING_AUTHORED",
+      "regression_tests": "successors/frem_s10/tests/test_portable_packaging_audit.py",
+      "final_test_receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json",
+      "supported_wheel_targets": [
+        "CPython 3.12 manylinux x86_64",
+        "CPython 3.12 manylinux aarch64"
+      ],
+      "wheelhouse": "research/frem_s10_wheelhouse",
+      "network_download_fallback": false,
+      "actual_linux_clean_install": false
+    }
+  },
+  "planning_envelope": {
+    "user_requested_quota_hours": [
+      4,
+      6
+    ],
+    "recommended_session_ceiling_hours": 5.5,
+    "enforced_by_this_manifest": false,
+    "measured_runtime_promise": false,
+    "platform_quota_claim": false,
+    "policy": "Stage-gated recommendation only; measure first; stop if remaining authorized time cannot cover the next bounded stage. No automatic retries or cloud launch."
+  },
+  "stages": [
+    {
+      "id": "metadata",
+      "command": "preflight --device cpu",
+      "numerical_execution": false,
+      "required_result": "READY_FOR_CPU_SMOKE_METADATA_ONLY",
+      "does_not_satisfy": [
+        "runtime test",
+        "production admission",
+        "CUDA validation"
+      ]
+    },
+    {
+      "id": "tiny-generated-cpu",
+      "manifest": "configs/generated_smoke.json",
+      "plan_command": "smoke-plan",
+      "execution_command": "smoke",
+      "scope": "smoke",
+      "dataset": "s10-generated-smoke-data-v1",
+      "seed": 11,
+      "origins": 12,
+      "variants": [
+        "primary"
+      ],
+      "active_budget_seconds": 60,
+      "threads": 1,
+      "checkpoint_every_origins": 1,
+      "success_requires": [
+        "complete committed origin chain",
+        "smoke-evaluate exact score reconstruction",
+        "smoke-export complete local archive"
+      ],
+      "evidence_scope": "GENERATED_ENGINEERING"
+    },
+    {
+      "id": "controlled-origin-resume",
+      "manifest": "configs/generated_smoke.json",
+      "new_run_required": true,
+      "first_command": "smoke --stop-after 3",
+      "expected_first_exit_code": 130,
+      "resume_command": "smoke-resume",
+      "evaluation_command": "smoke-evaluate",
+      "resume_boundary": "Every completed origin across all declared variants",
+      "resume_requires": [
+        "same source",
+        "same numeric environment",
+        "same configuration",
+        "same generated data identity",
+        "contiguous validated commits",
+        "all session durations known"
+      ],
+      "budget_replenished_on_resume": false,
+      "hard_kill_unknown_time_policy": "Stop for review; never delete session evidence or infer unused budget"
+    },
+    {
+      "id": "larger-generated-development",
+      "manifest": "configs/generated_development.json",
+      "scope": "development-engineering",
+      "seed": 11,
+      "origins": 72,
+      "variants": [
+        "primary",
+        "repeat_h1",
+        "no_shrink",
+        "window260",
+        "neighbors16",
+        "neighbors64"
+      ],
+      "active_budget_seconds": 300,
+      "threads": 1,
+      "checkpoint_every_origins": 1,
+      "status": "HOST_ADMISSION_REQUIRED_ACTUAL_LINUX_EXECUTION_UNVERIFIED",
+      "required_gate": "check_host: unchanged macOS contract or explicit fail-closed Linux cgroup-v2 contract",
+      "evidence_scope": "GENERATED_ENGINEERING"
+    },
+    {
+      "id": "production-portability-and-verification",
+      "status": "BLOCKED",
+      "implemented_adapters": [
+        "Linux cgroup-v2 host admission",
+        "bubblewrap namespace and mount isolation",
+        "locked Linux wheel selection and writable build staging"
+      ],
+      "required_repairs_and_evidence": [
+        "Linux production numerical supervisor",
+        "exact Linux environment binding",
+        "production integration",
+        "actual Linux host admission and isolation probe",
+        "actual Linux offline clean installation",
+        "complete current-source verification"
+      ],
+      "verification_command_ceiling_seconds": {
+        "tests": 600,
+        "packaging": 600,
+        "mutations": 600,
+        "other": 120
+      },
+      "bounded_cleanup_additional": true
+    },
+    {
+      "id": "scientific-precision",
+      "status": "BLOCKED",
+      "existing_operation": "prepare-precision",
+      "unchanged_ceiling_seconds": 600,
+      "requires": [
+        "exact new candidate",
+        "source/calendar admission",
+        "current engineering verification",
+        "resource admission",
+        "one-use operation declaration"
+      ],
+      "valid_negative_or_inadequate_precision": "Terminal for this declared attempt; no outcome-driven retry"
+    },
+    {
+      "id": "full-scale-generated-qualification",
+      "status": "BLOCKED",
+      "existing_operation": "qualify",
+      "unchanged_ceiling_seconds": 3600,
+      "requires": [
+        "passing precision",
+        "exact source/environment",
+        "resource admission",
+        "fixed qualification declaration"
+      ]
+    },
+    {
+      "id": "frozen-development",
+      "status": "BLOCKED",
+      "existing_operation": "run",
+      "unchanged_ceiling_seconds": 3600,
+      "fixed_scientific_plan": "successors/frem_s10/src/frem_s10/science.json",
+      "planned_ledgers": 192,
+      "plan_command": "plan --manifest successors/frem_s10/src/frem_s10/science.json",
+      "requires": [
+        "passing qualification",
+        "new exact freeze",
+        "admitted data",
+        "unconsumed one-use declaration",
+        "separately authorized execution"
+      ],
+      "market_resume_allowed": false,
+      "protected_confirmation_included": false
+    }
+  ],
+  "preservation": {
+    "old_production_plan_reusable_after_source_change": false,
+    "old_plans_receipts_failures_and_results_preserved": true,
+    "historical_results_are_current_confirmation": false,
+    "overwrite_permitted": false,
+    "publish_or_external_submit_authorized": false
+  },
+  "session_final_receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json"
+}

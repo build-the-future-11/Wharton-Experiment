@@ -1,0 +1,5 @@
+successors/frem_s10/tests/test_catalog_faults_audit.py:46: error: Argument 2 to "replace" of "DataContract" has incompatible type "**dict[str, str | int | bool]"; expected "date"  [arg-type]
+successors/frem_s10/tests/test_catalog_faults_audit.py:46: error: Argument 2 to "replace" of "DataContract" has incompatible type "**dict[str, str | int | bool]"; expected "tuple[date, ...]"  [arg-type]
+successors/frem_s10/tests/test_catalog_faults_audit.py:46: error: Argument 2 to "replace" of "DataContract" has incompatible type "**dict[str, str | int | bool]"; expected "str"  [arg-type]
+successors/frem_s10/tests/test_catalog_faults_audit.py:46: error: Argument 2 to "replace" of "DataContract" has incompatible type "**dict[str, str | int | bool]"; expected "int"  [arg-type]
+Found 4 errors in 1 file (checked 1 source file)

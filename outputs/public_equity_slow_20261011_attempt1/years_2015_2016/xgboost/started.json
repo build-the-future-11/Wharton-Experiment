@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 182.296875,
+    "pageouts": 890668
+  },
+  "fold": "years_2015_2016",
+  "model": "xgboost"
+}

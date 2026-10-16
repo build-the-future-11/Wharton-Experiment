@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "scope": "Descriptive reconstruction of closed development evidence; zero fits, zero policy replays, no selection, no protected access.",
+  "active_output": "research/finish_all_20261014/diagnostics/final",
+  "tests_passed": 10,
+  "lint": "PASS",
+  "ledger_count": 252,
+  "forecast_summary_rows": 420,
+  "identities": {
+    "files": {
+      "research/frem_s8_20261014/freeze2.json": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457",
+      "research/frem_s8_20261014/FINAL_MANIFEST_v2.json": "3246fc612e2181c9b6856de567a098fdb641d88dcd858153fbee9886155164f4",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/data_identity.json": "deb38db6d51cdc47cd4a8c2fe4b4e14332d870549ebccaed3ff405f1dcac272d",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/completion.json": "f20059d2a5e4999ba7f1c11bc91d68cc8f6cf02e29dea9bbd397f13735d9ed5a",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/ensembles.json": "97ba1cf0bab4f005f30c98a5a2202e72b1ae1f099370d13b33df1779c79a5fcd",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/evaluation_predictions.json": "aea8e5489316f3f3dca02f36dbfd123c043495353489573543b1d096ef979fe5",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/mixture_state.json": "c38e82ff5807a1f635e6231c1eabcafa359891fafcf9cbbfc0579affc0592835",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/trace.json": "5e45c7751f66cb89fac3f4e4940edc64db1d6532b13d61cd7a038584cf8c8850",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/fit_checkpoint.json": "9ddc178a59aacbdee1dc67a79da8b12406f76f7438cd509a7775bc02528b2986",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/evaluation_predictions.json": "907ae2ba6c2e989c55ce119f0ee039e79d828cccd1cab0c2e5648a5751dd9ba7",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/mixture_state.json": "657103513f1718593fa597a4c2707d5757369cb9872156db22f818b8efa5ce5d",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/trace.json": "4b752d978e2539a62d8bba7db5b8c25a0137ae46155981279cd4a3b0971b8f01",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/fit_checkpoint.json": "73820c53e07ed00e308204e354135854599ab2c910e352bf0efe107841fa5cdd",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/evaluation_predictions.json": "e9966c12b6e43418183921fd91b328feb2a20c0f2c03027be765cbcb02149406",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/mixture_state.json": "590762c249a7a6b0d579e242131d1044932d4611be883ffc0f83bf06921bf693",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/trace.json": "e0f937b9057060952e088fb6db45804ff0c056708db8ce1fdbb914d39197523b",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/fit_checkpoint.json": "7840f9b56d3c5a71052853296f17acad9cd1ab492bf949614538f76a528da131",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/economics.json": "32a82a54c3b1da4f8a86235a37474425c98e3eb20617c86230ddd938f4e2676c",
+      "outputs/frem_s8_2020_2022_20261014_attempt1/benchmarks.json": "2e46aa94e0c9839dbfed601e0dd9511990c7fe9faf42dc7fde591b9ed4dd08d7",
+      "data/s8_etf_2020_2022_20261014_attempt2/SPY.json": "91370489342339ad55afebb5cbaf7a8703b20fb69b734dc46a682c3549c94a88",
+      "data/s8_etf_2020_2022_20261014_attempt2/TLT.json": "15f0f8f0131e05e464c019eef1b21a5029b2b6bbde68e9f016315ba0023849f3",
+      "data/s8_etf_2020_2022_20261014_attempt2/GLD.json": "14a1cff8b7c8d50bd9732e10a7090612f9e7fea218ba7f7296ca3e109a4b5f35"
+    },
+    "frozen_sources_verified": 35,
+    "saved_data_files_verified": 9,
+    "consumed_files_matched_to_closed_manifest": 21,
+    "diagnostic_source_sha256": "4d4b01ec1de9e6c6921a5ae7759f4ca863c7d2f159f80f9fa115b124d1ea982e"
+  },
+  "files": {
+    "research/finish_all_20261014/diagnostics/attempt1/FAILURE.json": "93f033ed2c4b3f6243dc675a845b3d232fbb550c5a89cd78bb1bdb12081cc272",
+    "research/finish_all_20261014/diagnostics/attempt1/RESOURCES.json": "310ccf0c493d730d1a8bab840985f9b2870c4f6e1c6646351ae5ebafe12030f8",
+    "research/finish_all_20261014/diagnostics/attempt1/diagnose_s8_completion.py.txt": "edb9765116b95e461f51e68aec5696e7928483424d57a122e558e57b64336ecd",
+    "research/finish_all_20261014/diagnostics/attempt2/FAILURE.json": "b39c40dc49275e1754a5bfbd20593ab1ded374552ddd4ec21da91c5d3c7136d3",
+    "research/finish_all_20261014/diagnostics/attempt2/RESOURCES.json": "11beb1136eb3b5ca546cdce8fa299c7e6ea12938c5d9ca20a4ff1b3c4846f236",
+    "research/finish_all_20261014/diagnostics/attempt2/diagnose_s8_completion.py.txt": "b06d14fecd2c0271b929c9b0d8bb12448d16f35a4cc80313245c8d50b518a1a3",
+    "research/finish_all_20261014/diagnostics/attempt3/DIAGNOSTICS.json": "ccbaf259c078bd31f7d9966b55fe092e159d440bf9d14372ebb75c02132ee54f",
+    "research/finish_all_20261014/diagnostics/attempt3/INPUT_IDENTITIES.json": "34cc284925c8bdd696dcf6fea096536e1fa8c92f613ed9412752664c4434616b",
+    "research/finish_all_20261014/diagnostics/attempt3/REPORT.md": "103d622c214205e9c6f71269986d68a2b8f5c117d868428c1aa127b9ba7dcd69",
+    "research/finish_all_20261014/diagnostics/attempt3/RESOURCES.json": "7238d6ff0db4cea6f0f3b0bb8baa573e809bab6744e9248ed5dcb1b29085a362",
+    "research/finish_all_20261014/diagnostics/attempt3/actual_horizons.csv": "bf49e9b8d4d812dec2957980f6cc07a792d6cb724b887d6fa5b68064c892b5be",
+    "research/finish_all_20261014/diagnostics/attempt3/annual_attribution.csv": "205651c0a5855e7515276600f76dbd5296da6b64a108d4e0b1a583c28c3e8d5e",
+    "research/finish_all_20261014/diagnostics/attempt3/forecast_diagnostics.csv": "a233d3adf9b114144618b45cdeb35bff583ff5211970388372058581730688b5",
+    "research/finish_all_20261014/diagnostics/attempt3/ledger_attribution.csv": "acdb003782349569f82df05c51278bc3e66d2b9505442bc3f8955450b3215a53",
+    "research/finish_all_20261014/diagnostics/attempt3/primary_period_attribution.csv": "d290f87c108ab3d80bd6b89e9c3f074e0ab99610656c27301dae1ba44615e25e",
+    "research/finish_all_20261014/diagnostics/execution_final.log": "0b48b0a04c1a38bdd29d0277a5f0c465745e7d5d9950088cba33f8e4af3e8581",
+    "research/finish_all_20261014/diagnostics/final/DIAGNOSTICS.json": "ccbaf259c078bd31f7d9966b55fe092e159d440bf9d14372ebb75c02132ee54f",
+    "research/finish_all_20261014/diagnostics/final/INPUT_IDENTITIES.json": "9cf5f629b4a9458eee3fa2727f205d4ccdc0f9bb7f41f607d82f601915019e9f",
+    "research/finish_all_20261014/diagnostics/final/REPORT.md": "103d622c214205e9c6f71269986d68a2b8f5c117d868428c1aa127b9ba7dcd69",
+    "research/finish_all_20261014/diagnostics/final/RESOURCES.json": "229101d55b0f5edab43d8a0977c80642ae6a5bfc2df84b267c96792e55746d96",
+    "research/finish_all_20261014/diagnostics/final/actual_horizons.csv": "bf49e9b8d4d812dec2957980f6cc07a792d6cb724b887d6fa5b68064c892b5be",
+    "research/finish_all_20261014/diagnostics/final/annual_attribution.csv": "205651c0a5855e7515276600f76dbd5296da6b64a108d4e0b1a583c28c3e8d5e",
+    "research/finish_all_20261014/diagnostics/final/diagnose_s8_completion.py.txt": "4d4b01ec1de9e6c6921a5ae7759f4ca863c7d2f159f80f9fa115b124d1ea982e",
+    "research/finish_all_20261014/diagnostics/final/forecast_diagnostics.csv": "a233d3adf9b114144618b45cdeb35bff583ff5211970388372058581730688b5",
+    "research/finish_all_20261014/diagnostics/final/ledger_attribution.csv": "acdb003782349569f82df05c51278bc3e66d2b9505442bc3f8955450b3215a53",
+    "research/finish_all_20261014/diagnostics/final/primary_period_attribution.csv": "d290f87c108ab3d80bd6b89e9c3f074e0ab99610656c27301dae1ba44615e25e",
+    "research/finish_all_20261014/diagnostics/final/test_s8_completion_diagnostics.py.txt": "812de412817f871ca0ffa804668ec4c3dea76b05ee9e8e5b5f56a10d3bac02f0",
+    "research/finish_all_20261014/diagnostics/lint_final.log": "f623ab68282919897b999de546653349652b968d3f49173fdeeb9a51ffa251b2",
+    "research/finish_all_20261014/diagnostics/tests_final.log": "40686c8e17c133db73c1619cca207e1fdd71c4492c98b58d59ab1f129599de6b",
+    "research/finish_all_20261014/diagnostics/verification_attempt1/RECEIPT.json": "e9a4c885938ebd7fe74e92daf4ae2aab521105ae4882500ffcc3f72666b8ac71",
+    "research/finish_all_20261014/diagnostics/verification_attempt1/diagnose_s8_completion.py.txt": "eb592a966ae9bd7b7694631502d50fd049022519f4bde2456f8d3f166a960864",
+    "scripts/diagnose_s8_completion.py": "4d4b01ec1de9e6c6921a5ae7759f4ca863c7d2f159f80f9fa115b124d1ea982e",
+    "tests/test_s8_completion_diagnostics.py": "812de412817f871ca0ffa804668ec4c3dea76b05ee9e8e5b5f56a10d3bac02f0"
+  },
+  "retained_failures": [
+    {
+      "attempt": "verification_attempt1",
+      "reason": "3 Ruff style findings; source snapshot retained"
+    },
+    {
+      "attempt": "attempt1",
+      "reason": "Old cost-aware ledgers omit optional weights field; derive from saved positions"
+    },
+    {
+      "attempt": "attempt2",
+      "reason": "Old cost-aware ledgers account terminal liquidation outside last period; preserve schema and reconcile terminal separately"
+    }
+  ],
+  "verification_commands": [
+    "rtk proxy python3 -m unittest discover -s tests -p test_s8_completion_diagnostics.py -v",
+    "rtk proxy .venv/bin/ruff check scripts/diagnose_s8_completion.py tests/test_s8_completion_diagnostics.py",
+    "rtk proxy python3 scripts/diagnose_s8_completion.py --output research/finish_all_20261014/diagnostics/final"
+  ]
+}

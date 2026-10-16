@@ -1,0 +1,57 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint": 1,
+      "name": "IDEA READY",
+      "status": "BOUNDED_RETROSPECTIVE_QUESTION_SPECIFIED_NOVELTY_NOT_ESTABLISHED"
+    },
+    {
+      "checkpoint": 2,
+      "name": "MODEL SPECIFICATION READY",
+      "status": "SPECIFIED_WITH_NARROWED_TOTAL_RETURN_CLAIM"
+    },
+    {
+      "checkpoint": 3,
+      "name": "METHODOLOGY READY",
+      "status": "PROPOSED_NOT_FROZEN_PRECISION_UNMEASURED"
+    },
+    {
+      "checkpoint": 4,
+      "name": "MODEL IMPLEMENTED",
+      "status": "KERNEL_VERIFIED_FULL_SYSTEM_INCOMPLETE"
+    },
+    {
+      "checkpoint": 5,
+      "name": "EXPERIMENT SYSTEM IMPLEMENTED",
+      "status": "INCOMPLETE"
+    },
+    {
+      "checkpoint": 6,
+      "name": "RUN READY",
+      "status": "NO_RESOURCE_AND_ENGINEERING_GATES_PENDING"
+    },
+    {
+      "checkpoint": 7,
+      "name": "CONFIRMATORY PROTOCOL FROZEN",
+      "status": "NO"
+    },
+    {
+      "checkpoint": 8,
+      "name": "EVIDENCE LOCKED",
+      "status": "ENGINEERING_ONLY_NO_S10_EMPIRICAL_RESULT"
+    },
+    {
+      "checkpoint": 9,
+      "name": "VERIFIED",
+      "status": "INTERNAL_KERNEL_CHECKS_ONLY"
+    },
+    {
+      "checkpoint": 10,
+      "name": "RESEARCH COMPLETE",
+      "status": "NO"
+    }
+  ],
+  "scientific_status": "NOT_EVALUATED",
+  "positive_result_established": false,
+  "original_thresholds_unchanged": true
+}

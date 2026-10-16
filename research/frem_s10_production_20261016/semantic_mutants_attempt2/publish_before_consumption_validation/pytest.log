@@ -1,0 +1,39 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_worker_refuses_consumed_identity_from_another_output_before_import_or_values _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0')
+
+    def test_worker_refuses_consumed_identity_from_another_output_before_import_or_values(tmp_path: Path) -> None:
+        fixture = Fixture(tmp_path)
+        reference = fixture.operation("prepare-precision")
+        output = tmp_path / "attempt"
+        output.mkdir()
+        consume(
+            fixture.markers,
+            operation="precision",
+            freeze_id=str(reference["sha256"]),
+            attempt_id="attempt",
+            output_path=str(tmp_path / "different-output"),
+        )
+        with pytest.raises(ExecutionStateError, match="output identity"):
+            execute_worker(
+                declaration_path=tmp_path / str(reference["path"]),
+                declaration_sha256=str(reference["sha256"]),
+                artifact_root=tmp_path,
+                source_root=fixture.source,
+                consumption_root=fixture.markers,
+                attempt_id="attempt",
+                output=output,
+            )
+>       assert not tuple(output.iterdir())
+E       AssertionError: assert not (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),)
+E        +  where (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),) = tuple(<generator object Path.iterdir at 0x10b335a40>)
+E        +    where <generator object Path.iterdir at 0x10b335a40> = iterdir()
+E        +      where iterdir = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt').iterdir
+
+tests/test_production_runtime.py:130: AssertionError
+- generated xml file: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/semantic_mutants_attempt2/publish_before_consumption_validation/result.xml -
+=========================== short test summary info ============================
+FAILED tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values
+1 failed in 3.40s

@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 343.4375,
+    "pageouts": 887848
+  },
+  "fold": "great_recession",
+  "model": "xgboost"
+}

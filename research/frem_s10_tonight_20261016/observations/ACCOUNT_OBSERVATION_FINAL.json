@@ -1,0 +1,22 @@
+{
+  "schema": "kaggle-final-account-observation-v1",
+  "recorded_at_utc": "2026-10-16T07:16:41.504321+00:00",
+  "recorded_at_ist": "2026-10-16T12:46:41.504321+05:30",
+  "source": "https://www.kaggle.com/settings",
+  "account": "ryangomez010",
+  "displayed_gpu_quota": "00:00 / 30 hrs",
+  "displayed_used_hours": 0,
+  "displayed_total_hours": 30,
+  "derived_remaining_hours_at_display_precision": 30,
+  "active_events_count": 0,
+  "phone_verified": false,
+  "campaign_gpu_sessions_started": 0,
+  "campaign_cpu_sessions_started": 0,
+  "all_campaign_gpu_sessions_stopped": "NOT_APPLICABLE_NONE_STARTED; account-wide zero Active Events observed",
+  "observed_account_debit_hours_at_display_precision": 0,
+  "exact_provider_charge": null,
+  "observation_limit": "UI display precision and observation time only; no future account balance or billing-finality guarantee",
+  "allocation_time_Q0": null,
+  "gpu_wall_seconds_this_campaign": 0,
+  "physical_gpu_device_hours_this_campaign": 0
+}

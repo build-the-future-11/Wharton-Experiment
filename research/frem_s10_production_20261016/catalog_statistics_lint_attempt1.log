@@ -1,0 +1,23 @@
+E702 Multiple statements on one line (semicolon)
+  --> successors/frem_s10/tests/test_catalog_statistics_audit.py:89:40
+   |
+87 |     for name in ("A", "B"):
+88 |         original = fold(name)
+89 |         energy = original.energy.copy(); energy[:, 0] = 1.2
+   |                                        ^
+90 |         wealth = original.terminal_wealth.copy(); wealth[0] = 90000
+91 |         increments = np.repeat((np.log(wealth / 100000) / 24)[None, :], 24, axis=0)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> successors/frem_s10/tests/test_catalog_statistics_audit.py:90:49
+   |
+88 |         original = fold(name)
+89 |         energy = original.energy.copy(); energy[:, 0] = 1.2
+90 |         wealth = original.terminal_wealth.copy(); wealth[0] = 90000
+   |                                                 ^
+91 |         increments = np.repeat((np.log(wealth / 100000) / 24)[None, :], 24, axis=0)
+92 |         folds.append(replace(original, energy=energy, terminal_wealth=wealth, log_increments=increments))
+   |
+
+Found 3 errors (1 fixed, 2 remaining).

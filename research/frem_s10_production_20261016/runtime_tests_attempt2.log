@@ -1,0 +1,208 @@
+FFFFF..................                                                  [100%]
+=================================== FAILURES ===================================
+___ test_saved_precision_regenerates_fixed_status_and_preserves_every_array ____
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-69/test_saved_precision_regenerat0')
+
+    def test_saved_precision_regenerates_fixed_status_and_preserves_every_array(tmp_path: Path) -> None:
+        scores = generated_scores()
+>       identity = publish_precision(tmp_path, scores, projected_a=24, projected_b=25)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_production_runtime.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/results.py:73: in publish_precision
+    "forecast_ids": checked_json(scores.forecast_ids),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = (('c-0', 'e-0', 'g-0'), ('c-1', 'e-1', 'g-1'), ('c-2', 'e-2', 'g-2'), ('c-3', 'e-3', 'g-3'), ('c-4', 'e-4', 'g-4'), ('c-5', 'e-5', 'g-5'), ...)
+
+    def checked_json(value: object) -> JSONValue:
+        """Validate recursively, rejecting nonfinite scalars and arbitrary objects."""
+        if value is None or isinstance(value, (bool, int, str)):
+            return value
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise ContractError("JSON contains a nonfinite number")
+            return value
+        if isinstance(value, list):
+            return [checked_json(item) for item in value]
+        if isinstance(value, dict):
+            result: JSONObject = {}
+            for key, item in value.items():
+                if not isinstance(key, str):
+                    raise ContractError("JSON object keys must be strings")
+                result[key] = checked_json(item)
+            return result
+>       raise ContractError(f"Unsupported JSON value type: {type(value).__name__}")
+E       frem_s10.errors.ContractError: Unsupported JSON value type: tuple
+
+successors/frem_s10/src/frem_s10/identities.py:32: ContractError
+____________ test_precision_resigned_corruption_cannot_pass[score] _____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-69/test_precision_resigned_corrup0')
+defect = 'score'
+
+    @pytest.mark.parametrize("defect", ("score", "boolean", "status", "stream"))
+    def test_precision_resigned_corruption_cannot_pass(tmp_path: Path, defect: str) -> None:
+>       identity = publish_precision(tmp_path, generated_scores(), projected_a=24, projected_b=25)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_production_runtime.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/results.py:73: in publish_precision
+    "forecast_ids": checked_json(scores.forecast_ids),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = (('c-0', 'e-0', 'g-0'), ('c-1', 'e-1', 'g-1'), ('c-2', 'e-2', 'g-2'), ('c-3', 'e-3', 'g-3'), ('c-4', 'e-4', 'g-4'), ('c-5', 'e-5', 'g-5'), ...)
+
+    def checked_json(value: object) -> JSONValue:
+        """Validate recursively, rejecting nonfinite scalars and arbitrary objects."""
+        if value is None or isinstance(value, (bool, int, str)):
+            return value
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise ContractError("JSON contains a nonfinite number")
+            return value
+        if isinstance(value, list):
+            return [checked_json(item) for item in value]
+        if isinstance(value, dict):
+            result: JSONObject = {}
+            for key, item in value.items():
+                if not isinstance(key, str):
+                    raise ContractError("JSON object keys must be strings")
+                result[key] = checked_json(item)
+            return result
+>       raise ContractError(f"Unsupported JSON value type: {type(value).__name__}")
+E       frem_s10.errors.ContractError: Unsupported JSON value type: tuple
+
+successors/frem_s10/src/frem_s10/identities.py:32: ContractError
+___________ test_precision_resigned_corruption_cannot_pass[boolean] ____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-69/test_precision_resigned_corrup1')
+defect = 'boolean'
+
+    @pytest.mark.parametrize("defect", ("score", "boolean", "status", "stream"))
+    def test_precision_resigned_corruption_cannot_pass(tmp_path: Path, defect: str) -> None:
+>       identity = publish_precision(tmp_path, generated_scores(), projected_a=24, projected_b=25)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_production_runtime.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/results.py:73: in publish_precision
+    "forecast_ids": checked_json(scores.forecast_ids),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = (('c-0', 'e-0', 'g-0'), ('c-1', 'e-1', 'g-1'), ('c-2', 'e-2', 'g-2'), ('c-3', 'e-3', 'g-3'), ('c-4', 'e-4', 'g-4'), ('c-5', 'e-5', 'g-5'), ...)
+
+    def checked_json(value: object) -> JSONValue:
+        """Validate recursively, rejecting nonfinite scalars and arbitrary objects."""
+        if value is None or isinstance(value, (bool, int, str)):
+            return value
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise ContractError("JSON contains a nonfinite number")
+            return value
+        if isinstance(value, list):
+            return [checked_json(item) for item in value]
+        if isinstance(value, dict):
+            result: JSONObject = {}
+            for key, item in value.items():
+                if not isinstance(key, str):
+                    raise ContractError("JSON object keys must be strings")
+                result[key] = checked_json(item)
+            return result
+>       raise ContractError(f"Unsupported JSON value type: {type(value).__name__}")
+E       frem_s10.errors.ContractError: Unsupported JSON value type: tuple
+
+successors/frem_s10/src/frem_s10/identities.py:32: ContractError
+____________ test_precision_resigned_corruption_cannot_pass[status] ____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-69/test_precision_resigned_corrup2')
+defect = 'status'
+
+    @pytest.mark.parametrize("defect", ("score", "boolean", "status", "stream"))
+    def test_precision_resigned_corruption_cannot_pass(tmp_path: Path, defect: str) -> None:
+>       identity = publish_precision(tmp_path, generated_scores(), projected_a=24, projected_b=25)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_production_runtime.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/results.py:73: in publish_precision
+    "forecast_ids": checked_json(scores.forecast_ids),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = (('c-0', 'e-0', 'g-0'), ('c-1', 'e-1', 'g-1'), ('c-2', 'e-2', 'g-2'), ('c-3', 'e-3', 'g-3'), ('c-4', 'e-4', 'g-4'), ('c-5', 'e-5', 'g-5'), ...)
+
+    def checked_json(value: object) -> JSONValue:
+        """Validate recursively, rejecting nonfinite scalars and arbitrary objects."""
+        if value is None or isinstance(value, (bool, int, str)):
+            return value
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise ContractError("JSON contains a nonfinite number")
+            return value
+        if isinstance(value, list):
+            return [checked_json(item) for item in value]
+        if isinstance(value, dict):
+            result: JSONObject = {}
+            for key, item in value.items():
+                if not isinstance(key, str):
+                    raise ContractError("JSON object keys must be strings")
+                result[key] = checked_json(item)
+            return result
+>       raise ContractError(f"Unsupported JSON value type: {type(value).__name__}")
+E       frem_s10.errors.ContractError: Unsupported JSON value type: tuple
+
+successors/frem_s10/src/frem_s10/identities.py:32: ContractError
+____________ test_precision_resigned_corruption_cannot_pass[stream] ____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-69/test_precision_resigned_corrup3')
+defect = 'stream'
+
+    @pytest.mark.parametrize("defect", ("score", "boolean", "status", "stream"))
+    def test_precision_resigned_corruption_cannot_pass(tmp_path: Path, defect: str) -> None:
+>       identity = publish_precision(tmp_path, generated_scores(), projected_a=24, projected_b=25)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_production_runtime.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/results.py:73: in publish_precision
+    "forecast_ids": checked_json(scores.forecast_ids),
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = (('c-0', 'e-0', 'g-0'), ('c-1', 'e-1', 'g-1'), ('c-2', 'e-2', 'g-2'), ('c-3', 'e-3', 'g-3'), ('c-4', 'e-4', 'g-4'), ('c-5', 'e-5', 'g-5'), ...)
+
+    def checked_json(value: object) -> JSONValue:
+        """Validate recursively, rejecting nonfinite scalars and arbitrary objects."""
+        if value is None or isinstance(value, (bool, int, str)):
+            return value
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise ContractError("JSON contains a nonfinite number")
+            return value
+        if isinstance(value, list):
+            return [checked_json(item) for item in value]
+        if isinstance(value, dict):
+            result: JSONObject = {}
+            for key, item in value.items():
+                if not isinstance(key, str):
+                    raise ContractError("JSON object keys must be strings")
+                result[key] = checked_json(item)
+            return result
+>       raise ContractError(f"Unsupported JSON value type: {type(value).__name__}")
+E       frem_s10.errors.ContractError: Unsupported JSON value type: tuple
+
+successors/frem_s10/src/frem_s10/identities.py:32: ContractError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass[score]
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass[boolean]
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass[status]
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass[stream]
+5 failed, 18 passed in 7.17s

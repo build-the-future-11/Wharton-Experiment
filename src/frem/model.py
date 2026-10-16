@@ -41,6 +41,7 @@ class ModelConfig:
     dropout: float = 0.1
     scale_floor: float = 1e-4
     initial_step_scale: float = 0.01
+    return_parameterization: str = "legacy"
     use_reservoir: bool = True
     use_spectral: bool = True
     use_memory: bool = True
@@ -95,6 +96,8 @@ class ModelConfig:
             raise ValueError("dropout must lie in [0, 1)")
         if self.scale_floor <= 0 or self.initial_step_scale <= 0:
             raise ValueError("Predictive scales must be strictly positive")
+        if self.return_parameterization not in {"legacy", "train_standardized"}:
+            raise ValueError("return_parameterization must be legacy or train_standardized")
         if self.memory_retention not in {"utility", "fifo", "random", "uniform"}:
             raise ValueError("memory_retention must be utility, fifo, random, or uniform")
         if self.memory_surprise_threshold < 0:
@@ -329,12 +332,20 @@ class FREMModel(nn.Module):
         )
         self.return_head = nn.Linear(config.hidden_dim, 3)
         nn.init.zeros_(self.return_head.weight)
+        initial_scale = (
+            math.sqrt(3.0 / 5.0)
+            if config.return_parameterization == "train_standardized"
+            else config.initial_step_scale
+        )
         with torch.no_grad():
             self.return_head.bias.copy_(
-                torch.tensor(
-                    [0.0, math.log(math.expm1(config.initial_step_scale)), math.log(math.expm1(5.0 - 2.1))]
-                )
+                torch.tensor([0.0, math.log(math.expm1(initial_scale)), math.log(math.expm1(5.0 - 2.1))])
             )
+        # Conditional buffers preserve strict loading of all legacy checkpoints.
+        if config.return_parameterization == "train_standardized":
+            self.register_buffer("return_center", torch.tensor(0.0))
+            self.register_buffer("return_unit", torch.tensor(1.0))
+            self.register_buffer("return_reference_count", torch.tensor(0, dtype=torch.long))
         self.memory_gate_head = nn.Sequential(
             nn.Linear(config.hidden_dim + MEMORY_FEATURES, 16), nn.GELU(), nn.Linear(16, 1)
         )
@@ -357,6 +368,20 @@ class FREMModel(nn.Module):
         if config.use_ngram:
             dimension += 5 * config.memory_ngram
         return dimension
+
+    @torch.no_grad()
+    def fit_return_reference(self, targets: Tensor) -> None:
+        """Fit pooled target units exactly once, from the training partition only."""
+        if self.config.return_parameterization != "train_standardized":
+            raise RuntimeError("Return reference is only used by train_standardized heads")
+        if int(self.return_reference_count) != 0:
+            raise RuntimeError("Return reference is already fitted")
+        if targets.ndim != 1 or not targets.numel() or not torch.isfinite(targets).all():
+            raise ValueError("Return reference requires finite nonempty vector targets")
+        values = targets.double()
+        self.return_center.copy_(values.mean())
+        self.return_unit.copy_(values.std(unbiased=False).clamp_min(self.config.scale_floor))
+        self.return_reference_count.fill_(targets.numel())
 
     def train(self, mode: bool = True) -> FREMModel:
         super().train(mode)
@@ -416,8 +441,16 @@ class FREMModel(nn.Module):
         raw = self.return_head(fused)
         # H is a count of executable return intervals. This is a discrete-time
         # drift/scale parameterization, not a fitted continuous-time market law.
-        base_prediction = raw[:, 0] * self.config.horizon
-        scale = F.softplus(raw[:, 1]) * math.sqrt(self.config.horizon) + self.config.scale_floor
+        if self.config.return_parameterization == "train_standardized":
+            if int(self.return_reference_count) == 0:
+                raise RuntimeError("Fit the training-only return reference before prediction")
+            # Targets already represent the full horizon. Both learned outputs
+            # use the same physical return unit; do not multiply by H again.
+            base_prediction = self.return_center + self.return_unit * raw[:, 0]
+            scale = self.return_unit * F.softplus(raw[:, 1]) + self.config.scale_floor
+        else:
+            base_prediction = raw[:, 0] * self.config.horizon
+            scale = F.softplus(raw[:, 1]) * math.sqrt(self.config.horizon) + self.config.scale_floor
         df = 2.1 + F.softplus(raw[:, 2])
         if not self.config.use_stochastic:
             scale = self.deterministic_scale.clamp_min(self.config.scale_floor).expand_as(base_prediction)

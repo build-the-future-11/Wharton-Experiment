@@ -1,0 +1,53 @@
+.........F                                                               [100%]
+=================================== FAILURES ===================================
+______ test_historical_inventory_cannot_omit_duplicate_or_escape[escape] _______
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-101/test_historical_inventory_cann3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10685d3d0>
+damage = 'escape'
+
+    @pytest.mark.parametrize("damage", ["empty", "count", "duplicate", "escape"])
+    def test_historical_inventory_cannot_omit_duplicate_or_escape(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch, damage: str
+    ) -> None:
+        references = _fixture(tmp_path, monkeypatch)
+        value = json.loads((tmp_path / "session/historical.json").read_text())
+        if damage == "empty":
+            value["references"] = []
+            value["checked_references"] = value["unique_files"] = 0
+        elif damage == "count":
+            value["unique_files"] = 2
+        elif damage == "duplicate":
+            value["references"] *= 2
+        else:
+            value["manifest_sha256"] = {"../manifest.json": "0" * 64}
+        references[0] = _object(tmp_path, "session/historical.json", value)
+        with pytest.raises(IntegrityError):
+>           preservation.audit_preservation(references, tmp_path)
+
+successors/frem_s10/tests/test_preservation_audit.py:145: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/preservation.py:250: in audit_preservation
+    _historical(value, root)
+successors/frem_s10/src/frem_s10/runtime/preservation.py:76: in _historical
+    manifest = read_object({"path": name, "sha256": identity}, root)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+successors/frem_s10/src/frem_s10/runtime/provenance.py:51: in read_object
+    path, identity = _reference(reference, _plain_directory(artifact_root))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = {'path': '../manifest.json', 'sha256': '0000000000000000000000000000000000000000000000000000000000000000'}
+root = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-101/test_historical_inventory_cann3')
+
+    def _reference(value: JSONValue, root: Path) -> tuple[Path, str]:
+        reference = _schema(value, {"path", "sha256"}, "artifact reference")
+        name = reference["path"]
+        if not isinstance(name, str) or not name or Path(name).is_absolute() or ".." in Path(name).parts:
+>           raise ContractError("relative artifact path without traversal required")
+E           frem_s10.errors.ContractError: relative artifact path without traversal required
+
+successors/frem_s10/src/frem_s10/runtime/declarations.py:56: ContractError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_preservation_audit.py::test_historical_inventory_cannot_omit_duplicate_or_escape[escape]
+1 failed, 9 passed in 2.10s

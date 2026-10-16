@@ -1,0 +1,86 @@
+{
+  "study_id": "FREM-S3-PUBLIC-FRESH-V1",
+  "scope": "New-to-this-campaign retrospective 12-US-survivor public sample; no global, point-in-time or profitability claim",
+  "source_start": "2000-01-01",
+  "source_end_exclusive": "2024-12-01",
+  "protected_start": "2025-01-01",
+  "symbols": {
+    "MSFT": "US",
+    "XOM": "US",
+    "PG": "US",
+    "WMT": "US",
+    "MCD": "US",
+    "CAT": "US",
+    "IBM": "US",
+    "GE": "US",
+    "HON": "US",
+    "PEP": "US",
+    "ABT": "US",
+    "MMM": "US"
+  },
+  "selection_policy": "Named before acquisition or outcomes. KO excluded due to prior engineering calibration, replaced by HON after metadata-only check. No outcome-based replacements.",
+  "models": [
+    "frem",
+    "no_jepa",
+    "ridge",
+    "xgboost"
+  ],
+  "seed": 11,
+  "context_months": 12,
+  "training": {
+    "epochs": 5,
+    "batch_size": 128,
+    "early_stopping_patience": 3,
+    "max_wall_seconds": 300
+  },
+  "model": {
+    "hidden_dim": 32,
+    "reservoir_dim": 32,
+    "spectral_bands": 4,
+    "memory_capacity": 128,
+    "memory_neighbors": 4,
+    "dropout": 0.1
+  },
+  "validation_months": 24,
+  "minimum_train_samples_per_stock": 36,
+  "minimum_validation_samples_per_stock": 6,
+  "folds": [
+    {
+      "name": "fresh_2023",
+      "return_start": "2023-01",
+      "return_end": "2023-12"
+    },
+    {
+      "name": "fresh_2024",
+      "return_start": "2024-01",
+      "return_end": "2024-10"
+    }
+  ],
+  "budget": {
+    "max_cells": 24,
+    "max_wall_seconds": 43200,
+    "minimum_free_speculative_mib": 512
+  },
+  "bootstrap": {
+    "block_months": 3,
+    "repetitions": 2000,
+    "seed": 1901,
+    "confidence": 0.95
+  },
+  "hypothetical_cost_per_side_bps": 10,
+  "target": "Next declared month-end to month-end log adjusted-close return in each listing's local quotation currency, using a full-month information gap before the decision",
+  "timing_policy": "For target month M, decide at the start of M-1 using inputs ending M-3; enter at the last source daily observation of M-1 and exit at the last of M. Month indices are research coordinates, not verified exchange execution/publication timestamps. No executed-fill claim.",
+  "public_source_limitations": [
+    "Yahoo histories are retrieved today and may contain revisions and retrospective adjustments.",
+    "Adjusted-close returns are provider-adjusted return proxies; raw action reconciliation and historical publication timestamps are not certified.",
+    "Only present-day named listings are selected; delisted and bankrupt companies are missing.",
+    "No FX conversion is performed. Local-currency stock ledgers cannot be combined into an investable global portfolio.",
+    "Single optimization seed and five epochs support a bounded exploratory comparison only.",
+    "Monthly crisis blocks are short and correlated; bootstrap intervals are exploratory and multiple crisis comparisons are unadjusted.",
+    "Protected 2025 onward price observations are excluded. This study does not consume or amend the canonical confirmatory freeze."
+  ],
+  "provider_documentation": [
+    "https://in.help.yahoo.com/kb/adjusted-close-sln28256.html",
+    "https://in.help.yahoo.com/kb/finance/download-historical-data-yahoo-finance-sln2311.html"
+  ]
+}

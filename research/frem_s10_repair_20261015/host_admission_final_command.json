@@ -1,0 +1,6 @@
+{
+  "exit_code": 3,
+  "stdout": "{\n  \"status\": \"BLOCKED\",\n  \"reasons\": [\n    \"FREE_PLUS_SPECULATIVE_BELOW_512_MIB\",\n    \"PAGEOUT_COUNTER_CHANGED\"\n  ],\n  \"floor_mib\": 512,\n  \"samples\": [\n    {\n      \"timestamp\": \"2026-10-15T18:07:58.127030+00:00\",\n      \"page_size_bytes\": 16384,\n      \"free_pages\": 3817,\n      \"speculative_pages\": 1454,\n      \"pageouts\": 720303,\n      \"available_mib\": 82.359375\n    },\n    {\n      \"timestamp\": \"2026-10-15T18:07:59.147135+00:00\",\n      \"page_size_bytes\": 16384,\n      \"free_pages\": 4674,\n      \"speculative_pages\": 1259,\n      \"pageouts\": 720303,\n      \"available_mib\": 92.703125\n    },\n    {\n      \"timestamp\": \"2026-10-15T18:08:00.162272+00:00\",\n      \"page_size_bytes\": 16384,\n      \"free_pages\": 4128,\n      \"speculative_pages\": 1249,\n      \"pageouts\": 720305,\n      \"available_mib\": 84.015625\n    }\n  ],\n  \"scientific_execution\": false,\n  \"scope\": \"host admission only; no worker supervision certified\"\n}\n",
+  "stderr": "",
+  "new_model_execution": false
+}

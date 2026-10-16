@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "scope": "LOCAL_CPU_GENERATED_ENGINEERING",
+  "steps": [
+    {
+      "name": "preflight_cpu",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "preflight",
+        "--device",
+        "cpu"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.23094562499318272,
+      "log": "research/frem_s10_kaggle_20261016/cli_preflight_cpu_attempt1.log",
+      "log_sha256": "9ae64ee52323ca8528fa4246f5b839b54cedb801a9cbd07dbce5fab1664b3d35"
+    },
+    {
+      "name": "preflight_cuda",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "preflight",
+        "--device",
+        "cuda"
+      ],
+      "expected_exit_code": 3,
+      "exit_code": 3,
+      "wall_seconds": 0.18373858398990706,
+      "log": "research/frem_s10_kaggle_20261016/cli_preflight_cuda_attempt1.log",
+      "log_sha256": "f8a281fe1c932031c43f64f6383b3bc5ab67713b6d56c9f61eb1832f6e57b4d1"
+    },
+    {
+      "name": "smoke_plan",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-plan",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/configs/generated_smoke.json"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.28784704199642874,
+      "log": "research/frem_s10_kaggle_20261016/cli_smoke_plan_attempt1.log",
+      "log_sha256": "aa46cbdb8ac9b6e9285bd8982fb12e07ade26d87ed2da5a05266aeb57cecc96a"
+    },
+    {
+      "name": "development_plan",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-plan",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/configs/generated_development.json"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.1850179589819163,
+      "log": "research/frem_s10_kaggle_20261016/cli_development_plan_attempt1.log",
+      "log_sha256": "d322ab9020d5a96a6f3f7e5f647547cc4ede07d2cf44f4444bb9b01bdd1e4e7a"
+    },
+    {
+      "name": "scientific_plan",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "plan",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/science.json"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.19043766701361164,
+      "log": "research/frem_s10_kaggle_20261016/cli_scientific_plan_attempt1.log",
+      "log_sha256": "8580875e1643a90f6b73149fee5f0d6141e71bce01a6c87ea59085ce23296aff"
+    },
+    {
+      "name": "interrupt",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/configs/generated_smoke.json",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1",
+        "--stop-after",
+        "4",
+        "--execute"
+      ],
+      "expected_exit_code": 130,
+      "exit_code": 130,
+      "wall_seconds": 1.1489233339962084,
+      "log": "research/frem_s10_kaggle_20261016/cli_interrupt_attempt1.log",
+      "log_sha256": "d5279d2de00a8e0249cbb68dc994051ed22aac6ae597dfb85c7a73973094478d"
+    },
+    {
+      "name": "partial_evaluate",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-evaluate",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1"
+      ],
+      "expected_exit_code": 4,
+      "exit_code": 4,
+      "wall_seconds": 0.6744709579797927,
+      "log": "research/frem_s10_kaggle_20261016/cli_partial_evaluate_attempt1.log",
+      "log_sha256": "07d6c7db9486fe5796be43e5568c6dc6bf2c323ff62f4936e41de897b1b67e66"
+    },
+    {
+      "name": "resume",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-resume",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/configs/generated_smoke.json",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1",
+        "--execute"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.7700820839963853,
+      "log": "research/frem_s10_kaggle_20261016/cli_resume_attempt1.log",
+      "log_sha256": "5482b35dac46c7c7f472f59f4a888b292977b465f3ec27f1dcbd4aee8fdb9260"
+    },
+    {
+      "name": "evaluate",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-evaluate",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 0.9830819580238312,
+      "log": "research/frem_s10_kaggle_20261016/cli_evaluate_attempt1.log",
+      "log_sha256": "511384218eefbbafa2729cf258ff12a49f1cfa4a202450d017b98f21b0da2e2e"
+    },
+    {
+      "name": "reuse",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-resume",
+        "--manifest",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/configs/generated_smoke.json",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1",
+        "--execute"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 1.1860937089950312,
+      "log": "research/frem_s10_kaggle_20261016/cli_reuse_attempt1.log",
+      "log_sha256": "9ea04001e00f63a2ba720596dabad3d5aa3addae22395a94598f8da91abb578e"
+    },
+    {
+      "name": "export",
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-u",
+        "-B",
+        "-m",
+        "frem_s10",
+        "smoke-export",
+        "--directory",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1",
+        "--archive",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/cli_smoke_attempt1.zip"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "wall_seconds": 2.3408533750043716,
+      "log": "research/frem_s10_kaggle_20261016/cli_export_attempt1.log",
+      "log_sha256": "dee4472d9fad9f6fb048d5b8d30fc8eb2f6d8502c89000c37f47a9684e211650"
+    }
+  ],
+  "child_peak_rss_mib": 43.921875,
+  "cloud_execution": false,
+  "gpu_execution": false,
+  "market_execution": false
+}

@@ -1,0 +1,185 @@
+{
+  "created_at": "2026-10-11T14:37:15.178935+00:00",
+  "config": {
+    "study_id": "PUBLIC-EQUITY-CRISES-V1",
+    "scope": "Exploratory retrospective sample of 24 currently listed equities across 12 listing markets; not all-world or survivorship-free evidence",
+    "source_start": "1998-01-01",
+    "source_end_exclusive": "2025-01-01",
+    "protected_start": "2025-01-01",
+    "symbols": {
+      "AAPL": "US",
+      "JPM": "US",
+      "HSBA.L": "UK",
+      "BP.L": "UK",
+      "SAP.DE": "Germany",
+      "DTE.DE": "Germany",
+      "SAN.PA": "France",
+      "BNP.PA": "France",
+      "NESN.SW": "Switzerland",
+      "NOVN.SW": "Switzerland",
+      "7203.T": "Japan",
+      "6758.T": "Japan",
+      "0005.HK": "Hong Kong",
+      "0700.HK": "Hong Kong",
+      "RELIANCE.NS": "India",
+      "INFY.NS": "India",
+      "BHP.AX": "Australia",
+      "CBA.AX": "Australia",
+      "RY.TO": "Canada",
+      "ENB.TO": "Canada",
+      "2330.TW": "Taiwan",
+      "2317.TW": "Taiwan",
+      "PETR4.SA": "Brazil",
+      "VALE3.SA": "Brazil"
+    },
+    "selection_policy": "Named before outcomes were downloaded; deliberately geographically dispersed, present-day surviving listings. No historical membership, random sampling or complete world coverage is claimed. Download failures and fold exclusions remain visible; no replacement selection based on returns.",
+    "models": [
+      "frem",
+      "no_memory",
+      "ridge",
+      "xgboost"
+    ],
+    "seed": 11,
+    "context_months": 12,
+    "training": {
+      "epochs": 5,
+      "batch_size": 128,
+      "early_stopping_patience": 3,
+      "max_wall_seconds": 300
+    },
+    "model": {
+      "hidden_dim": 32,
+      "reservoir_dim": 32,
+      "spectral_bands": 4,
+      "memory_capacity": 128,
+      "memory_neighbors": 4,
+      "dropout": 0.1
+    },
+    "validation_months": 12,
+    "minimum_train_samples_per_stock": 36,
+    "minimum_validation_samples_per_stock": 6,
+    "folds": [
+      {
+        "name": "great_recession",
+        "return_start": "2007-12",
+        "return_end": "2009-06"
+      },
+      {
+        "name": "recovery",
+        "return_start": "2009-07",
+        "return_end": "2010-12"
+      },
+      {
+        "name": "year_2011",
+        "return_start": "2011-01",
+        "return_end": "2011-12"
+      },
+      {
+        "name": "years_2015_2016",
+        "return_start": "2015-01",
+        "return_end": "2016-12"
+      },
+      {
+        "name": "year_2020",
+        "return_start": "2020-01",
+        "return_end": "2020-12"
+      },
+      {
+        "name": "year_2022",
+        "return_start": "2022-01",
+        "return_end": "2022-12"
+      }
+    ],
+    "budget": {
+      "max_cells": 24,
+      "max_wall_seconds": 43200,
+      "minimum_free_speculative_mib": 512
+    },
+    "bootstrap": {
+      "block_months": 3,
+      "repetitions": 2000,
+      "seed": 1901,
+      "confidence": 0.95
+    },
+    "hypothetical_cost_per_side_bps": 10,
+    "target": "Next declared month-end to month-end log adjusted-close return in each listing's local quotation currency, using a full-month information gap before the decision",
+    "timing_policy": "For target month M, decide at the start of M-1 using inputs ending M-3; enter at the last source daily observation of M-1 and exit at the last of M. Month indices are research coordinates, not verified exchange execution/publication timestamps. No executed-fill claim.",
+    "public_source_limitations": [
+      "Yahoo histories are retrieved today and may contain revisions and retrospective adjustments.",
+      "Adjusted-close returns are provider-adjusted return proxies; raw action reconciliation and historical publication timestamps are not certified.",
+      "Only present-day named listings are selected; delisted and bankrupt companies are missing.",
+      "No FX conversion is performed. Local-currency stock ledgers cannot be combined into an investable global portfolio.",
+      "Single optimization seed and five epochs support a bounded exploratory comparison only.",
+      "Monthly crisis blocks are short and correlated; bootstrap intervals are exploratory and multiple crisis comparisons are unadjusted.",
+      "Protected 2025 onward price observations are excluded. This study does not consume or amend the canonical confirmatory freeze."
+    ],
+    "provider_documentation": [
+      "https://in.help.yahoo.com/kb/adjusted-close-sln28256.html",
+      "https://in.help.yahoo.com/kb/finance/download-historical-data-yahoo-finance-sln2311.html"
+    ]
+  },
+  "amendment": {
+    "decision_id": "PUBLIC-SIX-WINDOW-SLOW-20261011",
+    "declared_at": "2026-10-11T14:35:57.434961+00:00",
+    "observation": "User explicitly requests remaining public experiments with FREM-S2 sequential slow mode and same memory limits. Original public matrix has zero completed cells.",
+    "decision": "Run all six originally declared folds and four methods with seed 11; one nice-10 worker at a time, one compute thread, batch size 32, sampled RSS ceiling 768 MiB. Retain five epochs, 300-second fitting ceiling and 43200-second campaign ceiling; worker wall ceiling 360 seconds. Preserve failed memory gate as a recorded deviation.",
+    "data_amendment": "Extend the recorded S2 entire-month all-zero-quote quarantine to this separate exploratory public campaign, before any fits; preserve strict original launcher behavior, raw quotes and failures. No filled price, holiday assertion or dismissal of terminal loss.",
+    "hypothesized_cause": "Monolithic training processes and large minibatches raise peak resource demand; known all-zero quote prevents the strict public adapter from building windows.",
+    "predicted_effect": "Bound per-process resources and avoid constructing returns across the unknown month without changing the original declared models, folds, seeds or outcomes. Batch size changes optimization and is explicitly not claimed equivalent.",
+    "discriminating_experiment": "Complete fixed 24-cell exploratory matrix; retain every cell and failure; no outcome-driven retry or selection. Integrity tests precede fits.",
+    "status": "DECLARED_BEFORE_FITS",
+    "protected_outcomes_accessed": false
+  },
+  "normal_admission": {
+    "passed": false,
+    "error": "RESOURCE_ADMISSION_FAILED [{\"available_mib\": 218.21875, \"pageouts\": 885380}, {\"available_mib\": 220.84375, \"pageouts\": 885390}, {\"available_mib\": 157.15625, \"pageouts\": 885447}]"
+  },
+  "source_identity": {
+    "scripts/run_public_slow.py": "b2e9a38c617e18270f9bad16a6ce89988a6bbc6a0957dff13339fe9e4e092dc9",
+    "configs/public_equity_crises.json": "cb1cbf311cb24e7601e7a0f7bba3184fe9075797239c47442e398d23e35f2b5e",
+    "research/decisions/public_slow_execution_20261011.json": "c9d64dce3caa7e0a197260705f8ba46677f61448bf4f830dfb110121b9050eee",
+    "scripts/run_frem_rebuild.py": "8e058b663ab097da4dbe189fc0723d73486c3ff3476365460c8e6f3c9434e400",
+    "scripts/public_equity_backtests.py": "e2dc1628a813e091935d696063ed7110cf688846abaf40e1742bfd79a7cf5cb0",
+    "src/frem/__init__.py": "a80cb5a07cc95027621d3443aaaf9f38804127205509af1b3bf6262a6dde73a8",
+    "src/frem/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "src/frem/artifacts.py": "b30e9f3a70a473c539059f7c98712e859ab20887a3a7b6c4c697cf8c21feb487",
+    "src/frem/baselines.py": "3ad850db0b390e53238a47758e3be62a736f5bf59e0c56d64e02d3ebabc1e46e",
+    "src/frem/cli.py": "7e2517344f6a87897bb6ed959db200ae81b3bed3cd446add029c8bb6e17c5c6e",
+    "src/frem/config.py": "975ff050d227b61acabbc66c383c6bbc5ad0f2969ba7a89834c2255110f604fc",
+    "src/frem/controller.py": "df4acffc1908f2b1bddad146d1fb7412ea62dcb19daf03e2da2c6cb6d45c9773",
+    "src/frem/data.py": "888e772097d468b528fb53ee2ced7d01c050c1803f17decf7af3e90645b0654d",
+    "src/frem/data_sources.py": "67ad1178f5356eb64c9912a919476989b2688e4b62ba0396ff90f67fb5349918",
+    "src/frem/decision.py": "cc27615b637a6d2d9f2cea70ca326f00cdbf83a8b195f2d851c3288d6140649d",
+    "src/frem/evaluation.py": "782b1ae1a7818b8448e83312606aa6f67ec8326f30d3ded668b1cd0186946285",
+    "src/frem/experiments.py": "70e16fd12346836863364667a60ca2990211ac33c6472bfd4a40cb3e51cabe54",
+    "src/frem/frozen_residual.py": "a75d9dbf1ceb44f963dd0866fbd192e4a71bc5680781082248f008981b986cf2",
+    "src/frem/governance.py": "83f7cf6ea88b02811cdb7e7d02745410831e75959f0524940ed6a3e50d7c3807",
+    "src/frem/mandate.py": "3a00893af4635bfbaf867a79893cda7ee21e2ddd5947c89eedab675b253857e7",
+    "src/frem/memory.py": "c55fb99f9aa9d2e2b547a668147fc550e689c94f5ff1411a60e74aa01d7db5a7",
+    "src/frem/metrics.py": "30faca0c7ef46b5f408ef11235f1ad57f9bf39f6f03215974c77e533abb98b15",
+    "src/frem/model.py": "3e28eb3c731e116f42132d321b48cd01074fb6b7ec9c651448f059e7666016b5",
+    "src/frem/portfolio.py": "941becf8b39bfa0785fb03bb24c0096df30738430546a36a3682efb0ca2e8ffc",
+    "src/frem/reporting.py": "c49f615a4c49f73d97e0a7ef9dd49697a284db120a1d57da2d02a455c00fdb5a",
+    "src/frem/risk.py": "b00359adb6944245ae1208806b6efd1b5e269e292e39335a5f6a0459ddfa67b2",
+    "src/frem/robustness.py": "e6710de1c9b1a6fcd306dd8e23c014120b2686525e0cdcc9dda6f5a820740098",
+    "src/frem/splits.py": "cc1fefbe5a54c9673df1c31ccb52cea8cabb8aab619d4e651fd417baab34bc97",
+    "src/frem/statistics.py": "61b1f3e2dd6719e00be12fe1acee6101cf7ae2e495b146b62818b9e21239ccd6",
+    "src/frem/training.py": "0fda55f5189b791ecfe205341350c106374a76bba79846c9f6bdf568091a2a65",
+    "tests/test_config_robustness_contracts.py": "3e040fe3ded68461438bf79e6a6c63741e87f131c463d371b21a004b64dfc472",
+    "tests/test_data_contract.py": "068bd69553635d647e412cc7b2752d4006c254b32653bba52eef80f879a75265",
+    "tests/test_decision.py": "54349fc71fa7a1c7841f5bf0cb4a5d3d3b53ebd9b3e3b7c023010f6969fec853",
+    "tests/test_evaluation_contract.py": "9c984f93c45972367e8bfd9d13b9ccaacd1076a3d0042e17af1bc53ec6558205",
+    "tests/test_evidence_audit.py": "13c0bf81ff762bf8c6886c853a02fba776c8013817f1dca60b5905f7db63ecce",
+    "tests/test_frem_loss_diagnosis.py": "4a6cb90e468ebddd74e838c0c0cdea4a511fdc996c6b90c59ab54bcffa3f94ae",
+    "tests/test_frem_rebuild.py": "c96084cfb3b41bcbfb7a5628f3c07293fb0aa455eb598987585ab71be7e16133",
+    "tests/test_governance.py": "a867ed6660530859d1da9b8d4ed255fd38900d16674e44b689352af3211065ba",
+    "tests/test_memory_contracts.py": "e3441bd6fcee32a675cdf7dec3793571922f3eea7c92ad549f4dcbc7a897ca18",
+    "tests/test_model_contracts.py": "66d583709ca76b527140131301c6b94d02c49f28c2822d424c0c78a1b8ee0322",
+    "tests/test_portfolio.py": "a2cab34dd951fb5d6daa9778e82de868ca452f611d6ad40190e3e37ab0fdd1e9",
+    "tests/test_public_equity_backtests.py": "5e1128b4c1ef938c8797553bb55cdf9d74db5621a02120e4e272fc13cf0f303b",
+    "tests/test_public_regional_factors.py": "5b946a3b0a29cf24fae4cb5221955a733db2fbb6199b00e593913ed84139ef30",
+    "tests/test_reporting_contract.py": "457d5b943fca43a99e63619a0db5dcb5301b774f76f9c75700005fb928c85e46"
+  },
+  "manifest_sha256": "e3458a7a2e9b8396ae1c63309a8f2f9e3f63923288e4461284e4b74b2235b817",
+  "protected_outcomes_accessed": false
+}

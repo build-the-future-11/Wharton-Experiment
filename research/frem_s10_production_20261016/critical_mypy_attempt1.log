@@ -1,0 +1,14 @@
+successors/frem_s10/tests/test_catalog_critical_audit.py:89: error: Module "frem_s10.math.simplex" does not explicitly export attribute "np"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:102: error: Module "frem_s10.math.simplex" does not explicitly export attribute "np"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:103: error: Module "frem_s10.math.simplex" does not explicitly export attribute "np"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:128: error: Module "frem_s10.math.fees" does not explicitly export attribute "np"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:184: error: Incompatible types in assignment (expression has type "LedgerState", variable has type "bool")  [assignment]
+successors/frem_s10/tests/test_catalog_critical_audit.py:185: error: "bool" has no attribute "dividends"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:186: error: "bool" has no attribute "nav"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:186: error: "bool" has no attribute "fees"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:187: error: "bool" has no attribute "nav"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:187: error: "bool" has no attribute "fees"  [attr-defined]
+successors/frem_s10/tests/test_catalog_critical_audit.py:324: error: Argument 1 to "scientific_digest" has incompatible type "dict[str, int]"; expected "JSONValue"  [arg-type]
+successors/frem_s10/tests/test_catalog_critical_audit.py:324: note: "dict" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance
+successors/frem_s10/tests/test_catalog_critical_audit.py:324: note: Consider using "Mapping" instead, which is covariant in the value type
+Found 11 errors in 1 file (checked 3 source files)

@@ -1,0 +1,9 @@
+[
+  {
+    "stage": "report_log_readback",
+    "error_type": "JSONDecodeError",
+    "cause": "Auxiliary inspection assumed final log line was a whole JSON document; CLI emits indented JSON",
+    "resolution": "Read whole JSON log; no implementation change or experiment rerun",
+    "scientific_effect": false
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "observation": "S7 fresh 2019 test complete; all seeds select zero adaptation, matching equal expert averaging. S6 memory performs better; cost-aware S7 stays cash at 10bps and misses benchmark gains.",
+  "hypothesized_cause": "Mixture complement attribution explains S6 historical deficit; chronological gate and economic threshold did not transfer beneficially to 2019. Unique general causal explanation unproved.",
+  "change": "No post-result model changes; close protocol with negative/no-improvement outcome.",
+  "predicted_effect": "Preserve all arms/seeds/costs and avoid superiority claims.",
+  "discriminating_experiment": "Frozen three-seed fresh development matrix and forecast-by-policy comparison.",
+  "result": {
+    "status": "COMPLETE_PRIMARY_NO_IMPROVEMENT",
+    "report": "research/frem_s7_20261014/REPORT.md",
+    "output": "outputs/frem_s7_2019_20261014_attempt1",
+    "base_fits": 3,
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "evaluation_dates": 51,
+    "tests_passed": 125,
+    "gated_strengths": [
+      0,
+      0,
+      0
+    ],
+    "primary_gain_vs_equal": 0,
+    "gain_vs_s6_memory": -0.013341146345310105,
+    "protected_access": false,
+    "audit": "research/frem_s7_20261014/AUDIT.json",
+    "protocol": "research/frem_s7_20261014/freeze2.json",
+    "data": "data/s7_etf_2019_20261014/windows.json"
+  }
+}

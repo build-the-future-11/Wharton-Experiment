@@ -1,0 +1,1 @@
+{"collected":["tests/test_a.py::test_a[0]","tests/test_a.py::test_a[0]"],"exit_code":0,"outcomes":{"tests/test_a.py::test_a[0]":"PASSED","tests/test_a.py::test_a[1]":"PASSED"},"schema":"s10-pytest-observations-v1"}

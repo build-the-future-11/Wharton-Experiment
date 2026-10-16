@@ -1,0 +1,19 @@
+{
+  "status": "STATIC_TRANSPORT_PASS",
+  "checks": [
+    "transport_ast_compile",
+    "embedded_notebook_bytes_exact",
+    "embedded_notebook_sha256_exact",
+    "all8codecells_ast_compile",
+    "12sectionheadings",
+    "defaultsettings_probe_cpu_no_receipt_no_restore",
+    "embedded_helper_matches_unchanged_runner"
+  ],
+  "transport_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+  "notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+  "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+  "local_execution": "AST_compile_base64_JSON_only",
+  "transport_executed": false,
+  "numerical_imports": false,
+  "cloud_execution": false
+}

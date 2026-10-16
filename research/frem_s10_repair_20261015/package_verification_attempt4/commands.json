@@ -1,0 +1,79 @@
+[
+  {
+    "name": "create",
+    "command": [
+      "uv",
+      "venv",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4",
+    "exit_code": 0,
+    "wall_seconds": 0.11103129199182149,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt4/create.log",
+    "log_sha256": "db3c134c99978fe4c00661670d041fc407b84e983a44a90cfa58d45348b058aa"
+  },
+  {
+    "name": "install",
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env/bin/python",
+      "--offline",
+      "--no-index",
+      "--require-hashes",
+      "-r",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/requirements.txt"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4",
+    "exit_code": 0,
+    "wall_seconds": 0.41887695899640676,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt4/install.log",
+    "log_sha256": "9a2b6b59cf62c63cbabf1e94b377906c8c2ae4f5fc4b8ca03b2aa25817895b98"
+  },
+  {
+    "name": "smoke",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env/bin/python",
+      "-I",
+      "-c",
+      "import sys,json,numpy,importlib.resources; import frem_s10; from frem_s10.cli import plan; from frem_s10.math.scores import energy_score; from pathlib import Path; p=Path(frem_s10.__file__); assert 'site-packages' in str(p); assert 'frem' not in sys.modules; manifest=importlib.resources.files('frem_s10').joinpath('science.json'); m=json.loads(manifest.read_text()); assert m['design_id']=='FREM-S10-DESIGN-3-CL15'; print(json.dumps({'module':str(p),'numpy':numpy.__version__,'design_id':m['design_id'],'status':'PASS'}))"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4",
+    "exit_code": 0,
+    "wall_seconds": 1.3337016250006855,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt4/smoke.log",
+    "log_sha256": "4cfe91b625f87ef5fec52a5fc56dca7e1c59e779c5f8a6c10f20d1ea1e2221d1"
+  },
+  {
+    "name": "help",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env/bin/s10-research",
+      "--help"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4",
+    "exit_code": 0,
+    "wall_seconds": 0.5491060829954222,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt4/help.log",
+    "log_sha256": "0a9111278c558a4557cb7a16719ef93e28b7c2a6bfd46a9b774eeb4d13b6598d"
+  },
+  {
+    "name": "plan",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env/bin/s10-research",
+      "plan",
+      "--manifest",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/clean_env/lib/python3.12/site-packages/frem_s10/science.json",
+      "--output",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4/plan.json"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt4",
+    "exit_code": 0,
+    "wall_seconds": 0.08985291600401979,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt4/plan.log",
+    "log_sha256": "a4f85065270739512b2d8cf64c6e44e304dba403c95ca7b434e503b81a29ba58"
+  }
+]

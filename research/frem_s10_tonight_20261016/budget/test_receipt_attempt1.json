@@ -1,0 +1,34 @@
+{
+  "scope": "isolated stdlib fixtures only; no compute or network calls; no actual GPU ledger created",
+  "results": [
+    {
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_account_budget"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.20314478874206543,
+      "stdout": "",
+      "stderr": "test_account_floor_includes_unfinalized_estimates (test_account_budget.BudgetTest.test_account_floor_includes_unfinalized_estimates) ... ok\ntest_append_only_integrity_restart_and_clock_regression (test_account_budget.BudgetTest.test_append_only_integrity_restart_and_clock_regression) ... ok\ntest_caps_and_unknown_or_zero_quota (test_account_budget.BudgetTest.test_caps_and_unknown_or_zero_quota) ... ok\ntest_concurrent_reservations_have_one_winner (test_account_budget.BudgetTest.test_concurrent_reservations_have_one_winner) ... ok\ntest_deadline_rechecked_before_launch_and_timeout_required (test_account_budget.BudgetTest.test_deadline_rechecked_before_launch_and_timeout_required) ... ok\ntest_disabled_default_and_phone_or_account_not_ready (test_account_budget.BudgetTest.test_disabled_default_and_phone_or_account_not_ready) ... ok\ntest_expanded_requires_approval_and_ten_percent_reserve (test_account_budget.BudgetTest.test_expanded_requires_approval_and_ten_percent_reserve) ... ok\ntest_explicit_phase_conversion_bounds (test_account_budget.BudgetTest.test_explicit_phase_conversion_bounds) ... ok\ntest_external_observed_usage_counts_against_campaign (test_account_budget.BudgetTest.test_external_observed_usage_counts_against_campaign) ... ok\ntest_failed_run_stays_charged_and_local_exit_does_not_stop_platform (test_account_budget.BudgetTest.test_failed_run_stays_charged_and_local_exit_does_not_stop_platform) ... ok\ntest_launch_once_and_needs_new_fresh_observations (test_account_budget.BudgetTest.test_launch_once_and_needs_new_fresh_observations) ... ok\ntest_nonfinite_negative_and_boolean_counters_fail (test_account_budget.BudgetTest.test_nonfinite_negative_and_boolean_counters_fail) ... ok\ntest_overrun_blocks_later_work_even_if_quota_billing_lags (test_account_budget.BudgetTest.test_overrun_blocks_later_work_even_if_quota_billing_lags) ... ok\ntest_preferred_budget_is_five_point_four_for_simulated_thirty (test_account_budget.BudgetTest.test_preferred_budget_is_five_point_four_for_simulated_thirty) ... ok\ntest_stale_future_missing_or_wrong_scope_observations_block (test_account_budget.BudgetTest.test_stale_future_missing_or_wrong_scope_observations_block) ... ok\ntest_tamper_and_symlink_rejected (test_account_budget.BudgetTest.test_tamper_and_symlink_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.042s\n\nOK\n"
+    }
+  ],
+  "files": {
+    "account_budget.py": {
+      "sha256": "900a9e83830797b408ed6f43795d270999a860acd036a45a2299d30d478b59b8",
+      "bytes": 21298,
+      "ast_parse": "PASS"
+    },
+    "test_account_budget.py": {
+      "sha256": "8b0b671b4353c571b906a87db6cc3d4b8b46dc7ef284839a79a9f417121aec47",
+      "bytes": 12476,
+      "ast_parse": "PASS"
+    }
+  },
+  "allocation_enabled_default": false,
+  "linux_execution": "NOT_EXECUTED",
+  "platform_allocation": "NOT_EXECUTED"
+}

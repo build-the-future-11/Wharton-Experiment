@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "format",
+      "--config",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/cli.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_checkpoint.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_data.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_export.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_audit.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 1.6789070410013665,
+    "log": "research/frem_s10_kaggle_20261016/smoke_static_attempt2_format.log"
+  },
+  {
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "check",
+      "--config",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/cli.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_checkpoint.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_data.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_export.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_audit.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.3995806250022724,
+    "log": "research/frem_s10_kaggle_20261016/smoke_static_attempt2_lint.log"
+  },
+  {
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+      "--config-file",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/cli.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_checkpoint.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_data.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_export.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke.py",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_audit.py"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 33.36082383300527,
+    "log": "research/frem_s10_kaggle_20261016/smoke_static_attempt2_types.log"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "effect": "no_memory NLL minus FREM NLL; positive favors FREM",
+  "estimate": 0.004212429099926254,
+  "ci": [
+    -0.005665158861426044,
+    0.013810128067701663
+  ],
+  "months": 12,
+  "paired_rows": 264,
+  "settings": {
+    "block_months": 3,
+    "repetitions": 2000,
+    "seed": 1901,
+    "confidence": 0.95
+  },
+  "interpretation": "Exploratory interval; single seed, survivor sample, unadjusted multiple windows"
+}

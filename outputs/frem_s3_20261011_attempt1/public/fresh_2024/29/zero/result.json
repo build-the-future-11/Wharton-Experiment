@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "name": "zero",
+  "fold": "fresh_2024",
+  "seed": 29,
+  "base_version": "efd1f071623a7e74c6e86d635b73527172fa67f369be91ab0ad0d7ed5f9c1e0f",
+  "results": {
+    "off": {
+      "nll": -1.3615293414997098,
+      "sha256": "5f230d0e4f27233278e1c581c93e69f5c10b2b335ce60aa5f18ec30da4623a94",
+      "rows": 120,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.0417520688212323
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.3889714138340008,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

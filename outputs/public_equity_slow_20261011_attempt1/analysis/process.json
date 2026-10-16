@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "scripts.run_public_slow",
+    "--output",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/public_equity_slow_20261011_attempt1",
+    "--summarize"
+  ],
+  "returncode": 0,
+  "termination": null,
+  "elapsed_seconds": 6.33410783400177,
+  "sampled_peak_rss_mib": 146.109375,
+  "rss_ceiling_mib": 768,
+  "wall_ceiling_seconds": 180,
+  "threads": 1,
+  "nice": 10,
+  "memory_snapshot_after": {
+    "available_mib": 429.625,
+    "pageouts": 893334
+  }
+}

@@ -1,0 +1,4 @@
+{"event":{"state":"PREFLIGHT","time":"2026-10-15T18:13:31.137498+00:00"},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}
+{"event":{"marker_sha256":"e9683de047a7f788ce01ddc0771d0b92d00cc7dcee779975619360101f0941ab","state":"CONSUMED"},"previous":"b444a5535f456555289deaae05611d322b886e850a2ab22c4123aed2ebeb6dcc","sequence":1}
+{"event":{"state":"RUNNING","worker_pid":56374},"previous":"f60b63700a0f74a7774b455ac9944f013b0860a2475306f172747a5bf66b5c1c","sequence":2}
+{"event":{"state":"BUDGET_EXCEEDED","worker_exit_code":-15},"previous":"b4cb98464d7c6f96beef980eae9ae08567990afc5f80422774f88784a9a16817","sequence":3}

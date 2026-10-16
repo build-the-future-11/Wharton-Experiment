@@ -1,0 +1,199 @@
+UP017 [*] Use `datetime.UTC` alias
+  --> successors/frem_s8/prepare.py:59:59
+   |
+57 |                          "dividends": dividends, "split_events": splits})
+58 |             receipts.append({"symbol": asset, "url": url, "http_date": server_date,
+59 |                              "retrieved_at": datetime.now(timezone.utc).isoformat(),
+   |                                                           ^^^^^^^^^^^^
+60 |                              "response_sha256": hashlib.sha256(raw).hexdigest(),
+61 |                              "retained_sha256": sha(path), "rows": len(times)})
+   |
+help: Convert to `datetime.UTC` alias
+   |
+7  | import urllib.request
+   - from datetime import datetime, timezone
+8  + from datetime import datetime, timezone, UTC
+9  | from pathlib import Path
+--------------------------------------------------------------------------------
+58 |             receipts.append({"symbol": asset, "url": url, "http_date": server_date,
+   -                              "retrieved_at": datetime.now(timezone.utc).isoformat(),
+59 +                              "retrieved_at": datetime.now(UTC).isoformat(),
+60 |                              "response_sha256": hashlib.sha256(raw).hexdigest(),
+   |
+
+RUF007 Prefer `itertools.pairwise()` over `zip()` when iterating over successive pairs
+   --> successors/frem_s8/prepare.py:110:23
+    |
+108 |     parts['train'].update({k: [] for k in ('future_times', 'future_available', 'future_windows')})
+109 |     exclusions = []
+110 |     for start, end in zip(anchors, anchors[1:]):
+    |                       ^^^
+111 |         origin, maturity = market_open(start), market_open(end)
+112 |         part = 'evaluation' if fresh else 'train' if start < '2017-01-01' else 'calibration'
+    |
+help: Replace `zip()` with `itertools.pairwise()`
+    |
+13  | from successors.frem_s7.prepare import date_of, interval_return
+14  + import itertools
+15  |
+--------------------------------------------------------------------------------
+110 |     exclusions = []
+    -     for start, end in zip(anchors, anchors[1:]):
+111 +     for start, end in itertools.pairwise(anchors):
+112 |         origin, maturity = market_open(start), market_open(end)
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s8/prepare.py:126:22
+    |
+124 |           for asset, past, future in selected:
+125 |               ret = interval_return(start, end, prices[asset], dividends[asset])
+126 |               values = dict(assets=asset, origin_times=origin, maturity_times=maturity,
+    |  ______________________^
+127 | |                           available_times=maturity + 4 * 3600, window_times=[x[0] for x in past],
+128 | |                           window_available=[x[0] for x in past], windows=[[x[1]] for x in past],
+129 | |                           y=math.log1p(ret), simple_returns=ret)
+    | |________________________________________________________________^
+130 |               if part == 'train':
+131 |                   values.update(future_times=[x[0] for x in future], future_available=[x[0] for x in future],
+    |
+help: Rewrite as a literal
+    |
+125 |             ret = interval_return(start, end, prices[asset], dividends[asset])
+    -             values = dict(assets=asset, origin_times=origin, maturity_times=maturity,
+    -                           available_times=maturity + 4 * 3600, window_times=[x[0] for x in past],
+    -                           window_available=[x[0] for x in past], windows=[[x[1]] for x in past],
+    -                           y=math.log1p(ret), simple_returns=ret)
+126 +             values = {"assets": asset, "origin_times": origin, "maturity_times": maturity,
+127 +                           "available_times": maturity + 4 * 3600, "window_times": [x[0] for x in past],
+128 +                           "window_available": [x[0] for x in past], "windows": [[x[1]] for x in past],
+129 +                           "y": math.log1p(ret), "simple_returns": ret}
+130 |             if part == 'train':
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+B023 Function definition does not bind loop variable `base`
+   --> successors/frem_s8/run.py:101:40
+    |
+100 |             def dist(w):
+101 |                 return MixtureForecast(base.mean, base.scale, base.df,
+    |                                        ^^^^
+102 |                                        np.broadcast_to(w, base.mean.shape).copy(), base.names)
+    |
+
+B023 Function definition does not bind loop variable `base`
+   --> successors/frem_s8/run.py:101:51
+    |
+100 |             def dist(w):
+101 |                 return MixtureForecast(base.mean, base.scale, base.df,
+    |                                                   ^^^^
+102 |                                        np.broadcast_to(w, base.mean.shape).copy(), base.names)
+    |
+
+B023 Function definition does not bind loop variable `base`
+   --> successors/frem_s8/run.py:101:63
+    |
+100 |             def dist(w):
+101 |                 return MixtureForecast(base.mean, base.scale, base.df,
+    |                                                               ^^^^
+102 |                                        np.broadcast_to(w, base.mean.shape).copy(), base.names)
+    |
+
+B023 Function definition does not bind loop variable `base`
+   --> successors/frem_s8/run.py:102:59
+    |
+100 |             def dist(w):
+101 |                 return MixtureForecast(base.mean, base.scale, base.df,
+102 |                                        np.broadcast_to(w, base.mean.shape).copy(), base.names)
+    |                                                           ^^^^
+103 |
+104 |             uniform = np.ones(len(local)) / len(local)
+    |
+
+B023 Function definition does not bind loop variable `base`
+   --> successors/frem_s8/run.py:102:84
+    |
+100 |             def dist(w):
+101 |                 return MixtureForecast(base.mean, base.scale, base.df,
+102 |                                        np.broadcast_to(w, base.mean.shape).copy(), base.names)
+    |                                                                                    ^^^^
+103 |
+104 |             uniform = np.ones(len(local)) / len(local)
+    |
+
+PLC0206 Extracting value from dictionary without calling `.items()`
+   --> successors/frem_s8/run.py:117:21
+    |
+115 |             loss = {name: float(f.nll(part['y'][idx]).mean()) for name, f in forecasts.items()}
+116 |             if stage == 'selection':
+117 |                 for a in gains:
+    |                     ^^^^^^^^^^
+118 |                     gains[a].append(float(loss['equal'] - dist((1-a)*uniform + a*local).nll(part['y'][idx]).mean()))
+    |                     --------
+119 |             available = float(part['available_times'][idx].max())
+120 |             trace.append({'stage': stage, 'date': float(date), 'available': available,
+    |
+help: Use `for a, value in gains.items()` instead
+
+UP017 [*] Use `datetime.UTC` alias
+   --> successors/frem_s8/run.py:156:64
+    |
+154 |                           for seed, family in zip(SEEDS, families, strict=True)},
+155 |              'years': {str(y): float(np.mean([r['date_nll'] for r in rows
+156 |                           if datetime.fromtimestamp(r['date'], timezone.utc).year == y])) for y in (2020, 2021, 2022)}}
+    |                                                                ^^^^^^^^^^^^
+157 |         periods = [period(r) for r in rows]
+158 |         economics[name] = {str(c): {'signal': backtest(periods, cost_bps=c),
+    |
+help: Convert to `datetime.UTC` alias
+    |
+7   | from dataclasses import asdict
+    - from datetime import datetime, timezone
+8   + from datetime import datetime, timezone, UTC
+9   | from pathlib import Path
+--------------------------------------------------------------------------------
+155 |              'years': {str(y): float(np.mean([r['date_nll'] for r in rows
+    -                           if datetime.fromtimestamp(r['date'], timezone.utc).year == y])) for y in (2020, 2021, 2022)}}
+156 +                           if datetime.fromtimestamp(r['date'], UTC).year == y])) for y in (2020, 2021, 2022)}}
+157 |         periods = [period(r) for r in rows]
+    |
+
+UP017 [*] Use `datetime.UTC` alias
+   --> successors/frem_s8/run.py:188:92
+    |
+186 |         write(args.output / 'data_identity.json', {'files': identities, 'freeze_sha256': sha(args.freeze)})
+187 |         # Permanent study receipt prevents an unchanged completed evaluation repeat.
+188 |         write(args.freeze.parent / 'evaluation_consumed.json', {'started_at': datetime.now(timezone.utc).isoformat(),
+    |                                                                                            ^^^^^^^^^^^^
+189 |               'output': str(args.output), 'freeze_sha256': sha(args.freeze), 'data_files': identities})
+190 |         data = validate_scope(json.loads((args.root / 'windows.json').read_text()))
+    |
+help: Convert to `datetime.UTC` alias
+    |
+7   | from dataclasses import asdict
+    - from datetime import datetime, timezone
+8   + from datetime import datetime, timezone, UTC
+9   | from pathlib import Path
+--------------------------------------------------------------------------------
+187 |         # Permanent study receipt prevents an unchanged completed evaluation repeat.
+    -         write(args.freeze.parent / 'evaluation_consumed.json', {'started_at': datetime.now(timezone.utc).isoformat(),
+188 +         write(args.freeze.parent / 'evaluation_consumed.json', {'started_at': datetime.now(UTC).isoformat(),
+189 |               'output': str(args.output), 'freeze_sha256': sha(args.freeze), 'data_files': identities})
+    |
+
+F401 [*] `copy` imported but unused
+ --> tests/s8/test_successor.py:1:8
+  |
+1 | import copy
+  |        ^^^^
+2 | from pathlib import Path
+  |
+help: Remove unused import: `copy`
+  |
+  - import copy
+1 | from pathlib import Path
+  |
+
+Found 12 errors.
+[*] 4 fixable with `--fix` (2 unsafe fixes available with `--fix --unsafe-fixes`).

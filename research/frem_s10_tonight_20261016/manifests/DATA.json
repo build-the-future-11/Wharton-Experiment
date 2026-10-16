@@ -1,0 +1,14 @@
+{
+  "status": "NO_NEW_DATA_GENERATED",
+  "proposed_engineering_dataset": "s10-generated-smoke-data-v1",
+  "seed": 11,
+  "origins": 12,
+  "variant": "primary",
+  "immutable_config": "configs/generated_smoke.json",
+  "config_sha256": "42589baa1c69f60519241601824e4e0b09c2a694a866be32cc388bcff3c85fcb",
+  "data_sha256": null,
+  "selection": "Fixed earlier engineering config, no outcome-based tuning",
+  "scope": "Generated engineering fixture only. Not financial replication, not point-in-time data, not confirmatory evidence.",
+  "market_data_uploaded": false,
+  "statistical_inference": "No inferential claims from 12 temporally dependent generated origins."
+}

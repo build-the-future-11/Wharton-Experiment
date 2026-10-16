@@ -1,0 +1,69 @@
+{
+  "scope": "stdlib inert NumPy distribution fixtures and scoped static checks only; no numerical workload",
+  "results": [
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_identity_audit.py",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/private/tmp/frem-s10-identity-20261016-attempt1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.050318956375122,
+      "stdout": "..........                                                               [100%]\n10 passed in 0.36s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_identity_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.11689996719360352,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_identity_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.027363061904907227,
+      "stdout": "2 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/private/tmp/frem-s10-identity-mypy-20261016-attempt1",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src/frem_s10/runtime/smoke_contract.py",
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_identity_audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.676878929138184,
+      "stdout": "Success: no issues found in 2 source files\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "COMPILED_REVIEW_DRAFT_NOT_SUBMISSION_READY",
+  "pages": 23,
+  "bibliographic_references": 24,
+  "source_files": {
+    "main.tex": "c9755ef78226248e900d1eff7e55b8b21fb6ba3199fb32edc7e48f6525da850c",
+    "engineering_results.tex": "15863c18aee90ec6a9a15323cbedf5ae8db6ed018ccce7f68e2b6986199d7016",
+    "references.bib": "3b632ab7f02f07023e2a13664f5e7fb1c484c0a87891fe86c71430f9b45086fa",
+    "main.bbl": "bffe99201950821408033cb7ba4330eb2301c11d8dd916b12df2c30a140d2109"
+  },
+  "pdf": {
+    "path": "paper/main.pdf",
+    "sha256": "5a5f92cab1f542f0f79e9481eef2375a7baa6d0d4f7e9289a0ae36f262e1a1de"
+  },
+  "source_archive": {
+    "path": "paper/release_review_20261011/FREM_v0.2_source_draft.zip",
+    "sha256": "03242088b569e7b52195e3531dba31f9371402eea9e979861a471df3bf7135e7"
+  },
+  "build_receipt": "paper/review_20261011_v2/build_receipt.json",
+  "visual_review": "All 23 pages rendered and reviewed; final log has no overfull boxes or unresolved citations.",
+  "evidence_audit": "research/evidence_audit_20261011_v2/audit.json",
+  "release_blockers": [
+    "No admitted-market development or confirmatory results",
+    "Public equity campaign remains resource-blocked before model import",
+    "Full novelty and equation/code review incomplete",
+    "No independent clean-environment scientific reproduction",
+    "Authorship, affiliations and case/data redistribution rights require final review"
+  ],
+  "not_included": [
+    "Raw public downloads",
+    "Protected observations",
+    "Private source documents",
+    "Model checkpoints"
+  ],
+  "submission": "No upload or submission performed; source packaging does not establish arXiv acceptance or readiness."
+}

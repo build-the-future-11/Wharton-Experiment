@@ -1,0 +1,13 @@
+{
+  "symbol": "CAT",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:27.279730+00:00",
+  "http_status": 200,
+  "path": "CAT.json",
+  "sha256": "8c5a3fa1b8a5d683b862ce77944ed69a6cce136058f4a325511365bb63383e8d",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

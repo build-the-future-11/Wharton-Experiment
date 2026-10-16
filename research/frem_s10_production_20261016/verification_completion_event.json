@@ -1,0 +1,23 @@
+{
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "The normative catalog requires ten minimum semantic mutations and denied-network, no historical-data full-suite verification. Earlier four-mutation observations do not satisfy this requirement.",
+  "hypothesized_cause": "Partial engineering checks were insufficient to certify the entire production chain.",
+  "change": "Require all ten normative faults plus the retained omitted-exit fault (eleven total) against exact frozen source copies. Require an unchanged passing baseline and intended assertion failure for every mutant. Run the full suite, package verification and mutations under the same sandbox denying network and historical data, outputs and research except owned work and the exact hash-pinned offline NumPy wheel.",
+  "predicted_effect": "A production receipt cannot pass with missing required mutation coverage, wrong import origin, collection failure, historical-data access or a weakened verification catalog.",
+  "discriminating_experiment": "Fixed complete suite and eleven semantic mutants after fresh resource admission; explicit network/data/outputs/research-denial probe. TEST093 has no waiver.",
+  "engineering_budget": {
+    "mutation_total_seconds": 600,
+    "mutation_maximum": 20,
+    "actual_fixed_mutations": 11,
+    "mutation_observed_peak_rss_mib": 512,
+    "other_limits": "unchanged production_integration_event.json"
+  },
+  "scope_limits": [
+    "Local macOS restricted verification is not independent hosted CI or Linux proof",
+    "TEST091 before/after optimization timing remains open; no new speed improvement claim is made",
+    "Generated qualification and market execution require separate fresh live resource admission",
+    "No score, model mechanism, threshold, data cutoff or scientific hypothesis changed"
+  ],
+  "result": "PROSPECTIVE_ENGINEERING_COMPLETION_BEFORE_REAL_S10_EVALUATION"
+}

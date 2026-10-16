@@ -1,0 +1,3 @@
+successors/frem_s10/src/frem_s10/runtime/packaging.py:131: error: Cannot assign to a method  [method-assign]
+successors/frem_s10/src/frem_s10/runtime/packaging.py:131: error: Incompatible types in assignment (expression has type "type[str]", variable has type "Callable[[str], str]")  [assignment]
+Found 2 errors in 1 file (checked 2 source files)

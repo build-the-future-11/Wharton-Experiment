@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-15T14:57:00.937671+00:00",
+  "observation": "The restart identified horizon and decision-risk mismatches, but the predecessor data/evaluation limitations remain. The user requested continued end-to-end work.",
+  "hypothesized_cause": "Constant short-horizon scenario repetition and ignored cross-asset dependence may harm four-interval forecasts and decisions; this is not established causation for S8.",
+  "change": "Specify separate FREM-S9 exploratory method comparison using known pre-2017 training-era data, direct versus repeated one-week empirical scenarios, joint versus diagonal risk, and local versus global conditioning. Narrow empirical contribution is explicit; no original algorithm novelty claimed.",
+  "predicted_effect": "Horizon matching may reduce forward development MSE; joint risk may improve fixed-forecast utility. Either can fail.",
+  "discriminating_experiment": "Two deterministic fits; fixed 2010-2012 and 2013-2016 retrospective folds; 64 strategy plus 32 benchmark ledgers; two prespecified date-block intervals; fixed 600s/128MiB execution with unchanged 512MiB host admission.",
+  "result": "EXPLORATORY_IDEA_AND_SPECIFICATION_DEFINED_BEFORE_IMPLEMENTATION",
+  "specification": "research/frem_s9_20261015/SPECIFICATION.md",
+  "specification_sha256": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+  "canonical_confirmation_ready": false,
+  "protected_access": false,
+  "completed_studies_reopened": false,
+  "scientific_thresholds_changed": false
+}

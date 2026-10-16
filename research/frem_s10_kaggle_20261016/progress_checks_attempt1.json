@@ -1,0 +1,74 @@
+{
+  "scope": "stdlib-only progress tests; numerical integration deselected",
+  "checks": [
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/tests/test_progress_audit.py",
+        "-m",
+        "not integration",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "/private/tmp/frem-s10-progress-audit-20261016-attempt1"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.2149718329892494,
+      "stdout": ".......                                                                  [100%]\n7 passed, 1 deselected in 0.56s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/progress.py",
+        "successors/frem_s10/src/frem_s10/runtime/worker.py",
+        "successors/frem_s10/tests/test_progress_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.13201591701363213,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/progress.py",
+        "successors/frem_s10/src/frem_s10/runtime/worker.py",
+        "successors/frem_s10/tests/test_progress_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.03088941698661074,
+      "stdout": "3 files already formatted\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "--cache-dir",
+        "/private/tmp/frem-s10-progress-mypy-20261016-attempt1",
+        "successors/frem_s10/src/frem_s10/runtime/progress.py",
+        "successors/frem_s10/src/frem_s10/runtime/worker.py",
+        "successors/frem_s10/tests/test_progress_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 12.327117624983657,
+      "stdout": "Success: no issues found in 3 source files\n",
+      "stderr": ""
+    }
+  ]
+}

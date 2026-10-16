@@ -1,0 +1,39 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_data_audit.py:3:1
+   |
+ 1 |   """Constructed data/clock/target audits; no retained market values are read."""
+ 2 |
+ 3 | / import dataclasses
+ 4 | | import hashlib
+ 5 | | import json
+ 6 | | from collections.abc import Callable
+ 7 | | from datetime import date, timedelta
+ 8 | | from pathlib import Path
+ 9 | | from typing import TypedDict
+10 | |
+11 | | import numpy as np
+12 | | import pytest
+13 | | from frem_s10.arrays import FloatArray
+14 | | from frem_s10.data.admission import DataContract, admit_sources, calendar_identity
+15 | | from frem_s10.data.calendar import build_calendar_schedule, plan_fold, weekly_anchors
+16 | | from frem_s10.data.features import (
+17 | |     BURNIN_CUTOFF_US,
+18 | |     build_context,
+19 | |     build_origin_records,
+20 | |     fit_burnin_transform,
+21 | | )
+22 | | from frem_s10.data.source_reader import ScopedSourceReader, SourceIdentity, strict_json_loads
+23 | | from frem_s10.data.targets import build_interval_targets
+24 | | from frem_s10.domain import OriginRecord, SessionPanel
+25 | | from frem_s10.errors import ChronologyError, ContractError, DataAdmissionError, IntegrityError, NumericalError
+26 | | from frem_s10.metadata import ASSETS, from_utc_us, midnight_us, scheduled_open_us
+   | |_________________________________________________________________________________^
+help: Organize imports
+   |
+12 | import pytest
+13 +
+14 | from frem_s10.arrays import FloatArray
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

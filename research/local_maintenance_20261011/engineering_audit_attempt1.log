@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/audit_engineering_evidence.py", line 199, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/audit_engineering_evidence.py", line 189, in main
+    report = audit(root, root / "research/all_admissible_runs_2026-10-11.json")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/audit_engineering_evidence.py", line 108, in audit
+    checked(root / relative, expected)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/audit_engineering_evidence.py", line 85, in checked
+    require(expected is None or actual == expected, f"Hash mismatch: {path}")
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/audit_engineering_evidence.py", line 26, in require
+    raise ValueError(message)
+ValueError: Hash mismatch: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/src/frem/model.py

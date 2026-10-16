@@ -1,0 +1,44 @@
+[
+  {
+    "name": "tests",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "-B",
+      "-m",
+      "pytest",
+      "-c",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/tests",
+      "-q",
+      "-W",
+      "error",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/integrated_verification_attempt1/pytest_artifacts"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 0,
+    "wall_seconds": 39.88503508300346,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt1/tests.log",
+    "log_sha256": "2456d7698bb6ea3dbb140803a6da734695619a9167893cd97a2aded97b87a842",
+    "cumulative_max_child_rss_bytes_macos": 124370944
+  },
+  {
+    "name": "lint",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment",
+    "exit_code": 1,
+    "wall_seconds": 0.10324750001018401,
+    "log": "research/frem_s10_repair_20261015/integrated_verification_attempt1/lint.log",
+    "log_sha256": "8922044212c44886ff81c72632439535c6e1df9ebab434a526210cae43614dec",
+    "cumulative_max_child_rss_bytes_macos": 124370944
+  }
+]

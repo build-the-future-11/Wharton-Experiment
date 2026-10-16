@@ -1,0 +1,72 @@
+{
+  "name": "great_recession",
+  "included_stocks": [
+    "0005.HK",
+    "2317.TW",
+    "2330.TW",
+    "6758.T",
+    "7203.T",
+    "AAPL",
+    "BHP.AX",
+    "BNP.PA",
+    "BP.L",
+    "CBA.AX",
+    "DTE.DE",
+    "ENB.TO",
+    "HSBA.L",
+    "INFY.NS",
+    "JPM",
+    "NESN.SW",
+    "NOVN.SW",
+    "PETR4.SA",
+    "RELIANCE.NS",
+    "RY.TO",
+    "SAN.PA",
+    "SAP.DE",
+    "VALE3.SA"
+  ],
+  "excluded_stocks": {
+    "0700.HK": {
+      "reasons": [
+        "insufficient pre-validation training"
+      ],
+      "train_validation_test_rows": [
+        2,
+        10,
+        19
+      ],
+      "missing_target_months": []
+    }
+  },
+  "expected_target_months": [
+    "2007-12",
+    "2008-01",
+    "2008-02",
+    "2008-03",
+    "2008-04",
+    "2008-05",
+    "2008-06",
+    "2008-07",
+    "2008-08",
+    "2008-09",
+    "2008-10",
+    "2008-11",
+    "2008-12",
+    "2009-01",
+    "2009-02",
+    "2009-03",
+    "2009-04",
+    "2009-05",
+    "2009-06"
+  ],
+  "validation_start_ns": 1162339200000000000,
+  "evaluation_decision_start_ns": 1193875200000000000,
+  "max_training_label_ns": 1159833600000000000,
+  "max_validation_label_ns": 1191369600000000000,
+  "row_counts": [
+    1586,
+    230,
+    437
+  ],
+  "exclusion_policy": "Predetermined completeness/coverage only; no outcome-based exclusions"
+}

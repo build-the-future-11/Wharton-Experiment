@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-W",
+    "error::DeprecationWarning"
+  ],
+  "returncode": 0,
+  "termination": null,
+  "elapsed_seconds": 19.246252082986757,
+  "sampled_peak_rss_mib": 407.671875,
+  "rss_ceiling_mib": 768,
+  "wall_ceiling_seconds": 240,
+  "threads": 1,
+  "nice": 10,
+  "memory_snapshot_after": {
+    "available_mib": 421.25,
+    "pageouts": 931081
+  }
+}

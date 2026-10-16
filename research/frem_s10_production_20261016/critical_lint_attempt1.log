@@ -1,0 +1,31 @@
+C901 `validate_operation_catalog` is too complex (11 > 10)
+  --> successors/frem_s10/src/frem_s10/runtime/catalog.py:56:5
+   |
+56 | def validate_operation_catalog(
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+57 |     plan: JSONObject,
+58 |     *,
+   |
+
+F821 Undefined name `CatalogReadiness`
+  --> successors/frem_s10/src/frem_s10/runtime/catalog.py:64:6
+   |
+62 |     collected_nodeids: tuple[str, ...],
+63 |     test_outcomes: dict[str, str],
+64 | ) -> CatalogReadiness:
+   |      ^^^^^^^^^^^^^^^^
+65 |     """Validate a source-bound plan against current exact pytest observations.
+   |
+
+B023 Function definition does not bind loop variable `measured`
+  --> successors/frem_s10/tests/test_catalog_critical_audit.py:87:80
+   |
+85 |     """TEST-036: exact limit is allowed; next value and solve failure are explicit."""
+86 |     for measured in (1e12, float(np.nextafter(1e12, np.inf))):
+87 |         monkeypatch.setattr(simplex.np.linalg, "cond", lambda *args, **kwargs: measured)
+   |                                                                                ^^^^^^^^
+88 |         if measured == 1e12:
+89 |             _, certificate = _face_candidate(
+   |
+
+Found 4 errors (1 fixed, 3 remaining).

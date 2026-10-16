@@ -1,0 +1,2 @@
+successors/frem_s10/tests/test_catalog_readiness_audit.py:155: error: Argument 2 to "validate_operation_catalog" has incompatible type "**dict[str, str]"; expected "tuple[str, ...]"  [arg-type]
+Found 1 error in 1 file (checked 4 source files)

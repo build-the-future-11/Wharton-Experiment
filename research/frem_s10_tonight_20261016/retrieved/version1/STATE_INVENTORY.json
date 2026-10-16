@@ -1,0 +1,13 @@
+{
+  "members": [
+    "control/binding.json",
+    "control/bootstrap-12a43986d0494f72a91c2a77440e3237.json",
+    "control/bootstrap-transport-afd5c13807424a2097eff76bc49e2b78.json",
+    "control/invocation-cb4ad226739c4770a7bd104f67e1d6a7-end.json",
+    "control/invocation-cb4ad226739c4770a7bd104f67e1d6a7-start.json",
+    "persistence-probe.json",
+    "STATE_INVENTORY.json"
+  ],
+  "crc": "PASS",
+  "scope": "Probe metadata state, no model checkpoint"
+}

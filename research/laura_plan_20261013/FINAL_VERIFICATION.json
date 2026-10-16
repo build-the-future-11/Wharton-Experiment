@@ -1,0 +1,12 @@
+{
+  "journal_events_verified": 38,
+  "journal_tip": "f6bfa6a320d83784a12e964c518322b1a048593c7596e0ca3a56ca741d39f810",
+  "delivery_files": 43,
+  "all_new_json_parses": true,
+  "integrity_attempt": "integrity_attempt3",
+  "arithmetic_attempt": "arithmetic_attempt3",
+  "tests": 28,
+  "lint_exit_code": 0,
+  "market_fits": 0,
+  "protected_access": false
+}

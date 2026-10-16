@@ -1,0 +1,337 @@
+{
+  "policy": "cash",
+  "currency": "USD",
+  "terminal_wealth": 100000.0,
+  "net_return": 0.0,
+  "max_drawdown": 0.0,
+  "fees": 0.0,
+  "traded_notional": 0.0,
+  "periods": [
+    {
+      "time": 1246406400,
+      "end": 1249084800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1249084800,
+      "end": 1251763200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1251763200,
+      "end": 1254355200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1254355200,
+      "end": 1257033600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1257033600,
+      "end": 1259625600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1259625600,
+      "end": 1262304000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1262304000,
+      "end": 1264982400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1264982400,
+      "end": 1267401600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1267401600,
+      "end": 1270080000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1270080000,
+      "end": 1272672000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1272672000,
+      "end": 1275350400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1275350400,
+      "end": 1277942400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1277942400,
+      "end": 1280620800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1280620800,
+      "end": 1283299200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1283299200,
+      "end": 1285891200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1285891200,
+      "end": 1288569600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1288569600,
+      "end": 1291161600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1291161600,
+      "end": 1293840000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "AAPL": 0.0,
+        "JPM": 0.0
+      },
+      "net_factor": 1.0,
+      "liquidation_fee": 0.0
+    }
+  ],
+  "defaults": []
+}

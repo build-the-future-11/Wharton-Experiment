@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/restart",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "seconds": 0.14014908399258275,
+  "scope": "New bounded audit and reference mathematics only; not scientific model evaluation"
+}

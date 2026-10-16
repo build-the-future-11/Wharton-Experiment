@@ -1,0 +1,42 @@
+{
+  "scope": "S6 post-result descriptive and one-factor counterfactual diagnosis, not a new test",
+  "mean_expert_weights": [
+    0.17905722277013622,
+    0.17874794558207338,
+    0.1752733122872303,
+    0.11016082483434768,
+    0.17869261841690834,
+    0.17806807610930397
+  ],
+  "mean_adaptive_scale_over_zero": 0.32226821557234847,
+  "nll_counterfactuals": {
+    "memory": -2.7487381545066305,
+    "equal": -2.7538449412122117,
+    "restore_vol_weight": -2.753905212881643,
+    "vol_scale_sqrt5": -2.747900709908462
+  },
+  "gross_wealth": {
+    "signal": 95248.49177909792,
+    "buy_hold": 95578.21045959939,
+    "equal_weight": 96228.28814048904,
+    "cash": 100000.0
+  },
+  "net_wealth_10bps": {
+    "memory": 94643.60266047873,
+    "equal": 94640.92773686111,
+    "buy_hold": 95387.24500413574,
+    "equal_weight": 95958.63006757047,
+    "cash": 100000.0
+  },
+  "fees_10bps": {
+    "memory": 625.8919394959548,
+    "equal": 628.8095422939218,
+    "buy_hold": 195.38282763196753,
+    "equal_weight": 275.68595133587434
+  },
+  "included_asset_returns": {
+    "SPY": -0.04897630979728851,
+    "TLT": 0.0017157970320955673,
+    "GLD": -0.08539317344682618
+  }
+}

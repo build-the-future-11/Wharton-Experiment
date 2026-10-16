@@ -1,0 +1,10 @@
+C901 `_verify_frames` is too complex (11 > 10)
+   --> successors/frem_s10/src/frem_s10/experiment/artifacts.py:394:5
+    |
+394 | def _verify_frames(
+    |     ^^^^^^^^^^^^^^
+395 |     directory: Path, rows: tuple[JSONObject, ...], manifest: JSONObject, header: JSONObject
+396 | ) -> int:
+    |
+
+Found 1 error.

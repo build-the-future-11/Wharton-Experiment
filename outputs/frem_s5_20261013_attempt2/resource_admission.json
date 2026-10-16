@@ -1,0 +1,20 @@
+{
+  "samples": [
+    {
+      "available_mib": 279.9375,
+      "pageouts": 99139
+    },
+    {
+      "available_mib": 318.328125,
+      "pageouts": 99139
+    },
+    {
+      "available_mib": 382.078125,
+      "pageouts": 99139
+    }
+  ],
+  "normal_floor_mib": 512,
+  "fresh_training_admitted": false,
+  "fresh_training_started": false,
+  "bounded_replay": "Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard"
+}

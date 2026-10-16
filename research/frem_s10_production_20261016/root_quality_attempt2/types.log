@@ -1,0 +1,5 @@
+successors/frem_s10/tests/test_verification_receipts_audit.py:19: error: Dict entry 1 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+successors/frem_s10/tests/test_verification_receipts_audit.py:71: error: Dict entry 1 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+successors/frem_s10/tests/test_verification_receipts_audit.py:72: error: Dict entry 2 has incompatible type "str": "dict[str, str]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+successors/frem_s10/tests/test_verification_receipts_audit.py:122: error: Dict entry 1 has incompatible type "str": "list[dict[str, JSONValue]]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+Found 4 errors in 1 file (checked 3 source files)

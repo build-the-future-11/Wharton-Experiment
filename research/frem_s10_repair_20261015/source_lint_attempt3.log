@@ -1,0 +1,329 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/distances.py:3:1
+   |
+ 1 |   """Deterministic direct-distance kernels with bounded temporary storage."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import numpy as np
+ 6 | | from numpy.typing import ArrayLike, NDArray
+ 7 | |
+ 8 | | from frem_s10.arrays import frozen_f64
+ 9 | | from frem_s10.errors import ContractError, NumericalError
+10 | | from frem_s10.metadata import strict_int
+   | |________________________________________^
+help: Organize imports
+   |
+5  | import numpy as np
+   - from numpy.typing import ArrayLike, NDArray
+   -
+6  | from frem_s10.arrays import frozen_f64
+7  | from frem_s10.errors import ContractError, NumericalError
+8  | from frem_s10.metadata import strict_int
+9  + from numpy.typing import ArrayLike, NDArray
+10 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/fees.py:7:1
+   |
+ 5 |   """
+ 6 |
+ 7 | / from __future__ import annotations
+ 8 | |
+ 9 | | import math
+10 | | from dataclasses import dataclass
+11 | |
+12 | | import numpy as np
+13 | | from numpy.typing import NDArray
+14 | |
+15 | | from frem_s10.arrays import frozen_f64
+16 | | from frem_s10.errors import ContractError, NumericalError
+   | |_________________________________________________________^
+17 |
+18 |   FloatArray = NDArray[np.float64]
+   |
+help: Organize imports
+   |
+12 | import numpy as np
+   - from numpy.typing import NDArray
+   -
+13 | from frem_s10.arrays import frozen_f64
+14 | from frem_s10.errors import ContractError, NumericalError
+15 + from numpy.typing import NDArray
+16 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/probabilities.py:3:1
+   |
+ 1 |   """Checked finite probability operations; no implicit clipping or renormalization."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import numpy as np
+ 6 | | from numpy.typing import ArrayLike, NDArray
+ 7 | |
+ 8 | | from frem_s10.arrays import frozen_f64
+ 9 | | from frem_s10.errors import ContractError, NumericalError
+10 | | from frem_s10.metadata import finite_float, strict_int
+   | |______________________________________________________^
+help: Organize imports
+   |
+5  | import numpy as np
+   - from numpy.typing import ArrayLike, NDArray
+   -
+6  | from frem_s10.arrays import frozen_f64
+7  | from frem_s10.errors import ContractError, NumericalError
+8  | from frem_s10.metadata import finite_float, strict_int
+9  + from numpy.typing import ArrayLike, NDArray
+10 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/scores.py:3:1
+   |
+ 1 |   """Exact finite-law scores and diagnostics in explicitly supplied coordinates."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | from dataclasses import dataclass
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | from numpy.typing import ArrayLike, NDArray
+ 9 | |
+10 | | from frem_s10.arrays import frozen_f64
+11 | | from frem_s10.errors import ContractError, NumericalError
+12 | | from frem_s10.math.distances import pairwise_distances
+13 | | from frem_s10.math.probabilities import validate_probabilities
+   | |______________________________________________________________^
+help: Organize imports
+   |
+7  | import numpy as np
+   - from numpy.typing import ArrayLike, NDArray
+   -
+8  | from frem_s10.arrays import frozen_f64
+9  | from frem_s10.errors import ContractError, NumericalError
+10 | from frem_s10.math.distances import pairwise_distances
+11 | from frem_s10.math.probabilities import validate_probabilities
+12 + from numpy.typing import ArrayLike, NDArray
+13 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/simplex.py:3:1
+   |
+ 1 |   """Certified three-expert regularized energy-score minimization."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | from dataclasses import dataclass
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | from numpy.typing import ArrayLike, NDArray
+ 9 | |
+10 | | from frem_s10.arrays import frozen_f64
+11 | | from frem_s10.errors import ContractError, NumericalError
+12 | | from frem_s10.math.probabilities import validate_probabilities
+13 | | from frem_s10.metadata import finite_float
+   | |__________________________________________^
+help: Organize imports
+   |
+7  | import numpy as np
+   - from numpy.typing import ArrayLike, NDArray
+   -
+8  | from frem_s10.arrays import frozen_f64
+9  | from frem_s10.errors import ContractError, NumericalError
+10 | from frem_s10.math.probabilities import validate_probabilities
+11 | from frem_s10.metadata import finite_float
+12 + from numpy.typing import ArrayLike, NDArray
+13 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/src/frem_s10/math/utility.py:3:1
+   |
+ 1 |   """Stable CRRA and exact contamination utility over declared finite support."""
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import math
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | from numpy.typing import NDArray
+ 9 | |
+10 | | from frem_s10.arrays import frozen_f64
+11 | | from frem_s10.errors import ContractError, NumericalError
+   | |_________________________________________________________^
+12 |
+13 |   FloatArray = NDArray[np.float64]
+   |
+help: Organize imports
+   |
+7  | import numpy as np
+   - from numpy.typing import NDArray
+   -
+8  | from frem_s10.arrays import frozen_f64
+9  | from frem_s10.errors import ContractError, NumericalError
+10 + from numpy.typing import NDArray
+11 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> successors/frem_s10/tests/test_actions_audit.py:3:1
+  |
+1 |   """Independent finite-grid and exact-hold engineering checks."""
+2 |
+3 | / import math
+4 | |
+5 | | import numpy as np
+6 | | import pytest
+7 | |
+8 | | from frem_s10.errors import ContractError
+9 | | from frem_s10.portfolio.actions import ActionSet, Valuation, enumerate_actions, grid_weights
+  | |____________________________________________________________________________________________^
+help: Organize imports
+  |
+6 | import pytest
+  -
+7 | from frem_s10.errors import ContractError
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_data_audit.py:3:1
+   |
+ 1 |   """Constructed data/clock/target audits; no retained market values are read."""
+ 2 |
+ 3 | / import dataclasses
+ 4 | | import hashlib
+ 5 | | import json
+ 6 | | from datetime import date, timedelta
+ 7 | |
+ 8 | | import numpy as np
+ 9 | | import pytest
+10 | |
+11 | | from frem_s10.data.admission import DataContract, admit_sources, calendar_identity
+12 | | from frem_s10.data.calendar import build_calendar_schedule, plan_fold, weekly_anchors
+13 | | from frem_s10.data.features import (
+14 | |     BURNIN_CUTOFF_US,
+15 | |     build_context,
+16 | |     build_origin_records,
+17 | |     fit_burnin_transform,
+18 | | )
+19 | | from frem_s10.data.source_reader import ScopedSourceReader, SourceIdentity, strict_json_loads
+20 | | from frem_s10.data.targets import build_interval_targets
+21 | | from frem_s10.domain import OriginRecord, SessionPanel
+22 | | from frem_s10.errors import ChronologyError, ContractError, DataAdmissionError, IntegrityError, NumericalError
+23 | | from frem_s10.metadata import ASSETS, from_utc_us, midnight_us, scheduled_open_us
+   | |_________________________________________________________________________________^
+help: Organize imports
+   |
+9  | import pytest
+   -
+10 | from frem_s10.data.admission import DataContract, admit_sources, calendar_identity
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_ledger_audit.py:3:1
+   |
+ 1 |   """Independent constructed share/cash accounting and chronology checks."""
+ 2 |
+ 3 | / import math
+ 4 | | from dataclasses import replace
+ 5 | | from datetime import UTC, datetime
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | import pytest
+ 9 | |
+10 | | from frem_s10.errors import ChronologyError, ContractError
+11 | | from frem_s10.metadata import utc_us
+12 | | from frem_s10.portfolio.ledger import (
+13 | |     MarkKind,
+14 | |     boundary_log_increments,
+15 | |     close_session,
+16 | |     initial_capital_mark,
+17 | |     initial_ledger,
+18 | |     liquidatable_boundary_mark,
+19 | |     maximum_daily_close_drawdown,
+20 | |     open_session,
+21 | |     rebalance,
+22 | | )
+   | |_^
+23 |
+24 |   OPEN = utc_us(datetime(2006, 1, 3, 14, 30, tzinfo=UTC))
+   |
+help: Organize imports
+  |
+8 | import pytest
+  -
+9 | from frem_s10.errors import ChronologyError, ContractError
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_math_audit.py:3:1
+   |
+ 1 |   """Constructed engineering checks; no market data or scientific evidence."""
+ 2 |
+ 3 | / import math
+ 4 | | from decimal import Decimal, localcontext
+ 5 | | from itertools import product
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | import pytest
+ 9 | |
+10 | | from frem_s10.errors import ContractError, NumericalError
+11 | | from frem_s10.math.distances import extrapolation_threshold
+12 | | from frem_s10.math.fees import keep_holdings_solution, solve_rebalance, solve_rebalances
+13 | | from frem_s10.math.probabilities import recency_weights, validate_probabilities
+14 | | from frem_s10.math.scores import (
+15 | |     calibration_bins,
+16 | |     discrete_quantiles,
+17 | |     energy_score,
+18 | |     mean_squared_error,
+19 | |     score_coefficients,
+20 | |     variogram_score,
+21 | | )
+22 | | from frem_s10.math.simplex import SolverTolerances, solve_simplex
+23 | | from frem_s10.math.utility import crra_utility, robust_objective
+   | |________________________________________________________________^
+help: Organize imports
+  |
+8 | import pytest
+  -
+9 | from frem_s10.errors import ContractError, NumericalError
+  |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_model_audit.py:3:1
+   |
+ 1 |   """Constructed, non-market causal forecasting and replay evidence."""
+ 2 |
+ 3 | / import hashlib
+ 4 | | import json
+ 5 | | from dataclasses import replace
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | import pytest
+ 9 | |
+10 | | from frem_s10.domain import OriginRecord, Transform
+11 | | from frem_s10.errors import ChronologyError, ContractError, IntegrityError
+12 | | from frem_s10.math.scores import energy_score, score_coefficients
+13 | | from frem_s10.model.checkpoint import dump_state, load_state
+14 | | from frem_s10.model.config import ForecastConfig
+15 | | from frem_s10.model.engine import advance, initial_state
+16 | | from frem_s10.model.feedback import mature_forecast
+17 | | from frem_s10.model.records import IssueRequest, MaturedFeedback
+18 | | from frem_s10.model.stacking import fit_mixtures
+   | |________________________________________________^
+19 |
+20 |   WEEK = 7 * 86400 * 1_000_000
+   |
+help: Organize imports
+  |
+8 | import pytest
+  -
+9 | from frem_s10.domain import OriginRecord, Transform
+  |
+
+Found 11 errors.
+[*] 11 fixable with `--fix`.

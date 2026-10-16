@@ -1,0 +1,8 @@
+{
+  "observation": "Prior S2 memory unsupported; scale/location mismatch; sparse old bank.",
+  "hypothesized_cause": "Poor calibration and insufficiently relevant/fresh episodes; not established causally.",
+  "change": "Add separately versioned S3 calibration, causal replay, retention/retrieval/risk/gating ablations and prospective new-sample study.",
+  "predicted_effect": "May improve NLL; zero weight and negative results accepted.",
+  "discriminating_experiment": "research/frem_s3_20261011/specification.json",
+  "result": "Declared before implementation or fresh outcomes. Current user authorizes staged slow execution; normal admission remains separately reported."
+}

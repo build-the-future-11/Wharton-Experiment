@@ -1,0 +1,9 @@
+{
+  "observation": "S2 zero wins aggregate and 12/19 months; calibration rejects every nonzero memory weight in both seeds.",
+  "hypothesized_cause": "Measured forecast location and uncertainty mismatch; sparse old same-asset residual bank is an unisolated causal hypothesis.",
+  "change": "Added descriptive saved-result audit and validation-only diagnostic reporting; no forecasting or selection changes.",
+  "predicted_effect": "Future receipts explain memory rejection and coverage without score-driven retuning.",
+  "discriminating_experiment": "None run. Any mechanism change requires separately declared fresh evaluation.",
+  "result": "4 standard-library unit tests and changed-file lint pass; report research/public_zero_diagnosis_20261011/REPORT.md",
+  "protected_outcomes_accessed": false
+}

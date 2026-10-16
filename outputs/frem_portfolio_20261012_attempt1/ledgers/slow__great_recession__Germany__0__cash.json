@@ -1,0 +1,355 @@
+{
+  "policy": "cash",
+  "currency": "EUR",
+  "terminal_wealth": 100000.0,
+  "net_return": 0.0,
+  "max_drawdown": 0.0,
+  "fees": 0.0,
+  "traded_notional": 0.0,
+  "periods": [
+    {
+      "time": 1196467200,
+      "end": 1199145600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1199145600,
+      "end": 1201824000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1201824000,
+      "end": 1204329600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1204329600,
+      "end": 1207008000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1207008000,
+      "end": 1209600000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1209600000,
+      "end": 1212278400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1212278400,
+      "end": 1214870400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1214870400,
+      "end": 1217548800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1217548800,
+      "end": 1220227200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1220227200,
+      "end": 1222819200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1222819200,
+      "end": 1225497600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1225497600,
+      "end": 1228089600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1228089600,
+      "end": 1230768000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1230768000,
+      "end": 1233446400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1233446400,
+      "end": 1235865600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1235865600,
+      "end": 1238544000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1238544000,
+      "end": 1241136000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1241136000,
+      "end": 1243814400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1243814400,
+      "end": 1246406400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "DTE.DE": 0.0,
+        "SAP.DE": 0.0
+      },
+      "net_factor": 1.0,
+      "liquidation_fee": 0.0
+    }
+  ],
+  "defaults": []
+}

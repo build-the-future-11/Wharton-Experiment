@@ -1,0 +1,366 @@
+FURB162 Unnecessary timezone replacement with zero offset
+   --> successors/frem_portfolio_v1/engine.py:280:41
+    |
+278 |     """
+279 |     def timestamp(value):
+280 |         result = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+281 |         if result.tzinfo is None:
+282 |             raise ValueError("Timezone-qualified timestamps required")
+    |
+help: Remove `.replace()` call
+    |
+279 |     def timestamp(value):
+    -         result = datetime.fromisoformat(value.replace("Z", "+00:00"))
+280 +         result = datetime.fromisoformat(value)
+281 |         if result.tzinfo is None:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:51:14
+   |
+49 |       primary = summary["primary_cases"]
+50 |       lines = ["# FREM portfolio evidence — 12 October 2026", "",
+51 | /              f"**{summary['verdict']}**. The requested 6% minimum is an ending-wealth target. "
+52 | |              "A positive result in one historical path is not a universal floor or a live investment recommendation.", "",
+   | |_____________________________________________________________________________________________________________________^
+53 |                "## What was executed", "",
+54 |                f"{summary['forecast_files']} source-hashed forecast files; {summary['forecast_rows']} independently audited rows; "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+50 |     lines = ["# FREM portfolio evidence — 12 October 2026", "",
+   -              f"**{summary['verdict']}**. The requested 6% minimum is an ending-wealth target. "
+   -              "A positive result in one historical path is not a universal floor or a live investment recommendation.", "",
+51 +              (f"**{summary['verdict']}**. The requested 6% minimum is an ending-wealth target. "
+52 +              "A positive result in one historical path is not a universal floor or a live investment recommendation."), "",
+53 |              "## What was executed", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:54:14
+   |
+52 |   …     "A positive result in one historical path is not a universal floor or a live investment recommendation.", "",
+53 |   …     "## What was executed", "",
+54 | / …     f"{summary['forecast_files']} source-hashed forecast files; {summary['forecast_rows']} independently audited rows; "
+55 | | …     f"{summary['completed_policy_cases']} model/seed/window/market/cost cases; "
+56 | | …     f"{summary['ledgers_written']} shared-accounting ledgers. No new fits or protected observations.", "",
+   | |_______________________________________________________________________________________________________^
+57 |   …     "All models used the fixed 80% equal-weight anchor plus up to 20% positive log-signal sleeve. "
+58 |   …     "Unallocated weight stays in zero-return cash. This is a declared unoptimized research policy, not an optimized Laura mandate.…
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+53 |              "## What was executed", "",
+   -              f"{summary['forecast_files']} source-hashed forecast files; {summary['forecast_rows']} independently audited rows; "
+54 +              (f"{summary['forecast_files']} source-hashed forecast files; {summary['forecast_rows']} independently audited rows; "
+55 |              f"{summary['completed_policy_cases']} model/seed/window/market/cost cases; "
+   -              f"{summary['ledgers_written']} shared-accounting ledgers. No new fits or protected observations.", "",
+56 +              f"{summary['ledgers_written']} shared-accounting ledgers. No new fits or protected observations."), "",
+57 |              "All models used the fixed 80% equal-weight anchor plus up to 20% positive log-signal sleeve. "
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:57:14
+   |
+55 |   …     f"{summary['completed_policy_cases']} model/seed/window/market/cost cases; "
+56 |   …     f"{summary['ledgers_written']} shared-accounting ledgers. No new fits or protected observations.", "",
+57 | / …     "All models used the fixed 80% equal-weight anchor plus up to 20% positive log-signal sleeve. "
+58 | | …     "Unallocated weight stays in zero-return cash. This is a declared unoptimized research policy, not an optimized Laura mandate.…
+59 | | …     "Costs, initial cash and final liquidation are shared; drifted holdings are carried between periods. "
+60 | | …     "The same-basket equal-weight, buy-and-hold and cash controls are retained.", "",
+   | |__________________________________________________________________________________^
+61 |   …     "## Primary: S4 corrected distance versus equal weight", "",
+62 |   …     "| Window | Seed | Cost per traded dollar | Uplift | Versus memory off | Max drawdown |", "|---|---|---:|---:|---:|---:|"]
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+56 |              f"{summary['ledgers_written']} shared-accounting ledgers. No new fits or protected observations.", "",
+   -              "All models used the fixed 80% equal-weight anchor plus up to 20% positive log-signal sleeve. "
+57 +              ("All models used the fixed 80% equal-weight anchor plus up to 20% positive log-signal sleeve. "
+58 |              "Unallocated weight stays in zero-return cash. This is a declared unoptimized research policy, not an optimized Laura mandate. "
+59 |              "Costs, initial cash and final liquidation are shared; drifted holdings are carried between periods. "
+   -              "The same-basket equal-weight, buy-and-hold and cash controls are retained.", "",
+60 +              "The same-basket equal-weight, buy-and-hold and cash controls are retained."), "",
+61 |              "## Primary: S4 corrected distance versus equal weight", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:66:19
+   |
+64 |           lines.append(f"| {row['fold']} | {row['seed']} | {row['cost_bps']} bp | {row['vs_equal_weight']:.2%} | "
+65 |                        f"{row['vs_memory_off']:.2%} | {row['max_drawdown']:.2%} |")
+66 |       lines += ["", f"Observed range across all {len(primary)} primary cases: "
+   |  ___________________^
+67 | |               f"{summary['primary_range'][0]:.2%} to {summary['primary_range'][1]:.2%}. "
+68 | |               f"Cases at least 6%: {summary['primary_at_least_6pct']}/{len(primary)}. "
+69 | |               "Seed outcomes share the same market history and are not independent financial repetitions.", "",
+   | |__________________________________________________________________________________________________________^
+70 |                 "Intervals in summary.json use predeclared 3- and 6-month paired circular blocks of saved net-wealth increments. "
+71 |                 "These intervals condition on the realized policy path, omit retraining uncertainty, are not simultaneous, "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+65 |                      f"{row['vs_memory_off']:.2%} | {row['max_drawdown']:.2%} |")
+   -     lines += ["", f"Observed range across all {len(primary)} primary cases: "
+66 +     lines += ["", (f"Observed range across all {len(primary)} primary cases: "
+67 |               f"{summary['primary_range'][0]:.2%} to {summary['primary_range'][1]:.2%}. "
+68 |               f"Cases at least 6%: {summary['primary_at_least_6pct']}/{len(primary)}. "
+   -               "Seed outcomes share the same market history and are not independent financial repetitions.", "",
+69 +               "Seed outcomes share the same market history and are not independent financial repetitions."), "",
+70 |               "Intervals in summary.json use predeclared 3- and 6-month paired circular blocks of saved net-wealth increments. "
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:70:15
+   |
+68 |                 f"Cases at least 6%: {summary['primary_at_least_6pct']}/{len(primary)}. "
+69 |                 "Seed outcomes share the same market history and are not independent financial repetitions.", "",
+70 | /               "Intervals in summary.json use predeclared 3- and 6-month paired circular blocks of saved net-wealth increments. "
+71 | |               "These intervals condition on the realized policy path, omit retraining uncertainty, are not simultaneous, "
+72 | |               "and cannot certify future coverage. Short windows remain explicitly insufficient for a block length.", "",
+   | |____________________________________________________________________________________________________________________^
+73 |                 "## Across time, currencies and predecessor versions", "",
+74 |                 "All six older crisis/recovery windows and four methods are in comparisons.csv. Each listing-market basket "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+69 |               "Seed outcomes share the same market history and are not independent financial repetitions.", "",
+   -               "Intervals in summary.json use predeclared 3- and 6-month paired circular blocks of saved net-wealth increments. "
+70 +               ("Intervals in summary.json use predeclared 3- and 6-month paired circular blocks of saved net-wealth increments. "
+71 |               "These intervals condition on the realized policy path, omit retraining uncertainty, are not simultaneous, "
+   -               "and cannot certify future coverage. Short windows remain explicitly insufficient for a block length.", "",
+72 +               "and cannot certify future coverage. Short windows remain explicitly insufficient for a block length."), "",
+73 |               "## Across time, currencies and predecessor versions", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:74:15
+   |
+72 |   …     "and cannot certify future coverage. Short windows remain explicitly insufficient for a block length.", "",
+73 |   …     "## Across time, currencies and predecessor versions", "",
+74 | / …     "All six older crisis/recovery windows and four methods are in comparisons.csv. Each listing-market basket "
+75 | | …     "is separate; currencies are never combined. Two-stock local baskets are narrow accounting illustrations. "
+76 | | …     "S3/S4 forecast source histories are exploratory, retrospective survivor samples with adjusted-price proxies. "
+77 | | …     "Changing checkpoints and training chronology prevents a causal attribution of cross-version portfolio differences.", "",
+   | |__________________________________________________________________________________________________________________________^
+78 |   …     f"Incomplete declared market/model groups: {len(summary['incomplete_cases'])}. Each is retained in summary.json; "
+79 |   …     "missing prices/assets are not backfilled and incomplete groups do not become passing cases.", "",
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+73 |               "## Across time, currencies and predecessor versions", "",
+   -               "All six older crisis/recovery windows and four methods are in comparisons.csv. Each listing-market basket "
+74 +               ("All six older crisis/recovery windows and four methods are in comparisons.csv. Each listing-market basket "
+75 |               "is separate; currencies are never combined. Two-stock local baskets are narrow accounting illustrations. "
+76 |               "S3/S4 forecast source histories are exploratory, retrospective survivor samples with adjusted-price proxies. "
+   -               "Changing checkpoints and training chronology prevents a causal attribution of cross-version portfolio differences.", "",
+77 +               "Changing checkpoints and training chronology prevents a causal attribution of cross-version portfolio differences."), "",
+78 |               f"Incomplete declared market/model groups: {len(summary['incomplete_cases'])}. Each is retained in summary.json; "
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:78:15
+   |
+76 |   …     "S3/S4 forecast source histories are exploratory, retrospective survivor samples with adjusted-price proxies. "
+77 |   …     "Changing checkpoints and training chronology prevents a causal attribution of cross-version portfolio differences.", "",
+78 | / …     f"Incomplete declared market/model groups: {len(summary['incomplete_cases'])}. Each is retained in summary.json; "
+79 | | …     "missing prices/assets are not backfilled and incomplete groups do not become passing cases.", "",
+   | |___________________________________________________________________________________________________^
+80 |   …     "## Why an all-scenario 6% floor fails", "",
+81 |   …     "In a zero-return world with zero costs and identical cash flows, a long-only self-financing strategy and "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+77 |               "Changing checkpoints and training chronology prevents a causal attribution of cross-version portfolio differences.", "",
+   -               f"Incomplete declared market/model groups: {len(summary['incomplete_cases'])}. Each is retained in summary.json; "
+   -               "missing prices/assets are not backfilled and incomplete groups do not become passing cases.", "",
+78 +               (f"Incomplete declared market/model groups: {len(summary['incomplete_cases'])}. Each is retained in summary.json; "
+79 +               "missing prices/assets are not backfilled and incomplete groups do not become passing cases."), "",
+80 |               "## Why an all-scenario 6% floor fails", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:81:15
+   |
+79 |                 "missing prices/assets are not backfilled and incomplete groups do not become passing cases.", "",
+80 |                 "## Why an all-scenario 6% floor fails", "",
+81 | /               "In a zero-return world with zero costs and identical cash flows, a long-only self-financing strategy and "
+82 | |               "the benchmark both end at their starting wealth. Uplift is exactly zero. No retriever, JEPA loss or "
+83 | |               "backtest can change this accounting identity. Constructed stress counterexamples are in stress.json; "
+84 | |               "they test the claim, not model skill.", "",
+   | |_____________________________________________________^
+85 |                 "## Laura Gao", "",
+86 |                 "Use $300,000 at the beginning of 2027 and $150,000 at the beginning of 2028. Before the first 2033 "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+80 |               "## Why an all-scenario 6% floor fails", "",
+   -               "In a zero-return world with zero costs and identical cash flows, a long-only self-financing strategy and "
+81 +               ("In a zero-return world with zero costs and identical cash flows, a long-only self-financing strategy and "
+82 |               "the benchmark both end at their starting wealth. Uplift is exactly zero. No retriever, JEPA loss or "
+83 |               "backtest can change this accounting identity. Constructed stress counterexamples are in stress.json; "
+   -               "they test the claim, not model skill.", "",
+84 +               "they test the claim, not model skill."), "",
+85 |               "## Laura Gao", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:86:15
+   |
+84 |                 "they test the claim, not model skill.", "",
+85 |                 "## Laura Gao", "",
+86 | /               "Use $300,000 at the beginning of 2027 and $150,000 at the beginning of 2028. Before the first 2033 "
+87 | |               "payment, establish a reserve for ten $50,000 beginning-year payments through 2042. "
+88 | |               "The reserve calculation includes the immediate payment (annuity due). At zero growth and zero reserve "
+89 | |               "discount, wealth is $450,000 against $500,000 of obligations: a $50,000 shortfall. "
+90 | |               "WInS profits are not added to these contributions. The scenario grid in laura.json uses assumed rates, "
+91 | |               "not observed yields or calibrated funding probabilities. Facility capacity remains null without an explicit flexibility buffer.", "",
+   | |_______________________________________________________________________________________________________________________________________________^
+92 |                 "Current research direction and sourced instrument candidates are in LAURA_CURRENT_RESEARCH.md. "
+93 |                 "No certified ticker allocation can be produced without current eligible instruments, holdings, prices, "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+85 |               "## Laura Gao", "",
+   -               "Use $300,000 at the beginning of 2027 and $150,000 at the beginning of 2028. Before the first 2033 "
+86 +               ("Use $300,000 at the beginning of 2027 and $150,000 at the beginning of 2028. Before the first 2033 "
+87 |               "payment, establish a reserve for ten $50,000 beginning-year payments through 2042. "
+88 |               "The reserve calculation includes the immediate payment (annuity due). At zero growth and zero reserve "
+89 |               "discount, wealth is $450,000 against $500,000 of obligations: a $50,000 shortfall. "
+90 |               "WInS profits are not added to these contributions. The scenario grid in laura.json uses assumed rates, "
+   -               "not observed yields or calibrated funding probabilities. Facility capacity remains null without an explicit flexibility buffer.", "",
+91 +               "not observed yields or calibrated funding probabilities. Facility capacity remains null without an explicit flexibility buffer."), "",
+92 |               "Current research direction and sourced instrument candidates are in LAURA_CURRENT_RESEARCH.md. "
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+  --> successors/frem_portfolio_v1/run.py:92:15
+   |
+90 |   …     "WInS profits are not added to these contributions. The scenario grid in laura.json uses assumed rates, "
+91 |   …     "not observed yields or calibrated funding probabilities. Facility capacity remains null without an explicit flexibility buffe…
+92 | / …     "Current research direction and sourced instrument candidates are in LAURA_CURRENT_RESEARCH.md. "
+93 | | …     "No certified ticker allocation can be produced without current eligible instruments, holdings, prices, "
+94 | | …     "risk/funding policy and admissible forecast inputs. The external quant/ML framework is an explicit dated "
+95 | | …     "input contract in engine.external_forecasts; its source has not yet been identified or integrated.", "",
+   | |__________________________________________________________________________________________________________^
+96 |   …     "## Verification and reproducibility", "",
+97 |   …     "The source/config snapshot is in freeze.json, per-file reconstruction in forecast_audit.json, "
+   |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+   |
+91 |               "not observed yields or calibrated funding probabilities. Facility capacity remains null without an explicit flexibility buffer.", "",
+   -               "Current research direction and sourced instrument candidates are in LAURA_CURRENT_RESEARCH.md. "
+92 +               ("Current research direction and sourced instrument candidates are in LAURA_CURRENT_RESEARCH.md. "
+93 |               "No certified ticker allocation can be produced without current eligible instruments, holdings, prices, "
+94 |               "risk/funding policy and admissible forecast inputs. The external quant/ML framework is an explicit dated "
+   -               "input contract in engine.external_forecasts; its source has not yet been identified or integrated.", "",
+95 +               "input contract in engine.external_forecasts; its source has not yet been identified or integrated."), "",
+96 |               "## Verification and reproducibility", "",
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_portfolio_v1/run.py:97:15
+    |
+ 95 |                 "input contract in engine.external_forecasts; its source has not yet been identified or integrated.", "",
+ 96 |                 "## Verification and reproducibility", "",
+ 97 | /               "The source/config snapshot is in freeze.json, per-file reconstruction in forecast_audit.json, "
+ 98 | |               "per-period holdings/cash/costs in ledgers/, and every comparison in comparisons.csv. "
+ 99 | |               "The runner refuses existing output directories. Earlier negative experiments and S4 freeze files are preserved.", "",
+    | |_______________________________________________________________________________________________________________________________^
+100 |                 "These are exploratory reanalyses and engineering tests, not independent training reproduction, "
+101 |                 "point-in-time market certification, proof of profitability, live fills or public submission readiness."]
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+96  |               "## Verification and reproducibility", "",
+    -               "The source/config snapshot is in freeze.json, per-file reconstruction in forecast_audit.json, "
+97  +               ("The source/config snapshot is in freeze.json, per-file reconstruction in forecast_audit.json, "
+98  |               "per-period holdings/cash/costs in ledgers/, and every comparison in comparisons.csv. "
+    -               "The runner refuses existing output directories. Earlier negative experiments and S4 freeze files are preserved.", "",
+99  +               "The runner refuses existing output directories. Earlier negative experiments and S4 freeze files are preserved."), "",
+100 |               "These are exploratory reanalyses and engineering tests, not independent training reproduction, "
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_portfolio_v1/run.py:100:15
+    |
+ 98 |                 "per-period holdings/cash/costs in ledgers/, and every comparison in comparisons.csv. "
+ 99 |                 "The runner refuses existing output directories. Earlier negative experiments and S4 freeze files are preserved.", "",
+100 | /               "These are exploratory reanalyses and engineering tests, not independent training reproduction, "
+101 | |               "point-in-time market certification, proof of profitability, live fills or public submission readiness."]
+    | |______________________________________________________________________________________________________________________^
+102 |       with destination.open("x") as file:
+103 |           file.write("\n".join(lines) + "\n")
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+99  |               "The runner refuses existing output directories. Earlier negative experiments and S4 freeze files are preserved.", "",
+    -               "These are exploratory reanalyses and engineering tests, not independent training reproduction, "
+    -               "point-in-time market certification, proof of profitability, live fills or public submission readiness."]
+100 +               ("These are exploratory reanalyses and engineering tests, not independent training reproduction, "
+101 +               "point-in-time market certification, proof of profitability, live fills or public submission readiness.")]
+102 |     with destination.open("x") as file:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_portfolio_v1/tests/test_engine.py:3:1
+   |
+ 1 |   """Hand-verifiable accounting, causality, completeness and mandate contracts."""
+ 2 |
+ 3 | / import copy
+ 4 | | import math
+ 5 | | import tempfile
+ 6 | | import unittest
+ 7 | | from pathlib import Path
+ 8 | |
+ 9 | | from successors.frem_portfolio_v1.engine import (
+10 | |     Forecast, backtest, ensemble, external_forecasts, laura_path, paired_interval,
+11 | |     rebalance, relative_wealth, target_weights,
+12 | | )
+13 | | from successors.frem_portfolio_v1.evidence import assert_paired, periods, read_predictions, sha256, write
+   | |_________________________________________________________________________________________________________^
+help: Organize imports
+   |
+9  | from successors.frem_portfolio_v1.engine import (
+   -     Forecast, backtest, ensemble, external_forecasts, laura_path, paired_interval,
+   -     rebalance, relative_wealth, target_weights,
+10 +     Forecast,
+11 +     backtest,
+12 +     ensemble,
+13 +     external_forecasts,
+14 +     laura_path,
+15 +     paired_interval,
+16 +     rebalance,
+17 +     relative_wealth,
+18 +     target_weights,
+19 | )
+   |
+
+Found 14 errors.
+[*] 1 fixable with `--fix` (13 unsafe fixes available with `--fix --unsafe-fixes`).

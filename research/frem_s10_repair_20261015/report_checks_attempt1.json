@@ -1,0 +1,1 @@
+{"status":"FAILED_RETAINED","ruff":"I001 import ordering in test_report_audit.py","mypy":"15 errors: reused loop variable inferred UtilitySummary then AblationComparison; analogous test loop; dynamically typed replace kwargs rejected","source_scope":"analysis/report.py and tests/test_report_audit.py","market_execution":false}

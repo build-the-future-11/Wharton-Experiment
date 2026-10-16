@@ -1,0 +1,123 @@
+{
+  "recorded_at": "2026-10-15T14:31:56.686298+00:00",
+  "claims": [
+    {
+      "claim": "Primary wealth and loss attribution",
+      "status": "VERIFIED_SAVED_OUTPUT_ARITHMETIC",
+      "values": {
+        "initial_nav": 100000.0,
+        "terminal_wealth": 98745.27368214123,
+        "gross_dollar_contribution": -444.48478740617793,
+        "fees": 810.2415304526493,
+        "asset_contributions": {
+          "GLD": -1921.7848222992725,
+          "SPY": 6988.595719761139,
+          "TLT": -5511.295684868044
+        },
+        "annual": {
+          "2020": {
+            "periods": 50,
+            "start_nav": 100000.0,
+            "end_nav": 100990.4021043261,
+            "asset_contributions": {
+              "GLD": -492.67851621683076,
+              "SPY": 1161.720697778319,
+              "TLT": 653.10758860018
+            },
+            "fees": 331.74766583559995,
+            "net_return": 0.009904021043261046,
+            "average_risky_weight": 0.6570550935561988
+          },
+          "2021": {
+            "periods": 52,
+            "start_nav": 100990.4021043261,
+            "end_nav": 108414.3867553649,
+            "asset_contributions": {
+              "GLD": -575.275396075127,
+              "SPY": 8599.70906172002,
+              "TLT": -469.65812868130706
+            },
+            "fees": 130.79088592479096,
+            "net_return": 0.07351178425222638,
+            "average_risky_weight": 0.6958761557617499
+          },
+          "2022": {
+            "periods": 51,
+            "start_nav": 108414.3867553649,
+            "end_nav": 98745.27368214123,
+            "asset_contributions": {
+              "GLD": -853.8309100073147,
+              "SPY": -2772.8340397371994,
+              "TLT": -5694.745144786917
+            },
+            "fees": 347.7029786922584,
+            "net_return": -0.08918662331265914,
+            "average_risky_weight": 0.5571271923334858
+          }
+        }
+      },
+      "raw": "outputs/frem_s8_2020_2022_20261014_attempt1/economics.json",
+      "analysis": "research/restart_20261015/attribution_attempt5/ATTRIBUTION.json",
+      "table": "research/restart_20261015/attribution_attempt5/REPORT.md",
+      "limitation": "No causal effect or independent market-price reconstruction."
+    },
+    {
+      "claim": "240 strategy ledgers and 36720 periods reconcile",
+      "status": "VERIFIED_SAVED_OUTPUT_ARITHMETIC",
+      "values": {
+        "saved_ledgers_verified": 240,
+        "period_records_verified": 36720,
+        "max_absolute_accounting_error": 8.294591680169106e-10
+      },
+      "raw": "outputs/frem_s8_2020_2022_20261014_attempt1/economics.json",
+      "analysis": "research/restart_20261015/attribution_attempt5/RECEIPT.json",
+      "table": "research/restart_20261015/REPORT.md",
+      "limitation": "Does not include 12 benchmark ledgers in this new audit."
+    },
+    {
+      "claim": "Predictive improvement inconclusive and below practical margin",
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE",
+      "values": {
+        "6": {
+          "status": "DESCRIPTIVE_DEPENDENT_DATE_INTERVAL",
+          "mean": 0.0013674996853025958,
+          "interval95": [
+            -0.0037489799298092044,
+            0.005494434960005422
+          ],
+          "block_dates": 6,
+          "scope": "Conditional development comparison, not confirmatory significance or a causal effect"
+        },
+        "12": {
+          "status": "DESCRIPTIVE_DEPENDENT_DATE_INTERVAL",
+          "mean": 0.0013674996853025958,
+          "interval95": [
+            -0.003185569058352858,
+            0.005202727069774156
+          ],
+          "block_dates": 12,
+          "scope": "Conditional development comparison, not confirmatory significance or a causal effect"
+        }
+      },
+      "raw": "research/frem_s8_20261014/SUMMARY.json",
+      "analysis": "research/restart_20261015/attribution_attempt5/ATTRIBUTION.json",
+      "table": "research/restart_20261015/REPORT.md",
+      "limitation": "Descriptive dependent-date development intervals, not confirmatory evidence."
+    },
+    {
+      "claim": "Mathematical references and reader integrity checks pass",
+      "status": "LOCAL_ENGINEERING_ONLY",
+      "raw": "tests/restart/test_restart_audit.py",
+      "analysis": "research/restart_20261015/tests_attempt5.log",
+      "table": "research/restart_20261015/MATHEMATICAL_CONTRACT.md",
+      "limitation": "No alpha, probability calibration or external reproduction claim."
+    },
+    {
+      "claim": "Superior new model, novelty, protected success, independent reproduction and calibrated client funding",
+      "status": "NOT_ESTABLISHED",
+      "raw": null,
+      "analysis": "research/restart_20261015/CHECKPOINTS.json",
+      "table": "research/restart_20261015/REPORT.md"
+    }
+  ]
+}

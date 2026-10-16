@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "snapshot_files_verified": 122,
+  "unchanged_scientific_environment_contracts": [
+    "successors/frem_s10/uv.lock",
+    "successors/frem_s10/pyproject.toml",
+    "successors/frem_s10/src/frem_s10/science.json",
+    "successors/frem_s10/MANIFEST.in"
+  ],
+  "old_production_plan_unchanged": true,
+  "scope": "Original source/canonical snapshots and specified current contracts; not a recursive re-audit of every historical result"
+}

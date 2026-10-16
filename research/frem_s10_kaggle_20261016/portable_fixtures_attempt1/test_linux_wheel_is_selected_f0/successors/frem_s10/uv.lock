@@ -1,0 +1,4 @@
+[[package]]
+name="numpy"
+version="2.5.4"
+wheels=[{url="https://invalid.test/numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",hash="sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}]

@@ -1,0 +1,10 @@
+C901 `_validate_decisions` is too complex (11 > 10)
+   --> successors/frem_s10/src/frem_s10/experiment/readback.py:371:5
+    |
+371 | def _validate_decisions(cell: CellResult, *, complete: bool) -> None:
+    |     ^^^^^^^^^^^^^^^^^^^
+372 |     events = {event.event_id: event for event in cell.events}
+373 |     if complete and len(cell.decisions) != len(cell.scores):
+    |
+
+Found 1 error.

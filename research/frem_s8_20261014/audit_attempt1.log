@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "frozen_files": 35,
+  "predecessor_files_unchanged": 319,
+  "raw_labels_reconciled": 2640,
+  "max_return_error": 2.7755575615628914e-17,
+  "max_feature_error": 0.0,
+  "nll_values_recomputed": 34560,
+  "max_nll_error": 4.440892098500626e-15,
+  "soft_gate_decisions_reconstructed": 1230,
+  "ledgers_verified": 252,
+  "max_accounting_residual": 4.3655745685100555e-11,
+  "2019_inputs_used": false,
+  "protected_access": false,
+  "scope": "Separate saved-output arithmetic and chronology audit; same host, no independent retraining."
+}

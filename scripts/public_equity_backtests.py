@@ -113,7 +113,7 @@ def acquire(cfg: dict, output: Path) -> None:
     )
 
 
-def monthly_prices(chart: dict, cfg: dict):
+def monthly_prices(chart: dict, cfg: dict, *, quarantine_zero_quote_months: bool = False):
     import numpy as np
     import pandas as pd
 
@@ -125,6 +125,21 @@ def monthly_prices(chart: dict, cfg: dict):
     # All filtering precedes outcome aggregation. No current metadata price is read.
     keep = (local >= pd.Timestamp(cfg["source_start"])) & (local < pd.Timestamp(cfg["source_end_exclusive"]))
     series = pd.Series(values[keep], index=local[keep])
+    quarantined_months = []
+    if quarantine_zero_quote_months:
+        # Explicit exploratory-only missing-data policy. No historical holiday
+        # or terminal-loss inference: the WHOLE affected month remains unknown.
+        quotes = chart["indicators"]["quote"][0]
+        placeholder = values == 0
+        for field in ("open", "high", "low", "close", "volume"):
+            quote = np.asarray(quotes[field], dtype=float)
+            if quote.shape != values.shape:
+                raise ValueError("Unaligned raw quote fields")
+            placeholder &= quote == 0
+        quarantined_months = local[keep & placeholder].to_period("M").unique().tolist()
+        # Only the exact all-zero rows bypass the strict invalid-price check.
+        # A different invalid row in that same month must still fail.
+        series.iloc[np.flatnonzero(placeholder[keep])] = np.nan
     if np.isinf(series).any() or (series.dropna() <= 0).any():
         raise ValueError(
             "Nonpositive/invalid prices: terminal losses require a different model; never drop them"
@@ -133,6 +148,9 @@ def monthly_prices(chart: dict, cfg: dict):
     months = series.index.to_period("M")
     final_rows = ~months.duplicated(keep="last")
     result = pd.Series(series.to_numpy()[final_rows], index=months[final_rows])
+    for month in quarantined_months:
+        result.loc[month] = np.nan
+    result.attrs["quarantined_zero_quote_months"] = [str(month) for month in quarantined_months]
     if result.empty:
         raise ValueError("No pre-protected history")
     result = result.reindex(pd.period_range(result.index.min(), result.index.max(), freq="M"))
@@ -170,7 +188,7 @@ def build_research_windows(prices: dict, context: int):
                 continue
             target = price.index[j]
             decision = (target - 1).start_time.tz_localize("UTC").value
-            maturity = ((target + 1).start_time.tz_localize("UTC") + pd.Timedelta(days=2)).value
+            maturity = ((target + 1).start_time.tz_localize("UTC") + np.timedelta64(2, "D")).value
             records.append((decision, asset_id, maturity, x, future, float(returns.iloc[j]), str(target)))
         coverage[symbol] = {
             "first_month": str(price.index.min()),

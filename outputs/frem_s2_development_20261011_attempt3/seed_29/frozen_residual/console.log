@@ -1,0 +1,1 @@
+{"model": "frozen_residual", "seed": 29, "mean_nll": {"frozen_residual": -0.5964301373533334, "frozen_no_memory": -0.5964301373533334}}

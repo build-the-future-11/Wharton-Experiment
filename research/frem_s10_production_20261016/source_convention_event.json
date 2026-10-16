@@ -1,0 +1,20 @@
+{
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "Production replay requires externally grounded session closes. Original Yahoo daily bars provide session openings, not observed trade or vendor-availability timestamps. Prior source admission was incomplete.",
+  "hypothesized_cause": "The prior engineering fixtures did not establish a complete historical session clock for the real pre-2017 sources.",
+  "change": "Prospectively use exact 2005-2016 session opens and scheduled closes extracted from the pinned exchange_calendars XNYS resource, subject to exact equality of all asset session dates and source-opening timestamps. This is a scheduled exchange clock convention within retrospective development, not a claim of observed execution latency or historical point-in-time data availability.",
+  "calendar_identity": "8f449c75bff8ada21ba7d13ea09b1557862c0cb31f3f3c80aa110f5bfa7ddae1",
+  "calendar_source_commit": "5dfce66a1f5b90d3ee658e432518b35d79cbab5c",
+  "calendar_csv_sha256": "5f91ec537dd8672130d41f2796a194f5b2c1733dfe79191af8593d80600fb3cc",
+  "decision": "research/frem_s10_production_20261016/source_convention_decision.json",
+  "acquisition": "research/frem_s10_production_20261016/data_provenance/calendar_acquisition.json",
+  "limitations": ["Community-maintained historical schedule, not exchange-issued certification of every row", "Scheduled quotes and decision/fill offsets, not observed execution or source latency", "Current-vintage retrospective data, not point-in-time confirmation", "Cash dividends on ex-date remain the declared convention, not payment-date settlement", "Redistribution rights not established"],
+  "predicted_effect": "Makes calendar completeness and session timing falsifiable before consumed research execution; no predicted improvement in model scores or wealth.",
+  "discriminating_experiment": "Metadata-only exact source/calendar/date/timestamp matching plus adversarial missing-session, early-close, corruption, decision-identity and scope tests; numerical source preparation only after the separate consumption and resource gates.",
+  "primary_thresholds_changed": false,
+  "protected_access": false,
+  "market_fits": 0,
+  "new_scientific_freeze": false,
+  "result": "PROSPECTIVE_SOURCE_CONVENTION_CLARIFICATION_BEFORE_MARKET_EVALUATION"
+}

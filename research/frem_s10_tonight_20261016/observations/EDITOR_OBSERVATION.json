@@ -1,0 +1,28 @@
+{
+  "schema": "s10-kaggle-ui-observation-v1",
+  "recorded_at": "2026-10-16T07:08:55.833107+00:00",
+  "account": "ryangomez010",
+  "url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-cpu-readiness-2026-10-16/edit",
+  "title": "Wharton S10 CPU readiness 2026-10-16",
+  "visibility_observed": "Private Only collaborators can view this notebook",
+  "editor": "Editor Loading",
+  "disabled_controls": [
+    "Import Notebook",
+    "Start session",
+    "Run All",
+    "Run current cell"
+  ],
+  "retry": "One reload retained same blocker",
+  "accelerator_action": "Selected None via Settings / Accelerator",
+  "active_events_observed": 0,
+  "source_uploaded": false,
+  "cloud_commands_executed": 0,
+  "cloud_sessions_started": 0,
+  "observed_gpu_options": [
+    "GPU T4 x2 disabled",
+    "TPU v5e-8 disabled"
+  ],
+  "claim_limit": "Draft title and private setting only; no content import or execution/persistence receipt",
+  "screenshot": "observations/EDITOR_BLOCKED.jpg",
+  "user_scope_clarification": "Continue Wharton/S10 in this workspace"
+}

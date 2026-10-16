@@ -1,0 +1,1 @@
+{"consumption":{"path":"pilot-consumed.json","sha256":"d79c5708f97efd3476454a20385c9afa0d01a741beb1472eb21283862e6a6bac"},"declaration_sha256":"0000000000000000000000000000000000000000000000000000000000000000","evidence_scope":"GENERATED_ENGINEERING","operation":"prepare-precision","precision_status":"PRECISION_PASS","schema":"s10-precision-completion-v1","state":"COMPLETE"}

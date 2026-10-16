@@ -1,0 +1,168 @@
+{
+  "status": "COMPLETE",
+  "model": "legacy_no_memory",
+  "seed": 29,
+  "metrics": {
+    "legacy_no_memory": {
+      "rows": 437,
+      "utc_dates": 19,
+      "mean_nll": -0.4222098544118548,
+      "nll": -0.4222098544118548,
+      "mean_crps": 0.07023938552087165,
+      "mse": 0.01465767715424086,
+      "mae": 0.09197895496522802,
+      "brier_up": 0.3102072938311973,
+      "direction_accuracy": 0.4553775743707094,
+      "pooled_mean_nll": -0.42220985441185477,
+      "primary_weighting": "equal UTC-date weight, equal asset weight within date",
+      "calibration": {
+        "brier_score": 0.3102072938311972,
+        "ece": 0.25074910007451745,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.30000000000000004,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.30000000000000004,
+            "upper": 0.4,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6000000000000001,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.6000000000000001,
+            "upper": 0.7000000000000001,
+            "count": 174,
+            "mean_probability": 0.6758437603914461,
+            "event_frequency": 0.42528735632183906
+          },
+          {
+            "lower": 0.7000000000000001,
+            "upper": 0.8,
+            "count": 263,
+            "mean_probability": 0.7261617582678802,
+            "event_frequency": 0.4752851711026616
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "count": 0,
+            "mean_probability": null,
+            "event_frequency": null
+          }
+        ],
+        "ece_is_not_a_proper_score": true
+      },
+      "intervals": {
+        "0.5": {
+          "nominal": 0.5,
+          "coverage": 0.26315789473684215,
+          "mean_width": 0.07389310422662371,
+          "mean_interval_score": 0.31397583835223003
+        },
+        "0.8": {
+          "nominal": 0.8,
+          "coverage": 0.5148741418764303,
+          "mean_width": 0.1534436281543357,
+          "mean_interval_score": 0.5111307690249002
+        },
+        "0.95": {
+          "nominal": 0.95,
+          "coverage": 0.7780320366132722,
+          "mean_width": 0.27973912855043376,
+          "mean_interval_score": 0.8831270944081204
+        }
+      },
+      "calibration_weighting": "reliability bins and PIT counts pool individual observations",
+      "rank_correlation": {
+        "mean_over_defined_dates": -0.000780112336176399,
+        "defined_dates": 19,
+        "undefined_dates": 0,
+        "definition": "Spearman correlation of per-asset date-mean forecasts and outcomes; at least three assets and nonconstant ranks required",
+        "independent_sample_p_value": null
+      },
+      "pit_histogram": {
+        "counts": [
+          160,
+          47,
+          32,
+          23,
+          18,
+          24,
+          24,
+          18,
+          39,
+          52
+        ],
+        "edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.30000000000000004,
+          0.4,
+          0.5,
+          0.6000000000000001,
+          0.7000000000000001,
+          0.8,
+          0.9,
+          1.0
+        ],
+        "independent_sample_p_value": null
+      },
+      "crps_method": "96-node deterministic quantile quadrature",
+      "forecast_units": "cumulative base-currency log total return",
+      "distribution_note": "scale is Student-t scale, not standard deviation; no finite exponential moment",
+      "performance_claim": "scores describe supplied observations only; they do not establish future profitability",
+      "prediction_sha256": "9e89cb94edbe32830d51d4fe902b788c1802bf65e920bfd2e14e2c00ef92b3d4",
+      "prediction_path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/outputs/frem_s2_development_20261011_attempt3/seed_29/legacy_no_memory/legacy_no_memory_predictions.csv"
+    }
+  },
+  "wall_seconds": 4.058352542022476,
+  "process_peak_rss_bytes": 423313408,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "torch": "2.14.1"
+  },
+  "scope": "Exploratory retrospective sample of 24 currently listed equities across 12 listing markets; not all-world or survivorship-free evidence",
+  "protected_outcomes_accessed": false
+}

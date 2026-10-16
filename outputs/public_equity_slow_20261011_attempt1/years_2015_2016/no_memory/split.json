@@ -1,0 +1,181 @@
+{
+  "name": "years_2015_2016",
+  "included_stocks": [
+    "0005.HK",
+    "0700.HK",
+    "6758.T",
+    "7203.T",
+    "AAPL",
+    "BHP.AX",
+    "BNP.PA",
+    "BP.L",
+    "CBA.AX",
+    "DTE.DE",
+    "ENB.TO",
+    "HSBA.L",
+    "JPM",
+    "NESN.SW",
+    "NOVN.SW",
+    "PETR4.SA",
+    "RY.TO",
+    "SAN.PA",
+    "SAP.DE",
+    "VALE3.SA"
+  ],
+  "excluded_stocks": {
+    "2317.TW": {
+      "reasons": [
+        "incomplete target-month history; no stitching over gaps"
+      ],
+      "train_validation_test_rows": [
+        164,
+        10,
+        12
+      ],
+      "missing_target_months": [
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-04",
+        "2016-05",
+        "2016-06",
+        "2016-07",
+        "2016-08",
+        "2016-09",
+        "2016-10",
+        "2016-11",
+        "2016-12"
+      ]
+    },
+    "2330.TW": {
+      "reasons": [
+        "incomplete target-month history; no stitching over gaps"
+      ],
+      "train_validation_test_rows": [
+        140,
+        10,
+        12
+      ],
+      "missing_target_months": [
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-04",
+        "2016-05",
+        "2016-06",
+        "2016-07",
+        "2016-08",
+        "2016-09",
+        "2016-10",
+        "2016-11",
+        "2016-12"
+      ]
+    },
+    "INFY.NS": {
+      "reasons": [
+        "incomplete target-month history; no stitching over gaps"
+      ],
+      "train_validation_test_rows": [
+        164,
+        10,
+        1
+      ],
+      "missing_target_months": [
+        "2015-02",
+        "2015-03",
+        "2015-04",
+        "2015-05",
+        "2015-06",
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12",
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-04",
+        "2016-05",
+        "2016-06",
+        "2016-07",
+        "2016-08",
+        "2016-09",
+        "2016-10",
+        "2016-11",
+        "2016-12"
+      ]
+    },
+    "RELIANCE.NS": {
+      "reasons": [
+        "incomplete target-month history; no stitching over gaps"
+      ],
+      "train_validation_test_rows": [
+        164,
+        10,
+        1
+      ],
+      "missing_target_months": [
+        "2015-02",
+        "2015-03",
+        "2015-04",
+        "2015-05",
+        "2015-06",
+        "2015-07",
+        "2015-08",
+        "2015-09",
+        "2015-10",
+        "2015-11",
+        "2015-12",
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-04",
+        "2016-05",
+        "2016-06",
+        "2016-07",
+        "2016-08",
+        "2016-09",
+        "2016-10",
+        "2016-11",
+        "2016-12"
+      ]
+    }
+  },
+  "expected_target_months": [
+    "2015-01",
+    "2015-02",
+    "2015-03",
+    "2015-04",
+    "2015-05",
+    "2015-06",
+    "2015-07",
+    "2015-08",
+    "2015-09",
+    "2015-10",
+    "2015-11",
+    "2015-12",
+    "2016-01",
+    "2016-02",
+    "2016-03",
+    "2016-04",
+    "2016-05",
+    "2016-06",
+    "2016-07",
+    "2016-08",
+    "2016-09",
+    "2016-10",
+    "2016-11",
+    "2016-12"
+  ],
+  "validation_start_ns": 1385856000000000000,
+  "evaluation_decision_start_ns": 1417392000000000000,
+  "max_training_label_ns": 1383436800000000000,
+  "max_validation_label_ns": 1414972800000000000,
+  "row_counts": [
+    2950,
+    196,
+    480
+  ],
+  "exclusion_policy": "Predetermined completeness/coverage only; no outcome-based exclusions"
+}

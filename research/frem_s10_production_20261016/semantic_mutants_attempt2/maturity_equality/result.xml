@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="1.813" timestamp="2026-10-16T08:25:47.458927+05:30" hostname="Ryans-Macbook-Air.local"><testcase classname="tests.test_model_audit" name="test_current_target_has_no_issuance_input_and_feedback_is_delayed" time="0.316"><failure message="Failed: DID NOT RAISE &lt;class 'frem_s10.errors.ChronologyError'&gt;">def test_current_target_has_no_issuance_input_and_feedback_is_delayed() -&gt; None:
+        first = first_transition()
+        issued = first.batch.get("contextual_stack")
+        target = record(70)
+&gt;       with pytest.raises(ChronologyError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE &lt;class 'frem_s10.errors.ChronologyError'&gt;
+
+tests/test_model_audit.py:92: Failed</failure></testcase></testsuite></testsuites>

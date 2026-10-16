@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-13T16:52:18.761435+00:00",
+  "samples": [
+    {
+      "available_mib": 157.328125,
+      "pageouts": 17382
+    },
+    {
+      "available_mib": 133.546875,
+      "pageouts": 17382
+    },
+    {
+      "available_mib": 87.625,
+      "pageouts": 17448
+    }
+  ],
+  "reasons": [
+    "RESOURCE_ADMISSION_FAILED: 512MiB floor or pageouts",
+    "MISSING_ADMITTED_WINDOW_DATA_AND_MANIFEST",
+    "MISSING_FROZEN_DEVELOPMENT_PROTOCOL"
+  ],
+  "status": "BLOCKED_BEFORE_SCIENTIFIC_IMPORT",
+  "market_fits_started": 0,
+  "protected_access": false
+}

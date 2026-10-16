@@ -1,0 +1,30 @@
+{
+  "decision_id": "PUBLIC-SIX-WINDOW-SLOW-RESULT-20261011",
+  "observation": "All 24 declared public cells completed; FREM lower date-balanced NLL than no-memory in four windows and higher in 2020/2022. Unadjusted intervals exclude zero in great_recession, recovery and years_2015_2016 only.",
+  "decision": "Accept mixed exploratory evidence without retuning or repeating completed windows. Preserve earlier FREM-S2 zero-memory result and all predecessors.",
+  "result": {
+    "status": "COMPLETE_VERIFIED",
+    "completed_cells": 24,
+    "folds": 6,
+    "tests_passed": 194,
+    "prediction_rows_verified": 8684,
+    "max_nll_reconstruction_error": 1.9984014443252818e-15,
+    "source_hashes_verified": true,
+    "maximum_sampled_model_rss_mib": 386.65625,
+    "summed_model_worker_seconds": 489.05448449900723,
+    "all_workers_exit_zero": true,
+    "protected_outcomes_accessed": false,
+    "summary": "outputs/public_equity_slow_20261011_attempt1/summary.json"
+  },
+  "limitations": [
+    "Yahoo histories are retrieved today and may contain revisions and retrospective adjustments.",
+    "Adjusted-close returns are provider-adjusted return proxies; raw action reconciliation and historical publication timestamps are not certified.",
+    "Only present-day named listings are selected; delisted and bankrupt companies are missing.",
+    "No FX conversion is performed. Local-currency stock ledgers cannot be combined into an investable global portfolio.",
+    "Single optimization seed and five epochs support a bounded exploratory comparison only.",
+    "Monthly crisis blocks are short and correlated; bootstrap intervals are exploratory and multiple crisis comparisons are unadjusted.",
+    "Protected 2025 onward price observations are excluded. This study does not consume or amend the canonical confirmatory freeze."
+  ],
+  "status": "COMPLETE_EXPLORATORY_ONLY",
+  "created_at": "2026-10-11T14:47:11.957652+00:00"
+}

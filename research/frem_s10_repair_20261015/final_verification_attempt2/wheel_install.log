@@ -1,0 +1,11 @@
+Using Python 3.12.14 environment at: research/frem_s10_repair_20261015/final_verification_attempt2/clean_env
+WARN numpy==2.5.4 needs to be downloaded from a registry
+WARN numpy needs to be downloaded from a registry
+  × No solution found when resolving dependencies:
+  ╰─▶ Because numpy==2.5.4 needs to be downloaded from a registry and
+      frem-s10==0.1.0 depends on numpy==2.5.4, we can conclude that
+      frem-s10==0.1.0 cannot be used.
+      And because only frem-s10==0.1.0 is available and you require frem-s10,
+      we can conclude that your requirements are unsatisfiable.
+
+hint: Packages were unavailable because the network was disabled. When the network is disabled, registry packages may only be read from the cache.

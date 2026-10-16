@@ -1,0 +1,12 @@
+{
+  "observation": "Real Yahoo SPY/TLT/GLD price intake succeeded; all 1770 rows reconciled and six new engineering tests passed. No market fits occurred.",
+  "hypothesized_cause": "The remaining launch blocker is compute access/headroom, not absence of an executable input contract for this narrow retrospective study.",
+  "change": "Freeze S6-R1 ETF price study with all 24 configurations including XGBoost, exact folds, source/data hashes, both date blocks and explicit limited precision. Add a separate portable Linux/macOS launcher; preserve original S6 sources and all predecessor evidence.",
+  "predicted_effect": "No performance prediction. The frozen experiment can measure whether the proposed mechanisms help or hurt once an admitted host is accessible.",
+  "discriminating_experiment": "research/frem_s6_real_20261014/freeze2/protocol.json; complete every seed and cell before interpretation; keep any negative result and use a new freeze and unconsumed validation period for material improvements.",
+  "status": "REAL_DATA_AND_PROTOCOL_READY_COMPUTE_ACCESS_BLOCKED",
+  "freeze_history": "freeze1 retained; freeze2 adds portable executable identities before any fit or model outcome inspection. Scientific cells and dataset unchanged.",
+  "compute": "SSH timed out; GCP credentials expired (invalid_grant); HF Jobs UNAVAILABLE; local resource gate 96-161 MiB failed the unchanged 512 MiB floor.",
+  "scope": "Current-vintage price-only retrospective benchmark; not point-in-time certified, not continuous dividend-inclusive wealth, not a global mandate, no Laura allocation or funding probability.",
+  "protected_access": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE_VERIFIED",
+  "completed_cells": 24,
+  "folds": 6,
+  "tests_passed": 194,
+  "prediction_rows_verified": 8684,
+  "max_nll_reconstruction_error": 1.9984014443252818e-15,
+  "source_hashes_verified": true,
+  "maximum_sampled_model_rss_mib": 386.65625,
+  "summed_model_worker_seconds": 489.05448449900723,
+  "all_workers_exit_zero": true,
+  "protected_outcomes_accessed": false,
+  "summary": "outputs/public_equity_slow_20261011_attempt1/summary.json"
+}

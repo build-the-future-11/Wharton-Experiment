@@ -1,0 +1,1 @@
+{"dividends": {"a": {"amount": 0.2, "date": 1480084200}}, "rows": [{"close": 11, "open": 10, "timestamp": 1104762600}, {"close": 11, "open": 12, "timestamp": 1480084200}, {"close": null, "open": "protected sentinel", "timestamp": 1483453800}], "split_events": {}, "symbol": "TLT"}

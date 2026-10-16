@@ -1,0 +1,53 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "pytest",
+        "-q",
+        "successors/frem_s10/tests/test_preservation_audit.py"
+      ],
+      "exit": 1,
+      "seconds": 10.420710916019743,
+      "log_sha256": "1d7beab1be6ea452eab3972b6283287d2eed3c6975cd8da2105ce54f6004c855"
+    },
+    {
+      "argv": [
+        "ruff",
+        "check",
+        "successors/frem_s10/src/frem_s10/runtime/preservation.py",
+        "successors/frem_s10/tests/test_preservation_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 0.5639637499989476,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "argv": [
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/src/frem_s10/runtime/preservation.py",
+        "successors/frem_s10/tests/test_preservation_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 0.08051641599740833,
+      "log_sha256": "3bc53bf3e981a98a34a852e175bf9b77af841edea74fca595d9aedcbaf9a4938"
+    },
+    {
+      "argv": [
+        "mypy",
+        "--strict",
+        "successors/frem_s10/src/frem_s10/runtime/preservation.py",
+        "successors/frem_s10/tests/test_preservation_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 46.24044683299144,
+      "log_sha256": "f9b031e5c45aa702cd4fef028d465551cb20a2c4698e0913c7b00766b20ac4d8"
+    }
+  ],
+  "files": {
+    "successors/frem_s10/src/frem_s10/runtime/preservation.py": "cc14ba9f395538ea919fcb599a0be4a315c3fac69dd73a0dd5f5c02c86f98458",
+    "successors/frem_s10/tests/test_preservation_audit.py": "bde54e7a99584177bdf9c3a05b88659f15cd68fb07a64321bcdceb573c2eb8b1"
+  },
+  "scope": "HASH_ONLY_GENERATED_PRESERVATION_CHECKS"
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "TEAM_POLICY_PROPOSAL_NOT_ADVISOR_APPROVED_OR_TRADE_READY",
+  "as_of": "2026-10-13",
+  "source": {
+    "kind": "user_supplied_full_competition_case",
+    "received_date": "2026-10-13",
+    "official_amendments_verified": false
+  },
+  "currency": "USD",
+  "year_zero": 2026,
+  "contributions": [
+    {
+      "date": "2027-01-01",
+      "amount": 300000
+    },
+    {
+      "date": "2028-01-01",
+      "amount": 150000
+    }
+  ],
+  "operating_liabilities": {
+    "first_payment": "2033-01-01",
+    "last_payment": "2042-01-01",
+    "annual_amount": 50000,
+    "count": 10,
+    "inflation_adjusted": false,
+    "outside_funding_allowed": false
+  },
+  "cashflow_date_convention": "Beginning-year accounting dates. Implementation must fund actual outgoing banking deadlines from proceeds available beforehand.",
+  "case_constraints": {
+    "living_expenses_outside_portfolio": true,
+    "additional_pre2033_cashflows": false,
+    "wins_pnl_in_long_term_projection": false,
+    "facility_cost_estimate_required": false,
+    "separate_contingency_endowment_required": false,
+    "personal_and_capital_gains_tax_model_required": false,
+    "taiwan_establishment_legal_model_required": false
+  },
+  "proposed_policy": {
+    "operating_reserve_first": true,
+    "surplus_equity_fraction": "0.60",
+    "total_equity_cap": "0.40",
+    "retained_surplus_fraction_minimum": "0.20",
+    "facility_surplus_fraction_maximum": "0.80",
+    "joint_all_payments_funding_target": "0.99",
+    "achieved_or_calibrated_funding_probability": null,
+    "review_frequency": "quarterly and on each contribution or material liability/custody change",
+    "leverage": false,
+    "short_selling": false,
+    "derivatives": false,
+    "individual_equity_selection": false,
+    "positive_facility_pledge_before_verified_reserve_coverage": false,
+    "total_equity_cap_basis": "NAV after incremental implementation costs, stricter than gross NAV cap"
+  },
+  "research_candidates": [
+    {
+      "instrument": "Individual nominal USD Treasury cash flows, including STRIPS where available",
+      "role": "dated operating match",
+      "current_competition_eligibility": null
+    },
+    {
+      "instrument": "VT",
+      "role": "diversified global equity from surplus only",
+      "current_competition_eligibility": null
+    },
+    {
+      "instrument": "short USD Treasury bills or SGOV where eligible",
+      "role": "short liquidity, not a locked long-term reserve yield",
+      "current_competition_eligibility": null
+    }
+  ],
+  "verified_current_approved_instruments": [],
+  "current_execution_prices": null,
+  "s6_model_based_recommendation": false,
+  "accepted_user_definitions": {
+    "mathematical_proofing_and_exampling": "checked invariants and counterexamples",
+    "rebound_ripples": "bounded delayed quantized gradient updates",
+    "network_divergence": "interacting expert branches",
+    "dual": "prediction and portfolio planning"
+  }
+}

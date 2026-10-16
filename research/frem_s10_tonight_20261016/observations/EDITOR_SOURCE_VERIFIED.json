@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-16T07:35:26.339478+00:00",
+  "source_method": "Supported Kaggle code-editor text input and full Select All/Copy readback",
+  "private_notebook": "https://www.kaggle.com/code/ryangomez010/wharton-s10-cpu-readiness-2026-10-16/edit",
+  "characters": 853453,
+  "editor_readback_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+  "matches_local_transport": true,
+  "target_notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+  "accelerator": "None explicitly selected",
+  "session_observed": "off (run a cell to start)",
+  "source_pasted": true,
+  "notebook_filechooser_imported": false,
+  "extensions_or_permissions_changed": false,
+  "next_action": "Run the reviewed single interactive CPU metadata/persistence probe; no model execution permitted."
+}

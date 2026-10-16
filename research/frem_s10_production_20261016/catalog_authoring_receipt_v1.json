@@ -1,0 +1,28 @@
+{
+  "catalog_ref": {
+    "path": "research/frem_s10_production_20261016/CATALOG_CANDIDATE_PLAN.json",
+    "sha256": "1c19ff8bf8763c2f06b685b1a185b997ade56983848f81713236d62df755af93"
+  },
+  "current_full_source_suite": "PENDING_RESOURCE_ADMISSION",
+  "current_numerical_boundary_closure": "PENDING_RESOURCE_ADMISSION",
+  "prior_catalog_unchanged": true,
+  "prior_receipts_preserved": true,
+  "schema": "s10-catalog-authoring-v1",
+  "scientific_execution": "NOT_RUN",
+  "scope": "GENERATED_ENGINEERING_AUTHORING_AND_SELECTED_METADATA_TESTS",
+  "selected_metadata_observations": "catalog_metadata_observations_attempt2.json",
+  "selected_metadata_tests_passed": 22,
+  "source_sha256": {
+    "src/frem_s10/runtime/catalog.py": "661090b64cc6cf498b4d59e7eba985db324e91168be3965b94e52246cae1a5cb",
+    "tests/conftest.py": "3ba0480621257865571f24a49804059117055acf73a282969b960eb91fd24d5f",
+    "tests/test_catalog_boundaries_audit.py": "fb2abdc4d9f8e86d33c1843eb1c2bb80a4267426d414c9f9c1c67c6e7fcaa4f1",
+    "tests/test_catalog_critical_audit.py": "5f966624e92726f1e29b2c065f25da1df706e6be54cb3ce29014aa8ef4a60280",
+    "tests/test_catalog_faults_audit.py": "80e61454f4f227a3b7e40033f24fffd26a21a64db7ccf66e7c44a84f29461a23",
+    "tests/test_catalog_readiness_audit.py": "6e078e39d41f88a2763837c1a8f4b14b6f23c3c7cf472b2ca63f5d3063f6f963"
+  },
+  "static_receipts": [
+    "catalog_closure_mypy_attempt3.log",
+    "catalog_closure_lint_attempt3.log",
+    "catalog_closure_format_attempt3.log"
+  ]
+}

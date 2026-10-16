@@ -1,0 +1,13 @@
+B007 Loop control variable `iteration` not used within loop body
+  --> successors/frem_s10/src/frem_s10/portfolio/benchmarks.py:46:9
+   |
+44 |     multiplier = 0.0
+45 |     residual = float("inf")
+46 |     for iteration in range(1, 101):
+   |         ^^^^^^^^^
+47 |         multiplier = (lower + upper) * 0.5
+48 |         weights = np.clip(z - multiplier, 0.0, 0.4)
+   |
+help: Rename unused `iteration` to `_iteration`
+
+Found 1 error.

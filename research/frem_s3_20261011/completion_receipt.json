@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE_EXPLORATORY_PRIMARY_MEMORY_NOT_SUPPORTED",
+  "created_at": "2026-10-11T16:30:37.919632+00:00",
+  "report": "research/frem_s3_20261011/REPORT.md",
+  "run_directory": "outputs/frem_s3_20261011_attempt1",
+  "regression_tests_passed": 217,
+  "new_tests": 19,
+  "learned_fits": 24,
+  "constant_cells": 12,
+  "public_variant_cells": 114,
+  "mechanism_cells": 15,
+  "mechanism_arms": 14,
+  "primary_gains": {
+    "fresh_2023": {
+      "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+      "estimate": -0.014116494092332047,
+      "ci": [
+        -0.03645502585680375,
+        0.006302281951330126
+      ],
+      "months": 12,
+      "paired_rows": 144,
+      "settings": {
+        "block_months": 3,
+        "repetitions": 2000,
+        "seed": 1901,
+        "confidence": 0.95
+      },
+      "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+      "p_value": 0.02848575712143928,
+      "null_effect": 0.01,
+      "holm_p_value": 0.20789605197401298
+    },
+    "fresh_2024": {
+      "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+      "estimate": 0.007006371212704009,
+      "ci": [
+        -0.007940276974063376,
+        0.02256118009754681
+      ],
+      "months": 10,
+      "paired_rows": 120,
+      "settings": {
+        "block_months": 3,
+        "repetitions": 2000,
+        "seed": 1901,
+        "confidence": 0.95
+      },
+      "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+      "p_value": 0.7131434282858571,
+      "null_effect": 0.01,
+      "holm_p_value": 1.0
+    }
+  },
+  "no_memory_variant_improves_both_windows": true,
+  "calibration_worsened_both_windows": true,
+  "verification": "research/frem_s3_20261011/verification.json",
+  "protected_outcomes_accessed": false,
+  "canonical_confirmation": "NOT_EXECUTED",
+  "profitability": "UNPROVEN",
+  "old_results_preserved": true
+}

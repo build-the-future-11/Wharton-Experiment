@@ -1,0 +1,229 @@
+{
+  "policy": "equal_weight",
+  "currency": "INR",
+  "terminal_wealth": 73998.88422445141,
+  "net_return": -0.2600111577554859,
+  "max_drawdown": 0.28168326970887747,
+  "fees": 0.0,
+  "traded_notional": 196991.97742231897,
+  "periods": [
+    {
+      "time": 1293840000,
+      "end": 1296518400,
+      "nav_start": 100000.0,
+      "nav_end": 88695.66551207984,
+      "fee": 0.0,
+      "notional": 100000.0,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 45279.21404305143,
+        "RELIANCE.NS": 43416.451469028405
+      },
+      "net_factor": 0.8869566551207984
+    },
+    {
+      "time": 1296518400,
+      "end": 1298937600,
+      "nav_start": 88695.66551207984,
+      "nav_end": 89148.62404570749,
+      "fee": 0.0,
+      "notional": 1862.7625740230214,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 42632.36239279438,
+        "RELIANCE.NS": 46516.26165291312
+      },
+      "net_factor": 1.005106884660175
+    },
+    {
+      "time": 1298937600,
+      "end": 1301616000,
+      "nav_start": 89148.62404570749,
+      "nav_end": 96702.84304253201,
+      "fee": 0.0,
+      "notional": 3883.899260118742,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 48206.17676242652,
+        "RELIANCE.NS": 48496.6662801055
+      },
+      "net_factor": 1.0847373594117549
+    },
+    {
+      "time": 1301616000,
+      "end": 1304208000,
+      "nav_start": 96702.84304253201,
+      "nav_end": 88692.90817192743,
+      "fee": 0.0,
+      "notional": 290.4895176789796,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 43353.37250318622,
+        "RELIANCE.NS": 45339.535668741206
+      },
+      "net_factor": 0.9171696030996561
+    },
+    {
+      "time": 1304208000,
+      "end": 1306886400,
+      "nav_start": 88692.90817192743,
+      "nav_end": 86117.79921079577,
+      "fee": 0.0,
+      "notional": 1986.1631655549863,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 42813.28816666383,
+        "RELIANCE.NS": 43304.51104413194
+      },
+      "net_factor": 0.9709660105389721
+    },
+    {
+      "time": 1306886400,
+      "end": 1309478400,
+      "nav_start": 86117.79921079577,
+      "nav_end": 85633.48413056663,
+      "fee": 0.0,
+      "notional": 491.22287746811344,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 44987.976675457,
+        "RELIANCE.NS": 40645.50745510963
+      },
+      "net_factor": 0.9943761326384614
+    },
+    {
+      "time": 1309478400,
+      "end": 1312156800,
+      "nav_start": 85633.48413056663,
+      "nav_end": 80292.11066037085,
+      "fee": 0.0,
+      "notional": 4342.469220347368,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 40837.329425744865,
+        "RELIANCE.NS": 39454.781234625974
+      },
+      "net_factor": 0.9376251763614836
+    },
+    {
+      "time": 1312156800,
+      "end": 1314835200,
+      "nav_start": 80292.11066037085,
+      "nav_end": 71831.67302911225,
+      "fee": 0.0,
+      "notional": 1382.5481911188908,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 33884.579752937214,
+        "RELIANCE.NS": 37947.09327617503
+      },
+      "net_factor": 0.8946292784972915
+    },
+    {
+      "time": 1314835200,
+      "end": 1317427200,
+      "nav_start": 71831.67302911225,
+      "nav_end": 75927.51553190469,
+      "fee": 0.0,
+      "notional": 4062.513523237816,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 38829.93552759956,
+        "RELIANCE.NS": 37097.58000430513
+      },
+      "net_factor": 1.057020007053608
+    },
+    {
+      "time": 1317427200,
+      "end": 1320105600,
+      "nav_start": 75927.51553190469,
+      "nav_end": 84579.05751082243,
+      "fee": 0.0,
+      "notional": 1732.3555232944345,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 43365.35734288303,
+        "RELIANCE.NS": 41213.700167939394
+      },
+      "net_factor": 1.1139447526803687
+    },
+    {
+      "time": 1320105600,
+      "end": 1322697600,
+      "nav_start": 84579.05751082243,
+      "nav_end": 75815.4607168167,
+      "fee": 0.0,
+      "notional": 2151.6571749436334,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 38311.23644344914,
+        "RELIANCE.NS": 37504.22427336756
+      },
+      "net_factor": 0.8963857359975385
+    },
+    {
+      "time": 1322697600,
+      "end": 1325376000,
+      "nav_start": 75815.4607168167,
+      "nav_end": 73998.88422445141,
+      "fee": 0.0,
+      "notional": 807.0121700815798,
+      "weights": {
+        "INFY.NS": 0.5,
+        "RELIANCE.NS": 0.5
+      },
+      "cash": 0.0,
+      "holdings": {
+        "INFY.NS": 40246.02432084815,
+        "RELIANCE.NS": 33752.85990360327
+      },
+      "net_factor": 0.976039498076118,
+      "liquidation_fee": 0.0
+    }
+  ],
+  "defaults": []
+}

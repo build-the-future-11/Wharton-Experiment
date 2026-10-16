@@ -1,0 +1,9 @@
+{
+  "decision_id": "FREM-PORTFOLIO-V1-20261012-RESULT",
+  "observation": "Completed 1424 portfolio comparisons; 0/32 primary cases at least6% uplift; range -2.9566% to +0.3478%. S4 correction zero.",
+  "interpretation": "Valid adverse result for declared fixed policy on exploratory spent survivor histories; no inference of universal failure/success for every possible future framework.",
+  "change": "Close fixed reanalysis without tuning; preserve all incomplete groups and losses; accept pending external source and Laura allocation inputs.",
+  "evidence": "research/frem_portfolio_20261012/COMPLETION_RECEIPT.json",
+  "status": "COMPLETED_TARGET_NOT_MET",
+  "protected_outcomes_accessed": false
+}

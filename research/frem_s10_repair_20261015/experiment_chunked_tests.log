@@ -1,0 +1,4 @@
+..........................................................               [100%]
+58 passed in 15.64s
+
+{"child_peak_rss_bytes": 111394816, "command": ["successors/frem_s10/.venv/bin/python", "-m", "pytest", "-q", "-W", "error", "successors/frem_s10/tests/test_math_audit.py", "successors/frem_s10/tests/test_actions_audit.py", "successors/frem_s10/tests/test_ledger_audit.py", "successors/frem_s10/tests/test_experiment_audit.py"], "elapsed_seconds": 15.989594833998126, "exit_code": 0}

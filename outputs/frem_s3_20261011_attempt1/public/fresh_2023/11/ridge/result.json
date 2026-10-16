@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "name": "ridge",
+  "fold": "fresh_2023",
+  "seed": 11,
+  "base_version": "1dc5bb874707e7a1cb110cc823c0c8d3407398332c290ebe90dc485ce1d8b280",
+  "results": {
+    "off": {
+      "nll": -1.2551162026375617,
+      "sha256": "1f19ee74cf0618d1685d1218cba04a702bce0486d2c828bbc0d5eb3435a7e9c8",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -0.9952185461531258
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.3396371947044923,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

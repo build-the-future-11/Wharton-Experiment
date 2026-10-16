@@ -1,0 +1,17 @@
+test_cauchy_density_at_origin (tests.test_evidence_audit.EvidenceAuditTests.test_cauchy_density_at_origin) ... ok
+test_duplicate_prediction_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_duplicate_prediction_rejected) ... ok
+test_empty_evidence_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_empty_evidence_rejected) ... ok
+test_invalid_distribution_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_invalid_distribution_rejected) ... ok
+test_protected_or_unmatured_observations_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_protected_or_unmatured_observations_rejected) ... ok
+test_scale_jacobian (tests.test_evidence_audit.EvidenceAuditTests.test_scale_jacobian) ... ok
+test_unequal_asset_observation_counts (tests.test_evidence_audit.EvidenceAuditTests.test_unequal_asset_observation_counts) ... ok
+test_wrong_model_or_seed_rejected (tests.test_evidence_audit.EvidenceAuditTests.test_wrong_model_or_seed_rejected) ... ok
+test_annual_section_ignored (tests.test_public_regional_factors.RegionalFactorTests.test_annual_section_ignored) ... ok
+test_excluded_values_not_parsed (tests.test_public_regional_factors.RegionalFactorTests.test_excluded_values_not_parsed) ... ok
+test_missing_duplicate_bad_date_or_nonfinite_rejected (tests.test_public_regional_factors.RegionalFactorTests.test_missing_duplicate_bad_date_or_nonfinite_rejected) ... ok
+test_percent_units_and_market_return (tests.test_public_regional_factors.RegionalFactorTests.test_percent_units_and_market_return) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK

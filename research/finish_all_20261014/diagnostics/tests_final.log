@@ -1,0 +1,18 @@
+test_exposure_is_reconstructed_when_optional_saved_weights_absent (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_exposure_is_reconstructed_when_optional_saved_weights_absent) ... ok
+test_fixed_position_fee_rebate_exact_dollar_identity (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_fixed_position_fee_rebate_exact_dollar_identity) ... ok
+test_invalid_mixture_and_undefined_rank_rejected_or_explicit (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_invalid_mixture_and_undefined_rank_rejected_or_explicit) ... ok
+test_legacy_terminal_liquidation_outside_last_period_is_reconciled (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_legacy_terminal_liquidation_outside_last_period_is_reconciled) ... ok
+test_mixture_moments_include_between_component_variance (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_mixture_moments_include_between_component_variance) ... ok
+test_retrieval_concentration_reduces_effective_support (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_retrieval_concentration_reduces_effective_support) ... ok
+test_retrieval_excludes_unmatured_and_self_and_caps_at_sixty (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_retrieval_excludes_unmatured_and_self_and_caps_at_sixty) ... ok
+test_student_cdf_matches_cauchy_closed_form (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_student_cdf_matches_cauchy_closed_form) ... ok
+test_student_five_cdf_matches_numerical_integral (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_student_five_cdf_matches_numerical_integral) ... ok
+test_wrong_fee_or_unsynchronized_date_fails (test_s8_completion_diagnostics.SavedS8DiagnosticsTests.test_wrong_fee_or_unsynchronized_date_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.006s
+
+OK
+
+Exit code: 0
+

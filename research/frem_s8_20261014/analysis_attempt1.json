@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "research/frem_s8_20261014/analyze.py",
+    "--root",
+    "outputs/frem_s8_2020_2022_20261014_attempt1",
+    "--output",
+    "research/frem_s8_20261014"
+  ],
+  "returncode": 1,
+  "seconds": 0.20474654199642828
+}

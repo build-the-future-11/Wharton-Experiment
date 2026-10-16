@@ -1,0 +1,112 @@
+{
+  "evidence_scope": "GENERATED_ENGINEERING_ONLY",
+  "files": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/distances.py",
+      "sha256": "ff533a62be774383d66b02610c5335ee127790cb5110b7b3016c239444bb02bd"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/fees.py",
+      "sha256": "8e56ac3d1412c70d5c5b6b4deed1a4ede210dd0e31830c91f81b83544b7e5aca"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/probabilities.py",
+      "sha256": "1ae3ca45c567a9daf80fcba6427c947ec8eef6bfd5723789ba650d25f572745b"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/scores.py",
+      "sha256": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/simplex.py",
+      "sha256": "ebfbf5914fdad93684603c1fc6dd13587a2d5697f5fd1864de5ee5210af0f5cd"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/math/utility.py",
+      "sha256": "02cd10108764d552bdbd1854d19032fd51b061a9c52d45161ceb2ef7fc33b533"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/portfolio/actions.py",
+      "sha256": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/portfolio/ledger.py",
+      "sha256": "65f74f601f9cee4d6c545d466331a7282d9d35d4ac625ad46c246d66dbd6d945"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/matrix.py",
+      "sha256": "e7d5d334a831564af897f5606a3dd6826ebea8ac3d6d3fdd39399b2cd5d03a61"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/forecasts.py",
+      "sha256": "44896f61a34651f38a9473ef178b7750738e000c190b493156dd9a7903b888b7"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/replay.py",
+      "sha256": "f896ed7639a5b264b3318dbadb87ed3a5172f03d113922e9e77ebfb07ab72de2"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/evidence.py",
+      "sha256": "d54e7bb5625b81856bb8b0c81ffe6930efcf23faf96cdf22f60dea65a6ec7ac2"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/experiment/artifacts.py",
+      "sha256": "76e532ee6ea6b657a12d291a3d911f4e979a824ca6baa6b0bed05d555ad33b16"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_math_audit.py",
+      "sha256": "5fb2f8568d244c5f44d75f825d497621ad7f0baab91546e7418af32e4b2f729d"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_actions_audit.py",
+      "sha256": "47ddb10b5fe57decb2aef175fa383880fede2b6c131972a73a116d3fa23f163b"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_ledger_audit.py",
+      "sha256": "ee8c17921b0702a265d53c4367f5e927b07f28742d367c9328f08d29a5fe0a9d"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_experiment_audit.py",
+      "sha256": "bb8a37c5139fee7aac5b21da3780ea74fe9418a4884548beff9de489b2f958d7"
+    }
+  ],
+  "kernel_fixture": "all six real causal kernel variants; future-target perturbation and H4maturity/A1 checks; real kernel-to-policy-to-ledger bridge",
+  "limitations": [
+    "No market empirical result or profitability support",
+    "No full market-length/520-atom campaign feasibility claim",
+    "Source rights, timestamp provenance, 512MiB/pageout admission and stage freeze remain caller gates",
+    "No source-reader/market-CLI exposure added",
+    "Every-week mixture solve timing and certificate archival are not yet complete",
+    "Persistent JSON-to-complete-ledger/endpoint reconstruction and final figures/reporting remain incomplete"
+  ],
+  "market_fits_run": false,
+  "market_or_protected_values_read": false,
+  "matrix_fixture": {
+    "accounting": "real exact fee and event ledger",
+    "blocks_per_fold": 2,
+    "forecast_laws": "three-atom constructed immutable tapes",
+    "ledgers": 192,
+    "policy_selector": "real exhaustive declared policy and six benchmark rules",
+    "publication": "all192 cell artifacts plus per-frame tape artifacts, under16MiB"
+  },
+  "quality": {
+    "format_log": "experiment_chunked_format_final.log",
+    "ruff_log": "experiment_chunked_lint_final.log",
+    "strict_mypy_log": "experiment_chunked_mypy_attempt1.log"
+  },
+  "retained_diagnostics": [
+    "experiment_attempt1.log",
+    "experiment_attempt2.log",
+    "experiment_lint_attempt1.log",
+    "experiment_release_lint.log",
+    "experiment_artifacts_lint_attempt2.log"
+  ],
+  "schema": "s10-generated-experiment-engineering-receipt-v1",
+  "tests": {
+    "log": "experiment_chunked_tests.log",
+    "measured_child_peak_rss_bytes": 111394816,
+    "passed": 58,
+    "seconds": 15.64,
+    "warnings": "error"
+  }
+}

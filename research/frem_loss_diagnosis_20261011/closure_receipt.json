@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-11T12:58:37.541812+00:00",
+  "status": "DIAGNOSIS_COMPLETE",
+  "source_hashes_rechecked": 62,
+  "original_run_unchanged": true,
+  "model_code_unchanged": true,
+  "new_model_fits": 0,
+  "protected_outcomes_accessed": false,
+  "report": "research/frem_loss_diagnosis_20261011/REPORT.md",
+  "report_sha256": "1eb70c187d02f910289f3ff119d50e465a923ccbf523214f0a8f3336a0056b2a",
+  "numeric_receipt": "research/frem_loss_diagnosis_20261011/diagnosis.json",
+  "scientific_status": "NOT_EVALUATED",
+  "all_causal_training_reasons_established": false
+}

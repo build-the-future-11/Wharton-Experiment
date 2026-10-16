@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-11",
+  "request": "Execute the full research workflow, as many valid backtests as feasible, and prepare the paper; user subsequently authorized public internet data acquisition and confirmed no licensed data currently available.",
+  "status": "PUBLIC_DATA_AND_REVIEW_PAPER_COMPLETE_MARKET_EXECUTION_BLOCKED",
+  "scientific_status": "NOT_EVALUATED",
+  "arxiv_submission_ready": false,
+  "new_model_cells_started": 0,
+  "canonical_protected_outcomes_accessed": false,
+  "post_2024_regional_numeric_rows_parsed": false,
+  "completed": {
+    "public_regional_files": 7,
+    "public_regional_pre_2025_rows": 3666,
+    "regional_manifest": "data/public_regional_factors_20261011/manifest.json",
+    "prior_equity_sample": "data/public_equity_crises_v1/manifest.json",
+    "retained_frem_cells_independently_scored": 4,
+    "prior_engineering_cells_across_lineages": 10,
+    "new_stdlib_tests": "12 passed in 0.004 seconds",
+    "changed_source_lint": "PASS",
+    "static_validation": "research/completion_20261011/static_verification.json",
+    "paper_pages": 23,
+    "paper_references": 24,
+    "paper": "paper/main.pdf",
+    "source_archive": "paper/release_review_20261011/FREM_v0.2_source_draft.zip",
+    "visual_review": "23 rendered pages inspected; no final overfull boxes or unresolved references"
+  },
+  "retained_failures_this_session": [
+    {
+      "stage": "lint",
+      "detail": "Four style diagnostics in the new audit/test code; corrected with no scientific change."
+    },
+    {
+      "stage": "paper_layout",
+      "detail": "First successful 23-page build had one overfull path; preserved under paper/review_20261011 and corrected with breakable paths in v2."
+    },
+    {
+      "stage": "resource_admission",
+      "receipt": "research/completion_20261011/final_resource_check.json",
+      "detail": "328, 254, 163 MiB free plus speculative; rising pageouts; 512 MiB floor unchanged."
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": 1,
+      "name": "IDEA READY",
+      "status": "PARTIAL",
+      "evidence": "Question and falsifier specified; related financial-memory neighbors added; exhaustive novelty and matched retrieval comparisons incomplete."
+    },
+    {
+      "id": 2,
+      "name": "MODEL SPECIFICATION READY",
+      "status": "DOCUMENTED_REVIEW_INCOMPLETE",
+      "evidence": "Existing mathematical manuscript retained; this session does not certify a full equation/code audit."
+    },
+    {
+      "id": 3,
+      "name": "METHODOLOGY READY",
+      "status": "PROPOSED_NOT_FROZEN",
+      "evidence": "Canonical protocol unchanged; public exploratory campaigns separate."
+    },
+    {
+      "id": 4,
+      "name": "MODEL IMPLEMENTED",
+      "status": "ENGINEERING_VERIFIED_WITH_LIMITS",
+      "evidence": "Historical 163 core tests; source hashes checked; no trained market weights."
+    },
+    {
+      "id": 5,
+      "name": "EXPERIMENT SYSTEM IMPLEMENTED",
+      "status": "PARTIAL",
+      "evidence": "Core synthetic integration complete; six public-equity adapter tests await resource admission; global default/holdings features remain unsupported."
+    },
+    {
+      "id": 6,
+      "name": "RUN READY",
+      "status": "BLOCKED",
+      "evidence": "Missing admitted canonical data; public campaign blocked before imports on memory guard."
+    },
+    {
+      "id": 7,
+      "name": "CONFIRMATORY PROTOCOL FROZEN",
+      "status": "NOT_STARTED",
+      "evidence": "No scientific freeze; canonical protected boundary unchanged."
+    },
+    {
+      "id": 8,
+      "name": "EVIDENCE LOCKED",
+      "status": "ENGINEERING_AUDIT_ONLY",
+      "evidence": "Existing predictions scored independently, source hashes verified; market ablations/robustness/OOD/scaling absent."
+    },
+    {
+      "id": 9,
+      "name": "VERIFIED",
+      "status": "INCOMPLETE",
+      "evidence": "12 small new tests and document compilation pass; no independent clean-environment scientific reproduction."
+    },
+    {
+      "id": 10,
+      "name": "RESEARCH COMPLETE",
+      "status": "BLOCKED_NOT_COMPLETE",
+      "evidence": "No scientific terminal market conclusion; compiled review paper and source package are not submission-ready."
+    }
+  ],
+  "next_admissible_execution": "After stable three-sample headroom >=512 MiB and no pageout growth, run six public-equity tests with one BLAS/OMP thread, then the predeclared 24-cell public-equity crisis matrix into a fresh output directory if tests pass. Canonical development needs admitted point-in-time data. Do not touch the protected tail or retune the retained negative fixture.",
+  "no_background_execution_scheduled": true,
+  "artifact_sha256": {
+    "paper/main.pdf": "5a5f92cab1f542f0f79e9481eef2375a7baa6d0d4f7e9289a0ae36f262e1a1de",
+    "paper/release_review_20261011/FREM_v0.2_source_draft.zip": "03242088b569e7b52195e3531dba31f9371402eea9e979861a471df3bf7135e7",
+    "research/evidence_audit_20261011_v2/audit.json": "03a76ed20e1828fc737e97ceebfd6e957ea6225501bf0c3bda8288b01583111c",
+    "data/public_regional_factors_20261011/manifest.json": "01ef22b9704314b2bb40aefd69899e49bb1a376b95999faba479edb4493a7514",
+    "research/completion_20261011/stdlib_tests_final.log": "5cee2301ce1e827c5eff071af22e0d53b4b768473b166491a5fd2cef256a6fd8"
+  }
+}

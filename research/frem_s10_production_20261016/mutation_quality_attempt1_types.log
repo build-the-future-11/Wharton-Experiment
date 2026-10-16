@@ -1,0 +1,4 @@
+successors/frem_s10/tests/test_mutation_check_audit.py:67: error: Module "frem_s10.runtime.mutation_check" does not explicitly export attribute "PACKAGE"  [attr-defined]
+successors/frem_s10/tests/test_mutation_check_audit.py:100: error: Module "frem_s10.runtime.mutation_check" does not explicitly export attribute "subprocess"  [attr-defined]
+successors/frem_s10/tests/test_mutation_check_audit.py:117: error: Module "frem_s10.runtime.mutation_check" does not explicitly export attribute "PACKAGE"  [attr-defined]
+Found 3 errors in 1 file (checked 2 source files)

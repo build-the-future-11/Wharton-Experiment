@@ -1,0 +1,187 @@
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_audit_v1/audit.py:119:13
+    |
+117 |           lines.append(f"| {asset} | ${primary['asset_contributions'][asset]:,.2f} | {primary['average_asset_weights'][asset]:.2%} |")
+118 |       lines += [
+119 |           '', f"Gross realized contribution: **${primary['gross_dollar_contribution']:,.2f}**. "
+    |  _____________^
+120 | |         f"Fees including liquidation: **${primary['fees']:,.2f}**. "
+121 | |         f"Ending wealth: **${primary['terminal_wealth']:,.2f}** from $100,000.", '',
+    | |_______________________________________________________________________________^
+122 |           '| Origin year | SPY contribution | TLT contribution | GLD contribution | Fees | Net return |',
+123 |           '|---|---:|---:|---:|---:|---:|',
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+118 |     lines += [
+    -         '', f"Gross realized contribution: **${primary['gross_dollar_contribution']:,.2f}**. "
+119 +         '', (f"Gross realized contribution: **${primary['gross_dollar_contribution']:,.2f}**. "
+120 |         f"Fees including liquidation: **${primary['fees']:,.2f}**. "
+    -         f"Ending wealth: **${primary['terminal_wealth']:,.2f}** from $100,000.", '',
+121 +         f"Ending wealth: **${primary['terminal_wealth']:,.2f}** from $100,000."), '',
+122 |         '| Origin year | SPY contribution | TLT contribution | GLD contribution | Fees | Net return |',
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_audit_v1/audit.py:129:13
+    |
+127 |   …  lines.append(f"| {year} | {row} | ${part['fees']:,.2f} | {part['net_return']:.3%} |")
+128 |   …nes += [
+129 |   …  '', 'Contributions telescope in dollars on the carried path. They are not reset-year backtests, '
+    |  ________^
+130 | | …  'causal interventions, evidence that the missed rally was predictable, or an authorization to trade the past differently.', '',
+    | |_____________________________________________________________________________________________________________________________^
+131 |   …  f"The primary zero-cost path ended at ${result['primary_zero_cost_wealth']:,.2f}. "
+132 |   …  'Its difference from the 10-bps path combines cost-dependent decisions, fees and compounding; '
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+128 |     lines += [
+    -         '', 'Contributions telescope in dollars on the carried path. They are not reset-year backtests, '
+    -         'causal interventions, evidence that the missed rally was predictable, or an authorization to trade the past differently.', '',
+129 +         '', ('Contributions telescope in dollars on the carried path. They are not reset-year backtests, '
+130 +         'causal interventions, evidence that the missed rally was predictable, or an authorization to trade the past differently.'), '',
+131 |         f"The primary zero-cost path ended at ${result['primary_zero_cost_wealth']:,.2f}. "
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_audit_v1/audit.py:131:9
+    |
+129 |   …     '', 'Contributions telescope in dollars on the carried path. They are not reset-year backtests, '
+130 |   …     'causal interventions, evidence that the missed rally was predictable, or an authorization to trade the past differently.', '…
+131 | / …     f"The primary zero-cost path ended at ${result['primary_zero_cost_wealth']:,.2f}. "
+132 | | …     'Its difference from the 10-bps path combines cost-dependent decisions, fees and compounding; '
+133 | | …     'it is not a pure fee estimate.', '',
+    | |______________________________________^
+134 |   …     'Both saved primary intervals against fixed averaging have upper bounds below the 0.01-nat practical margin. '
+135 |   …     'Their lower bounds also include negative effects. More optimization seeds on the same path would not create independent mark…
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+130 |         'causal interventions, evidence that the missed rally was predictable, or an authorization to trade the past differently.', '',
+    -         f"The primary zero-cost path ended at ${result['primary_zero_cost_wealth']:,.2f}. "
+131 +         (f"The primary zero-cost path ended at ${result['primary_zero_cost_wealth']:,.2f}. "
+132 |         'Its difference from the 10-bps path combines cost-dependent decisions, fees and compounding; '
+    -         'it is not a pure fee estimate.', '',
+133 +         'it is not a pure fee estimate.'), '',
+134 |         'Both saved primary intervals against fixed averaging have upper bounds below the 0.01-nat practical margin. '
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+ISC004 Unparenthesized implicit string concatenation in collection
+   --> successors/frem_audit_v1/audit.py:134:9
+    |
+132 |   …     'Its difference from the 10-bps path combines cost-dependent decisions, fees and compounding; '
+133 |   …     'it is not a pure fee estimate.', '',
+134 | / …     'Both saved primary intervals against fixed averaging have upper bounds below the 0.01-nat practical margin. '
+135 | | …     'Their lower bounds also include negative effects. More optimization seeds on the same path would not create independent market histories.', '',
+    | |_________________________________________________________________________________________________________________________________________________^
+136 |   …     f"Maximum accounting residual: {max_error:.3g}. Original sources and saved evidence unchanged.", '',
+137 |   … ]
+    |
+help: Did you forget a comma?
+help: Wrap implicitly concatenated strings in parentheses
+    |
+133 |         'it is not a pure fee estimate.', '',
+    -         'Both saved primary intervals against fixed averaging have upper bounds below the 0.01-nat practical margin. '
+    -         'Their lower bounds also include negative effects. More optimization seeds on the same path would not create independent market histories.', '',
+134 +         ('Both saved primary intervals against fixed averaging have upper bounds below the 0.01-nat practical margin. '
+135 +         'Their lower bounds also include negative effects. More optimization seeds on the same path would not create independent market histories.'), '',
+136 |         f"Maximum accounting residual: {max_error:.3g}. Original sources and saved evidence unchanged.", '',
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+BLE001 Do not catch blind exception: `Exception`
+   --> successors/frem_audit_v1/audit.py:159:12
+    |
+157 |     try:
+158 |         result = audit(args.root, args.manifest, args.output)
+159 |     except Exception as error:
+    |            ^^^^^^^^^
+160 |         code = 1
+161 |         result = {'status': 'FAILED', 'error': str(error), 'exception': type(error).__name__}
+    |
+
+UP017 [*] Use `datetime.UTC` alias
+   --> successors/frem_audit_v1/audit.py:166:45
+    |
+164 |         signal.alarm(0)
+165 |         signal.signal(signal.SIGALRM, old)
+166 |     result.update(completed_at=datetime.now(timezone.utc).isoformat(),
+    |                                             ^^^^^^^^^^^^
+167 |                   seconds=time.monotonic()-started, peak_rss_mib=rss_mib(),
+168 |                   market_fits=0, new_policy_replays=0, protected_access=False)
+    |
+help: Convert to `datetime.UTC` alias
+    |
+10  | import traceback
+    - from datetime import datetime, timezone
+11  + from datetime import datetime, timezone, UTC
+12  | from pathlib import Path
+--------------------------------------------------------------------------------
+165 |         signal.signal(signal.SIGALRM, old)
+    -     result.update(completed_at=datetime.now(timezone.utc).isoformat(),
+166 +     result.update(completed_at=datetime.now(UTC).isoformat(),
+167 |                   seconds=time.monotonic()-started, peak_rss_mib=rss_mib(),
+    |
+
+UP017 [*] Use `datetime.UTC` alias
+  --> successors/frem_audit_v1/ledger.py:97:50
+   |
+95 |         if "net_factor" in row:
+96 |             close(row["net_factor"], stored_end / nav_start, "net factor", ratio=True)
+97 |         year = str(datetime.fromtimestamp(start, timezone.utc).year)
+   |                                                  ^^^^^^^^^^^^
+98 |         part = years.setdefault(year, {
+99 |             "periods": 0, "start_nav": nav_start, "end_nav": nav_start,
+   |
+help: Convert to `datetime.UTC` alias
+   |
+3  | import math
+   - from datetime import datetime, timezone
+4  + from datetime import datetime, timezone, UTC
+5  |
+--------------------------------------------------------------------------------
+96 |             close(row["net_factor"], stored_end / nav_start, "net factor", ratio=True)
+   -         year = str(datetime.fromtimestamp(start, timezone.utc).year)
+97 +         year = str(datetime.fromtimestamp(start, UTC).year)
+98 |         part = years.setdefault(year, {
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> tests/restart/test_restart_audit.py:3:1
+   |
+ 1 |   """Standard-library engineering tests; constructed cases are not market evidence."""
+ 2 |
+ 3 | / import copy
+ 4 | | import json
+ 5 | | import math
+ 6 | | import tempfile
+ 7 | | import unittest
+ 8 | | from pathlib import Path
+ 9 | |
+10 | | from successors.frem_audit_v1.contracts import (
+11 | |     ReturnInterval, compound, finite_scenario_moments, horizon_log_variance, self_financing_target,
+12 | | )
+13 | | from successors.frem_audit_v1.ledger import audit_ledger
+14 | | from successors.frem_audit_v1.stream import iter_array, iter_object
+   | |___________________________________________________________________^
+help: Organize imports
+   |
+10 | from successors.frem_audit_v1.contracts import (
+   -     ReturnInterval, compound, finite_scenario_moments, horizon_log_variance, self_financing_target,
+11 +     ReturnInterval,
+12 +     compound,
+13 +     finite_scenario_moments,
+14 +     horizon_log_variance,
+15 +     self_financing_target,
+16 | )
+   |
+
+Found 8 errors.
+[*] 3 fixable with `--fix` (4 unsafe fixes available with `--fix --unsafe-fixes`).

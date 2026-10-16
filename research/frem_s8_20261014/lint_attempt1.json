@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "ruff",
+    "check",
+    "successors/frem_s8",
+    "tests/s8"
+  ],
+  "returncode": 1,
+  "seconds": 0.5103596670014667
+}

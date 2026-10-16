@@ -1,0 +1,237 @@
+{
+  "0005.HK": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [
+      "2011-12"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 247,
+    "quarantined_zero_quote_months": []
+  },
+  "0700.HK": {
+    "first_month": "2004-06",
+    "last_month": "2024-12",
+    "source_months": 247,
+    "missing_months": [
+      "2011-12"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 194,
+    "quarantined_zero_quote_months": []
+  },
+  "2317.TW": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [
+      "2016-01"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 271,
+    "quarantined_zero_quote_months": []
+  },
+  "2330.TW": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [
+      "2016-01"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 247,
+    "quarantined_zero_quote_months": []
+  },
+  "6758.T": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 274,
+    "quarantined_zero_quote_months": []
+  },
+  "7203.T": {
+    "first_month": "1999-05",
+    "last_month": "2024-12",
+    "source_months": 308,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 282,
+    "quarantined_zero_quote_months": []
+  },
+  "AAPL": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "BHP.AX": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "BNP.PA": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "BP.L": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "CBA.AX": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "DTE.DE": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "ENB.TO": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [
+      "2002-03",
+      "2003-05"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 53,
+    "valid_windows": 257,
+    "quarantined_zero_quote_months": [
+      "2003-05"
+    ]
+  },
+  "HSBA.L": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "INFY.NS": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [
+      "2015-02"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 271,
+    "quarantined_zero_quote_months": []
+  },
+  "JPM": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "NESN.SW": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "NOVN.SW": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 298,
+    "quarantined_zero_quote_months": []
+  },
+  "PETR4.SA": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 274,
+    "quarantined_zero_quote_months": []
+  },
+  "RELIANCE.NS": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [
+      "2015-02"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 271,
+    "quarantined_zero_quote_months": []
+  },
+  "RY.TO": {
+    "first_month": "1998-01",
+    "last_month": "2024-12",
+    "source_months": 324,
+    "missing_months": [
+      "2002-03"
+    ],
+    "windows_unavailable_from_gaps_or_warmup": 39,
+    "valid_windows": 271,
+    "quarantined_zero_quote_months": []
+  },
+  "SAN.PA": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 274,
+    "quarantined_zero_quote_months": []
+  },
+  "SAP.DE": {
+    "first_month": "1998-04",
+    "last_month": "2024-12",
+    "source_months": 321,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 295,
+    "quarantined_zero_quote_months": []
+  },
+  "VALE3.SA": {
+    "first_month": "2000-01",
+    "last_month": "2024-12",
+    "source_months": 300,
+    "missing_months": [],
+    "windows_unavailable_from_gaps_or_warmup": 12,
+    "valid_windows": 274,
+    "quarantined_zero_quote_months": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "symbol": "ABT",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABT?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:34.775327+00:00",
+  "http_status": 200,
+  "path": "ABT.json",
+  "sha256": "52beb49377ff121ca14ca964be953d866b666c71702a21ff5cf2d57dc948d6c3",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

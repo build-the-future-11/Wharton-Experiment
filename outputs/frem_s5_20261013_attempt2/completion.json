@@ -1,0 +1,99 @@
+{
+  "status": "COMPLETE_EXPLORATORY_REPLAY",
+  "market_cells": 6,
+  "base_fits": 0,
+  "generated_cells": 12,
+  "summary": {
+    "fresh_2023": {
+      "seed_mean_nll": {
+        "equal": -1.329640836022853,
+        "recent": -1.3316106361437254,
+        "context": -1.3306492172025357,
+        "random": -1.330970325108419,
+        "linear": -1.331653273107892,
+        "zero": -1.254592496985695,
+        "ridge": -1.2551162026375613,
+        "frem": -1.3451760876792804,
+        "no_jepa": -1.349917540234954
+      },
+      "primary_10bps": {
+        "equal": -0.0005513747526197932,
+        "recent": -3.628640096042801e-05,
+        "random": 0.0001065235440014245,
+        "linear": 3.9143965261168034e-05,
+        "zero": 0.04125023443613496,
+        "ridge": -0.014414396253711104,
+        "frem": 0.006056354818247733,
+        "no_jepa": 0.00393626254322621,
+        "equal_weight": 0.010937039974028728,
+        "buy_hold": 0.0008126936019652309,
+        "cash": 0.18041932366878766,
+        "volatility_managed": 0.07923352554684038
+      },
+      "terminal_wealth_10bps": {
+        "equal": 118107.05361434803,
+        "recent": 118046.21583919857,
+        "context": 118041.93236687877,
+        "random": 118029.35946121275,
+        "linear": 118037.31191844151,
+        "zero": 113365.57578861112,
+        "ridge": 119768.32039570388,
+        "frem": 117331.33218785144,
+        "no_jepa": 117579.11011984813,
+        "equal_weight": 116764.87031270641,
+        "buy_hold": 117946.07834363202,
+        "cash": 100000.0,
+        "volatility_managed": 109375.70930913003
+      }
+    },
+    "fresh_2024": {
+      "seed_mean_nll": {
+        "equal": -1.41047496474732,
+        "recent": -1.4118656275023327,
+        "context": -1.411576791797789,
+        "random": -1.4110385954714804,
+        "linear": -1.411860879396306,
+        "zero": -1.3615293414997092,
+        "ridge": -1.2473346027229193,
+        "frem": -1.4370641825364618,
+        "no_jepa": -1.447445991787436
+      },
+      "primary_10bps": {
+        "equal": -4.293651450260061e-05,
+        "recent": 2.808795334363623e-05,
+        "random": 0.00010177874742711701,
+        "linear": 1.8681976103884779e-06,
+        "zero": 0.04581374939645366,
+        "ridge": -7.485138223717325e-05,
+        "frem": 0.007037091687781771,
+        "no_jepa": 0.006074010720031442,
+        "equal_weight": 0.004662235921144786,
+        "buy_hold": 0.0021353119082738736,
+        "cash": 0.23341443235711634,
+        "volatility_managed": 0.09722903559821328
+      },
+      "terminal_wealth_10bps": {
+        "equal": 123346.73931477306,
+        "recent": 123337.97892431411,
+        "context": 123341.44323571163,
+        "random": 123328.89097566655,
+        "linear": 123341.21280995259,
+        "zero": 117938.2498144558,
+        "ridge": 123350.67620432541,
+        "frem": 122479.5434585164,
+        "no_jepa": 122596.78902493276,
+        "equal_weight": 122769.06489136974,
+        "buy_hold": 123078.63196721797,
+        "cash": 100000.0,
+        "volatility_managed": 112411.75655588208
+      }
+    }
+  },
+  "broad_benchmark_point_win": false,
+  "stretch_6pct_met": false,
+  "memory_practical_point_gain_all_controls": false,
+  "protected_access": false,
+  "fresh_training_status": "BLOCKED_RESOURCE_AND_FRESH_STAGE_PROTOCOL",
+  "peak_rss_mib": 31.765625,
+  "limitation": "Previously inspected survivor histories and retained forecasts; no protected confirmation, new base fit, calibrated funding probability or investment claim."
+}

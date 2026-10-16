@@ -1,0 +1,111 @@
+{
+  "complete_candidate_verification": false,
+  "created_at": "2026-10-16T03:30:51.183258+00:00",
+  "current_metadata_suite": {
+    "deselected": 1,
+    "passed": 46,
+    "seconds": 5.36
+  },
+  "evidence": [
+    {
+      "path": "research/frem_s10_production_20261016/runtime_metadata_tests_attempt3.log",
+      "sha256": "fa65fd351bbb5ce0ab1b8063a04a3edc4a146030e40e5d5b9376f774289b4fc6"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/continuation_tests_attempt2.log",
+      "sha256": "d4bc856ea64014f30cb57ed7b3607f2a2a693d625a00a3aa2d8980200bccd95d"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_mypy.log",
+      "sha256": "8f3f4c0ebcb835e848682f2c6610a1bf32c86a993bdb626d9ff36e3a49408398"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_final_format.log",
+      "sha256": "04eb0d6e6734823dcd2b2b704729e976f683df7a8f334da7216520ef1cb319bf"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_tests_attempt5.log",
+      "sha256": "0b050bd3773415884ad80a02103e478adcd007d1cb558febf62dfa3c4ab13acc"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_existing_tests_attempt1.log",
+      "sha256": "95abc4e221464bd69fefb5f97188e4ad6b026a2c0ba33963ca205f463e1440c3"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/runtime_metadata_tests_attempt2.log",
+      "sha256": "07f9526d1f370fecf196514aece782d30594374d00766708d00e4930ef2071cd"
+    }
+  ],
+  "final_continuation_subset": {
+    "passed": 15,
+    "seconds": 0.71
+  },
+  "format": "PASS",
+  "full_scale_qualification_executed": false,
+  "lint": "PASS",
+  "market_value_fits": 0,
+  "protected_access": false,
+  "schema": "s10-runtime-integration-receipt-v1",
+  "scientific_runs": 0,
+  "scope": "BOUNDED_ENGINEERING_INTEGRATION",
+  "source_files": [
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/pipeline.py",
+      "sha256": "2daa130ca73a82a3874fa6a3c973be490af9359ed17f77210a7e247020c3cc8b"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/receipts.py",
+      "sha256": "69780b330121a43b6269070a4b51f8cb08ea8c4adde8f2ee695c0a5aa09f1ba5"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/saved_audit.py",
+      "sha256": "bed576ba293d167bd00c151cf06b085a85935023088f7eca9458861a43775819"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/continuation.py",
+      "sha256": "feed6d06798ba460cfd7e5cfa7dc6e585f094602c3428da843dee685c3905538"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/supervisor.py",
+      "sha256": "7502613f1ed38696cffb01195300cd49736a4edd380f703b0d9932a64ef8059f"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/consumption.py",
+      "sha256": "ddaf2c68674d7c6805c52a931af9d3600b7e272e223a2aa32e6b8f12fade69af"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/results.py",
+      "sha256": "f0ec483a426c8a8bc6be0e8aa3ac54ad44f4b4f583e8dc36abbe82b01bc3d309"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/worker.py",
+      "sha256": "9ca5d243b8ab22365f4a77668edd6cea59934587414fa67db07b9d042804b3ce"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/runtime/declarations.py",
+      "sha256": "95aba3546c4ff0713ec2bf874fb061f8dc301e5fb54a02d53a23e8e6cf9715ff"
+    },
+    {
+      "path": "successors/frem_s10/src/frem_s10/cli.py",
+      "sha256": "b937fbb1c14847007edd7c663ae4b2acb10fff558f5adeec5fa92593c725ffd5"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_production_runtime.py",
+      "sha256": "ed4f4abda4f60e96470ba3dd1961c729ef18700eb3d91d9563dbc35b53f4da08"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_continuation_audit.py",
+      "sha256": "00a2fe7f7db2b264837bb0d8275227ba25ddd742f52397dbfd41b3d292081118"
+    },
+    {
+      "path": "successors/frem_s10/tests/test_saved_audit_runtime.py",
+      "sha256": "376c7a3e7c162d42c2e5cfe4df33d31b322e85edf151b48f0e16fee2cc98fad0"
+    }
+  ],
+  "source_inventory_sha256": "347f2398c27ab2dc0bb8a2eb1745be4b251c4271e5c498c663e67829990db590",
+  "strict_mypy_files": 13
+}

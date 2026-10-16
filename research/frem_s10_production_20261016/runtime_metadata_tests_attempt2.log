@@ -1,0 +1,86 @@
+.........................................FF...                           [100%]
+=================================== FAILURES ===================================
+_____ test_resigned_sampled_resource_failure_cannot_be_complete[zero_rss] ______
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-93/test_resigned_sampled_resource4')
+defect = 'zero_rss'
+
+    @pytest.mark.parametrize("defect", ("rss", "pageouts", "free", "elapsed", "zero_rss", "negative_rss", "peak"))
+    def test_resigned_sampled_resource_failure_cannot_be_complete(tmp_path: Path, defect: str) -> None:
+        from frem_s10.runtime.receipts import audit_execution
+    
+        result = _saved_execution(tmp_path, defect)
+        with pytest.raises(IntegrityError):
+>           audit_execution(result, artifact_root=tmp_path)
+
+successors/frem_s10/tests/test_production_runtime.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/receipts.py:93: in audit_execution
+    _audit_resources(result, supervisor, artifact_root)
+successors/frem_s10/src/frem_s10/runtime/receipts.py:137: in _audit_resources
+    _resource_row(row, supervisor, pageouts)
+successors/frem_s10/src/frem_s10/runtime/receipts.py:168: in _resource_row
+    rss = finite_float(row.get("owned_rss_mib"), name="observed RSS", strictly_positive=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 0.0
+
+    def finite_float(
+        value: object, *, name: str, minimum: float | None = None, strictly_positive: bool = False
+    ) -> float:
+        """Validate a scalar without accepting booleans or nonfinite values."""
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise ContractError(f"{name}: finite numeric scalar required", field=name)
+        result = float(value)
+        if not math.isfinite(result) or (minimum is not None and result < minimum):
+            raise ContractError(f"{name}: scalar outside declared domain", field=name)
+        if strictly_positive and result <= 0:
+>           raise ContractError(f"{name}: positive scalar required", field=name)
+E           frem_s10.errors.ContractError: observed RSS: positive scalar required
+
+successors/frem_s10/src/frem_s10/metadata.py:51: ContractError
+___ test_resigned_sampled_resource_failure_cannot_be_complete[negative_rss] ____
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-93/test_resigned_sampled_resource5')
+defect = 'negative_rss'
+
+    @pytest.mark.parametrize("defect", ("rss", "pageouts", "free", "elapsed", "zero_rss", "negative_rss", "peak"))
+    def test_resigned_sampled_resource_failure_cannot_be_complete(tmp_path: Path, defect: str) -> None:
+        from frem_s10.runtime.receipts import audit_execution
+    
+        result = _saved_execution(tmp_path, defect)
+        with pytest.raises(IntegrityError):
+>           audit_execution(result, artifact_root=tmp_path)
+
+successors/frem_s10/tests/test_production_runtime.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s10/src/frem_s10/runtime/receipts.py:93: in audit_execution
+    _audit_resources(result, supervisor, artifact_root)
+successors/frem_s10/src/frem_s10/runtime/receipts.py:137: in _audit_resources
+    _resource_row(row, supervisor, pageouts)
+successors/frem_s10/src/frem_s10/runtime/receipts.py:168: in _resource_row
+    rss = finite_float(row.get("owned_rss_mib"), name="observed RSS", strictly_positive=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = -1.0
+
+    def finite_float(
+        value: object, *, name: str, minimum: float | None = None, strictly_positive: bool = False
+    ) -> float:
+        """Validate a scalar without accepting booleans or nonfinite values."""
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise ContractError(f"{name}: finite numeric scalar required", field=name)
+        result = float(value)
+        if not math.isfinite(result) or (minimum is not None and result < minimum):
+            raise ContractError(f"{name}: scalar outside declared domain", field=name)
+        if strictly_positive and result <= 0:
+>           raise ContractError(f"{name}: positive scalar required", field=name)
+E           frem_s10.errors.ContractError: observed RSS: positive scalar required
+
+successors/frem_s10/src/frem_s10/metadata.py:51: ContractError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete[zero_rss]
+FAILED successors/frem_s10/tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete[negative_rss]
+2 failed, 44 passed, 1 deselected in 4.21s

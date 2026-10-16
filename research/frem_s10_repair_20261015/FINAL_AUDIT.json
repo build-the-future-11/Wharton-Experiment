@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_and_evidence_hashes": 290,
+  "predecessor_state_sections_preserved": true,
+  "journal_before_prefix_preserved": true,
+  "report_local_links_exist": true,
+  "canonical_scientific_status": "NOT_EVALUATED",
+  "canonical_state_sha256": "73dbd3bbf88634f5b7aff979a73a3eeba599cacd2ccd1da747debc9baa4e9f8c",
+  "receipt_sha256": "8a650b4588f76a51badf82cd6eb2eadbdbd0b5ed059b82ba0848578e0338d001",
+  "decision_sha256": "90902dcb37e8a3e7b33af7db63e7c678873aab07249b16fcdcf0075979567b40",
+  "journal_last_record_sha256": "b732f00f619ef6e1313e34c9eb71700bbdedfb4254fedf1f4d1c8e2016f922c8"
+}

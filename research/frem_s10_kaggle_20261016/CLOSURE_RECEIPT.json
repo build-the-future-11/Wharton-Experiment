@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-10-16T06:55:47.531375+00:00",
+  "readiness": "BLOCKED",
+  "main_receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json",
+  "main_receipt_sha256": "712bbcebc5d979ac33ad1ba11c4a1c5eefa7673d973decc1d0efa33225422b88",
+  "source_manifest_still_matches": true,
+  "all_main_evidence_hashes_match": true,
+  "source_bundle_hash_matches": true,
+  "canonical_prior_fields_preserved": true,
+  "concurrent_heartbeat_history_preserved": true,
+  "prior_docs_and_journal_prefixes_preserved": true,
+  "journal_records_verified": 64,
+  "journal_tip": "f8f7056997de62a53c4bb773a635fc28f960341c29eed831753713621a1db883",
+  "record_decision_exit_code": 0,
+  "git_head_unchanged": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "concurrent_observation": "research/frem_s10_kaggle_20261016/CONCURRENT_STATE_OBSERVATION.json",
+  "actual_linux_gpu_or_scientific_execution": false,
+  "canonical_files": [
+    {
+      "path": "RESEARCH_STATE.json",
+      "sha256": "c1934a3165714c6924989d6903d59deae69d4614049a5d017cc57ad2b9576b7a"
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "sha256": "29fcd0e9bcb203491752205c1a1e545f6d8d040a286c287489c2c24d95771537"
+    },
+    {
+      "path": "docs/STATIC_VERIFICATION.md",
+      "sha256": "a3e30fc9c8ad6172eae87ac43cb552c7b1b9b8390654af05a891cc01a805d7cb"
+    },
+    {
+      "path": "research/events.jsonl",
+      "sha256": "19e2955795c1fdb3341fc62702ba12aad840b07a81d270852b7b19480cc6fafe"
+    },
+    {
+      "path": "research/decisions/frem_s10_kaggle_20261016.json",
+      "sha256": "0fe8352077d4c9b7c79f6088995b1f6c6f595a2b5259d25c9c4f46b60812ff1e"
+    }
+  ]
+}

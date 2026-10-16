@@ -1,0 +1,71 @@
+{
+  "scope": "bounded metadata and simulated Linux isolation checks; no Linux sandbox execution",
+  "commands": [
+    {
+      "name": "lint",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/isolation.py",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/tests/test_isolation_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.13356245899922214,
+      "log": "research/frem_s10_kaggle_20261016/isolation_checks_attempt1_lint.log"
+    },
+    {
+      "name": "format",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+        "format",
+        "--check",
+        "--config",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/isolation.py",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/tests/test_isolation_audit.py"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 0.0410576660069637,
+      "log": "research/frem_s10_kaggle_20261016/isolation_checks_attempt1_format.log"
+    },
+    {
+      "name": "types",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+        "--config-file",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/src/frem_s10/runtime/isolation.py",
+        "successors/frem_s10/src/frem_s10/runtime/verification.py",
+        "successors/frem_s10/tests/test_isolation_audit.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.174723083007848,
+      "log": "research/frem_s10_kaggle_20261016/isolation_checks_attempt1_types.log"
+    },
+    {
+      "name": "tests",
+      "argv": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-c",
+        "successors/frem_s10/pyproject.toml",
+        "successors/frem_s10/tests/test_isolation_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "-q",
+        "-W",
+        "error",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.4480090840079356,
+      "log": "research/frem_s10_kaggle_20261016/isolation_checks_attempt1_tests.log"
+    }
+  ]
+}

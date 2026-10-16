@@ -1,0 +1,13 @@
+{
+  "symbol": "IBM",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/IBM?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:28.626463+00:00",
+  "http_status": 200,
+  "path": "IBM.json",
+  "sha256": "ec36e2b7de3272ccdd389088b3f00c384bf0bc8c267356ca8ae33445e333e46d",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

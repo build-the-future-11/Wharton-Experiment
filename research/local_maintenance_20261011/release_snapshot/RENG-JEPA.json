@@ -1,0 +1,216 @@
+{
+  "schema_version": 2,
+  "project": "reng-jepa-research",
+  "version": "0.1.0",
+  "generated_utc": "2026-10-11T16:36:58.399128+00:00",
+  "release_status": "SOURCE_INVENTORY_ONLY",
+  "scope": "Package source and documentation; raw data, run outputs and caches excluded",
+  "verification": {
+    "tests": "NOT_RUN_BY_MANIFEST_BUILDER",
+    "lint": "NOT_RUN_BY_MANIFEST_BUILDER",
+    "package_build": "NOT_RUN_BY_MANIFEST_BUILDER",
+    "scientific_status": "NOT_ASSESSED_BY_MANIFEST_BUILDER"
+  },
+  "previous_manifest": {
+    "path": "RELEASE_MANIFEST.json",
+    "bytes": 15784,
+    "sha256": "9a1ab7133dd62241d75faeed58bc2860045df1693a1163fee22e2d8e67142997"
+  },
+  "build_artifacts": [
+    {
+      "path": "dist/reng_jepa_research-0.1.0-py3-none-any.whl",
+      "bytes": 45713,
+      "sha256": "b035b99cee4fed89e4e0f24012d66510ab7f50c4e4f3c87dd495f2ee99fd2410"
+    },
+    {
+      "path": "dist/reng_jepa_research-0.1.0.tar.gz",
+      "bytes": 46342,
+      "sha256": "a4142bfb347c61674ce7fcc788f80c31c08a07f52e2a7a34cd0653f398088064"
+    }
+  ],
+  "build_artifact_scope": "Existing file identities only; freshness and source correspondence not verified",
+  "file_count_excluding_manifest": 36,
+  "hash_convention": "SHA-256 of exact bytes; snapshot output directory and prior manifests excluded",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2898,
+      "sha256": "4ff545b5050948caf65aa862fec225889d07228d018c29215eb834004d621f19"
+    },
+    {
+      "path": "RESEARCH_STATE.json",
+      "bytes": 4333,
+      "sha256": "748f30f27d2e22c07c0a35f546e74acd60837f7530f25feca8c8ebf487b1fe41"
+    },
+    {
+      "path": "configs/engineering.json",
+      "bytes": 265,
+      "sha256": "6353d38da1cf80a3e1ae877d82c832d198807555ee76fe9c26566648ce98b998"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 677,
+      "sha256": "7e8960778443bec7513c27e27a75daa3a91637e118b1d3869920be208822d561"
+    },
+    {
+      "path": "research/checkpoint_ledger.json",
+      "bytes": 955,
+      "sha256": "eff89d015695ba776da1162f77c31c338cdcf57de805702ce1121723cd57da6c"
+    },
+    {
+      "path": "research/decisions.jsonl",
+      "bytes": 1671,
+      "sha256": "e7d8efc6bbb19d434e9528a8331aaf9211453dcd87e60b4379d332ebde223359"
+    },
+    {
+      "path": "research/implementation_ledger.json",
+      "bytes": 1308,
+      "sha256": "caa73fa649c8f47abb5a70983aa87e12ca7a22f77a9373801e031a9b218142e7"
+    },
+    {
+      "path": "research/protocol.json",
+      "bytes": 1677,
+      "sha256": "f1d6b136ba42af50353ffa1546efe725ed1e1f33d2752e14096ace9d45f180dd"
+    },
+    {
+      "path": "research/runtime_verification_2026-10-11.json",
+      "bytes": 2270,
+      "sha256": "1541a531900a4a066e0d52423ef9871d0f8f38a90271bfe6c0d3484712349507"
+    },
+    {
+      "path": "src/reng/__init__.py",
+      "bytes": 207,
+      "sha256": "b6873666d67639d9dfd66b07f759268c48f975f3d5dc959e76f9dca9b093ddd3"
+    },
+    {
+      "path": "src/reng/__main__.py",
+      "bytes": 48,
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "src/reng/artifacts.py",
+      "bytes": 3428,
+      "sha256": "096572f848cf6ac3e2777201507b42ecc8fadc18b511ce5a474e2b3a7382628d"
+    },
+    {
+      "path": "src/reng/baselines.py",
+      "bytes": 9387,
+      "sha256": "0572f7e79ac18017cc4c3274c90871c25111dc656be31faf9ccd8a0f239dd545"
+    },
+    {
+      "path": "src/reng/checkpoint.py",
+      "bytes": 4452,
+      "sha256": "db27cf3f44f539c57104bad8fa3c737d44f0a0b3e22f06589b1a3f8767a1a364"
+    },
+    {
+      "path": "src/reng/cli.py",
+      "bytes": 1474,
+      "sha256": "fe9428691692d31ccddfcdaf3e5e00a216e67aca6c4ace1947fe6038800de24a"
+    },
+    {
+      "path": "src/reng/config.py",
+      "bytes": 4851,
+      "sha256": "da426a7dc619c9c8bbe33e7e685207dcb72bb4967329a6e7c814bab284783ad0"
+    },
+    {
+      "path": "src/reng/data.py",
+      "bytes": 20152,
+      "sha256": "1b22f363d5554aa37fe590da26a9663c2a37f5756402f999738d4abe3dc694dc"
+    },
+    {
+      "path": "src/reng/evaluation.py",
+      "bytes": 7418,
+      "sha256": "c181d6da07525cafc2f36d71026487d6190040d2d640dba87885a87c81946354"
+    },
+    {
+      "path": "src/reng/experiments.py",
+      "bytes": 6486,
+      "sha256": "bc8ef371736c5ff609403de7bb4d8b1a409b12890818cbba4721a989d6a17afe"
+    },
+    {
+      "path": "src/reng/funding.py",
+      "bytes": 7243,
+      "sha256": "62e94c6858f3e4d004dfae53d2f65c85fb755fe8e4fbd5571cfc11499139aa86"
+    },
+    {
+      "path": "src/reng/graph.py",
+      "bytes": 2535,
+      "sha256": "725bb983b10ada3f8867798c321b2c44a76558d6799089f6c18366121447a2e0"
+    },
+    {
+      "path": "src/reng/inference.py",
+      "bytes": 5634,
+      "sha256": "022f87cb2367ae9bfb4556fa122bf2e20549ef2cadef6466e6de2db0970034ea"
+    },
+    {
+      "path": "src/reng/memory.py",
+      "bytes": 6298,
+      "sha256": "26127dce5cbc9107fb3ebef7319404c39a689da371e8a14fcc6fd1ae0fbb0ad9"
+    },
+    {
+      "path": "src/reng/model.py",
+      "bytes": 19495,
+      "sha256": "8a08513798355c31aa102f86cbfa2fff7835d0da503c184ea73d4f70315d500a"
+    },
+    {
+      "path": "src/reng/portfolio.py",
+      "bytes": 12916,
+      "sha256": "0585a748b514d0f29abda8d9262cafeef1aee457ea021d147f6f9f4f101bb6c4"
+    },
+    {
+      "path": "src/reng/probability.py",
+      "bytes": 8010,
+      "sha256": "ae3bf0937c067b9cc2302fdb81637a359d320201bc2d289234018ddb3e721d1b"
+    },
+    {
+      "path": "src/reng/reservoir.py",
+      "bytes": 2523,
+      "sha256": "b0f17076394972104ddb4c430a229e2ffdc2541b762733a469e42200f75514e9"
+    },
+    {
+      "path": "src/reng/spectral.py",
+      "bytes": 3621,
+      "sha256": "989e855844bf86b4919ff41e1af561f01c6e78b143071413a01d8704bd35ebd7"
+    },
+    {
+      "path": "src/reng/training.py",
+      "bytes": 13273,
+      "sha256": "4676ce410c2c0a62d72c6c8088be1834eeae99deb19f579848d897d730453d08"
+    },
+    {
+      "path": "tests/test_controls_artifacts.py",
+      "bytes": 4557,
+      "sha256": "8dd890e99b68179c5ae46527bfb6cb16c8b4e57c237ca54aa15a8de2fc8e295f"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 3446,
+      "sha256": "609acdec67857807f5802ede1858ae95d042a3126defe0f62c855a5751c11395"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "bytes": 1908,
+      "sha256": "8e2879728dd79e47e802a3de4642a5f48340f3cef1e12809e6ff6ac63df97f5d"
+    },
+    {
+      "path": "tests/test_math.py",
+      "bytes": 3035,
+      "sha256": "09f2bb843c69cf86bee06a8dbbd76e964f9c14f9ca3f7078874aa1e75189fd28"
+    },
+    {
+      "path": "tests/test_memory.py",
+      "bytes": 1686,
+      "sha256": "00e96e6fab76071c4db9ca60d8567adcbc7bc4c199af70657887621bfe09d330"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 3685,
+      "sha256": "fd79b43c20f49c6a7498d60dd62ab06e0c87b4a270b653fc3ad0822cb0f0b992"
+    },
+    {
+      "path": "tests/test_portfolio_funding.py",
+      "bytes": 4747,
+      "sha256": "43fd00a9d37d5f12487cc8eac29e9d292086b3369a98ea44b635fe7d3ca4e0c3"
+    }
+  ]
+}

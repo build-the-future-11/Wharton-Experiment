@@ -1,0 +1,1291 @@
+{
+  "scope": "Read-only attribution of retained 2018 selection and 2019 decision inputs. No new 2019 policy replay, fit, parameter search or selection.",
+  "selection_2018": [
+    {
+      "seed": 11,
+      "alpha": 0.25,
+      "dates": 52,
+      "mean_gain": 0.0016638546938141344,
+      "half_gains": [
+        0.0015418245578077223,
+        0.0017858848298205466
+      ],
+      "minimum_half": 0.0015418245578077223,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.008458175442192278,
+      "fraction_positive": 0.5769230769230769
+    },
+    {
+      "seed": 11,
+      "alpha": 0.5,
+      "dates": 52,
+      "mean_gain": 0.003165075807375991,
+      "half_gains": [
+        0.0029213012319549724,
+        0.0034088503827970095
+      ],
+      "minimum_half": 0.0029213012319549724,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.007078698768045028,
+      "fraction_positive": 0.5576923076923077
+    },
+    {
+      "seed": 11,
+      "alpha": 1.0,
+      "dates": 52,
+      "mean_gain": 0.005677611349312777,
+      "half_gains": [
+        0.005193317306765677,
+        0.006161905391859878
+      ],
+      "minimum_half": 0.005193317306765677,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.004806682693234323,
+      "fraction_positive": 0.5384615384615384
+    },
+    {
+      "seed": 29,
+      "alpha": 0.25,
+      "dates": 52,
+      "mean_gain": 0.001666632743839771,
+      "half_gains": [
+        0.0015465593558977885,
+        0.0017867061317817534
+      ],
+      "minimum_half": 0.0015465593558977885,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.008453440644102212,
+      "fraction_positive": 0.5769230769230769
+    },
+    {
+      "seed": 29,
+      "alpha": 0.5,
+      "dates": 52,
+      "mean_gain": 0.003170466686252633,
+      "half_gains": [
+        0.0029307365324752243,
+        0.0034101968400300424
+      ],
+      "minimum_half": 0.0029307365324752243,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.007069263467524776,
+      "fraction_positive": 0.5576923076923077
+    },
+    {
+      "seed": 29,
+      "alpha": 1.0,
+      "dates": 52,
+      "mean_gain": 0.00568772797901124,
+      "half_gains": [
+        0.005212068127257403,
+        0.006163387830765078
+      ],
+      "minimum_half": 0.005212068127257403,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.004787931872742597,
+      "fraction_positive": 0.5384615384615384
+    },
+    {
+      "seed": 47,
+      "alpha": 0.25,
+      "dates": 52,
+      "mean_gain": 0.0016644078365449938,
+      "half_gains": [
+        0.0015431428490447208,
+        0.0017856728240452668
+      ],
+      "minimum_half": 0.0015431428490447208,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.00845685715095528,
+      "fraction_positive": 0.5769230769230769
+    },
+    {
+      "seed": 47,
+      "alpha": 0.5,
+      "dates": 52,
+      "mean_gain": 0.0031662806044132044,
+      "half_gains": [
+        0.0029240092805141856,
+        0.003408551928312223
+      ],
+      "minimum_half": 0.0029240092805141856,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.0070759907194858146,
+      "fraction_positive": 0.5576923076923077
+    },
+    {
+      "seed": 47,
+      "alpha": 1.0,
+      "dates": 52,
+      "mean_gain": 0.005680411916572467,
+      "half_gains": [
+        0.0051990133609373015,
+        0.006161810472207633
+      ],
+      "minimum_half": 0.0051990133609373015,
+      "threshold": 0.01,
+      "threshold_shortfall": 0.004800986639062699,
+      "fraction_positive": 0.5384615384615384
+    }
+  ],
+  "cash_decisions_2019": [
+    {
+      "date": 1546862400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0008100579516677867,
+      "variance_penalty": 0.00015694920554987598,
+      "gross_utility": 0.0006531087461179106,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009468912538820894,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.0819296632369415
+    },
+    {
+      "date": 1546862400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0009890688757585885,
+      "variance_penalty": 0.00023099735947289414,
+      "gross_utility": 0.0007580715162856945,
+      "estimated_roundtrip_cost": 0.0019522230830973887,
+      "net_utility_from_cash": -0.0011941515668116942,
+      "risky_weight": 0.9761115415486943,
+      "break_even_oneway_cost_bps": 3.8831193158670243
+    },
+    {
+      "date": 1547467200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006623368817460076,
+      "variance_penalty": 0.00013556998808638101,
+      "gross_utility": 0.0005267668936596266,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010732331063403734,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.2922930853726657
+    },
+    {
+      "date": 1547467200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008170705206137629,
+      "variance_penalty": 0.00020394247139591496,
+      "gross_utility": 0.0006131280492178479,
+      "estimated_roundtrip_cost": 0.0019592853666169975,
+      "net_utility_from_cash": -0.0013461573173991497,
+      "risky_weight": 0.9796426833084988,
+      "break_even_oneway_cost_bps": 3.129345319801506
+    },
+    {
+      "date": 1548158400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005265869078804586,
+      "variance_penalty": 0.00012730510758865405,
+      "gross_utility": 0.0003992818002918046,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012007181997081954,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.4955112518237783
+    },
+    {
+      "date": 1548158400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006394999148175521,
+      "variance_penalty": 0.00018077312415038416,
+      "gross_utility": 0.0004587267906671679,
+      "estimated_roundtrip_cost": 0.0019031521701884488,
+      "net_utility_from_cash": -0.0014444253795212808,
+      "risky_weight": 0.9515760850942244,
+      "break_even_oneway_cost_bps": 2.4103526657132472
+    },
+    {
+      "date": 1548676800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006666149759343589,
+      "variance_penalty": 0.00012887262770207042,
+      "gross_utility": 0.0005377423482322884,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010622576517677117,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.3608896764518024
+    },
+    {
+      "date": 1548676800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008213180020954714,
+      "variance_penalty": 0.00019462140739050216,
+      "gross_utility": 0.0006266965947049692,
+      "estimated_roundtrip_cost": 0.0019651321105433966,
+      "net_utility_from_cash": -0.0013384355158384273,
+      "risky_weight": 0.9825660552716982,
+      "break_even_oneway_cost_bps": 3.189081239589921
+    },
+    {
+      "date": 1549281600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0008780230400496988,
+      "variance_penalty": 0.00012818455599503318,
+      "gross_utility": 0.0007498384840546657,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0008501615159453344,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.68649052534166
+    },
+    {
+      "date": 1549281600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0010827452841971402,
+      "variance_penalty": 0.00019215854844067742,
+      "gross_utility": 0.0008905867357564628,
+      "estimated_roundtrip_cost": 0.0019574016350003896,
+      "net_utility_from_cash": -0.0010668148992439268,
+      "risky_weight": 0.9787008175001949,
+      "break_even_oneway_cost_bps": 4.549841585047441
+    },
+    {
+      "date": 1549886400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007530590479285462,
+      "variance_penalty": 0.00012668723712571634,
+      "gross_utility": 0.0006263718108028298,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009736281891971702,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.914823817517686
+    },
+    {
+      "date": 1549886400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0009276875715481806,
+      "variance_penalty": 0.00019038437371453478,
+      "gross_utility": 0.0007373031978336459,
+      "estimated_roundtrip_cost": 0.001960064258746678,
+      "net_utility_from_cash": -0.001222761060913032,
+      "risky_weight": 0.980032129373339,
+      "break_even_oneway_cost_bps": 3.7616276841102088
+    },
+    {
+      "date": 1550577600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006739194975919926,
+      "variance_penalty": 0.00012596006346407494,
+      "gross_utility": 0.0005479594341279176,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010520405658720824,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.424746463299485
+    },
+    {
+      "date": 1550577600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008366811229268514,
+      "variance_penalty": 0.0001938204550460598,
+      "gross_utility": 0.0006428606678807916,
+      "estimated_roundtrip_cost": 0.0019844786246356787,
+      "net_utility_from_cash": -0.0013416179567548871,
+      "risky_weight": 0.9922393123178392,
+      "break_even_oneway_cost_bps": 3.2394436498342807
+    },
+    {
+      "date": 1551096000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007009766149627171,
+      "variance_penalty": 0.00012813206973107995,
+      "gross_utility": 0.0005728445452316372,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010271554547683628,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.5802784076977323
+    },
+    {
+      "date": 1551096000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008635816320954155,
+      "variance_penalty": 0.00019181232253876756,
+      "gross_utility": 0.0006717693095566479,
+      "estimated_roundtrip_cost": 0.0019556605214281356,
+      "net_utility_from_cash": -0.0012838912118714877,
+      "risky_weight": 0.9778302607140679,
+      "break_even_oneway_cost_bps": 3.434999593212033
+    },
+    {
+      "date": 1551700800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0003253547416247131,
+      "variance_penalty": 0.00013097553574900598,
+      "gross_utility": 0.00019437920587570714,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001405620794124293,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 1.2148700367231695
+    },
+    {
+      "date": 1551700800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.000392775912170481,
+      "variance_penalty": 0.0001748730845111147,
+      "gross_utility": 0.00021790282765936632,
+      "estimated_roundtrip_cost": 0.0018496956495686005,
+      "net_utility_from_cash": -0.0016317928219092342,
+      "risky_weight": 0.9248478247843002,
+      "break_even_oneway_cost_bps": 1.1780469273968786
+    },
+    {
+      "date": 1552305600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0003755061636913875,
+      "variance_penalty": 0.00012900048662205642,
+      "gross_utility": 0.0002465056770693311,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001353494322930669,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 1.5406604816833194
+    },
+    {
+      "date": 1552305600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.00046297145261316554,
+      "variance_penalty": 0.00019420229850889456,
+      "gross_utility": 0.000268769154104271,
+      "estimated_roundtrip_cost": 0.0019633639119070287,
+      "net_utility_from_cash": -0.0016945947578027578,
+      "risky_weight": 0.9816819559535144,
+      "break_even_oneway_cost_bps": 1.368921739236888
+    },
+    {
+      "date": 1552910400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007177689664283427,
+      "variance_penalty": 0.0001276168557125773,
+      "gross_utility": 0.0005901521107157654,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010098478892842347,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.688450691973533
+    },
+    {
+      "date": 1552910400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008911182331283311,
+      "variance_penalty": 0.00019653629364757374,
+      "gross_utility": 0.0006945819394807574,
+      "estimated_roundtrip_cost": 0.00198561357967787,
+      "net_utility_from_cash": -0.0012910316401971128,
+      "risky_weight": 0.992806789838935,
+      "break_even_oneway_cost_bps": 3.4980720649253456
+    },
+    {
+      "date": 1553515200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006695240811531873,
+      "variance_penalty": 0.00013038198105696797,
+      "gross_utility": 0.0005391421000962193,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010608578999037807,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.3696381256013708
+    },
+    {
+      "date": 1553515200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008323421325805559,
+      "variance_penalty": 0.00020131156691367727,
+      "gross_utility": 0.0006310305656668787,
+      "estimated_roundtrip_cost": 0.001988370819714147,
+      "net_utility_from_cash": -0.0013573402540472683,
+      "risky_weight": 0.9941854098570735,
+      "break_even_oneway_cost_bps": 3.173606046771483
+    },
+    {
+      "date": 1554120000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006179619055269863,
+      "variance_penalty": 0.00013106171390409683,
+      "gross_utility": 0.00048690019162288945,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011130998083771107,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.043126197643059
+    },
+    {
+      "date": 1554120000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007523078604243698,
+      "variance_penalty": 0.0001881996131389452,
+      "gross_utility": 0.0005641082472854246,
+      "estimated_roundtrip_cost": 0.0019154639538169914,
+      "net_utility_from_cash": -0.0013513557065315668,
+      "risky_weight": 0.9577319769084957,
+      "break_even_oneway_cost_bps": 2.945021472011063
+    },
+    {
+      "date": 1554724800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005810372536314557,
+      "variance_penalty": 0.000127968218959178,
+      "gross_utility": 0.00045306903467227775,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011469309653277223,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.831681466701736
+    },
+    {
+      "date": 1554724800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007048135939473235,
+      "variance_penalty": 0.0001820023660844808,
+      "gross_utility": 0.0005228112278628427,
+      "estimated_roundtrip_cost": 0.001907424503535382,
+      "net_utility_from_cash": -0.0013846132756725393,
+      "risky_weight": 0.953712251767691,
+      "break_even_oneway_cost_bps": 2.7409275014230974
+    },
+    {
+      "date": 1555329600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00048185855678003304,
+      "variance_penalty": 0.000125458026392189,
+      "gross_utility": 0.00035640053038784404,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001243599469612156,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.227503314924025
+    },
+    {
+      "date": 1555329600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0005926301623458552,
+      "variance_penalty": 0.0001811542486072334,
+      "gross_utility": 0.0004114759137386218,
+      "estimated_roundtrip_cost": 0.001919645873311171,
+      "net_utility_from_cash": -0.0015081699595725492,
+      "risky_weight": 0.9598229366555855,
+      "break_even_oneway_cost_bps": 2.1434990664651736
+    },
+    {
+      "date": 1555934400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00046475699055525445,
+      "variance_penalty": 0.00012542631250528512,
+      "gross_utility": 0.00033933067804996935,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012606693219500307,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.1208167378123086
+    },
+    {
+      "date": 1555934400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0005703761038850213,
+      "variance_penalty": 0.00018756830363282238,
+      "gross_utility": 0.0003828078002521989,
+      "estimated_roundtrip_cost": 0.001956835025055458,
+      "net_utility_from_cash": -0.0015740272248032589,
+      "risky_weight": 0.9784175125277289,
+      "break_even_oneway_cost_bps": 1.9562599572815287
+    },
+    {
+      "date": 1556539200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006042439928576487,
+      "variance_penalty": 0.00012424757771390397,
+      "gross_utility": 0.00047999641514374474,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011200035848562553,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.9999775946484046
+    },
+    {
+      "date": 1556539200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007458774528087972,
+      "variance_penalty": 0.00018783881948567437,
+      "gross_utility": 0.0005580386333231229,
+      "estimated_roundtrip_cost": 0.001966700028919301,
+      "net_utility_from_cash": -0.001408661395596178,
+      "risky_weight": 0.9833500144596505,
+      "break_even_oneway_cost_bps": 2.837436442352443
+    },
+    {
+      "date": 1557144000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006230265396807674,
+      "variance_penalty": 0.0001250053440362057,
+      "gross_utility": 0.0004980211956445617,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011019788043554384,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.1126324727785106
+    },
+    {
+      "date": 1557144000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007739599062281206,
+      "variance_penalty": 0.00019277089315569164,
+      "gross_utility": 0.000581189013072429,
+      "estimated_roundtrip_cost": 0.0019868951425936225,
+      "net_utility_from_cash": -0.0014057061295211935,
+      "risky_weight": 0.9934475712968112,
+      "break_even_oneway_cost_bps": 2.9251116509035575
+    },
+    {
+      "date": 1557748800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005132579938767711,
+      "variance_penalty": 0.00012657585662416638,
+      "gross_utility": 0.0003866821372526047,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012133178627473954,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.416763357828779
+    },
+    {
+      "date": 1557748800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006308116256957084,
+      "variance_penalty": 0.00018730625090822512,
+      "gross_utility": 0.00044350537478748324,
+      "estimated_roundtrip_cost": 0.001947146117472185,
+      "net_utility_from_cash": -0.0015036407426847018,
+      "risky_weight": 0.9735730587360925,
+      "break_even_oneway_cost_bps": 2.2777200478577786
+    },
+    {
+      "date": 1558353600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00047995469496715174,
+      "variance_penalty": 0.00012965675539225688,
+      "gross_utility": 0.00035029793957489484,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012497020604251051,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.1893621223430926
+    },
+    {
+      "date": 1558353600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0005857962023168114,
+      "variance_penalty": 0.00019070722753453833,
+      "gross_utility": 0.00039508897478227306,
+      "estimated_roundtrip_cost": 0.0019412886068349185,
+      "net_utility_from_cash": -0.0015461996320526453,
+      "risky_weight": 0.9706443034174592,
+      "break_even_oneway_cost_bps": 2.0351892726884495
+    },
+    {
+      "date": 1559044800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005517583806533171,
+      "variance_penalty": 0.00012697442571343165,
+      "gross_utility": 0.00042478395493988544,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011752160450601147,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.654899718374284
+    },
+    {
+      "date": 1559044800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006727941044479252,
+      "variance_penalty": 0.00018483056299360825,
+      "gross_utility": 0.000487963541454317,
+      "estimated_roundtrip_cost": 0.0019291878054826458,
+      "net_utility_from_cash": -0.0014412242640283288,
+      "risky_weight": 0.9645939027413228,
+      "break_even_oneway_cost_bps": 2.5293729312799482
+    },
+    {
+      "date": 1559563200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007347538694077811,
+      "variance_penalty": 0.00013238084235103165,
+      "gross_utility": 0.0006023730270567494,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009976269729432506,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.764831419104684
+    },
+    {
+      "date": 1559563200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0009088525681343519,
+      "variance_penalty": 0.00018610117464703787,
+      "gross_utility": 0.000722751393487314,
+      "estimated_roundtrip_cost": 0.0018931521633643385,
+      "net_utility_from_cash": -0.0011704007698770244,
+      "risky_weight": 0.9465760816821692,
+      "break_even_oneway_cost_bps": 3.817714220091563
+    },
+    {
+      "date": 1560168000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0010326553724938755,
+      "variance_penalty": 0.0001344583575104353,
+      "gross_utility": 0.0008981970149834403,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0007018029850165598,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 5.613731343646502
+    },
+    {
+      "date": 1560168000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0012878701400718254,
+      "variance_penalty": 0.0002090571043546984,
+      "gross_utility": 0.001078813035717127,
+      "estimated_roundtrip_cost": 0.001995224783422459,
+      "net_utility_from_cash": -0.0009164117477053321,
+      "risky_weight": 0.9976123917112296,
+      "break_even_oneway_cost_bps": 5.4069749167139545
+    },
+    {
+      "date": 1560772800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007308847639904882,
+      "variance_penalty": 0.00012595095406563056,
+      "gross_utility": 0.0006049338099248576,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009950661900751424,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.78083631203036
+    },
+    {
+      "date": 1560772800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0009041849714024157,
+      "variance_penalty": 0.00019200488206170928,
+      "gross_utility": 0.0007121800893407065,
+      "estimated_roundtrip_cost": 0.001975120044129612,
+      "net_utility_from_cash": -0.0012629399547889057,
+      "risky_weight": 0.9875600220648061,
+      "break_even_oneway_cost_bps": 3.605755971427788
+    },
+    {
+      "date": 1561377600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0008769590117538358,
+      "variance_penalty": 0.000131370807360992,
+      "gross_utility": 0.0007455882043928438,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0008544117956071562,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.659926277455273
+    },
+    {
+      "date": 1561377600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0010839558375256382,
+      "variance_penalty": 0.00019892631896765444,
+      "gross_utility": 0.0008850295185579837,
+      "estimated_roundtrip_cost": 0.0019667875277081647,
+      "net_utility_from_cash": -0.001081758009150181,
+      "risky_weight": 0.9833937638540824,
+      "break_even_oneway_cost_bps": 4.49987355568235
+    },
+    {
+      "date": 1561982400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007490937537545702,
+      "variance_penalty": 0.00013138418571692991,
+      "gross_utility": 0.0006177095680376403,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009822904319623598,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.8606848002352514
+    },
+    {
+      "date": 1561982400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0009190905113672532,
+      "variance_penalty": 0.00019553260403620877,
+      "gross_utility": 0.0007235579073310445,
+      "estimated_roundtrip_cost": 0.0019496148925507901,
+      "net_utility_from_cash": -0.0012260569852197457,
+      "risky_weight": 0.9748074462753951,
+      "break_even_oneway_cost_bps": 3.7112863165728758
+    },
+    {
+      "date": 1562587200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00050326841762836,
+      "variance_penalty": 0.00013290339605893475,
+      "gross_utility": 0.0003703650215694253,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012296349784305747,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.314781384808908
+    },
+    {
+      "date": 1562587200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006163750869619411,
+      "variance_penalty": 0.00019017838414477507,
+      "gross_utility": 0.000426196702817166,
+      "estimated_roundtrip_cost": 0.0019162049745178678,
+      "net_utility_from_cash": -0.0014900082717007018,
+      "risky_weight": 0.9581024872589339,
+      "break_even_oneway_cost_bps": 2.2241707358285114
+    },
+    {
+      "date": 1563192000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006851651898795701,
+      "variance_penalty": 0.00013147235789806407,
+      "gross_utility": 0.0005536928319815061,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010463071680184939,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.460580199884413
+    },
+    {
+      "date": 1563192000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008429576316061479,
+      "variance_penalty": 0.00018969225379002278,
+      "gross_utility": 0.000653265377816125,
+      "estimated_roundtrip_cost": 0.0019183343690052413,
+      "net_utility_from_cash": -0.0012650689911891163,
+      "risky_weight": 0.9591671845026206,
+      "break_even_oneway_cost_bps": 3.4053780632355455
+    },
+    {
+      "date": 1563796800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.000627262665403226,
+      "variance_penalty": 0.00013175805891243477,
+      "gross_utility": 0.0004955046064907912,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011044953935092088,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.096903790567445
+    },
+    {
+      "date": 1563796800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007683500351027622,
+      "variance_penalty": 0.00019456406264014333,
+      "gross_utility": 0.0005737859724626188,
+      "estimated_roundtrip_cost": 0.0019415200144976845,
+      "net_utility_from_cash": -0.0013677340420350658,
+      "risky_weight": 0.9707600072488423,
+      "break_even_oneway_cost_bps": 2.955344102445786
+    },
+    {
+      "date": 1564401600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.000663566012864725,
+      "variance_penalty": 0.00012832454376744803,
+      "gross_utility": 0.000535241469097277,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010647585309027231,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.3452591818579807
+    },
+    {
+      "date": 1564401600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008289092889709605,
+      "variance_penalty": 0.00020023956674053886,
+      "gross_utility": 0.0006286697222304216,
+      "estimated_roundtrip_cost": 0.0019986386283855767,
+      "net_utility_from_cash": -0.001369968906155155,
+      "risky_weight": 0.9993193141927883,
+      "break_even_oneway_cost_bps": 3.1454897013485468
+    },
+    {
+      "date": 1565006400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006643635165785988,
+      "variance_penalty": 0.00013462648235954672,
+      "gross_utility": 0.000529737034219052,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001070262965780948,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.310856463869075
+    },
+    {
+      "date": 1565006400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008188915892410045,
+      "variance_penalty": 0.0001931288060651482,
+      "gross_utility": 0.0006257627831758563,
+      "estimated_roundtrip_cost": 0.0019092965739647397,
+      "net_utility_from_cash": -0.0012835337907888835,
+      "risky_weight": 0.9546482869823698,
+      "break_even_oneway_cost_bps": 3.2774519773867916
+    },
+    {
+      "date": 1565611200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0009182544097438726,
+      "variance_penalty": 0.0001476180098655907,
+      "gross_utility": 0.0007706363998782819,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0008293636001217182,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.816477499239261
+    },
+    {
+      "date": 1565611200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0011361541943481082,
+      "variance_penalty": 0.00020690314016908178,
+      "gross_utility": 0.0009292510541790265,
+      "estimated_roundtrip_cost": 0.00189470776256627,
+      "net_utility_from_cash": -0.0009654567083872435,
+      "risky_weight": 0.9473538812831349,
+      "break_even_oneway_cost_bps": 4.904455835027618
+    },
+    {
+      "date": 1566216000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0008331749770613383,
+      "variance_penalty": 0.00014469559627680958,
+      "gross_utility": 0.0006884793807845288,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0009115206192154713,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.302996129903304
+    },
+    {
+      "date": 1566216000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.001023237084594133,
+      "variance_penalty": 0.0002138028999237549,
+      "gross_utility": 0.0008094341846703782,
+      "estimated_roundtrip_cost": 0.001947954762631424,
+      "net_utility_from_cash": -0.0011385205779610458,
+      "risky_weight": 0.973977381315712,
+      "break_even_oneway_cost_bps": 4.155302783196782
+    },
+    {
+      "date": 1566820800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006202222054770946,
+      "variance_penalty": 0.00014778088001235628,
+      "gross_utility": 0.00047244132546473826,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011275586745352617,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.952758284154614
+    },
+    {
+      "date": 1566820800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007643963136661342,
+      "variance_penalty": 0.00022365365360015765,
+      "gross_utility": 0.0005407426600659766,
+      "estimated_roundtrip_cost": 0.0019687606630500913,
+      "net_utility_from_cash": -0.0014280180029841148,
+      "risky_weight": 0.9843803315250456,
+      "break_even_oneway_cost_bps": 2.7466145083792672
+    },
+    {
+      "date": 1567512000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0007109989078042712,
+      "variance_penalty": 0.00013439743523126663,
+      "gross_utility": 0.0005766014725730045,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010233985274269955,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.603759203581278
+    },
+    {
+      "date": 1567512000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.000882791583529592,
+      "variance_penalty": 0.00020688155286295926,
+      "gross_utility": 0.0006759100306666327,
+      "estimated_roundtrip_cost": 0.0019856133588868974,
+      "net_utility_from_cash": -0.0013097033282202647,
+      "risky_weight": 0.9928066794434487,
+      "break_even_oneway_cost_bps": 3.404036478912173
+    },
+    {
+      "date": 1568030400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005522643481967791,
+      "variance_penalty": 0.00013644549432750063,
+      "gross_utility": 0.00041581885386927854,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011841811461307215,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.5988678366829907
+    },
+    {
+      "date": 1568030400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006789194988443742,
+      "variance_penalty": 0.0001943335233748913,
+      "gross_utility": 0.0004845859754694829,
+      "estimated_roundtrip_cost": 0.0019094356072839472,
+      "net_utility_from_cash": -0.0014248496318144642,
+      "risky_weight": 0.9547178036419736,
+      "break_even_oneway_cost_bps": 2.5378492661440215
+    },
+    {
+      "date": 1568635200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00011605092279444654,
+      "variance_penalty": 0.0001440531256974083,
+      "gross_utility": -2.8002202902961747e-05,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0016280022029029617,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": -0.1750137681435109
+    },
+    {
+      "date": 1568635200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.00019451087794019958,
+      "variance_penalty": 0.00016821678354781973,
+      "gross_utility": 2.6294094392379847e-05,
+      "estimated_roundtrip_cost": 0.0017333333333333335,
+      "net_utility_from_cash": -0.0017070392389409537,
+      "risky_weight": 0.8666666666666667,
+      "break_even_oneway_cost_bps": 0.15169669841757605
+    },
+    {
+      "date": 1569240000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006728850604515051,
+      "variance_penalty": 0.000130449629742215,
+      "gross_utility": 0.0005424354307092901,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.00105756456929071,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.390221441933063
+    },
+    {
+      "date": 1569240000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008244614397604786,
+      "variance_penalty": 0.00019348754972515754,
+      "gross_utility": 0.0006309738900353211,
+      "estimated_roundtrip_cost": 0.0019471134191360064,
+      "net_utility_from_cash": -0.0013161395291006852,
+      "risky_weight": 0.9735567095680032,
+      "break_even_oneway_cost_bps": 3.24056053352713
+    },
+    {
+      "date": 1569844800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.000619603697944255,
+      "variance_penalty": 0.00013126559507412513,
+      "gross_utility": 0.0004883381028701299,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011116618971298703,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.0521131429383113
+    },
+    {
+      "date": 1569844800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007533436127210612,
+      "variance_penalty": 0.00018911257015077562,
+      "gross_utility": 0.0005642310425702856,
+      "estimated_roundtrip_cost": 0.001918589743355535,
+      "net_utility_from_cash": -0.0013543587007852492,
+      "risky_weight": 0.9592948716777675,
+      "break_even_oneway_cost_bps": 2.9408634364086015
+    },
+    {
+      "date": 1570449600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.000507805886805521,
+      "variance_penalty": 0.0001341005309526647,
+      "gross_utility": 0.0003737053558528563,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012262946441471438,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.335658474080352
+    },
+    {
+      "date": 1570449600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006167402172847138,
+      "variance_penalty": 0.0001934112722254529,
+      "gross_utility": 0.00042332894505926093,
+      "estimated_roundtrip_cost": 0.0019222863583543749,
+      "net_utility_from_cash": -0.0014989574132951138,
+      "risky_weight": 0.9611431791771874,
+      "break_even_oneway_cost_bps": 2.2022158312649274
+    },
+    {
+      "date": 1571054400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005148742130231562,
+      "variance_penalty": 0.00013464121864063323,
+      "gross_utility": 0.000380232994382523,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001219767005617477,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.3764562148907684
+    },
+    {
+      "date": 1571054400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006330733827601837,
+      "variance_penalty": 0.00019897408183637587,
+      "gross_utility": 0.00043409930092380786,
+      "estimated_roundtrip_cost": 0.001943691068608661,
+      "net_utility_from_cash": -0.0015095917676848532,
+      "risky_weight": 0.9718455343043305,
+      "break_even_oneway_cost_bps": 2.233376012961495
+    },
+    {
+      "date": 1571659200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00044356867333754065,
+      "variance_penalty": 0.00013029610593390722,
+      "gross_utility": 0.00031327256740363343,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012867274325963666,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 1.9579535462727087
+    },
+    {
+      "date": 1571659200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0005458306496504019,
+      "variance_penalty": 0.00017384135063434387,
+      "gross_utility": 0.00037198929901605804,
+      "estimated_roundtrip_cost": 0.0018456170667550224,
+      "net_utility_from_cash": -0.0014736277677389643,
+      "risky_weight": 0.9228085333775112,
+      "break_even_oneway_cost_bps": 2.015528062221988
+    },
+    {
+      "date": 1572264000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006135459154135241,
+      "variance_penalty": 0.0001240803626496177,
+      "gross_utility": 0.0004894655527639064,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011105344472360937,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.059159704774415
+    },
+    {
+      "date": 1572264000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007548368282383534,
+      "variance_penalty": 0.0001843769822063519,
+      "gross_utility": 0.0005704598460320014,
+      "estimated_roundtrip_cost": 0.0019492050423398168,
+      "net_utility_from_cash": -0.0013787451963078153,
+      "risky_weight": 0.9746025211699084,
+      "break_even_oneway_cost_bps": 2.9266282081192654
+    },
+    {
+      "date": 1572868800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00083141901080508,
+      "variance_penalty": 0.0001280446189686441,
+      "gross_utility": 0.000703374391836436,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0008966256081635641,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 4.396089948977725
+    },
+    {
+      "date": 1572868800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0010288408435354542,
+      "variance_penalty": 0.00019518333387117222,
+      "gross_utility": 0.0008336575096642819,
+      "estimated_roundtrip_cost": 0.0019758413628663198,
+      "net_utility_from_cash": -0.0011421838532020378,
+      "risky_weight": 0.9879206814331598,
+      "break_even_oneway_cost_bps": 4.219253252472198
+    },
+    {
+      "date": 1573473600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005294857748658217,
+      "variance_penalty": 0.00013447868193810922,
+      "gross_utility": 0.00039500709292771246,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012049929070722877,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.4687943307982025
+    },
+    {
+      "date": 1573473600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006411551924114338,
+      "variance_penalty": 0.00019161500820316229,
+      "gross_utility": 0.00044954018420827153,
+      "estimated_roundtrip_cost": 0.0019121428488666457,
+      "net_utility_from_cash": -0.0014626026646583743,
+      "risky_weight": 0.9560714244333228,
+      "break_even_oneway_cost_bps": 2.350975945519554
+    },
+    {
+      "date": 1574078400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0005639952109879367,
+      "variance_penalty": 0.0001273945535810126,
+      "gross_utility": 0.00043660065740692413,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001163399342593076,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.7287541087932756
+    },
+    {
+      "date": 1574078400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006933046348876846,
+      "variance_penalty": 0.00018779078473903343,
+      "gross_utility": 0.0005055138501486511,
+      "estimated_roundtrip_cost": 0.0019410255913217289,
+      "net_utility_from_cash": -0.0014355117411730778,
+      "risky_weight": 0.9705127956608645,
+      "break_even_oneway_cost_bps": 2.604364684364747
+    },
+    {
+      "date": 1574683200.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006918281270559485,
+      "variance_penalty": 0.00012524524475747244,
+      "gross_utility": 0.000566582882298476,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001033417117701524,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.541143014365475
+    },
+    {
+      "date": 1574683200.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008534981890087291,
+      "variance_penalty": 0.00018972872877262876,
+      "gross_utility": 0.0006637694602361003,
+      "estimated_roundtrip_cost": 0.001968517160944402,
+      "net_utility_from_cash": -0.0013047477007083015,
+      "risky_weight": 0.9842585804722009,
+      "break_even_oneway_cost_bps": 3.371926206209221
+    },
+    {
+      "date": 1575288000.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006336703639518271,
+      "variance_penalty": 0.00012493114824589858,
+      "gross_utility": 0.0005087392157059286,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0010912607842940715,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.179620098162054
+    },
+    {
+      "date": 1575288000.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0007799236988915207,
+      "variance_penalty": 0.00018613374387852464,
+      "gross_utility": 0.000593789955012996,
+      "estimated_roundtrip_cost": 0.0019516920099500292,
+      "net_utility_from_cash": -0.001357902054937033,
+      "risky_weight": 0.9758460049750146,
+      "break_even_oneway_cost_bps": 3.042436777861274
+    },
+    {
+      "date": 1575892800.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.00047954487531029656,
+      "variance_penalty": 0.00013058945312165206,
+      "gross_utility": 0.00034895542218864447,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0012510445778113556,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.180971388679028
+    },
+    {
+      "date": 1575892800.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.000589050090900298,
+      "variance_penalty": 0.00019257902984349087,
+      "gross_utility": 0.0003964710610568071,
+      "estimated_roundtrip_cost": 0.0019444962494678047,
+      "net_utility_from_cash": -0.0015480251884109975,
+      "risky_weight": 0.9722481247339023,
+      "break_even_oneway_cost_bps": 2.0389397056709084
+    },
+    {
+      "date": 1576497600.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.000568701940880963,
+      "variance_penalty": 0.00012857329928793319,
+      "gross_utility": 0.0004401286415930298,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.0011598713584069702,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 2.750804009956436
+    },
+    {
+      "date": 1576497600.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0006948175175537595,
+      "variance_penalty": 0.00018201900220723264,
+      "gross_utility": 0.0005127985153465269,
+      "estimated_roundtrip_cost": 0.0019040717739954604,
+      "net_utility_from_cash": -0.0013912732586489336,
+      "risky_weight": 0.9520358869977302,
+      "break_even_oneway_cost_bps": 2.69316799056625
+    },
+    {
+      "date": 1577102400.0,
+      "candidate": "anchor",
+      "predicted_log_location": 0.0006674295156676002,
+      "variance_penalty": 0.00012674402818444803,
+      "gross_utility": 0.0005406854874831521,
+      "estimated_roundtrip_cost": 0.0016,
+      "net_utility_from_cash": -0.001059314512516848,
+      "risky_weight": 0.8,
+      "break_even_oneway_cost_bps": 3.3792842967697005
+    },
+    {
+      "date": 1577102400.0,
+      "candidate": "signal",
+      "predicted_log_location": 0.0008207593834025284,
+      "variance_penalty": 0.00018243108182259627,
+      "gross_utility": 0.0006383283015799321,
+      "estimated_roundtrip_cost": 0.001919704100560273,
+      "net_utility_from_cash": -0.0012813757989803408,
+      "risky_weight": 0.9598520502801364,
+      "break_even_oneway_cost_bps": 3.3251390221734356
+    }
+  ],
+  "cash_summary": {
+    "anchor": {
+      "dates": 51,
+      "gross_utility_range": [
+        -2.8002202902961747e-05,
+        0.0008981970149834403
+      ],
+      "net_utility_range": [
+        -0.0016280022029029617,
+        -0.0007018029850165598
+      ],
+      "break_even_bps_range": [
+        -0.1750137681435109,
+        5.613731343646502
+      ],
+      "positive_gross_dates": 50,
+      "positive_net_dates": 0
+    },
+    "signal": {
+      "dates": 51,
+      "gross_utility_range": [
+        2.6294094392379847e-05,
+        0.001078813035717127
+      ],
+      "net_utility_range": [
+        -0.0017070392389409537,
+        -0.0009164117477053321
+      ],
+      "break_even_bps_range": [
+        0.15169669841757605,
+        5.4069749167139545
+      ],
+      "positive_gross_dates": 51,
+      "positive_net_dates": 0
+    }
+  }
+}

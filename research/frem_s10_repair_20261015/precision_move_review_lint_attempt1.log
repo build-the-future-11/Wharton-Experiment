@@ -1,0 +1,27 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s10/tests/test_precision_inputs_audit.py:3:1
+   |
+ 1 |   """Proof of pilot value filtering before target construction, using generated data."""
+ 2 |
+ 3 | / import hashlib
+ 4 | | import json
+ 5 | | from dataclasses import replace
+ 6 | | from datetime import date, timedelta
+ 7 | | from pathlib import Path
+ 8 | |
+ 9 | | import pytest
+10 | | from frem_s10.data.admission import DataContract, calendar_identity
+11 | | from frem_s10.data.precision import prepare_precision_inputs
+12 | | from frem_s10.data.source_reader import ScopedSourceReader, SourceIdentity
+13 | | from frem_s10.errors import ChronologyError, IntegrityError
+14 | | from frem_s10.metadata import ASSETS, midnight_us, scheduled_open_us
+   | |____________________________________________________________________^
+help: Organize imports
+   |
+9  | import pytest
+10 +
+11 | from frem_s10.data.admission import DataContract, calendar_identity
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

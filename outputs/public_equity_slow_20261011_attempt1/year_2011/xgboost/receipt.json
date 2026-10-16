@@ -1,0 +1,159 @@
+{
+  "status": "COMPLETE",
+  "fold": "year_2011",
+  "model": "xgboost",
+  "seed": 11,
+  "metrics": {
+    "rows": 264,
+    "utc_dates": 12,
+    "mean_nll": -1.1549682222493474,
+    "nll": -1.1549682222493474,
+    "mean_crps": 0.04076399830140665,
+    "mse": 0.005174695892765688,
+    "mae": 0.054507136578130756,
+    "brier_up": 0.24990417857744454,
+    "direction_accuracy": 0.5681818181818181,
+    "pooled_mean_nll": -1.1549682222493474,
+    "primary_weighting": "equal UTC-date weight, equal asset weight within date",
+    "calibration": {
+      "brier_score": 0.24990417857744454,
+      "ece": 0.05979347943930212,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "mean_probability": null,
+          "event_frequency": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "mean_probability": null,
+          "event_frequency": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.30000000000000004,
+          "count": 0,
+          "mean_probability": null,
+          "event_frequency": null
+        },
+        {
+          "lower": 0.30000000000000004,
+          "upper": 0.4,
+          "count": 13,
+          "mean_probability": 0.3635727297255827,
+          "event_frequency": 0.46153846153846156
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 67,
+          "mean_probability": 0.47620456488201757,
+          "event_frequency": 0.31343283582089554
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6000000000000001,
+          "count": 167,
+          "mean_probability": 0.528688573065267,
+          "event_frequency": 0.5329341317365269
+        },
+        {
+          "lower": 0.6000000000000001,
+          "upper": 0.7000000000000001,
+          "count": 16,
+          "mean_probability": 0.6363926757828036,
+          "event_frequency": 0.5
+        },
+        {
+          "lower": 0.7000000000000001,
+          "upper": 0.8,
+          "count": 1,
+          "mean_probability": 0.7149271006878835,
+          "event_frequency": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 0,
+          "mean_probability": null,
+          "event_frequency": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "mean_probability": null,
+          "event_frequency": null
+        }
+      ],
+      "ece_is_not_a_proper_score": true
+    },
+    "intervals": {
+      "0.5": {
+        "nominal": 0.5,
+        "coverage": 0.662878787878788,
+        "mean_width": 0.12085155284435183,
+        "mean_interval_score": 0.18288819321052596
+      },
+      "0.8": {
+        "nominal": 0.8,
+        "coverage": 0.9053030303030303,
+        "mean_width": 0.24544668813026324,
+        "mean_interval_score": 0.28349769371540895
+      },
+      "0.95": {
+        "nominal": 0.95,
+        "coverage": 0.9886363636363638,
+        "mean_width": 0.4275002488354562,
+        "mean_interval_score": 0.43644533242372563
+      }
+    },
+    "calibration_weighting": "reliability bins and PIT counts pool individual observations",
+    "rank_correlation": {
+      "mean_over_defined_dates": 0.05843845448048477,
+      "defined_dates": 12,
+      "undefined_dates": 0,
+      "definition": "Spearman correlation of per-asset date-mean forecasts and outcomes; at least three assets and nonconstant ranks required",
+      "independent_sample_p_value": null
+    },
+    "pit_histogram": {
+      "counts": [
+        18,
+        23,
+        34,
+        34,
+        39,
+        31,
+        34,
+        30,
+        14,
+        7
+      ],
+      "edges": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "independent_sample_p_value": null
+    },
+    "crps_method": "96-node deterministic quantile quadrature",
+    "forecast_units": "cumulative base-currency log total return",
+    "distribution_note": "scale is Student-t scale, not standard deviation; no finite exponential moment",
+    "performance_claim": "scores describe supplied observations only; they do not establish future profitability"
+  },
+  "fit_wall_seconds": 1.3537159590050578,
+  "prediction_sha256": "834bc108cd6a5f52dadb165f536ac35ea1d75d56edc8d57bc03eee1fb91a55b8",
+  "protected_outcomes_accessed": false
+}

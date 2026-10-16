@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-15T14:10:13.180877+00:00",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/restart",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "seconds": 0.7272543330036569,
+  "peak_rss_mib": 24.0625,
+  "scope": "Engineering checks only; no market fitting."
+}

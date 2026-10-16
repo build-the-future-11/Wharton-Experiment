@@ -1,0 +1,45 @@
+[
+  {
+    "name": "source_lint_attempt3",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "exit_code": 1,
+    "wall_seconds": 0.14474587500444613,
+    "output": "om frem_s10.model.engine import advance, initial_state\n16 | | from frem_s10.model.feedback import mature_forecast\n17 | | from frem_s10.model.records import IssueRequest, MaturedFeedback\n18 | | from frem_s10.model.stacking import fit_mixtures\n   | |________________________________________________^\n19 |\n20 |   WEEK = 7 * 86400 * 1_000_000\n   |\nhelp: Organize imports\n  |\n8 | import pytest\n  -\n9 | from frem_s10.domain import OriginRecord, Transform\n  |\n\nFound 11 errors.\n[*] 11 fixable with `--fix`.\n"
+  },
+  {
+    "name": "source_format_attempt3",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/ruff",
+      "format",
+      "--check",
+      "--config",
+      "successors/frem_s10/pyproject.toml",
+      "successors/frem_s10/src/frem_s10",
+      "successors/frem_s10/tests"
+    ],
+    "exit_code": 1,
+    "wall_seconds": 0.024542792001739144,
+    "output": "\"nested\":' + '[' * 2000 + '0' + ']' * 2000 + '}', expected_state_id=\"unused\",\n    -                    expected_transform_id=\"unused\", expected_config=ForecastConfig())\n315 +         load_state(\n316 +             '{\"nested\":' + \"[\" * 2000 + \"0\" + \"]\" * 2000 + \"}\",\n317 +             expected_state_id=\"unused\",\n318 +             expected_transform_id=\"unused\",\n319 +             expected_config=ForecastConfig(),\n320 +         )\n321 |\n    |\n\n10 files would be reformatted, 37 files already formatted\n"
+  },
+  {
+    "name": "source_mypy_attempt3",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/mypy",
+      "--config-file",
+      "successors/frem_s10/pyproject.toml",
+      "--cache-dir",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/mypy_cache",
+      "successors/frem_s10/src/frem_s10"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 0.8227205000002868,
+    "output": "Success: no issues found in 40 source files\n"
+  }
+]

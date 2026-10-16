@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-14T15:01:37.169587+00:00",
+  "observation": "S8 completed all three seeds and 252 ledgers. Small NLL gains versus equal and S6 memory, both interval families include zero. Four-week wealth improves over the same-policy forecast controls but remains below cash and equal-weight assets.",
+  "hypothesized_cause": "Soft gate permits modest density gains and continuous multiweek allocations overcome the cash threshold; weak forecasts and exposure choices still fail to create reliable economic value.",
+  "change": "Close the completed S8 development study without retuning. Preserve all artifacts and prior studies; record legacy SPY/GLD feature exposure as a freshness limitation.",
+  "predicted_effect": "No further fit or favorable-arm substitution under this freeze.",
+  "discriminating_experiment": "Three seeds, 153 continuous 2020-2022 weeks, 15 forecasts, four policies and four costs; 6/12-date uncertainty.",
+  "result": "COMPLETE_BOUNDED_DEVELOPMENT_INCONCLUSIVE_PREDICTION_ECONOMIC_GATE_FAILED",
+  "receipt": "research/frem_s8_20261014/RECEIPT.json",
+  "protected_access": false,
+  "2019_tuned": false
+}

@@ -1,0 +1,46 @@
+........................................................................ [ 37%]
+........................................................................ [ 74%]
+...................FF............................                        [100%]
+=================================== FAILURES ===================================
+_________ test_public_inputs_ignore_blind_month_and_all_future_prices __________
+
+    def test_public_inputs_ignore_blind_month_and_all_future_prices():
+        original = prices()
+>       data, months, _ = build_research_windows({"test": original}, 12)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_public_equity_backtests.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/public_equity_backtests.py:173: in build_research_windows
+    maturity = ((target + 1).start_time.tz_localize("UTC") + pd.Timedelta(days=2)).value
+                                                             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+
+pandas/_libs/tslibs/timedeltas.pyx:1807: DeprecationWarning
+__________ test_fold_purges_maturing_labels_and_reports_missing_stock __________
+
+    def test_fold_purges_maturing_labels_and_reports_missing_stock():
+        whole = prices()
+        missing = whole.copy()
+        missing.loc["2008-06"] = np.nan
+>       data, months, _ = build_research_windows({"complete": whole, "missing": missing}, 12)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_public_equity_backtests.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/public_equity_backtests.py:173: in build_research_windows
+    maturity = ((target + 1).start_time.tz_localize("UTC") + pd.Timedelta(days=2)).value
+                                                             ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+
+pandas/_libs/tslibs/timedeltas.pyx:1807: DeprecationWarning
+=========================== short test summary info ============================
+FAILED tests/test_public_equity_backtests.py::test_public_inputs_ignore_blind_month_and_all_future_prices
+FAILED tests/test_public_equity_backtests.py::test_fold_purges_maturing_labels_and_reports_missing_stock
+2 failed, 191 passed in 14.50s

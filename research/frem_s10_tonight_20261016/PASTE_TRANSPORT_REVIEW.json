@@ -1,0 +1,31 @@
+{
+  "schema": "s10-paste-transport-readback-review-v1",
+  "recorded_at_utc": "2026-10-16T07:34:33.234394+00:00",
+  "status": "NO_BLOCKER_IDENTIFIED_FOR_EXACT_CPU_PROBE_TRANSPORT",
+  "transport_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+  "notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+  "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+  "checks": {
+    "transport_sha_matches_declared": true,
+    "transport_size_matches_declared": true,
+    "notebook_bytes_match_reviewed_file": true,
+    "notebook_sha_matches_reviewed_identity": true,
+    "notebook_size_matches_pin": true,
+    "exact_probe_only_configuration": true,
+    "eight_compiled_code_cells": true,
+    "helper_unchanged_exact_bytes": true,
+    "helper_sha_matches_reviewed_identity": true
+  },
+  "execution_semantics_review": "Eight exact ordered notebook code cells compiled without execution, then inspected fresh shared namespace and probe-only guards before/after execution; the reviewed default cannot select smoke or restore.",
+  "deadline_cpu_review": "Absolute UTC cutoff checked before decoding and each cell; Linux/Kaggle path and visible NVIDIA refusal; 30-second transport setup timer, additional 60-second bootstrap charge retained by unchanged runner; original notebook/helper watchdogs preserved.",
+  "review_scope": "Same-session read-only code/payload review plus this receipt; no browser calls, numerical imports, notebook execution, dependency installation, or extension permission change.",
+  "transport_executed_by_reviewer": false,
+  "linux_runtime_verified_by_reviewer": false,
+  "independent_external_replication": false,
+  "limitations": [
+    "Actual editor paste fidelity must be checked before running.",
+    "Runtime persistence and platform session termination require separate observed evidence.",
+    "Operator-provided expected hashes and version provenance are attestations, not provider signatures.",
+    "The fixed timestamp is 2026-10-16T16:30:00Z; later execution is refused."
+  ]
+}

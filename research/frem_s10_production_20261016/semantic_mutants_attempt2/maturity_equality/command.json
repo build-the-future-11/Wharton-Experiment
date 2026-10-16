@@ -1,0 +1,15 @@
+{
+  "label": "maturity_equality",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-c",
+    "import pathlib,sys,frem_s10,pytest; assert pathlib.Path(frem_s10.__file__).resolve().is_relative_to(pathlib.Path.cwd()/'src'); raise SystemExit(pytest.main(sys.argv[1:]))",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed"
+  ],
+  "returncode": 1,
+  "scope": "GENERATED_ENGINEERING"
+}

@@ -1,0 +1,3 @@
+Initial calendar extraction import FAILED: NameError PrecisionInputs from eager annotation evaluation. Fixed with future annotations before source audit.
+Initial ruff FAILED: RUF002 docstring EN DASH at production.py:116.
+Initial strict mypy PASSED: Success: no issues found in 1 source file.

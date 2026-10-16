@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-c",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_smoke_identity_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_preflight_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_progress_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_portable_packaging_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_isolation_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_production_verification_audit.py",
+    "-q",
+    "-W",
+    "error",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/final_fixtures_attempt1"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 23.542770500003826,
+  "child_peak_rss_mib": 56.078125,
+  "log": "research/frem_s10_kaggle_20261016/final_tests_attempt1.log"
+}

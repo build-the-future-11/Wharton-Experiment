@@ -1,0 +1,13 @@
+{
+  "observation": "S5-R1 contextual routing completed12 generated and6 retained-public cells. Small10bps point wealth gains vs equity benchmarks; fixed expert averaging wins wealth in both windows; recent/linear win likelihood in both.6% target not met.",
+  "hypothesized_cause": "Contextual retrieval adds little stable relative-expert information; weak expert inclusion and prediction-to-allocation mapping remain separate hypotheses, not proven explanations.",
+  "change": "Close S5-R1 without tuning completed outcomes. Preserve45-item classified backlog prioritizing simpler expert specialization and policy attribution. Full fresh-trained S5 remains unexecuted.",
+  "predicted_effect": "Future work must demonstrate incremental benefit over fixed/recent/linear controls and cost-stressed matched investment benchmarks before further complexity.",
+  "discriminating_experiment": "Completed fixed S5-R1,111 frozen identities,15 runtime tests,312 independently reconstructed ledgers,7128 scores, all folds/seeds retained.",
+  "result": "EXPLORATORY_POINT_GAINS_MEMORY_NOT_SUPPORTED_TARGET_NOT_MET",
+  "status": "CLOSED_PILOT_FULL_FRESH_TRAINING_UNEXECUTED",
+  "receipt": "research/frem_s5_20261013/COMPLETION_RECEIPT.json",
+  "protected_access": false,
+  "new_base_fits": 0,
+  "resource_limit": "Normal512MiB/pageout admission failed; bounded standard-library replay peak31.765625MiB; no heavy override."
+}

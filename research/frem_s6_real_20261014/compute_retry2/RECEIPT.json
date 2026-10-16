@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-14T01:08:34.486905+00:00",
+  "status": "BLOCKED_AUTHENTICATION_AND_RESOURCE_ADMISSION",
+  "active_gcloud_account": "ryangomez@thebu1ld.com",
+  "gcloud_instance_describe": "invalid_grant: Bad Request",
+  "other_gcloud_accounts": 0,
+  "ssh": "connection timed out after 10 seconds",
+  "package_files_verified": 37,
+  "local_resource_samples": [
+    {
+      "available_mib": 401.078125,
+      "pageouts": 135043
+    },
+    {
+      "available_mib": 158.90625,
+      "pageouts": 135046
+    },
+    {
+      "available_mib": 208.03125,
+      "pageouts": 135068
+    }
+  ],
+  "market_fits_started": 0,
+  "remote_jobs_created": 0,
+  "protected_access": false,
+  "required_action": "Complete gcloud auth login ryangomez@thebu1ld.com --force on this Mac; no credentials should be pasted into chat."
+}

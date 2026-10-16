@@ -1,0 +1,10 @@
+{
+  "scope": "EXACT_PRIOR_SOURCE_AND_EVIDENCE_PRESERVATION",
+  "before_files": 82,
+  "old_evidence_files": 211,
+  "old_source_files": 79,
+  "old_receipt_sha256": "8a650b4588f76a51badf82cd6eb2eadbdbd0b5ed059b82ba0848578e0338d001",
+  "old_receipt_matches": true,
+  "old_journal_prefix_preserved": true,
+  "mismatches": []
+}

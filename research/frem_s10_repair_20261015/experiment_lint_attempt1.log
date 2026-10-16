@@ -1,0 +1,13 @@
+RUF043 Pattern passed to `match=` contains metacharacters but is neither escaped nor raw
+   --> successors/frem_s10/tests/test_experiment_audit.py:382:45
+    |
+380 |     # Deliberate hostile relabeling still cannot bypass the full-N protocol.
+381 |     relabeled = replace(campaign, evidence_scope="KERNEL_REPLAY")
+382 |     with pytest.raises(ContractError, match="24..1000"):
+    |                                             ^^^^^^^^^^
+383 |         extract_fold_evidence(relabeled)
+384 |     results = list(relabeled.results)
+    |
+help: Use a raw string or `re.escape()` to make the intention explicit
+
+Found 1 error.

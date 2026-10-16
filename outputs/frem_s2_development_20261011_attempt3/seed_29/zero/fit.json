@@ -1,0 +1,20 @@
+{
+  "baseline": "zero",
+  "status": "fitted",
+  "train_rows": 1586,
+  "fitted_through": 1159833600000000000,
+  "scale": 0.07049684791160184,
+  "scale_calibration": "zero_forecast_training_outcomes",
+  "passes": [
+    {
+      "pass": "full_training_refit",
+      "rows": 1586,
+      "epochs": 0,
+      "gradient_steps": 0
+    }
+  ],
+  "trainable_parameters": null,
+  "elapsed_seconds": 0.006002375012030825,
+  "max_wall_seconds": 120,
+  "budget_note": "Wall clock checked between neural minibatches and estimator calls; a single tree/linear fit cannot be forcibly interrupted here"
+}

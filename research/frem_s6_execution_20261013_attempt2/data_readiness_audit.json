@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-13T16:53:52.593571+00:00",
+  "scope": "Read-only manifest/configuration inspection; no numerical payload parsing or scientific imports",
+  "sources": {
+    "data/public_equity_crises_v1/manifest.json": "e3458a7a2e9b8396ae1c63309a8f2f9e3f63923288e4461284e4b74b2235b817",
+    "data/public_regional_factors_20261011/manifest.json": "01ef22b9704314b2bb40aefd69899e49bb1a376b95999faba479edb4493a7514",
+    "data/engineering/yahoo_calibrated_v1/panel.parquet.manifest.json": "5627c6ca82020ebdb103e22679f5ba288b1074ac4401a211f4a4de894570f5b7",
+    "configs/frem_s3_public.json": "128f938eab6f87b51490236a838c6c9eef6cc622a88db57b6c93de31ca4ed121"
+  },
+  "data_candidates": [
+    {
+      "source": "data/public_equity_crises_v1/manifest.json",
+      "decision": "NOT_ADMITTED_TO_CURRENT_S6_CONTRACT",
+      "reason": "Retrospective present-day survivor sample in mixed listing currencies; no certified historical availability, terminal losses or common-currency S6 windows. Existing exploratory status preserved."
+    },
+    {
+      "source": "data/public_regional_factors_20261011/manifest.json",
+      "decision": "NOT_ADMITTED_TO_CURRENT_S6_CONTRACT",
+      "reason": "Current-vintage regional research portfolios with unverified historical publication times; not individual executable assets. Raw archives can include protected observations and were not opened."
+    },
+    {
+      "source": "data/engineering/yahoo_calibrated_v1/panel.parquet.manifest.json",
+      "decision": "ENGINEERING_ONLY_NOT_MARKET_DATA",
+      "reason": "Manifest explicitly declares synthetic data and prohibits scientific/investment claims."
+    }
+  ],
+  "protocol_requirements_verified_from_source": {
+    "cells": 24,
+    "optimization_seeds": [
+      11,
+      29,
+      47
+    ],
+    "contexts": [
+      "full",
+      "half",
+      "zero"
+    ],
+    "widths": [
+      8,
+      16
+    ],
+    "controls": [
+      "no_jepa",
+      "immediate_updates"
+    ],
+    "minimum_evaluation_dates": 24,
+    "block_lengths": [
+      3,
+      6
+    ],
+    "primary_endpoint": "mean_date_level_mixture_nll",
+    "economic_policy": "shared_fixed_80_20_signal",
+    "protected_boundary": "2025-01-01T00:00:00Z",
+    "required": "Exact cell configurations, chronological train/calibration/evaluation dates, causal metadata, dataset SHA, honest spent-date inventory, and precision analysis; no overlap between spent dates and outer evaluation"
+  },
+  "why_no_freeze_written": "A scientific freeze must bind actual admissible data and dates. Missing verified input identity and precision-qualified unspent date grid cannot be replaced by placeholders.",
+  "new_market_fits": 0,
+  "protected_access": false
+}

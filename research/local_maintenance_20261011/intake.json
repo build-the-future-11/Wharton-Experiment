@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-11T16:25:06.643845+00:00",
+  "scope": "Local maintenance without model execution, frozen source edits or protected access",
+  "active_campaign": "outputs/frem_s3_20261011_attempt1",
+  "active_frozen_source_mismatches": [],
+  "release_manifest": {
+    "entries": 316,
+    "mismatches": [
+      "RESEARCH_STATE.json",
+      "docs/CODEX_HANDOFF.md",
+      "research/events.jsonl",
+      "scripts/public_equity_backtests.py",
+      "src/frem/model.py",
+      "src/frem/training.py"
+    ],
+    "missing": []
+  },
+  "git_status_entries": 64,
+  "canonical_panel_exists": false,
+  "canonical_manifest_exists": false
+}

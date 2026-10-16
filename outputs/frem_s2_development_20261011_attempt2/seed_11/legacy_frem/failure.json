@@ -1,0 +1,6 @@
+{
+  "error": "Nonpositive/invalid prices: terminal losses require a different model; never drop them",
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py\", line 161, in worker\n    cfg, (train, validation, evaluation), split, coverage, months = load_fold()\n                                                                    ^^^^^^^^^^^\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/run_frem_rebuild.py\", line 135, in load_fold\n    prices[record[\"symbol\"]] = monthly_prices(chart, cfg)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/public_equity_backtests.py\", line 129, in monthly_prices\n    raise ValueError(\nValueError: Nonpositive/invalid prices: terminal losses require a different model; never drop them\n",
+  "partial_fit_report": null,
+  "history": null
+}

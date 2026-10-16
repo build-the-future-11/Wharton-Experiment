@@ -1,0 +1,13 @@
+{
+  "symbol": "MCD",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/MCD?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:26.042712+00:00",
+  "http_status": 200,
+  "path": "MCD.json",
+  "sha256": "cd8652554604459229b4d993549616b4a4549b9465f3f03e6ef1a4099b847d52",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

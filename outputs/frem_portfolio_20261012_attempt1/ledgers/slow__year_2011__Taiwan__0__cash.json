@@ -1,0 +1,229 @@
+{
+  "policy": "cash",
+  "currency": "TWD",
+  "terminal_wealth": 100000.0,
+  "net_return": 0.0,
+  "max_drawdown": 0.0,
+  "fees": 0.0,
+  "traded_notional": 0.0,
+  "periods": [
+    {
+      "time": 1293840000,
+      "end": 1296518400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1296518400,
+      "end": 1298937600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1298937600,
+      "end": 1301616000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1301616000,
+      "end": 1304208000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1304208000,
+      "end": 1306886400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1306886400,
+      "end": 1309478400,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1309478400,
+      "end": 1312156800,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1312156800,
+      "end": 1314835200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1314835200,
+      "end": 1317427200,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1317427200,
+      "end": 1320105600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1320105600,
+      "end": 1322697600,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0
+    },
+    {
+      "time": 1322697600,
+      "end": 1325376000,
+      "nav_start": 100000.0,
+      "nav_end": 100000.0,
+      "fee": 0.0,
+      "notional": 0.0,
+      "weights": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "cash": 100000.0,
+      "holdings": {
+        "2317.TW": 0.0,
+        "2330.TW": 0.0
+      },
+      "net_factor": 1.0,
+      "liquidation_fee": 0.0
+    }
+  ],
+  "defaults": []
+}

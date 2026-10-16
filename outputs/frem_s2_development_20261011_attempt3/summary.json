@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "fit_cells": 22,
+  "prediction_cells": 24,
+  "date_balanced_nll": {
+    "legacy_frem": -0.49029534171284456,
+    "legacy_no_memory": -0.4811575694332404,
+    "standardized_frem": -0.5590940377046204,
+    "standardized_no_memory": -0.5587698648374606,
+    "frozen_residual": -0.6031824693860103,
+    "frozen_no_memory": -0.6031824693860103,
+    "zero": -0.7095258233964543,
+    "ridge": -0.42534195719043183,
+    "xgboost": -0.45353798486317953,
+    "gru": -0.3253524509672296,
+    "dlinear": -0.3838337433892092,
+    "patch_transformer": -0.3926301776356885
+  },
+  "same_checkpoint_memory_gain_nats": 0.0,
+  "scope": "Exploratory public survivor sample, 19 crisis months, two optimization seeds",
+  "sota_established": false,
+  "significance_test_performed": false,
+  "protected_outcomes_accessed": false
+}

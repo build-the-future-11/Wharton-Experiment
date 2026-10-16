@@ -1,0 +1,11 @@
+{
+  "engine": "tectonic",
+  "source_sha256": {
+    "engineering_results.tex": "15863c18aee90ec6a9a15323cbedf5ae8db6ed018ccce7f68e2b6986199d7016",
+    "main.tex": "f8d9dc9c76c3129f59aecb9f974355d1b849610deb628b08d2eb1ae9eb3df81a",
+    "public_results.tex": "911fe241e17d735688228e404ed9b67d4dd2432e6325bfef7456108f006298e3",
+    "references.bib": "3b632ab7f02f07023e2a13664f5e7fb1c484c0a87891fe86c71430f9b45086fa"
+  },
+  "pdf_sha256": "c2550dc0585ac1f226523cfc1bc479c93d84b8c93fc4f848ab64d78375ef88ed",
+  "scope": "Document compilation only; no research execution or submission readiness"
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Public monthly regional research-return benchmarks; acquisition only, not individual-stock point-in-time data or FREM evidence",
+  "before": "202501",
+  "sources": [
+    {
+      "name": "F-F_Research_Data_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip"
+    },
+    {
+      "name": "Developed_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Developed_3_Factors_CSV.zip"
+    },
+    {
+      "name": "Developed_ex_US_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Developed_ex_US_3_Factors_CSV.zip"
+    },
+    {
+      "name": "Europe_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Europe_3_Factors_CSV.zip"
+    },
+    {
+      "name": "Japan_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Japan_3_Factors_CSV.zip"
+    },
+    {
+      "name": "Asia_Pacific_ex_Japan_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Asia_Pacific_ex_Japan_3_Factors_CSV.zip"
+    },
+    {
+      "name": "North_America_3_Factors",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/North_America_3_Factors_CSV.zip"
+    }
+  ],
+  "documentation": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_developed.html",
+  "selection": "Geographical three-factor families and US reference, chosen before download; do not select by returns",
+  "units": "Original percentages divided by 100; market_total = market_excess + rf; research portfolios, not prices",
+  "limitations": [
+    "Current-vintage data can be revised; historical publication availability is not established.",
+    "Regions overlap and are not independent replications.",
+    "Aggregated research portfolios do not supply individual-stock membership, execution prices, actions or default records.",
+    "Public access does not establish redistribution rights; raw and derived downloads remain local.",
+    "Only dates before 2025-01 are numerically parsed; raw archives can contain later observations and must remain opaque.",
+    "No new hypothesis, fit, protected evaluation or positive performance claim is created by acquisition."
+  ]
+}

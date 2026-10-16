@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 150, in main
+    result = audit(args.root, args.manifest, args.output)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 55, in audit
+    for name, rows in iter_object(run / 'ensembles.json'):
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/stream.py", line 90, in iter_object
+    character("{")
+    ~~~~~~~~~^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/stream.py", line 64, in character
+    raise ValueError(f"expected {expected!r}")
+ValueError: expected '{'

@@ -1,0 +1,33 @@
+UP012 [*] Unnecessary call to `encode` as UTF-8
+  --> successors/frem_s10/tests/test_production_data_audit.py:31:11
+   |
+30 |   def _request(tmp_path: Path) -> Path:
+31 |       csv = (
+   |  ___________^
+32 | |         ",open,close,break_start,break_end\n"
+33 | |         "2005-01-03T00:00:00Z,2005-01-03T14:30:00Z,2005-01-03T21:00:00Z,,\n"
+34 | |         "2016-11-25T00:00:00Z,2016-11-25T14:30:00Z,2016-11-25T18:00:00Z,,\n"
+35 | |         "2017-01-03T00:00:00Z,not-read,not-read,,\n"
+36 | |     ).encode()
+   | |______________^
+37 |       (tmp_path / "clock.csv").write_bytes(csv)
+38 |       raw_ref = {"path": "clock.csv", "sha256": hashlib.sha256(csv).hexdigest()}
+   |
+help: Rewrite as bytes literal
+   |
+31 |     csv = (
+   -         ",open,close,break_start,break_end\n"
+   -         "2005-01-03T00:00:00Z,2005-01-03T14:30:00Z,2005-01-03T21:00:00Z,,\n"
+   -         "2016-11-25T00:00:00Z,2016-11-25T14:30:00Z,2016-11-25T18:00:00Z,,\n"
+   -         "2017-01-03T00:00:00Z,not-read,not-read,,\n"
+   -     ).encode()
+32 +         b",open,close,break_start,break_end\n"
+33 +         b"2005-01-03T00:00:00Z,2005-01-03T14:30:00Z,2005-01-03T21:00:00Z,,\n"
+34 +         b"2016-11-25T00:00:00Z,2016-11-25T14:30:00Z,2016-11-25T18:00:00Z,,\n"
+35 +         b"2017-01-03T00:00:00Z,not-read,not-read,,\n"
+36 +     )
+37 |     (tmp_path / "clock.csv").write_bytes(csv)
+   |
+
+Found 1 error.
+[*] 1 fixable with `--fix`.

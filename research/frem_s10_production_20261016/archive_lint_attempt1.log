@@ -1,0 +1,29 @@
+F401 [*] `frem_s10.identities.scientific_digest` imported but unused
+  --> successors/frem_s10/src/frem_s10/experiment/model_archive.py:17:83
+   |
+15 | from frem_s10.domain import ForecastDistribution
+16 | from frem_s10.errors import ArtifactIOError, ContractError, IntegrityError
+17 | from frem_s10.identities import JSONObject, JSONValue, checked_json, object_json, scientific_digest
+   |                                                                                   ^^^^^^^^^^^^^^^^^
+18 | from frem_s10.model.checkpoint import _decode, _encode, dump_state, load_state
+19 | from frem_s10.model.config import ForecastConfig
+   |
+help: Remove unused import: `frem_s10.identities.scientific_digest`
+   |
+16 | from frem_s10.errors import ArtifactIOError, ContractError, IntegrityError
+   - from frem_s10.identities import JSONObject, JSONValue, checked_json, object_json, scientific_digest
+17 + from frem_s10.identities import JSONObject, JSONValue, checked_json, object_json
+18 | from frem_s10.model.checkpoint import _decode, _encode, dump_state, load_state
+   |
+
+C901 `verify_model_archive` is too complex (12 > 10)
+   --> successors/frem_s10/src/frem_s10/experiment/model_archive.py:265:5
+    |
+265 | def verify_model_archive(directory: Path, manifest_sha256: str) -> JSONObject:
+    |     ^^^^^^^^^^^^^^^^^^^^
+266 |     """Read and validate every saved state chain without refitting or continuation."""
+267 |     manifest = object_json(read_verified_json(directory / "manifest.json", manifest_sha256, maximum_bytes=4_194_304))
+    |
+
+Found 2 errors.
+[*] 1 fixable with `--fix`.

@@ -1,0 +1,13 @@
+{
+  "symbol": "PEP",
+  "market": "US",
+  "url": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=946684800&period2=1733011200&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+  "requested_at": "2026-10-11T16:20:32.951318+00:00",
+  "http_status": 200,
+  "path": "PEP.json",
+  "sha256": "5551e096c3c654e79f2a63ad431404f414aaf1d698d9169303d4c15144bee10c",
+  "status": "DOWNLOADED",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "rows": 6268
+}

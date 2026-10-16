@@ -13,6 +13,10 @@ pytest-of-*/
 .local_tmp/
 data/source_documents/
 
+# Public access is not a verified redistribution license.
+data/public_regional_factors_*/raw/
+data/public_regional_factors_*/monthly.csv
+
 # Reproducible build and local render outputs.
 dist/
 tmp/

@@ -1,0 +1,10 @@
+C901 `_audit_resources` is too complex (13 > 10)
+  --> successors/frem_s10/src/frem_s10/runtime/receipts.py:97:5
+   |
+97 | def _audit_resources(result: JSONObject, supervisor: JSONObject, root: Path) -> None:
+   |     ^^^^^^^^^^^^^^^^
+98 |     host, _ = _read(result["preflight"], root)
+99 |     samples = host.get("samples")
+   |
+
+Found 1 error.

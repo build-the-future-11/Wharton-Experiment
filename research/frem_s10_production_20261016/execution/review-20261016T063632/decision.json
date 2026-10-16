@@ -1,0 +1,18 @@
+{
+  "iteration": "FREM-S10",
+  "observation": "The06:36UTC scheduled controller invocation returned exit2 REJECTED_UNCONSUMED: complete current code inventory differs from verified snapshot. Subsequent read-only capture found132 current files versus118 frozen files, with14 additions,7 modifications and0 missing files. All118 preserved candidate files still match their frozen hashes.",
+  "hypothesized_cause": "The package README identifies ongoing Kaggle portable-engineering additions and explicitly states that the earlier production plan is no longer a current-source plan. File observations do not establish authorship or exact rejection-time bytes.",
+  "change": "Pause only frem-s10-guarded-research-continuation as required by its source-drift stop rule. Preserve the immutable plan, original candidate, rejection, observed source comparison, current source bytes and all earlier evidence. Do not repair, restore, re-freeze or rerun automatically.",
+  "predicted_effect": "The old plan cannot execute an altered candidate, and new portability work remains untouched for a separately reviewed candidate and verification.",
+  "discriminating_experiment": "Review the new source revision and establish a separate exact candidate, complete verification and supported platform qualification before any explicit resumption. No further experiment is executed by this heartbeat.",
+  "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "original_code_identity": "11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696",
+  "rejection_receipt": "research/frem_s10_production_20261016/execution/heartbeat-20261016T063632.json",
+  "source_comparison": "research/frem_s10_production_20261016/execution/review-20261016T063632/SOURCE_DRIFT.json",
+  "scientific_execution": false,
+  "scientific_attempt_consumed": false,
+  "protected_access": false,
+  "thresholds_changed": false,
+  "automation_status": "PAUSED",
+  "result": "FIXED_CANDIDATE_SOURCE_DRIFT_REVIEW_REQUIRED"
+}

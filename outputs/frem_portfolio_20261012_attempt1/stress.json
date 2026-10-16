@@ -1,0 +1,194 @@
+[
+  {
+    "scenario": "flat",
+    "cost_bps": 0,
+    "candidate_wealth": 100000.0,
+    "benchmark_wealth": 100000.0,
+    "relative_wealth": 0.0,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "flat",
+    "cost_bps": 10,
+    "candidate_wealth": 99840.12789768184,
+    "benchmark_wealth": 99800.19980019981,
+    "relative_wealth": 0.0004000803361312588,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "flat",
+    "cost_bps": 25,
+    "candidate_wealth": 99600.79840319364,
+    "benchmark_wealth": 99501.24688279303,
+    "relative_wealth": 0.0010005052551540494,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "flat",
+    "cost_bps": 50,
+    "candidate_wealth": 99203.18725099601,
+    "benchmark_wealth": 99004.9751243781,
+    "relative_wealth": 0.0020020420829245378,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bull",
+    "cost_bps": 0,
+    "candidate_wealth": 133300.0920925258,
+    "benchmark_wealth": 142576.08868461792,
+    "relative_wealth": -0.06505997378432005,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bull",
+    "cost_bps": 10,
+    "candidate_wealth": 133079.7236776121,
+    "benchmark_wealth": 142291.22137455878,
+    "relative_wealth": -0.06473693603837216,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bull",
+    "cost_bps": 25,
+    "candidate_wealth": 132749.83130664707,
+    "benchmark_wealth": 141864.98599791163,
+    "relative_wealth": -0.06425232150940152,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bull",
+    "cost_bps": 50,
+    "candidate_wealth": 132201.76434910976,
+    "benchmark_wealth": 141157.42113551724,
+    "relative_wealth": -0.0634444630283354,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bear",
+    "cost_bps": 0,
+    "candidate_wealth": 74919.28486137392,
+    "benchmark_wealth": 69384.23609954379,
+    "relative_wealth": 0.07977386612557269,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bear",
+    "cost_bps": 10,
+    "candidate_wealth": 74798.00191003756,
+    "benchmark_wealth": 69245.60625718706,
+    "relative_wealth": 0.08018408608090155,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bear",
+    "cost_bps": 25,
+    "candidate_wealth": 74616.45857110606,
+    "benchmark_wealth": 69038.18005914705,
+    "relative_wealth": 0.08079990676434301,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "bear",
+    "cost_bps": 50,
+    "candidate_wealth": 74314.89833280153,
+    "benchmark_wealth": 68693.8456905931,
+    "relative_wealth": 0.0818276016679349,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "crash_recovery",
+    "cost_bps": 0,
+    "candidate_wealth": 96500.3263694508,
+    "benchmark_wealth": 92367.24337890469,
+    "relative_wealth": 0.04474619832045401,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "crash_recovery",
+    "cost_bps": 10,
+    "candidate_wealth": 96330.62391072634,
+    "benchmark_wealth": 92182.69344208372,
+    "relative_wealth": 0.044996846086393205,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "crash_recovery",
+    "cost_bps": 25,
+    "candidate_wealth": 96076.63530703443,
+    "benchmark_wealth": 91906.55887327423,
+    "relative_wealth": 0.04537300150155921,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "crash_recovery",
+    "cost_bps": 50,
+    "candidate_wealth": 95654.82126182687,
+    "benchmark_wealth": 91448.16633035839,
+    "relative_wealth": 0.0460004295359171,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "late_crash",
+    "cost_bps": 0,
+    "candidate_wealth": 88263.39151446515,
+    "benchmark_wealth": 83054.03224346675,
+    "relative_wealth": 0.06272253291360452,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "late_crash",
+    "cost_bps": 10,
+    "candidate_wealth": 88126.05829443825,
+    "benchmark_wealth": 82888.0901211022,
+    "relative_wealth": 0.06319325449148616,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "late_crash",
+    "cost_bps": 25,
+    "candidate_wealth": 87920.46849291421,
+    "benchmark_wealth": 82639.79766868638,
+    "relative_wealth": 0.06389985180504332,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "late_crash",
+    "cost_bps": 50,
+    "candidate_wealth": 87578.90786479313,
+    "benchmark_wealth": 82227.62396243722,
+    "relative_wealth": 0.06507890711764275,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "single_default",
+    "cost_bps": 0,
+    "candidate_wealth": 60000.0,
+    "benchmark_wealth": 50000.0,
+    "relative_wealth": 0.19999999999999996,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "single_default",
+    "cost_bps": 10,
+    "candidate_wealth": 59912.07034372502,
+    "benchmark_wealth": 49900.099900099915,
+    "relative_wealth": 0.20064028856994454,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "single_default",
+    "cost_bps": 25,
+    "candidate_wealth": 59780.439121756506,
+    "benchmark_wealth": 49750.623441396514,
+    "relative_wealth": 0.20160180891350166,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  },
+  {
+    "scenario": "single_default",
+    "cost_bps": 50,
+    "candidate_wealth": 59561.7529880478,
+    "benchmark_wealth": 49502.48756218906,
+    "relative_wealth": 0.20320727141684491,
+    "kind": "CONSTRUCTED_ACCOUNTING_COUNTEREXAMPLE_NOT_MODEL_PERFORMANCE"
+  }
+]

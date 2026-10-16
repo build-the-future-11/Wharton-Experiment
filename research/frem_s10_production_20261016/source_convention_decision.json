@@ -1,0 +1,8 @@
+{
+  "schema": "s10-source-convention-decision-v1",
+  "design_id": "FREM-S10-DESIGN-4-CL16",
+  "evidence_scope": "RETROSPECTIVE_DEVELOPMENT",
+  "status": "APPROVED",
+  "calendar_identity": "8f449c75bff8ada21ba7d13ea09b1557862c0cb31f3f3c80aa110f5bfa7ddae1",
+  "convention": "SCHEDULED_EXCHANGE_REGULAR_SESSION_CLOSE_NOT_OBSERVED_EXECUTION"
+}

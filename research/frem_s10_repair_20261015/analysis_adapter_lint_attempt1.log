@@ -1,0 +1,14 @@
+SIM102 Use a single `if` statement instead of nested `if` statements
+  --> successors/frem_s10/tests/test_analysis_adapter_audit.py:75:9
+   |
+73 |           )
+74 |           energy = 0.8 if spec.forecast_arm == "contextual_stack" else 1.0
+75 | /         if spec.kind == "ablation" and spec.arm not in ("force_liquidate", "no_exact_hold"):
+76 | |             if not frozen or index > 0:
+   | |_______________________________________^
+77 |                   energy += (ABLATIONS.index(spec.arm) + 1) / 100
+78 |           scores.append(
+   |
+help: Combine `if` statements using `and`
+
+Found 1 error.

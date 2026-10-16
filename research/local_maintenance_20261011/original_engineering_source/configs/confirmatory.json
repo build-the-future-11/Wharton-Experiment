@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "frem_confirmatory_candidate_protocol",
+  "description": "Candidate configuration only. Freeze after development, before any protected outcome inspection. This file is not itself a freeze.",
+  "data": {"path": "data/raw/panel.parquet", "context": 64, "horizon": 5, "base_currency": "USD", "include_missingness": true, "peer_features": false},
+  "split": {"train_fraction": 0.6, "validation_fraction": 0.2, "embargo_bars": 5, "protected_start": "2025-01-01T00:00:00Z"},
+  "model": {"hidden_dim": 64, "reservoir_dim": 64, "reservoir_leak": 0.3, "reservoir_contraction": 0.9, "spectral_bands": 8, "memory_capacity": 512, "memory_neighbors": 8, "memory_ngram": 3, "dropout": 0.1, "memory_retention": "utility"},
+  "training": {"epochs": 20, "batch_size": 128, "learning_rate": 0.001, "weight_decay": 0.0001, "jepa_weight": 0.1, "variance_weight": 0.01, "covariance_weight": 0.001, "ema_momentum": 0.99, "early_stopping_patience": 5, "device": "cpu", "max_wall_seconds": 3600},
+  "evaluation": {"online_update": false, "bootstrap_block_dates": 20, "bootstrap_repetitions": 5000},
+  "models": ["frem", "no_memory", "fifo_memory", "uniform_memory", "no_spectral", "no_jepa", "no_reservoir", "no_controller", "no_gate", "no_ngram", "fixed_scale", "zero", "ridge", "reservoir_ridge", "xgboost", "gru", "dlinear", "patch_transformer"],
+  "seeds": [11, 29, 47, 71, 97],
+  "budget": {"max_runs": 90, "max_wall_seconds": 86400},
+  "output_dir": "outputs/confirmatory"
+}

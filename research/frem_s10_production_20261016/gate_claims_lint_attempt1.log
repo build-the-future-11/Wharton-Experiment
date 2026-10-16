@@ -1,0 +1,162 @@
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:39:1
+   |
+37 |     """Return only the claim map justified by the existing typed report envelope.
+38 |
+39 | The producer calls this after numerical regeneration; the report CLI calls it
+   | ^
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+   |
+help: Increase indentation
+   |
+38 |
+   - The producer calls this after numerical regeneration; the report CLI calls it
+39 +     The producer calls this after numerical regeneration; the report CLI calls it
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+   |
+
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:40:1
+   |
+39 | The producer calls this after numerical regeneration; the report CLI calls it
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+   | ^
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+42 | must remain present; scientific, independent and runtime-test attestations are
+   |
+help: Increase indentation
+   |
+39 | The producer calls this after numerical regeneration; the report CLI calls it
+   - after independently reading the exact audit/report hashes. Free-form prose is
+40 +     after independently reading the exact audit/report hashes. Free-form prose is
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+   |
+
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:41:1
+   |
+39 | The producer calls this after numerical regeneration; the report CLI calls it
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+   | ^
+42 | must remain present; scientific, independent and runtime-test attestations are
+43 | never inferred from these two computational artifact types.
+   |
+help: Increase indentation
+   |
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+   - not treated as a new claim or evidence kind. The canonical scope and disclaimer
+41 +     not treated as a new claim or evidence kind. The canonical scope and disclaimer
+42 | must remain present; scientific, independent and runtime-test attestations are
+   |
+
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:42:1
+   |
+40 | after independently reading the exact audit/report hashes. Free-form prose is
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+42 | must remain present; scientific, independent and runtime-test attestations are
+   | ^
+43 | never inferred from these two computational artifact types.
+44 | """
+   |
+help: Increase indentation
+   |
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+   - must remain present; scientific, independent and runtime-test attestations are
+42 +     must remain present; scientific, independent and runtime-test attestations are
+43 | never inferred from these two computational artifact types.
+   |
+
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:43:1
+   |
+41 | not treated as a new claim or evidence kind. The canonical scope and disclaimer
+42 | must remain present; scientific, independent and runtime-test attestations are
+43 | never inferred from these two computational artifact types.
+   | ^
+44 | """
+45 |     _schema(
+   |
+help: Increase indentation
+   |
+42 | must remain present; scientific, independent and runtime-test attestations are
+   - never inferred from these two computational artifact types.
+43 +     never inferred from these two computational artifact types.
+44 | """
+   |
+
+D207 [*] Docstring is under-indented
+  --> successors/frem_s10/src/frem_s10/runtime/claims.py:44:1
+   |
+42 | must remain present; scientific, independent and runtime-test attestations are
+43 | never inferred from these two computational artifact types.
+44 | """
+   | ^
+45 |     _schema(
+46 |         audit,
+   |
+help: Increase indentation
+   |
+43 | never inferred from these two computational artifact types.
+   - """
+44 +     """
+45 |     _schema(
+   |
+
+D207 [*] Docstring is under-indented
+   --> successors/frem_s10/src/frem_s10/runtime/claims.py:162:1
+    |
+160 |     """Verify the exact local evidence references, then return bounded report claims.
+161 |
+162 | This metadata-only export does not rerun statistics or attest external authority.
+    | ^
+163 | Full saved-array verification remains in the supervised saved-audit operation.
+164 | """
+    |
+help: Increase indentation
+    |
+161 |
+    - This metadata-only export does not rerun statistics or attest external authority.
+162 +     This metadata-only export does not rerun statistics or attest external authority.
+163 | Full saved-array verification remains in the supervised saved-audit operation.
+    |
+
+D207 [*] Docstring is under-indented
+   --> successors/frem_s10/src/frem_s10/runtime/claims.py:163:1
+    |
+162 | This metadata-only export does not rerun statistics or attest external authority.
+163 | Full saved-array verification remains in the supervised saved-audit operation.
+    | ^
+164 | """
+165 |     audit = object_json(read_verified_json(directory / "audit.json", audit_sha256))
+    |
+help: Increase indentation
+    |
+162 | This metadata-only export does not rerun statistics or attest external authority.
+    - Full saved-array verification remains in the supervised saved-audit operation.
+163 +     Full saved-array verification remains in the supervised saved-audit operation.
+164 | """
+    |
+
+D207 [*] Docstring is under-indented
+   --> successors/frem_s10/src/frem_s10/runtime/claims.py:164:1
+    |
+162 | This metadata-only export does not rerun statistics or attest external authority.
+163 | Full saved-array verification remains in the supervised saved-audit operation.
+164 | """
+    | ^
+165 |     audit = object_json(read_verified_json(directory / "audit.json", audit_sha256))
+166 |     reference = _schema(audit.get("report"), {"path", "sha256"}, "report reference")
+    |
+help: Increase indentation
+    |
+163 | Full saved-array verification remains in the supervised saved-audit operation.
+    - """
+164 +     """
+165 |     audit = object_json(read_verified_json(directory / "audit.json", audit_sha256))
+    |
+
+Found 9 errors.
+[*] 9 fixable with `--fix`.

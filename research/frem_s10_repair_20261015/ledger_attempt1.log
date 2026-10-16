@@ -1,0 +1,31 @@
+Constructed ledger engineering only; no market sources.
+['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python', '-B', '-m', 'pytest', '-q', '-W', 'error', '-p', 'no:cacheprovider', 'successors/frem_s10/tests/test_ledger_audit.py']
+..F...                                                                   [100%]
+=================================== FAILURES ===================================
+_____ test_cash_path_hypothetical_boundaries_and_log_increments_telescope ______
+
+    def test_cash_path_hypothetical_boundaries_and_log_increments_telescope():
+        """TEST-056/059: zero holding incurs no cost; boundary ratios telescope."""
+        initial = initial_ledger(cell_id="cash", start_us=OPEN - 1, initial_cash=100.0)
+        anchor = initial_capital_mark(initial)
+        cash = fill(opening(initial).state, target=(0.0, 0.0, 0.0), cost=0.004).state
+        day1 = close(cash, price=5.0)
+        day2 = opening(day1.state, event_id="open2", timestamp_us=OPEN + DAY,
+                       price=2.0, dividend=7.0, dividend_id="div2").state
+        middle = liquidatable_boundary_mark(day2, one_way_cost=0.004)
+        day2_close = close(day2, event_id="close2", price=1.0)
+        day3 = opening(day2_close.state, event_id="open3", timestamp_us=OPEN + 2 * DAY, price=0.5).state
+        final = fill(day3, event_id="exit", target=(0.0, 0.0, 0.0), cost=0.004, final=True)
+>       assert final.state.nav == pytest.approx(100, abs=1e-8)
+E       assert 99.99999998835847 == 100 ± 1.0e-08
+E         
+E         comparison failed
+E         Obtained: 99.99999998835847
+E         Expected: 100 ± 1.0e-08
+
+successors/frem_s10/tests/test_ledger_audit.py:108: AssertionError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope
+1 failed, 5 passed in 0.28s
+
+exit_code=1

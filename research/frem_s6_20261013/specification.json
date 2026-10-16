@@ -1,0 +1,32 @@
+{
+  "study": "FREM-S6-D0",
+  "status": "IMPLEMENTATION_AND_INTEGRITY_ONLY_MARKET_EXECUTION_BLOCKED",
+  "predecessor": "S5-R1 closed: memory-specific economic benefit unsupported",
+  "question": "Can contractive multi-timescale reservoir features, a predictive latent objective and conservative delayed loss memory improve a diversified expert pool under matched information and costs?",
+  "novelty": "Unestablished composition of existing methods and user-proposed operational mechanisms",
+  "user_terms": {
+    "mathematical_proofing_and_exampling": "Explicit analytical invariants, finite-difference gradients, adversarial counterexamples and reproducible numerical checks; not a proof of future returns",
+    "rebound_ripples": "Delayed bounded quantized gradient updates with accumulated error feedback; not evidence that stale gradients improve learning",
+    "network_divergence": "Parallel contractive reservoir timescales with cross-branch features; fixed topology, not autonomous architecture growth",
+    "dual": "Distribution forecasts and constrained multi-period scenario portfolio research",
+    "multinational": "Explicit local/FX return compounding and common-currency covariance; requires real dated FX and instrument eligibility",
+    "market_influence": "Transaction costs and market-impact-aware research only; no manipulation or order placement"
+  },
+  "architecture": {
+    "input": "Finite sequences with explicit origin, label maturity and availability times",
+    "normalization": "Fit only on training observations",
+    "reservoir": "Fixed norm-bounded recurrent matrices, multiple leak rates, nonlinear cross-branch features and random Fourier map",
+    "jepa": "Trainable tanh latent encoder and linear predictor for future-window EMA target encoding; stop-gradient target and variance-floor penalty",
+    "supervised": "Standardized target regression plus latent prediction; gradient norm bounded before delayed quantized updates",
+    "distributions": "Student-t experts with held-out calibration scale and exact mixture likelihood",
+    "experts": ["zero", "ridge", "trend", "adaptive_volatility", "reservoir_jepa", "optional_explicit_xgboost_hist"],
+    "memory": "One complete date group per episode; strict label maturity and availability before retrieval; effective-count shrinkage toward fixed averaging",
+    "context_arms": ["full", "half", "zero"],
+    "controls": ["equal_expert_mixture", "recent_loss", "no_memory", "no_jepa", "immediate_unquantized_updates"],
+    "policy": "Finite candidate search over long-only cash-constrained weights using multi-period buy-and-hold scenario wealth, exact initial fees, CVaR and shortfall penalties; explicit no-trade incumbent"
+  },
+  "engineering_budget": {"workers": 1, "threads": 1, "rss_mib": 128, "seconds_per_process": 60, "market_fits": 0, "protected_access": false},
+  "scientific_execution_gates": ["512 MiB headroom with no increasing pageouts", "admitted data and source chronology", "date coverage and spent-outcome inventory", "declared precision-qualified folds and fixed tuning budget", "completed integrity checks", "separate full scientific freeze before protected access"],
+  "preservation": "Predecessor source and results remain byte-identical; no S3/S4/S5 metric-driven reruns",
+  "stopping": "Retain all failures. Do not tune to make negative outcomes win. No claim of an ultimate model with nothing to improve."
+}

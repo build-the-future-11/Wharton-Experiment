@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "name": "historical_mean",
+  "fold": "fresh_2024",
+  "seed": 11,
+  "base_version": "e91d96ab038822647eccefade75f4e5eb0b25d4ab4b4f6c149929bcc3857f28f",
+  "results": {
+    "off": {
+      "nll": -1.393528561910733,
+      "sha256": "8ee977e9335b72d4e5bbdfe1e4830fa1ae31a2e8bfaac6537d2b06fece0164de",
+      "rows": 120,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.0336293749074805
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.410875456350483,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

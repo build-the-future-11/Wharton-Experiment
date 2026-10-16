@@ -1,0 +1,34 @@
+[
+  {
+    "name": "create",
+    "command": [
+      "uv",
+      "venv",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt3/clean_env"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt3",
+    "exit_code": 0,
+    "wall_seconds": 0.10654066599090584,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt3/create.log"
+  },
+  {
+    "name": "install",
+    "command": [
+      "uv",
+      "pip",
+      "install",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt3/clean_env/bin/python",
+      "--offline",
+      "--require-hashes",
+      "-r",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt3/requirements.txt"
+    ],
+    "cwd": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_repair_20261015/package_verification_attempt3",
+    "exit_code": 1,
+    "wall_seconds": 0.15001016700989567,
+    "log": "research/frem_s10_repair_20261015/package_verification_attempt3/install.log"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-c",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/pyproject.toml",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_linux_resources_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_isolation_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_portable_packaging_audit.py",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+    "-q",
+    "-W",
+    "error",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_kaggle_20261016/portable_fixtures_attempt1"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 1.5374932079866994,
+  "child_peak_rss_mib": 39.453125,
+  "log": "research/frem_s10_kaggle_20261016/portable_tests_attempt1.log"
+}

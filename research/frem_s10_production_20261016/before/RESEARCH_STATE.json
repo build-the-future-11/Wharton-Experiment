@@ -1,0 +1,1198 @@
+{
+  "project": "FREM: Causal Fourier-Reservoir Engram Memory",
+  "version": "0.1.1-runtime-gated",
+  "created": "2026-10-10",
+  "updated": "2026-10-15",
+  "phase": "s10_generated_integration_verified_scientific_gates_pending",
+  "scientific_status": "NOT_EVALUATED",
+  "global_crisis_request": {
+    "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
+    "priority": "Worldwide historical equities, especially the 2007-2009 crisis and calendar 2008",
+    "readiness_record": "research/global_equity_crisis_readiness_2026-10-11.json",
+    "market_cells_started": 0,
+    "required_input": "Historical market export or accessible provider including inactive securities, terminal outcomes, corporate actions, timestamps, historical membership and FX",
+    "required_implementation": "Explicit terminal-loss treatment, named-date fold orchestration, global portfolio accounting and measured scalable execution"
+  },
+  "public_crisis_study": {
+    "status": "AMENDED_SLOW_EXPLORATORY_MATRIX_COMPLETE",
+    "scope": "Retrospective public sample of 24 currently listed stocks across 12 listing markets; worldwide completeness is not claimed",
+    "receipt": "research/public_equity_intake_2026-10-11.json",
+    "configuration": "configs/public_equity_crises.json",
+    "data_manifest": "data/public_equity_crises_v1/manifest.json",
+    "market_cells_completed": 24,
+    "new_runtime_tests": "Six original adapter tests now passed within the 194-test FREM suite. Original strict campaign still rejects the ENB.TO zero quote; the separate S2 study used a recorded whole-month missing-data amendment.",
+    "canonical_market_admission": false,
+    "related_successor_execution": "research/frem_rebuild_20261011/completion_receipt_v2.json",
+    "execution_receipt": "outputs/public_equity_slow_20261011_attempt1/completion_receipt.json",
+    "data_amendment": "Separate slow campaign extends recorded all-zero entire-month quarantine; strict original adapter and failed attempts unchanged."
+  },
+  "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
+  "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
+  "compute_authorized_this_session": "Local reversible S10 audit/implementation and bounded generated engineering tests only executed. No real S10 fits, market ledgers or protected outcomes accessed. Scientific execution remains conditional on unchanged512MiB/non-rising-pageouts admission, completed operation-specific engineering/source gates, fixed real pre2010 precision and exact prospective freeze. No earlier S6 RAM waiver applies.",
+  "development_budget_proposed": {
+    "max_trials": 24,
+    "max_wall_clock_hours": 12,
+    "status": "authorized_but_unspent_data_blocked",
+    "interpretation": "The optional robustness suite remains a separately declared 36-trial/12-hour market matrix. A separate four-cell synthetic engineering matrix completed and does not consume or satisfy this scientific development budget."
+  },
+  "protected_evaluation": {
+    "status": "not accessed",
+    "freeze_required": true
+  },
+  "claims": {
+    "novelty": "candidate; not established",
+    "performance": "FREM-S2 exploratory public crisis NLL improved over legacy FREM and the trained local controls; a zero-return control remained best. Both seeds selected zero residual correction. No SOTA, admitted-market, confirmatory or profitability claim. Separate six-window public slow study completed: FREM point NLL improved against no-memory in four windows and worsened in 2020/2022; exploratory single-seed results with unadjusted intervals only. FREM-S3 completed a separately frozen fresh-public-sample study: combined memory worsened 2023 by 0.014116 nats and improved Jan-Oct2024 by 0.007006, both paired intervals include zero. No memory arm improved both windows; extra calibration worsened both. Generated recurrence gain does not establish financial predictability. No protected confirmation or profitability claim. Separate frozen S8 2020-2022 development: NLL point gains 0.0013675 over fixed averaging and 0.0006838 over S6 memory, both 6/12-date intervals include zero. H4 wealth $98,745.27 versus matched fixed-average $96,211.62 and S6 memory $97,134.00, below cash $100,000 and equal-weight assets $104,927.25. No practical support or economic gate pass; prior legacy ETF feature exposure prevents globally untouched confirmation.",
+    "profitability": "unproven",
+    "data_efficiency": "hypothesis only",
+    "current_watchlist": "fundamentals-based provisional GYIC research ranking; not a FREM prediction or approved allocation"
+  },
+  "decisions": [
+    "Keep original negative and failed results",
+    "Never assume recession certainty",
+    "No live trading",
+    "Separate model research from Laura-specific mandate certification",
+    "Do not substitute casual adjusted-close downloads for the canonical point-in-time data contract",
+    "Do not rerun the spent legacy lockbox or the completed one-path synthetic amendment",
+    "Publish the 2026-10-11 stock ranking only as a provisional watchlist pending the team-only approved universe",
+    "Treat the successor RE-JEPA v0.3 synthetic run as engineering compatibility evidence only; it does not unlock market, protected, or competition claims",
+    "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
+    "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
+    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result",
+    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request",
+    "Following the user's public-only access clarification, treat the 24-stock public crisis study as exploratory retrospective evidence with explicit survivor/revision/timing limits and separate local-currency ledgers",
+    "Use the retained loss diagnosis to distinguish numerical failure from causal training hypotheses; do not retune the completed synthetic result or equate arithmetic parameter swaps with new experiments",
+    "Treat FREM-S2 as an additive development successor: train-only output units, frozen-base later-holdout residuals and validation NLL calibration. Preserve original negative evidence. Accept zero memory benefit and the stronger zero-return control in the completed fixed matrix; do not iterate on this evaluated crisis fold to manufacture a win.",
+    "User-directed slow execution below the normal 512 MiB floor was a recorded deviation, not a passing normal admission check. Preserve the original zero-quote rejection and the exploratory-only whole-month missing-data amendment; do not infer historical holiday status or rule out a terminal loss.",
+    "Close S5-R1 as exploratory retained-forecast development with unsupported memory-specific benefit; do not retune spent outcomes. Prioritize expert specialization and objective/policy attribution under a separate future protocol; preserve fresh-training resource and protected-data gates.",
+    "Keep S6 as an additive, integrity-verified implementation. No profitability, novelty, causal-effect, speed or Laura allocation claim. Preserve111S5frozen identities and closed negatives; require current resource admission, truthful data and a separate fixed protocol for market training.",
+    "Accept user definitions:dual prediction/planning, invariant/counterexampleproofing, delayedquantizedripples and interactingbranches. Propose liabilityfirst Laura policy and exactconditionalfunding arithmetic; protect2031facilityminimum from rebalancing. No currenteligible allocation or calibratedprobability inferred.",
+    "Close S8 after the frozen matrix; no 2019 tuning or outcome-driven 2020-2022 refit. Preserve the practical threshold, all seed/control results, failures and 319 predecessor file identities. See research/decisions/frem_s8_result_20261014.json.",
+    "S10 repair20261015: preserve all predecessor evidence; CL15/CL16 recorded before market use; conditional generated support never authorizes real campaign or replaces original NLL/wealth gates. Remaining work explicitly recorded in current repair receipt."
+  ],
+  "failures": [
+    {
+      "date": "2026-10-11",
+      "stage": "dependency_install",
+      "status": "resolved_infrastructure_failure",
+      "detail": "Initial uv install failed because the OS temporary volume filled while extracting PyTorch. The disposable task cache was removed and the cache was relocated to PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "runtime_tests_attempt_1",
+      "status": "retained_infrastructure_failure",
+      "detail": "151 tests passed and 12 tests errored during tmp_path setup because the OS temporary volume could not create directories. The unchanged suite passed 163/163 with TMPDIR on PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "first_execution",
+      "status": "blocked_before_model_execution",
+      "detail": "data/raw/panel.parquet is absent. Zero model cells started and no protected outcomes were accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "deprecation_cleanup_attempt",
+      "status": "retained_failed_regression_attempt",
+      "detail": "An initial duration-parser warning repair caused 32 failures with 131 passes because constructing pandas Timedelta values still entered the deprecated NumPy conversion path. The defect was corrected with fixed-frequency offsets and explicit NumPy timedeltas; the full 163-test suite then passed with DeprecationWarning treated as an error."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "package_build_cleanup_attempt",
+      "status": "resolved_environment_failure",
+      "detail": "The first no-isolation builds failed before artifact creation because wheel was absent. wheel 0.48.0 was installed into the ignored local environment and all three package wheel/source builds then passed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "data_admission_search",
+      "status": "blocked_before_model_execution",
+      "detail": "Local repositories, indexed user files, connected Google Drive, and configured-provider credentials contained no canonical point-in-time panel and manifest. Two Yahoo-derived candidates were rejected for explicit timestamp, actions, eligibility, survivorship, license/provenance, and terminal-outcome gaps. Zero model cells started."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "engineering_panel_generation_attempt_1",
+      "status": "retained_repaired_warning",
+      "detail": "The first generator invocation completed but emitted pandas and NumPy deprecation warnings for Timedelta construction. The generator was repaired to use explicit NumPy timedeltas; the deterministic output was preserved rather than overwritten."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s2_integrity_attempt1",
+      "status": "retained_repaired_compatibility_failure",
+      "detail": "191 passed and two public-adapter tests failed on implicit NumPy duration conversion. Replaced with explicit two-day timedelta; later 194-test full suite passed. outputs/frem_s2_development_20261011_attempt1"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s2_data_attempt2",
+      "status": "retained_data_rejection_before_fit",
+      "detail": "All-zero ENB.TO OHLC/adjusted close/volume on 2003-05-19 rejected by strict adapter before any fit. Recorded exploratory-only entire-month quarantine as missing, no forward fill, no claim that terminal loss is ruled out. All raw data and failed receipt preserved. outputs/frem_s2_development_20261011_attempt2"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "frem_s3_integrity_attempt2",
+      "status": "retained_repaired_before_research_outcomes",
+      "detail": "15 passed / 4 failed: hardcoded horizon mismatch and descriptor float32/float64 checkpoint difference. Infer horizon and use consistent float64 preprocessing; then 19 S3 tests and full 217-test suite passed. research/frem_s3_20261011/integrity_attempt2"
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "historical_synthetic_audit_against_live_source",
+      "status": "retained_and_resolved_with_exact_historical_source",
+      "detail": "The original run audit rejected modified live model.py/training.py hashes. Recovered all 36 original source/config files from Git 09268ecb01ac645eeee18cc9fcbc6db247b6ec89 and passed the unchanged data/score checks against their exact saved hashes; first failure log retained under research/local_maintenance_20261011/engineering_audit_attempt1.log."
+    },
+    {
+      "date": "2026-10-13",
+      "stage": "frem_s6_integrity_attempt1",
+      "status": "retained_repaired_test_assertion",
+      "detail": "61passed/1failed from exact float equality1.9999999999999998vs2in CVaR test. Repaired tolerance, not economic tuning.115final tests pass; early nice scheduling permission failure retained; final bounded tests use default priority. research/frem_s6_20261013/integrity_attempt1"
+    },
+    {
+      "date": "2026-10-13",
+      "stage": "s6_execution_attempt2",
+      "status": "retained_admission_rejection",
+      "detail": "Memory157.33/133.55/87.63MiB; pageouts+66. Missing admitted dataset and frozen protocol. See research/frem_s6_execution_20261013_attempt2/RECEIPT.json"
+    },
+    {
+      "date": "2026-10-14",
+      "stage": "s8_prefit_tests",
+      "status": "retained_repaired",
+      "detail": "Duplicate test-module name and too-short generated calendar fixture; logs/source snapshots retained; repaired before acquisition.",
+      "evidence": "research/frem_s8_20261014"
+    },
+    {
+      "date": "2026-10-14",
+      "stage": "s8_data_intake",
+      "status": "retained_repaired",
+      "detail": "Sandbox DNS failure, then irrelevant old TLT 2004-12-31 dividend rejection. Download and failed build retained; corrected-source freeze before fitting.",
+      "evidence": "research/frem_s8_20261014"
+    },
+    {
+      "date": "2026-10-14",
+      "stage": "s8_analysis_invocation",
+      "status": "retained_repaired",
+      "detail": "Direct script invocation did not resolve repository imports. Corrected module invocation; frozen analysis source and all market outputs unchanged.",
+      "evidence": "research/frem_s8_20261014"
+    },
+    {
+      "date": "2026-10-15",
+      "stage": "S10_scientific_admission",
+      "status": "BLOCKED_UNCONSUMED",
+      "detail": "Latest host readings82.36/92.70/84.02MiB below512MiB and risingpageouts; remaining source/operation engineering gates also unresolved. No market worker launched. Earlier engineering failures retained separately.",
+      "receipt": "research/frem_s10_repair_20261015/host_admission_final.json"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-10",
+      "event": "Research restart requested; source protocol preserved; implementation contract specified before coding."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Recovered current Laura case reproduction and preserved earlier reported negative memory evidence; no new experiments executed."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Integrated independent source review corrections; preserved 130 authored unrun test functions; rendered and visually reviewed the 21-page methods/protocol manuscript. No empirical evaluation performed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Installed a resolved Python 3.12 environment, passed 163 runtime tests and package build, retained the first temp-volume failure, planned all declared matrices, attempted the four-cell compatibility run, and stopped before fitting because the canonical market panel is absent. Legacy invalid/negative/null evidence was reconciled without reruns."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Advanced the clean successor under successors/rejepa_v1 to v0.3: tightened validation and mathematical contracts, replaced heuristic scenario CVaR with an exact linear program, added causal retrieval and streaming-residual controls, generated an explicitly non-scientific deterministic engineering fixture, completed two identical numerical smoke runs using canonical tensor-state hashes, passed 67 successor tests and package verification, and retained the admitted-market-data and official-rules block. No protected outcome was defined or accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Created the additive RENG-JEPA v0.1 manuscript lineage under successors/reng_jepa_v01 without rewriting FREM or RE-JEPA. The current implementation passed 43 integrity/mathematical/accounting tests and a four-fixture synthetic engineering matrix; both earlier implementation failures were retained and repaired. All fixtures are labeled non-scientific, untrained collapse diagnostics remain visible, no market or protected data was accessed, and full development execution remains blocked on admitted data and resource headroom."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Reconciled the repository into explicit FREM, RE-JEPA v0.3, RENG-JEPA v0.1, and byte-preserved legacy boundaries; passed 163, 67, and 45 tests respectively with deprecations treated as errors; passed full-scope Ruff and all three package builds; and verified graph and funding optimizations against scalar references. Synthetic timing evidence is engineering-only and scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Searched local repositories, indexed user files, connected Google Drive, and configured provider credentials for a runnable market panel. Rejected the available Yahoo adjusted-close and monthly-return candidates under the declared information/provenance contract. No dataset was relabeled, no model cell started, and no protected outcome was accessed; the exact intake audit is research/data_admission_audit_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "After explicit user execution authorization and resource admission, generated an explicitly synthetic Yahoo-calibrated engineering fixture and completed 10 bounded cells: four FREM compatibility cells, two RE-JEPA v0.3 cells, and four RENG-JEPA v0.1 regimes. FREM was worse than no-memory on the synthetic fixture and that negative result was preserved. No admitted-market, robustness, confirmatory, protected, portfolio, or competition execution occurred; scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all-world equity backtests, especially 2008. Rechecked missing canonical data and provider environment access, inspected terminal-loss, split and global-ledger limitations, verified historical recession announcement dates and candidate provider scope, and recorded proposed crisis windows and exact blockers. No new market cells ran and no protected outcomes were accessed. Receipt: research/global_equity_crisis_readiness_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User clarified public/free access only. Predeclared a separate retrospective 24-stock, 12-market crisis study, downloaded all 24 histories with 158,760 daily observations and verified source hashes. Added dated monthly folds, causal input gaps, coverage receipts, local-stock cost accounting and six authored tests. Static checks passed; resource admission stopped execution before model import. Canonical scientific status and protected boundary are unchanged."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Acquired seven official public regional factor datasets (3,666 pre-2025 monthly rows), independently recomputed four retained synthetic cells, passed 12 offline audit/parser tests, and updated/compiled/visually reviewed the 23-page paper and source review archive. Preserved the original manuscript, negative evidence and earlier build/lint diagnostics. Resource checks failed at 328/254/163 MiB with rising pageouts; zero new model cells ran. No canonical protected outcomes were accessed. Scientific status remains NOT_EVALUATED and arXiv readiness false. Receipt: research/completion_20261011/COMPLETION_RECEIPT.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Diagnosed the saved negative FREM run using source-hash checks and standard-library arithmetic. All forecasts are negative; 63.12% of squared error is overall bias, and location accounts for 78.79% of the neural NLL gap in an order-averaged field-swap decomposition. The same-checkpoint memory correction improves NLL by 0.002855; the no-memory control is separately trained. Preserved controller/residual/optimization hypotheses, all comparisons and 13 passing tests; no new fit, protected access or scientific promotion."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Implemented training-target output units and diagnostics plus additive FREM-S2 frozen-base residual successor, with no legacy default/checkpoint break. Preserved two failed prefit attempts and recorded user-directed slow execution and source quarantine deviations. Passed 194 tests and changed-file lint; completed all 22 declared fits / 24 prediction cells on 23 public survivor stocks across 19 crisis months and seeds 11,29. Standardized head improved legacy NLL by 0.068799 nats; frozen successor scored -0.603182 versus zero control -0.709526. Both memory gates selected zero. Independently reconstructed every saved NLL within 1.78e-15 and verified complete pairing/source hashes. No SOTA claim or protected evaluation; canonical scientific status remains NOT_EVALUATED. Receipt: research/frem_rebuild_20261011/completion_receipt_v2.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all experiments now. Attempted original 24-cell public six-window launcher in a fresh directory; memory admission failed at 103.42/125.06/118.05 MiB with increasing pageouts before scientific imports. Zero new fits. Canonical panel and sidecar remain absent; protocol remains PROPOSED_NOT_FROZEN. Preserved completed FREM-S2 and predecessor results. Receipt: outputs/public_equity_allnow_20261011_attempt1/execution_receipt.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User explicitly authorized remaining public study under S2-style slow limits. Recorded hash-chained amendment, launched fresh 24-cell six-window campaign after integrity verification, preserving normal admission failure and whole-month zero-quote missingness. Run directory: outputs/public_equity_slow_20261011_attempt1"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Completed all 24 public slow-study fits and comparisons after 194 tests. Verified 8684 prediction rows with independent Student-t NLL reconstruction, maximum difference 1.9984e-15, and unchanged source hashes. All workers exited zero; maximum sampled model RSS 386.65625 MiB. Mixed exploratory memory comparison; no protected data or canonical admitted-market evidence. Receipt: outputs/public_equity_slow_20261011_attempt1/completion_receipt.json"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Audited completed S2 zero baseline versus every saved variant and seed; verified hashes, paired outcomes and reconstructed NLL. Zero won 12/19 month-level comparisons. Diagnosed location/uncertainty mismatch and validation rejection of nonzero memory. Added reporting-only calibration/retrieval diagnostics with four focused tests and lint; no new fit or performance repair claim. Decision recorded with record-decision; report research/public_zero_diagnosis_20261011/REPORT.md."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Implemented additive FREM-S3 calibrated base, delayed versioned residual replay, 14 memory controls/ablations and frozen new-sample experiment. Full217 tests pass. Completed15 generated mechanism cells,24 learned public fits plus12 constant cells (114 variant outputs), all seeds/folds retained. Primary memory effects -0.014116/+0.007006 with both intervals including zero; no memory arm improved both windows; extra calibration hurt both. Independent arithmetic verified133844 rows to2.22e-15,49 frozen sources and582 unchanged predecessor artifacts. One worker/thread,nice10,max sampled407.672MiB,12.39min. Closed fixed exploratory protocol without tuning/reruns; protected2025+ untouched. Receipt research/frem_s3_20261011/completion_receipt.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Completed local release/evidence maintenance: replaced hard-coded release PASS claims with immutable source-only inventories, hardened static JSON/package validation, recovered 36 exact original source/config files from Git and restored old synthetic audit without changing its negative result, checked S3 arithmetic plus complete seed/arm/outcome grids, and reconciled stale status pages. Passed 42 stdlib tests (25 new) and full active/successor source lint. Retained the first live-source audit mismatch. No new fits or protected access. Receipt: research/local_maintenance_20261011/RECEIPT.json."
+    },
+    {
+      "date": "2026-10-12",
+      "event": "Implemented isolated standard-library portfolio evidence layer using retained S3/S4 and slow-study forecasts. Passed31 targeted tests and Ruff; reconstructed17396 NLL rows and independently verified34276 accounting periods across2276 ledgers and1424 comparisons. All32 primary S4 cases missed6% relative ending-wealth uplift (range-2.9566% to+0.3478%); memory increment zero. Preserved20 incomplete supplemental market/model groups, all155 S4 files and prior negative history. New framework source and current Laura mandate inputs unresolved; public instrument shortlist documented. Scheduled bounded overnight followup with07:00IST morning review. No new model fits in this task and no protected access."
+    },
+    {
+      "date": "2026-10-13",
+      "event": "Completed morning FREM portfolio review: independent accounting rechecked all 2276 ledgers, 34276 periods and 1424 comparisons with maximum arithmetic residual 4.0745362639427185e-10. Verified six frozen source files, 90 forecast files and 155 S4 predecessor files. Original 0/32 primary cases at least 6% and zero memory increment unchanged. No exact new framework source supplied, no new fits or protected access. Laura allocation inputs remain unresolved. Saved research/frem_portfolio_20261012/MORNING_REVIEW.md and receipt; paused overnight heartbeat as requested."
+    },
+    {
+      "date": "2026-10-13",
+      "event": "Completed additive frozen S5-R1 diagnostic pilot.15 tests and lint pass,12 generated mechanism cells and6 retained-public fold/seed cells complete; no new base fits.10bps ensemble wealth uplift vs equal-weight stocks+1.0937%/+0.4662%, vs buy-and-hold+0.0813%/+0.2135%; fixed expert averaging wins wealth in both windows, recent/linear routing win NLL in both,6% target unmet.312 ledgers/7128 scores/111 frozen identities independently audited;31.77MiB peak and5.93s worker. Preserved ps-monitor infrastructure failure and repaired it before any scientific outputs. Normal training admission failed; full fresh-trained S5 unexecuted, protected tail untouched.45-item upgrade backlog classified24 implemented/15 proposed/6 conditional. Receipt: research/frem_s5_20261013/COMPLETION_RECEIPT.json."
+    },
+    {
+      "date": "2026-10-13",
+      "event": "Implemented additive S6 reservoir/engram/predictive-latent forecaster, delayed quantized updates, heavy-tail distributions, explicit XGBoost adapter, context controls, multinational accounting and constrained multi-period planning. Authored analytical contracts and independent adversarial reviews.115bounded tests and changed-file Ruff pass;59MiBpeak. First61pass/1floatingassertionfailure retained; chronology, context, checkpoint and admission defects repaired.111S5frozen identities unchanged. Training admission failed at176.30/160.88/252.14MiB with increasing pageouts, absent admitted data and frozen development protocol;zero market fits/backtests or protected access. Laura mandate unresolved; full ultimate-model request remains incomplete. Receipt:research/frem_s6_20261013/RECEIPT.json"
+    },
+    {
+      "date": "2026-10-13",
+      "event": "Laura caseclarification implemented in isolatedplanning module:28tests,18scenario cells,datedreserves,costs,flexibility and conditional2031cap/floor. Independent review corrected fee,rounding,dateandprotectedcash rebalancing defects beforefinaldelivery.43S6files unchanged; S6training stillblocked; no protectedaccess."
+    },
+    {
+      "date": "2026-10-13",
+      "event": "User requested immediate S6 experiments. Executed fresh launcher attempt2; resource floor failed with rising pageouts, missing admitted windows/protocol. Manifest-only audit retained candidate limitations. No new fits/tests/protected access;43prior delivery identities verified."
+    },
+    {
+      "date": "2026-10-14",
+      "event": "Completed S7 gate/cash attribution and S8 soft-gate/committed-hold successor. Three base fits, 153 evaluation weeks, 252 audited ledgers. Predictive point improvements small and inconclusive; economic primary failed. All predecessor files preserved; 2019 not used by successor; protected 2025+ untouched."
+    },
+    {
+      "date": "2026-10-15",
+      "event": "Prepared the user-requested 13-item loss diagnosis and improvement checklist. Measured findings are separated from proposed causal explanations, with severity, mechanisms and required evidence. No new model fits, policy replays, scientific freeze or protected access. S6-S8 results and thresholds preserved; proposed successor work remains unimplemented."
+    },
+    {
+      "date": "2026-10-15",
+      "event": "Completed separate standard-library loss attribution and mathematical contract audit: 40 tests and lint pass; all 240 saved S8 strategy ledgers/36720 intervals reconcile to 8.30e-10 dollars; 49 selected frozen source/data/evidence hashes unchanged. Primary asset contributions SPY +6988.60, TLT -5511.30, GLD -1921.78, fees810.24 explain wealth98745.27. Preserved first three audit-reader failures and later passing attempts. Focused prior-art review, data inventory and ten checkpoint dispositions leave successor Checkpoint1 NOT_READY; zero new fits/policy replays/protected access. Canonical phase and prior negative/inconclusive conclusions unchanged. Receipt: research/restart_20261015/RECEIPT.json"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "Continued the user-requested restart into separate FREM-S9 exploratory horizon/risk study, specified before implementation. Implemented deterministic conditional/global scenarios, direct/constant-repeat horizons, joint/diagonal risk, exact cash/dividend entry-exit accounting, checkpoints and full 96-ledger matrix. 37 constructed engineering tests and lint pass; source/calendar/maturity checks admit 608 pre-2017 examples, with 243/399 training and 38/51 evaluation blocks. Frozen 20 source/data/spec identities and environment. First actual launcher exits3 before fitting: host memory74.81/89.84/120.94MiB below512MiB and rising pageouts. Zero market fits/ledgers/protected access; no consumption marker. S6-S8 outcomes and prior105selected identities preserved. Full empirical paper, independent reproduction and canonical confirmation incomplete."
+    },
+    {
+      "date": "2026-10-15",
+      "event": "User requested a fully mapped S10 before implementation. Added a complete reviewed design proposal, exact equations, prior-art boundaries, 31-row failure/repair map, fixed 192-ledger proposed protocol and implementation acceptance plan. No model source, tests, fits, ledgers, protected access or scientific freeze. S6-S8 conclusions, S9 unconsumed freeze and original thresholds remain unchanged. Decision recorded through record-decision; see research/frem_s10_20261015/RECEIPT.json."
+    },
+    {
+      "date": "2026-10-15",
+      "event": "S10 design4 integrated repair: 274 generated engineering tests pass; actual192-cell small generated replay/persistence/readback plus separate kernel/pilot/statistics checks. Scientific execution remains blocked; completed negative/inconclusive predecessors and unconsumed S9 freeze retained.",
+      "receipt": "research/frem_s10_repair_20261015/RECEIPT.json"
+    }
+  ],
+  "prior_reported_evidence": [
+    {
+      "source": "docs/laura_case_evidence.json",
+      "finding": "User preparation document reports negative synthetic APEN-memory and graph-memory comparisons.",
+      "verification": "Reported history only; raw runs not independently re-audited in the source-authoring session.",
+      "interpretation": "New source implementation does not establish these failures are solved."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/RESEARCH_AUDIT.md and legacy/wharton_lab_v0/EXECUTION_STATE.json",
+      "finding": "The 1181-cell legacy matrix is leakage/degeneracy contaminated; the spent lockbox synthetic arm is invalid, the ETF arm is negative, and the repaired study is null versus historical mean.",
+      "verification": "Reconciled from retained local reports on 2026-10-11; no old lockbox rerun was performed.",
+      "interpretation": "These results cannot support a stock forecast or a positive memory claim."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/candidates/engram-reservoir-jepa-20261008/prospective/results/WHARTON-A20261008-R2-SYNTH-CV-001/FINAL_DISPOSITION.json",
+      "finding": "On one fixed synthetic path, candidate memory MSE was 9.269584365779265 percent worse than memory-off.",
+      "verification": "Retained completed receipt read on 2026-10-11; no rerun.",
+      "interpretation": "Synthetic negative evidence only; not market performance."
+    }
+  ],
+  "authoring_gates": {
+    "idea": "specified; novelty candidate, not established",
+    "model_contract": "written and statically cross-reviewed",
+    "methodology": "prospective protocol written, not frozen",
+    "model_source": "implemented; runtime compatibility verified by tests",
+    "experiment_source": "implemented; runtime compatibility verified by tests",
+    "dry_run": "synthetic engineering integration complete; admitted-market dry run remains blocked by absent canonical panel",
+    "development_matrix": "authorized but not started; admitted data absent",
+    "confirmatory_freeze": "not created",
+    "protected_evaluation": "not executed",
+    "empirical_paper": "not completed",
+    "delivery": "source, prospective manuscript, runtime receipt, and provisional current GYIC watchlist"
+  },
+  "successor_lineages": {
+    "rejepa_v1": {
+      "path": "successors/rejepa_v1",
+      "status": "fresh_engineering_matrix_complete_external_market_data_and_rules_block_scientific_execution",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "67 passed",
+      "engineering_matrix": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
+      "protected_outcomes_accessed": false
+    },
+    "reng_jepa_v01": {
+      "path": "successors/reng_jepa_v01",
+      "status": "fresh_engineering_matrix_complete_waiting_for_admitted_data_and_freeze",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "45 passed",
+      "engineering_matrix": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
+      "protected_outcomes_accessed": false
+    },
+    "frem_s2": {
+      "path": "src/frem/frozen_residual.py",
+      "specification": "research/frem_rebuild_20261011/specification.json",
+      "status": "EXPLORATORY_DEVELOPMENT_COMPLETE_MEMORY_UNSUPPORTED_ZERO_CONTROL_BEST",
+      "scientific_status": "EXPLORATORY_ONLY_NOT_CONFIRMATORY",
+      "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json",
+      "run_directory": "outputs/frem_s2_development_20261011_attempt3",
+      "fits_completed": 22,
+      "prediction_cells": 24,
+      "stocks": 23,
+      "months": 19,
+      "seeds": [
+        11,
+        29
+      ],
+      "date_balanced_nll": {
+        "legacy_frem": -0.49029534171284456,
+        "standardized_frem": -0.5590940377046204,
+        "frozen_residual": -0.6031824693860103,
+        "zero": -0.7095258233964543
+      },
+      "same_checkpoint_memory_gain_nats": 0.0,
+      "tests": "194 passed; eight new redesign/data tests",
+      "maximum_sampled_worker_rss_mib": 404.1875,
+      "sota_established": false,
+      "protected_outcomes_accessed": false
+    },
+    "frem_s3": {
+      "status": "COMPLETE_EXPLORATORY_PRIMARY_MEMORY_NOT_SUPPORTED",
+      "created_at": "2026-10-11T16:30:37.919632+00:00",
+      "report": "research/frem_s3_20261011/REPORT.md",
+      "run_directory": "outputs/frem_s3_20261011_attempt1",
+      "regression_tests_passed": 217,
+      "new_tests": 19,
+      "learned_fits": 24,
+      "constant_cells": 12,
+      "public_variant_cells": 114,
+      "mechanism_cells": 15,
+      "mechanism_arms": 14,
+      "primary_gains": {
+        "fresh_2023": {
+          "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+          "estimate": -0.014116494092332047,
+          "ci": [
+            -0.03645502585680375,
+            0.006302281951330126
+          ],
+          "months": 12,
+          "paired_rows": 144,
+          "settings": {
+            "block_months": 3,
+            "repetitions": 2000,
+            "seed": 1901,
+            "confidence": 0.95
+          },
+          "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+          "p_value": 0.02848575712143928,
+          "null_effect": 0.01,
+          "holm_p_value": 0.20789605197401298
+        },
+        "fresh_2024": {
+          "effect": "frem/off NLL minus S3 combined NLL; positive favors S3",
+          "estimate": 0.007006371212704009,
+          "ci": [
+            -0.007940276974063376,
+            0.02256118009754681
+          ],
+          "months": 10,
+          "paired_rows": 120,
+          "settings": {
+            "block_months": 3,
+            "repetitions": 2000,
+            "seed": 1901,
+            "confidence": 0.95
+          },
+          "interpretation": "Exploratory survivor sample; three seeds averaged per observation, not independent markets",
+          "p_value": 0.7131434282858571,
+          "null_effect": 0.01,
+          "holm_p_value": 1.0
+        }
+      },
+      "no_memory_variant_improves_both_windows": true,
+      "calibration_worsened_both_windows": true,
+      "verification": "research/frem_s3_20261011/verification.json",
+      "protected_outcomes_accessed": false,
+      "canonical_confirmation": "NOT_EXECUTED",
+      "profitability": "UNPROVEN",
+      "old_results_preserved": true,
+      "path": "src/frem/s3.py",
+      "scientific_status": "EXPLORATORY_ONLY_PRIMARY_INCONCLUSIVE",
+      "specification": "research/frem_s3_20261011/specification.json",
+      "source_archive": "research/frem_s3_20261011/source",
+      "execution_wall_seconds": 743.1872778329998,
+      "maximum_sampled_worker_rss_mib": 407.671875
+    },
+    "portfolio_v1": {
+      "status": "EXPLORATORY_PORTFOLIO_TARGET_NOT_MET",
+      "path": "successors/frem_portfolio_v1",
+      "specification": "successors/frem_portfolio_v1/specification.json",
+      "receipt": "research/frem_portfolio_20261012/COMPLETION_RECEIPT.json",
+      "report": "outputs/frem_portfolio_20261012_attempt1/REPORT.md",
+      "learned_fits_in_this_task": 0,
+      "new_engineering_tests_passed": 31,
+      "forecast_rows_audited": 17396,
+      "portfolio_comparisons": 1424,
+      "ledgers_verified": 2276,
+      "primary_cases": 32,
+      "primary_cases_at_least_6pct": 0,
+      "relative_terminal_wealth_range": [
+        -0.029565878320196415,
+        0.003477615145270452
+      ],
+      "framework_source_integrated": false,
+      "protected_outcomes_accessed": false,
+      "scientific_status": "EXPLORATORY_REANALYSIS_ONLY",
+      "laura_allocation": "UNRESOLVED_INPUTS; sourced research shortlist only",
+      "overnight_automation": "frem-overnight-integration-and-morning-review",
+      "morning_review_local": "2026-10-13T07:00:00+05:30",
+      "morning_review": {
+        "status": "MORNING_REVIEW_COMPLETE_TARGET_NOT_MET",
+        "completed_at": "2026-10-13T02:04:16.227329+00:00",
+        "report": "research/frem_portfolio_20261012/MORNING_REVIEW.md",
+        "receipt": "research/frem_portfolio_20261012/MORNING_REVIEW_RECEIPT.json",
+        "accounting_audit": "research/frem_portfolio_20261012/morning_accounting_audit.json",
+        "automation_status": "PAUSED",
+        "new_learned_fits": 0,
+        "protected_outcomes_accessed": false
+      }
+    },
+    "frem_s6": {
+      "path": "successors/frem_s6",
+      "status": "IMPLEMENTED_INTEGRITY_VERIFIED_MARKET_EXECUTION_BLOCKED",
+      "scientific_status": "NOT_EVALUATED",
+      "receipt": "research/frem_s6_20261013/RECEIPT.json",
+      "protected_outcomes_accessed": false
+    },
+    "frem_s8": {
+      "path": "successors/frem_s8",
+      "status": "COMPLETE_BOUNDED_DEVELOPMENT_INCONCLUSIVE_PREDICTION_ECONOMIC_GATE_FAILED",
+      "report": "research/frem_s8_20261014/FINAL_REPORT.md",
+      "receipt": "research/frem_s8_20261014/RECEIPT.json",
+      "output": "outputs/frem_s8_2020_2022_20261014_attempt1",
+      "data": "data/s8_etf_2020_2022_20261014_attempt2",
+      "freeze": "research/frem_s8_20261014/freeze2.json",
+      "base_fits": 3,
+      "seeds": [
+        11,
+        29,
+        47
+      ],
+      "evaluation_dates": 153,
+      "forecast_variants": 15,
+      "ledgers_verified": 252,
+      "new_tests_passed": 18,
+      "predecessor_files_unchanged": 319,
+      "primary_nll_gains": {
+        "equal": 0.0013674996853025958,
+        "memory": 0.0006837879605827366
+      },
+      "predictive_practical_support": false,
+      "economic_point_win_all_primary_controls": false,
+      "terminal_wealth_10bps_same_h4_policy": {
+        "s8": 98745.27368214123,
+        "equal": 96211.61809532129,
+        "memory": 97133.99714250263
+      },
+      "global_freshness_certified": false,
+      "freshness_audit": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+      "2019_tuned": false,
+      "2019_used_in_successor": false,
+      "protected_access": false,
+      "audit": "research/frem_s8_20261014/AUDIT.json"
+    }
+  },
+  "remaining_external_inputs": [
+    "Canonical point-in-time data and unused confirmation remain unresolved. Narrow S9 retrospective development data is admitted; host resource admission currently blocks its two-fit frozen experiment.",
+    "Current official participant approved universe and trading requirements for WInS compliance",
+    "Team/advisor review of the now-written numerical policy proposal, not missing design inputs for local strategic planning",
+    "For transaction-specific WInS decisions only: current holdings, dated prices, costs and instrument identifiers; WInS PnL never enters Laura long-term contributions",
+    "For eventual actual2031 range: observed2031 holdings and independently secured net facility proceeds; current future-balance examples are hypothetical",
+    "Current S10: exact admitted source/calendar/close timestamps and rights, passing live resource admission, then real fixed precision/frozen development evidence and unused confirmation. Internal production integration is separately tracked; these are not the only remaining tasks."
+  ],
+  "authoring_verification": {
+    "static_record": "docs/STATIC_VERIFICATION.cleanup_2026-10-11.json",
+    "runtime_record": "research/runtime_verification_2026-10-11.json",
+    "repository_cleanup_record": "research/repository_cleanup_verification_2026-10-11.json",
+    "efficiency_record": "research/efficiency_verification_2026-10-11.json",
+    "data_admission_record": "research/data_admission_audit_2026-10-11.json",
+    "engineering_execution_record": "research/all_admissible_runs_2026-10-11.json",
+    "python_files": 37,
+    "authored_test_functions": 130,
+    "tests_executed": true,
+    "runtime_test_result": "163 passed in 8.64 seconds with warnings treated as errors",
+    "successor_test_results": "RE-JEPA v0.3: 67 passed in 5.23 seconds; RENG-JEPA v0.1: 45 passed in 5.23 seconds; warnings treated as errors",
+    "package_build": "PASS for FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
+    "market_data_downloaded": true,
+    "market_data_download_scope": "Public retrospective 24-stock histories; not the canonical point-in-time global panel",
+    "engineering_model_runs_executed": true,
+    "engineering_cells_completed": 10,
+    "market_model_or_portfolio_runs_executed": true,
+    "paper_pages": 23,
+    "bibliographic_references": 24,
+    "paper_status": "methods_and_engineering_evidence_review_draft_compiled_visually_reviewed_not_submission_ready",
+    "paper_release_record": "paper/release_review_20261011/MANIFEST.json",
+    "market_execution_scope": "22 exploratory public-history model fits in FREM-S2; no canonical admitted-market fit, protected confirmation, or portfolio run",
+    "latest_frem_runtime_tests": "194 passed in 7.80 seconds, DeprecationWarning as error; retained first attempt 191 passed / 2 failures",
+    "frem_s2_receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+  },
+  "completion_request": {
+    "receipt": "research/completion_20261011/COMPLETION_RECEIPT.json",
+    "new_model_cells_started": 0,
+    "new_tests_passed": 12,
+    "scientific_status": "NOT_EVALUATED",
+    "arxiv_submission_ready": false,
+    "paper": "paper/main.pdf",
+    "paper_status": "23-page compiled methods and engineering evidence review draft",
+    "resource_check": "research/completion_20261011/final_resource_check.json"
+  },
+  "public_regional_benchmarks": {
+    "status": "ACQUIRED_NOT_MODEL_EVALUATED",
+    "manifest": "data/public_regional_factors_20261011/manifest.json",
+    "datasets": 7,
+    "pre_2025_monthly_rows": 3666,
+    "canonical_market_admission": false,
+    "license_status": "Publicly accessible; redistribution not verified",
+    "provider_access_statement": "User reports no licensed dataset currently available and authorizes public internet collection."
+  },
+  "loss_diagnosis": {
+    "status": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_OF_RETAINED_SYNTHETIC_RUN",
+    "report": "research/frem_loss_diagnosis_20261011/REPORT.md",
+    "receipt": "research/frem_loss_diagnosis_20261011/diagnosis.json",
+    "verification": "research/frem_loss_diagnosis_20261011/verification.json",
+    "scope": "Four synthetic assets, 92 held-out development dates, seed 11; no admitted market conclusion",
+    "main_finding": "Downward mean bias dominates the saved loss; fixed-checkpoint memory correction slightly improves NLL",
+    "nll_gap_frem_minus_no_memory": 0.564926857349982,
+    "fixed_checkpoint_memory_nll_improvement": 0.002854824521729582,
+    "location_gap_share_descriptive": 0.7879045708608131,
+    "upstream_causes": "Short optimization, evolving residual reference and mismatched controller objective are plausible but not experimentally isolated",
+    "tests_passed": 13,
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "resource_admission": "Not satisfied; standard-library diagnosis only"
+  },
+  "latest_all_experiments_request": {
+    "created_at": "2026-10-11T14:21:39.883029+00:00",
+    "user_request": "run all experiments now",
+    "status": "BLOCKED_BEFORE_NEW_MODEL_EXECUTION",
+    "new_fits_started": 0,
+    "protected_outcomes_accessed": false,
+    "public_six_window_matrix": {
+      "planned_cells": 24,
+      "status": "BLOCKED_BEFORE_MODEL_IMPORT",
+      "failure": "outputs/public_equity_allnow_20261011_attempt1/failure.json",
+      "error": "RESOURCE_ADMISSION_FAILED [{\"available_mib\": 103.421875, \"pageouts\": 874841}, {\"available_mib\": 125.0625, \"pageouts\": 874844}, {\"available_mib\": 118.046875, \"pageouts\": 874844}]"
+    },
+    "canonical_development_and_robustness": {
+      "status": "BLOCKED_MISSING_CANONICAL_PANEL",
+      "panel_exists": false,
+      "manifest_exists": false
+    },
+    "confirmation": {
+      "status": "BLOCKED_DEVELOPMENT_AND_FREEZE_INCOMPLETE",
+      "protocol_status": "PROPOSED_NOT_FROZEN"
+    },
+    "frem_s2": {
+      "status": "ALREADY_COMPLETED_NOT_RERUN",
+      "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+    },
+    "regional_factors": {
+      "status": "ACQUISITION_ONLY_NO_DECLARED_MODEL_EXPERIMENT"
+    },
+    "prior_results": "Preserved completed synthetic, legacy and successor evidence; no repeat to seek a favorable result.",
+    "resource_deviation_scope": "Prior slow-mode deviation was declared for the completed FREM-S2 22-fit matrix; this attempt preserved the public six-window launcher gate."
+  },
+  "public_slow_execution": {
+    "status": "COMPLETE_VERIFIED",
+    "run_directory": "outputs/public_equity_slow_20261011_attempt1",
+    "declared_cells": 24,
+    "amendment": "research/decisions/public_slow_execution_20261011.json",
+    "workers_concurrent": 1,
+    "threads_per_worker": 1,
+    "rss_ceiling_mib": 768,
+    "batch_size": 32,
+    "protected_outcomes_accessed": false,
+    "completed_cells": 24,
+    "folds": 6,
+    "tests_passed": 194,
+    "prediction_rows_verified": 8684,
+    "max_nll_reconstruction_error": 1.9984014443252818e-15,
+    "source_hashes_verified": true,
+    "maximum_sampled_model_rss_mib": 386.65625,
+    "summed_model_worker_seconds": 489.05448449900723,
+    "all_workers_exit_zero": true,
+    "summary": "outputs/public_equity_slow_20261011_attempt1/summary.json",
+    "receipt": "outputs/public_equity_slow_20261011_attempt1/completion_receipt.json",
+    "finding": "Mixed exploratory evidence: FREM point NLL improves over no_memory in 4/6 windows; worse in 2020 and 2022. Single seed, survivor sample, unadjusted intervals; not confirmatory."
+  },
+  "public_zero_diagnosis": {
+    "status": "COMPLETE_DESCRIPTIVE_AUDIT",
+    "report": "research/public_zero_diagnosis_20261011/REPORT.md",
+    "data": "research/public_zero_diagnosis_20261011/diagnosis.json",
+    "zero_monthly_wins_all_variants": 12,
+    "months": 19,
+    "zero_evaluated_scope": "S2 Great Recession only; absent from six-window study",
+    "gap_decomposition_fraction": {
+      "location": 0.2944830118935133,
+      "scale": 0.6328129084858415,
+      "df": 0.07270407962063712
+    },
+    "memory": "All nonzero declared weights worsened validation; populated but sparse old bank. Upstream causality not isolated.",
+    "changes": "Future validation diagnostics only; forecasts and grids unchanged",
+    "new_tests_passed": 4,
+    "new_fits": 0,
+    "protected_outcomes_accessed": false
+  },
+  "local_maintenance": {
+    "status": "COMPLETE_LOCAL_ENGINEERING_AND_EVIDENCE_MAINTENANCE",
+    "date": "2026-10-11",
+    "receipt": "research/local_maintenance_20261011/RECEIPT.json",
+    "report": "research/local_maintenance_20261011/REPORT.md",
+    "new_regression_tests": 25,
+    "offline_tests_passed": 42,
+    "lint_scope": "scripts, active src/tests, and both successor src/tests; PASS",
+    "historical_source_archive": "research/local_maintenance_20261011/original_engineering_source/ARCHIVE_RECEIPT.json",
+    "historical_source_files_verified": 36,
+    "synthetic_evidence_audit": "research/local_maintenance_20261011/engineering_audit_attempt2/audit.json",
+    "s3_score_audit": "research/local_maintenance_20261011/s3_score_audit.json",
+    "s3_completeness_audit": "research/local_maintenance_20261011/s3_completeness.json",
+    "release_snapshot_directory": "research/local_maintenance_20261011/release_snapshot",
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "limitation": "Source inventories and score reconstruction are engineering evidence; canonical confirmation, global accounting, paper integration and external mandate inputs remain incomplete."
+  },
+  "memory_diagnosis_20261012": {
+    "status": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_AND_RESEARCH_CHECKLIST",
+    "report": "docs/FREM_MEMORY_DIAGNOSIS_AND_CHECKLIST_20261012.md",
+    "receipt": "research/frem_memory_diagnosis_20261012/diagnosis_v2.json",
+    "decision": "research/decisions/frem_memory_diagnosis_20261012.json",
+    "frozen_sources_verified": 49,
+    "prediction_rows_reconstructed": 11880,
+    "max_nll_reconstruction_error": 2.220446049250313e-15,
+    "finding": "Active S3 memory lacks consistent benefit. Old base/calibration, small validation gains and nearly flat similarity weighting are measured design conditions; causal attribution and remedy benefit remain unproved.",
+    "new_model_fits": 0,
+    "model_behavior_changed": false,
+    "protected_outcomes_accessed": false,
+    "future_work": "Proposed only: separately declared fresh successor with recent base/calibration, dimension-independent distance and conservative memory selection. No completed outcome reopened.",
+    "lint": "PASS on new diagnostic script after retained style-only failure; no model tests rerun"
+  },
+  "paper_and_checklist_20261012": {
+    "status": "PUBLIC_RESULTS_INTEGRATED_REMAINING_GATES_EXPLICIT",
+    "paper": "paper/main.pdf",
+    "pages": 27,
+    "report": "research/checklist_completion_20261012/CHECKLIST_DISPOSITION.md",
+    "laura": "research/checklist_completion_20261012/LAURA_FUNDING_AND_BLOCKERS.md",
+    "fresh_audit_rows": 133844,
+    "max_nll_error": 2.220446049250313e-15,
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "remaining": [
+      "canonical panel and sidecar",
+      "resource admission",
+      "successor novelty and exact chronology",
+      "independent training reproduction",
+      "confirmation",
+      "participant rules/universe, holdings and team funding/risk policy",
+      "current forecast/risk inputs",
+      "scientific and release review"
+    ]
+  },
+  "s4_development_20261012": {
+    "status": "COMPLETE_NO_MEMORY_GAIN",
+    "fits": 6,
+    "prediction_cells": 24,
+    "tests_passed": 247,
+    "elapsed_seconds": 64.7623288750001,
+    "max_sampled_rss_mib": 401.84375,
+    "all_nonoff_selected_weights": 0,
+    "audit_rows": 3168,
+    "protected_access": false,
+    "report": "research/frem_s4_20261012/REPORT.md",
+    "allocation_report": "research/frem_s4_20261012/PUBLIC_RULES_AND_LAURA.md",
+    "scope": "Development reuse of spent S3 public 2023/2024 survivor histories; no fresh confirmation or investment inference",
+    "paper_pages": 28,
+    "paper": "paper/main.pdf"
+  },
+  "portfolio_request_20261012": {
+    "status": "EXPLORATORY_PORTFOLIO_TARGET_NOT_MET",
+    "path": "successors/frem_portfolio_v1",
+    "specification": "successors/frem_portfolio_v1/specification.json",
+    "receipt": "research/frem_portfolio_20261012/COMPLETION_RECEIPT.json",
+    "report": "outputs/frem_portfolio_20261012_attempt1/REPORT.md",
+    "learned_fits_in_this_task": 0,
+    "new_engineering_tests_passed": 31,
+    "forecast_rows_audited": 17396,
+    "portfolio_comparisons": 1424,
+    "ledgers_verified": 2276,
+    "primary_cases": 32,
+    "primary_cases_at_least_6pct": 0,
+    "relative_terminal_wealth_range": [
+      -0.029565878320196415,
+      0.003477615145270452
+    ],
+    "framework_source_integrated": false,
+    "protected_outcomes_accessed": false,
+    "scientific_status": "EXPLORATORY_REANALYSIS_ONLY",
+    "laura_allocation": "UNRESOLVED_INPUTS; sourced research shortlist only",
+    "overnight_automation": "frem-overnight-integration-and-morning-review",
+    "morning_review_local": "2026-10-13T07:00:00+05:30",
+    "morning_review": {
+      "status": "MORNING_REVIEW_COMPLETE_TARGET_NOT_MET",
+      "completed_at": "2026-10-13T02:04:16.227329+00:00",
+      "report": "research/frem_portfolio_20261012/MORNING_REVIEW.md",
+      "receipt": "research/frem_portfolio_20261012/MORNING_REVIEW_RECEIPT.json",
+      "accounting_audit": "research/frem_portfolio_20261012/morning_accounting_audit.json",
+      "automation_status": "PAUSED",
+      "new_learned_fits": 0,
+      "protected_outcomes_accessed": false
+    }
+  },
+  "s5_development_20261013": {
+    "status": "COMPLETE_EXPLORATORY_REPLAY",
+    "market_cells": 6,
+    "base_fits": 0,
+    "generated_cells": 12,
+    "broad_benchmark_point_win": false,
+    "stretch_6pct_met": false,
+    "memory_practical_point_gain_all_controls": false,
+    "protected_access": false,
+    "tests_passed": 15,
+    "full_requested_fresh_training_complete": false,
+    "report": "research/frem_s5_20261013/REPORT.md",
+    "receipt": "research/frem_s5_20261013/COMPLETION_RECEIPT.json",
+    "specification": "research/frem_s5_20261013/specification.json",
+    "upgrades": "research/frem_s5_20261013/UPGRADE_BACKLOG.md",
+    "audit": "research/frem_s5_20261013/audit.json",
+    "fresh_training_status": "BLOCKED_RESOURCE_AND_FRESH_STAGE_PROTOCOL",
+    "scope": "Previously inspected survivor histories and retained forecasts; no protected confirmation, new base fit, calibrated funding probability or investment claim."
+  },
+  "s6_development_20261013": {
+    "status": "IMPLEMENTED_INTEGRITY_VERIFIED_MARKET_EXECUTION_BLOCKED",
+    "requested_ultimate_model_complete": false,
+    "tests_passed": 115,
+    "test_peak_rss_mib": 59.0,
+    "market_fits": 0,
+    "market_backtests": 0,
+    "protected_access": false,
+    "planned_development_cells": 24,
+    "optional_additional_tree_fits": 24,
+    "blockers": [
+      "RESOURCE_ADMISSION_FAILED: 512MiB floor or pageouts",
+      "MISSING_ADMITTED_WINDOW_DATA_AND_MANIFEST",
+      "MISSING_FROZEN_DEVELOPMENT_PROTOCOL"
+    ],
+    "xgboost_runtime_exercised": false,
+    "laura_allocation": "UNRESOLVED_INPUTS_AND_NO_MARKET_TRAINED_CHECKPOINT",
+    "report": "research/frem_s6_20261013/REPORT.md",
+    "features": "research/frem_s6_20261013/FEATURE_DISPOSITION.json",
+    "path": "successors/frem_s6",
+    "receipt": "research/frem_s6_20261013/RECEIPT.json",
+    "specification": "research/frem_s6_20261013/specification.json",
+    "latest_execution_attempt": {
+      "status": "BLOCKED_BEFORE_SCIENTIFIC_IMPORT",
+      "receipt": "research/frem_s6_execution_20261013_attempt2/RECEIPT.json",
+      "resource_samples": [
+        {
+          "available_mib": 157.328125,
+          "pageouts": 17382
+        },
+        {
+          "available_mib": 133.546875,
+          "pageouts": 17382
+        },
+        {
+          "available_mib": 87.625,
+          "pageouts": 17448
+        }
+      ],
+      "new_market_fits": 0,
+      "new_market_backtests": 0,
+      "protected_access": false
+    },
+    "latest_market_execution": "outputs/frem_s6_real_20261014_ram_override_attempt1/completion.json"
+  },
+  "laura_planning_20261013": {
+    "status": "PLANNING_IMPLEMENTED_AND_VERIFIED_STRATEGIC_POLICY_PROPOSED",
+    "case_supplied": true,
+    "definitions_accepted": true,
+    "policy_proposed": true,
+    "tests_passed": 28,
+    "scenario_grid_cells": 18,
+    "conditional_gift_range_proof": true,
+    "model_return_prediction": false,
+    "funding_probability": null,
+    "current_instrument_eligibility_verified": false,
+    "s6_market_training_complete": false,
+    "receipt": "research/laura_plan_20261013/RECEIPT.json",
+    "proposal": "research/laura_plan_20261013/INVESTMENT_POLICY_PROPOSAL.md",
+    "path": "successors/laura_planning_v1"
+  },
+  "s6_real_20261014": {
+    "status": "FULL_24_CELL_DEVELOPMENT_COMPLETE_MEMORY_ADVANTAGE_UNSUPPORTED",
+    "data": "data/s6_real_etf_20261014/windows.json",
+    "protocol": "research/frem_s6_real_20261014/freeze2/protocol.json",
+    "report": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+    "training_dates": 422,
+    "calibration_dates": 84,
+    "evaluation_dates": 84,
+    "real_rows_reconciled": 1770,
+    "new_tests_passed": 6,
+    "market_fits": 24,
+    "protected_access": false,
+    "required_action": null,
+    "latest_compute_retry": "research/frem_s6_real_20261014/compute_retry3/RECEIPT.json",
+    "execution_target": "local per latest user instruction",
+    "latest_execution_attempt": "outputs/frem_s6_real_20261014_local_attempt8/admission.json",
+    "latest_requested_full_run": {
+      "status": "BLOCKED_RESOURCE_ADMISSION",
+      "attempt": "outputs/frem_s6_real_20261014_local_attempt3",
+      "checked_at": "2026-10-14T09:44:41.377233+00:00",
+      "requested_cells": 24,
+      "market_fits_started": 0,
+      "comparisons_available": false,
+      "protected_access": false,
+      "admission": {
+        "checked_at": "2026-10-14T09:44:41.377233+00:00",
+        "samples": [
+          {
+            "available_mib": 157.875,
+            "pageouts": 222878
+          },
+          {
+            "available_mib": 212.5,
+            "pageouts": 222878
+          },
+          {
+            "available_mib": 155.078125,
+            "pageouts": 222945
+          }
+        ],
+        "admitted": false,
+        "market_fits_started": 0
+      },
+      "frozen_protocol": "research/frem_s6_real_20261014/freeze2/protocol.json",
+      "source_data_identity_verification": "PASSED_BY_FROZEN_RUNNER_BEFORE_ADMISSION",
+      "preservation": "New attempt directory; no predecessor results or frozen source changed."
+    },
+    "memory_cleanup_receipt": "research/s6_memory_cleanup_20261014/inspection_101052/RECEIPT.json",
+    "latest_cleanup_followup": "outputs/frem_s6_real_20261014_local_attempt6/RECEIPT.json",
+    "audit": "research/frem_s6_real_20261014/completed_ram_override/AUDIT.json",
+    "output": "outputs/frem_s6_real_20261014_ram_override_attempt1",
+    "primary_memory_gain_nats": -0.005106786705581709,
+    "resource_override": "research/decisions/frem_s6_ram_override_20261014.json"
+  },
+  "s7_development_20261014": {
+    "status": "COMPLETE_PRIMARY_NO_IMPROVEMENT",
+    "report": "research/frem_s7_20261014/REPORT.md",
+    "output": "outputs/frem_s7_2019_20261014_attempt1",
+    "base_fits": 3,
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "evaluation_dates": 51,
+    "tests_passed": 125,
+    "gated_strengths": [
+      0,
+      0,
+      0
+    ],
+    "primary_gain_vs_equal": 0,
+    "gain_vs_s6_memory": -0.013341146345310105,
+    "protected_access": false,
+    "audit": "research/frem_s7_20261014/AUDIT.json",
+    "protocol": "research/frem_s7_20261014/freeze2.json",
+    "data": "data/s7_etf_2019_20261014/windows.json"
+  },
+  "s8_development_20261014": {
+    "status": "COMPLETE_BOUNDED_DEVELOPMENT_INCONCLUSIVE_PREDICTION_ECONOMIC_GATE_FAILED",
+    "report": "research/frem_s8_20261014/FINAL_REPORT.md",
+    "receipt": "research/frem_s8_20261014/RECEIPT.json",
+    "output": "outputs/frem_s8_2020_2022_20261014_attempt1",
+    "data": "data/s8_etf_2020_2022_20261014_attempt2",
+    "freeze": "research/frem_s8_20261014/freeze2.json",
+    "base_fits": 3,
+    "seeds": [
+      11,
+      29,
+      47
+    ],
+    "evaluation_dates": 153,
+    "forecast_variants": 15,
+    "ledgers_verified": 252,
+    "new_tests_passed": 18,
+    "predecessor_files_unchanged": 319,
+    "primary_nll_gains": {
+      "equal": 0.0013674996853025958,
+      "memory": 0.0006837879605827366
+    },
+    "predictive_practical_support": false,
+    "economic_point_win_all_primary_controls": false,
+    "terminal_wealth_10bps_same_h4_policy": {
+      "s8": 98745.27368214123,
+      "equal": 96211.61809532129,
+      "memory": 97133.99714250263
+    },
+    "global_freshness_certified": false,
+    "freshness_audit": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+    "2019_tuned": false,
+    "2019_used_in_successor": false,
+    "protected_access": false,
+    "audit": "research/frem_s8_20261014/AUDIT.json"
+  },
+  "loss_repair_checklist_20261015": {
+    "status": "CHECKLIST_COMPLETE_SUCCESSOR_WORK_PROPOSED_NOT_IMPLEMENTED_OR_RUN",
+    "checklist": "docs/FREM_LOSS_REPAIR_CHECKLIST_20261015.md",
+    "decision": "research/decisions/frem_loss_repair_checklist_20261015.json",
+    "receipt": "research/loss_repair_checklist_20261015/RECEIPT.json",
+    "planned_items": 13,
+    "new_model_fits": 0,
+    "new_policy_replays": 0,
+    "protected_access": false,
+    "new_scientific_freeze": false,
+    "execution_budget_assigned": false,
+    "completed_studies_reopened": false,
+    "scientific_thresholds_changed": false,
+    "next_deliverable": "Evidence-bound attribution, horizon and decision contracts, data freshness/precision feasibility, then a separately bounded successor specification."
+  },
+  "restart_20261015": {
+    "status": "AUDIT_COMPLETE_SUCCESSOR_CHECKPOINT_1_NOT_READY",
+    "user_request": "research/restart_20261015/USER_REQUEST.txt",
+    "report": "research/restart_20261015/REPORT.md",
+    "checkpoints": "research/restart_20261015/CHECKPOINTS.json",
+    "data_readiness": "research/restart_20261015/DATA_READINESS.json",
+    "mathematical_contract": "research/restart_20261015/MATHEMATICAL_CONTRACT.md",
+    "prior_art_review": "research/restart_20261015/PRIOR_ART_AND_IDEA_REVIEW.md",
+    "next_experiment_contract": "research/restart_20261015/NEXT_EXPERIMENT_CONTRACT.md",
+    "decision": "research/decisions/frem_restart_audit_20261015.json",
+    "receipt": "research/restart_20261015/RECEIPT.json",
+    "source_module": "successors/frem_audit_v1",
+    "tests_passed": 40,
+    "lint": "PASS",
+    "saved_strategy_ledgers_checked": 240,
+    "period_records_checked": 36720,
+    "c01_attribution": "COMPLETE",
+    "c02_c03_c06_mathematical_references": "TESTED_NOT_INTEGRATED_IN_A_FORECAST_MODEL",
+    "preserved_file_identities": 49,
+    "new_model_fits": 0,
+    "new_policy_replays": 0,
+    "protected_access": false,
+    "new_scientific_freeze": false,
+    "independent_reproduction": false,
+    "completed_studies_reopened": false,
+    "scientific_thresholds_changed": false,
+    "development_ceiling_proposed": {
+      "base_fits": 12,
+      "training_wall_seconds": 3600,
+      "workers": 1,
+      "threads": 1,
+      "paid_compute": false,
+      "frozen": false,
+      "executed": false
+    },
+    "remaining": [
+      "Defensible contribution or explicitly narrower empirical question",
+      "Admitted data and truthful unused confirmation boundary",
+      "Complete model and precision specification",
+      "Resource admission and source/protocol freeze",
+      "Empirical evaluation, independent reproduction and research release"
+    ],
+    "claim_boundary": "No practical predictive success, profitable successor, novelty, calibrated funding probability or complete research release established."
+  },
+  "s9_development_20261015": {
+    "status": "IMPLEMENTED_FROZEN_RESOURCE_BLOCKED",
+    "claim_scope": "Exploratory retrospective horizon/risk diagnostic; no algorithm novelty or canonical confirmation claim.",
+    "specification": "research/frem_s9_20261015/SPECIFICATION.md",
+    "report": "research/frem_s9_20261015/REPORT.md",
+    "checklist": "research/frem_s9_20261015/CHECKLIST.md",
+    "review": "research/frem_s9_20261015/REVIEW.md",
+    "data_admission": "research/frem_s9_20261015/DATA_ADMISSION.json",
+    "freeze": "research/frem_s9_20261015/freeze1.json",
+    "execution_receipt": "outputs/frem_s9_20261015_attempt1/RECEIPT.json",
+    "completion_receipt": "research/frem_s9_20261015/RECEIPT.json",
+    "source": "successors/frem_s9",
+    "tests_passed": 37,
+    "lint": "PASS",
+    "data_scope": "Current-vintage pre-2017 ETF history, already within predecessor training; not globally unused or PIT certified.",
+    "training_examples": [
+      243,
+      399
+    ],
+    "evaluation_blocks": [
+      38,
+      51
+    ],
+    "proposed_market_fits": 2,
+    "planned_strategy_ledgers": 64,
+    "planned_benchmark_ledgers": 32,
+    "wall_seconds_limit": 600,
+    "process_rss_limit_mib": 128,
+    "host_admission_floor_mib": 512,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "confirmation": false,
+    "independent_reproduction": false,
+    "source_freeze_consumed": false,
+    "predecessor_phase": "s8_development_complete_inconclusive_prediction_economic_gate_failed",
+    "next_action": "Run unchanged unconsumed frozen matrix in a fresh output directory after resource admission succeeds, then audit every outcome. No blind positive-result search."
+  },
+  "current_iteration": "FREM-S10",
+  "current_request_scope": "User requested end-to-end audit, repair, improvement and honest research conclusion. Substantial isolated S10 generated implementation/verification completed; real source/resource/freeze and remaining production integration gates prevent empirical completion. No positive result manufactured.",
+  "s10_design_20261015": {
+    "status": "DESIGN_COMPLETE_REVIEW_AND_FEASIBILITY_PENDING",
+    "predecessor_phase": "s9_exploratory_implemented_resource_blocked",
+    "overview": "docs/FREM_S10_DESIGN.md",
+    "specification": "research/frem_s10_20261015/MODEL_SPECIFICATION.md",
+    "protocol": "research/frem_s10_20261015/EXPERIMENT_PROTOCOL.md",
+    "configuration": "research/frem_s10_20261015/design.json",
+    "failure_map": "research/frem_s10_20261015/FAILURE_REPAIR_MAP.md",
+    "prior_art": "research/frem_s10_20261015/PRIOR_ART.md",
+    "implementation_plan": "research/frem_s10_20261015/IMPLEMENTATION_PLAN.md",
+    "local_review": "research/frem_s10_20261015/REVIEW.md",
+    "receipt": "research/frem_s10_20261015/RECEIPT.json",
+    "decision": "research/decisions/frem_s10_design_20261015.json",
+    "selected_mechanism": "Delayed contextual mixture-level proper-score fitting, shrinkage to global, direct joint price/dividend scenarios, holdings-aware nominal/robust utility.",
+    "planned_core_strategy_ledgers": 128,
+    "planned_benchmark_ledgers": 48,
+    "planned_ablation_ledgers": 16,
+    "implemented": false,
+    "model_tests_run": 0,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "scientific_freeze": false,
+    "algorithmic_novelty_established": false,
+    "original_nll_hypothesis_satisfied": false,
+    "economic_success": false,
+    "independent_review": false,
+    "s9_preserved_unconsumed": true,
+    "original_thresholds_unchanged": true,
+    "remaining": [
+      "Technical design review",
+      "S10-specific data admission",
+      "Development-only precision feasibility",
+      "Implementation and runtime verification",
+      "Resource admission and source/data/environment freeze",
+      "Admitted untouched confirmation",
+      "Independent reproduction and final research release"
+    ],
+    "next_action": "Review the complete S10 design and establish data/precision feasibility before implementing and freezing any experiment."
+  },
+  "current_design_revision": 4,
+  "s10_design_v2_20261015": {
+    "status": "EXTENDED_DESIGN_COMPLETE_IMPLEMENTATION_AND_EMPIRICAL_GATES_PENDING",
+    "overview": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
+    "blueprint": "research/frem_s10_20261015/design_v2/blueprint.json",
+    "clarifications": "research/frem_s10_20261015/design_v2/MODEL_CLARIFICATIONS.md",
+    "architecture": "research/frem_s10_20261015/design_v2/ARCHITECTURE_AND_INTERFACES.md",
+    "code_quality": "research/frem_s10_20261015/design_v2/CODE_QUALITY_AND_CI.md",
+    "verification_catalog": "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md",
+    "requirements": "research/frem_s10_20261015/design_v2/requirements.json",
+    "operations": "research/frem_s10_20261015/design_v2/OPERATIONS_AND_ARTIFACTS.md",
+    "delivery_plan": "research/frem_s10_20261015/design_v2/DELIVERY_PLAN.md",
+    "internal_review": "research/frem_s10_20261015/design_v2/ADVERSARIAL_FINDINGS.md",
+    "decision": "research/decisions/frem_s10_design_v2_20261015.json",
+    "receipt": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+    "normative_clarifications": 14,
+    "requirements_count": 60,
+    "planned_verification_ids": 96,
+    "delivery_work_packages": 19,
+    "planned_market_ledgers": 192,
+    "internal_collaborating_agent_review": true,
+    "independent_review": false,
+    "implemented": false,
+    "model_tests_run": 0,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "source_value_analysis": false,
+    "protected_access": false,
+    "scientific_freeze": false,
+    "original_thresholds_unchanged": true,
+    "original_design_preserved": true,
+    "s9_preserved_unconsumed": true,
+    "remaining": [
+      "S10 source/calendar admission",
+      "Minimal kernel, bootstrap and guard implementation/runtime verification",
+      "Separately scoped pre-2010 precision",
+      "Full implementation, packaging and measured resources",
+      "Scientific freeze and separately scoped campaign",
+      "Admitted untouched confirmation",
+      "Independent reproduction and supported release"
+    ],
+    "next_action": "WP01/WP02: internal requirement sign-off and isolated package/configuration/metadata implementation. Verify the precision kernel and shared guards before any real preparation. No experiment is authorized by the planning manifest."
+  },
+  "s10_repair_20261015": {
+    "status": "GENERATED_ENGINEERING_VERIFIED_SCIENTIFIC_EXECUTION_BLOCKED",
+    "report": "research/frem_s10_repair_20261015/REPORT.md",
+    "checklist": "research/frem_s10_repair_20261015/FLAW_CHECKLIST.md",
+    "receipt": "research/frem_s10_repair_20261015/RECEIPT.json",
+    "decision": "research/decisions/frem_s10_repair_20261015.json",
+    "source": "successors/frem_s10",
+    "design_revision": 4,
+    "scientific_status": "NOT_EVALUATED",
+    "tests_passed": 274,
+    "generated_matrix_cells": 192,
+    "generated_blocks_per_fold": 2,
+    "actual_model_and_policy_market_execution": false,
+    "protected_access": false,
+    "new_scientific_freeze": false,
+    "full_research_complete": false,
+    "run_ready": false,
+    "positive_market_result_established": false,
+    "source_identity_snapshot": "research/frem_s10_repair_20261015/integrated_verified_snapshot.json",
+    "verification_catalog": {
+      "PENDING": 12,
+      "PARTIAL": 66,
+      "VERIFIED": 18
+    },
+    "remaining_internal_gates": [
+      "Operation-specific scientific receipt producers and fixed launcher/supervisor/freeze integration",
+      "Weekly mixture certificates/maturity/state archival and complete scientific saved-output audit",
+      "Full verification catalog closure and maximum-support/length time/RSS profiling",
+      "Evidence-bound full empirical paper, figures and local research release"
+    ],
+    "remaining_scientific_external_gates": [
+      "Real source/calendar/close-clock admission and rights",
+      "Fresh passing512MiB/pageout resource admission",
+      "Fixed distinct real pre2010 precision preparation",
+      "Exact prospective development freeze and one bounded campaign only if precision passes",
+      "Unused-data confirmation and independent empirical reproduction"
+    ],
+    "historical_identities_rechecked": 48,
+    "historical_mismatches": 0,
+    "latest_resource_receipt": "research/frem_s10_repair_20261015/host_admission_final.json",
+    "release_scope": "Local source package engineering verification only; no empirical release/submission"
+  }
+}

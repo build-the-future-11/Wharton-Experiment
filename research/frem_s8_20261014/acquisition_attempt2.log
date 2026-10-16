@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s8/prepare.py", line 230, in <module>
+    build(args.root)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s8/prepare.py", line 197, in build
+    old, old_exclusions = build_segment(Path("data/s6_real_etf_20261014"), fresh=False)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s8/prepare.py", line 129, in build_segment
+    raise ValueError("invalid or out-of-scope dividend")
+ValueError: invalid or out-of-scope dividend

@@ -1,0 +1,2 @@
+successors/frem_s10/src/frem_s10/runtime/declarations.py:349: error: Incompatible types in assignment (expression has type "tuple[str, str, str, str]", variable has type "tuple[str, str, str]")  [assignment]
+Found 1 error in 1 file (checked 2 source files)

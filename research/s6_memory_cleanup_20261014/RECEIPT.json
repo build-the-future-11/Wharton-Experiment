@@ -1,0 +1,38 @@
+{
+  "status": "BLOCKED_RESOURCE_ADMISSION_AWAITING_GAME_TAB_DECISION",
+  "process_rss_mib": {
+    "Codex_ChatGPT": 4289.90625,
+    "Chrome": 3984.53125,
+    "other": 5160.515625
+  },
+  "rss_note": "Resident sums may double count shared memory; compressed memory is separate accounting, not additive.",
+  "cleanup_completed": [
+    "Closed read-only caffeinate Google Search tab"
+  ],
+  "cleanup_pending": "User decision on closing American Football REAL game tab; potential unsaved progress",
+  "browser_discard_page": "Blocked by browser URL security policy; no bypass attempted",
+  "processes_killed": 0,
+  "guard_modified": false,
+  "admission": {
+    "checked_at": "2026-10-14T09:47:04.837397+00:00",
+    "samples": [
+      {
+        "available_mib": 95.015625,
+        "pageouts": 225930
+      },
+      {
+        "available_mib": 115.96875,
+        "pageouts": 225931
+      },
+      {
+        "available_mib": 108.03125,
+        "pageouts": 225931
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "market_fits": 0,
+  "protected_access": false,
+  "attempt": "outputs/frem_s6_real_20261014_local_attempt4"
+}

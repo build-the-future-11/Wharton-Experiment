@@ -1,0 +1,28 @@
+{
+  "files": {
+    "research/frem_s8_20261014/freeze2.json": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/data_identity.json": "deb38db6d51cdc47cd4a8c2fe4b4e14332d870549ebccaed3ff405f1dcac272d",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/completion.json": "f20059d2a5e4999ba7f1c11bc91d68cc8f6cf02e29dea9bbd397f13735d9ed5a",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/ensembles.json": "97ba1cf0bab4f005f30c98a5a2202e72b1ae1f099370d13b33df1779c79a5fcd",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/evaluation_predictions.json": "aea8e5489316f3f3dca02f36dbfd123c043495353489573543b1d096ef979fe5",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/mixture_state.json": "c38e82ff5807a1f635e6231c1eabcafa359891fafcf9cbbfc0579affc0592835",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/trace.json": "5e45c7751f66cb89fac3f4e4940edc64db1d6532b13d61cd7a038584cf8c8850",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/fit_checkpoint.json": "9ddc178a59aacbdee1dc67a79da8b12406f76f7438cd509a7775bc02528b2986",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/evaluation_predictions.json": "907ae2ba6c2e989c55ce119f0ee039e79d828cccd1cab0c2e5648a5751dd9ba7",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/mixture_state.json": "657103513f1718593fa597a4c2707d5757369cb9872156db22f818b8efa5ce5d",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/trace.json": "4b752d978e2539a62d8bba7db5b8c25a0137ae46155981279cd4a3b0971b8f01",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/fit_checkpoint.json": "73820c53e07ed00e308204e354135854599ab2c910e352bf0efe107841fa5cdd",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/evaluation_predictions.json": "e9966c12b6e43418183921fd91b328feb2a20c0f2c03027be765cbcb02149406",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/mixture_state.json": "590762c249a7a6b0d579e242131d1044932d4611be883ffc0f83bf06921bf693",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/trace.json": "e0f937b9057060952e088fb6db45804ff0c056708db8ce1fdbb914d39197523b",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/fit_checkpoint.json": "7840f9b56d3c5a71052853296f17acad9cd1ab492bf949614538f76a528da131",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/economics.json": "32a82a54c3b1da4f8a86235a37474425c98e3eb20617c86230ddd938f4e2676c",
+    "outputs/frem_s8_2020_2022_20261014_attempt1/benchmarks.json": "2e46aa94e0c9839dbfed601e0dd9511990c7fe9faf42dc7fde591b9ed4dd08d7",
+    "data/s8_etf_2020_2022_20261014_attempt2/SPY.json": "91370489342339ad55afebb5cbaf7a8703b20fb69b734dc46a682c3549c94a88",
+    "data/s8_etf_2020_2022_20261014_attempt2/TLT.json": "15f0f8f0131e05e464c019eef1b21a5029b2b6bbde68e9f016315ba0023849f3",
+    "data/s8_etf_2020_2022_20261014_attempt2/GLD.json": "14a1cff8b7c8d50bd9732e10a7090612f9e7fea218ba7f7296ca3e109a4b5f35"
+  },
+  "frozen_sources_verified": 35,
+  "saved_data_files_verified": 9,
+  "diagnostic_source_sha256": "cf46d8bd394a7829387f3693963aa805ff36206cea6f1d605140c4faa8adf6a1"
+}

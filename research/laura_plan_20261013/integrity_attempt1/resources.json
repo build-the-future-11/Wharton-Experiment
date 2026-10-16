@@ -1,0 +1,7 @@
+{
+  "peak_rss_mib": 25.078125,
+  "seconds": 0.031969042000127956,
+  "rss_limit_mib": 128,
+  "seconds_limit": 60,
+  "guard": "50ms sampled peak RSS and elapsed guard; 60s parent subprocess timeout"
+}

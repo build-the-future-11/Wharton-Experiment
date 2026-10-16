@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+______ test_current_target_has_no_issuance_input_and_feedback_is_delayed _______
+
+    def test_current_target_has_no_issuance_input_and_feedback_is_delayed() -> None:
+        first = first_transition()
+        issued = first.batch.get("contextual_stack")
+        target = record(70)
+>       with pytest.raises(ChronologyError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.ChronologyError'>
+
+tests/test_model_audit.py:92: Failed
+- generated xml file: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/semantic_mutants_attempt2/maturity_equality/result.xml -
+=========================== short test summary info ============================
+FAILED tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed
+1 failed in 4.99s

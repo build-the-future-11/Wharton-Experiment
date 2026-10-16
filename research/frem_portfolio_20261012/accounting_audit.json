@@ -1,0 +1,11 @@
+{
+  "status": "PASS_INDEPENDENT_ACCOUNTING_RECONSTRUCTION",
+  "ledgers": 2276,
+  "periods": 34276,
+  "comparisons": 1424,
+  "max_absolute_arithmetic_residual": 4.0745362639427185e-10,
+  "new_fits": 0,
+  "independent_training_reproduction": false,
+  "source_files": 6,
+  "prediction_files": 90
+}

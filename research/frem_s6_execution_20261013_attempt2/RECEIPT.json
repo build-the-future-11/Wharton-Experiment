@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-10-13T16:53:52.593571+00:00",
+  "status": "BLOCKED_BEFORE_SCIENTIFIC_IMPORT",
+  "user_request": "Run experiments now and improve S6",
+  "execution_command": "rtk proxy .venv/bin/python -m successors.frem_s6.run --output outputs/frem_s6_20261013_attempt2 --integrity research/frem_s6_20261013/integrity_attempt4 --execute",
+  "admission_receipt": "outputs/frem_s6_20261013_attempt2/admission.json",
+  "admission": {
+    "checked_at": "2026-10-13T16:52:18.761435+00:00",
+    "samples": [
+      {
+        "available_mib": 157.328125,
+        "pageouts": 17382
+      },
+      {
+        "available_mib": 133.546875,
+        "pageouts": 17382
+      },
+      {
+        "available_mib": 87.625,
+        "pageouts": 17448
+      }
+    ],
+    "reasons": [
+      "RESOURCE_ADMISSION_FAILED: 512MiB floor or pageouts",
+      "MISSING_ADMITTED_WINDOW_DATA_AND_MANIFEST",
+      "MISSING_FROZEN_DEVELOPMENT_PROTOCOL"
+    ],
+    "status": "BLOCKED_BEFORE_SCIENTIFIC_IMPORT",
+    "market_fits_started": 0,
+    "protected_access": false
+  },
+  "new_model_fits": 0,
+  "new_market_backtests": 0,
+  "new_tests": 0,
+  "protected_access": false,
+  "s6_prior_delivery_files_verified": 43,
+  "source_changes": [],
+  "data_readiness_audit": "research/frem_s6_execution_20261013_attempt2/data_readiness_audit.json",
+  "perfect_or_improved_performance_established": false,
+  "resumption_requirements": [
+    "Stable admission: at least512MiB free-plus-speculative memory and no increasing pageouts",
+    "Admitted S6 window dataset with honest provenance and intact source identity",
+    "Fixed development protocol with unspent dates and precision analysis"
+  ],
+  "actions_not_taken": [
+    "Did not lower resource or scientific thresholds",
+    "Did not kill unrelated applications or jobs",
+    "Did not relabel synthetic or retrospective data as admitted",
+    "Did not rerun completed negative studies or open protected outcomes"
+  ]
+}

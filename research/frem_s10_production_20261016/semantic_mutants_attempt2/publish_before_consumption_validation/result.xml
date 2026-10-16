@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="2.113" timestamp="2026-10-16T08:26:56.751768+05:30" hostname="Ryans-Macbook-Air.local"><testcase classname="tests.test_production_runtime" name="test_worker_refuses_consumed_identity_from_another_output_before_import_or_values" time="0.033"><failure message="AssertionError: assert not (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),)&#10; +  where (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),) = tuple(&lt;generator object Path.iterdir at 0x10b335a40&gt;)&#10; +    where &lt;generator object Path.iterdir at 0x10b335a40&gt; = iterdir()&#10; +      where iterdir = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt').iterdir">tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0')
+
+    def test_worker_refuses_consumed_identity_from_another_output_before_import_or_values(tmp_path: Path) -&gt; None:
+        fixture = Fixture(tmp_path)
+        reference = fixture.operation("prepare-precision")
+        output = tmp_path / "attempt"
+        output.mkdir()
+        consume(
+            fixture.markers,
+            operation="precision",
+            freeze_id=str(reference["sha256"]),
+            attempt_id="attempt",
+            output_path=str(tmp_path / "different-output"),
+        )
+        with pytest.raises(ExecutionStateError, match="output identity"):
+            execute_worker(
+                declaration_path=tmp_path / str(reference["path"]),
+                declaration_sha256=str(reference["sha256"]),
+                artifact_root=tmp_path,
+                source_root=fixture.source,
+                consumption_root=fixture.markers,
+                attempt_id="attempt",
+                output=output,
+            )
+&gt;       assert not tuple(output.iterdir())
+E       AssertionError: assert not (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),)
+E        +  where (PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt/premature-output.json'),) = tuple(&lt;generator object Path.iterdir at 0x10b335a40&gt;)
+E        +    where &lt;generator object Path.iterdir at 0x10b335a40&gt; = iterdir()
+E        +      where iterdir = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-80/test_worker_refuses_consumed_i0/attempt').iterdir
+
+tests/test_production_runtime.py:130: AssertionError</failure></testcase></testsuite></testsuites>

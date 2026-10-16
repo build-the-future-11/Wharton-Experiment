@@ -1,0 +1,9 @@
+{
+  "observation": "Explicit execution request; actual S6 launcher rejected attempt2 before scientific imports. Memory157.33/133.55/87.63MiB; pageouts increased66. No admitted S6 data or frozen development protocol.",
+  "change": "Preserve new failed admission and manifest-only readiness audit; retain existing source and negative evidence unchanged.",
+  "status": "BLOCKED_BEFORE_SCIENTIFIC_IMPORT",
+  "result_receipt": "research/frem_s6_execution_20261013_attempt2/RECEIPT.json",
+  "new_market_fits": 0,
+  "protected_access": false,
+  "resumption": "Stable resource admission, verified data provenance and date-bound frozen development protocol required; no guard bypass or placeholder freeze."
+}

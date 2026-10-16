@@ -1,0 +1,14 @@
+{
+  "status": "PARTIAL",
+  "completed": 4,
+  "planned": 12,
+  "state_ids": {
+    "primary": "2c03c3b995973c2602407d6114484d70c1214bb17fcf9bb7dc197038d0803b0c"
+  },
+  "mean_contextual_energy_score": {
+    "primary": 1.185553025716359
+  },
+  "evidence_scope": "GENERATED_ENGINEERING",
+  "scientific_status": "NOT_EVALUATED",
+  "score_reconstruction": "exact binary64 equality in the bound environment"
+}

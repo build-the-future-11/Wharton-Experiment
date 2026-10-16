@@ -1,0 +1,72 @@
+{
+  "completed_at": "2026-10-14T15:01:37.169587+00:00",
+  "status": "COMPLETE_BOUNDED_DEVELOPMENT_INCONCLUSIVE_PREDICTION_ECONOMIC_GATE_FAILED",
+  "report": "research/frem_s8_20261014/FINAL_REPORT.md",
+  "specification": "research/frem_s8_20261014/SPECIFICATION.md",
+  "freeze": "research/frem_s8_20261014/freeze2.json",
+  "original_freeze": "research/frem_s8_20261014/freeze.json",
+  "output": "outputs/frem_s8_2020_2022_20261014_attempt1",
+  "data": "data/s8_etf_2020_2022_20261014_attempt2",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "base_fits": 3,
+  "evaluation_dates": 153,
+  "forecast_variants": 15,
+  "ledgers": 252,
+  "s8_tests_passed": 18,
+  "unchanged_s6_s7_tests_passed": 125,
+  "test_scope": "142 combined tests before intake repair; 18 S8 tests after intake-only repair; unchanged 125 S6/S7 tests not needlessly repeated.",
+  "prediction_gain_nats": {
+    "equal": 0.0013674996853025958,
+    "memory": 0.0006837879605827366
+  },
+  "predictive_practical_support": false,
+  "economic_point_win_all_primary_controls": false,
+  "terminal_wealth_10bps_same_h4_policy": {
+    "s8": 98745.27368214123,
+    "equal": 96211.61809532129,
+    "memory": 97133.99714250263
+  },
+  "benchmark_wealth_10bps": {
+    "cash": 100000.0,
+    "buy_hold": 104114.71048866097,
+    "equal_weight": 104927.24674610677
+  },
+  "audit": {
+    "status": "PASS",
+    "frozen_files": 35,
+    "predecessor_files_unchanged": 319,
+    "raw_labels_reconciled": 2640,
+    "max_return_error": 2.7755575615628914e-17,
+    "max_feature_error": 0.0,
+    "nll_values_recomputed": 34560,
+    "max_nll_error": 4.440892098500626e-15,
+    "soft_gate_decisions_reconstructed": 1230,
+    "ledgers_verified": 252,
+    "max_accounting_residual": 4.3655745685100555e-11,
+    "2019_inputs_used": false,
+    "protected_access": false,
+    "scope": "Separate saved-output arithmetic and chronology audit; same host, no independent retraining."
+  },
+  "resources": {
+    "seconds": 14.186845417003497,
+    "peak_rss_raw": 285851648
+  },
+  "global_freshness_certified": false,
+  "freshness_audit": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+  "2019_tuned": false,
+  "2019_successor_inputs": false,
+  "protected_outcomes_accessed": false,
+  "failed_attempts_preserved": [
+    "tests_attempt1.log",
+    "tests_attempt2.log",
+    "lint_attempt1.log",
+    "acquisition_attempt1.log",
+    "acquisition_attempt2.log",
+    "analysis_attempt1.log"
+  ],
+  "no_outcome_driven_refits": true
+}

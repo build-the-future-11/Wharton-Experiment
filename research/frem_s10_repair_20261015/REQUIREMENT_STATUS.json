@@ -1,0 +1,3442 @@
+{
+  "schema_version": 1,
+  "id": "FREM-S10-REPAIR-REQUIREMENTS-20261015",
+  "date": "2026-10-15",
+  "status": "GENERATED_INTEGRATION_EVIDENCE_FULL_ACCEPTANCE_PENDING",
+  "requirement_count": 60,
+  "planned_verification_ids": 96,
+  "test_catalog": "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md",
+  "evidence_rule": "TEST IDs identify planned verification obligations, not authored test functions or observed passes. External empirical admission, confirmation and reproduction also require their own real receipts.",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "category": "contracts",
+      "requirement": "Typed units, axes and finite domains",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/metadata.py",
+        "successors/frem_s10/src/frem_s10/arrays.py",
+        "successors/frem_s10/src/frem_s10/domain.py"
+      ],
+      "work_packages": [
+        "WP02"
+      ],
+      "design_sources": [
+        "ARCHITECTURE_AND_INTERFACES.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-001",
+        "TEST-002",
+        "TEST-003"
+      ],
+      "acceptance": "Wrong units, rank, order, dtype and nonfinite/domain-invalid values fail before calculation.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/metadata.py": true,
+        "successors/frem_s10/src/frem_s10/arrays.py": true,
+        "successors/frem_s10/src/frem_s10/domain.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-002",
+      "category": "contracts",
+      "requirement": "Strict versioned configuration",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/configuration.py"
+      ],
+      "work_packages": [
+        "WP02"
+      ],
+      "design_sources": [
+        "ARCHITECTURE_AND_INTERFACES.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-004"
+      ],
+      "acceptance": "Duplicate keys, unknown fields, implicit units and malformed schemas fail; scientific defaults are explicit.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/configuration.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-003",
+      "category": "contracts",
+      "requirement": "Immutable owned scientific state",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/arrays.py",
+        "successors/frem_s10/src/frem_s10/domain.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP05"
+      ],
+      "design_sources": [
+        "ARCHITECTURE_AND_INTERFACES.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-005"
+      ],
+      "acceptance": "Input mutation and returned views cannot change saved scientific state or its identity.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/arrays.py": true,
+        "successors/frem_s10/src/frem_s10/domain.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-004",
+      "category": "data",
+      "requirement": "Allowlisted source identity and admission",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/source_reader.py",
+        "successors/frem_s10/src/frem_s10/data/admission.py"
+      ],
+      "work_packages": [
+        "WP03"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-006",
+        "TEST-008"
+      ],
+      "acceptance": "Only declared source paths and verified conventions are admitted; escaping symlinks and undeclared reads fail.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/source_reader.py": true,
+        "successors/frem_s10/src/frem_s10/data/admission.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-005",
+      "category": "data",
+      "requirement": "Complete calendars and required marks",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/calendar.py",
+        "successors/frem_s10/src/frem_s10/data/admission.py"
+      ],
+      "work_packages": [
+        "WP03"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-007",
+        "TEST-013"
+      ],
+      "acceptance": "Missing observations cannot be hidden by intersection, row deletion or filling; exact fold indices are retained.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/calendar.py": true,
+        "successors/frem_s10/src/frem_s10/data/admission.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-006",
+      "category": "data",
+      "requirement": "Causal fixed burn-in transforms",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/features.py"
+      ],
+      "work_packages": [
+        "WP03"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-009",
+        "TEST-010"
+      ],
+      "acceptance": "64 valid mature records, population scales and fixed floors are enforced without future-dependent refits.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/features.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-007",
+      "category": "chronology",
+      "requirement": "Quote, decision, fill and availability order",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/calendar.py",
+        "successors/frem_s10/src/frem_s10/portfolio/execution.py",
+        "successors/frem_s10/src/frem_s10/model/transition.py"
+      ],
+      "work_packages": [
+        "WP03",
+        "WP05",
+        "WP08"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-011",
+        "TEST-012",
+        "TEST-016"
+      ],
+      "acceptance": "Ideal quote ordering and strict earlier-label information follow CL-01; current execution quotes do not become forecast features.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/calendar.py": true,
+        "successors/frem_s10/src/frem_s10/portfolio/execution.py": false,
+        "successors/frem_s10/src/frem_s10/model/transition.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-008",
+      "category": "chronology",
+      "requirement": "Direct joint targets and dividend entitlement",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/targets.py",
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py"
+      ],
+      "work_packages": [
+        "WP03",
+        "WP08"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-014",
+        "TEST-015"
+      ],
+      "acceptance": "Origin-exclusive endpoint-inclusive ex-date cash and entering-share ownership reconcile without reinvestment.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/targets.py": true,
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-009",
+      "category": "chronology",
+      "requirement": "Future-prefix invariance",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/transition.py",
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py"
+      ],
+      "work_packages": [
+        "WP05",
+        "WP08"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-017"
+      ],
+      "acceptance": "Changing unavailable future values leaves every earlier forecast, action and canonical state unchanged.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/transition.py": false,
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-010",
+      "category": "chronology",
+      "requirement": "Single application and bounded delayed state",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/library.py",
+        "successors/frem_s10/src/frem_s10/model/feedback.py",
+        "successors/frem_s10/src/frem_s10/model/transition.py"
+      ],
+      "work_packages": [
+        "WP05"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-018",
+        "TEST-020"
+      ],
+      "acceptance": "Duplicate event IDs and cursor regressions reject; 520/104 membership bounds and exact eviction order hold.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/library.py": true,
+        "successors/frem_s10/src/frem_s10/model/feedback.py": true,
+        "successors/frem_s10/src/frem_s10/model/transition.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-011",
+      "category": "chronology",
+      "requirement": "Score the originally issued law",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/issuance.py",
+        "successors/frem_s10/src/frem_s10/model/feedback.py"
+      ],
+      "work_packages": [
+        "WP05"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-019"
+      ],
+      "acceptance": "Saved issued atoms and probabilities determine delayed scores; current libraries cannot replace them.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/issuance.py": false,
+        "successors/frem_s10/src/frem_s10/model/feedback.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-012",
+      "category": "chronology",
+      "requirement": "Fold continuity and engineering replay",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/transition.py",
+        "successors/frem_s10/src/frem_s10/checkpoint.py"
+      ],
+      "work_packages": [
+        "WP05",
+        "WP11"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-021",
+        "TEST-022"
+      ],
+      "acceptance": "Forecast feedback is causal across folds, ledgers reset correctly, and restored engineering replay continues after its cursor.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/transition.py": false,
+        "successors/frem_s10/src/frem_s10/checkpoint.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-013",
+      "category": "forecast",
+      "requirement": "U/R/C laws and contextual extrapolation",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/experts.py",
+        "successors/frem_s10/src/frem_s10/math/distances.py"
+      ],
+      "work_packages": [
+        "WP05"
+      ],
+      "design_sources": [
+        "../MODEL_SPECIFICATION.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-023",
+        "TEST-024"
+      ],
+      "acceptance": "Weights, 32-neighbor boundaries, squared distances, quantiles and sparse/OOD fallbacks match references.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/experts.py": true,
+        "successors/frem_s10/src/frem_s10/math/distances.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-014",
+      "category": "forecast",
+      "requirement": "Joint predictive law and moments",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/experts.py",
+        "successors/frem_s10/src/frem_s10/math/scores.py"
+      ],
+      "work_packages": [
+        "WP04",
+        "WP05"
+      ],
+      "design_sources": [
+        "../MODEL_SPECIFICATION.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-025",
+        "TEST-030"
+      ],
+      "acceptance": "Law-preserving atom changes preserve outputs; dependence remains joint and covariance/moments satisfy identities.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/experts.py": true,
+        "successors/frem_s10/src/frem_s10/math/scores.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-015",
+      "category": "forecast",
+      "requirement": "Exact finite-law energy score",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/scores.py",
+        "successors/frem_s10/src/frem_s10/math/distances.py"
+      ],
+      "work_packages": [
+        "WP04"
+      ],
+      "design_sources": [
+        "../MODEL_SPECIFICATION.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-026",
+        "TEST-027",
+        "TEST-028",
+        "TEST-029",
+        "TEST-032"
+      ],
+      "acceptance": "Direct and A/B calculations agree including cross terms, geometric invariances and near-equal-vector cases.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/scores.py": true,
+        "successors/frem_s10/src/frem_s10/math/distances.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-016",
+      "category": "forecast",
+      "requirement": "Diagnostic scores, intervals and calibration",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/scores.py",
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py"
+      ],
+      "work_packages": [
+        "WP04",
+        "WP10"
+      ],
+      "design_sources": [
+        "../MODEL_SPECIFICATION.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-031"
+      ],
+      "acceptance": "CRPS, variogram, quantiles, Brier and units follow explicit hand cases and CL-12 without outcome-chosen bins.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/scores.py": true,
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-017",
+      "category": "mixture",
+      "requirement": "Certified constrained mixture optimum",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/simplex.py"
+      ],
+      "work_packages": [
+        "WP04",
+        "WP05"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-033",
+        "TEST-034",
+        "TEST-035",
+        "TEST-036",
+        "TEST-037"
+      ],
+      "acceptance": "All seven active faces, scaling, condition limit, feasibility, curvature and KKT requirements hold; invalid solves fail.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/simplex.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-018",
+      "category": "mixture",
+      "requirement": "Delayed local fit and global shrinkage",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/stacking.py"
+      ],
+      "work_packages": [
+        "WP05"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-038",
+        "TEST-039"
+      ],
+      "acceptance": "Counts, concentration, recency, blend and fallback rules are exact; neighbor selection cannot use labels.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/stacking.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-019",
+      "category": "mixture",
+      "requirement": "Matched mixing controls",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/model/stacking.py",
+        "successors/frem_s10/src/frem_s10/model/issuance.py"
+      ],
+      "work_packages": [
+        "WP05",
+        "WP09"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-040"
+      ],
+      "acceptance": "Equal/global/contextual/individual-score arms receive identical eligible information with no hidden search.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/model/stacking.py": true,
+        "successors/frem_s10/src/frem_s10/model/issuance.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-020",
+      "category": "policy",
+      "requirement": "Exact self-financing fee root",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/fees.py"
+      ],
+      "work_packages": [
+        "WP04",
+        "WP07"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-041",
+        "TEST-042",
+        "TEST-043"
+      ],
+      "acceptance": "Monotone bracket, money conservation and residuals match independent references; exhaustion is failure.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/fees.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-021",
+      "category": "policy",
+      "requirement": "Complete feasible action comparison",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/portfolio/actions.py",
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py"
+      ],
+      "work_packages": [
+        "WP07"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-044",
+        "TEST-045",
+        "TEST-046"
+      ],
+      "acceptance": "609 grid points and optional hold, 45 fixed-sum points, cap drift and whole-set tie rules are certified.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/portfolio/actions.py": true,
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-022",
+      "category": "policy",
+      "requirement": "Cash and adverse paths remain legitimate",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py"
+      ],
+      "work_packages": [
+        "WP07"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-047"
+      ],
+      "acceptance": "Cash may win valid adverse scenarios; an exception cannot be converted into a cash success.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-023",
+      "category": "policy",
+      "requirement": "Stable nominal and robust utility",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/utility.py",
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py"
+      ],
+      "work_packages": [
+        "WP04",
+        "WP07"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-048",
+        "TEST-049"
+      ],
+      "acceptance": "CRRA agrees with high precision and robust minimum covers every declared atom including zero nominal mass.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/utility.py": true,
+        "successors/frem_s10/src/frem_s10/portfolio/policy.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-024",
+      "category": "accounting",
+      "requirement": "Exact carried holdings and liquidation accounting",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py",
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py"
+      ],
+      "work_packages": [
+        "WP08",
+        "WP10"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-050",
+        "TEST-051",
+        "TEST-052",
+        "TEST-053"
+      ],
+      "acceptance": "Dividends, cash, fees, scaling, NAV/log increments and drawdown anchors reconcile; hypothetical fees are never repeatedly debited.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/portfolio/ledger.py": true,
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-025",
+      "category": "controls",
+      "requirement": "Six independently specified benchmarks",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/portfolio/benchmarks.py"
+      ],
+      "work_packages": [
+        "WP07",
+        "WP08"
+      ],
+      "design_sources": [
+        "../EXPERIMENT_PROTOCOL.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-054",
+        "TEST-055",
+        "TEST-056"
+      ],
+      "acceptance": "100-percent controls remain distinct from capped strategies; inverse-vol projection and minimum variance have certificates.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/portfolio/benchmarks.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-026",
+      "category": "controls",
+      "requirement": "Complete immutable experiment matrix",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/experiment/matrix.py"
+      ],
+      "work_packages": [
+        "WP09"
+      ],
+      "design_sources": [
+        "../EXPERIMENT_PROTOCOL.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-057",
+        "TEST-058"
+      ],
+      "acceptance": "All 192 declared identities are unique and required; missing or partial cells prevent completion.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/experiment/matrix.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-027",
+      "category": "controls",
+      "requirement": "Eight isolated ablation meanings",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/experiment/ablations.py"
+      ],
+      "work_packages": [
+        "WP09"
+      ],
+      "design_sources": [
+        "../EXPERIMENT_PROTOCOL.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-059",
+        "TEST-060",
+        "TEST-061"
+      ],
+      "acceptance": "Only the declared mechanism changes, including frozen issued law and propagated neighbor sensitivities.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/experiment/ablations.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-028",
+      "category": "inference",
+      "requirement": "Paired shared bootstrap identity",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP10"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-062",
+        "TEST-063",
+        "TEST-064",
+        "TEST-066"
+      ],
+      "acceptance": "Every method shares exact retained indices; four streams, 5000 draws, two blocks, original date pooling and quantiles are deterministic.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-029",
+      "category": "inference",
+      "requirement": "Defined primary score and wealth endpoints",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py",
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP10"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-065",
+        "TEST-069"
+      ],
+      "acceptance": "Ratio of sampled means uses the fixed denominator boundary; saved log increments are not labeled realizable resampled trades.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/analysis/metrics.py": false,
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-030",
+      "category": "inference",
+      "requirement": "Secondary centered inference and multiplicity",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py",
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py"
+      ],
+      "work_packages": [
+        "WP10"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-067",
+        "TEST-068"
+      ],
+      "acceptance": "Centered plus-one p-values and all 16 Holm entries are retained including policy-only p=1.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py": true,
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-031",
+      "category": "inference",
+      "requirement": "Candidate-specific precision gate",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py",
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py",
+        "successors/frem_s10/src/frem_s10/runtime/runner.py",
+        "successors/frem_s10/src/frem_s10/runtime/storage.py",
+        "successors/frem_s10/src/frem_s10/runtime/admission.py"
+      ],
+      "work_packages": [
+        "WP06"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-070",
+        "TEST-066",
+        "TEST-072",
+        "TEST-074",
+        "TEST-075",
+        "TEST-076",
+        "TEST-077",
+        "TEST-078",
+        "TEST-079",
+        "TEST-080",
+        "TEST-082"
+      ],
+      "acceptance": "Tested pre-2010 kernel, cold starts, four comparisons and fixed projected-uncertainty formula yield explicit adequacy or unidentifiability. Pilot streams are SeedSequence1902 children PILOT2/PILOT4; projection N=N_A+N_B. Shared production guards are tested first; precision does not require its own prior result.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/analysis/bootstrap.py": true,
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/storage.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-032",
+      "category": "claims",
+      "requirement": "Exact terminal evidence disposition",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py",
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP10",
+        "WP17"
+      ],
+      "design_sources": [
+        "../EXPERIMENT_PROTOCOL.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-071",
+        "TEST-095"
+      ],
+      "acceptance": "H1/H2/H3, incomplete runs and scientific claim limits follow the decision table; no unsupported original NLL or confirmation claim.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/analysis/decisions.py": false,
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-033",
+      "category": "artifacts",
+      "requirement": "Canonical explicit serialization and identity",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/identities.py",
+        "successors/frem_s10/src/frem_s10/checkpoint.py",
+        "successors/frem_s10/src/frem_s10/runtime/storage.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP06",
+        "WP11"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-072",
+        "TEST-073"
+      ],
+      "acceptance": "Typed schema and finite binary64 identities are stable; corruption, unknown schema and object/pickle payloads reject.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/identities.py": true,
+        "successors/frem_s10/src/frem_s10/checkpoint.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/storage.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-034",
+      "category": "artifacts",
+      "requirement": "Atomic durable writes under IO failure",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/storage.py",
+        "successors/frem_s10/src/frem_s10/runtime/events.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP11"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-074",
+        "TEST-079"
+      ],
+      "acceptance": "Old artifacts survive partial publish, disk and permissions failures; no absent receipt is claimed present.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/storage.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/events.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-035",
+      "category": "operations",
+      "requirement": "Exclusive one-use scientific lifecycle",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/runner.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP12"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-075",
+        "TEST-076",
+        "TEST-078"
+      ],
+      "acceptance": "Only one start can consume a freeze, preflight remains unconsumed, and no market resume or marker deletion is supported.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-036",
+      "category": "operations",
+      "requirement": "Owned cancellation and failure handling",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/runner.py",
+        "successors/frem_s10/src/frem_s10/runtime/admission.py",
+        "successors/frem_s10/src/frem_s10/runtime/events.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP12"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-077",
+        "TEST-080",
+        "TEST-082"
+      ],
+      "acceptance": "Signals, unavailable observers, monotonic budgets and exceptions lead to visible terminal state without unrelated process actions.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/events.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-037",
+      "category": "reporting",
+      "requirement": "Regenerate reports solely from saved evidence",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/reporting/tables.py",
+        "successors/frem_s10/src/frem_s10/reporting/render.py",
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP17"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-081"
+      ],
+      "acceptance": "Every value traces to verified artifacts; report generation cannot fit/replay the model or conceal missing data.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/reporting/tables.py": false,
+        "successors/frem_s10/src/frem_s10/reporting/render.py": false,
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-038",
+      "category": "integration",
+      "requirement": "Complete generated engineering campaign",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/experiment/engine.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP09",
+        "WP13"
+      ],
+      "design_sources": [
+        "ARCHITECTURE_AND_INTERFACES.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-083"
+      ],
+      "acceptance": "All tiny 192 cells complete only in valid fixture; late defects preserve earlier evidence and incomplete status.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/experiment/engine.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-039",
+      "category": "quality",
+      "requirement": "Isolated acyclic package and inert imports",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/__init__.py",
+        "successors/frem_s10/src/frem_s10/cli.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP06",
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-084"
+      ],
+      "acceptance": "No predecessor/heavy runtime imports, cycles, import-time IO, network or process creation.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/__init__.py": true,
+        "successors/frem_s10/src/frem_s10/cli.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-040",
+      "category": "quality",
+      "requirement": "Complete strict type, lint and format scope",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/configuration.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-085"
+      ],
+      "acceptance": "Explicit S10 scope passes without unjustified exclusions, Any escapes, suppressions or marker typos.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/configuration.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-041",
+      "category": "packaging",
+      "requirement": "Real built-wheel install boundary",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/cli.py",
+        "successors/frem_s10/src/frem_s10/__init__.py"
+      ],
+      "work_packages": [
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-086"
+      ],
+      "acceptance": "Inspected wheel/sdist install and smoke outside checkout with no unintended datasets, secrets or predecessor source.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/cli.py": true,
+        "successors/frem_s10/src/frem_s10/__init__.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-042",
+      "category": "packaging",
+      "requirement": "Locked runtime and verification environment",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/configuration.py",
+        "successors/frem_s10/src/frem_s10/runtime/admission.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP06",
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-087"
+      ],
+      "acceptance": "Metadata, lock, installed distributions and recorded versions agree; no implicit resolution or upgrade.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/configuration.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-043",
+      "category": "reproducibility",
+      "requirement": "Determinism and bounded portability claims",
+      "owner_role": "numerical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/identities.py",
+        "successors/frem_s10/src/frem_s10/math/probabilities.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-088",
+        "TEST-089"
+      ],
+      "acceptance": "Same locked canonical results reproduce; cross-platform tolerances and action drift are reported with actual platform evidence.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/identities.py": true,
+        "successors/frem_s10/src/frem_s10/math/probabilities.py": true
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-044",
+      "category": "performance",
+      "requirement": "Measured resource-bounded exact algorithms",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/admission.py",
+        "successors/frem_s10/src/frem_s10/experiment/engine.py",
+        "successors/frem_s10/src/frem_s10/runtime/cache.py"
+      ],
+      "work_packages": [
+        "WP14"
+      ],
+      "design_sources": [
+        "DELIVERY_PLAN.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-090",
+        "TEST-091"
+      ],
+      "acceptance": "Measured shape ladder fits declared limits; every optimization preserves certified objectives and actions against references.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false,
+        "successors/frem_s10/src/frem_s10/experiment/engine.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/cache.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-045",
+      "category": "preservation",
+      "requirement": "Immutable predecessor evidence",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/identities.py",
+        "successors/frem_s10/src/frem_s10/runtime/admission.py"
+      ],
+      "work_packages": [
+        "WP01",
+        "WP06",
+        "WP13",
+        "WP15"
+      ],
+      "design_sources": [
+        "DELIVERY_PLAN.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-092"
+      ],
+      "acceptance": "S6-S9 and original S10 bytes remain unchanged; mismatch cannot be fixed by replacing expected hashes.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/identities.py": true,
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-046",
+      "category": "quality",
+      "requirement": "CI cannot become a market run",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/cli.py",
+        "successors/frem_s10/src/frem_s10/runtime/admission.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-093"
+      ],
+      "acceptance": "Only generated fixtures collect under denied network and no market-data mounts; marker changes cannot enable science.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/cli.py": true,
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-047",
+      "category": "quality",
+      "requirement": "Requirements and exceptions govern readiness",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP01",
+        "WP06",
+        "WP13",
+        "WP15"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-094"
+      ],
+      "acceptance": "Missing/orphaned test evidence, unjustified skips and stale exceptions remain blocking with exact identities.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-048",
+      "category": "quality",
+      "requirement": "Critical mutation checks are discriminating",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/math/scores.py",
+        "successors/frem_s10/src/frem_s10/math/fees.py",
+        "successors/frem_s10/src/frem_s10/model/transition.py",
+        "successors/frem_s10/src/frem_s10/runtime/runner.py"
+      ],
+      "work_packages": [
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-096"
+      ],
+      "acceptance": "Selected non-equivalent chronology, accounting, mixture and consumption faults are detected or explicitly investigated.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/math/scores.py": true,
+        "successors/frem_s10/src/frem_s10/math/fees.py": true,
+        "successors/frem_s10/src/frem_s10/model/transition.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-049",
+      "category": "data",
+      "requirement": "Source observations retain truthful provenance",
+      "owner_role": "chronology",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/data/admission.py",
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP03",
+        "WP06",
+        "WP17"
+      ],
+      "design_sources": [
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-006",
+        "TEST-095"
+      ],
+      "acceptance": "Source timestamps and conventions support each claim; current-vintage history is never upgraded to untouched or point-in-time evidence by tests.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/data/admission.py": true,
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-050",
+      "category": "operations",
+      "requirement": "Structured errors and useful diagnostics",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/errors.py",
+        "successors/frem_s10/src/frem_s10/runtime/events.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP06",
+        "WP12"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-082"
+      ],
+      "acceptance": "Typed cause, IDs, limits and residuals explain failure without protected values or swallowed exceptions.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/errors.py": true,
+        "successors/frem_s10/src/frem_s10/runtime/events.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-051",
+      "category": "operations",
+      "requirement": "Aggregate process resource accounting",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/admission.py",
+        "successors/frem_s10/src/frem_s10/runtime/runner.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP12",
+        "WP14"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-080",
+        "TEST-090"
+      ],
+      "acceptance": "One worker/thread, aggregate owned RSS, fresh host floor and monotonic wall limits fail closed with retained observer evidence.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/admission.py": false,
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-052",
+      "category": "operations",
+      "requirement": "Disk and output safety",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/storage.py"
+      ],
+      "work_packages": [
+        "WP06",
+        "WP11",
+        "WP12"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-074",
+        "TEST-079"
+      ],
+      "acceptance": "Fresh output roots, available-space forecast and durable failure handling preserve existing data and directories.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/storage.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-053",
+      "category": "performance",
+      "requirement": "Verified cache cannot change science",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/cache.py"
+      ],
+      "work_packages": [
+        "WP11",
+        "WP14"
+      ],
+      "design_sources": [
+        "DELIVERY_PLAN.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-073",
+        "TEST-091"
+      ],
+      "acceptance": "Complete semantic identity keys bind inputs; missing optional cache recomputes, corrupt cache fails, warm/cold results agree.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/cache.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-054",
+      "category": "operations",
+      "requirement": "Non-executing CLI and explicit state transitions",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/cli.py",
+        "successors/frem_s10/src/frem_s10/runtime/runner.py"
+      ],
+      "work_packages": [
+        "WP02",
+        "WP06",
+        "WP12"
+      ],
+      "design_sources": [
+        "OPERATIONS_AND_ARTIFACTS.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-004",
+        "TEST-075",
+        "TEST-078"
+      ],
+      "acceptance": "Plan/admit/verify/precision/freeze/run/audit/report/package behavior and exit codes match operations; unsupported action fails.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/cli.py": true,
+        "successors/frem_s10/src/frem_s10/runtime/runner.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-055",
+      "category": "quality",
+      "requirement": "Maintainable reviewed implementation",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP13",
+        "WP15"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-085",
+        "TEST-094"
+      ],
+      "acceptance": "Complexity/size triggers, narrow owned waivers and branch gap reports supplement complete meaningful requirement evidence.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-056",
+      "category": "preservation",
+      "requirement": "Version scientific and numerical changes",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/configuration.py",
+        "successors/frem_s10/src/frem_s10/identities.py",
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP01",
+        "WP15",
+        "WP17"
+      ],
+      "design_sources": [
+        "DELIVERY_PLAN.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-092",
+        "TEST-094",
+        "TEST-095"
+      ],
+      "acceptance": "Meaningful changes are recorded, exact bytes frozen, and valid negative results do not authorize retuning or repeats.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/configuration.py": false,
+        "successors/frem_s10/src/frem_s10/identities.py": true,
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-057",
+      "category": "packaging",
+      "requirement": "Allowlisted local release artifacts",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/runtime/storage.py",
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP19"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-086",
+        "TEST-095"
+      ],
+      "acceptance": "Portable artifact inventory discloses rights/provenance and excludes unapproved data, secrets and unsupported public claims.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/runtime/storage.py": false,
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-058",
+      "category": "claims",
+      "requirement": "Independent evidence stays distinct",
+      "owner_role": "empirical",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP18",
+        "WP19"
+      ],
+      "design_sources": [
+        "../EXPERIMENT_PROTOCOL.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-071",
+        "TEST-095"
+      ],
+      "acceptance": "Internal agent review, engineering tests and external reproduction have distinct receipt kinds; external facts need actual external evidence.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-059",
+      "category": "quality",
+      "requirement": "Bounded property campaigns preserve failures",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/configuration.py"
+      ],
+      "work_packages": [
+        "WP13"
+      ],
+      "design_sources": [
+        "CODE_QUALITY_AND_CI.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-085",
+        "TEST-096"
+      ],
+      "acceptance": "Fixed profiles and example limits are enforced; minimized counterexamples survive repair and no test count is a scientific endpoint.",
+      "status": "PENDING_REQUIRED_EVIDENCE",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/configuration.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    },
+    {
+      "id": "REQ-060",
+      "category": "delivery",
+      "requirement": "Work packages have evidence-based completion",
+      "owner_role": "software",
+      "blocking_for_applicable_gate": true,
+      "planned_modules": [
+        "successors/frem_s10/src/frem_s10/reporting/claims.py"
+      ],
+      "work_packages": [
+        "WP01",
+        "WP06",
+        "WP15",
+        "WP17",
+        "WP18",
+        "WP19"
+      ],
+      "design_sources": [
+        "DELIVERY_PLAN.md",
+        "MODEL_CLARIFICATIONS.md"
+      ],
+      "verification_ids": [
+        "TEST-094",
+        "TEST-095"
+      ],
+      "acceptance": "Every package exit names actual evidence or a pending gate; no documentation-only completion of runtime or empirical obligations.",
+      "status": "PARTIAL_ENGINEERING_EVIDENCE_NOT_FULL_GATE_PASS",
+      "actual_evidence": [
+        "research/frem_s10_repair_20261015/RECEIPT.json",
+        "successors/frem_s10/tests",
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ],
+      "precision_prerequisite_scope": "Applicable production subset must be implemented and verified before real WP06 preparation; full campaign evidence remains required later.",
+      "planned_modules_present": {
+        "successors/frem_s10/src/frem_s10/reporting/claims.py": false
+      },
+      "caution": "Module presence and test count do not complete the original acceptance criterion; see report and known-flaw checklist."
+    }
+  ],
+  "verification_index": [
+    {
+      "id": "TEST-001",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-002",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_actions_audit.py::test_action_set_rejects_invalid_indices_and_cash",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid0]",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid1]",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock",
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-003",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[negative]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[duplicate]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[absent]",
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs0]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs1]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs2]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs3]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[nan]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[inf]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[-1]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[True]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-004",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{\"x\":1,\"x\":2}]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{\"x\":NaN}]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[[]]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{invalid]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":1,\"x\":2}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":NaN}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":Infinity}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[[] trailing]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-005",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_actions_audit.py::test_public_grid_and_targets_are_immutable",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_math_audit.py::test_utility_outputs_are_immutable",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-006",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-007",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-008",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_data_audit.py::test_source_reader_rejects_traversal_symlinks_and_overlarge_files"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-009",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_data_audit.py::test_burnin_population_scales_match_independent_closed_form"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-010",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-011",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_weekly_anchor_clock_handles_dst_holidays_and_iso_year_boundaries"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-012",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-013",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-014",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_data_audit.py::test_target_cash_sum_includes_nonanchor_daily_dividend"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-015",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-016",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-017",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-018",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_model_audit.py::test_duplicate_cursor_immature_and_omitted_outcomes_fail_without_mutation",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-019",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_issued_forecast_is_not_recomputed_after_library_changes"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-020",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-021",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-022",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-023",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-024",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-025",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-026",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-027",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-028",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-029",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-030",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-031",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_discrete_quantiles_and_fixed_calibration_edges",
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-032",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-033",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a0-expected0]",
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a1-expected1]",
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a2-expected2]",
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-034",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-035",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-036",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs0]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs1]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs2]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs3]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-037",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-038",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-039",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-040",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-041",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-042",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_math_audit.py::test_all_cash_rebalance_preserves_exact_known_root"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-043",
+      "tier": "Q1",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-044",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_actions_audit.py::test_feasible_hold_deduplicates_only_exact_grid_match",
+        "tests/test_ledger_audit.py::test_exact_hold_preserves_shares_and_cannot_hide_a_trade",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-045",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_actions_audit.py::test_action_counts_and_exact_grid_constraints"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-046",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-047",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-048",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid0]",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid1]",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-049",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-050",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-051",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-052",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-053",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-054",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-055",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-056",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+        "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+        "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-057",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_plan_enumerates_complete_unique_matrix_without_claiming_run",
+        "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-058",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-059",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-060",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-061",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-062",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction",
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices",
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-063",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-064",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-065",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted",
+        "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+        "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-066",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-067",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-068",
+      "tier": "Q1",
+      "status": "VERIFIED",
+      "actual_nodeids": [
+        "tests/test_statistics_audit.py::test_complete_holm_family_matches_hand_calculation",
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_ablations_audit.py::test_incomplete_family_wrong_pairing_and_policy_only_variation_fail"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-069",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-070",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_calendar_plan_has_fixed_four_anchor_progression_and_unused_tail",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted",
+        "tests/test_statistics_audit.py::test_perfectly_constant_apparent_gain_does_not_pass_precision",
+        "tests/test_statistics_audit.py::test_precision_requires_all_four_results_and_uses_prospective_counts",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-071",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-072",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-073",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_model_audit.py::test_changed_pending_metadata_invalidates_state_hash",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[transform-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[library-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[config-not-a-config]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[feedback-value3]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[pending-value4]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[cursor_us-not-an-integer]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[previous_state_id-5]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[consumed_event_ids-value7]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[request]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[expert_library]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[duplicate_set]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[unhashable_set]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_excessive_json_nesting_with_typed_error",
+        "tests/test_model_audit.py::test_state_constructor_rejects_direct_invalid_members",
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-074",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+        "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-075",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-076",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+        "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-077",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+        "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-078",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-079",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-080",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_memory_threshold_pageouts_and_required_counters",
+        "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+        "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+        "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+        "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-081",
+      "tier": "Q2",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-082",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[transform-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[library-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[config-not-a-config]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[feedback-value3]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[pending-value4]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[cursor_us-not-an-integer]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[previous_state_id-5]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[consumed_event_ids-value7]",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+        "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-083",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-084",
+      "tier": "Q0",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_metadata_import_does_not_import_numpy_or_predecessor"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-085",
+      "tier": "Q0",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-086",
+      "tier": "Q3",
+      "status": "VERIFIED",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-087",
+      "tier": "Q3",
+      "status": "PARTIAL",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-088",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision",
+        "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-089",
+      "tier": "Q3",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-090",
+      "tier": "Q4",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-091",
+      "tier": "Q4",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-092",
+      "tier": "Q1",
+      "status": "PARTIAL",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-093",
+      "tier": "Q2",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-094",
+      "tier": "Q0",
+      "status": "PARTIAL",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-095",
+      "tier": "Q2",
+      "status": "PARTIAL",
+      "actual_nodeids": [
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    },
+    {
+      "id": "TEST-096",
+      "tier": "Q4",
+      "status": "PENDING",
+      "actual_nodeids": [],
+      "actual_receipts": [
+        "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+      ]
+    }
+  ],
+  "verification_reconciliation": "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json"
+}

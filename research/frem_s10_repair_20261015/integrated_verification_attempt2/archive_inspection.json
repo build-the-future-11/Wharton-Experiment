@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "wheel_source_payloads": [
+    {
+      "path": "frem_s10/__init__.py",
+      "sha256": "f002e5829f7bdbe9cdfe88331b38ea785c881943941bce9f9135f4e9fea2b884"
+    },
+    {
+      "path": "frem_s10/__main__.py",
+      "sha256": "104db816d559ad4f1d44e66f14a373d9234a8dc548dd1d64272a503a55d88a9a"
+    },
+    {
+      "path": "frem_s10/arrays.py",
+      "sha256": "c620c978d194d84ec6b905cbdbb5aa9a7f96e645588839435c4d69ba74b436a8"
+    },
+    {
+      "path": "frem_s10/cli.py",
+      "sha256": "94a5c2504dace60826ce3e461a967970709bba7e1fb6f57f1744b0ab238840d5"
+    },
+    {
+      "path": "frem_s10/domain.py",
+      "sha256": "4d5f959e3b55ff2e434bd96cf7d03d3daba09e27746e372573abb1fa4cbe9f95"
+    },
+    {
+      "path": "frem_s10/errors.py",
+      "sha256": "8502d666313e5d66750df51d2ffac522789b47282f535aa76b4e836e9c213da9"
+    },
+    {
+      "path": "frem_s10/identities.py",
+      "sha256": "344ac771295650125971bc67e723f05dc258ce1c9e05e6f2701a2bd610c0c9d2"
+    },
+    {
+      "path": "frem_s10/metadata.py",
+      "sha256": "c6b5b52558db193627747a67bb660cf6fe85c1291ea75e8faae0bef8db3c9428"
+    },
+    {
+      "path": "frem_s10/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "frem_s10/science.json",
+      "sha256": "121b032d0a0e41eca2c9944d041533e798c947da7ab97722f0822dabd189c955"
+    },
+    {
+      "path": "frem_s10/analysis/__init__.py",
+      "sha256": "93cb402c2e7f1aac7c4057993b8610fe1ba1f3d591b854395ca4d767d47be0f3"
+    },
+    {
+      "path": "frem_s10/analysis/ablations.py",
+      "sha256": "df476162c25c420238009d9d21228388733703e12b1d33ca181b702a13c6f961"
+    },
+    {
+      "path": "frem_s10/analysis/bootstrap.py",
+      "sha256": "10c0a51afef5709011e556192375cd9aaa4ca0e20a450929bbd1c21142a77b81"
+    },
+    {
+      "path": "frem_s10/analysis/endpoints.py",
+      "sha256": "b42d2424589dd119adde07f9b7d9822b51fbc9c891cbe6ba8d08288a3800aedd"
+    },
+    {
+      "path": "frem_s10/analysis/report.py",
+      "sha256": "b5c38d9ba5994e3bd8a37ae2cec7b67312886476386b6cf6120ed859c5c05a9c"
+    },
+    {
+      "path": "frem_s10/data/__init__.py",
+      "sha256": "c58cbd49744977a6120b28ce56098ed0a8b5e16f1fb6f1340a9948fc956a90c1"
+    },
+    {
+      "path": "frem_s10/data/admission.py",
+      "sha256": "4521a8b522d21ca8b59cbed317b979c2c9bc06a42333ec79601e0d5b38fbd133"
+    },
+    {
+      "path": "frem_s10/data/calendar.py",
+      "sha256": "6c40596637f7d69ece166c2956d7643d1d64c74217c618896817ed8dae9d10fc"
+    },
+    {
+      "path": "frem_s10/data/features.py",
+      "sha256": "9edcd59cc7302fea286b790f366fc380d93fdbff6223f1cc303a66f1d2a48e13"
+    },
+    {
+      "path": "frem_s10/data/precision.py",
+      "sha256": "8305a526baab25b2410644c93ad95096e9bcc17128082b0ab97ff36a5e755eaf"
+    },
+    {
+      "path": "frem_s10/data/source_reader.py",
+      "sha256": "80d0ead6cfb070ac8078d31eeadfece6925de7667a38764f111315633b90ca60"
+    },
+    {
+      "path": "frem_s10/data/targets.py",
+      "sha256": "96584f8d0ddfad512fdccefc67cbd57843f53150a4e0107cef9690db7489c119"
+    },
+    {
+      "path": "frem_s10/experiment/__init__.py",
+      "sha256": "4678612109ea2819e2c87f591cec377fc024a3e9bbd33cdeb9e53f98539ad617"
+    },
+    {
+      "path": "frem_s10/experiment/analysis.py",
+      "sha256": "ee9e65edad0f42c87eadb8c217fad8546998cd076e92b15caf0a6b0b469d9faa"
+    },
+    {
+      "path": "frem_s10/experiment/artifacts.py",
+      "sha256": "2c29bab0a2e4b7bfa24872e2021c61207e3b13b0666095bed00a734edbf95052"
+    },
+    {
+      "path": "frem_s10/experiment/evidence.py",
+      "sha256": "d54e7bb5625b81856bb8b0c81ffe6930efcf23faf96cdf22f60dea65a6ec7ac2"
+    },
+    {
+      "path": "frem_s10/experiment/forecasts.py",
+      "sha256": "44896f61a34651f38a9473ef178b7750738e000c190b493156dd9a7903b888b7"
+    },
+    {
+      "path": "frem_s10/experiment/matrix.py",
+      "sha256": "e7d5d334a831564af897f5606a3dd6826ebea8ac3d6d3fdd39399b2cd5d03a61"
+    },
+    {
+      "path": "frem_s10/experiment/precision.py",
+      "sha256": "c2353e98f1c8148189c3c6f1af52ab9712fb29d71f576a64ab11ff4bceb33ee7"
+    },
+    {
+      "path": "frem_s10/experiment/readback.py",
+      "sha256": "d9e972f690874f9583e4f29f1ebca26b764eaea78ae5094f3d7b54ecaef14f40"
+    },
+    {
+      "path": "frem_s10/experiment/replay.py",
+      "sha256": "f896ed7639a5b264b3318dbadb87ed3a5172f03d113922e9e77ebfb07ab72de2"
+    },
+    {
+      "path": "frem_s10/math/distances.py",
+      "sha256": "ff533a62be774383d66b02610c5335ee127790cb5110b7b3016c239444bb02bd"
+    },
+    {
+      "path": "frem_s10/math/fees.py",
+      "sha256": "8e56ac3d1412c70d5c5b6b4deed1a4ede210dd0e31830c91f81b83544b7e5aca"
+    },
+    {
+      "path": "frem_s10/math/probabilities.py",
+      "sha256": "1ae3ca45c567a9daf80fcba6427c947ec8eef6bfd5723789ba650d25f572745b"
+    },
+    {
+      "path": "frem_s10/math/scores.py",
+      "sha256": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61"
+    },
+    {
+      "path": "frem_s10/math/simplex.py",
+      "sha256": "ebfbf5914fdad93684603c1fc6dd13587a2d5697f5fd1864de5ee5210af0f5cd"
+    },
+    {
+      "path": "frem_s10/math/utility.py",
+      "sha256": "02cd10108764d552bdbd1854d19032fd51b061a9c52d45161ceb2ef7fc33b533"
+    },
+    {
+      "path": "frem_s10/model/__init__.py",
+      "sha256": "91a07ab81c486b5ba2a94c0167d1c86a33878668fc52a9c609b46342d9ba1781"
+    },
+    {
+      "path": "frem_s10/model/checkpoint.py",
+      "sha256": "010451c2a22afdaf9635826c02094dff2d2148288077147221df2f898a72dae8"
+    },
+    {
+      "path": "frem_s10/model/config.py",
+      "sha256": "27de1628bc9881d6abb306e5a3e94a2b9b556c189317ff07e039f1409dc50e58"
+    },
+    {
+      "path": "frem_s10/model/engine.py",
+      "sha256": "99d2c9bcde1f6bd32f0b59da3888c41e9c62d349cbe9ce78e9f540b606f3c6dc"
+    },
+    {
+      "path": "frem_s10/model/experts.py",
+      "sha256": "ea2b7fc44df2476c5a0f505e9dcb2a6a935470472b4305b4a8887b5ef747ab0e"
+    },
+    {
+      "path": "frem_s10/model/feedback.py",
+      "sha256": "633dd1acfd2e64e3ae52649110ff614009fe19f230fc5abc4b0a64004c08bc2d"
+    },
+    {
+      "path": "frem_s10/model/library.py",
+      "sha256": "09e0902ea5742a2d43a0ee7e499468e676c22d5e446597dfc8d2a4a1dfc1ded4"
+    },
+    {
+      "path": "frem_s10/model/records.py",
+      "sha256": "9d7e53224b7ffc52c1b061203117d1161482b2b010c6a030b8e56556783d643d"
+    },
+    {
+      "path": "frem_s10/model/stacking.py",
+      "sha256": "4fe40ee49db40e6aebf6c90d88ecdc2a3c791d72c203f202456575dc8bc5e078"
+    },
+    {
+      "path": "frem_s10/portfolio/__init__.py",
+      "sha256": "c682e37319b66e2432c82aac57eeb4c3d2dd28952fc55519bcf13d46a0cdf1fd"
+    },
+    {
+      "path": "frem_s10/portfolio/actions.py",
+      "sha256": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655"
+    },
+    {
+      "path": "frem_s10/portfolio/benchmarks.py",
+      "sha256": "8f573d5d96488b26c258d3f0728aae1002b2defabfddd5c8141505b47463aae4"
+    },
+    {
+      "path": "frem_s10/portfolio/ledger.py",
+      "sha256": "65f74f601f9cee4d6c545d466331a7282d9d35d4ac625ad46c246d66dbd6d945"
+    },
+    {
+      "path": "frem_s10/portfolio/policy.py",
+      "sha256": "f33a903f3a5a045a48133cd26c3297064d442f2451d35362a5a5dbc4ecdfb8cc"
+    },
+    {
+      "path": "frem_s10/reporting/__init__.py",
+      "sha256": "2858e2f38d79c64f97a647fd1a618be066c92e6871d8db73542dcf0944285771"
+    },
+    {
+      "path": "frem_s10/runtime/__init__.py",
+      "sha256": "ea6dc3c4c2933606c9557252a50d02c819b7bf2c50595533b5177490f566627f"
+    },
+    {
+      "path": "frem_s10/runtime/artifacts.py",
+      "sha256": "39651f01ecb6b023c2483022ccc1c4394ddeb91ab1682cb8980dca5973cc5be6"
+    },
+    {
+      "path": "frem_s10/runtime/consumption.py",
+      "sha256": "fdf2c3c8a90bd44009ccc13928784b16546ad3d9e68a9b1a33bdd1f2b4c993cb"
+    },
+    {
+      "path": "frem_s10/runtime/declarations.py",
+      "sha256": "18e2c79727dd392472597917ebebb5973c680b4f0bf2cd29df06b1344c372c8e"
+    },
+    {
+      "path": "frem_s10/runtime/journal.py",
+      "sha256": "5f5b2eb30f447cb6f4424902f700e9f0a6d3b282c81d6d29d01ed46bc770a3ea"
+    },
+    {
+      "path": "frem_s10/runtime/resources.py",
+      "sha256": "25bd732ebc3a7cbca06374b0f009cd136f00d7694ea5371a3b3959ff627649c0"
+    },
+    {
+      "path": "frem_s10/runtime/supervisor.py",
+      "sha256": "256549d10545b62c931b750258636ed43b1375b42f186e538f9133cc15b00221"
+    }
+  ],
+  "wheel_sha256": "30df3f3e44d70e1ab27e7a9e4417b92557aa4df4ff8fcdd4eef0a8c87c372e5e"
+}

@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 409.765625,
+    "pageouts": 888378
+  },
+  "fold": "recovery",
+  "model": "no_memory"
+}

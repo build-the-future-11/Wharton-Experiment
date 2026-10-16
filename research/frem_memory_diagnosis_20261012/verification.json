@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "diagnostic_v1_v2_cells_identical": true,
+  "diagnostic_v1_v2_input_hashes_identical": true,
+  "script_hashes_verified": true,
+  "document_links_valid": true,
+  "ruff_final": "PASS",
+  "checklist_completed": 3,
+  "checklist_pending": 54,
+  "scientific_status": "NOT_EVALUATED",
+  "phase": "frem_s3_exploratory_complete_primary_memory_not_supported",
+  "protected_evaluation": {
+    "status": "not accessed",
+    "freeze_required": true
+  },
+  "no_new_model_fits": true,
+  "files_sha256": {
+    "docs/FREM_MEMORY_DIAGNOSIS_AND_CHECKLIST_20261012.md": "6c956f0eb130a549cd7054840ebd2d0f80648a503626c76781fbef8561463ee8",
+    "research/frem_memory_diagnosis_20261012/diagnosis_v2.json": "2435ef1e1fc9353801132f5e0594e3ffec53880b5888e910a3ccb26de6ef3382",
+    "research/frem_memory_diagnosis_20261012/diagnose.py": "67412fb9ddef1c8fa53dfdb82f9651a4dc146eba3eceb90d7ed8d6d456744a55"
+  }
+}

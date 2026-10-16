@@ -1,0 +1,26 @@
+{
+  "S4": {
+    "cases": 128,
+    "positive_point_estimates": 64,
+    "at_least6pct": 0,
+    "min": -0.029565878320196415,
+    "max": 0.003477615145270452,
+    "scope": "Exploratory, dependent cases, no multiplicity corrected profitability inference"
+  },
+  "S3": {
+    "cases": 224,
+    "positive_point_estimates": 71,
+    "at_least6pct": 0,
+    "min": -0.03980953498451889,
+    "max": 0.027675762735939635,
+    "scope": "Exploratory, dependent cases, no multiplicity corrected profitability inference"
+  },
+  "slow": {
+    "cases": 1072,
+    "positive_point_estimates": 477,
+    "at_least6pct": 39,
+    "min": -0.09544734329514593,
+    "max": 0.10847102830709532,
+    "scope": "Exploratory, dependent cases, no multiplicity corrected profitability inference"
+  }
+}

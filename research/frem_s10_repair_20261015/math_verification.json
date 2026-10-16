@@ -1,0 +1,82 @@
+{
+  "scope": "ENGINEERING_ONLY_CONSTRUCTED_NUMERICAL_AND_ACTIONS_AUDIT",
+  "market_data_accessed": false,
+  "scientific_runs": 0,
+  "independent_empirical_replication": false,
+  "python": "3.12.14 (main, Aug 12 2026, 13:57:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "numpy": "2.5.4",
+  "pytest": "8.4.2",
+  "ruff": "0.17.0",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "results": [
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error",
+        "-p",
+        "no:cacheprovider",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/math_attempt3.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio/actions.py",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/math_lint.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio/actions.py",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/math_format.log"
+    }
+  ],
+  "source_sha256": {
+    "successors/frem_s10/src/frem_s10/math/distances.py": "ff533a62be774383d66b02610c5335ee127790cb5110b7b3016c239444bb02bd",
+    "successors/frem_s10/src/frem_s10/math/fees.py": "6bc111502a7dffae6e961fdd2f7735ee5f88a11f2566503c0d838e2450f639de",
+    "successors/frem_s10/src/frem_s10/math/probabilities.py": "1ae3ca45c567a9daf80fcba6427c947ec8eef6bfd5723789ba650d25f572745b",
+    "successors/frem_s10/src/frem_s10/math/scores.py": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61",
+    "successors/frem_s10/src/frem_s10/math/simplex.py": "ebfbf5914fdad93684603c1fc6dd13587a2d5697f5fd1864de5ee5210af0f5cd",
+    "successors/frem_s10/src/frem_s10/math/utility.py": "02cd10108764d552bdbd1854d19032fd51b061a9c52d45161ceb2ef7fc33b533",
+    "successors/frem_s10/src/frem_s10/portfolio/actions.py": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655",
+    "successors/frem_s10/tests/test_actions_audit.py": "0602de296f72997dc565eb36e9643dfeab96ef449972801932771496295c14c7",
+    "successors/frem_s10/tests/test_math_audit.py": "111f7db51d01858e9ebc3a3999dbc7633f6beaa30b2402a55201e6580d491cda"
+  },
+  "cumulative_child_maxrss_raw": 48726016,
+  "maxrss_units": "bytes",
+  "initial_failure": "math_attempt1.log retains the 16-failure pre-repair snapshot reproduction; all failing inputs are retained in tests."
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "s10-exact-notebook-paste-transport-v1",
+  "transport_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+  "transport_bytes": 853453,
+  "notebook_sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+  "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+  "mode": "probe",
+  "network_operations": false,
+  "local_execution": "AST_AND_PAYLOAD_VALIDATION_ONLY",
+  "cloud_execution": "NOT_RUN_BY_AUTHOR",
+  "transport_setup_watchdog_seconds": 30,
+  "transport_setup_reservation_seconds": 60
+}

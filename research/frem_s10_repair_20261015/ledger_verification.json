@@ -1,0 +1,99 @@
+{
+  "scope": "ENGINEERING_ONLY_SHARE_CASH_LEDGER_AND_NUMERICAL_KERNEL",
+  "market_access": false,
+  "scientific_runs": 0,
+  "independent_empirical_replication": false,
+  "results": [
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-W",
+        "error",
+        "-p",
+        "no:cacheprovider",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/ledger_attempt2.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/ledger_quality.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio",
+        "successors/frem_s10/tests/test_math_audit.py",
+        "successors/frem_s10/tests/test_actions_audit.py",
+        "successors/frem_s10/tests/test_ledger_audit.py"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/ledger_format.log"
+    },
+    {
+      "command": [
+        "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+        "-B",
+        "-m",
+        "mypy",
+        "--no-incremental",
+        "--cache-dir=/dev/null",
+        "successors/frem_s10/src/frem_s10/math",
+        "successors/frem_s10/src/frem_s10/portfolio"
+      ],
+      "exit_code": 0,
+      "log": "research/frem_s10_repair_20261015/ledger_mypy.log"
+    }
+  ],
+  "source_sha256": {
+    "successors/frem_s10/src/frem_s10/math/distances.py": "ff533a62be774383d66b02610c5335ee127790cb5110b7b3016c239444bb02bd",
+    "successors/frem_s10/src/frem_s10/math/fees.py": "8e56ac3d1412c70d5c5b6b4deed1a4ede210dd0e31830c91f81b83544b7e5aca",
+    "successors/frem_s10/src/frem_s10/math/probabilities.py": "1ae3ca45c567a9daf80fcba6427c947ec8eef6bfd5723789ba650d25f572745b",
+    "successors/frem_s10/src/frem_s10/math/scores.py": "a36f9dadbd02fe4f015a8d2144b8f2d77c88e0ac616b3eb6b112336e1978bc61",
+    "successors/frem_s10/src/frem_s10/math/simplex.py": "ebfbf5914fdad93684603c1fc6dd13587a2d5697f5fd1864de5ee5210af0f5cd",
+    "successors/frem_s10/src/frem_s10/math/utility.py": "02cd10108764d552bdbd1854d19032fd51b061a9c52d45161ceb2ef7fc33b533",
+    "successors/frem_s10/src/frem_s10/portfolio/__init__.py": "c682e37319b66e2432c82aac57eeb4c3d2dd28952fc55519bcf13d46a0cdf1fd",
+    "successors/frem_s10/src/frem_s10/portfolio/actions.py": "2c71c0b3ba86455336212f7e98f6ce4551d9d255ef42d99bc0f07bf72d4b5655",
+    "successors/frem_s10/src/frem_s10/portfolio/ledger.py": "146b88149b22e74d8c3e45292f3f530516c39b5bdcc834ba0a44da5833b77a1b",
+    "successors/frem_s10/tests/test_actions_audit.py": "0602de296f72997dc565eb36e9643dfeab96ef449972801932771496295c14c7",
+    "successors/frem_s10/tests/test_ledger_audit.py": "bed4d940f5ac51736bd7a738529a8d087bfd6f481200f72bebb6868aeb8d95c1",
+    "successors/frem_s10/tests/test_math_audit.py": "b762e3386bf107e42b31812547a7f43f3f5634fbe7038c225df19e6d035cfa3e"
+  },
+  "max_child_rss_raw": 207683584,
+  "rss_units": "bytes",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/src",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "retained_failure": "ledger_attempt1.log: 1 failed/5 passed; all-cash bisection lost fictitious cash within per-event tolerance. Exact zero-trade roots now preserved; original source retained in ledger_attempt1_source.",
+  "quality_repairs": "Initial strict mypy found invariant JSON-list typing; Ruff found constructor complexity and neighboring-pair style. Helpers split and typed container fixed without behavioral science change.",
+  "remaining": "No policy chooser, benchmark controls, 192-cell engine, production consumption/resource supervisor, precision, market run or independent replication is established by this receipt."
+}

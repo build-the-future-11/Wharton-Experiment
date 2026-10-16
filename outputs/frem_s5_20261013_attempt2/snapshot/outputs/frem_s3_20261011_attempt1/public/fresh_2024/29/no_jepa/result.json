@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "name": "no_jepa",
+  "fold": "fresh_2024",
+  "seed": 29,
+  "base_version": "3e9e49bfcac4e3bc5ae3d0da71fcd9198c86f4b2473658fd63160695d0469f8d",
+  "results": {
+    "off": {
+      "nll": -1.4533674161260508,
+      "sha256": "d663a9574bd56c9b83e9deba5ca29dd8d4125c929332770d3c16978382661d1f",
+      "rows": 120,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -1.1147867502269733
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.4687671862875902,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

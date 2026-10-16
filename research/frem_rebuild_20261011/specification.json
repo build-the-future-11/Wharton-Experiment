@@ -1,0 +1,68 @@
+{
+  "lineage": "FREM-S2-training-scale-frozen-residual",
+  "declared_at": "2026-10-11T13:23:33.970442+00:00",
+  "status": "DEVELOPMENT_SPECIFIED_BEFORE_IMPLEMENTATION_AND_NEW_OUTCOMES",
+  "predecessor": "outputs/engineering_yahoo_calibrated_v1/20261011T110103Z_a65733448e",
+  "observation": "Retained synthetic negative result: location bias dominates; direct memory correction helps slightly.",
+  "hypotheses": [
+    "Training-target units reduce excessive location gradients and initial scale mismatch.",
+    "Residuals from a selected frozen base on a later purged holdout avoid mixed evolving/dropout references.",
+    "Validation selection of the deployed correction and scale by Student-t NLL aligns the controller objective with evaluation."
+  ],
+  "model_contract": {
+    "standardized_head": "c=mean(y_train), u=max(std(y_train, ddof=0), physical_scale_floor). mu=c+u*a; scale=u*softplus(b)+physical_scale_floor; df=2.1+softplus(d). Initialize a=0, scale=u*sqrt(3/5)+floor, df=5. Statistics never use validation or evaluation targets; horizon target is already aggregated so no extra horizon multiplier.",
+    "unchanged_backbone": "Existing temporal encoder, fixed reservoir, causal spectral descriptor and JEPA. Legacy defaults and old checkpoints remain supported.",
+    "frozen_base": "Partition outer training by unique decision dates at floor(0.6*N) and floor(0.8*N); purge labels at each next partition start. Fit on first part; select checkpoint on second part; freeze weights, scaler, target statistics, descriptors. Build residual memory only on third part with eval-mode forecasts after the full fitted cutoff.",
+    "memory": "Use existing same-asset fixed-key nearest-neighbor retrieval, FIFO retention, capacity128/neighbors4; utility/controller disabled for this successor. Replay heldout residuals chronologically with strict label maturity. Do not refit base after memory creation. Keep fixed during validation/evaluation.",
+    "calibration": "Grid memory weights [0,.25,.5,1] and scale multipliers [.5,.75,1,1.5,2]. Minimize equal-date/equal-asset validation Student-t NLL; ties select smallest correction, then scale nearest1. Separately select scale-only no-memory comparator on same checkpoint, same validation and same scale grid. No evaluation-derived choices.",
+    "inference": "mu=base_mu+w*retrieved_residual; scale=q*base_scale; retain base df. All observations must follow calibration label cutoff; labels and future_x not used for predictions.",
+    "falsifier": "If frozen residual fails to improve NLL over its same-checkpoint calibrated control, memory benefit is unsupported. If standardized trajectories remain biased or do not improve on fresh development data, scaling hypothesis is unsupported.",
+    "complexity": "Backbone unchanged. Residual construction/prediction O(N*C*D) brute-force memory retrieval with bounded C=128, key dimension D. Calibration 20 linear passes over validation rows.",
+    "risks": [
+      "Pooled target statistics can miss asset heterogeneity.",
+      "Smaller base training sample can reduce skill.",
+      "Short validation may overfit the 20-candidate calibration grid.",
+      "FIFO may discard useful recurrence and freezing may miss regime changes.",
+      "Prior-art components do not establish novelty or SOTA."
+    ]
+  },
+  "evaluation_contract": {
+    "data": "Existing public_equity_crises_v1, same previously declared 24 present-day listings, hash verified, pre2025 only. Exploratory survivor sample with retrospective adjustments and research-coordinate timing.",
+    "fold": "great_recession (2007-12 through 2009-06), predeclared for economic relevance before new fits; no outcomes viewed for selection.",
+    "seeds": [
+      11,
+      29
+    ],
+    "epochs": 12,
+    "models": [
+      "legacy_frem",
+      "legacy_no_memory",
+      "standardized_frem",
+      "standardized_no_memory",
+      "frozen_residual",
+      "zero",
+      "ridge",
+      "xgboost",
+      "gru",
+      "dlinear",
+      "patch_transformer"
+    ],
+    "max_fit_cells": 22,
+    "paired_control_outputs": 2,
+    "max_wall_seconds": 3600,
+    "max_fit_seconds": 120,
+    "memory_floor_mib": 512,
+    "stopping": "One fixed matrix; all failures retained, no metric-driven retry or favorable seed deletion. No protected outcomes. No significance or SOTA claim from this short exploratory matrix.",
+    "fairness": "All methods share outer information boundary; frozen pair shares exact base weights and residual-holdout allocation. Other methods use more base-fitting rows. Calibration/search counts and actual compute reported; no matched-search or efficiency claim."
+  },
+  "prior_art_review": {
+    "checked_at": "2026-10-11T13:23:33.970702+00:00",
+    "sources": [
+      "https://github.com/cure-lab/LTSF-Linear",
+      "https://seharanul17.github.io/RevIN/"
+    ],
+    "boundary": "Normalization and strong simple linear forecasters are established. This is an engineering successor testing diagnosed defects, not a novel normalization claim. Local patch Transformer is explicitly not the original PatchTST recipe; original SOTA reproduction remains necessary."
+  },
+  "original_results_preserved": true,
+  "protected_outcomes_accessed": false
+}

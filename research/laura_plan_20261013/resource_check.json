@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-13T15:55:50.479885+00:00",
+  "samples": [
+    {
+      "available_mib": 162.609375,
+      "pageouts": 233646
+    },
+    {
+      "available_mib": 159.859375,
+      "pageouts": 233646
+    },
+    {
+      "available_mib": 165.75,
+      "pageouts": 233646
+    }
+  ],
+  "admitted": false
+}

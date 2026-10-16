@@ -1,0 +1,391 @@
+{
+  "checked": 48,
+  "mismatches": [],
+  "journal_before_prefix_preserved": true,
+  "records": [
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/__init__.py",
+      "checked_path": "successors/frem_s9/__init__.py",
+      "sha256": "66cb6e649151ea1e73474800d35c73c23362c21cb67a2d3d1b3fb76e2f0072b3",
+      "expected": "66cb6e649151ea1e73474800d35c73c23362c21cb67a2d3d1b3fb76e2f0072b3",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/data.py",
+      "checked_path": "successors/frem_s9/data.py",
+      "sha256": "5fa68de7f65297ef1e69009dca4cd749bee9b4731c26e297a4a1dc1f72410523",
+      "expected": "5fa68de7f65297ef1e69009dca4cd749bee9b4731c26e297a4a1dc1f72410523",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/experiment.py",
+      "checked_path": "successors/frem_s9/experiment.py",
+      "sha256": "e40f12a6ef75a14485301b5a5d5a8f6ec73d40af5897d95118a71bee5108196b",
+      "expected": "e40f12a6ef75a14485301b5a5d5a8f6ec73d40af5897d95118a71bee5108196b",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/model.py",
+      "checked_path": "successors/frem_s9/model.py",
+      "sha256": "87b21a6e450e25d8d0f8d112e4320c87937a0f3e911d950091da0ab2edca31f9",
+      "expected": "87b21a6e450e25d8d0f8d112e4320c87937a0f3e911d950091da0ab2edca31f9",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/policy.py",
+      "checked_path": "successors/frem_s9/policy.py",
+      "sha256": "805d89651310ba72f7ab35310f3fb156698fd41fad9decd1fcbf553d042c6cd9",
+      "expected": "805d89651310ba72f7ab35310f3fb156698fd41fad9decd1fcbf553d042c6cd9",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/run.py",
+      "checked_path": "successors/frem_s9/run.py",
+      "sha256": "f71850b076c759ddbd6177272270fb4b4ee5cb9050e1b0dc372584934a86bbf4",
+      "expected": "f71850b076c759ddbd6177272270fb4b4ee5cb9050e1b0dc372584934a86bbf4",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/__init__.py",
+      "checked_path": "successors/frem_audit_v1/__init__.py",
+      "sha256": "01568e80630b0a36b9e4df616a83a9572f5105e77c45ea180b7e6507544f8299",
+      "expected": "01568e80630b0a36b9e4df616a83a9572f5105e77c45ea180b7e6507544f8299",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/audit.py",
+      "checked_path": "successors/frem_audit_v1/audit.py",
+      "sha256": "aa99f51e67ad75082163a7c5f2e12ea6043ae8249fdfa9b0fdd4d04a01f34532",
+      "expected": "aa99f51e67ad75082163a7c5f2e12ea6043ae8249fdfa9b0fdd4d04a01f34532",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/contracts.py",
+      "checked_path": "successors/frem_audit_v1/contracts.py",
+      "sha256": "a8fb6e99f69142cecd118055916deee3752edb5d6fbb57617a7b65c5e8fec7b0",
+      "expected": "a8fb6e99f69142cecd118055916deee3752edb5d6fbb57617a7b65c5e8fec7b0",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/ledger.py",
+      "checked_path": "successors/frem_audit_v1/ledger.py",
+      "sha256": "7d94e4c0a3297f41f3ef6f651c1b029bf5e2666d5a8f672fc928d8684108644d",
+      "expected": "7d94e4c0a3297f41f3ef6f651c1b029bf5e2666d5a8f672fc928d8684108644d",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/stream.py",
+      "checked_path": "successors/frem_audit_v1/stream.py",
+      "sha256": "8452078467ab4d648e9b05acb3f5ae1047504d89c83f366cf968d821e1208f8e",
+      "expected": "8452078467ab4d648e9b05acb3f5ae1047504d89c83f366cf968d821e1208f8e",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "tests/s9/test_s9.py",
+      "checked_path": "tests/s9/test_s9.py",
+      "sha256": "b40debe033469959ba7928b3fa417ddbe40312efa02cb69113490dddca60ab6d",
+      "expected": "b40debe033469959ba7928b3fa417ddbe40312efa02cb69113490dddca60ab6d",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/SPY.json",
+      "checked_path": "data/s6_real_etf_20261014/SPY.json",
+      "sha256": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "expected": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/TLT.json",
+      "checked_path": "data/s6_real_etf_20261014/TLT.json",
+      "sha256": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "expected": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/GLD.json",
+      "checked_path": "data/s6_real_etf_20261014/GLD.json",
+      "sha256": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "expected": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/acquisition.json",
+      "checked_path": "data/s6_real_etf_20261014/acquisition.json",
+      "sha256": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "expected": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/SPECIFICATION.md",
+      "checked_path": "research/frem_s9_20261015/SPECIFICATION.md",
+      "sha256": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+      "expected": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/REVIEW.md",
+      "checked_path": "research/frem_s9_20261015/REVIEW.md",
+      "sha256": "4343c2bf7da73a8596b7d66e3a22cacaad03949bed6a06df410b2fa78935a235",
+      "expected": "4343c2bf7da73a8596b7d66e3a22cacaad03949bed6a06df410b2fa78935a235",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/DATA_ADMISSION.json",
+      "checked_path": "research/frem_s9_20261015/DATA_ADMISSION.json",
+      "sha256": "5f03ccd6ae529c4f3b6516ec3f9741793162ade384d2d7e33db2aa01accfd992",
+      "expected": "5f03ccd6ae529c4f3b6516ec3f9741793162ade384d2d7e33db2aa01accfd992",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/README.md",
+      "checked_path": "successors/frem_s9/README.md",
+      "sha256": "e0de9c58cb223ad4f38fedfa496064bacd0c1fd5125d92f582a72844c982e835",
+      "expected": "e0de9c58cb223ad4f38fedfa496064bacd0c1fd5125d92f582a72844c982e835",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/ADVERSARIAL_FINDINGS.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/ADVERSARIAL_FINDINGS.md",
+      "sha256": "6bbf82d18102f5494c0d5b8eb76a6d1011e04e854fd7ec096eacf7cb782370e7",
+      "expected": "6bbf82d18102f5494c0d5b8eb76a6d1011e04e854fd7ec096eacf7cb782370e7",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/ARCHITECTURE_AND_INTERFACES.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/ARCHITECTURE_AND_INTERFACES.md",
+      "sha256": "77934e962dc5ce6e622368e26da2821367ffca66c741828b51d142913ae64323",
+      "expected": "77934e962dc5ce6e622368e26da2821367ffca66c741828b51d142913ae64323",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/CODE_QUALITY_AND_CI.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/CODE_QUALITY_AND_CI.md",
+      "sha256": "f3ed9be21914fd94a54dda5f761d99de0456009eb330d8dbe066d9162bcb8288",
+      "expected": "f3ed9be21914fd94a54dda5f761d99de0456009eb330d8dbe066d9162bcb8288",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/DELIVERY_PLAN.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/DELIVERY_PLAN.md",
+      "sha256": "f6b28d0ea0155ff1edc42f6b512b65c29778a326650fb3449901a4243f4ec9a4",
+      "expected": "f6b28d0ea0155ff1edc42f6b512b65c29778a326650fb3449901a4243f4ec9a4",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/MODEL_CLARIFICATIONS.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/MODEL_CLARIFICATIONS.md",
+      "sha256": "13981354354e992bf788f3b6e695f571977ef84714935fbe15108bda2cff1b06",
+      "expected": "13981354354e992bf788f3b6e695f571977ef84714935fbe15108bda2cff1b06",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/OPERATIONS_AND_ARTIFACTS.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/OPERATIONS_AND_ARTIFACTS.md",
+      "sha256": "3f71578ba8a534ab6693d58fb68747edcfd64d601eb4a71fc1dfcbab6147ef9e",
+      "expected": "3f71578ba8a534ab6693d58fb68747edcfd64d601eb4a71fc1dfcbab6147ef9e",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md",
+      "sha256": "6297841c351133a468a0706d5f4227cc460aca0f24dc6e383f2dfe677635dcd3",
+      "expected": "6297841c351133a468a0706d5f4227cc460aca0f24dc6e383f2dfe677635dcd3",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
+      "checked_path": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
+      "sha256": "e2a2f6c7ad4d233831a8678e19799596987977409cc4d8d2002b2fe148efbcd6",
+      "expected": "e2a2f6c7ad4d233831a8678e19799596987977409cc4d8d2002b2fe148efbcd6",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/requirements.json",
+      "checked_path": "research/frem_s10_20261015/design_v2/requirements.json",
+      "sha256": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+      "expected": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/USER_REQUEST.txt",
+      "checked_path": "research/frem_s10_20261015/design_v2/USER_REQUEST.txt",
+      "sha256": "64dd65aa1b0a7d4244ba02641885236fbef74225ad60ff3ceb064435db0884de",
+      "expected": "64dd65aa1b0a7d4244ba02641885236fbef74225ad60ff3ceb064435db0884de",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "path": "research/frem_s10_20261015/design_v2/before_manifest.json",
+      "checked_path": "research/frem_s10_20261015/design_v2/before_manifest.json",
+      "sha256": "c224274bfb724e365f1eb4ced9f229b474e60fad7c0240847f93c51424244fb0",
+      "expected": "c224274bfb724e365f1eb4ced9f229b474e60fad7c0240847f93c51424244fb0",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "docs/FREM_S10_DESIGN.md",
+      "checked_path": "docs/FREM_S10_DESIGN.md",
+      "sha256": "96a1c2ffa138f92c3cd67c0c8249ae5da2b8654e0391d80f17d5e6388ee7e02e",
+      "expected": "96a1c2ffa138f92c3cd67c0c8249ae5da2b8654e0391d80f17d5e6388ee7e02e",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/EXPERIMENT_PROTOCOL.md",
+      "checked_path": "research/frem_s10_20261015/EXPERIMENT_PROTOCOL.md",
+      "sha256": "760cb4309611e05cf6ec5a35065fe931bfc0b0aa9b32f3b4c7e3066e08f1f6bb",
+      "expected": "760cb4309611e05cf6ec5a35065fe931bfc0b0aa9b32f3b4c7e3066e08f1f6bb",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/FAILURE_REPAIR_MAP.md",
+      "checked_path": "research/frem_s10_20261015/FAILURE_REPAIR_MAP.md",
+      "sha256": "17f75e9bafde45d929bdadef4eb87f5a9a0a89f37f94098a00c37a6b202b6cdd",
+      "expected": "17f75e9bafde45d929bdadef4eb87f5a9a0a89f37f94098a00c37a6b202b6cdd",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/IMPLEMENTATION_PLAN.md",
+      "checked_path": "research/frem_s10_20261015/IMPLEMENTATION_PLAN.md",
+      "sha256": "d7830be5296ef102c1e8826b9db0acece2fc8e11fa3566a25fdc75d4b25eadba",
+      "expected": "d7830be5296ef102c1e8826b9db0acece2fc8e11fa3566a25fdc75d4b25eadba",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/MODEL_SPECIFICATION.md",
+      "checked_path": "research/frem_s10_20261015/MODEL_SPECIFICATION.md",
+      "sha256": "782ce8485691050f254b9e24a8e560c2237f2fe5414b920828b835447c2c769e",
+      "expected": "782ce8485691050f254b9e24a8e560c2237f2fe5414b920828b835447c2c769e",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/PRIOR_ART.md",
+      "checked_path": "research/frem_s10_20261015/PRIOR_ART.md",
+      "sha256": "e85b337428e422700c0462cbdf884cc695b0814ad5ca38c48070eaadc3532b22",
+      "expected": "e85b337428e422700c0462cbdf884cc695b0814ad5ca38c48070eaadc3532b22",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/REVIEW.md",
+      "checked_path": "research/frem_s10_20261015/REVIEW.md",
+      "sha256": "af240b5957b888202f6aa8d8c04c7ddac6f4b7a1c3abccf438af2ea37bf9f258",
+      "expected": "af240b5957b888202f6aa8d8c04c7ddac6f4b7a1c3abccf438af2ea37bf9f258",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/USER_REQUEST.txt",
+      "checked_path": "research/frem_s10_20261015/USER_REQUEST.txt",
+      "sha256": "05cdc7c61fa659a2434e6fafa855f8df87fa4831ea87bc18a42de3caee5f0570",
+      "expected": "05cdc7c61fa659a2434e6fafa855f8df87fa4831ea87bc18a42de3caee5f0570",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/RESEARCH_STATE.json",
+      "checked_path": "research/frem_s10_20261015/before/RESEARCH_STATE.json",
+      "sha256": "84fcdeba82b25a09912191acac3f2299cda63f6e19f2fe923e548cb1d26916d9",
+      "expected": "84fcdeba82b25a09912191acac3f2299cda63f6e19f2fe923e548cb1d26916d9",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/docs/CODEX_HANDOFF.md",
+      "checked_path": "research/frem_s10_20261015/before/docs/CODEX_HANDOFF.md",
+      "sha256": "3c0894d1537418b99138b08aaea3e1529a6eaf10c0739118ff0f7c0672c6915d",
+      "expected": "3c0894d1537418b99138b08aaea3e1529a6eaf10c0739118ff0f7c0672c6915d",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/research/events.jsonl",
+      "checked_path": "research/frem_s10_20261015/before/research/events.jsonl",
+      "sha256": "24e07ccbc1750d6bfa0f84b2f8820cb94b4fadae0d5876823da87a3009f08baf",
+      "expected": "24e07ccbc1750d6bfa0f84b2f8820cb94b4fadae0d5876823da87a3009f08baf",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before_manifest.json",
+      "checked_path": "research/frem_s10_20261015/before_manifest.json",
+      "sha256": "d6a28adb9ed8f45f795290655c446f502f14882bb8a7a10dcabc500a7b286359",
+      "expected": "d6a28adb9ed8f45f795290655c446f502f14882bb8a7a10dcabc500a7b286359",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design.json",
+      "checked_path": "research/frem_s10_20261015/design.json",
+      "sha256": "c344616faf89c035f89869b617e79c2fc7563ef9e60cb050091741888b3a05d8",
+      "expected": "c344616faf89c035f89869b617e79c2fc7563ef9e60cb050091741888b3a05d8",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/decisions/frem_s10_design_20261015.json",
+      "checked_path": "research/decisions/frem_s10_design_20261015.json",
+      "sha256": "e4ea2725cf83a453e61aa56677331cba667ea598874f99228b8d77e72c93f223",
+      "expected": "e4ea2725cf83a453e61aa56677331cba667ea598874f99228b8d77e72c93f223",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "RESEARCH_STATE.json",
+      "checked_path": "research/frem_s10_20261015/design_v2/before/RESEARCH_STATE.json",
+      "sha256": "578b7f29ce928e0586e71bd0b6f092edaaec49b10c74b07d2924a62aed03f334",
+      "expected": "578b7f29ce928e0586e71bd0b6f092edaaec49b10c74b07d2924a62aed03f334",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "docs/CODEX_HANDOFF.md",
+      "checked_path": "research/frem_s10_20261015/design_v2/before/docs/CODEX_HANDOFF.md",
+      "sha256": "c9c176181396a22d5b2ea0c3eb652e4a972517dc03d9c0c603f205b96395beca",
+      "expected": "c9c176181396a22d5b2ea0c3eb652e4a972517dc03d9c0c603f205b96395beca",
+      "match": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/events.jsonl",
+      "checked_path": "research/frem_s10_20261015/design_v2/before/research/events.jsonl",
+      "sha256": "2de983ef62932e289a903223716c570bacf913f910ab7a280b218ab0a8c6e2db",
+      "expected": "2de983ef62932e289a903223716c570bacf913f910ab7a280b218ab0a8c6e2db",
+      "match": true
+    }
+  ]
+}

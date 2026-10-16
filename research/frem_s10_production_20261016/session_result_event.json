@@ -1,0 +1,19 @@
+{
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "Production integration, prospective exact-source verification, bounded adversarial checks, data integrity admission and preservation audits are implemented. Actual fixed controller attempt1 was refused before verification: free-plus-speculative101.25/138.234375/136.5MiB with increasing pageouts.",
+  "hypothesized_cause": "Available host headroom does not meet the unchanged512MiB three-sample admission contract.",
+  "change": "Retain the exact candidate snapshot and immutable continuation plan. Schedule the same controller every30minutes; permit continuation only after its actual source/environment/resource/verification gates. Pause on nonretryable failure, source drift or terminal result.",
+  "predicted_effect": "A later passing admission can advance the fixed sequence without erasing prior failures, bypassing engineering checks or repeating consumed research. No market improvement is predicted from integration checks.",
+  "discriminating_experiment": "Run the complete source-bound engineering suite, offline build, eleven semantic mutants, then one-use precision, generated full-scale qualification and fixed development only through the guarded controller.",
+  "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "code_sha256": "11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696",
+  "controller_receipt": "research/frem_s10_production_20261016/controller_attempt1.json",
+  "automation_id": "frem-s10-guarded-research-continuation",
+  "source_scope": "Retrospective current-vintage2005-2016 snapshots, scheduled clocks and ex-date convention; no PIT, fills or redistribution certification",
+  "scientific_attempt_consumed": false,
+  "protected_access": false,
+  "original_thresholds_changed": false,
+  "positive_market_support": false,
+  "result": "IMPLEMENTED_SCOPED_VERIFIED_FULL_VERIFICATION_RESOURCE_BLOCKED"
+}

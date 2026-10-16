@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-10-16T07:43:05.659453+00:00",
+  "source_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-cpu-readiness-2026-10-16/output?scriptVersionId=358930173",
+  "kernel_version": "ryangomez010/wharton-s10-cpu-readiness-2026-10-16/1",
+  "script_version_id": 358930173,
+  "visibility_observed": "Private",
+  "method": "Kaggle Output actions / Download output; browser download retrieved after CPU Stop Session",
+  "archive_sha256": "bc34f904b4258a85b44fcdd742653a0b91601ded1715141217f6dfec9fbf54a5",
+  "archive_bytes": 2452422,
+  "member_count": 158,
+  "crc_readback": "PASS",
+  "verified_artifacts": [
+    {
+      "archive_member": "frem_s10_tonight_20261016/session/persistence-probe.json",
+      "local_file": "research/frem_s10_tonight_20261016/retrieved/version1/session/persistence-probe.json",
+      "sha256": "18229e7b5e29fa9416233d6d383d5aa400555eae20d97681f2a2d9fff361c67a",
+      "matches_producer_observation": true
+    },
+    {
+      "archive_member": "frem_s10_tonight_20261016/exports/state-5c6c61614e45491fbe7726bf2015e12b.zip",
+      "local_file": "research/frem_s10_tonight_20261016/retrieved/version1/exports/state-5c6c61614e45491fbe7726bf2015e12b.zip",
+      "sha256": "8f87cbf3a5e081732ae3a16588d07a4714296ad632021bb3376726ceaa1b0733",
+      "matches_producer_observation": true
+    },
+    {
+      "archive_member": "frem_s10_tonight_20261016/FREM_S10_TONIGHT_CPU.ipynb",
+      "local_file": "research/frem_s10_tonight_20261016/retrieved/version1/FREM_S10_TONIGHT_CPU.ipynb",
+      "sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+      "matches_producer_observation": true
+    }
+  ],
+  "remote_persistence_retrieval_verified": true,
+  "scientific_evidence": false
+}

@@ -1,0 +1,159 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Assran et~al.(2023)]{assran2023}
+Mahmoud Assran et~al.
+\newblock Self-supervised learning from images with a joint-embedding
+  predictive architecture.
+\newblock \emph{CVPR}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2301.08243}.
+
+\bibitem[Bailey et~al.(2015)Bailey, Borwein, Lopez~de Prado, and
+  Zhu]{bailey2015}
+David~H. Bailey, Jonathan~M. Borwein, Marcos Lopez~de Prado, and Qiji~Jim Zhu.
+\newblock The probability of backtest overfitting.
+\newblock \emph{Working paper}, 2015.
+\newblock URL \url{https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf}.
+\newblock Revised February 2015.
+
+\bibitem[Bardes et~al.(2021)Bardes, Ponce, and LeCun]{bardes2021}
+Adrien Bardes, Jean Ponce, and Yann LeCun.
+\newblock Vicreg: Variance-invariance-covariance regularization for
+  self-supervised learning.
+\newblock \emph{arXiv:2105.04906}, 2021.
+\newblock URL \url{https://arxiv.org/abs/2105.04906}.
+
+\bibitem[Chen and Guestrin(2016)]{chen2016}
+Tianqi Chen and Carlos Guestrin.
+\newblock Xgboost: A scalable tree boosting system.
+\newblock \emph{KDD}, 2016.
+\newblock URL \url{https://arxiv.org/abs/1603.02754}.
+
+\bibitem[Cheng et~al.(2026)]{cheng2026}
+Xin Cheng et~al.
+\newblock Conditional memory via scalable lookup: A new axis of sparsity for
+  large language models.
+\newblock \emph{arXiv:2601.07372}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.07372}.
+
+\bibitem[Dohare et~al.(2023)]{dohare2023}
+Shibhansh Dohare et~al.
+\newblock Maintaining plasticity in deep continual learning.
+\newblock \emph{arXiv:2306.13812}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.13812}.
+
+\bibitem[Ennadir et~al.(2025)Ennadir, Golkar, and Sarra]{ennadir2025}
+Sofiane Ennadir, Siavash Golkar, and Leopoldo Sarra.
+\newblock Joint embeddings go temporal.
+\newblock \emph{arXiv:2509.25449}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2509.25449}.
+
+\bibitem[{Federal Reserve Bank of St. Louis}(2026)]{fredapi}
+{Federal Reserve Bank of St. Louis}.
+\newblock Fred api: Series observations and real-time periods, 2026.
+\newblock URL
+  \url{https://fred.stlouisfed.org/docs/api/fred/series_observations.html}.
+\newblock Official API documentation; access and availability assumptions
+  described in the data guide.
+
+\bibitem[Feng et~al.(2026)Feng, Liao, Ng, and Liang]{feng2026}
+Yutong Feng, Bowen Liao, See~Kiong Ng, and Yuxuan Liang.
+\newblock Does joint-embedding predictive architecture pretraining help time
+  series forecasting?
+\newblock \emph{arXiv:2609.31680}, 2026.
+\newblock URL \url{https://arxiv.org/abs/2609.31680}.
+
+\bibitem[Gneiting and Raftery(2007)]{gneiting2007}
+Tilmann Gneiting and Adrian~E. Raftery.
+\newblock Strictly proper scoring rules, prediction, and estimation.
+\newblock \emph{Journal of the American Statistical Association}, 102\penalty0
+  (477):\penalty0 359--378, 2007.
+\newblock \doi{10.1198/016214506000001437}.
+\newblock URL
+  \url{https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf}.
+
+\bibitem[Holm(1979)]{holm1979}
+Sture Holm.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock \emph{Scandinavian Journal of Statistics}, 6\penalty0 (2):\penalty0
+  65--70, 1979.
+\newblock URL \url{https://www.ime.usp.br/~abe/lista/pdf4R8xPVzCnX.pdf}.
+
+\bibitem[Jaeger(2001)]{jaeger2001}
+Herbert Jaeger.
+\newblock The echo state approach to analysing and training recurrent neural
+  networks.
+\newblock Technical Report 148, GMD, 2001.
+\newblock URL \url{https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf}.
+\newblock Corrected version with 2010 erratum.
+
+\bibitem[K{\"u}nsch(1989)]{kuensch1989}
+Hans~R. K{\"u}nsch.
+\newblock The jackknife and the bootstrap for general stationary observations.
+\newblock \emph{The Annals of Statistics}, 17\penalty0 (3):\penalty0
+  1217--1241, 1989.
+\newblock \doi{10.1214/aos/1176347265}.
+\newblock URL \url{https://doi.org/10.1214/aos/1176347265}.
+
+\bibitem[Laha(2025)]{laha2025}
+S.~K. Laha.
+\newblock Reservoir computing via multi-scale random fourier features for
+  forecasting fast-slow dynamical systems.
+\newblock \emph{arXiv:2511.14775}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2511.14775}.
+
+\bibitem[Nie et~al.(2022)]{nie2022}
+Yuqi Nie et~al.
+\newblock A time series is worth 64 words: Long-term forecasting with
+  transformers.
+\newblock \emph{arXiv:2211.14730}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2211.14730}.
+
+\bibitem[Rockafellar and Uryasev(2000)]{rockafellar2000}
+R.~Tyrrell Rockafellar and Stanislav Uryasev.
+\newblock Optimization of conditional value-at-risk.
+\newblock \emph{Journal of Risk}, 2000.
+\newblock URL
+  \url{https://sites.math.washington.edu/~rtr/papers/rtr179-CVaR1.pdf}.
+
+\bibitem[Schertler et~al.(2026)Schertler, Runge, Ceni, Kappel, and
+  Gallicchio]{fresco2026}
+Klaus Schertler, Xiomara Runge, Andrea Ceni, David Kappel, and Claudio
+  Gallicchio.
+\newblock Frequency domain reservoir computing.
+\newblock \emph{arXiv:2606.24969}, 2026.
+\newblock URL \url{https://arxiv.org/pdf/2606.24969}.
+
+\bibitem[{Taiwan Stock Exchange}(2025)]{twse2025}
+{Taiwan Stock Exchange}.
+\newblock 2025 guide to investing in taiwan, 2025.
+\newblock URL \url{https://www.twse.com.tw/en/about/company/guide.html}.
+\newblock Accessed 10 October 2026.
+
+\bibitem[{User-provided preparation document}(2026)]{laura2026}
+{User-provided preparation document}.
+\newblock Roi - wharton global youth investment challenge prep: Case study,
+  2026.
+\newblock URL
+  \url{https://docs.google.com/document/d/1kjLz0M7yy8jxIEbeUnsFML1dLQ2_elf8U9dqq0Gka-U/edit}.
+\newblock Case study tab t.ex0r35fa9gmc; private copied case, inspected 10
+  October 2026; not independently certified as original organizer PDF.
+
+\bibitem[{Wharton Global Youth Program}(2026)]{wharton2026}
+{Wharton Global Youth Program}.
+\newblock Investment competition: Frequently asked questions, 2026.
+\newblock URL
+  \url{https://globalyouth.wharton.upenn.edu/competitions/investment-competition/faq/}.
+\newblock Accessed 10 October 2026.
+
+\bibitem[Zeng et~al.(2022)]{zeng2022}
+Ailing Zeng et~al.
+\newblock Are transformers effective for time series forecasting?
+\newblock \emph{arXiv:2205.13504}, 2022.
+\newblock URL \url{https://arxiv.org/abs/2205.13504}.
+
+\end{thebibliography}

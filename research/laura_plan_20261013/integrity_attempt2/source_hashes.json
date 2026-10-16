@@ -1,0 +1,6 @@
+{
+  "successors/laura_planning_v1/check.py": "b8777f09452722b2c71b00b0dade5a230e1ae9b8f961e8ec273627e6bcb6b667",
+  "successors/laura_planning_v1/core.py": "8cacb220a4aea04a3187556c18fa3db7de719efc534d7c032ee7664c1edd70d8",
+  "successors/laura_planning_v1/run.py": "94daa918a43cc69a1b1d3321bccfa7287606d478362c0593d17c176b23b9792c",
+  "successors/laura_planning_v1/tests/test_core.py": "64d6749ed1de1aebb887ceaaa9a4cb9747142d3085f3079315af9bcaa99336c0"
+}

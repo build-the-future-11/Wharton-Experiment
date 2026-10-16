@@ -1,0 +1,33 @@
+{
+  "schema": "s10-tonight-scientific-candidate-v1",
+  "status": "UNFROZEN_BLOCKED",
+  "scientific_freeze": false,
+  "source_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "question": "Whether the fixed S10 delayed contextual proper-score mixture improves total-return forecasts and fee-aware decisions under the existing prospective design.",
+  "existing_design": "research/frem_s10_20261015/design_v2/blueprint.json",
+  "model_variants": "Existing six-variant design retained; no new benchmark, seed, threshold, bootstrap block or cost selected.",
+  "protected_outcomes_accessed": false,
+  "expected_cost_seconds": null,
+  "measured_representative_cost": false,
+  "source_data_split_environment_freeze_complete": false,
+  "mandatory_gates": [
+    "Point-in-time source/time/split admission appropriate to claims",
+    "Supported target production supervision/environment integration",
+    "Exact-source complete verification/build/mutation checks",
+    "Real precision and representative full-scale qualification",
+    "Prospectively measured affordable matrix and analysis freeze",
+    "Untouched confirmation and independent reproduction"
+  ],
+  "claims_allowed_now": [
+    "Local workflow preparation",
+    "Evidence-bound platform refusal"
+  ],
+  "claims_not_established": [
+    "Market forecast improvement",
+    "Profitability",
+    "Calibration",
+    "Novelty",
+    "Equivalence",
+    "Complete study"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE_BOUNDED_DOCUMENT_AND_EVIDENCE_WORK",
+  "date": "2026-10-12",
+  "fresh_validation": [
+    "133844 saved S3 likelihood rows reconstructed; max error 2.22e-15",
+    "49 frozen source hashes and 582 predecessor artifacts unchanged",
+    "12 conditional cash-flow scenarios; zero-rate boundary asserted",
+    "Generated public-result tables regenerated; compiled source hashes match",
+    "27-page PDF compiled; all rendered pages visually inspected; no overfull or undefined-reference log entries"
+  ],
+  "new_model_fits": 0,
+  "protected_access": false,
+  "not_completed": [
+    "model improvements/performance repair",
+    "canonical confirmation",
+    "independent training reproduction",
+    "current predictions or approved allocation",
+    "full novelty/equation review and submission readiness"
+  ],
+  "source_sha256": {
+    "paper/main.tex": "f8d9dc9c76c3129f59aecb9f974355d1b849610deb628b08d2eb1ae9eb3df81a",
+    "paper/public_results.tex": "911fe241e17d735688228e404ed9b67d4dd2432e6325bfef7456108f006298e3",
+    "paper/main.pdf": "c2550dc0585ac1f226523cfc1bc479c93d84b8c93fc4f848ab64d78375ef88ed",
+    "research/checklist_completion_20261012/table_sources.json": "445c068c5d4aa7a4d5c389b28a0363ca8b6b32db1dd94dc9cd651d626ed747c6",
+    "research/checklist_completion_20261012/s3_audit.json": "cb6d76ed0a933d2bbc46a704420824dcab4ef5ef576ee0fe7c1157fca5791b60",
+    "research/checklist_completion_20261012/LAURA_FUNDING_AND_BLOCKERS.md": "ac503c92c088f15de22859f66940e96849700617ac17e12d94250bd1e26039b7",
+    "research/checklist_completion_20261012/CHECKLIST_DISPOSITION.md": "522974191b4bafb870eb8852b64f2de534b7e18024608ba1da66be257ce4b1cd",
+    "research/checklist_completion_20261012/SUCCESSOR_CONTRACT.md": "d9489908c87df38fd66d80c176ade2efef5ccb46b1469228c5dd433ac413af83"
+  }
+}

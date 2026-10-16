@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "source_files": 57,
+  "prohibited_imports": [],
+  "cycles": [],
+  "scope": "static import graph; not behavioral or empirical validation"
+}

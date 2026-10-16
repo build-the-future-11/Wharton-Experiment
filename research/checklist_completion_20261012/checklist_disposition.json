@@ -1,0 +1,344 @@
+[
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Retain valid negative, mixed and inconclusive predecessor results, failures, freezes and protected-use boundaries.",
+    "status": "PREVIOUSLY_COMPLETED",
+    "reason": "See retained diagnosis receipt."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Confirm S3 retrieval is connected and nonzero; verify saved primary arithmetic and frozen sources.",
+    "status": "PREVIOUSLY_COMPLETED",
+    "reason": "See retained diagnosis receipt."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Separate measured facts, plausible causes and proposed interventions in this diagnosis.",
+    "status": "PREVIOUSLY_COMPLETED",
+    "reason": "See retained diagnosis receipt."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Define one successor question, causal mechanism, assumptions, falsifier and intended contribution; do not simply rename S3.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Review nearest retrieval, residual-learning, online-adaptation and probabilistic-forecasting prior art; document novelty collisions and simpler alternatives.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Declare the complete trial/compute budget, fixed seeds, stopping rules, failure handling and decision authority before new fits.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Register all previously inspected assets/windows and keep them development-only; identify genuinely untouched evidence for final assessment.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "1. Preserve evidence and define the successor",
+    "item": "Define acceptable completion as a defensible supported, mixed, negative or inconclusive result, with precise claim scope.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Acquire the canonical panel and sidecar, or explicitly limit the successor to public exploratory research. An exploratory study cannot satisfy canonical confirmation.",
+    "status": "BLOCKED_DATA",
+    "reason": "Canonical panel and provenance sidecar absent; public survivor samples cannot replace them."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Verify provenance, access rights, source versions, actual availability timestamps, identifiers, corporate actions, delistings/terminal outcomes, historical eligibility and FX where required.",
+    "status": "BLOCKED_DATA",
+    "reason": "Canonical panel and provenance sidecar absent; public survivor samples cannot replace them."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Specify return target, horizon, units, timing, currency, missingness and execution assumptions; never treat yield as bond return or reconstruct historical eligibility from current survivors.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Purge label-maturity overlap at every fit, selection, calibration, residual, development and confirmation boundary.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Include enough independent dates/regimes to resolve the declared 0.01-nat effect; estimate precision/power using development evidence without inspecting protected outcomes.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Keep seeds, correlated assets and overlapping windows distinct from independent financial histories; do not multiply the effective sample size by their counts.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "2. Data and information boundaries",
+    "item": "Predeclare missing/zero-quote rules and exclusions; preserve original rejected records and fail closed on unavailable provenance.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Audit convergence, selected checkpoints, clipping, mean bias and train-only output units under a bounded budget; no indefinite epoch search.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Specify recent rolling-origin fitting with clean subsequent calibration/residual blocks; keep base and memory-off controls identical.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Ensure each stored residual references the exact frozen base/scaler/calibrator version; invalidate or rebuild incompatible banks at a declared base-version transition.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Test calibration against identity/raw forecasts under the same chronological selection budget; penalize unnecessary movement from identity.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Report NLL, MAE/RMSE, directional Brier, interval coverage/width and PIT diagnostics, with date-level uncertainty and declared conditioning groups.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "3. Base predictor and probability calibration",
+    "item": "Compare JEPA on/off under matched data and compute; retain it only if the claimed benefit survives its control, or document its limited role.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Measure per-query candidate counts, ages, norms/distances, neighbor concentration, dependency-aware support, correction size and realized delayed NLL contribution.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Test dimension-independent distance scaling as one isolated successor intervention, preserving the old metric as a control. Do not alter the frozen predecessor.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Establish incremental nearest-neighbor relevance over age/asset-matched random retrieval, recent averaging, unconditional residual averages and simple volatility adaptation.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "If warranted, test cross-fitted task-relevant keys on future residual distributions. S3 already tried one ridge projection; a new proposal must explain its material difference.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Specify mean and risk correction estimands separately, including Student-t scale versus standard deviation and centering after a mean shift.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Shrink unsupported corrections to zero; calibrate support from matured out-of-sample evidence rather than geometric proximity alone. Test a null nonharm criterion.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Select gate/calibration choices across nested chronological development blocks with fixed complexity penalties or a preregistered conservative rule.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Test capacity/pooling/retention only under matched evidence and compute; bigger, dual and cross-asset banks already lack consistent S3 benefit.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Audit delayed utility credit: its objective must match deployed NLL, and shared credit to all retrieved episodes must not be assumed to identify each episode's causal value.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Test missing/delayed labels, long gaps, abrupt shifts, no available neighbors, stale banks and serialization/resume equivalence. Predictions must be invariant to unavailable future labels.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "4. Retrieval, memory and gate",
+    "item": "Test generated recurrence with noisy/hidden state and realistic key extraction, plus null and misspecified-key controls; distinguish supplied oracle information from learned relevance.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Freeze a small primary sequence: unchanged baseline; recent base/calibration; revised distance only; conservative gate only; then a justified combination. Fix the exact matrix before outcomes.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Include zero, historical mean, Ridge, XGBoost, no-JEPA and appropriate simple volatility/adaptation controls. Add strong task-relevant forecasting baselines within a declared fair budget.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Hold information, base checkpoint, calibration opportunities and budgets fixed for the primary memory-on/off attribution.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Give online comparison methods the same matured-label access; compare added memory cost against spending equivalent resources on the base.",
+    "status": "BLOCKED_COMPUTE_ADMISSION",
+    "reason": "Current free plus speculative snapshot about 92 MiB, below 512 MiB normal floor; no new fits launched."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Retain every seed, failed cell and declared comparison; run source-bound arithmetic/completeness checks before interpreting results.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Report per-window effects, paired uncertainty, predeclared multiplicity handling and block-length sensitivity. No favorable subgroup can replace the primary claim.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "5. Discriminating development experiments",
+    "item": "Stop if meaningful residual predictability or relevance is absent, if confidence remains unresolved within budget, or if simple controls explain the gain. Record a valid negative result.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Consolidate effective configuration: the S3 public JSON retains stale five-epoch/single-seed prose while the frozen specification and worker use 12 epochs/three seeds. Preserve old files and emit an unambiguous resolved successor config.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Build a clean reproducible environment; execute affected integrity tests and the full required regression suite, preserving failures. The historical 217-test receipt is not a fresh check of future edits.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Test mathematical operators, finite/shape invariants, gradients where applicable, delayed timing, version mismatch rejection and deterministic checkpoint roundtrips.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Establish resource admission and bounded wall/RSS budgets; profile real latency, memory, storage and scaling. Prior slow-mode exceptions do not automatically extend to new experiments.",
+    "status": "BLOCKED_COMPUTE_ADMISSION",
+    "reason": "Current free plus speculative snapshot about 92 MiB, below 512 MiB normal floor; no new fits launched."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Complete a bounded end-to-end dry run including failure recovery, full manifests, raw predictions, metric reconstruction and reproducible tables/figures.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Preserve dirty working-tree evidence, locks and all predecessor source/data hashes; use fresh output directories and no destructive cleanup.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "6. Engineering and reproducibility",
+    "item": "Obtain independent reproduction of the main training/evaluation result. Recomputing saved likelihoods is not independent training reproduction.",
+    "status": "BLOCKED_REPRODUCTION",
+    "reason": "Fresh score audit passed; independent training/environment reproduction not performed."
+  },
+  {
+    "section": "7. Confirmation and investment scope",
+    "item": "Only after a mature supported development hypothesis exists, freeze code, data, splits, baselines, seeds, endpoint, 0.01-nat decision rule, statistics, exclusions, stopping and environment.",
+    "status": "BLOCKED_SCIENTIFIC_GATE",
+    "reason": "No admitted confirmation dataset or mature supported memory mechanism; protected outcomes remain untouched."
+  },
+  {
+    "section": "7. Confirmation and investment scope",
+    "item": "Evaluate the untouched admitted confirmation once, preserve its consumption receipt and classify the result honestly. Repair/re-freeze only for a documented validity defect, never an unfavorable valid result.",
+    "status": "BLOCKED_SCIENTIFIC_GATE",
+    "reason": "No admitted confirmation dataset or mature supported memory mechanism; protected outcomes remain untouched."
+  },
+  {
+    "section": "7. Confirmation and investment scope",
+    "item": "If making an investment claim, implement and validate executable holdings/cash/settlement accounting, costs, turnover, liquidity, defaults, FX and eligible-universe rules.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "7. Confirmation and investment scope",
+    "item": "For that separate scope, compare net returns, certainty equivalent, Sharpe under declared assumptions, drawdown and liability shortfall using synchronized nonoverlapping decisions and the same starting holdings.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "7. Confirmation and investment scope",
+    "item": "For competition allocation, obtain official participant universe/rules, current holdings, dated instrument facts and the team's numerical risk/funding policy. Research NLL alone cannot certify an allocation.",
+    "status": "BLOCKED_EXTERNAL_INPUTS",
+    "reason": "Official public website routes detailed material to team application; holdings and team policy absent."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Update the manuscript with S2/S3 and any successor results directly from verified artifacts; the existing 23-page draft predates the public results.",
+    "status": "COMPLETED_THIS_PASS",
+    "reason": "Public result tables generated from retained JSON; input hashes and source-to-table mapping saved."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Audit the full equation-to-code contract, assumptions, citations and novelty boundaries; include negative controls, failed attempts and unresolved limitations.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Complete a claim \u2192 experiment \u2192 raw artifact \u2192 analysis \u2192 table/figure map, with dates, uncertainty and scope for every numerical claim.",
+    "status": "COMPLETED_THIS_PASS",
+    "reason": "Public result tables generated from retained JSON; input hashes and source-to-table mapping saved."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Independently regenerate tables/figures and inspect the compiled paper visually; verify that the abstract and conclusion do not overstate the evidence.",
+    "status": "DOCUMENT_VERIFICATION",
+    "reason": "Tables regenerated; PDF compiled and rendered for visual inspection. Not independent model reproduction."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Complete environment lock, reproduction commands, data-access instructions, redistribution/license checks, authorship, bibliography, supplement and source/artifact hashes.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  },
+  {
+    "section": "8. Paper, audit and release",
+    "item": "Freeze a release identity and update canonical state/history with the defensible terminal disposition. Public submission, trading and third-party messages require separate scope.",
+    "status": "PENDING_SUCCESSOR_OR_REVIEW",
+    "reason": "Requires a separately specified successor and admitted execution; not claimed completed by this document pass."
+  }
+]

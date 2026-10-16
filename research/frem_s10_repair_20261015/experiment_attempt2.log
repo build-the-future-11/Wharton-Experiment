@@ -1,0 +1,4 @@
+......................                                                   [100%]
+22 passed in 10.68s
+       10.97 real        10.52 user         0.19 sys
+time: sysctl kern.clockrate: Operation not permitted

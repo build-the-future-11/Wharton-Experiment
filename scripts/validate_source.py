@@ -5,9 +5,32 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import math
 import sys
 import tomllib
 from pathlib import Path
+
+
+def strict_json(text: str):
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"Duplicate JSON key: {key}")
+            result[key] = value
+        return result
+
+    def reject_constant(value):
+        raise ValueError(f"Nonfinite JSON constant: {value}")
+
+    def finite_float(value):
+        result = float(value)
+        if not math.isfinite(result):
+            reject_constant(value)
+        return result
+
+    return json.loads(text, object_pairs_hook=unique_object, parse_constant=reject_constant,
+                      parse_float=finite_float)
 
 
 def inspect_source(root: Path) -> dict:
@@ -16,6 +39,8 @@ def inspect_source(root: Path) -> dict:
     json_files: list[str] = []
     test_functions: list[str] = []
     package = root / "src" / "frem"
+    if not (package / "__init__.py").is_file():
+        errors.append({"path": "src/frem/__init__.py", "type": "missing_package"})
     for directory in (root / "src", root / "tests", root / "scripts"):
         for path in sorted(directory.rglob("*.py")):
             if "__pycache__" in path.parts:
@@ -54,10 +79,7 @@ def inspect_source(root: Path) -> dict:
             if path.name == "STATIC_VERIFICATION.json":
                 continue
             try:
-                json.loads(
-                    path.read_text(encoding="utf-8"),
-                    parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)),
-                )
+                strict_json(path.read_text(encoding="utf-8"))
                 json_files.append(path.relative_to(root).as_posix())
             except (ValueError, UnicodeError, OSError) as exc:
                 errors.append(
@@ -68,7 +90,7 @@ def inspect_source(root: Path) -> dict:
                     }
                 )
     try:
-        json.loads((root / "RESEARCH_STATE.json").read_text(encoding="utf-8"))
+        strict_json((root / "RESEARCH_STATE.json").read_text(encoding="utf-8"))
         tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
     except (ValueError, UnicodeError, OSError) as exc:
         errors.append({"path": "project_metadata", "type": type(exc).__name__, "message": str(exc)})
@@ -98,7 +120,8 @@ def main() -> int:
     payload = json.dumps(result, indent=2, allow_nan=False) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(payload, encoding="utf-8")
+        with args.output.open("x", encoding="utf-8") as stream:
+            stream.write(payload)
     print(
         json.dumps(
             {

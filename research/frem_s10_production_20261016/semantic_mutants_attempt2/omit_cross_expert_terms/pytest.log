@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________ test_energy_score_cross_terms_and_law_invariance _______________
+
+    def test_energy_score_cross_terms_and_law_invariance() -> None:
+        """TEST-025/027/029: complementarity is lost if cross terms are omitted."""
+        atoms = np.array([[-1.0, 0, 0], [1.0, 0, 0]])
+        outcome = np.zeros(3)
+        experts = np.array([[1.0, 0], [0.0, 1], [0.5, 0.5]])
+        alpha = np.array([0.5, 0.5, 0.0])
+        coefficients = score_coefficients(atoms, experts, outcome)
+>       assert coefficients.score(alpha) == pytest.approx(0.5)
+E       assert 1.0 == 0.5 ± 5.0e-07
+E         
+E         comparison failed
+E         Obtained: 1.0
+E         Expected: 0.5 ± 5.0e-07
+
+tests/test_math_audit.py:50: AssertionError
+- generated xml file: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s10_production_20261016/semantic_mutants_attempt2/omit_cross_expert_terms/result.xml -
+=========================== short test summary info ============================
+FAILED tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance
+1 failed in 7.50s

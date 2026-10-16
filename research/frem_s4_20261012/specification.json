@@ -1,0 +1,40 @@
+{
+  "study": "FREM-S4-DEVELOPMENT-V1",
+  "declared_at": "2026-10-12T16:26:52.269606+00:00",
+  "status": "PRE_EXECUTION",
+  "scope": "Development reuse of spent S3 public 2023/2024 survivor histories; no fresh confirmation or investment inference",
+  "question": "Does dimension-independent distance weighting improve residual correction over the original distance on a recent frozen base with conservative selection?",
+  "contribution": "Bounded diagnostic intervention on known methods; novelty not claimed",
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "folds": [
+    "fresh_2023",
+    "fresh_2024"
+  ],
+  "base": "Last 96 pre-validation decision dates; core48/selection12/calibration12/residual24, strict label maturity purges; 5 epochs CPU batch32 patience3",
+  "calibration": "Inherited S3 grid fitted only chronological calibration block; retain raw reference",
+  "arms": [
+    "off",
+    "old_distance",
+    "euclidean_distance",
+    "matched_random"
+  ],
+  "correction": "Mean only; risk power zero isolates distance without changing variance estimand; keys multiplied sqrt(d) to turn existing mean squared distance into squared Euclidean distance; temperature fixed1",
+  "selection": "Weights0,.25,.5,1; two chronological halves of outer validation. Nonzero eligible only if each half improves date-balanced NLL over weight0 by more than .01; choose lowest whole-validation NLL, tie smaller weight. No evaluation labels used in selection.",
+  "primary": "Euclidean minus old distance under same recent base and gate; also gains against off; descriptive only, all seeds/folds retained. Existing inspected windows are development, not support for original confirmatory claim.",
+  "budget": {
+    "fits": 6,
+    "prediction_cells": 24,
+    "worker_seconds": 300,
+    "total_seconds": 1800,
+    "rss_mib": 768,
+    "threads": 1,
+    "nice": 10
+  },
+  "authorization": "User 12 Oct: run successor slowly like before; renews S2/S3 normal-memory-floor deviation while preserving snapshot and guard unchanged",
+  "protected": "No new download or 2025+ outcome access",
+  "stopping": "No outcome-driven rerun, retuning, omitted seed, or change to original completed studies. Any failed worker stops campaign and preserves receipt."
+}

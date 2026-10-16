@@ -1,0 +1,172 @@
+F.F...FFF......                                                          [100%]
+=================================== FAILURES ===================================
+___ test_burnin_nonzero_feature_scale_floor_is_strict[9.999999999999998e-13] ___
+
+scale = np.float64(9.999999999999998e-13)
+
+    @pytest.mark.parametrize("scale", (np.nextafter(1e-12, 0), 1e-12, np.nextafter(1e-12, 1)))
+    def test_burnin_nonzero_feature_scale_floor_is_strict(scale: float) -> None:
+        """TEST-009: equal alternating values give exact population SD at the threshold."""
+        records = tuple(
+            replace(item, x=np.full(12, scale if i % 2 else -scale)) for i, item in enumerate(_burnin_records())
+        )
+        fitted = fit_burnin_transform(records)
+        expected = 1.0 if scale < 1e-12 else scale
+>       np.testing.assert_array_equal(fitted.feature_scale, np.full(12, expected))
+E       AssertionError: 
+E       Arrays are not equal
+E       
+E       Mismatched elements: 12 / 12 (100%)
+E       First 5 mismatches are at indices:
+E        [0]: 1e-12 (ACTUAL), 1.0 (DESIRED)
+E        [1]: 1e-12 (ACTUAL), 1.0 (DESIRED)
+E        [2]: 1e-12 (ACTUAL), 1.0 (DESIRED)
+E        [3]: 1e-12 (ACTUAL), 1.0 (DESIRED)
+E        [4]: 1e-12 (ACTUAL), 1.0 (DESIRED)
+E       Max absolute difference among violations: 1.
+E       Max relative difference among violations: 1.
+E        ACTUAL: array([1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12,
+E              1.e-12, 1.e-12, 1.e-12, 1.e-12])
+E        DESIRED: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+
+successors/frem_s10/tests/test_catalog_boundaries_audit.py:38: AssertionError
+__ test_burnin_nonzero_feature_scale_floor_is_strict[1.0000000000000002e-12] ___
+
+scale = np.float64(1.0000000000000002e-12)
+
+    @pytest.mark.parametrize("scale", (np.nextafter(1e-12, 0), 1e-12, np.nextafter(1e-12, 1)))
+    def test_burnin_nonzero_feature_scale_floor_is_strict(scale: float) -> None:
+        """TEST-009: equal alternating values give exact population SD at the threshold."""
+        records = tuple(
+            replace(item, x=np.full(12, scale if i % 2 else -scale)) for i, item in enumerate(_burnin_records())
+        )
+        fitted = fit_burnin_transform(records)
+        expected = 1.0 if scale < 1e-12 else scale
+>       np.testing.assert_array_equal(fitted.feature_scale, np.full(12, expected))
+E       AssertionError: 
+E       Arrays are not equal
+E       
+E       Mismatched elements: 12 / 12 (100%)
+E       First 5 mismatches are at indices:
+E        [0]: 1.0000000000000004e-12 (ACTUAL), 1.0000000000000002e-12 (DESIRED)
+E        [1]: 1.0000000000000004e-12 (ACTUAL), 1.0000000000000002e-12 (DESIRED)
+E        [2]: 1.0000000000000004e-12 (ACTUAL), 1.0000000000000002e-12 (DESIRED)
+E        [3]: 1.0000000000000004e-12 (ACTUAL), 1.0000000000000002e-12 (DESIRED)
+E        [4]: 1.0000000000000004e-12 (ACTUAL), 1.0000000000000002e-12 (DESIRED)
+E       Max absolute difference among violations: 2.01948392e-28
+E       Max relative difference among violations: 2.01948392e-16
+E        ACTUAL: array([1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12,
+E              1.e-12, 1.e-12, 1.e-12, 1.e-12])
+E        DESIRED: array([1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12, 1.e-12,
+E              1.e-12, 1.e-12, 1.e-12, 1.e-12])
+
+successors/frem_s10/tests/test_catalog_boundaries_audit.py:38: AssertionError
+____ test_neighbor_ablation_keeps_exact_k_and_matched_fallback[16-64-None] _____
+
+neighbors = 16, count = 64, fallback = None
+
+    @pytest.mark.parametrize(
+        "neighbors,count,fallback",
+        ((16, 64, None), (64, 64, "INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS"), (64, 65, None)),
+    )
+    def test_neighbor_ablation_keeps_exact_k_and_matched_fallback(
+        neighbors: int, count: int, fallback: str | None
+    ) -> None:
+        """TEST-061: 16/64-neighbor differences propagate without changing shared atoms."""
+>       config = ForecastConfig(neighbors=neighbors, concentration_floor=neighbors / 2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_catalog_boundaries_audit.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<string>:15: in __init__
+    ???
+successors/frem_s10/src/frem_s10/model/config.py:30: in __post_init__
+    self.validate()
+successors/frem_s10/src/frem_s10/model/config.py:42: in validate
+    strict_int(getattr(self, name), name=name, minimum=1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 8.0
+
+    def strict_int(value: object, *, name: str, minimum: int | None = None) -> int:
+        """Require an ordinary integer, rejecting booleans and implicit conversion."""
+        if type(value) is not int or (minimum is not None and value < minimum):
+>           raise ContractError(f"{name}: integer outside declared domain", field=name)
+E           frem_s10.errors.ContractError: concentration_floor: integer outside declared domain
+
+successors/frem_s10/src/frem_s10/metadata.py:37: ContractError
+_ test_neighbor_ablation_keeps_exact_k_and_matched_fallback[64-64-INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS] _
+
+neighbors = 64, count = 64, fallback = 'INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS'
+
+    @pytest.mark.parametrize(
+        "neighbors,count,fallback",
+        ((16, 64, None), (64, 64, "INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS"), (64, 65, None)),
+    )
+    def test_neighbor_ablation_keeps_exact_k_and_matched_fallback(
+        neighbors: int, count: int, fallback: str | None
+    ) -> None:
+        """TEST-061: 16/64-neighbor differences propagate without changing shared atoms."""
+>       config = ForecastConfig(neighbors=neighbors, concentration_floor=neighbors / 2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_catalog_boundaries_audit.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<string>:15: in __init__
+    ???
+successors/frem_s10/src/frem_s10/model/config.py:30: in __post_init__
+    self.validate()
+successors/frem_s10/src/frem_s10/model/config.py:42: in validate
+    strict_int(getattr(self, name), name=name, minimum=1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 32.0
+
+    def strict_int(value: object, *, name: str, minimum: int | None = None) -> int:
+        """Require an ordinary integer, rejecting booleans and implicit conversion."""
+        if type(value) is not int or (minimum is not None and value < minimum):
+>           raise ContractError(f"{name}: integer outside declared domain", field=name)
+E           frem_s10.errors.ContractError: concentration_floor: integer outside declared domain
+
+successors/frem_s10/src/frem_s10/metadata.py:37: ContractError
+____ test_neighbor_ablation_keeps_exact_k_and_matched_fallback[64-65-None] _____
+
+neighbors = 64, count = 65, fallback = None
+
+    @pytest.mark.parametrize(
+        "neighbors,count,fallback",
+        ((16, 64, None), (64, 64, "INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS"), (64, 65, None)),
+    )
+    def test_neighbor_ablation_keeps_exact_k_and_matched_fallback(
+        neighbors: int, count: int, fallback: str | None
+    ) -> None:
+        """TEST-061: 16/64-neighbor differences propagate without changing shared atoms."""
+>       config = ForecastConfig(neighbors=neighbors, concentration_floor=neighbors / 2)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+successors/frem_s10/tests/test_catalog_boundaries_audit.py:113: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<string>:15: in __init__
+    ???
+successors/frem_s10/src/frem_s10/model/config.py:30: in __post_init__
+    self.validate()
+successors/frem_s10/src/frem_s10/model/config.py:42: in validate
+    strict_int(getattr(self, name), name=name, minimum=1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 32.0
+
+    def strict_int(value: object, *, name: str, minimum: int | None = None) -> int:
+        """Require an ordinary integer, rejecting booleans and implicit conversion."""
+        if type(value) is not int or (minimum is not None and value < minimum):
+>           raise ContractError(f"{name}: integer outside declared domain", field=name)
+E           frem_s10.errors.ContractError: concentration_floor: integer outside declared domain
+
+successors/frem_s10/src/frem_s10/metadata.py:37: ContractError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_catalog_boundaries_audit.py::test_burnin_nonzero_feature_scale_floor_is_strict[9.999999999999998e-13]
+FAILED successors/frem_s10/tests/test_catalog_boundaries_audit.py::test_burnin_nonzero_feature_scale_floor_is_strict[1.0000000000000002e-12]
+FAILED successors/frem_s10/tests/test_catalog_boundaries_audit.py::test_neighbor_ablation_keeps_exact_k_and_matched_fallback[16-64-None]
+FAILED successors/frem_s10/tests/test_catalog_boundaries_audit.py::test_neighbor_ablation_keeps_exact_k_and_matched_fallback[64-64-INSUFFICIENT_LEAVE_ONE_OUT_CONTEXTS]
+FAILED successors/frem_s10/tests/test_catalog_boundaries_audit.py::test_neighbor_ablation_keeps_exact_k_and_matched_fallback[64-65-None]
+5 failed, 10 passed in 0.64s

@@ -1,0 +1,12 @@
+{
+  "verification_type": "AST parsing, in-memory compilation, local-module presence, JSON/TOML syntax",
+  "python_version": "3.12.14",
+  "python_file_count": 59,
+  "json_file_count": 79,
+  "authored_test_function_count": 196,
+  "errors": [],
+  "static_status": "PASS",
+  "runtime_tests_executed": false,
+  "research_runs_executed": false,
+  "limits": "No package import, dependency resolution, runtime API, numerical, gradient, device, model or data correctness is established by this check."
+}

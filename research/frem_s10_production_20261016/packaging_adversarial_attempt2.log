@@ -1,0 +1,156 @@
+...FFFFFFFFF..                                                           [100%]
+=================================== FAILURES ===================================
+______ test_unbound_installable_wheel_members_rejected[sitecustomize.py] _______
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_unbound_installable_wheel0')
+member = 'sitecustomize.py'
+
+    @pytest.mark.parametrize(
+        "member", ["sitecustomize.py", "injected.pth", "frem_s10-0.1.0.data/purelib/injected.py"]
+    )
+    def test_unbound_installable_wheel_members_rejected(tmp_path: Path, member: str) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        wheels[member] = b"# inert generated injection fixture, never executed\n"
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:105: Failed
+________ test_unbound_installable_wheel_members_rejected[injected.pth] _________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_unbound_installable_wheel1')
+member = 'injected.pth'
+
+    @pytest.mark.parametrize(
+        "member", ["sitecustomize.py", "injected.pth", "frem_s10-0.1.0.data/purelib/injected.py"]
+    )
+    def test_unbound_installable_wheel_members_rejected(tmp_path: Path, member: str) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        wheels[member] = b"# inert generated injection fixture, never executed\n"
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:105: Failed
+_ test_unbound_installable_wheel_members_rejected[frem_s10-0.1.0.data/purelib/injected.py] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_unbound_installable_wheel2')
+member = 'frem_s10-0.1.0.data/purelib/injected.py'
+
+    @pytest.mark.parametrize(
+        "member", ["sitecustomize.py", "injected.pth", "frem_s10-0.1.0.data/purelib/injected.py"]
+    )
+    def test_unbound_installable_wheel_members_rejected(tmp_path: Path, member: str) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        wheels[member] = b"# inert generated injection fixture, never executed\n"
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:105: Failed
+_ test_unbound_sdist_payload_cannot_distribute_arbitrary_data[frem_s10-0.1.0/retained_prices.json] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_unbound_sdist_payload_can0')
+member = 'frem_s10-0.1.0/retained_prices.json'
+
+    @pytest.mark.parametrize("member", ["frem_s10-0.1.0/retained_prices.json", "alien-root/README.md"])
+    def test_unbound_sdist_payload_cannot_distribute_arbitrary_data(tmp_path: Path, member: str) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        sources[member] = b'{"fixture":"no financial observations"}\n'
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:114: Failed
+_ test_unbound_sdist_payload_cannot_distribute_arbitrary_data[alien-root/README.md] _
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_unbound_sdist_payload_can1')
+member = 'alien-root/README.md'
+
+    @pytest.mark.parametrize("member", ["frem_s10-0.1.0/retained_prices.json", "alien-root/README.md"])
+    def test_unbound_sdist_payload_cannot_distribute_arbitrary_data(tmp_path: Path, member: str) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        sources[member] = b'{"fixture":"no financial observations"}\n'
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:114: Failed
+___________ test_source_symlink_cannot_supply_verified_package_bytes ___________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_source_symlink_cannot_sup0')
+
+    def test_source_symlink_cannot_supply_verified_package_bytes(tmp_path: Path) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        source = tmp_path / PACKAGE / "src/frem_s10/science.json"
+        external = tmp_path / "unbound.json"
+        external.write_bytes(source.read_bytes())
+        source.unlink()
+        source.symlink_to(external)
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:126: Failed
+________ test_current_but_unbound_source_data_cannot_enter_distribution ________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_current_but_unbound_sourc0')
+
+    def test_current_but_unbound_source_data_cannot_enter_distribution(tmp_path: Path) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        payload = b'{"fixture":"not a registered scientific configuration"}\n'
+        name = "frem_s10/retained_prices.json"
+        (tmp_path / PACKAGE / "src" / name).write_bytes(payload)
+        wheels[name] = payload
+        sources[f"frem_s10-0.1.0/src/{name}"] = payload
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:138: Failed
+___________ test_wheel_entry_point_cannot_differ_from_frozen_project ___________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_wheel_entry_point_cannot_0')
+
+    def test_wheel_entry_point_cannot_differ_from_frozen_project(tmp_path: Path) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        wheels["frem_s10-0.1.0.dist-info/entry_points.txt"] = (
+            b"[console_scripts]\ns10-research = frem_s10.runtime.worker:main\n"
+        )
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:148: Failed
+____________ test_source_distribution_build_contract_cannot_change _____________
+
+tmp_path = PosixPath('/private/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/pytest-of-ryan/pytest-91/test_source_distribution_build0')
+
+    def test_source_distribution_build_contract_cannot_change(tmp_path: Path) -> None:
+        wheel, sdist, wheels, sources = _fixture(tmp_path)
+        sources["frem_s10-0.1.0/pyproject.toml"] = b'[build-system]\nbuild-backend="unbound.backend"\n'
+        _archives(wheel, sdist, wheels, sources)
+>       with pytest.raises(IntegrityError):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'frem_s10.errors.IntegrityError'>
+
+successors/frem_s10/tests/test_packaging_audit.py:156: Failed
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_unbound_installable_wheel_members_rejected[sitecustomize.py]
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_unbound_installable_wheel_members_rejected[injected.pth]
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_unbound_installable_wheel_members_rejected[frem_s10-0.1.0.data/purelib/injected.py]
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_unbound_sdist_payload_cannot_distribute_arbitrary_data[frem_s10-0.1.0/retained_prices.json]
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_unbound_sdist_payload_cannot_distribute_arbitrary_data[alien-root/README.md]
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_source_symlink_cannot_supply_verified_package_bytes
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_current_but_unbound_source_data_cannot_enter_distribution
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_wheel_entry_point_cannot_differ_from_frozen_project
+FAILED successors/frem_s10/tests/test_packaging_audit.py::test_source_distribution_build_contract_cannot_change
+9 failed, 5 passed in 0.26s

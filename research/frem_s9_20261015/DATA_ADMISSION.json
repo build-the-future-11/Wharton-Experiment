@@ -1,0 +1,47 @@
+{
+  "scope": "RETROSPECTIVE_PRE_2017_ONLY_NOT_PIT_CERTIFIED",
+  "assets": [
+    "SPY",
+    "TLT",
+    "GLD"
+  ],
+  "daily_sessions": 3021,
+  "weekly_anchors": 626,
+  "samples": 608,
+  "first_origin": 1113220800.0,
+  "last_outcome": 1482849000.0,
+  "identities": {
+    "data/s6_real_etf_20261014/SPY.json": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+    "data/s6_real_etf_20261014/TLT.json": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+    "data/s6_real_etf_20261014/GLD.json": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b"
+  },
+  "source_acquisition_sha256": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+  "source_retrieved_at": [
+    "2026-10-13T19:55:15.350302+00:00",
+    "2026-10-13T19:55:15.715551+00:00",
+    "2026-10-13T19:55:15.981037+00:00"
+  ],
+  "protected_access": false,
+  "redistribution_rights_verified": false,
+  "folds": {
+    "A": {
+      "train_rows": 243,
+      "evaluation_blocks": 38,
+      "training_latest_available": 1262044800.0,
+      "fit_cutoff": 1262304000.0,
+      "evaluation_first_origin": 1262606400.0,
+      "evaluation_last_outcome": 1354545000.0
+    },
+    "B": {
+      "train_rows": 399,
+      "evaluation_blocks": 51,
+      "training_latest_available": 1356393600.0,
+      "fit_cutoff": 1356998400.0,
+      "evaluation_first_origin": 1357560000.0,
+      "evaluation_last_outcome": 1480948200.0
+    }
+  },
+  "seconds": 0.18482595800014678,
+  "peak_rss_mib": 28.984375,
+  "market_fits": 0
+}

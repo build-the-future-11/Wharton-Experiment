@@ -1,10 +1,12 @@
 # FREM: Causal Fourier–Reservoir Engram Memory
 
+Latest evidence: [research completion status](docs/RESEARCH_COMPLETION_STATUS.md) and the [completed FREM-S3 report](research/frem_s3_20261011/REPORT.md). S2, the six-window public study, and S3 have completed exploratory runs. S3 did not establish its primary memory advantage. The 23-page manuscript predates those public results and submission readiness remains blocked.
+
 **A source-complete, engineering-verified prospective research package. Version 0.1.1, updated 11 October 2026. Scientific status: NOT EVALUATED.**
 
 FREM turns the proposed JEPA/reservoir/Fourier/memory idea into a specific, falsifiable financial forecasting system. The candidate contribution is **retaining bounded episodes according to predictive utility observed only after their outcomes become available**. It must beat the same predictor without memory and simpler memory-retention policies before that contribution can be claimed.
 
-This delivery includes the forecasting model, training and inference, seven baseline families, ablations, data adapters, statistical analysis, portfolio constraints and fallbacks, Laura Gao’s funding requirements, a paper, and the Codex execution handoff. The current checkout passes 163 FREM tests, 67 RE-JEPA v0.3 tests, 45 RENG-JEPA v0.1 tests, full-scope Ruff, static validation, and package builds. Those are engineering checks only: no admitted market dataset was supplied, no market model fit or backtest ran, and no protected outcome was accessed. There are no trained market weights or invented performance tables.
+This delivery includes the forecasting model, training and inference, seven baseline families, ablations, data adapters, statistical analysis, portfolio constraints and fallbacks, Laura Gao’s funding requirements, a paper, and the Codex execution handoff. The S3 campaign passed 217 regression tests; earlier successor receipts retain 67 RE-JEPA v0.3 and 45 RENG-JEPA v0.1 passes. Saved public-sample checkpoints and exploratory results now exist. They do not satisfy the canonical point-in-time market contract, protected confirmation, profitability, or competition allocation gates. See [release inventory instructions](docs/RELEASE_INVENTORY.md) for byte verification and historical source recovery; old build/test receipts do not certify edited source.
 
 ## Start here
 

@@ -1,0 +1,1 @@
+{"status": "VERIFIED", "prediction_rows": 133844, "maximum_nll_error": 2.220446049250313e-15, "old_artifacts_unchanged": 582, "frozen_sources_unchanged": 49, "maximum_sampled_rss_mib": 407.671875, "processes": 53, "protected_outcomes_accessed": false, "scope": "Score and artifact verification, not independent experiment replication"}

@@ -1,0 +1,17 @@
+{
+  "snapshot": {
+    "available_mib": 76.90625,
+    "pageouts": 76681
+  },
+  "normal_floor_mib": 512,
+  "deviation": "Explicit user renewed slow execution like S2/S3 on 12 October; normal guard unchanged",
+  "limits": {
+    "fits": 6,
+    "prediction_cells": 24,
+    "worker_seconds": 300,
+    "total_seconds": 1800,
+    "rss_mib": 768,
+    "threads": 1,
+    "nice": 10
+  }
+}

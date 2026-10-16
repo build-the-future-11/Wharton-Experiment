@@ -1,0 +1,65 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "pytest",
+        "-q",
+        "successors/frem_s10/tests/test_production_data_audit.py",
+        "successors/frem_s10/tests/test_production_verification_audit.py",
+        "successors/frem_s10/tests/test_catalog_faults_audit.py::test_every_source_convention_and_schema_rejects_unsupported_values",
+        "successors/frem_s10/tests/test_catalog_faults_audit.py::test_source_asset_order_and_terminal_event_cannot_be_silently_reinterpreted",
+        "successors/frem_s10/tests/test_catalog_faults_audit.py::test_current_quote_affects_valuation_but_not_available_context"
+      ],
+      "exit": 0,
+      "seconds": 4.312544208019972,
+      "log": "research/frem_s10_production_20261016/final_data_boundary_attempt1_0.log",
+      "log_sha256": "c3be67dfcc86fb04b3b3d42f65453ad7cbcc6586d45c6bce804a2d01d5b25df5"
+    },
+    {
+      "argv": [
+        "ruff",
+        "check",
+        "successors/frem_s10/tests/test_production_data_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 0.13215791701804847,
+      "log": "research/frem_s10_production_20261016/final_data_boundary_attempt1_1.log",
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "argv": [
+        "ruff",
+        "format",
+        "--check",
+        "successors/frem_s10/tests/test_production_data_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 0.02279879100387916,
+      "log": "research/frem_s10_production_20261016/final_data_boundary_attempt1_2.log",
+      "log_sha256": "fd2299c9f1c6dc869070883e281051bfe93aacf66c1a3b0069f45b4aa410ca50"
+    },
+    {
+      "argv": [
+        "mypy",
+        "--strict",
+        "successors/frem_s10/tests/test_production_data_audit.py"
+      ],
+      "exit": 0,
+      "seconds": 18.083676832990022,
+      "log": "research/frem_s10_production_20261016/final_data_boundary_attempt1_3.log",
+      "log_sha256": "5d4b6d285b77932e3d08212c3b4974d0a803f98ec60408ac6ccf6a063fa6c19e"
+    }
+  ],
+  "files": {
+    "successors/frem_s10/tests/test_production_data_audit.py": "3ed7f230b48a82e1251d7b17c1decc77fb0a3282c302aaf60a856f3ff7b43003",
+    "successors/frem_s10/tests/test_catalog_faults_audit.py": "80e61454f4f227a3b7e40033f24fffd26a21a64db7ccf66e7c44a84f29461a23",
+    "successors/frem_s10/tests/test_production_verification_audit.py": "aaa68a76217d404029812c97bd0b293f25da06353c626cae5fa8a5b9e6ac6599",
+    "successors/frem_s10/src/frem_s10/data/production.py": "6783852585cf4f4d4d49f689a6c58fa15279347605c4214e9cd9561fcfaf4e71",
+    "successors/frem_s10/src/frem_s10/data/admission.py": "4521a8b522d21ca8b59cbed317b979c2c9bc06a42333ec79601e0d5b38fbd133",
+    "successors/frem_s10/src/frem_s10/runtime/provenance.py": "3facabda79ac131d25c33d70d403831b381faf79b1152c6d6240c8a544e95639"
+  },
+  "scope": "BOUNDED_GENERATED_SOURCE_AVAILABILITY_AND_ENVIRONMENT_BOUNDARIES",
+  "builds": 0,
+  "model_runs": 0,
+  "market_runs": 0
+}

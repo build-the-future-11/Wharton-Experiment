@@ -1,0 +1,19 @@
+{
+  "input_dim": 1,
+  "state_dim": 8,
+  "latent_dim": 8,
+  "rff_dim": 8,
+  "epochs": 30,
+  "learning_rate": 0.02,
+  "jepa_weight": 0.1,
+  "variance_weight": 0.01,
+  "ema": 0.95,
+  "ridge": 1.0,
+  "df": 5.0,
+  "seed": 47,
+  "ripple_delay": 1,
+  "ripple_steps": 3,
+  "quantization_step": 0.0001,
+  "use_xgboost": true,
+  "context": "half"
+}

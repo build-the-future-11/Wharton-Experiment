@@ -1,0 +1,36 @@
+{
+  "status": "BLOCKED",
+  "reasons": [
+    "FREE_PLUS_SPECULATIVE_BELOW_512_MIB",
+    "PAGEOUT_COUNTER_CHANGED"
+  ],
+  "floor_mib": 512,
+  "samples": [
+    {
+      "timestamp": "2026-10-16T02:31:42.181495+00:00",
+      "page_size_bytes": 16384,
+      "free_pages": 11682,
+      "speculative_pages": 3325,
+      "pageouts": 792299,
+      "available_mib": 234.484375
+    },
+    {
+      "timestamp": "2026-10-16T02:31:43.189218+00:00",
+      "page_size_bytes": 16384,
+      "free_pages": 8065,
+      "speculative_pages": 3877,
+      "pageouts": 792304,
+      "available_mib": 186.59375
+    },
+    {
+      "timestamp": "2026-10-16T02:31:44.198558+00:00",
+      "page_size_bytes": 16384,
+      "free_pages": 4236,
+      "speculative_pages": 6363,
+      "pageouts": 792305,
+      "available_mib": 165.609375
+    }
+  ],
+  "scientific_execution": false,
+  "scope": "host admission only; no worker supervision certified"
+}

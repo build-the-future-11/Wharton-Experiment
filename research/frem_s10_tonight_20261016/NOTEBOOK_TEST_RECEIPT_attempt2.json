@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-W",
+    "error::ResourceWarning",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research/frem_s10_tonight_20261016",
+    "-p",
+    "test_tonight_runner.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 1.026662958000088,
+  "stdout": "test_abandoned_wrapper_and_charges (test_tonight_runner.SafetyTests.test_abandoned_wrapper_and_charges) ... ok\ntest_archive_inventory_and_idempotent_extract (test_tonight_runner.SafetyTests.test_archive_inventory_and_idempotent_extract) ... ok\ntest_archive_traversal_duplicate_symlink_rejected (test_tonight_runner.SafetyTests.test_archive_traversal_duplicate_symlink_rejected) ... ok\ntest_deadline_expired_and_insufficient_cleanup (test_tonight_runner.SafetyTests.test_deadline_expired_and_insufficient_cleanup) ... ok\ntest_exact_stage_semantics (test_tonight_runner.SafetyTests.test_exact_stage_semantics) ... ok\ntest_failed_or_abandoned_commands_block_restart (test_tonight_runner.SafetyTests.test_failed_or_abandoned_commands_block_restart) ... ok\ntest_final_cli_json_after_live_logs (test_tonight_runner.SafetyTests.test_final_cli_json_after_live_logs) ... ok\ntest_final_export_failure_cannot_claim_overall_completion (test_tonight_runner.SafetyTests.test_final_export_failure_cannot_claim_overall_completion) ... ok\ntest_gpu_request_refused (test_tonight_runner.SafetyTests.test_gpu_request_refused) ... ok\ntest_metadata_block_does_not_import_or_run_numerical_identity (test_tonight_runner.SafetyTests.test_metadata_block_does_not_import_or_run_numerical_identity) ... {\"status\": \"BLOCKED\"}\nok\ntest_no_command_on_exhausted_cap (test_tonight_runner.SafetyTests.test_no_command_on_exhausted_cap) ... ok\ntest_no_numerical_imports_on_module_load (test_tonight_runner.SafetyTests.test_no_numerical_imports_on_module_load) ... ok\ntest_real_stdlib_subprocess_streams_and_pairs_command_receipts (test_tonight_runner.SafetyTests.test_real_stdlib_subprocess_streams_and_pairs_command_receipts) ... ok\ntest_receipt_requires_external_attestation (test_tonight_runner.SafetyTests.test_receipt_requires_external_attestation) ... ok\ntest_repeat_bootstrap_reservation_accumulates (test_tonight_runner.SafetyTests.test_repeat_bootstrap_reservation_accumulates) ... ok\ntest_sealed_source_matches_and_modified_inventory_refused (test_tonight_runner.SafetyTests.test_sealed_source_matches_and_modified_inventory_refused) ... ok\ntest_sigterm_cleans_up_separate_child_process_group (test_tonight_runner.SafetyTests.test_sigterm_cleans_up_separate_child_process_group) ... ok\ntest_subprocess_timeout_is_failed_and_cannot_be_retried (test_tonight_runner.SafetyTests.test_subprocess_timeout_is_failed_and_cannot_be_retried) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.785s\n\nOK\n",
+  "tests": 18,
+  "notebook_sections": 12,
+  "notebook_code_cells_ast_validated": 8,
+  "embedded_payload_hashes_verified": true,
+  "numerical_imports": false,
+  "cloud_execution": false,
+  "scientific_status": "NOT_EVALUATED",
+  "files": {
+    "tonight_runner.py": "888de270f55b9ecde7d7ef67106fb6f897a97825c0a7df0000d531e16a6ac433",
+    "build_notebook.py": "74b8ed8348092cfa0e2bd6ec53fa894489e14f6bd40eab40986e700eaa7acbf8",
+    "test_tonight_runner.py": "417733ad3887ad103b211ef5eb981a5317e13a5aaaa6483add711ca387979b9a",
+    "FREM_S10_TONIGHT_CPU.ipynb": "2daddfea83119df3392621a60443fd9c88a0a53696cc4a2045d2bc61f0a5e01b",
+    "NOTEBOOK_USAGE.md": "5d55f66243d3782d48f752fedeffd8c4f91a9f14e686630a1e7f2f3abb2f0616"
+  }
+}

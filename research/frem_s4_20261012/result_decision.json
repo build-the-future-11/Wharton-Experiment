@@ -1,0 +1,9 @@
+{
+  "observation": "All6 S4 fits/24 outputs completed; conservative gate selected zero in all non-off cells.",
+  "hypothesized_cause": "Insufficient consistent incremental validation gain; distance effect not identified when gate is zero.",
+  "change": "Preserve terminal development result, add paper section and public-rule/conditional Laura allocation report. No retuning.",
+  "predicted_effect": "Accurate disposition without confirmatory or current prediction claims.",
+  "discriminating_experiment": "Fixed four-arm six-fit S4 study completed with 247 tests and independent3168-row arithmetic audit.",
+  "result": "No memory gain; 2023NLL -1.332779,2024NLL -1.411278 for all arms; peak401.84MiB;64.76s. Protected unchanged.",
+  "status": "COMPLETE_DEVELOPMENT_NO_GAIN"
+}

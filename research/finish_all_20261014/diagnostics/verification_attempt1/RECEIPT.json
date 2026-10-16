@@ -1,0 +1,8 @@
+{
+  "tests_command": "rtk proxy python3 -m unittest discover -s tests -p test_s8_completion_diagnostics.py -v",
+  "tests_result": "8 tests passed",
+  "lint_command": "rtk proxy .venv/bin/ruff check scripts/diagnose_s8_completion.py tests/test_s8_completion_diagnostics.py",
+  "lint_exit": 1,
+  "lint_findings": ["I001 import block formatting", "C401 generator passed to set", "RUF007 adjacent-pair zip instead of pairwise"],
+  "disposition": "Source retained before style-only repair. No market execution occurred."
+}

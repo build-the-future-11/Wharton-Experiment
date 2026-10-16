@@ -1,0 +1,18 @@
+{
+  "label": "baseline",
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=result.xml",
+    "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+    "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+    "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance",
+    "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values"
+  ],
+  "returncode": 0,
+  "scope": "GENERATED_ENGINEERING"
+}

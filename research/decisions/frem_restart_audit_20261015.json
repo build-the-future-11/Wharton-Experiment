@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-15T14:31:56.686298+00:00",
+  "observation": "Saved S8 primary failed economically; user requested a complete evidence-bound restart with an idea gate, finite development and preserved negatives.",
+  "hypothesized_cause": "Observed gross losses in TLT/GLD exceed SPY gains; fees add loss. Horizon, finite-moment decision inputs, calibration and joint risk remain separately testable explanations, not established causal cures.",
+  "change": "Add isolated streaming saved-ledger auditor and mathematical reference contracts; focused primary-source review; complete C01 attribution and data/checkpoint feasibility inventory. Repair audit readers for retained schemas, strict asset identity and lint without altering any frozen model source or prior output.",
+  "predicted_effect": "Reliable attribution and rejection of invalid economic inputs; no guaranteed predictive or economic performance effect.",
+  "discriminating_experiment": "Proposed separate horizon-baseline and joint-risk comparisons under fixed controls, at most 12 fits/60 minutes/one worker if readiness is established. Exact data, folds, precision and scientific freeze remain unresolved.",
+  "result": "AUDIT_COMPLETE_SUCCESSOR_CHECKPOINT_1_NOT_READY",
+  "report": "research/restart_20261015/REPORT.md",
+  "attribution_receipt": "research/restart_20261015/attribution_attempt5/RECEIPT.json",
+  "tests_passed": 40,
+  "saved_strategy_ledgers_checked": 240,
+  "periods_checked": 36720,
+  "preserved_identities": 49,
+  "new_model_fits": 0,
+  "new_policy_replays": 0,
+  "protected_access": false,
+  "completed_protocols_reopened": false,
+  "scientific_thresholds_changed": false,
+  "independent_reproduction": false,
+  "report_sha256": "194a0663346ef99a46b84ed5dc20d6f2a538ad04b59bee92ad51e4de9fd969c5"
+}

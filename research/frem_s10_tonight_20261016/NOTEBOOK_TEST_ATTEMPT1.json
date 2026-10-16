@@ -1,0 +1,10 @@
+{
+  "status": "RETAINED_FAILED_REGRESSION",
+  "tests": 18,
+  "passed": 17,
+  "errors": 1,
+  "elapsed_seconds": 5.565,
+  "command": "python3 -B -W error::ResourceWarning -m unittest discover -s research/frem_s10_tonight_20261016 -p test_tonight_runner.py -v",
+  "runner_sha256": "5f879e3329c13dfdffe831299a47c905af7dff0b8c8f530f2cf753d790916497",
+  "failure": "SIGTERM fixture supervisor did not exit within5s: InterruptedError signal exception swallowed by selector retry. Repaired with dedicated RuntimeError subclass; no numerical work."
+}

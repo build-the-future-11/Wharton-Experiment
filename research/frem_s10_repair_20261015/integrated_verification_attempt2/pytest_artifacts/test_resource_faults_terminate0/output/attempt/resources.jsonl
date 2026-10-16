@@ -1,0 +1,1 @@
+{"event":{"elapsed_seconds":0.033351499994751066,"free_plus_speculative_mib":1024.0,"output_bytes":556,"owned_processes":[{"pid":57091,"start_identity":"Thu Oct 15 23:49:09 2026    "},{"pid":57259,"start_identity":"Thu Oct 15 23:49:50 2026    "}],"owned_rss_mib":261.359375,"pageouts":10},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}

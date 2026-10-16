@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-14T16:45:09.362372+00:00",
+  "status": "COMPLETE_SAME_HOST_BOUNDED_REVIEW",
+  "review": "research/finish_all_20261014/review/REVIEW.md",
+  "same_host_ai_agent_review": true,
+  "human_review": false,
+  "clean_environment": false,
+  "independent_market_retraining": false,
+  "market_fits": 0,
+  "protected_access": false,
+  "frozen_scientific_source_modified": false,
+  "s8_tests": {
+    "passed": 18,
+    "elapsed_seconds": 33.52,
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python -m pytest tests/s8 -q",
+    "resource_peak_measured": false,
+    "tiny_generated_integration_fit": true
+  },
+  "fresh_audit": "research/finish_all_20261014/review/s8_saved_audit.json",
+  "fresh_claim_verification": "research/finish_all_20261014/review/claims_and_identities.json",
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "P2",
+      "type": "paper_coverage",
+      "state": "communicated_to_parent_for_repair"
+    },
+    {
+      "id": "R2",
+      "severity": "P2",
+      "type": "status_resolution",
+      "state": "communicated_to_parent_for_repair"
+    },
+    {
+      "id": "R3",
+      "severity": "P2",
+      "type": "successor_reproduction_bundle",
+      "state": "communicated_to_parent_for_repair"
+    },
+    {
+      "id": "R4",
+      "severity": "scope_boundary",
+      "type": "wealth_target_not_frozen_S8_gate",
+      "state": "retain_historical_gate_and_report_arithmetic"
+    }
+  ],
+  "invalidating_s8_defect_found": false,
+  "files": {
+    "research/finish_all_20261014/review/REVIEW.md": "df6166ac6d2b4c8c6c3ed8852d15189f7d680f318249a6c623be0b7121833a96",
+    "research/finish_all_20261014/review/claims_and_identities.json": "c63144d879e66bfd9782c6e053ede693bcdc6e8174577b58d9371f08e69cf525",
+    "research/finish_all_20261014/review/s8_saved_audit.json": "5e081f8d7ced391df0236afede8c701245f16fa01635ba446019ffea2ad0ede3",
+    "research/finish_all_20261014/review/s8_tests.log": "9865d37bfba9298a699c0f4f76975b616d706516e49daf729a256ba57c55ae92",
+    "research/finish_all_20261014/review/verify_saved_claims.py": "34a1d39e7f30c4d22e83f867005a82f325fda459ef694257abfa16f91f592018"
+  }
+}

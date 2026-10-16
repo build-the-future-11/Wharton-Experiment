@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-10-13T02:04:16.227329+00:00",
+  "status": "MORNING_REVIEW_COMPLETE_TARGET_NOT_MET",
+  "accounting_audit": "research/frem_portfolio_20261012/morning_accounting_audit.json",
+  "accounting": {
+    "status": "PASS_INDEPENDENT_ACCOUNTING_RECONSTRUCTION",
+    "ledgers": 2276,
+    "periods": 34276,
+    "comparisons": 1424,
+    "max_absolute_arithmetic_residual": 4.0745362639427185e-10,
+    "new_fits": 0,
+    "independent_training_reproduction": false,
+    "source_files": 6,
+    "prediction_files": 90
+  },
+  "primary_cases": 32,
+  "primary_at_least_6pct": 0,
+  "primary_range": [
+    -0.029565878320196415,
+    0.003477615145270452
+  ],
+  "primary_memory_increment": 0.0,
+  "all_case_statistics": {
+    "S3": {
+      "cases": 224,
+      "positive": 71,
+      "at_least_6pct": 0,
+      "relative_ending_wealth_range": [
+        -0.03980953498451889,
+        0.027675762735939635
+      ]
+    },
+    "S4": {
+      "cases": 128,
+      "positive": 64,
+      "at_least_6pct": 0,
+      "relative_ending_wealth_range": [
+        -0.029565878320196415,
+        0.003477615145270452
+      ]
+    },
+    "slow": {
+      "cases": 1072,
+      "positive": 477,
+      "at_least_6pct": 39,
+      "relative_ending_wealth_range": [
+        -0.09544734329514593,
+        0.10847102830709532
+      ]
+    }
+  },
+  "s4_predecessor_files_verified": 155,
+  "new_framework_source_received": false,
+  "new_model_fits_across_overnight_task": 0,
+  "protected_outcomes_accessed": false,
+  "automation": {
+    "id": "frem-overnight-integration-and-morning-review",
+    "status": "PAUSED"
+  },
+  "limitations": [
+    "Exploratory reanalysis of spent retrospective survivor histories",
+    "Accounting reconstruction is not independent model training or proof of profitability",
+    "Dependent seeds, cost levels and market baskets are not independent trials",
+    "Twenty incomplete supplemental groups remain excluded and recorded",
+    "New quant/ML framework source and Laura allocation inputs remain unresolved"
+  ],
+  "artifact_sha256": {
+    "outputs/frem_portfolio_20261012_attempt1/freeze.json": "71a5b27d43793f49bde86008b5eb67e440482a607cc46c30cfc52d06e76d2d6a",
+    "outputs/frem_portfolio_20261012_attempt1/summary.json": "449bbeba54274f72faa4bdac5abc11474f38301477c2477381ef0bfd7bc4f1ba",
+    "outputs/frem_portfolio_20261012_attempt1/comparisons.csv": "1421e60d55d08ed853bce2ceb37e4d299266e39a969d13b0c89f16c55e53e6a7",
+    "research/frem_portfolio_20261012/morning_accounting_audit.json": "7dab1ebd8001071aca277dfffea1665ab1b4c21febe560a517a9f13c3f9be9e6",
+    "successors/frem_portfolio_v1/audit.py": "9c9647079d895af41a4eb4c80514293a69aa4ed83a75b1164fb6209eed14f3a4"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "READ_ONLY_MUTATION_ANCHOR_AND_SYNTAX",
+  "mutation_tests_executed": false,
+  "count": 11,
+  "rows": [
+    {
+      "name": "maturity_equality",
+      "target": "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+      "mutated_source_sha256": "2ac0652fda04123e7c924bc863fd9d2af5fff597c4caf13c111a19b140eeea16",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "omit_exit_cost",
+      "target": "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+      "mutated_source_sha256": "3c65a7ca71674d0cf0d361346d28837aaa8569ea4912ed66d285fa7422ee48db",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "omit_cross_expert_terms",
+      "target": "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance",
+      "mutated_source_sha256": "b6df46b2d0bdbd7de27b66695d6ba7002654cea771ad01119d1a9abc1e2bd340",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "publish_before_consumption_validation",
+      "target": "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+      "mutated_source_sha256": "49718869ca56dafdc8f976a804561a50001e7db4856fd55c9f00ee7f704197f3",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "rescore_current_library",
+      "target": "tests/test_model_audit.py::test_issued_forecast_is_not_recomputed_after_library_changes",
+      "mutated_source_sha256": "53df48af2c40d69c19f79f78f76bde6ecd2fb62f22ebb247b778177451b082a7",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "clip_infeasible_face",
+      "target": "tests/test_catalog_numerics_audit.py::test_tiny_negative_simplex_face_is_corrected_only_within_tolerance[1e-10-False]",
+      "mutated_source_sha256": "c2623a8925bd9f4bda02f002455ea79457067c63414ef9b5c469c82c49359ca8",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "interruption_as_resumable_success",
+      "target": "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+      "mutated_source_sha256": "700376de2c4e2e38f012fc677851f196eb53150c5b55effe280c4128558e8541",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "post_trade_dividend_ownership",
+      "target": "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+      "mutated_source_sha256": "b69a60be8ca60fc2ff4753b116c91061126f5b1a1354c945309c33ecdd053a27",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "charge_hypothetical_liquidation_fee",
+      "target": "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+      "mutated_source_sha256": "2824f735cd48e26e519ba91adf50d7ce7b11ecd1d405585d63e0a0a530eeba9f",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "pre_fee_target_dollars",
+      "target": "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+      "mutated_source_sha256": "72b325692da6bcc2e7dc99496ee5cfcba89a2c8d8f48e9a2403c2f4cc0c1b765",
+      "anchor_unique_and_syntax": "PASS"
+    },
+    {
+      "name": "omit_benchmark_control",
+      "target": "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+      "mutated_source_sha256": "3c530aa4cae47a89f6e14bc30b8172741a93ec331565b5c5fdad74d0838858ff",
+      "anchor_unique_and_syntax": "PASS"
+    }
+  ],
+  "recipes_json_serializable": true
+}

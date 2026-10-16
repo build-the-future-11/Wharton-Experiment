@@ -1,0 +1,3252 @@
+{
+  "schema_version": 1,
+  "scope": "Reviewed bounded catalog obligations only; full requirement/run readiness not asserted",
+  "baseline": "VERIFICATION_MAPPING.json",
+  "supplement": "VERIFICATION_SUPPLEMENT.json",
+  "counts": {
+    "PENDING": 12,
+    "PARTIAL": 66,
+    "VERIFIED": 18
+  },
+  "obligations": [
+    {
+      "test_id": "TEST-001",
+      "tier": "Q1",
+      "planned_case": "Price gross, dividend-per-dollar, simple return, USD, shares and weights deliberately swapped at boundaries",
+      "planned_acceptance": "Wrong units rejected; valid typed record preserved without an accidental conversion",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No test intentionally swaps declared Unit values across price, dividend, money, shares and weights.",
+      "remaining_evidence": "Add explicit unit-confusion boundary cases; shape agreement alone is insufficient.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-001",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add explicit unit-confusion boundary cases; shape agreement alone is insufficient."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-002",
+      "tier": "Q1",
+      "planned_case": "Wrong asset order, feature order, rank, length, dtype, empty vector, bool-as-count, object/complex arrays",
+      "planned_acceptance": "Named field error before numerical work; no positional broadcasting accepted",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_actions_audit.py::test_action_set_rejects_invalid_indices_and_cash",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid0]",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid1]",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock",
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted"
+      ],
+      "evidence_scope": "Constructed bool/count/clock, utility dtype, action index and configuration type violations reject.",
+      "remaining_evidence": "Wrong asset/feature order, rank/length/empty/object/complex cases are not exhaustively exercised.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-002",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Wrong asset/feature order, rank/length/empty/object/complex cases are not exhaustively exercised."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-003",
+      "tier": "Q1",
+      "planned_case": "NaN, infinity, negative dividend, nonpositive price, negative shares/cash, invalid probability/weight",
+      "planned_acceptance": "Explicit rejection. No clipping, row deletion or cash fallback",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[negative]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[duplicate]",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected[absent]",
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs0]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs1]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs2]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs3]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[nan]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[inf]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[-1]",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed[True]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]"
+      ],
+      "evidence_scope": "Negative/zero quote and dividend defects, nonfinite tolerances and overflowing arithmetic reject.",
+      "remaining_evidence": "Direct NaN/infinity/domain cases at every shares/cash/probability/weight boundary remain incomplete.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-003",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Direct NaN/infinity/domain cases at every shares/cash/probability/weight boundary remain incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-004",
+      "tier": "Q1",
+      "planned_case": "JSON duplicate key, unknown field, schema version, timestamp string without timezone, malformed manifest",
+      "planned_acceptance": "Strict parser rejection with field/schema reason; unknown fields not silently ignored",
+      "requirement_ids": [
+        "REQ-002",
+        "REQ-054"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{\"x\":1,\"x\":2}]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{\"x\":NaN}]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[[]]",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json[{invalid]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":1,\"x\":2}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":NaN}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[{\"x\":Infinity}]",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text[[] trailing]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "evidence_scope": "Duplicate/unknown JSON fields, malformed/nonfinite JSON and manifest schema type changes reject.",
+      "remaining_evidence": "Timezone-free timestamp parsing and the full malformed manifest/schema-version matrix are not covered.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-004",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Timezone-free timestamp parsing and the full malformed manifest/schema-version matrix are not covered."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-005",
+      "tier": "Q1",
+      "planned_case": "Change an input array after record construction, then attempt mutation through a returned view",
+      "planned_acceptance": "Immutable owned state/hash unchanged or write rejected; frozen dataclass alone is insufficient",
+      "requirement_ids": [
+        "REQ-003"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_actions_audit.py::test_public_grid_and_targets_are_immutable",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_math_audit.py::test_utility_outputs_are_immutable",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "evidence_scope": "A ledger input array is mutated after reconstruction without changing state identity; write-enabling returned ledger, forecast, grid and utility arrays rejects.",
+      "remaining_evidence": "Verified for the constructed aliasing/write cases, not a universal absence-of-mutation proof.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-005",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified for the constructed aliasing/write cases, not a universal absence-of-mutation proof."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-006",
+      "tier": "Q1",
+      "planned_case": "Generated source sidecar with wrong hash, units, action convention, split claim or calendar identity",
+      "planned_acceptance": "Admission fails; no consumed freeze or created result claim",
+      "requirement_ids": [
+        "REQ-004",
+        "REQ-049"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io"
+      ],
+      "evidence_scope": "Source byte-hash, calendar identity, dividend unit and split defects reject.",
+      "remaining_evidence": "Complete source sidecar/action convention and integrated no-consumption-on-admission-failure cases remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-006",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+            "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+            "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io"
+          ],
+          "evidence_scope": "Generated sources prove exact prefix/count identity and per-asset dividend IDs, including zero amounts.",
+          "remaining_evidence": "Actual retained source identity/calendar/rights admission is not established; supplied metadata has no independent authority certificate."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-007",
+      "tier": "Q1",
+      "planned_case": "Missing required daily mark, absent common-session anchor, duplicate quote and unsupported split/terminal event",
+      "planned_acceptance": "Continuous ledger rejected, never silently shortened or forward filled",
+      "requirement_ids": [
+        "REQ-005"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[missing]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[duplicate]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[zero]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[negative]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[split]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[clock]",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling[unknown]",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold"
+      ],
+      "evidence_scope": "Missing/duplicate source rows, zero quotes, splits, whole missing weeks and a skipped daily-close phase reject.",
+      "remaining_evidence": "Explicit terminal-event records and a complete scheduled continuous-ledger corruption fixture remain absent.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-007",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold"
+          ],
+          "evidence_scope": "Replay rejects wrong source-event asset ownership and missing provenance, alongside existing missing-calendar checks.",
+          "remaining_evidence": "Full historical source calendar completeness, terminal events and observed close-timestamp provenance remain external."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-008",
+      "tier": "Q1",
+      "planned_case": "Source path traverses outside admitted roots, a symlink resolves to disallowed data, or an undeclared file is requested",
+      "planned_acceptance": "Reader refuses access before content is opened; record only allowed identities",
+      "requirement_ids": [
+        "REQ-004"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_data_audit.py::test_source_reader_rejects_traversal_symlinks_and_overlarge_files"
+      ],
+      "evidence_scope": "Undeclared paths, parent traversal and symlink paths reject at the source reader; oversized sources reject.",
+      "remaining_evidence": "Verified reader cases only; real source admission and rights are separate.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-008",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified reader cases only; real source admission and rights are separate."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-009",
+      "tier": "Q1",
+      "planned_case": "Generate 63/64 burn-in records; one becomes mature exactly at the cutoff; one feature has near-zero scale",
+      "planned_acceptance": "Count and strict cutoff follow specification; exact declared scale floor and no later refit",
+      "requirement_ids": [
+        "REQ-006"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_data_audit.py::test_burnin_population_scales_match_independent_closed_form"
+      ],
+      "evidence_scope": "63/64 counts, equality at cutoff, zero-variance feature fallback, score floor and independent population-SD formula are exercised.",
+      "remaining_evidence": "Add nonzero feature scales immediately below/at/above 1e-12 and full retained fitting metadata checks.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-009",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add nonzero feature scales immediately below/at/above 1e-12 and full retained fitting metadata checks."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-010",
+      "tier": "Q1",
+      "planned_case": "Inject an extreme later observation into burn-in-independent fields",
+      "planned_acceptance": "Earlier transform and feature hashes invariant; later data cannot change a saved transform",
+      "requirement_ids": [
+        "REQ-006"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability"
+      ],
+      "evidence_scope": "Extreme later records leave transform identity fixed; later prices/dividends leave earlier contexts/origin IDs fixed with source identities held constant.",
+      "remaining_evidence": "Verified constructed fixed-provenance prefix cases only; full engine/action invariance is TEST-017.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-010",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified constructed fixed-provenance prefix cases only; full engine/action invariance is TEST-017."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-011",
+      "tier": "Q1",
+      "planned_case": "Winter/summer and DST-boundary generated US sessions: quote at 09:30 `America/New_York`, decision one microsecond later, ideal same-price fill two microseconds later",
+      "planned_acceptance": "Correct UTC conversion and strict order under revision 2; no fixed UTC open assumption; fill convention remains labeled idealized",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_weekly_anchor_clock_handles_dst_holidays_and_iso_year_boundaries"
+      ],
+      "evidence_scope": "Winter and DST-adjusted UTC opens, earliest holiday-week anchor, ISO-year boundary and +1/+2 microsecond ordering match explicit expectations.",
+      "remaining_evidence": "Historical exchange/calendar/provider timing is not certified by these generated dates.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-011",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Historical exchange/calendar/provider timing is not certified by these generated dates."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-012",
+      "tier": "Q1",
+      "planned_case": "Origin features supplied with availability just before, equal to and just after decision",
+      "planned_acceptance": "Only strictly earlier information allowed. Current execution quote may mark existing holdings under its explicit contract but cannot enter forecast features",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock"
+      ],
+      "evidence_scope": "Equal-to-decision feature availability rejects and one-microsecond-later decision accepts; hand context excludes current-open label; invalid fill chronology rejects.",
+      "remaining_evidence": "Add explicit feature availability after decision and integrated quote-valuation versus forecast-input boundary cases.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-012",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add explicit feature availability after decision and integrated quote-valuation versus forecast-input boundary cases."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-013",
+      "tier": "Q1",
+      "planned_case": "Thirteen irregular holiday-aware common-session weeks with a missing required interval",
+      "planned_acceptance": "Features match an independent hand sequence for valid origins; missing history invalidates origin without inventing a holiday or filling a return",
+      "requirement_ids": [
+        "REQ-005"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target"
+      ],
+      "evidence_scope": "Thirteen regular weekly intervals match independent feature arithmetic; missing length/gap and missing ISO week reject.",
+      "remaining_evidence": "The complete thirteen-week irregular holiday-aware context fixture is not yet tested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-013",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "The complete thirteen-week irregular holiday-aware context fixture is not yet tested."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-014",
+      "tier": "Q1",
+      "planned_case": "Four weekly intervals with two dividends and nonconstant prices",
+      "planned_acceptance": "Direct endpoint `g`, cash-summed `d` and total return match hand calculations; no compounded dividend reinvestment",
+      "requirement_ids": [
+        "REQ-008"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_data_audit.py::test_target_cash_sum_includes_nonanchor_daily_dividend"
+      ],
+      "evidence_scope": "Direct 125/100 price ratio and 5/100 cash dividend match hand arithmetic; result differs from reinvested weekly compounding; nonanchor dividend is included.",
+      "remaining_evidence": "Verified direct-target construction on generated positive-price data only.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-014",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified direct-target construction on generated positive-price data only."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-015",
+      "tier": "Q1",
+      "planned_case": "Dividend at start date, inside horizon and at endpoint; an endpoint trade changes ownership",
+      "planned_acceptance": "Exactly `origin < ex_date <= endpoint` target convention; endpoint entitlement uses pre-trade shares; new endpoint buyers receive no earlier entitlement",
+      "requirement_ids": [
+        "REQ-008"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail"
+      ],
+      "evidence_scope": "Origin dividend excluded, interior/endpoint distributions included, entering shares credited before sale, and new buyers receive none; A4 credits once before forced sale.",
+      "remaining_evidence": "Verified generated ownership transitions; actual payment-date settlement remains out of scope.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-015",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [
+            "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+            "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+            "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+            "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail"
+          ],
+          "evidence_scope": "Exact per-asset IDs survive admission; source credit precedes forced sale/re-entry and duplicate grouped IDs fail.",
+          "remaining_evidence": "Bounded generated accounting evidence only; actual corporate-action provenance is unverified."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-016",
+      "tier": "Q1",
+      "planned_case": "Four-week target whose endpoint quote is observed but target availability is equal to/after the new decision",
+      "planned_acceptance": "Maturity waits for the declared availability rule; no same-decision feedback leak",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed"
+      ],
+      "evidence_scope": "A label at exactly its availability timestamp is rejected for feedback; availability+1 admits it; target availability is next UTC midnight.",
+      "remaining_evidence": "Constructed strict-maturity behavior only.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-016",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Constructed strict-maturity behavior only."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-017",
+      "tier": "Q1",
+      "planned_case": "Future perturbation changes all later prices/dividends/labels while keeping earlier available prefix fixed",
+      "planned_acceptance": "All earlier features, libraries, weights, forecasts, actions and canonical state hashes unchanged",
+      "requirement_ids": [
+        "REQ-009"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "evidence_scope": "Later price/dividend changes preserve earlier contexts/IDs and current target values are absent from issuance requests.",
+      "remaining_evidence": "No integrated perturbation verifies every earlier library, weight, action and canonical campaign hash. Raw source provenance is held fixed in the existing prefix test.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-017",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+          ],
+          "evidence_scope": "Perturbing unavailable labels leaves the first retained forecast/state identity unchanged across model variants.",
+          "remaining_evidence": "Not a full campaign future-raw-price/dividend perturbation through all adapters, policies and reports."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-018",
+      "tier": "Q1",
+      "planned_case": "Several forecasts mature together, byte-identical repeated event ingestion and cursor regression",
+      "planned_acceptance": "Each issued forecast scored once from original atoms; deterministic order; every already-applied event ID and cursor regression rejected under CL-14; rereading an immutable artifact does not advance live state",
+      "requirement_ids": [
+        "REQ-010"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_model_audit.py::test_duplicate_cursor_immature_and_omitted_outcomes_fail_without_mutation",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "evidence_scope": "Repeated/regressed model cursors, repeated consumed outcomes after eviction, duplicate dividend/open events and duplicate A4 phases reject without mutating prior state.",
+      "remaining_evidence": "Several issued forecasts maturing together and all transition/restart boundaries still need explicit ordering cases.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-018",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Several issued forecasts maturing together and all transition/restart boundaries still need explicit ordering cases."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-019",
+      "tier": "Q1",
+      "planned_case": "Modify today's library before a past forecast matures",
+      "planned_acceptance": "Its A/B score coefficients use the saved issued forecast, not rebuilt atoms; source forecast hash matches",
+      "requirement_ids": [
+        "REQ-011"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_model_audit.py::test_issued_forecast_is_not_recomputed_after_library_changes"
+      ],
+      "evidence_scope": "An issued forecast is scored after the current library has grown; coefficients and issued identity exactly match its retained original forecast.",
+      "remaining_evidence": "Verifies saved-forecast scoring for the constructed transition.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-019",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verifies saved-forecast scoring for the constructed transition."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-020",
+      "tier": "Q1",
+      "planned_case": "Feed beyond library/feedback capacity with staggered maturities",
+      "planned_acceptance": "Window eviction removes the declared oldest eligible identities only; 520/104 bounds and overlap metadata retained",
+      "requirement_ids": [
+        "REQ-010"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "evidence_scope": "260-window eviction occurs and the evicted identity remains consumed/rejected.",
+      "remaining_evidence": "No explicit 520-library and 104-feedback over-capacity/staggered-maturity audit or overlap-metadata check.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-020",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No explicit 520-library and 104-feedback over-capacity/staggered-maturity audit or overlap-metadata check."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-021",
+      "tier": "Q2",
+      "planned_case": "Batch reference versus incremental weekly stream across warm-up, fold A end and fold B start",
+      "planned_acceptance": "Canonical forecasts equal; fold B may use prior matured labels, while both wealth ledgers reset to their specified initial cash",
+      "requirement_ids": [
+        "REQ-012"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "No test combines batch reference, incremental warm-up, fold A/B transition and independent cash resets.",
+      "remaining_evidence": "Implement integrated fold orchestration and independently derived cross-fold event trace.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-021",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+            "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+          ],
+          "evidence_scope": "Actual weekly kernel completes the constructed pilot and feeds two generated one-block policy/ledger paths.",
+          "remaining_evidence": "No independent batch reference over full warmup and both complete folds."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-022",
+      "tier": "Q2",
+      "planned_case": "Engineering checkpoint/restore at each transition boundary",
+      "planned_acceptance": "Replay continues strictly after the saved cursor and equals uninterrupted canonical state/events; already-applied IDs remain rejected, with no duplicated maturity/dividend/trade. This does not authorize market resume",
+      "requirement_ids": [
+        "REQ-012"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state"
+      ],
+      "evidence_scope": "Model checkpoint restore yields identical next forecast bytes/state; ledger reconstruction yields identical close transition.",
+      "remaining_evidence": "Restore at every event boundary across combined model/dividend/trade state and duplicate rejection after each restore remain untested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-022",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Restore at every event boundary across combined model/dividend/trade state and duplicate rejection after each restore remain untested."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-023",
+      "tier": "Q1",
+      "planned_case": "U/R/C distributions on a tiny labeled library with exact age and distance ties",
+      "planned_acceptance": "Shared atom identities; exact uniform/recent/neighbor weights; tie order by timestamp then ID; normalization tolerance honored",
+      "requirement_ids": [
+        "REQ-013"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "evidence_scope": "A generated stream emits all eight arms and immutable expert-backed forecasts.",
+      "remaining_evidence": "No independent exact U/R/C probability, age-tie and distance-tie fixture.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-023",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No independent exact U/R/C probability, age-tie and distance-tie fixture."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-024",
+      "tier": "Q1",
+      "planned_case": "Neighbor boundary cases at 31/32/33 eligible records, threshold equality, and query beyond leave-one-out threshold",
+      "planned_acceptance": "Exact eligibility/fallback branch; fixed linear percentile interpolation; labels never participate in distance",
+      "requirement_ids": [
+        "REQ-013"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No exact 31/32/33 expert-C boundary and threshold-equality test.",
+      "remaining_evidence": "Add leave-one-out percentile, tie, OOD and no-label-distance discriminating cases.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-024",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add leave-one-out percentile, tie, OOD and no-label-distance discriminating cases."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-025",
+      "tier": "Q1",
+      "planned_case": "Reorder atoms then apply the same stable-ID canonicalization; duplicate an atom while dividing its mass",
+      "planned_acceptance": "Same predictive law, ES, moments and policy objective within declared tolerance; duplicate identities themselves still rejected",
+      "requirement_ids": [
+        "REQ-014"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "evidence_scope": "Permutation and split-mass duplicated atoms preserve the energy score.",
+      "remaining_evidence": "Moment and portfolio-objective invariance plus canonical-ID handling are not tested jointly.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-025",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Moment and portfolio-objective invariance plus canonical-ID handling are not tested jointly."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-026",
+      "tier": "Q1",
+      "planned_case": "Single deterministic atom equal to target, then shifted away",
+      "planned_acceptance": "ES zero then Euclidean error; no artificial continuous likelihood or 0.01-nat claim",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "evidence_scope": "No direct test asserts ES=0 for a single atom at its target followed by Euclidean error after shifting.",
+      "remaining_evidence": "Add deterministic one-atom hand reference.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-026",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+          ],
+          "evidence_scope": "Singleton atom equal to target gives exactly zero energy/variogram/MSE and raw CRPS.",
+          "remaining_evidence": "Catalog also requires an independent shifted-singleton score reference."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-027",
+      "tier": "Q1",
+      "planned_case": "Two one-dimensional atoms at -1/+1 with equal mass and target zero, embedded in three dimensions",
+      "planned_acceptance": "ES exactly 0.5 in unit scale, while either point expert scores 1.0; exposes omitted cross-expert terms and incorrect unbiased-pair substitution",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "evidence_scope": "The equally mixed -1/+1 example scores exactly 0.5 while the point expert scores 1, with independent scalar ES.",
+      "remaining_evidence": "Verified constructed cross-expert score case only.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-027",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified constructed cross-expert score case only."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-028",
+      "tier": "Q1",
+      "planned_case": "Direct finite-law ES versus A/B mixture formula for vertices, edges and interior weights",
+      "planned_acceptance": "Independent scalar enumeration and coefficient formula agree; B symmetry and zero distance diagonal checked",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "evidence_scope": "One edge mixture and a vertex agree with direct finite-law/scalar scoring.",
+      "remaining_evidence": "Add general interior mixtures, explicit B symmetry and zero-diagonal assertions.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-028",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add general interior mixtures, explicit B symmetry and zero-diagonal assertions."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-029",
+      "tier": "Q1",
+      "planned_case": "Common translation and orthogonal rotation of standardized score vectors; positive uniform rescaling",
+      "planned_acceptance": "ES translation/rotation invariant and scales by the factor. Test occurs after fixed standardization; it does not license refitting asset scales",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "evidence_scope": "Translation invariance is asserted on a hand case.",
+      "remaining_evidence": "Orthogonal rotation and positive rescaling metamorphic checks are missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-029",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Orthogonal rotation and positive rescaling metamorphic checks are missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-030",
+      "tier": "Q1",
+      "planned_case": "Perfectly aligned, offsetting and repeated joint atoms",
+      "planned_acceptance": "Covariance symmetric/PSD to declared tolerance, expected returns in convex hull; dependence remains joint rather than separately resampled by asset",
+      "requirement_ids": [
+        "REQ-014"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No covariance/dependence/convex-hull test with aligned, offsetting and duplicate joint atoms.",
+      "remaining_evidence": "Add independent covariance PSD and joint dependence fixtures.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-030",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add independent covariance PSD and joint dependence fixtures."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-031",
+      "tier": "Q1",
+      "planned_case": "Discrete quantile with ties/mass exactly at requested probability, CRPS/MSE with one/two atoms, variogram with identical/opposite assets; loss probability exactly 0/1 and at each bin edge",
+      "planned_acceptance": "Hand-derived values in CL-12's named units; smallest cumulative quantile, inclusive interval endpoints, per-asset averaging and separate basket Brier arithmetic correct; sparse bins/counts retained and no raw/standardized mixing",
+      "requirement_ids": [
+        "REQ-016"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_discrete_quantiles_and_fixed_calibration_edges",
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "evidence_scope": "Discrete tied quantiles, zero mass, selected fixed-bin boundaries and a hand Brier value are verified.",
+      "remaining_evidence": "CRPS/MSE/variogram hand cases, all bin edges, inclusive intervals, sparse flags and separate basket/per-asset units remain incomplete.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-031",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+          ],
+          "evidence_scope": "Singleton raw/standardized diagnostics and inclusive interval endpoint ties have explicit zero/one references.",
+          "remaining_evidence": "Full two-atom, opposing-asset, all-bin-edge and calibration aggregation matrix still incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-032",
+      "tier": "Q1",
+      "planned_case": "Near-identical large finite vectors, tiny distances and extreme but admitted score scales",
+      "planned_acceptance": "Direct-distance reference agrees; no spurious negative distance/score hidden by clipping; nonfinite computation fails",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[mean_squared_error]",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly[variogram_score]"
+      ],
+      "evidence_scope": "Unrepresentable scores/targets/scales raise numerical errors.",
+      "remaining_evidence": "Near-identical large vectors, tiny finite distances and extreme-but-valid scales lack independent distance reference cases.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-032",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Near-identical large vectors, tiny finite distances and extreme-but-valid scales lack independent distance reference cases."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-033",
+      "tier": "Q1",
+      "planned_case": "Analytic optima at each vertex/edge/interior, plus large/small coefficient scales",
+      "planned_acceptance": "All seven active faces considered; CL-14 scales H/a while retaining unit equality row/column; recover nu_original=s*nu_scaled before original-scale KKT checks; independent scalar/dense reference supplies objective bound",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a0-expected0]",
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a1-expected1]",
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex[a2-expected2]",
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate"
+      ],
+      "evidence_scope": "One interior, edge and vertex optimum match hand values and a dense rational reference; all seven faces are considered; large coefficient residual is checked.",
+      "remaining_evidence": "All orientations, small scales and explicit original multiplier recovery checks remain incomplete.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-033",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "All orientations, small scales and explicit original multiplier recovery checks remain incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-034",
+      "tier": "Q1",
+      "planned_case": "Deliberately clipped unconstrained solution versus correct boundary optimum",
+      "planned_acceptance": "Implementation selects certified constrained optimum; a clip-and-renormalize substitute fails reference comparison",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No deliberate clip-and-renormalize counterexample is compared with the constrained solver.",
+      "remaining_evidence": "Add an instance where naive clipping produces a measurably nonoptimal boundary solution.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-034",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add an instance where naive clipping produces a measurably nonoptimal boundary solution."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-035",
+      "tier": "Q1",
+      "planned_case": "Three identical experts and symmetric objectives",
+      "planned_acceptance": "Fixed regularization yields its declared unique reference solution; deterministic tie/certificate behavior",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No identical-expert/symmetric-objective unique-reference solve is asserted.",
+      "remaining_evidence": "Add regularization anchor and deterministic certificate checks.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-035",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add regularization anchor and deterministic certificate checks."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-036",
+      "tier": "Q1",
+      "planned_case": "Singular solve, excessive negative tangent curvature, asymmetric B, scaled bordered-system condition around 1e12, and valid tangent convexity with indefinite full-space Hessian",
+      "planned_acceptance": "Finite cond2 <= 1e12 required for each scaled bordered system and residuals checked at original scale; a bad face fails rather than being skipped; valid constrained problem needs no full-space Cholesky; no projection/jitter/substitute",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs0]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs1]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs2]",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed[kwargs3]"
+      ],
+      "evidence_scope": "Bad tangent curvature and invalid configured tolerances reject; a large-scale certificate is retained.",
+      "remaining_evidence": "Singular/asymmetric/condition-boundary cases and valid tangent convexity with indefinite full-space Hessian remain untested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-036",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Singular/asymmetric/condition-boundary cases and valid tangent convexity with indefinite full-space Hessian remain untested."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-037",
+      "tier": "Q1",
+      "planned_case": "Tiny negative feasible weight on either side of tolerance boundary",
+      "planned_acceptance": "Only permitted rounding correction performed; normalization/objective/KKT rechecked; beyond-tolerance value rejected",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No tiny-negative feasible-weight tolerance boundary fixture.",
+      "remaining_evidence": "Exercise permitted roundoff correction and post-correction objective/KKT checks versus substantive infeasibility.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-037",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Exercise permitted roundoff correction and post-correction objective/KKT checks versus substantive infeasibility."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-038",
+      "tier": "Q1",
+      "planned_case": "Global records count 25/26; local counts/weight concentration near each eligibility boundary",
+      "planned_acceptance": "Exact equal/global/local fallback and beta rule; effective weight count never described as independent sample size",
+      "requirement_ids": [
+        "REQ-018"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules"
+      ],
+      "evidence_scope": "Cold local fallback, a populated local solve, beta formula and local extrapolation fallback are checked.",
+      "remaining_evidence": "Exact global 25/26 counts and local count/concentration boundaries remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-038",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Exact global 25/26 counts and local count/concentration boundaries remain missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-039",
+      "tier": "Q1",
+      "planned_case": "Context weights permuted with matching records; labels perturbed without changing contexts",
+      "planned_acceptance": "Neighbor choice unchanged by outcomes; only matured scores affect optimized weights; independent recency-weight scalar reference agrees",
+      "requirement_ids": [
+        "REQ-018"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No matched record permutation and label-only perturbation checks neighbor selection.",
+      "remaining_evidence": "Add independent recency-weight and no-label-routing metamorphic cases.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-039",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add independent recency-weight and no-label-routing metamorphic cases."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-040",
+      "tier": "Q1",
+      "planned_case": "Equal, global, contextual and individual-score controls at the same issue origin",
+      "planned_acceptance": "Same information/atom identities and update date. Individual-score softmax is stable and distinct from mixture-level scoring; no extra search or seeds",
+      "requirement_ids": [
+        "REQ-019"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "All eight arms are emitted; individual-score softmax and contextual blend match explicit formulas.",
+      "remaining_evidence": "Complete shared atom/information identity assertions and nonconstant recency-weighted individual control cases remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-040",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+            "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+          ],
+          "evidence_scope": "Complete generated ledger registry shares laws and actual pilot selects contextual/equal/global arms at fixed dates.",
+          "remaining_evidence": "Full-size production model-to-ledger fairness across every arm/cost and work counters is not yet verified."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-041",
+      "tier": "Q1",
+      "planned_case": "$100 all cash, target risky weight 0.4, fee 0.01",
+      "planned_acceptance": "Fee root matches independent exact value `100/(1+0.004)`; cash+risky+fee=$100. This is a constructed fee test, not an allowed study cost",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing"
+      ],
+      "evidence_scope": "The $100 all-cash, 0.4-risk, 1% fee case matches q=100/1.004 and the exact fee difference.",
+      "remaining_evidence": "Verified independent fee root at the specified constructed point.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-041",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified independent fee root at the specified constructed point."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-042",
+      "tier": "Q1",
+      "planned_case": "$40 risky/$60 cash sold completely at fee 0.01; mixed buy/sell targets; zero fee",
+      "planned_acceptance": "$99.60 cash on full sale; Decimal/piecewise-linear reference matches other roots; correct turnover dollar basis",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_math_audit.py::test_all_cash_rebalance_preserves_exact_known_root"
+      ],
+      "evidence_scope": "Decimal mixed buy/sell reference, batch full sale, positive dollar scaling and exact cash/no-trade cases pass.",
+      "remaining_evidence": "Add the specified $40/$60 sale and broader zero-fee/sign-region boundary coverage.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-042",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add the specified $40/$60 sale and broader zero-fee/sign-region boundary coverage."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-043",
+      "tier": "Q1",
+      "planned_case": "V/weights/fees spanning declared domain, root near bracket end and forced 100-iteration exhaustion",
+      "planned_acceptance": "Monotone root bracket, accounting and bracket tolerances both satisfied; exhaustion fails instead of returning the last iterate as certified",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No forced root-iteration exhaustion or bracket-end domain ladder test.",
+      "remaining_evidence": "Exercise both bracket/accounting tolerances and explicit exhaustion failure.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-043",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Exercise both bracket/accounting tolerances and explicit exhaustion failure."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-044",
+      "tier": "Q1",
+      "planned_case": "Exact feasible hold and per-asset/total-cap drift at, just within and beyond 1e-12 weight tolerance",
+      "planned_acceptance": "Feasible hold has zero trade/entry fee; within-tolerance residual recorded; materially infeasible hold excluded without clipping and mandatory rebalance recorded; no continuous-cap claim",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_actions_audit.py::test_feasible_hold_deduplicates_only_exact_grid_match",
+        "tests/test_ledger_audit.py::test_exact_hold_preserves_shares_and_cannot_hide_a_trade",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "Exact feasible hold, off-grid hold, materially infeasible hold and zero trade preservation are checked.",
+      "remaining_evidence": "Per-asset and aggregate caps immediately around 1e-12 and recorded within-tolerance residuals need tests.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-044",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+            "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+            "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+          ],
+          "evidence_scope": "Policy exact hold preserves actual cash/dollars; over-cap hold is excluded while buy-hold benchmark drift remains supported.",
+          "remaining_evidence": "Exact within/equal/outside 1e-12 per-asset and total-cap ladder remains missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-045",
+      "tier": "Q1",
+      "planned_case": "Exhaustively generate weights as integer ticks, then convert to decimals",
+      "planned_acceptance": "Exactly 609 grid points before optional distinct hold, 45 sum-.8 minimum-variance candidates; no floating-loop omissions, duplicates or invalid targets",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_actions_audit.py::test_action_counts_and_exact_grid_constraints"
+      ],
+      "evidence_scope": "Independent capped-combinatoric counts give 609/45; uniqueness and exact feasible grid bounds are checked.",
+      "remaining_evidence": "Verified finite grid enumeration, not action objective optimization.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-045",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified finite grid enumeration, not action objective optimization."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-046",
+      "tier": "Q1",
+      "planned_case": "Brute enumeration of reduced/full grids on tiny atoms, reordered actions and nontransitive approximate-tie example",
+      "planned_acceptance": "Whole-set objective ties within 1e-10 then hold preference; whole-set minimum turnover ties within 1e-10*max(1,V) then lexicographic choice; result independent of iteration order; cash not penalized",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent"
+      ],
+      "evidence_scope": "No policy optimizer exhaustive/reference/tie-order test.",
+      "remaining_evidence": "Implement policy selection then exercise whole-set objective and turnover ties, reordered actions and nontransitive near-tie counterexample.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-046",
+          "baseline_status": "PENDING",
+          "supplement_status": "VERIFIED",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent"
+          ],
+          "evidence_scope": "Every full-grid policy candidate is checked against independent sign-region fee and scalar CRRA references at four costs and nominal/robust settings; nontransitive ties and permutation invariance are explicit.",
+          "remaining_evidence": "Verification covers these constructed laws/holdings; broader resource feasibility and economic benefit are not implied."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-047",
+      "tier": "Q1",
+      "planned_case": "Zero-return/zero-dividend atoms with zero and positive fees; all risky atoms strictly adverse",
+      "planned_acceptance": "Zero-cost factor/utility identity; cash/hold ties handled correctly; model validly chooses cash when optimal, while a model exception is never cash success",
+      "requirement_ids": [
+        "REQ-022"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "evidence_scope": "Cash has neutral utility and keeps wealth under zero holdings/costs.",
+      "remaining_evidence": "No policy-level all-adverse-atom optimum or zero-return tie certificate; model-exception versus cash-success orchestration missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-047",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+            "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+            "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+          ],
+          "evidence_scope": "Flat zero-cost atoms yield exact zero utility for all actions; positive-cost cash is optimal and adverse zero-mass support changes robust decisions.",
+          "remaining_evidence": "Explicit all-atoms-strictly-adverse catalog case is not independently covered."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-048",
+      "tier": "Q1",
+      "planned_case": "CRRA factors near 1, very small positive values and invalid zero/negative values",
+      "planned_acceptance": "Stable expression agrees with high-precision reference; invalid domains raise; gamma remains fixed",
+      "requirement_ids": [
+        "REQ-023"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid0]",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes[invalid1]",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "evidence_scope": "CRRA at .75, 1 and 1.25 agrees with high-precision Decimal and rejects wrong dtype.",
+      "remaining_evidence": "Near-one, tiny positive and invalid zero/negative factor cases remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-048",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+          ],
+          "evidence_scope": "Independent CRRA scalar arithmetic and an explicit overflowing H3 failure are covered.",
+          "remaining_evidence": "Full near-one/tiny-positive/zero/negative numerical boundary ladder remains incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-049",
+      "tier": "Q1",
+      "planned_case": "Two/three-atom utility vectors, including an adverse atom with zero nominal mixture probability, and contamination mass concentrated separately on each atom",
+      "planned_acceptance": "Robust objective matches explicit minimum over all declared-support simplex vertices, including zero-weight atoms; rho=0 agrees with nominal; no out-of-support protection claim",
+      "requirement_ids": [
+        "REQ-023"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "evidence_scope": "An adverse zero-nominal-mass atom affects the robust objective exactly as prescribed.",
+      "remaining_evidence": "Enumerate every contamination simplex vertex and test rho=0/nominal equivalence.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-049",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+          ],
+          "evidence_scope": "Nominal and robust utilities match independent scalar formulas; zero nominal mass does not remove adverse support.",
+          "remaining_evidence": "No independent contamination-mass-at-each-atom optimization proof fixture."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-050",
+      "tier": "Q1",
+      "planned_case": "Multi-block path with dividends and an unchanged holding, compared with forced liquidation",
+      "planned_acceptance": "Actual ledger charges no intermediate hypothetical reserve; A4 does charge actual sales/re-entry. Final endpoint liquidation occurs exactly once",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "Repeated valuation marks charge no fee; CL-15 forced sale/reentry books distinct fees, single dividend credit and terminal final liquidation.",
+      "remaining_evidence": "A matched ordinary-versus-A4 multi-block unchanged-hold path comparison is not yet an integrated campaign test.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-050",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+            "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+            "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+          ],
+          "evidence_scope": "Generated multi-block A4 path accounts for dividend, sale and re-entry fees; failure retains precommitted source credit/sale.",
+          "remaining_evidence": "A full independent hand-path carried-hold-versus-forced-liquidation NAV reference remains absent."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-051",
+      "tier": "Q1",
+      "planned_case": "Independent share/cash event ledger with price change, dividend, trade and final liquidation",
+      "planned_acceptance": "At each event NAV delta=price PnL+dividend+interest-fee within normalized tolerance; interest exactly zero; dividend is not charged a sale fee",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend"
+      ],
+      "evidence_scope": "Constructed entering shares, prices, cash dividends, sale/reentry fees and final NAV match independent arithmetic, including negative outcomes and zero-interest cash.",
+      "remaining_evidence": "Verified constructed ledger arithmetic; all market paths and every campaign event are not thereby certified.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-051",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Verified constructed ledger arithmetic; all market paths and every campaign event are not thereby certified."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-052",
+      "tier": "Q1",
+      "planned_case": "Positive dollar rescaling of initial wealth and consistent holdings; fixed target sequence",
+      "planned_acceptance": "Dimensionless decisions/objectives unchanged; dollar cash/fees/PnL scale. Counterfactual zero-cost replay uses saved targets and new fee roots without optimizing again",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal"
+      ],
+      "evidence_scope": "Fee root and post-fee NAV scale with dollar holdings/cash by factor seven.",
+      "remaining_evidence": "Fixed-target full-ledger scaling and zero-cost replay without reoptimization are missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-052",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Fixed-target full-ledger scaling and zero-cost replay without reoptimization are missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-053",
+      "tier": "Q1",
+      "planned_case": "Daily-close trough between decisions, entry fees, final liquidation fees and missing mark",
+      "planned_acceptance": "Drawdown includes initial capital and actual final-liquidation anchors, distinctly labeled; final fee once; trough caught; missing close rejected; no invented closes or intraday extrema",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Initial/final anchors, final-fee drawdown, daily marks, missing-close rejection and forbidden hypothetical mark convention are checked.",
+      "remaining_evidence": "Add a recovering path whose deepest daily-close trough occurs strictly between decisions plus entry-fee drawdown case.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-053",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+          ],
+          "evidence_scope": "Every generated ledger starts from cash, ends with one liquidation, and reports bounded drawdown.",
+          "remaining_evidence": "Generated matrix uses weekly-only observations; no new independent intrablock daily-trough fixture or authoritative calendar."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-054",
+      "tier": "Q1",
+      "planned_case": "Cash, broad equal rebalance, matched 80% equal and buy-and-hold on a hand path",
+      "planned_acceptance": "Exact exposure/dividend/final liquidation differences retained; 100%-risky broad controls not accidentally clipped to strategy caps",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]"
+      ],
+      "evidence_scope": "No complete benchmark hand-path test.",
+      "remaining_evidence": "Implement/verify all cash/equal80/equal100/buy-hold exposure, dividend and liquidation differences.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-054",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+            "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+            "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[buy_hold100-1.0]",
+            "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[cash-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal100-1.0]",
+            "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees[equal80-0.8]"
+          ],
+          "evidence_scope": "Fixed benchmark entry weights/fees have scalar references; buy-hold preserves dividend cash and drift; all six execute.",
+          "remaining_evidence": "No complete independent hand path for all four named benchmark NAV sequences."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-055",
+      "tier": "Q1",
+      "planned_case": "Inverse-volatility vector with one floored volatility and an over-cap unconstrained asset",
+      "planned_acceptance": "Independent active-set projection satisfies sum .8 and .4 caps; causal inputs only; no arbitrary renormalization after clipping",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]"
+      ],
+      "evidence_scope": "No inverse-volatility/projection active-set reference test.",
+      "remaining_evidence": "Add causal volatility floor and capped-simplex projection cases.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-055",
+          "baseline_status": "PENDING",
+          "supplement_status": "VERIFIED",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+            "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target0]",
+            "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target1]",
+            "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target2]",
+            "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration[target3]"
+          ],
+          "evidence_scope": "Floored volatility and over-cap vector are checked against independent active-face projection at four target cases with residuals.",
+          "remaining_evidence": "Generated mathematical reference only, not benchmark economic effectiveness."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-056",
+      "tier": "Q1",
+      "planned_case": "Joint covariance and diagonal-shrink covariance where minimum-variance grid rankings differ",
+      "planned_acceptance": "Fixed 50% shrinkage, 45-action enumeration and tie ordering correct; no Ledoit-Wolf label",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+        "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+        "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance"
+      ],
+      "evidence_scope": "No minimum-variance shrinkage/ranking reference test.",
+      "remaining_evidence": "Add a covariance case distinguishing raw versus fixed 50% diagonal shrinkage rankings and ties.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-056",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+            "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+            "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance"
+          ],
+          "evidence_scope": "Population covariance, declared shrink and full grid minimum are independently checked; CL16 exact variance ties differ from utility tolerance.",
+          "remaining_evidence": "No explicit catalog fixture demonstrating different joint-versus-shrink rankings."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-057",
+      "tier": "Q2",
+      "planned_case": "Independent Cartesian identity list for eight forecasts, two policies, four costs, two folds, six benchmarks, eight ablations",
+      "planned_acceptance": "Exactly 128+48+16=192 required identities, no duplicates. Metadata-only enumeration does not count as an executed ledger",
+      "requirement_ids": [
+        "REQ-026"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_plan_enumerates_complete_unique_matrix_without_claiming_run",
+        "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Metadata lists 192 unique identities with 128/48/16 category counts and explicitly zero executed ledgers.",
+      "remaining_evidence": "An independently enumerated exact Cartesian identity set is not compared; this is not matrix execution.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-057",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+          ],
+          "evidence_scope": "Exactly192 unique declared cells execute:128 strategy,48 benchmark,16 ablation, with fixed costs/policies.",
+          "remaining_evidence": "Identity list is not generated by a wholly independent Cartesian oracle; full production dated artifact inventory remains pending."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-058",
+      "tier": "Q2",
+      "planned_case": "Delete a primary, zero control, ablation or cost cell; duplicate a cell; truncate one event table",
+      "planned_acceptance": "Matrix completeness fails before summary; no averaging surviving methods or calling the attempt complete",
+      "requirement_ids": [
+        "REQ-026"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "evidence_scope": "No complete result-family validator deletion/duplicate/truncated-table fault test.",
+      "remaining_evidence": "Implement result completeness validation before any summary.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-058",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+            "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence"
+          ],
+          "evidence_scope": "Missing matrix cell and incomplete/unaligned endpoint evidence fail; failed cell preserves prior prefix.",
+          "remaining_evidence": "No full deletion/duplication/truncated-event-table matrix covering primary,zero,ablation,cost in artifact audit."
+        },
+        {
+          "test_id": "TEST-058",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+            "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+          ],
+          "evidence_scope": "Omitted cell, unsupported scope, internally linked wrong law, shifted date, issue-clock change or inconsistent score in a nonheadline zero/cost40 cell prevents analysis.",
+          "remaining_evidence": "Full saved artifact/event truncation/duplication and readback provenance integration remain separate."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-059",
+      "tier": "Q1",
+      "planned_case": "A1 direct-versus-repeated one-week atoms with nonconstant prices/dividends",
+      "planned_acceptance": "Independent formulas differ as expected; A1 receives direct H4 maturity restriction and recomputed causal issued-score records",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "evidence_scope": "No A1 direct-versus-repeated-H1 formula/maturity/causal-score test.",
+      "remaining_evidence": "Add independently computed A1 atoms and no timing-advantage replay.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-059",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+          ],
+          "evidence_scope": "A1 atoms equal g1^4 and d1*(1+g1+g1^2+g1^3); direct-H4 maturity gates all variants.",
+          "remaining_evidence": "No complete independent nonconstant-price/dividend direct-versus-repeat scoring campaign."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-060",
+      "tier": "Q2",
+      "planned_case": "A2 frozen issued distribution independently initialized for each fold; A3 local/no-shrink; A4 liquidation; A5 no special hold",
+      "planned_acceptance": "A2 atoms/probabilities unchanged even when query features change; only declared mechanism differs; A4/A5 forecasts identical to primary; A5 may coincide with a grid hold and logs that case",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "evidence_scope": "A3 local unshrunk weights and CL-15 A4 accounting are checked; invalid hold-switch types reject.",
+      "remaining_evidence": "A2 per-fold static forecast, A5 behavior/collision logging and all arms' shared-forecast assertions remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-060",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+            "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+            "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+            "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+          ],
+          "evidence_scope": "A2 full laws are frozen separately per fold; A4/A5 reuse primary laws; A4 transaction ordering/fees and no-hold policy choice are explicit.",
+          "remaining_evidence": "Full A3 local eligibility/no-shrink discriminating boundary and complete true-kernel multi-fold ablation run remain incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-061",
+      "tier": "Q2",
+      "planned_case": "A6 window260 and A7/A8 neighbor16/64 with matched eligible/fallback reference cases",
+      "planned_acceptance": "Each sensitivity has exact declared parameter propagation and distinct identity; no hidden retuning of another parameter",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "evidence_scope": "260-window eviction and forbidden multi-ablation/type combinations are exercised.",
+      "remaining_evidence": "Exact 260-versus-520 retention and matched k=16/64 lookup/routing/fallback propagation require tests.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-061",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Exact 260-versus-520 retention and matched k=16/64 lookup/routing/fallback propagation require tests."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-062",
+      "tier": "Q1",
+      "planned_case": "Labeled rows encoding date/asset/method/cost/fold identity through resampling",
+      "planned_acceptance": "Every sampled date carries the complete paired family; folds sampled separately; no per-asset/per-method resampling",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction",
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices",
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+      ],
+      "evidence_scope": "Candidate/control resampling uses a common index array; distinct fold/block streams have explicit scalar index references.",
+      "remaining_evidence": "No labeled full date/asset/method/cost family demonstrates complete cross-panel alignment.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-062",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+            "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+          ],
+          "evidence_scope": "Fixed index arrays are reused over all required H1/H2 controls and folds; observed date weighting is independently recalculated.",
+          "remaining_evidence": "No all-asset/method/cost identity-tagged resampling fixture across complete raw artifact tensors."
+        },
+        {
+          "test_id": "TEST-062",
+          "previous_status": "PARTIAL",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+            "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference"
+          ],
+          "evidence_scope": "All16 comparisons reuse the exact campaign A2/B2/A4/B4 index arrays; arrays are retained immutable.",
+          "remaining_evidence": "Full labeled method/asset/cost raw tensor and complete artifact pairing remain unverified."
+        },
+        {
+          "test_id": "TEST-062",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+          ],
+          "evidence_scope": "Complete192 pairedaxes plus primary/secondary exact fixed-stream equality are checked.",
+          "remaining_evidence": "No independently labeled full raw asset/method/cost tensor resampling or complete report regeneration."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-063",
+      "tier": "Q1",
+      "planned_case": "Small circular sequence at block lengths2/4, wraparound and remainder truncation",
+      "planned_acceptance": "Independent block-index reference agrees; retained length exact; no favorable block-length choice",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "evidence_scope": "First three draws of 7/9-row circular blocks at lengths 2/4 match independently concatenated modular indices and exact truncation.",
+      "remaining_evidence": "Bounded independent index-construction case only; statistical validity is separate.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-063",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Bounded independent index-construction case only; statistical validity is separate."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-064",
+      "tier": "Q1",
+      "planned_case": "Unequal fold sizes, known score sums and target quantiles on a five-value array",
+      "planned_acceptance": "Pooled weighting uses original date counts and fixed linear interpolation; not equal weighting of unequal folds",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+      ],
+      "evidence_scope": "No unequal-fold pooled means and independent five-value quantile test.",
+      "remaining_evidence": "Verify original-date-count pooling and fixed linear quantiles.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-064",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+          ],
+          "evidence_scope": "Unequal24/25 fold counts yield the ratio of pooled sums and independently computed5000-draw quantiles.",
+          "remaining_evidence": "Catalog five-value linear-quantile boundary fixture remains absent."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-065",
+      "tier": "Q1",
+      "planned_case": "Identical scores, 5% boundary and control means just below/at/above 1e-12 in observed and resampled arrays",
+      "planned_acceptance": "Ratio of date-weighted means, never mean datewise ratios; control mean <= 1e-12 undefined; any undefined required draw blocks claim without dropping/replacing it; strict primary margin retained",
+      "requirement_ids": [
+        "REQ-029"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted",
+        "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+        "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+      ],
+      "evidence_scope": "Ratio of means differs from mean ratios; a single undefined zero-denominator bootstrap draw rejects the calculation.",
+      "remaining_evidence": "Explicit 1e-12 boundary and strict 5% primary decision cases remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-065",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+            "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+            "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+            "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+          ],
+          "evidence_scope": "Exact5% fails strict gate; zero observed/resampled denominators are retained as inconclusive; favorable block2 cannot replace block4.",
+          "remaining_evidence": "Full just-below/equal/just-above1e-12 observed and resampled denominator ladder remains incomplete."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-066",
+      "tier": "Q1",
+      "planned_case": "Deterministic campaign and pilot bootstrap replay, then run either operation first",
+      "planned_acceptance": "Exactly 5,000 draws; CL-08 campaign SeedSequence(1901).spawn(4) and CL-09 pilot SeedSequence(1902).spawn(2) keep their descriptor order and independent PCG64 states; int64 starts/concatenation/truncation match reference; pilot controls share both pilot index arrays and cannot advance campaign streams",
+      "requirement_ids": [
+        "REQ-028",
+        "REQ-031"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "evidence_scope": "Campaign child order and initial scalar draws agree; pilot stream differs from campaign.",
+      "remaining_evidence": "Exact 5000-draw replay and running pilot/campaign in both orders with shared pilot-control arrays remain untested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-066",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Exact 5000-draw replay and running pilot/campaign in both orders with shared pilot-control arrays remain untested."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-067",
+      "tier": "Q1",
+      "planned_case": "Known observed delta plus centered bootstrap samples; exact-zero A4/A5 forecast deltas",
+      "planned_acceptance": "Null centering and plus-one p-value match scalar reference; policy-only forecast p=1, never invented prediction benefit",
+      "requirement_ids": [
+        "REQ-030"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference"
+      ],
+      "evidence_scope": "No centered-null plus-one p-value reference test.",
+      "remaining_evidence": "Add known delta and exact-zero policy-only ablation cases.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-067",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Add known delta and exact-zero policy-only ablation cases."
+        },
+        {
+          "test_id": "TEST-067",
+          "previous_status": "PENDING",
+          "status": "VERIFIED",
+          "nodeids": [
+            "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+            "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference"
+          ],
+          "evidence_scope": "Independent scalar5000-draw calculation verifies pooled original-mean centering, positive-primary delta direction, >= tail and (1+count)/5001; exact-zero A4/A5 stay p=1.",
+          "remaining_evidence": "Bounded mathematical test only; retained campaign score adapter and immutable artifact/report traceability remain unimplemented."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-068",
+      "tier": "Q1",
+      "planned_case": "Sixteen ordered/tied p-values, including both block families and policy-only p=1",
+      "planned_acceptance": "Revision2 multiplicity family and Holm step-down correct, stable ID ties, first failure terminates rejection sequence; all entries reported",
+      "requirement_ids": [
+        "REQ-030"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [
+        "tests/test_statistics_audit.py::test_complete_holm_family_matches_hand_calculation",
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_ablations_audit.py::test_incomplete_family_wrong_pairing_and_policy_only_variation_fail"
+      ],
+      "evidence_scope": "Sixteen-member Holm adjustments, equal p values, missing family rejection and policy-only p=1 enforcement match hand values.",
+      "remaining_evidence": "No full rejection-sequence first-failure test or explicit deterministic tie-order evidence.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-068",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No full rejection-sequence first-failure test or explicit deterministic tie-order evidence."
+        },
+        {
+          "test_id": "TEST-068",
+          "previous_status": "PARTIAL",
+          "status": "VERIFIED",
+          "nodeids": [
+            "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+            "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+            "tests/test_ablations_audit.py::test_incomplete_family_wrong_pairing_and_policy_only_variation_fail"
+          ],
+          "evidence_scope": "One exact all8x2 family uses shared fixed arrays; raw/tied pvalues and every Holm adjusted value match independent sorted cumulative formula. Missing/reordered families and invented A4/A5 variation reject.",
+          "remaining_evidence": "No full campaign-to-secondary-evidence integration or report generation; no best ablation selection is authorized."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-069",
+      "tier": "Q1",
+      "planned_case": "Saved path liquidatable-NAV increments with endpoint dividend, fee reserve, final actual liquidation and a resampled sequence whose concatenated holdings would be invalid",
+      "planned_acceptance": "CL-12 log increments telescope to log(final wealth/initial cash); H3 equal-date mean block utility and separate terminal utility match hand values; hypothetical fees never debit cash; resampling not called an executable portfolio",
+      "requirement_ids": [
+        "REQ-029"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+      ],
+      "evidence_scope": "Cash-path boundary logs telescope; hypothetical reserve and actual final sale are distinguished on a negative dividend path.",
+      "remaining_evidence": "Noncash multi-block telescope, H3 dated/terminal utility and resampling-not-replay distinctions remain untested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-069",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+            "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash"
+          ],
+          "evidence_scope": "Every generated ledger log-increment sequence telescopes to actual final wealth; H3 uses date-weighted block utility and separate terminal utility.",
+          "remaining_evidence": "No explicit invalid concatenated holdings replay counterexample; full saved-artifact reconstruction not implemented."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-070",
+      "tier": "Q1",
+      "planned_case": "Pre-2010-only precision inputs, projected-width/count boundaries, zero variability, no contextual/global difference, cold-start dates and a resample with control mean <= 1e-12",
+      "planned_acceptance": "CL-09 uses sample SD divisor4999 (ddof1), N=N_A+N_B eligible block counts and pilot n; scalar reference agrees; CL-14 undefined endpoint yields unidentifiable with no discarded draw; all four comparisons/cold-start dates retained; no threshold/window change",
+      "requirement_ids": [
+        "REQ-031"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_calendar_plan_has_fixed_four_anchor_progression_and_unused_tail",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted",
+        "tests/test_statistics_audit.py::test_perfectly_constant_apparent_gain_does_not_pass_precision",
+        "tests/test_statistics_audit.py::test_precision_requires_all_four_results_and_uses_prospective_counts",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Zero variability/no contextual-global difference/short pilot reject; four comparisons use sqrt(n/(N_A+N_B)); undefined resample rejects; pilot dates planned separately.",
+      "remaining_evidence": "No independent sample-SD/bootstrap precision reference or integrated pre-2010/cold-start/source-boundary enforcement with production guards.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-070",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+            "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+            "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+          ],
+          "evidence_scope": "Out-of-scope numeric sentinels cannot enter target construction; pilot counts and projected A/B plans are exact; actual fixed kernel runs all selected generated pilot blocks. Updated pilot output retains both exact seed1902 arrays, cold-start flags and exact zero-difference counts; evidence scope is inherited and authorizes_campaign is forced false.",
+          "remaining_evidence": "Production consumed precision launcher/source authority missing; complete dispersion/threshold boundary matrix and empirical precision remain unresolved."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-071",
+      "tier": "Q2",
+      "planned_case": "Decision-table cases for H1/H2 pass/fail/inconclusive/invalid, drawdown violation, incomplete families and partial controls",
+      "planned_acceptance": "Exact terminal label and scope; no original NLL success, novelty, profitability guarantee or confirmatory label inferred from S10 ES/retrospective evidence",
+      "requirement_ids": [
+        "REQ-032",
+        "REQ-058"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "evidence_scope": "No H1/H2 disposition decision-table implementation test.",
+      "remaining_evidence": "Add complete support/negative/inconclusive/invalid and drawdown/control-family scope checks.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-071",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[cash]",
+            "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[drawdown]",
+            "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success[wealth]",
+            "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+            "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+            "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+            "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+            "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+          ],
+          "evidence_scope": "Constructed H1/H2 pass, mixed, inconclusive and invalid gates cover all controls/blocks, cash,6%wealth and drawdown; source authority is explicitly unverified. Robust/nominal adapter now rejects a consistently relinked different law before H3 evaluation.",
+          "remaining_evidence": "No complete exhaustive decision-table oracle including both-fail negative, full-size retained campaign adapter and claim ledger validation."
+        },
+        {
+          "test_id": "TEST-071",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+            "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+          ],
+          "evidence_scope": "Complete sized retained-input adapter yields the independently expected H1 pass/H2 fail and ablation deltas; unsupported source approval is rejected.",
+          "remaining_evidence": "Not every disposition combination or real source/constraint integrity proof; numeric predicates remain conditional."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-072",
+      "tier": "Q1",
+      "planned_case": "Canonical JSON/array serialization twice, array-endianness case, differing field insertion order",
+      "planned_acceptance": "Defined canonical payload/hash stable, schema/units preserved; elapsed time and paths excluded only from numerical equality payload, still retained as metadata",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-033"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision"
+      ],
+      "evidence_scope": "Typed scalar identities avoid collisions; dict insertion order is invariant and model checkpoint replay is byte identical.",
+      "remaining_evidence": "Array endianness, full schema/unit preservation and numerical-versus-path/timing payload partition cases are missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-072",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Array endianness, full schema/unit preservation and numerical-versus-path/timing payload partition cases are missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-073",
+      "tier": "Q1",
+      "planned_case": "Corrupt source/config/data/environment/hash, checkpoint array shape and schema version",
+      "planned_acceptance": "Integrity rejection before use; error identifies mismatched identity without dumping protected values",
+      "requirement_ids": [
+        "REQ-033",
+        "REQ-053"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_model_audit.py::test_changed_pending_metadata_invalidates_state_hash",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[transform-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[library-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[config-not-a-config]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[feedback-value3]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[pending-value4]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[cursor_us-not-an-integer]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[previous_state_id-5]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[consumed_event_ids-value7]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[request]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[expert_library]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[duplicate_set]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets[unhashable_set]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_excessive_json_nesting_with_typed_error",
+        "tests/test_model_audit.py::test_state_constructor_rejects_direct_invalid_members",
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "evidence_scope": "Source/artifact corruption, forged pending metadata and malformed nested checkpoint state reject with typed errors; schema type changes reject.",
+      "remaining_evidence": "Complete source/config/data/environment envelope and array-shape/version corruption matrix remains unfinished.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-073",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Complete source/config/data/environment envelope and array-shape/version corruption matrix remains unfinished."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-074",
+      "tier": "Q2",
+      "planned_case": "Inject write failure before publish, after temp write and at journal boundary",
+      "planned_acceptance": "Existing artifact bytes unchanged; partial temp output never interpreted as completed state; failure remains visible if possible",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-034",
+        "REQ-052"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+        "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure"
+      ],
+      "evidence_scope": "Atomic-link failure leaves no successful artifact or pending temp file; existing published bytes cannot be overwritten.",
+      "remaining_evidence": "Before-temp and journal-boundary fault injection and durable failure reporting are missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-074",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+            "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+            "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure"
+          ],
+          "evidence_scope": "Hash-chain tamper/partial journal rejection and post-consumption failure receipts retain markers and clean child processes.",
+          "remaining_evidence": "Temp-publication crash boundaries and real failed-failure-receipt disk exhaustion remain unverified."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-075",
+      "tier": "Q2",
+      "planned_case": "Existing output path, pre-existing consumption marker and two concurrent start attempts",
+      "planned_acceptance": "At most one scientific-start claim; second request rejected; no overwrite, marker deletion or retry identity reuse",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035",
+        "REQ-054"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once"
+      ],
+      "evidence_scope": "Existing artifact/output/consumption identities reject sequential reuse and retain the original attempt.",
+      "remaining_evidence": "Concurrent scientific-start attempts and crash durability are untested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-075",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once"
+          ],
+          "evidence_scope": "Generated operation consumes once; second attempt refuses without dispatch and preserves marker bytes.",
+          "remaining_evidence": "No new simultaneous-process race fixture or production operation-specific frozen identity integration."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-076",
+      "tier": "Q2",
+      "planned_case": "Precision/full-campaign preflights with missing operation-specific prerequisite, failed admission and immediate post-consumption crash",
+      "planned_acceptance": "Precision needs declaration plus tested kernel/bootstrap/guard receipts, not its own unproduced result; campaign requires precision pass; identities distinct. Prestart rejection unconsumed, poststart failure consumed/incomplete; ordering durable across crash",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+        "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+        "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption"
+      ],
+      "evidence_scope": "Precision and campaign consumption identities are distinct and persistent.",
+      "remaining_evidence": "No production operation-specific preflight, missing prerequisite, post-consumption crash or durable ordering test; execution stays unavailable.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-076",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]",
+            "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+            "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption"
+          ],
+          "evidence_scope": "Host/process preflight failures remain unconsumed; launch and post-consumption persistence faults retain consumed state.",
+          "remaining_evidence": "No production precision/campaign preflight binds reviewed source/calendar/rights, kernel receipts, scientific freeze and passing empirical precision."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-077",
+      "tier": "Q2",
+      "planned_case": "SIGINT/termination at forecast, ledger and analysis boundaries in an engineering subprocess",
+      "planned_acceptance": "Terminal interruption with last durable checkpoint/start record; no successful completion and no automatic resume",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+        "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "evidence_scope": "No supervised engineering subprocess interruption at forecast/ledger/analysis boundaries.",
+      "remaining_evidence": "Implement and fault-test terminal cancellation with durable state and no automatic market continuation.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-077",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+            "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+            "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[False]",
+            "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child[True]",
+            "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+          ],
+          "evidence_scope": "Generated owned process/descendant cancellation and clock-failure cleanup are executed; observed escaped children are killed.",
+          "remaining_evidence": "No SIGINT/termination injection at actual forecast/ledger/analysis operation boundaries; short unobserved descendants cannot be guaranteed by polling."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-078",
+      "tier": "Q2",
+      "planned_case": "Attempt market `resume`, delete-marker suggestion and checkpoint reuse under different source/config",
+      "planned_acceptance": "Unsupported/rejected in v2. Checkpoint is available for audit/engineering reproduction only; any scientific continuation needs a separate protocol",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035",
+        "REQ-054"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused"
+      ],
+      "evidence_scope": "Unsupported resume consumption operation and unsupported run CLI route reject; mismatched expected checkpoint identity rejects.",
+      "remaining_evidence": "No dedicated market-resume/delete-marker misuse workflow test; no market executor is exposed.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-078",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No dedicated market-resume/delete-marker misuse workflow test; no market executor is exposed."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-079",
+      "tier": "Q2",
+      "planned_case": "Disk-full/permission-denied simulation, failure writing the failure receipt",
+      "planned_acceptance": "Nonzero process result and surviving durable artifacts; stderr fallback does not claim the absent receipt exists",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-034",
+        "REQ-052"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]"
+      ],
+      "evidence_scope": "No disk-full/permission-denied plus failure-receipt-write failure process test.",
+      "remaining_evidence": "Verify nonzero exit and durable fallback without claiming a nonexistent receipt.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-079",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[completion]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[consumed_journal]",
+            "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt[resources_creation]"
+          ],
+          "evidence_scope": "Injected journal/resource/completion publication failures retain independent failure receipt and consumption.",
+          "remaining_evidence": "Not a real disk-full/permission-denied test; failure of failure receipt itself remains missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-080",
+      "tier": "Q2",
+      "planned_case": "Resource observer unavailable, budget exceeded and mocked clock reversal in both precision and full-campaign operation",
+      "planned_acceptance": "Same verified production supervision/resource/cancellation subset used before real pilot; unknown admission fails closed, monotonic clock and each operation's budget enforced; no duplicate unguarded pilot runner or fabricated RSS",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036",
+        "REQ-051"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_memory_threshold_pageouts_and_required_counters",
+        "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+        "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+        "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+        "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "evidence_scope": "Host 512 MiB boundary, growing pageouts and missing/duplicate observer counters fail closed.",
+      "remaining_evidence": "Owned process-tree supervision, monotonic clock, active resource budgets and shared pilot/campaign cancellation remain missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-080",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+            "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+            "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+            "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+            "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[free]",
+            "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[output]",
+            "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[pageouts]",
+            "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[rss]",
+            "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption[wall]",
+            "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+          ],
+          "evidence_scope": "Generated RSS/free/pageout/output/wall faults terminate worker; no-observation success and clock regression fail; PID-start identity prevents replacement signaling.",
+          "remaining_evidence": "Only generic precision-shaped worker orchestration tested; operation-specific full scientific campaign and polling blind spots remain unverified."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-081",
+      "tier": "Q2",
+      "planned_case": "Regenerate report from generated saved artifacts, then alter a raw row/table provenance key",
+      "planned_acceptance": "Every reported value traces to a verified source; alteration or missing control prevents a valid report; analysis does not import a fitting path",
+      "requirement_ids": [
+        "REQ-037"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No regenerated report/evidence provenance corruption test.",
+      "remaining_evidence": "Implement saved-artifact-only reports and reject altered rows or missing controls.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-081",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Implement saved-artifact-only reports and reject altered rows or missing controls."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-082",
+      "tier": "Q2",
+      "planned_case": "Warning, expected typed exception and unexpected exception with chained cause",
+      "planned_acceptance": "Required status, nonzero exit, traceback/cause and record IDs retained; no broad except-and-pass or exception-as-cash",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036",
+        "REQ-050"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[transform-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[library-None]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[config-not-a-config]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[feedback-value3]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[pending-value4]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[cursor_us-not-an-integer]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[previous_state_id-5]",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error[consumed_event_ids-value7]",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+        "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure"
+      ],
+      "evidence_scope": "Some expected typed failures produce rejection/nonzero CLI status and preserve old output.",
+      "remaining_evidence": "Warning/unexpected exception with chained cause, traceback/IDs and retained failed receipt are not comprehensively tested.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-082",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+            "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+            "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+            "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure"
+          ],
+          "evidence_scope": "Numerical/contract/nonzero-worker failures remain explicit and partial scientific events survive.",
+          "remaining_evidence": "Complete unexpected-exception chaining/warning integration matrix still absent."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-083",
+      "tier": "Q2",
+      "planned_case": "Generated complete end-to-end engineering campaign and an injected defect near its end",
+      "planned_acceptance": "All 192 small ledgers/artifact families present in valid case; failing case remains incomplete with successful earlier cells retained",
+      "requirement_ids": [
+        "REQ-038"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+      ],
+      "evidence_scope": "No generated 192-ledger end-to-end campaign.",
+      "remaining_evidence": "Complete full orchestration and injected late-failure retention before run readiness.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-083",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+            "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+            "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only"
+          ],
+          "evidence_scope": "All192 two-block generated-tape ledgers execute; injected fourth-cell failure retains prefix; actual kernel separately bridges one block per named fixture fold.",
+          "remaining_evidence": "No single source->actual kernel->full N>=24 folds->guarded192cells->saved artifacts->analysis->report execution or near-final-cell fault."
+        },
+        {
+          "test_id": "TEST-083",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams"
+          ],
+          "evidence_scope": "The in-memory complete campaign-to-primary/secondary analysis layer is implemented and tested on constructed retained record types.",
+          "remaining_evidence": "No single complete source->actualkernel->fullsized192ledger replay->publication/readback->analysis->report execution is established by this fixture."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-084",
+      "tier": "Q0",
+      "planned_case": "Parse/import graph and inspect package modules in a restricted temporary environment",
+      "planned_acceptance": "No predecessor/heavy runtime imports, package cycles, import-time data access, network, thread start, directory creation or freeze mutation",
+      "requirement_ids": [
+        "REQ-039"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_metadata_import_does_not_import_numpy_or_predecessor"
+      ],
+      "evidence_scope": "CLI import in a subprocess does not import NumPy or predecessor frem.",
+      "remaining_evidence": "Full restricted import-graph/cycle test and denied filesystem/network/thread/freeze mutation guards are missing.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-084",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Full restricted import-graph/cycle test and denied filesystem/network/thread/freeze mutation guards are missing."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-085",
+      "tier": "Q0",
+      "planned_case": "Strict type/lint/format scope inventory, invalid fixture schema and intentionally misspelled pytest marker",
+      "planned_acceptance": "Complete new-source scope with zero unexplained violations; strict markers/config checks fail on typos; no whole-module exclusions",
+      "requirement_ids": [
+        "REQ-040",
+        "REQ-055",
+        "REQ-059"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[True]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[3]",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes[1.0]"
+      ],
+      "evidence_scope": "Whole new source and tests pass strict mypy, lint and format in final receipt; manifest type changes reject.",
+      "remaining_evidence": "No intentional misspelled pytest marker and complete invalid fixture-schema verification.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests",
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#lint",
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#format",
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#source_types"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-085",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No intentional misspelled pytest marker and complete invalid fixture-schema verification."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-086",
+      "tier": "Q3",
+      "planned_case": "Build sdist/wheel, inspect archive members and install wheel outside checkout",
+      "planned_acceptance": "Correct metadata/entry point/`py.typed`; no datasets/secrets/predecessor code; imports resolve from installed wheel; unavailable offline dependencies reported",
+      "requirement_ids": [
+        "REQ-041",
+        "REQ-057"
+      ],
+      "status": "VERIFIED",
+      "nodeids": [],
+      "evidence_scope": "sdist/wheel build passes; archive inspection reports no forbidden members or source mismatches; attempt4 hash-bound offline clean install, isolated site-packages import, CLI help and packaged manifest plan pass. Attempt2 offline dependency failure remains retained.",
+      "remaining_evidence": "Packaging evidence is local to this macOS environment; no cross-platform or empirical reproducibility claim.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#build",
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#wheel_install",
+        "research/frem_s10_repair_20261015/package_verification_attempt4/archive_inspection.json",
+        "research/frem_s10_repair_20261015/package_verification_attempt4/commands.json"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-086",
+          "baseline_status": "VERIFIED",
+          "supplement_status": "VERIFIED",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Packaging evidence is local to this macOS environment; no cross-platform or empirical reproducibility claim."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-087",
+      "tier": "Q3",
+      "planned_case": "Compare declared lock to metadata, installed distributions and environment receipt",
+      "planned_acceptance": "Exact compatible identity or explicit mismatch; no silent re-resolution/upgrade; runtime imports require only declared NumPy plus standard library",
+      "requirement_ids": [
+        "REQ-042"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "An exact isolated environment receipt records Python/NumPy/tool versions and lock/timezone hashes; attempt4 uses hash-bound NumPy and package wheels.",
+      "remaining_evidence": "A complete automated comparison of every lock/metadata/installed distribution and imported dependency inventory is not represented by a test.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/isolated_environment.json",
+        "research/frem_s10_repair_20261015/package_verification_attempt4/commands.json"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-087",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "A complete automated comparison of every lock/metadata/installed distribution and imported dependency inventory is not represented by a test."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-088",
+      "tier": "Q1",
+      "planned_case": "Same fixture twice in locked process settings, then different hash seed/input dictionary order",
+      "planned_acceptance": "Same canonical numerical results/decisions; mutable global RNG/order dependence exposed; full timing receipts allowed to differ",
+      "requirement_ids": [
+        "REQ-043"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision",
+        "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic"
+      ],
+      "evidence_scope": "Dictionary order and same-process checkpoint numerical replay are deterministic.",
+      "remaining_evidence": "No different PYTHONHASHSEED or full same-fixture process/order comparison.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-088",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic"
+          ],
+          "evidence_scope": "Same provided-data ledger replays bitwise identically with event/state IDs and log increments.",
+          "remaining_evidence": "No cross-process PYTHONHASHSEED and input-order full-campaign comparison."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-089",
+      "tier": "Q3",
+      "planned_case": "Same constructed suite on claimed Python3.12/Linux and Python3.12/macOS targets",
+      "planned_acceptance": "Residual/decision comparison under frozen tolerances, drift disclosed; unavailable platform remains unverified rather than marked pass",
+      "requirement_ids": [
+        "REQ-043"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "Only local macOS evidence is present.",
+      "remaining_evidence": "Run the same constructed suite on claimed Linux target and compare residuals/decisions before making that claim.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-089",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Run the same constructed suite on claimed Linux target and compare residuals/decisions before making that claim."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-090",
+      "tier": "Q4",
+      "planned_case": "Fixed generated shape ladder up to declared library/action bounds, one worker/thread",
+      "planned_acceptance": "Measured worker and aggregate owned-process-tree RSS/time/work counters saved; no unbounded history growth beyond declared storage; proposal limits actually assessed",
+      "requirement_ids": [
+        "REQ-044",
+        "REQ-051"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "evidence_scope": "Final verification records test-process RSS/time, not the prescribed worst-case workload ladder or aggregate owned process tree.",
+      "remaining_evidence": "Profile bounded maximum library/action/state shapes, counters, supervisor and worker RSS/time.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-090",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+            "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+          ],
+          "evidence_scope": "Retained generated pilot and matrix tests measure small-fixture child RSS/time.",
+          "remaining_evidence": "No maximum library/action/history workload ladder and aggregate supervisor+worker campaign profiling;60minute/256MiB feasibility unproven."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-091",
+      "tier": "Q4",
+      "planned_case": "Vectorized/cache/chunk optimization versus independent reference before/after",
+      "planned_acceptance": "Same certified objectives/actions and canonical semantics; report allocations/time with fixed input; no scientific advantage inferred from faster code",
+      "requirement_ids": [
+        "REQ-044",
+        "REQ-053"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+      ],
+      "evidence_scope": "Batched fee roots match scalar/Decimal references on a constructed mixed-trade case.",
+      "remaining_evidence": "No complete optimized/cache/chunk reference equivalence or before/after allocation/time evidence.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/final_verification_attempt2/commands.json#tests"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-091",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[False-0.0]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.001]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.002]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.004]",
+            "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference[True-0.0]"
+          ],
+          "evidence_scope": "Shared-score cache reduces duplicate calls and matches uncached values exactly; vectorized policy matches independent scalar arithmetic.",
+          "remaining_evidence": "No complete before/after allocation/time benchmark or full worst-case equivalence receipt."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-092",
+      "tier": "Q1",
+      "planned_case": "Regression identity inventory includes S6-S9 and revision1 design bytes",
+      "planned_acceptance": "Unchanged predecessor hashes; a mismatch is a review blocker, never repaired by replacing old expected hashes",
+      "requirement_ids": [
+        "REQ-045",
+        "REQ-056"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "Retained corrected identity receipt checks 48 S9/revision-1 referenced identities; mutable canonical heads are matched to preserved historical snapshots.",
+      "remaining_evidence": "Full S6-S9 and revision-1 source/evidence identity inventory is broader than this receipt and lacks a named regression nodeid.",
+      "receipts": [
+        "research/frem_s10_repair_20261015/predecessor_check_corrected.json"
+      ],
+      "review_history": [
+        {
+          "test_id": "TEST-092",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Full S6-S9 and revision-1 source/evidence identity inventory is broader than this receipt and lacks a named regression nodeid."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-093",
+      "tier": "Q2",
+      "planned_case": "CI invocation under denied network, no data mounts and empty protected fixture path",
+      "planned_acceptance": "Generated suite still complete; attempted external access fails visibly; no market collection or execution by default",
+      "requirement_ids": [
+        "REQ-046"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "The tests are generated and no market route is exposed, but no denied-network/no-data-mount CI execution receipt exists.",
+      "remaining_evidence": "Run the suite under explicit denied external/data access with complete generated fixtures.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-093",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Run the suite under explicit denied external/data access with complete generated fixtures."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-094",
+      "tier": "Q0",
+      "planned_case": "Requirement-to-test registry with missing/orphaned ID, unjustified skip and expired quality exception",
+      "planned_acceptance": "Readiness fails with exact gap; counts/coverage cannot substitute for missing critical evidence",
+      "requirement_ids": [
+        "REQ-047",
+        "REQ-055",
+        "REQ-056",
+        "REQ-060"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [],
+      "evidence_scope": "This mapping accounts for all 96 catalog IDs and records gaps without inferring completion from 119 passes.",
+      "remaining_evidence": "No automated readiness validator rejects missing/orphaned IDs, unjustified skips or expired exceptions; this review artifact alone does not pass that gate.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-094",
+          "baseline_status": "PARTIAL",
+          "supplement_status": "PARTIAL",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "No automated readiness validator rejects missing/orphaned IDs, unjustified skips or expired exceptions; this review artifact alone does not pass that gate."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-095",
+      "tier": "Q2",
+      "planned_case": "Claims ledger points to absent evidence or labels static parse as runtime/independent empirical evidence",
+      "planned_acceptance": "Report validation rejects unsupported claim; engineering/internal review remains separately named",
+      "requirement_ids": [
+        "REQ-032",
+        "REQ-049",
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-060"
+      ],
+      "status": "PARTIAL",
+      "nodeids": [
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+      ],
+      "evidence_scope": "No claims-ledger negative test for absent evidence or static-as-runtime mislabeling.",
+      "remaining_evidence": "Implement report/claims validation with engineering versus empirical/independent evidence categories.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-095",
+          "baseline_status": "PENDING",
+          "supplement_status": "PARTIAL",
+          "nodeids": [
+            "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+            "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence"
+          ],
+          "evidence_scope": "Pure numeric endpoints explicitly disclaim source authority; engineering-scope/small/incomplete adapter inputs reject. Precision input/output accepts only GENERATED_ENGINEERING or SOURCE_VIEW_WITHOUT_SCIENTIFIC_ADMISSION, rejects self-declared REAL_ADMITTED, and cannot authorize campaign.",
+          "remaining_evidence": "No claim-ledger/report validator: full-size generated input can reach pure numeric predicates without source authority; caller must not infer empirical support."
+        },
+        {
+          "test_id": "TEST-095",
+          "status": "PARTIAL",
+          "nodeids": [
+            "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[axes]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[law]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[score]",
+            "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing[issued]",
+            "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle"
+          ],
+          "evidence_scope": "Nested results preserve generated/unverified scope, and source-authority approval booleans cannot be asserted.",
+          "remaining_evidence": "Full claims-ledger and generated report evidence validation remains external."
+        }
+      ]
+    },
+    {
+      "test_id": "TEST-096",
+      "tier": "Q4",
+      "planned_case": "Targeted semantic mutants in chronology, costs, cross-expert score and consumption order",
+      "planned_acceptance": "A relevant test detects every non-equivalent critical mutant; survivors reviewed with concrete counterexample or equivalence argument",
+      "requirement_ids": [
+        "REQ-048",
+        "REQ-059"
+      ],
+      "status": "PENDING",
+      "nodeids": [],
+      "evidence_scope": "No targeted semantic mutation campaign has been executed.",
+      "remaining_evidence": "Run the bounded reviewed mutants only in a disposable S10 source copy; retain killed/surviving mutant evidence.",
+      "receipts": [],
+      "review_history": [
+        {
+          "test_id": "TEST-096",
+          "baseline_status": "PENDING",
+          "supplement_status": "PENDING",
+          "nodeids": [],
+          "evidence_scope": "No new discriminating evidence reviewed for this obligation; inherit baseline snapshot.",
+          "remaining_evidence": "Run the bounded reviewed mutants only in a disposable S10 source copy; retain killed/surviving mutant evidence."
+        }
+      ]
+    }
+  ],
+  "run_ready": false,
+  "scientific_status": "NOT_EVALUATED",
+  "final_runtime_receipt": "RECEIPT.json",
+  "additional_final_tests": "Exact final collection/result and source hashes in RECEIPT.json; no automatic catalog upgrades inferred from test counts.",
+  "final_runtime_test_count": 274,
+  "final_runtime_source_files_checked": 74,
+  "final_runtime_note": "All final checks pass; catalog status remains conservative and is not upgraded merely from aggregate counts."
+}

@@ -1,0 +1,72 @@
+........F............................................................... [ 57%]
+.....................................................                    [100%]
+=================================== FAILURES ===================================
+______________________ test_actual_horizon_and_continuity ______________________
+
+    def test_actual_horizon_and_continuity():
+        from successors.frem_s7.data import validate_dataset
+        p=weekly_payload();validate_dataset(p)
+        p['partitions']['evaluation']['maturity_times'][0]+=86400
+>       with pytest.raises(ValueError,match='synchronized'):validate_dataset(p)
+                                                            ^^^^^^^^^^^^^^^^^^^
+
+tests/s7/test_successor.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+successors/frem_s7/data.py:146: in validate_dataset
+    metadata = {name: _partition_metadata(raw[name], name, header) for name in PARTITIONS}
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+part = {'assets': ['A', 'B', 'A', 'B'], 'available_times': [7344001.0, 7344001.0, 7776001.0, 7776001.0], 'maturity_times': [7430400.0, 7344000.0, 7776000.0, 7776000.0], 'origin_times': [6912000.0, 6912000.0, 7344000.0, 7344000.0], ...}
+name = 'evaluation'
+header = {'asset_universe': ('A', 'B'), 'currency': 'USD', 'fit_cutoff': 3456000.0, 'horizon_seconds': 604800.0, ...}
+
+    def _partition_metadata(part: Any, name: str, header: dict[str, Any]) -> dict[str, Any]:
+        if not isinstance(part, dict):
+            raise ValueError(f"{name} must be a partition object")
+        assets = _strings(_required(part, "assets"), f"{name}.assets", unique=False)
+        n = len(assets)
+        vectors = {field: _numeric(_required(part, field), f"{name}.{field}", (n,))
+                   for field in ("origin_times", "maturity_times", "available_times")}
+        origins, maturity, available = (vectors[field] for field in
+                                         ("origin_times", "maturity_times", "available_times"))
+        stamps = _numeric(_required(part, "window_times"), f"{name}.window_times")
+        if stamps.ndim != 2 or stamps.shape[0] != n or stamps.shape[1] < 2:
+            raise ValueError(f"{name}.window_times requires [row,time>=2]")
+        releases = _numeric(_required(part, "window_available"), f"{name}.window_available", stamps.shape)
+        timing = {**vectors, "window_times": stamps, "window_available": releases}
+        if name == "train":
+            timing["future_times"] = _numeric(_required(part, "future_times"), "train.future_times", stamps.shape)
+            timing["future_available"] = _numeric(_required(part, "future_available"),
+                                                  "train.future_available", stamps.shape)
+        # Evaluate every date guard before touching windows, targets or returns.
+        if any(np.any(values >= header["protected_start"]) for values in timing.values()):
+            raise ValueError(f"{name} timestamp reaches the protected boundary")
+        if np.any(np.diff(stamps, axis=1) <= 0):
+            raise ValueError(f"{name} window times must be strictly increasing")
+        if np.any(releases < stamps) or np.any(stamps >= origins[:, None]) or np.any(releases >= origins[:, None]):
+            raise ValueError(f"{name} windows must be observed and available strictly before origin")
+        if np.any(maturity - origins < 3*86400) or np.any(maturity - origins > 10*86400):
+            raise ValueError(f"{name} weekly holding intervals must span 3 to 10 calendar days")
+        if np.any(maturity <= origins) or np.any(available < maturity):
+>           raise ValueError(f"{name} requires origin < maturity <= availability")
+E           ValueError: evaluation requires origin < maturity <= availability
+
+successors/frem_s7/data.py:109: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_actual_horizon_and_continuity():
+        from successors.frem_s7.data import validate_dataset
+        p=weekly_payload();validate_dataset(p)
+        p['partitions']['evaluation']['maturity_times'][0]+=86400
+>       with pytest.raises(ValueError,match='synchronized'):validate_dataset(p)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'synchronized'
+E        Input: 'evaluation requires origin < maturity <= availability'
+
+tests/s7/test_successor.py:69: AssertionError
+=========================== short test summary info ============================
+FAILED tests/s7/test_successor.py::test_actual_horizon_and_continuity - Asser...
+1 failed, 124 passed in 1.27s

@@ -1,0 +1,42 @@
+{
+  "name": "fresh_2023",
+  "included_stocks": [
+    "ABT",
+    "CAT",
+    "GE",
+    "HON",
+    "IBM",
+    "MCD",
+    "MMM",
+    "MSFT",
+    "PEP",
+    "PG",
+    "WMT",
+    "XOM"
+  ],
+  "excluded_stocks": {},
+  "expected_target_months": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12"
+  ],
+  "validation_start_ns": 1606780800000000000,
+  "evaluation_decision_start_ns": 1669852800000000000,
+  "max_training_label_ns": 1604361600000000000,
+  "max_validation_label_ns": 1667433600000000000,
+  "row_counts": [
+    2688,
+    264,
+    144
+  ],
+  "exclusion_policy": "Predetermined completeness/coverage only; no outcome-based exclusions"
+}

@@ -1,0 +1,9 @@
+{
+  "observation": "User explicitly requested successor slowly like before. S3 outcomes are already inspected and remain closed.",
+  "hypothesized_cause": "Distance scaling and unstable single-block gate selection may limit residual relevance; unproved.",
+  "change": "Additive S4 recent96-date base, mean-only distance intervention, conservative two-half gate, 6 fits/24 outputs; reused public windows are development only. Renew slow resource deviation without altering normal guard.",
+  "predicted_effect": "Measure incremental distance contribution under one common recent base; no promised win.",
+  "discriminating_experiment": "Fixed seeds11/29/47 and 2023/2024 development windows; off, old distance, Euclidean distance and matched random; 1800s total/300s worker/768MiB/one thread/nice10.",
+  "result": "PRE_EXECUTION; sources and data freeze before tests and fits; preserve every failure.",
+  "status": "AUTHORIZED_BOUNDED_DEVELOPMENT"
+}

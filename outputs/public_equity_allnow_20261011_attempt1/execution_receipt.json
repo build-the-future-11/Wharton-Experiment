@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-11T14:21:39.883029+00:00",
+  "user_request": "run all experiments now",
+  "status": "BLOCKED_BEFORE_NEW_MODEL_EXECUTION",
+  "new_fits_started": 0,
+  "protected_outcomes_accessed": false,
+  "public_six_window_matrix": {
+    "planned_cells": 24,
+    "status": "BLOCKED_BEFORE_MODEL_IMPORT",
+    "failure": "outputs/public_equity_allnow_20261011_attempt1/failure.json",
+    "error": "RESOURCE_ADMISSION_FAILED [{\"available_mib\": 103.421875, \"pageouts\": 874841}, {\"available_mib\": 125.0625, \"pageouts\": 874844}, {\"available_mib\": 118.046875, \"pageouts\": 874844}]"
+  },
+  "canonical_development_and_robustness": {
+    "status": "BLOCKED_MISSING_CANONICAL_PANEL",
+    "panel_exists": false,
+    "manifest_exists": false
+  },
+  "confirmation": {
+    "status": "BLOCKED_DEVELOPMENT_AND_FREEZE_INCOMPLETE",
+    "protocol_status": "PROPOSED_NOT_FROZEN"
+  },
+  "frem_s2": {
+    "status": "ALREADY_COMPLETED_NOT_RERUN",
+    "receipt": "research/frem_rebuild_20261011/completion_receipt_v2.json"
+  },
+  "regional_factors": {
+    "status": "ACQUISITION_ONLY_NO_DECLARED_MODEL_EXPERIMENT"
+  },
+  "prior_results": "Preserved completed synthetic, legacy and successor evidence; no repeat to seek a favorable result.",
+  "resource_deviation_scope": "Prior slow-mode deviation was declared for the completed FREM-S2 22-fit matrix; this attempt preserved the public six-window launcher gate."
+}

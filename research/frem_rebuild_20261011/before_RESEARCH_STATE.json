@@ -1,0 +1,275 @@
+{
+  "project": "FREM: Causal Fourier-Reservoir Engram Memory",
+  "version": "0.1.1-runtime-gated",
+  "created": "2026-10-10",
+  "updated": "2026-10-11",
+  "phase": "public_data_acquired_evidence_paper_updated_market_execution_resource_blocked",
+  "scientific_status": "NOT_EVALUATED",
+  "global_crisis_request": {
+    "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
+    "priority": "Worldwide historical equities, especially the 2007-2009 crisis and calendar 2008",
+    "readiness_record": "research/global_equity_crisis_readiness_2026-10-11.json",
+    "market_cells_started": 0,
+    "required_input": "Historical market export or accessible provider including inactive securities, terminal outcomes, corporate actions, timestamps, historical membership and FX",
+    "required_implementation": "Explicit terminal-loss treatment, named-date fold orchestration, global portfolio accounting and measured scalable execution"
+  },
+  "public_crisis_study": {
+    "status": "PUBLIC_DATA_ACQUIRED_EXECUTION_RESOURCE_BLOCKED",
+    "scope": "Retrospective public sample of 24 currently listed stocks across 12 listing markets; worldwide completeness is not claimed",
+    "receipt": "research/public_equity_intake_2026-10-11.json",
+    "configuration": "configs/public_equity_crises.json",
+    "data_manifest": "data/public_equity_crises_v1/manifest.json",
+    "market_cells_completed": 0,
+    "new_runtime_tests": "Six authored; pending resource admission",
+    "canonical_market_admission": false
+  },
+  "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
+  "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
+  "compute_authorized_this_session": "User authorized immediate execution on 2026-10-11. Ten bounded engineering cells were completed across FREM, RE-JEPA v0.3, and RENG-JEPA v0.1 using explicitly synthetic fixtures. Market development and confirmatory cells could not start because no admitted canonical panel or scientific freeze exists; no dataset was relabeled and no protected outcomes were accessed.",
+  "development_budget_proposed": {
+    "max_trials": 24,
+    "max_wall_clock_hours": 12,
+    "status": "authorized_but_unspent_data_blocked",
+    "interpretation": "The optional robustness suite remains a separately declared 36-trial/12-hour market matrix. A separate four-cell synthetic engineering matrix completed and does not consume or satisfy this scientific development budget."
+  },
+  "protected_evaluation": {
+    "status": "not accessed",
+    "freeze_required": true
+  },
+  "claims": {
+    "novelty": "candidate; not established",
+    "performance": "no admitted-market FREM results",
+    "profitability": "unproven",
+    "data_efficiency": "hypothesis only",
+    "current_watchlist": "fundamentals-based provisional GYIC research ranking; not a FREM prediction or approved allocation"
+  },
+  "decisions": [
+    "Keep original negative and failed results",
+    "Never assume recession certainty",
+    "No live trading",
+    "Separate model research from Laura-specific mandate certification",
+    "Do not substitute casual adjusted-close downloads for the canonical point-in-time data contract",
+    "Do not rerun the spent legacy lockbox or the completed one-path synthetic amendment",
+    "Publish the 2026-10-11 stock ranking only as a provisional watchlist pending the team-only approved universe",
+    "Treat the successor RE-JEPA v0.3 synthetic run as engineering compatibility evidence only; it does not unlock market, protected, or competition claims",
+    "Treat repository cleanup and local synthetic timing measurements as engineering evidence only; scientific status remains NOT_EVALUATED",
+    "Treat the Yahoo-adjusted-close file only as a calibration source for an explicitly synthetic engineering fixture; never relabel it as the admitted market panel",
+    "Preserve the synthetic FREM negative comparison exactly and do not retune or rerun it to manufacture a favorable result",
+    "The worldwide/2008 campaign requires a historical global universe and explicit default-loss treatment; retrospectively selected survivors and synthetic fixtures do not satisfy that request",
+    "Following the user's public-only access clarification, treat the 24-stock public crisis study as exploratory retrospective evidence with explicit survivor/revision/timing limits and separate local-currency ledgers",
+    "Use the retained loss diagnosis to distinguish numerical failure from causal training hypotheses; do not retune the completed synthetic result or equate arithmetic parameter swaps with new experiments"
+  ],
+  "failures": [
+    {
+      "date": "2026-10-11",
+      "stage": "dependency_install",
+      "status": "resolved_infrastructure_failure",
+      "detail": "Initial uv install failed because the OS temporary volume filled while extracting PyTorch. The disposable task cache was removed and the cache was relocated to PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "runtime_tests_attempt_1",
+      "status": "retained_infrastructure_failure",
+      "detail": "151 tests passed and 12 tests errored during tmp_path setup because the OS temporary volume could not create directories. The unchanged suite passed 163/163 with TMPDIR on PRO-BLADE."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "first_execution",
+      "status": "blocked_before_model_execution",
+      "detail": "data/raw/panel.parquet is absent. Zero model cells started and no protected outcomes were accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "deprecation_cleanup_attempt",
+      "status": "retained_failed_regression_attempt",
+      "detail": "An initial duration-parser warning repair caused 32 failures with 131 passes because constructing pandas Timedelta values still entered the deprecated NumPy conversion path. The defect was corrected with fixed-frequency offsets and explicit NumPy timedeltas; the full 163-test suite then passed with DeprecationWarning treated as an error."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "package_build_cleanup_attempt",
+      "status": "resolved_environment_failure",
+      "detail": "The first no-isolation builds failed before artifact creation because wheel was absent. wheel 0.48.0 was installed into the ignored local environment and all three package wheel/source builds then passed."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "data_admission_search",
+      "status": "blocked_before_model_execution",
+      "detail": "Local repositories, indexed user files, connected Google Drive, and configured-provider credentials contained no canonical point-in-time panel and manifest. Two Yahoo-derived candidates were rejected for explicit timestamp, actions, eligibility, survivorship, license/provenance, and terminal-outcome gaps. Zero model cells started."
+    },
+    {
+      "date": "2026-10-11",
+      "stage": "engineering_panel_generation_attempt_1",
+      "status": "retained_repaired_warning",
+      "detail": "The first generator invocation completed but emitted pandas and NumPy deprecation warnings for Timedelta construction. The generator was repaired to use explicit NumPy timedeltas; the deterministic output was preserved rather than overwritten."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-10",
+      "event": "Research restart requested; source protocol preserved; implementation contract specified before coding."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Recovered current Laura case reproduction and preserved earlier reported negative memory evidence; no new experiments executed."
+    },
+    {
+      "date": "2026-10-10",
+      "event": "Integrated independent source review corrections; preserved 130 authored unrun test functions; rendered and visually reviewed the 21-page methods/protocol manuscript. No empirical evaluation performed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Installed a resolved Python 3.12 environment, passed 163 runtime tests and package build, retained the first temp-volume failure, planned all declared matrices, attempted the four-cell compatibility run, and stopped before fitting because the canonical market panel is absent. Legacy invalid/negative/null evidence was reconciled without reruns."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Advanced the clean successor under successors/rejepa_v1 to v0.3: tightened validation and mathematical contracts, replaced heuristic scenario CVaR with an exact linear program, added causal retrieval and streaming-residual controls, generated an explicitly non-scientific deterministic engineering fixture, completed two identical numerical smoke runs using canonical tensor-state hashes, passed 67 successor tests and package verification, and retained the admitted-market-data and official-rules block. No protected outcome was defined or accessed."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Created the additive RENG-JEPA v0.1 manuscript lineage under successors/reng_jepa_v01 without rewriting FREM or RE-JEPA. The current implementation passed 43 integrity/mathematical/accounting tests and a four-fixture synthetic engineering matrix; both earlier implementation failures were retained and repaired. All fixtures are labeled non-scientific, untrained collapse diagnostics remain visible, no market or protected data was accessed, and full development execution remains blocked on admitted data and resource headroom."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Reconciled the repository into explicit FREM, RE-JEPA v0.3, RENG-JEPA v0.1, and byte-preserved legacy boundaries; passed 163, 67, and 45 tests respectively with deprecations treated as errors; passed full-scope Ruff and all three package builds; and verified graph and funding optimizations against scalar references. Synthetic timing evidence is engineering-only and scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Searched local repositories, indexed user files, connected Google Drive, and configured provider credentials for a runnable market panel. Rejected the available Yahoo adjusted-close and monthly-return candidates under the declared information/provenance contract. No dataset was relabeled, no model cell started, and no protected outcome was accessed; the exact intake audit is research/data_admission_audit_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "After explicit user execution authorization and resource admission, generated an explicitly synthetic Yahoo-calibrated engineering fixture and completed 10 bounded cells: four FREM compatibility cells, two RE-JEPA v0.3 cells, and four RENG-JEPA v0.1 regimes. FREM was worse than no-memory on the synthetic fixture and that negative result was preserved. No admitted-market, robustness, confirmatory, protected, portfolio, or competition execution occurred; scientific status remains NOT_EVALUATED."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User requested all-world equity backtests, especially 2008. Rechecked missing canonical data and provider environment access, inspected terminal-loss, split and global-ledger limitations, verified historical recession announcement dates and candidate provider scope, and recorded proposed crisis windows and exact blockers. No new market cells ran and no protected outcomes were accessed. Receipt: research/global_equity_crisis_readiness_2026-10-11.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "User clarified public/free access only. Predeclared a separate retrospective 24-stock, 12-market crisis study, downloaded all 24 histories with 158,760 daily observations and verified source hashes. Added dated monthly folds, causal input gaps, coverage receipts, local-stock cost accounting and six authored tests. Static checks passed; resource admission stopped execution before model import. Canonical scientific status and protected boundary are unchanged."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Acquired seven official public regional factor datasets (3,666 pre-2025 monthly rows), independently recomputed four retained synthetic cells, passed 12 offline audit/parser tests, and updated/compiled/visually reviewed the 23-page paper and source review archive. Preserved the original manuscript, negative evidence and earlier build/lint diagnostics. Resource checks failed at 328/254/163 MiB with rising pageouts; zero new model cells ran. No canonical protected outcomes were accessed. Scientific status remains NOT_EVALUATED and arXiv readiness false. Receipt: research/completion_20261011/COMPLETION_RECEIPT.json."
+    },
+    {
+      "date": "2026-10-11",
+      "event": "Diagnosed the saved negative FREM run using source-hash checks and standard-library arithmetic. All forecasts are negative; 63.12% of squared error is overall bias, and location accounts for 78.79% of the neural NLL gap in an order-averaged field-swap decomposition. The same-checkpoint memory correction improves NLL by 0.002855; the no-memory control is separately trained. Preserved controller/residual/optimization hypotheses, all comparisons and 13 passing tests; no new fit, protected access or scientific promotion."
+    }
+  ],
+  "prior_reported_evidence": [
+    {
+      "source": "docs/laura_case_evidence.json",
+      "finding": "User preparation document reports negative synthetic APEN-memory and graph-memory comparisons.",
+      "verification": "Reported history only; raw runs not independently re-audited in the source-authoring session.",
+      "interpretation": "New source implementation does not establish these failures are solved."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/RESEARCH_AUDIT.md and legacy/wharton_lab_v0/EXECUTION_STATE.json",
+      "finding": "The 1181-cell legacy matrix is leakage/degeneracy contaminated; the spent lockbox synthetic arm is invalid, the ETF arm is negative, and the repaired study is null versus historical mean.",
+      "verification": "Reconciled from retained local reports on 2026-10-11; no old lockbox rerun was performed.",
+      "interpretation": "These results cannot support a stock forecast or a positive memory claim."
+    },
+    {
+      "source": "legacy/wharton_lab_v0/candidates/engram-reservoir-jepa-20261008/prospective/results/WHARTON-A20261008-R2-SYNTH-CV-001/FINAL_DISPOSITION.json",
+      "finding": "On one fixed synthetic path, candidate memory MSE was 9.269584365779265 percent worse than memory-off.",
+      "verification": "Retained completed receipt read on 2026-10-11; no rerun.",
+      "interpretation": "Synthetic negative evidence only; not market performance."
+    }
+  ],
+  "authoring_gates": {
+    "idea": "specified; novelty candidate, not established",
+    "model_contract": "written and statically cross-reviewed",
+    "methodology": "prospective protocol written, not frozen",
+    "model_source": "implemented; runtime compatibility verified by tests",
+    "experiment_source": "implemented; runtime compatibility verified by tests",
+    "dry_run": "synthetic engineering integration complete; admitted-market dry run remains blocked by absent canonical panel",
+    "development_matrix": "authorized but not started; admitted data absent",
+    "confirmatory_freeze": "not created",
+    "protected_evaluation": "not executed",
+    "empirical_paper": "not completed",
+    "delivery": "source, prospective manuscript, runtime receipt, and provisional current GYIC watchlist"
+  },
+  "successor_lineages": {
+    "rejepa_v1": {
+      "path": "successors/rejepa_v1",
+      "status": "fresh_engineering_matrix_complete_external_market_data_and_rules_block_scientific_execution",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "67 passed",
+      "engineering_matrix": "successors/rejepa_v1/runs/engineering_v0_3_allnow_20261011/ENGINEERING_RECEIPT.json",
+      "protected_outcomes_accessed": false
+    },
+    "reng_jepa_v01": {
+      "path": "successors/reng_jepa_v01",
+      "status": "fresh_engineering_matrix_complete_waiting_for_admitted_data_and_freeze",
+      "scientific_status": "NOT_EVALUATED",
+      "tests": "45 passed",
+      "engineering_matrix": "successors/reng_jepa_v01/runs/engineering_compatibility_allnow_20261011/SUMMARY.json",
+      "protected_outcomes_accessed": false
+    }
+  },
+  "remaining_external_inputs": [
+    "Licensed canonical asset panel and truthful point-in-time provenance",
+    "Current official participant approved universe and trading requirements",
+    "Team numerical concentration, liquidity, risk, funding-confidence and flexibility policy",
+    "Declared current holdings, dated metadata and synchronized forecast-to-portfolio horizon"
+  ],
+  "authoring_verification": {
+    "static_record": "docs/STATIC_VERIFICATION.cleanup_2026-10-11.json",
+    "runtime_record": "research/runtime_verification_2026-10-11.json",
+    "repository_cleanup_record": "research/repository_cleanup_verification_2026-10-11.json",
+    "efficiency_record": "research/efficiency_verification_2026-10-11.json",
+    "data_admission_record": "research/data_admission_audit_2026-10-11.json",
+    "engineering_execution_record": "research/all_admissible_runs_2026-10-11.json",
+    "python_files": 37,
+    "authored_test_functions": 130,
+    "tests_executed": true,
+    "runtime_test_result": "163 passed in 8.64 seconds with warnings treated as errors",
+    "successor_test_results": "RE-JEPA v0.3: 67 passed in 5.23 seconds; RENG-JEPA v0.1: 45 passed in 5.23 seconds; warnings treated as errors",
+    "package_build": "PASS for FREM, RE-JEPA v0.3, and RENG-JEPA v0.1",
+    "market_data_downloaded": true,
+    "market_data_download_scope": "Public retrospective 24-stock histories; not the canonical point-in-time global panel",
+    "engineering_model_runs_executed": true,
+    "engineering_cells_completed": 10,
+    "market_model_or_portfolio_runs_executed": false,
+    "paper_pages": 23,
+    "bibliographic_references": 24,
+    "paper_status": "methods_and_engineering_evidence_review_draft_compiled_visually_reviewed_not_submission_ready",
+    "paper_release_record": "paper/release_review_20261011/MANIFEST.json"
+  },
+  "completion_request": {
+    "receipt": "research/completion_20261011/COMPLETION_RECEIPT.json",
+    "new_model_cells_started": 0,
+    "new_tests_passed": 12,
+    "scientific_status": "NOT_EVALUATED",
+    "arxiv_submission_ready": false,
+    "paper": "paper/main.pdf",
+    "paper_status": "23-page compiled methods and engineering evidence review draft",
+    "resource_check": "research/completion_20261011/final_resource_check.json"
+  },
+  "public_regional_benchmarks": {
+    "status": "ACQUIRED_NOT_MODEL_EVALUATED",
+    "manifest": "data/public_regional_factors_20261011/manifest.json",
+    "datasets": 7,
+    "pre_2025_monthly_rows": 3666,
+    "canonical_market_admission": false,
+    "license_status": "Publicly accessible; redistribution not verified",
+    "provider_access_statement": "User reports no licensed dataset currently available and authorizes public internet collection."
+  },
+  "loss_diagnosis": {
+    "status": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_OF_RETAINED_SYNTHETIC_RUN",
+    "report": "research/frem_loss_diagnosis_20261011/REPORT.md",
+    "receipt": "research/frem_loss_diagnosis_20261011/diagnosis.json",
+    "verification": "research/frem_loss_diagnosis_20261011/verification.json",
+    "scope": "Four synthetic assets, 92 held-out development dates, seed 11; no admitted market conclusion",
+    "main_finding": "Downward mean bias dominates the saved loss; fixed-checkpoint memory correction slightly improves NLL",
+    "nll_gap_frem_minus_no_memory": 0.564926857349982,
+    "fixed_checkpoint_memory_nll_improvement": 0.002854824521729582,
+    "location_gap_share_descriptive": 0.7879045708608131,
+    "upstream_causes": "Short optimization, evolving residual reference and mismatched controller objective are plausible but not experimentally isolated",
+    "tests_passed": 13,
+    "new_model_fits": 0,
+    "protected_outcomes_accessed": false,
+    "resource_admission": "Not satisfied; standard-library diagnosis only"
+  }
+}

@@ -1,0 +1,3 @@
+successors/frem_s10/src/frem_s10/runtime/smoke.py:286: error: Argument 1 to "_step" has incompatible type "dict[str, object] | dict[str, ForecastState]"; expected "dict[str, object]"  [arg-type]
+successors/frem_s10/src/frem_s10/runtime/smoke.py:331: error: Name "result" already defined on line 266  [no-redef]
+Found 2 errors in 1 file (checked 7 source files)

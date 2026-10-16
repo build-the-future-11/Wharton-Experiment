@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".venv/bin/ruff",
+    "check",
+    "successors/frem_audit_v1",
+    "tests/restart"
+  ],
+  "exit_code": 0,
+  "seconds": 0.10095287500007544,
+  "scope": "New bounded audit and reference mathematics only; not scientific model evaluation"
+}

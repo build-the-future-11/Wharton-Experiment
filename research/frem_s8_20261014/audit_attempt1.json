@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "research/frem_s8_20261014/audit_saved.py",
+    "--root",
+    "outputs/frem_s8_2020_2022_20261014_attempt1",
+    "--data",
+    "data/s8_etf_2020_2022_20261014_attempt2",
+    "--freeze",
+    "research/frem_s8_20261014/freeze2.json",
+    "--output",
+    "research/frem_s8_20261014/AUDIT.json"
+  ],
+  "returncode": 0,
+  "seconds": 2.0193906249987776
+}

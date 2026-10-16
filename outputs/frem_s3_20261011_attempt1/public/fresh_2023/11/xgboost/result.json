@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "name": "xgboost",
+  "fold": "fresh_2023",
+  "seed": 11,
+  "base_version": "787d1f4ba5e3fd4f43a91058a2139b7fb8a3aeb95c858110bfb3efb3d86b299e",
+  "results": {
+    "off": {
+      "nll": -1.209831892166609,
+      "sha256": "fdd5cfd29b806c3261be1dca19f86f8203c8260edf59b085fe384e7f38a6d33e",
+      "rows": 144,
+      "selected": {
+        "weight": 0.0,
+        "power": 0.0,
+        "nll": -0.9839802280678879
+      },
+      "mean_gate": 0.0,
+      "mean_risk_power": 0.0
+    }
+  },
+  "raw_nll": -1.3343336096953298,
+  "protected_access": false,
+  "scope": "New-sample public exploration only"
+}

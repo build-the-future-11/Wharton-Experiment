@@ -1,0 +1,18 @@
+{
+  "scripts/public_equity_backtests.py": "e2dc1628a813e091935d696063ed7110cf688846abaf40e1742bfd79a7cf5cb0",
+  "successors/frem_portfolio_v1/engine.py": "ce472cb0ceac0dc538c0d4f268864e82a464f0848b205b5482e648db848df237",
+  "successors/frem_s6/__init__.py": "971e0c1053cc4d8ca2e58f15e53009d64b40912eaee788d4d0d3e4542270e759",
+  "successors/frem_s6/check.py": "93f39a86776b5d83f1427d55ad95f493bc8853fd1180c81abc3263219e2f2340",
+  "successors/frem_s6/data.py": "da6bbd4a356434ac00cdf7b1682eaae3ef4ecb2b77b90b50cb29577e0f743237",
+  "successors/frem_s6/experiment.py": "e545246792cf8ce7a8a6af9dcb9113ac7739ef2804b1633510c7f8fd6b21e30d",
+  "successors/frem_s6/kernel.py": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f",
+  "successors/frem_s6/model.py": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf",
+  "successors/frem_s6/policy.py": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf",
+  "successors/frem_s6/run.py": "63b0441fc2af7c3ae2cc1ba16e2c5d752f10cc30695ac5401ef9448be4eced0e",
+  "tests/s6/test_data.py": "a45d5bf0c24b79bc9e556ed49c52e5555294ed0b403092343dd6fa67558421fd",
+  "tests/s6/test_experiment.py": "f645adb94c412c12cd8f06d2b25f21efd0b569085f680d46a216aa8291e39d77",
+  "tests/s6/test_independent.py": "e89583ff6e9021238b4703bdbbcc7557837bd069ae857c240bf2c8ed8af3121c",
+  "tests/s6/test_kernel.py": "5ff102db0ec104f11b7708706f99cfc891ad9786ceaee72bc30d545385a5c5ef",
+  "tests/s6/test_model.py": "b9a30fc293a8511231fc6b38411fd23ac5cf82e7452c48fb260e599dcb0a32d6",
+  "tests/s6/test_policy.py": "3a764644d4bae5e8e046ab3ed74fc5bee15f8e48f5fb67fcfbb67180dd4509b6"
+}

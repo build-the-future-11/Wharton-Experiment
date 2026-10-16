@@ -1,0 +1,4 @@
+run_id,state,scope_or_blocker
+s10-20261016-cpu-persistence-probe,SUCCEEDED,Metadata plus private persistence validation only; incompatible runtime observed
+s10-20261016-cpu-smoke12-seed11,PENDING,Observed Kaggle Python3.13.15/NumPy2.1.3 differ from sealed Python3.12/NumPy2.5.4; target host admission and runtime verification not performed
+s10-20261016-scientific-development,PENDING,Unfrozen; unsupported Linux production contract; full exact-source qualification and measured costs missing

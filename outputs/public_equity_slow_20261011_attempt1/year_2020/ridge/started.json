@@ -1,0 +1,8 @@
+{
+  "memory": {
+    "available_mib": 385.96875,
+    "pageouts": 891923
+  },
+  "fold": "year_2020",
+  "model": "ridge"
+}

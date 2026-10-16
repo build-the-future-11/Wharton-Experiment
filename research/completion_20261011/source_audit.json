@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-11",
+  "primary_sources_checked": [
+    {
+      "key": "yu2023finmem",
+      "url": "https://arxiv.org/abs/2311.13743v2",
+      "scope": "Abstract-level layered financial-memory neighbor; no comparative performance adopted"
+    },
+    {
+      "key": "xiao2025finsrag",
+      "url": "https://arxiv.org/abs/2502.05878v3",
+      "scope": "Abstract-level financial time-series retrieval neighbor; latest title and version checked"
+    },
+    {
+      "key": "feng2026",
+      "url": "https://arxiv.org/abs/2609.31680",
+      "scope": "Abstract verifies backbone-dependent JEPA benefits"
+    },
+    {
+      "key": "fresco2026",
+      "url": "https://arxiv.org/abs/2606.24969",
+      "scope": "Abstract verifies frequency-domain reservoir mechanism distinction"
+    },
+    {
+      "key": "frenchlibrary",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_developed.html",
+      "scope": "Return units, region construction and coverage"
+    },
+    {
+      "key": "arxiv_source_requirements",
+      "url": "https://info.arxiv.org/help/submit_tex.html",
+      "scope": "Official current source/bibliography processing requirements"
+    }
+  ],
+  "not_completed": "Exhaustive novelty search, full-text equation review, all inherited references and matched retrieval experiments remain incomplete."
+}

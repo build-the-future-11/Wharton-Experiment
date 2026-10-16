@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/s6",
+    "tests/s7",
+    "tests/s8",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "returncode": 1,
+  "seconds": 14.626577124996402
+}

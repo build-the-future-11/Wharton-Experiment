@@ -1,0 +1,31 @@
+F....                                                                    [100%]
+=================================== FAILURES ===================================
+___ test_every_fixed_calibration_edge_sparse_boundary_and_exact_loss_events ____
+
+    def test_every_fixed_calibration_edge_sparse_boundary_and_exact_loss_events() -> None:
+        """TEST-031: every declared bin edge, empty/missing and exact event conventions."""
+        probabilities = np.arange(11, dtype=np.float64) / 10
+        bins = calibration_bins(probabilities, np.zeros(11))
+        assert [row["count"] for row in bins] == [1] * 9 + [2]
+        dense = calibration_bins(np.zeros(10), np.zeros(10))
+        assert dense[0]["sparse"] is False and dense[0]["frequency"] == 0
+        assert dense[1]["sparse"] is True and dense[1]["frequency"] is None
+        # Asset marginal events differ from the joint equal-weight basket event.
+        atoms = np.array([[-1.0, 1.0, 0.0], [1.0, -1.0, 0.0]])
+        np.testing.assert_array_equal(loss_probabilities(atoms, [0.5, 0.5]), [0.5, 0.5, 0, 0])
+        np.testing.assert_array_equal(
+            discrete_quantiles([1, 1, 3], [0.25, 0.25, 0.5], [0.5, np.nextafter(0.5, 1)]), [1, 3]
+        )
+        assert variogram_score(np.array([[1.0, 1, 1]]), [1], np.ones(3)) == 0
+        # The three unordered pair discrepancies are sqrt(2),1,1; squares sum to4.
+>       assert variogram_score(np.zeros((1, 3)), [1], [-1, 1, 0]) == pytest.approx(4.0)
+E       assert 1.3333333333333333 == 4.0 ± 4.0e-06
+E         
+E         comparison failed
+E         Obtained: 1.3333333333333333
+E         Expected: 4.0 ± 4.0e-06
+
+successors/frem_s10/tests/test_catalog_statistics_audit.py:38: AssertionError
+=========================== short test summary info ============================
+FAILED successors/frem_s10/tests/test_catalog_statistics_audit.py::test_every_fixed_calibration_edge_sparse_boundary_and_exact_loss_events
+1 failed, 4 passed in 0.64s

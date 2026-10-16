@@ -1,0 +1,9 @@
+{
+  "decision_id": "FREM-PUBLIC-REGIONAL-INTAKE-20261011",
+  "observation": "User reports no licensed dataset currently available and requests public internet collection. Existing equity sample is exploratory and model execution is resource-blocked.",
+  "hypothesized_cause": "Official public regional research-return files can broaden future benchmark coverage but cannot fill the individual-stock point-in-time contract.",
+  "decision": "Acquire seven predeclared monthly research factor families from the official Kenneth French Data Library, retain hashes and timestamps, normalize only pre-2025 rows, and preserve raw archives without outcome inspection of the excluded period.",
+  "predicted_effect": "Truthful regional benchmark availability without counterfeit stock histories or revisions to the scientific freeze.",
+  "discriminating_experiment": "Acquisition checks only: exact schema, unique chronological months, missing sentinel rejection, pre-boundary parsing and source receipts.",
+  "status": "DECLARED_BEFORE_DOWNLOAD"
+}

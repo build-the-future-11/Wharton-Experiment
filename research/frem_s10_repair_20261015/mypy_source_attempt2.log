@@ -1,0 +1,2 @@
+successors/frem_s10/src/frem_s10/portfolio/ledger.py:123: error: Dict entry 15 has incompatible type "str": "list[str]"; expected "str": "int | float | str | list[JSONValue] | dict[str, JSONValue] | None"  [dict-item]
+Found 1 error in 1 file (checked 40 source files)

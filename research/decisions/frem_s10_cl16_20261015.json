@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-15T17:32:59.976396+00:00",
+  "iteration": "FREM-S10",
+  "design_revision": 4,
+  "observation": "Minimum-variance benchmark objective has squared-return units, but no tie tolerance was specified; CL14 names utility units.",
+  "hypothesized_cause": "Applying policy utility tolerance to variance silently changes a different criterion.",
+  "change": "CL16 exact equality to global minimum computed binary64 variance, then existing actual dollar turnover tolerance and lexicographic weights.",
+  "predicted_effect": "Deterministic benchmark without an invented variance tolerance; no predicted market improvement.",
+  "discriminating_experiment": "Analytic covariance/grid minimum and order permutation fixtures, followed only by gated fixed campaign.",
+  "result": "PROSPECTIVE_CLARIFICATION_BEFORE_MARKET_EVALUATION",
+  "addendum": "research/frem_s10_repair_20261015/DESIGN_ADDENDUM_CL16.md",
+  "previous_science_sha256": "1d2caabd73e13a35d84035f13410395d0b71a8bdda892959c18b7838ecd0136b",
+  "new_scientific_freeze": false,
+  "market_fits": 0,
+  "protected_access": false,
+  "primary_thresholds_changed": false
+}

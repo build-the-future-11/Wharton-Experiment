@@ -1,0 +1,7 @@
+{
+  "selected_project": "Wharton/S10",
+  "user_reply": "Continue Wharton/S10 in this workspace",
+  "selection_supersedes": "Start with APEN or FIM",
+  "deadline_utc": "2026-10-16T16:30:00+00:00",
+  "scope": "Existing finalized source; private bounded CPU preparation and actual CPU probe. No GPU backend, scientific freeze or scientific execution."
+}

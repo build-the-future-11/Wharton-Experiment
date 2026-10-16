@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 640, in main\n    result = diagnose(args.root, args.output, args.freeze)\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 448, in diagnose\n    value = audit_ledger(ledger, int(cost), returns)\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 260, in audit_ledger\n    require(max_residual < 1e-7, \"saved ledger accounting discrepancy\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 32, in require\n    raise ValueError(message)\nValueError: saved ledger accounting discrepancy\n",
+  "source_sha256": "b06d14fecd2c0271b929c9b0d8bb12448d16f35a4cc80313245c8d50b518a1a3"
+}

@@ -1,0 +1,1 @@
+{"checked_at":"2026-10-14T11:44:05.028743+00:00","samples":[{"available_mib":138.65625,"pageouts":273898},{"available_mib":143.515625,"pageouts":273904},{"available_mib":125.0,"pageouts":273911}],"normal_guard_passed":false,"admitted":true,"override":"Explicit user RAM-guard waiver on 2026-10-14; observations retained"}

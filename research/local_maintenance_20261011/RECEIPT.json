@@ -1,0 +1,100 @@
+{
+  "status": "COMPLETE_LOCAL_MAINTENANCE",
+  "completed_at": "2026-10-11T16:38:03.604158+00:00",
+  "git_head": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "scope": "Release tooling, historical evidence reproducibility, completed S3 artifact checks, and status reconciliation",
+  "changes": [
+    "Immutable source-only release snapshots; no hard-coded runtime success; bounded-memory hashing and excluded-tree pruning",
+    "Byte-identity verifier rejecting empty, duplicate, missing, changed and escaping/symlinked entries",
+    "Static checks reject missing package source, duplicate JSON keys and nonfinite values including numeric overflow; old reports cannot be overwritten",
+    "Explicit exact-hash historical source archives supported for original synthetic evidence audit",
+    "README, handoff, static-verification and research-completion status reconciled to direct public-study receipts"
+  ],
+  "tests": {
+    "runner": "stdlib unittest",
+    "passed": 42,
+    "new_regression_cases": 25,
+    "seconds": 0.177,
+    "deprecation_warnings": "errors",
+    "full_model_suite_rerun": false
+  },
+  "lint": "PASS for all scripts, active src/tests and both successor src/tests",
+  "static": {
+    "python_file_count": 60,
+    "json_file_count": 99,
+    "authored_test_function_count": 203,
+    "errors": [],
+    "static_status": "PASS"
+  },
+  "source_inventory_verification": {
+    "FREM.json": {
+      "status": "PASS",
+      "entries_checked": 276,
+      "errors": [],
+      "scope": "Listed byte identities only; no runtime or scientific verification"
+    },
+    "RE-JEPA.json": {
+      "status": "PASS",
+      "entries_checked": 79,
+      "errors": [],
+      "scope": "Listed byte identities only; no runtime or scientific verification"
+    },
+    "RENG-JEPA.json": {
+      "status": "PASS",
+      "entries_checked": 39,
+      "errors": [],
+      "scope": "Listed byte identities only; no runtime or scientific verification"
+    }
+  },
+  "old_synthetic_result": {
+    "status": "EXACT_HISTORICAL_SOURCE_AUDIT_PASS",
+    "original_source_files": 36,
+    "control_minus_frem_nll": -0.5649268573499813,
+    "manuscript_table_exactly_reproduced": true,
+    "bootstrap": "Original interval retained; not recomputed"
+  },
+  "s3_checks": {
+    "score_rows": 133844,
+    "maximum_nll_error": 2.220446049250313e-15,
+    "frozen_sources": 49,
+    "predecessor_artifacts": 582,
+    "complete_public_base_cells": 36,
+    "complete_mechanism_cells": 15,
+    "variant_files": 324,
+    "variant_rows": 129092,
+    "raw_base_rows": 4752,
+    "interpretation": "Verified saved exploratory evidence; no independent model training"
+  },
+  "preserved": {
+    "original_release_manifest": true,
+    "all_prior_results": true,
+    "first_live_source_audit_failure": true,
+    "frozen_source_bytes": true,
+    "protected_boundary": true
+  },
+  "new_model_fits": 0,
+  "protected_outcomes_accessed": false,
+  "scientific_status": "NOT_EVALUATED",
+  "resource_scope": "No heavy imports, builds or fits; the existing S3 run completed independently during this session.",
+  "remaining": [
+    "Canonical panel/provenance absent; canonical development and confirmation blocked",
+    "Completed S2/S3 outcomes do not authorize metric-driven retries",
+    "Global default/holdings/FX execution and official mandate inputs incomplete",
+    "Public-results manuscript integration and independent scientific/release verification incomplete"
+  ],
+  "evidence_sha256": {
+    "intake.json": "f3f56a6324b6e6a55042692fad945493199c57e362750afe4c0b3ddc493e83fb",
+    "offline_tests.log": "2313a2fb0be9d17e892dfb9e6bd9ea952532a85f1b92eaeb55a95489940110ea",
+    "lint_final.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "static_final.json": "94e3e9b09b3fd68bbdc8facf2627c28f071af081547508a3739d8df464f0499c",
+    "diff_check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_engineering_source/ARCHIVE_RECEIPT.json": "dc6a8e904709788c44b6048d66379ce020752d3c1f933a436475b6b8f06bacda",
+    "engineering_audit_attempt1.log": "101fcc77030cb6143bfe56037ac7392770f5b2f407817c30900b590fd0dccc34",
+    "engineering_audit_attempt2/audit.json": "deb44b6800978584bf9d1903878d492435e71a06128e8f3f0d57a18e3babdbfc",
+    "s3_score_audit.json": "cb6d76ed0a933d2bbc46a704420824dcab4ef5ef576ee0fe7c1157fca5791b60",
+    "s3_completeness.json": "addb2df7407a6a20a74b6c00788adc66ec90869c5cf1c0e4ce81933bd176efb2",
+    "decision_receipt.json": "81ad6e7c90e5c9b77a7f61d0fa88f5566a2cbe642826c3497b14a066d9f424cf",
+    "preservation_checks.json": "fb65d1263021b67633f504ed23b036fda42cada9ab931d0e9baa525d86f8b0c9",
+    "release_snapshot/VERIFICATION.json": "07c66f706924b51ace254738d4f0c333045684264df215ca05e65fd09a5d2a01"
+  }
+}

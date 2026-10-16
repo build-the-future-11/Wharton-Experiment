@@ -1,0 +1,1 @@
+{"status":"PASS","real_rows_reconciled":1770,"checks":["Every label independently reconciled to retained Monday opens","Every context feature reconciled to daily closes with strict origin ordering","Every JEPA future feature reconciled and purged at fit cutoff"],"data_sha256":"bd8b56503a55bff3fdc879f3e575bba8901194798a5f9848da90ae177bcf451e","market_fits":0}

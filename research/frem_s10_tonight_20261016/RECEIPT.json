@@ -1,0 +1,428 @@
+{
+  "schema": "s10-tonight-campaign-receipt-v1",
+  "recorded_at": "2026-10-16T07:57:15.900652+00:00",
+  "project": "Wharton/FREM-S10",
+  "campaign_status": "PARTIAL CAMPAIGN",
+  "scientific_status": "NOT_EVALUATED",
+  "report": "REPORT.md",
+  "head": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "branch": "codex/repo-cleanup-efficiency",
+  "source_identity_basis": "Exact content snapshot on disclosed dirty checkout; HEAD alone does not identify source",
+  "code_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "source_files_unchanged": 133,
+  "source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+  "notebook": {
+    "path": "FREM_S10_TONIGHT_CPU.ipynb",
+    "sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+    "sections": 12,
+    "code_cells": 8,
+    "runner_sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+    "transport_sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5"
+  },
+  "local_validation": {
+    "wrapper_stdlib_tests": 19,
+    "wrapper_test_outer_seconds": 0.7369538339844439,
+    "account_helper_stdlib_tests": 16,
+    "account_helper_test_outer_seconds": 0.20314478874206543,
+    "test_receipt_file_hashes_reverified": true,
+    "test_groups_distinct": true,
+    "numerical_model_tests_this_campaign": 0,
+    "failed_test_attempts_preserved": true,
+    "host_admission": "FAILED_BELOW_512_MIB_AND_RISING_PAGEOUTS"
+  },
+  "cloud": {
+    "cpu_probe_sessions": 1,
+    "actual_model_runs": 0,
+    "generated_origins": 0,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_evaluations": 0,
+    "gpu_sessions": 0,
+    "mode": "one private interactive CPU session; Quick Save with outputs, no batch rerun",
+    "probe_status": "METADATA_AND_PERSISTENCE_VERIFIED_RUNTIME_BLOCKED",
+    "python_observed": "3.13.15",
+    "numpy_metadata_observed": "2.1.3",
+    "python_required": "3.12",
+    "numpy_required": "2.5.4",
+    "target_system": "Linux x86_64",
+    "numerical_imports": false,
+    "target_s10_cli_invoked": false,
+    "target_host_admission": "NOT_RUN_PYTHON_INCOMPATIBLE",
+    "kernel_version": "ryangomez010/wharton-s10-cpu-readiness-2026-10-16/1",
+    "script_version_id": 358930173,
+    "private_saved_version_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-cpu-readiness-2026-10-16/output?scriptVersionId=358930173",
+    "runtime_metadata_only_not_numerical_qualification": true
+  },
+  "persistence": {
+    "retrieval_verified": true,
+    "archive": "retrieved/version1/kaggle-results.zip",
+    "archive_sha256": "bc34f904b4258a85b44fcdd742653a0b91601ded1715141217f6dfec9fbf54a5",
+    "archive_bytes": 2452422,
+    "archive_members": 158,
+    "crc": "PASS",
+    "three_producer_artifact_hashes_match_retrieval": true,
+    "download_after_cpu_stop_action": true,
+    "state_zip_members": 7,
+    "state_zip_session_files": 6,
+    "state_zip_extra": "STATE_INVENTORY.json",
+    "model_checkpoint_exists": false,
+    "cross_machine_model_resume_proven": false,
+    "second_persistent_copy": "Private Kaggle saved version and hash-verified local repository copy"
+  },
+  "time_and_account": {
+    "absolute_deadline_utc": "2026-10-16T16:30:00+00:00",
+    "cpu_launch_utc": "2026-10-16T07:35:55.150Z",
+    "cpu_stop_clicked_utc": "2026-10-16T07:40:28.196Z",
+    "cpu_control_observation_interval_seconds": 273.046,
+    "provider_displayed_notebook_runtime_seconds": 11,
+    "interval_is_provider_billing": false,
+    "gpu_wall_seconds_this_task": 0,
+    "gpu_physical_device_hours_this_task": 0,
+    "allocation_time_gpu_Q0": null,
+    "last_observed_display": "00:00 used / 30 hours",
+    "last_quota_observation_utc": "2026-10-16T07:16:41.504321+00:00",
+    "last_observed_remaining_hours": 30,
+    "last_observation_precedes_probe": true,
+    "postrun_final_quota_remaining_hours": null,
+    "postrun_provider_gpu_quota_debit": null,
+    "estimated_gpu_quota_hours_this_task": 0,
+    "gpu_allocation_enabled": false,
+    "expanded_budget_approved": false,
+    "account_floor_hours": 20,
+    "reserve_fraction": 0.1,
+    "provider_wide_lock_or_hard_limit_claimed": false
+  },
+  "shutdown": {
+    "cpu_stop_requested": true,
+    "observed_ui_off": true,
+    "observed_transient_session_stopping": true,
+    "cpu_platform_final_stop_confirmed": false,
+    "gpu_stop_status": "NOT_APPLICABLE_NONE_ALLOCATED",
+    "final_account_activity_and_quota": "UNVERIFIED_BROWSER_TOOL_DISK_FULL",
+    "manual_action": "Confirm this Wharton session is inactive and read current account quota once browser access is restored; leave unrelated jobs alone."
+  },
+  "scientific_freeze": false,
+  "protected_access": false,
+  "scientific_thresholds_changed": false,
+  "completed_hypotheses_reopened": false,
+  "dependencies_changed": false,
+  "model_source_changed_this_campaign": false,
+  "automations_created_or_changed": false,
+  "commit_push_or_public_submission": false,
+  "prior_evidence": {
+    "earlier_engineering_receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json",
+    "sha256": "712bbcebc5d979ac33ad1ba11c4a1c5eefa7673d973decc1d0efa33225422b88",
+    "evidence_files_reverified": 19,
+    "historical_results_not_pooled_as_current_cloud_evidence": true,
+    "preservation_scope": "Prior canonical snapshot and source/receipt hashes; no recursive re-audit of all historical datasets/results"
+  },
+  "remaining": [
+    "Confirm final CPU session inactivity and current account quota",
+    "Establish reviewed compatible CPU environment and actual Linux host/resource qualification",
+    "Run the generated 12-origin interruption/resume/evaluation/export check on admitted target",
+    "Complete exact-source verification, package build/install, semantic mutation and representative full-scale qualification",
+    "Complete truthful source/time/split/rights admission and real precision feasibility",
+    "Measure and prospectively freeze a complete affordable scientific matrix",
+    "Run all mandatory comparisons and dependence-aware inference; independent empirical reproduction",
+    "Expert financial-methodology, novelty, authorship and specific venue review"
+  ],
+  "preprint": {
+    "new_empirical_s10_preprint_supported": false,
+    "methods_workflow_text_supported": true,
+    "text": "MANUSCRIPT_TEXT.md",
+    "conference_ready": false
+  },
+  "missing_metrics": "No raw or aggregated numerical/scientific metrics or scientific figures; status tables are evidence-derived availability records.",
+  "evidence": [
+    {
+      "path": "FINAL_REVIEW.json",
+      "sha256": "05f0b608a6d47882e91b8a137e09f02b98eeeb3d951d16855206a2210cc3828b",
+      "bytes": 933
+    },
+    {
+      "path": "FREM_S10_TONIGHT_CPU.ipynb",
+      "sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+      "bytes": 635980
+    },
+    {
+      "path": "MANUSCRIPT_TEXT.md",
+      "sha256": "b90b797e4ee996df0e6fa4914c0832fce8e3a0e0596c9759452d231a66094aa5",
+      "bytes": 2278
+    },
+    {
+      "path": "NOTEBOOK_IDENTITY.json",
+      "sha256": "14fae6cfea3a0b076e7e50539cde36b44d43addee0d47c7414ef5d53ab04f24c",
+      "bytes": 498
+    },
+    {
+      "path": "NOTEBOOK_TEST_ATTEMPT1.json",
+      "sha256": "a48f9c8a70c6ab73817fb83ae3702d267cfcee707fce9d37b47f0b9719df5fb0",
+      "bytes": 541
+    },
+    {
+      "path": "NOTEBOOK_TEST_RECEIPT.json",
+      "sha256": "6b4da52b43c16a9f8d3006672dceb8b43e24f4ddfaba107d7c2b9e51a3a64e3a",
+      "bytes": 3778
+    },
+    {
+      "path": "NOTEBOOK_TEST_RECEIPT_attempt2.json",
+      "sha256": "8e9fb495625f81a747457440e1352ce9f45426f458b49faea54060004e765a4b",
+      "bytes": 3623
+    },
+    {
+      "path": "NOTEBOOK_USAGE.md",
+      "sha256": "5d55f66243d3782d48f752fedeffd8c4f91a9f14e686630a1e7f2f3abb2f0616",
+      "bytes": 4602
+    },
+    {
+      "path": "PASTE_CPU_PROBE_BOOTSTRAP.py",
+      "sha256": "9b764abccfb3d18d73972a1f06f56ac7f119905f0fe5fb4316ce4297e5a6e3c5",
+      "bytes": 853453
+    },
+    {
+      "path": "PASTE_TRANSPORT_IDENTITY.json",
+      "sha256": "817eaf2a12285ced1fd5a8ad8214369ac07a9f4fbe0bf2ab9139e9598cf44cb5",
+      "bytes": 586
+    },
+    {
+      "path": "PASTE_TRANSPORT_REVIEW.json",
+      "sha256": "1f4270c1d3f2ef19f9920ccd1334b1cddf74ad9c2ac960a7e1ff020baa9415f9",
+      "bytes": 2093
+    },
+    {
+      "path": "PASTE_TRANSPORT_VALIDATION.json",
+      "sha256": "e0edb0e180e2447f3992257aadebb7b5f8c0eb13e79c244f7cc39d19ceb3412d",
+      "bytes": 730
+    },
+    {
+      "path": "README.md",
+      "sha256": "6e5ab5e61f1276efe718ce7210980267c6a29fc1ef6ed107593c7fc663224de7",
+      "bytes": 5455
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "c1531d033ba12c0d823a54d269916c951c1d2980328e256f3b6a18bc481b005e",
+      "bytes": 9086
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "d5933edddee23925c592841609f53c324a130e6373c9070b9a9eb6708cfcd4f2",
+      "bytes": 5283
+    },
+    {
+      "path": "RUN_LEDGER.json",
+      "sha256": "70d5bb91205508adb070d37444cee55b53f55ef3c8be2ca6a20ab03cc4ea71bf",
+      "bytes": 1751
+    },
+    {
+      "path": "SCOPE_SELECTION.json",
+      "sha256": "ea0a7239f8a5783ebce4318d031dc9a0c013bc5fabe54b6fea6c40aae7d57e2d",
+      "bytes": 351
+    },
+    {
+      "path": "USER_REQUEST.txt",
+      "sha256": "ffb395aee308d1ecb403fb49d9b23f1cd670ec62e555102e98d5a03f39695731",
+      "bytes": 16495
+    },
+    {
+      "path": "analysis/campaign_cells.csv",
+      "sha256": "9c077e65951b81b42ed5cf0aa66c87ec8f637a4a19818b24dea6a1526ded776a",
+      "bytes": 496
+    },
+    {
+      "path": "analysis/claim_evidence.csv",
+      "sha256": "b1b5937b2999e4f1b44b74abd1e8c3cc8ab5cf7b138c50a99ba7f819768c3426",
+      "bytes": 856
+    },
+    {
+      "path": "before/RESEARCH_STATE.json",
+      "sha256": "c1934a3165714c6924989d6903d59deae69d4614049a5d017cc57ad2b9576b7a",
+      "bytes": 87030
+    },
+    {
+      "path": "before/docs/CODEX_HANDOFF.md",
+      "sha256": "29fcd0e9bcb203491752205c1a1e545f6d8d040a286c287489c2c24d95771537",
+      "bytes": 44404
+    },
+    {
+      "path": "before/docs/STATIC_VERIFICATION.md",
+      "sha256": "a3e30fc9c8ad6172eae87ac43cb552c7b1b9b8390654af05a891cc01a805d7cb",
+      "bytes": 19341
+    },
+    {
+      "path": "before/research/events.jsonl",
+      "sha256": "19e2955795c1fdb3341fc62702ba12aad840b07a81d270852b7b19480cc6fafe",
+      "bytes": 98755
+    },
+    {
+      "path": "budget/ACCOUNT_LEDGER.jsonl",
+      "sha256": "596e76c938e60c96782d4c1b65559595c4b85dc0ce66b63237c30a3120dc60f6",
+      "bytes": 630
+    },
+    {
+      "path": "budget/ACCOUNT_POLICY.json",
+      "sha256": "9dac8635095fc84163174177048012397d797f4fbbb94d9e3b25d676474fea28",
+      "bytes": 2282
+    },
+    {
+      "path": "budget/README.md",
+      "sha256": "0f1555f692243695be283471767cdc984e2e9f9f3f799c78b1fbffe7411939ce",
+      "bytes": 3213
+    },
+    {
+      "path": "budget/account_budget.py",
+      "sha256": "900a9e83830797b408ed6f43795d270999a860acd036a45a2299d30d478b59b8",
+      "bytes": 21298
+    },
+    {
+      "path": "budget/test_account_budget.py",
+      "sha256": "8b0b671b4353c571b906a87db6cc3d4b8b46dc7ef284839a79a9f417121aec47",
+      "bytes": 12476
+    },
+    {
+      "path": "budget/test_receipt_attempt1.json",
+      "sha256": "3e8578dd68aa69074de4c980d7def22ea0e5d6e963d56b351db3355f8c94750f",
+      "bytes": 3305
+    },
+    {
+      "path": "build_notebook.py",
+      "sha256": "347f7c20adab682c1b739c584ecdfbe1c51243738cdc1038516a550d521da1c1",
+      "bytes": 16664
+    },
+    {
+      "path": "manifests/DATA.json",
+      "sha256": "1f4f663dee83728a3215f7c7c2f26dee69ee759078e585e840859f0d9964fe19",
+      "bytes": 661
+    },
+    {
+      "path": "manifests/ENVIRONMENT.json",
+      "sha256": "a1f543d84143c27a58da3df7279b812c34c08359cb98073707ba2736278a53b1",
+      "bytes": 789
+    },
+    {
+      "path": "manifests/FINAL_SOURCE_VERIFICATION.json",
+      "sha256": "89897bc54ef6ac13c5388aa05577f8506f516eae59a2d12ac2fd9b8a70e1430e",
+      "bytes": 625
+    },
+    {
+      "path": "manifests/SCIENTIFIC_MANIFEST_UNFROZEN.json",
+      "sha256": "c0ac68ad18d798ee2298bf5088c780bb411d301342ef7edc8ecdd4e6d278f6e0",
+      "bytes": 1451
+    },
+    {
+      "path": "manifests/SOURCE_VERIFICATION.json",
+      "sha256": "e80d7d2e30e05947a15b0f758e9c55c30d30963ece68eba00eabbba08bf96c78",
+      "bytes": 25305
+    },
+    {
+      "path": "observations/ACCOUNT_OBSERVATION_FINAL.json",
+      "sha256": "480a9ce1fb7b1edbc9b1d465869e9646b8a8f30bb17a6525f9aaa6bcf726c1df",
+      "bytes": 982
+    },
+    {
+      "path": "observations/ACCOUNT_OBSERVATION_INITIAL.json",
+      "sha256": "7d44c9531e1753f6d5c733638426320799d6d4dc034672422f6c20269013d073",
+      "bytes": 1728
+    },
+    {
+      "path": "observations/CPU_PROBE_CONSOLE.txt",
+      "sha256": "25559807f0b80b4cde3f0fa0941caeddfafb7aa73120e27d8711548509bf6d26",
+      "bytes": 5741
+    },
+    {
+      "path": "observations/CPU_PROBE_RESULT.json",
+      "sha256": "7d42231bd90f6a57bbb06f6a4af71692308c55f781696bdc44875fd857b0c19f",
+      "bytes": 1110
+    },
+    {
+      "path": "observations/CPU_SESSION_STARTED.json",
+      "sha256": "4eeede6fb19580a7890db47219daa250a9d897c5bb609b4f54b2ec49c8edc64d",
+      "bytes": 644
+    },
+    {
+      "path": "observations/EDITOR_BLOCKED.jpg",
+      "sha256": "8af940e701d67e82bdb6b4a3c7595d3337c5650c6c241d48958f420a569ce128",
+      "bytes": 46050
+    },
+    {
+      "path": "observations/EDITOR_OBSERVATION.json",
+      "sha256": "62ec60c57ab23224e478afc82969b921dd9021bd56e5048acaced0504b392ff1",
+      "bytes": 1048
+    },
+    {
+      "path": "observations/EDITOR_RECOVERY.json",
+      "sha256": "80fba527f8f37a1418b6c6b7fd6d4503464b2b710d42b4f719e2769eff8dd937",
+      "bytes": 648
+    },
+    {
+      "path": "observations/EDITOR_SOURCE_VERIFIED.json",
+      "sha256": "d0add5c2f85135633b62964341c4117b2af9fc4f977bf7967842a35a55b5b50f",
+      "bytes": 838
+    },
+    {
+      "path": "observations/FILE_UPLOAD_ATTEMPT.json",
+      "sha256": "7e30da0e155c7c018800e021e8d9bf86af9bd85d011d0c57df40764696b3aebb",
+      "bytes": 546
+    },
+    {
+      "path": "observations/LOCAL_HOST_ADMISSION.json",
+      "sha256": "d02af46b33ceb1e5ea54c63aa110c870fc0a88c6937f59ad6ab796febc0115b0",
+      "bytes": 701
+    },
+    {
+      "path": "observations/SAVE_OPTIONS.json",
+      "sha256": "d9cdcf597d6317ae68a202350a2bae22e480cf80289901d1fb956d6ac6ad905c",
+      "bytes": 688
+    },
+    {
+      "path": "observations/SESSION_CLOSEOUT.json",
+      "sha256": "b121e662007a1180ad8379fdd4ba2b272f70b98942052b74849baa8fd94ac8dd",
+      "bytes": 1453
+    },
+    {
+      "path": "retrieved/version1/FREM_S10_TONIGHT_CPU.ipynb",
+      "sha256": "91d1786c6aa87760669601e086387f7085be9c80b18d8e0ae77592776ca422d3",
+      "bytes": 635980
+    },
+    {
+      "path": "retrieved/version1/RETRIEVAL_VERIFICATION.json",
+      "sha256": "cb2d55404e89ba83c0d6f739e7dcfbffbd05817a13f903ae6268463de6eb9f82",
+      "bytes": 1741
+    },
+    {
+      "path": "retrieved/version1/STATE_INVENTORY.json",
+      "sha256": "8bd26b3970ac8bb3a7c806df8213c833da4ebdabeb10554b590e6beab34fb25e",
+      "bytes": 455
+    },
+    {
+      "path": "retrieved/version1/exports/state-5c6c61614e45491fbe7726bf2015e12b.zip",
+      "sha256": "8f87cbf3a5e081732ae3a16588d07a4714296ad632021bb3376726ceaa1b0733",
+      "bytes": 2886
+    },
+    {
+      "path": "retrieved/version1/kaggle-results.zip",
+      "sha256": "bc34f904b4258a85b44fcdd742653a0b91601ded1715141217f6dfec9fbf54a5",
+      "bytes": 2452422
+    },
+    {
+      "path": "retrieved/version1/retrieval-receipt.json",
+      "sha256": "a6514e549d24a0fb3c81860dddc7a92cc01043daa82da8599368ad36393a0306",
+      "bytes": 1877
+    },
+    {
+      "path": "retrieved/version1/session/persistence-probe.json",
+      "sha256": "18229e7b5e29fa9416233d6d383d5aa400555eae20d97681f2a2d9fff361c67a",
+      "bytes": 1590
+    },
+    {
+      "path": "test_tonight_runner.py",
+      "sha256": "eef46fb03ace8444ee70a433a5de253b2306ec5db78b069f2877311a21cdfebb",
+      "bytes": 12503
+    },
+    {
+      "path": "tonight_runner.py",
+      "sha256": "dee5c6dfa9ff584c20e33f88842fbe986a43ef2e43a467924609f3cea177e1e1",
+      "bytes": 31172
+    }
+  ]
+}

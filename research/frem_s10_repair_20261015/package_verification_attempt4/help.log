@@ -1,0 +1,12 @@
+usage: s10-research [-h] {plan,check-host} ...
+
+Working metadata-only CLI; scientific execution awaits the complete verified
+runner.
+
+positional arguments:
+  {plan,check-host}
+    plan             validate exact design and enumerate the proposed matrix
+    check-host       read host memory without model imports
+
+options:
+  -h, --help         show this help message and exit

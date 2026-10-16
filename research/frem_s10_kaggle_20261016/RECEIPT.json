@@ -1,0 +1,152 @@
+{
+  "schema": "s10-kaggle-local-engineering-receipt-v1",
+  "timestamp": "2026-10-16T06:51:44.546305+00:00",
+  "readiness": "BLOCKED",
+  "scientific_status": "NOT_EVALUATED",
+  "head": "09268ecb01ac645eeee18cc9fcbc6db247b6ec89",
+  "branch": "codex/repo-cleanup-efficiency",
+  "code_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "source_files": 133,
+  "changed_package_files": 22,
+  "source_bundle": {
+    "path": "research/frem_s10_kaggle_20261016/source_bundle.zip",
+    "sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+    "bytes": 432076,
+    "members_without_inventory": 141,
+    "readback_hashes_verified": true,
+    "package_build_or_install_verified": false,
+    "market_data_included": false
+  },
+  "engineering": {
+    "final_selected_tests_passed": 108,
+    "final_test_seconds": 22.95,
+    "final_tests_child_peak_rss_mib": 56.078125,
+    "separate_portability_tests_passed": 55,
+    "test_sets_overlap": true,
+    "scoped_static_files_passed": 21,
+    "actual_cli_steps_with_expected_exits": 11,
+    "actual_cli_child_peak_rss_mib": 43.921875,
+    "cpu_origins_completed": 12,
+    "controlled_interrupt_after_origins": 4,
+    "state_and_metrics_resume_equivalence": "exact state bytes and binary64 metrics in bound environment",
+    "scientific_plan_only_ledgers": 192,
+    "prior_snapshot_files_verified": 122
+  },
+  "not_executed": [
+    "complete current-source suite",
+    "current wheel/sdist build and clean install",
+    "eleven semantic mutation campaign",
+    "full-scale generated qualification",
+    "actual Linux resource or isolation probe",
+    "Linux production environment/supervisor integration",
+    "CUDA/GPU check",
+    "cloud campaign",
+    "precision pilot",
+    "market development",
+    "protected confirmation"
+  ],
+  "limits": [
+    "External system libraries bound by OS/build observations only",
+    "Cooperative generated time budget between origins; SIGKILL with unknown charge is not resumable",
+    "Generated checkpoint resume does not apply to consumed market runs",
+    "Old production plan invalidated by source changes; historical receipts are not current confirmation"
+  ],
+  "resource_admission": {
+    "status": "BLOCKED",
+    "receipt": "research/frem_s10_kaggle_20261016/host_admission.json",
+    "floor_mib": 512,
+    "observed_available_mib": [
+      78.734375,
+      89.671875,
+      120.703125
+    ]
+  },
+  "market_fits": 0,
+  "market_ledgers": 0,
+  "scientific_freeze": false,
+  "protected_access": false,
+  "gpu_quota_hours_used": 0,
+  "dependencies_changed": false,
+  "external_sends_or_publication": false,
+  "automations_created_or_changed": false,
+  "historical_results_reused_as_current_confirmation": false,
+  "old_scientific_manifest_and_thresholds_preserved": true,
+  "evidence": [
+    {
+      "path": "research/frem_s10_kaggle_20261016/CANDIDATE_IDENTITY.json",
+      "sha256": "578a1137568a750a837468eb731d9a338c03b982540ef03b175abe35f82a685e"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/SOURCE_BUNDLE_RECEIPT.json",
+      "sha256": "6985ab54b1ecd1e340c7f1ce1c33bd4487ec26eb4485526fa98e8e32d90bb6e1"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/GPU_READINESS.md",
+      "sha256": "c46487709be1b5f0ac3047a0f116c20543d3634c15d8664c53c9b75d4ab635f9"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/KAGGLE_HANDOFF.md",
+      "sha256": "6a96433eed3c7ddc9ab74678b895d192ae02561e444ce555f533dd6f6aeae985"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/CHANGE_LEDGER.md",
+      "sha256": "efffafdf0ae35e36f4f0f56ec9c31413fba6fa11428b47d2eb545f4fa6dd9f84"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/PRELIMINARY_CAMPAIGN.json",
+      "sha256": "90c4b2e80711ccc1db09ffb80f3f58fc5f44dc4013a801d78939fe8c577bbb68"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/requirements-cpu.txt",
+      "sha256": "15fcd9e3a74ee39e920b7750270a4dbf645ae45e270f200e020aae8c584f07b6"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_tests_attempt1.json",
+      "sha256": "b8d7c1cdf5f4965db4835da462aaa66b1c83bb999c3b45a9f8d6b4d2f6ed10e4"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_tests_attempt1.log",
+      "sha256": "58412f25e183065e098e6d6f433429515a554c44faea3d5eaabab736fdd38483"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/portable_tests_attempt1.json",
+      "sha256": "c246fdd178780634ed6f2681d483358493c861790eb1938acc23908026b56417"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/portable_tests_attempt1.log",
+      "sha256": "3216f6892a6b2a4740843ef733ae6a753189d55e6afebf6244385534b1395ddc"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_static_attempt3.json",
+      "sha256": "37021acb586fccee6a2ff5412eae26e3e8804e95532fbde9cca8ed3939bfadfb"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_static_attempt3_format.log",
+      "sha256": "368dea6bbc75bbf600330fac8df9e17353d1e04e26ed0f809917c608f11edcb1"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_static_attempt3_lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/final_static_attempt3_types.log",
+      "sha256": "3253c7a5a8535995ce0dc8b25611174b1763d2c9ff1bbb0a29e2e90cca3ca91e"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/CLI_RECEIPT_attempt1.json",
+      "sha256": "fc4ce8584a25017f965a741a53f143173bf48fcf5ccf0934db8615c69303029c"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/preservation_attempt1.json",
+      "sha256": "16176bc7ffd067270e9ed820b7a02ca291a9c6a07ec19d3f26cac8853bc6f44c"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/host_admission.json",
+      "sha256": "8b95d37e6334b3eabe612c1d922716882a6f7e6a7efbb59696d1772929117216"
+    },
+    {
+      "path": "research/frem_s10_kaggle_20261016/AUXILIARY_FAILURES.json",
+      "sha256": "1363dce945afbc945f1be2909e1dabc5d3797816a68c28e0d77fcaab1d04d554"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "mandate_path": "laura_gao.pending.json",
+  "instrument_master_path": "reviewed_instrument_master.json",
+  "forecast_path": "../../outputs/forecasts/selected_common_time.csv",
+  "as_of": null,
+  "nav": null,
+  "current_weights": null,
+  "cash_return": null,
+  "reserve_cash": null,
+  "return_contract": {
+    "return_space": "cumulative_base_currency_log_total_return",
+    "base_currency": "USD",
+    "asset_ids": ["REPLACE_WITH_APPROVED_ASSET_ID"],
+    "forecast_time": null,
+    "inputs_available_at": null,
+    "horizon_bars": null,
+    "entry_time": null,
+    "exit_time": null,
+    "common_execution_horizon_attested": false,
+    "timing_source": "REPLACE_WITH_DATED_SYNCHRONIZED_HORIZON_EVIDENCE",
+    "input_provenance": "REPLACE_WITH_CHECKPOINT_FORECAST_AND_INPUT_PROVENANCE"
+  },
+  "scenario_config": {
+    "n_scenarios": null,
+    "seed": null,
+    "lower_log_return": null,
+    "upper_log_return": null,
+    "dependence": "gaussian_copula",
+    "assumption_rationale": "REPLACE_WITH_PROSPECTIVE_CLIPPING_AND_DEPENDENCE_JUSTIFICATION",
+    "assumptions_available_at": null,
+    "assumption_source": "REPLACE_WITH_VERSIONED_POLICY_SOURCE",
+    "correlation": null,
+    "correlation_available_at": null,
+    "correlation_source": "REPLACE_WITH_CAUSAL_GAUSSIAN_COPULA_CORRELATION_SOURCE"
+  },
+  "decision_context": {
+    "data_valid": false,
+    "calibration_valid": false,
+    "forecast_available": true
+  },
+  "policy": {}
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s8_20261014/analyze.py", line 12, in <module>
+    from successors.frem_s6.experiment import paired_date_interval
+ModuleNotFoundError: No module named 'successors'

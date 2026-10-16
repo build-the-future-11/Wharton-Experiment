@@ -1,0 +1,707 @@
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/diagnose.py:51:30
+   |
+49 |                   correction = [float(r['prediction'])-float(b['prediction']) for r,b in zip(table,base)]
+50 |                   residual = [float(b['actual'])-float(b['prediction']) for b in base]
+51 |                   cells.append(dict(fold=fold, seed=seed, arm=arm,
+   |  ______________________________^
+52 | |                     validation_gain=null['nll']-selection['selected']['nll'],
+53 | |                     evaluation_gain=st.fmean(float(b['nll'])-float(r['nll']) for b,r in zip(base,table)),
+54 | |                     correction_residual_correlation=corr(correction,residual),
+55 | |                     correction_rms=math.sqrt(st.fmean(v*v for v in correction)),
+56 | |                     mean_effective_neighbors=st.fmean(float(r['effective_neighbors']) for r in table),
+57 | |                     mean_age_days=st.fmean(float(r['memory_age_days']) for r in table),
+58 | |                     dates=len({r['time'] for r in table}), rows=len(table)))
+   | |___________________________________________________________________________^
+59 |               for arm in ('old_distance', 'euclidean_distance', 'matched_random'):
+60 |                   p = S4 / fold / str(seed) / f'{arm}_selection.json'
+   |
+help: Rewrite as a literal
+   |
+50 |                 residual = [float(b['actual'])-float(b['prediction']) for b in base]
+   -                 cells.append(dict(fold=fold, seed=seed, arm=arm,
+   -                     validation_gain=null['nll']-selection['selected']['nll'],
+   -                     evaluation_gain=st.fmean(float(b['nll'])-float(r['nll']) for b,r in zip(base,table)),
+   -                     correction_residual_correlation=corr(correction,residual),
+   -                     correction_rms=math.sqrt(st.fmean(v*v for v in correction)),
+   -                     mean_effective_neighbors=st.fmean(float(r['effective_neighbors']) for r in table),
+   -                     mean_age_days=st.fmean(float(r['memory_age_days']) for r in table),
+   -                     dates=len({r['time'] for r in table}), rows=len(table)))
+51 +                 cells.append({'fold': fold, 'seed': seed, 'arm': arm,
+52 +                     'validation_gain': null['nll']-selection['selected']['nll'],
+53 +                     'evaluation_gain': st.fmean(float(b['nll'])-float(r['nll']) for b,r in zip(base,table)),
+54 +                     'correction_residual_correlation': corr(correction,residual),
+55 +                     'correction_rms': math.sqrt(st.fmean(v*v for v in correction)),
+56 +                     'mean_effective_neighbors': st.fmean(float(r['effective_neighbors']) for r in table),
+57 +                     'mean_age_days': st.fmean(float(r['memory_age_days']) for r in table),
+58 +                     'dates': len({r['time'] for r in table}), 'rows': len(table)})
+59 |             for arm in ('old_distance', 'euclidean_distance', 'matched_random'):
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/diagnose.py:64:30
+   |
+62 |                   s = json.loads(p.read_text())
+63 |                   c = [r for r in s['candidates'] if r['weight'] > 0]
+64 |                   gates.append(dict(fold=fold, seed=seed, arm=arm,
+   |  ______________________________^
+65 | |                     selected_weight=s['selected']['weight'],
+66 | |                     best_worst_half_gain=max(min(r['half_gains']) for r in c),
+67 | |                     candidates=c))
+   | |_________________________________^
+68 |       summary = {}
+69 |       for fold in ('fresh_2023', 'fresh_2024'):
+   |
+help: Rewrite as a literal
+   |
+63 |                 c = [r for r in s['candidates'] if r['weight'] > 0]
+   -                 gates.append(dict(fold=fold, seed=seed, arm=arm,
+   -                     selected_weight=s['selected']['weight'],
+   -                     best_worst_half_gain=max(min(r['half_gains']) for r in c),
+   -                     candidates=c))
+64 +                 gates.append({'fold': fold, 'seed': seed, 'arm': arm,
+65 +                     'selected_weight': s['selected']['weight'],
+66 +                     'best_worst_half_gain': max(min(r['half_gains']) for r in c),
+67 +                     'candidates': c})
+68 |     summary = {}
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/diagnose.py:74:14
+   |
+72 |               for k in ('validation_gain','evaluation_gain','correction_rms','mean_effective_neighbors','mean_age_days')}
+73 |               for arm in ('combined','mean','risk','random','recent')}
+74 |       report = dict(status='COMPLETE_RETAINED_EVIDENCE_DIAGNOSIS', cells=cells,
+   |  ______________^
+75 | |         s4_gates=gates, summary=summary, source_sha256=sources,
+76 | |         interpretation=['S3 nonzero corrections do not consistently generalize.',
+77 | |             'S4 final zero weights cannot discriminate deployed retrieval metrics.',
+78 | |             'Correlation and arm comparisons are descriptive, not isolated causal proof.',
+79 | |             'S5 will test relative expert reliability instead of residual mean correction.'],
+80 | |         protected_access=False, new_model_fits=0)
+   | |_________________________________________________^
+81 |       write(out,report)
+82 |       print(json.dumps(summary,indent=2))
+   |
+help: Rewrite as a literal
+   |
+73 |             for arm in ('combined','mean','risk','random','recent')}
+   -     report = dict(status='COMPLETE_RETAINED_EVIDENCE_DIAGNOSIS', cells=cells,
+   -         s4_gates=gates, summary=summary, source_sha256=sources,
+   -         interpretation=['S3 nonzero corrections do not consistently generalize.',
+74 +     report = {'status': 'COMPLETE_RETAINED_EVIDENCE_DIAGNOSIS', 'cells': cells,
+75 +         's4_gates': gates, 'summary': summary, 'source_sha256': sources,
+76 +         'interpretation': ['S3 nonzero corrections do not consistently generalize.',
+77 |             'S4 final zero weights cannot discriminate deployed retrieval metrics.',
+78 |             'Correlation and arm comparisons are descriptive, not isolated causal proof.',
+79 |             'S5 will test relative expert reliability instead of residual mean correction.'],
+   -         protected_access=False, new_model_fits=0)
+80 +         'protected_access': False, 'new_model_fits': 0}
+81 |     write(out,report)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s5/experiment.py:2:1
+   |
+ 1 |   """Frozen lightweight S5 replay. Retained public evidence, never fresh confirmation."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import csv
+ 5 | | import json
+ 6 | | import math
+ 7 | | import random
+ 8 | | import statistics as st
+ 9 | | from datetime import UTC, datetime
+10 | | from pathlib import Path
+11 | |
+12 | | from successors.frem_portfolio_v1.engine import Forecast, backtest, paired_interval, rebalance
+13 | | from successors.frem_portfolio_v1.evidence import periods, sha256
+14 | | from .router import Episode, Router, mixture_nll, nll
+   | |_____________________________________________________^
+15 |
+16 |   ROOT = Path(__file__).resolve().parents[2]
+   |
+help: Organize imports
+   |
+13 | from successors.frem_portfolio_v1.evidence import periods, sha256
+14 +
+15 | from .router import Episode, Router, mixture_nll, nll
+   |
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/experiment.py:43:23
+   |
+41 |           if key in result:
+42 |               raise ValueError('Duplicate forecast')
+43 |           result[key] = dict(time=t,maturity=maturity,asset=r['asset'],actual=y,
+   |  _______________________^
+44 | |                            mu=mu,scale=scale,df=df,loss=loss)
+   | |_____________________________________________________________^
+45 |       if not result:
+46 |           raise ValueError('Empty forecasts')
+   |
+help: Rewrite as a literal
+   |
+42 |             raise ValueError('Duplicate forecast')
+   -         result[key] = dict(time=t,maturity=maturity,asset=r['asset'],actual=y,
+   -                            mu=mu,scale=scale,df=df,loss=loss)
+43 +         result[key] = {'time': t,'maturity': maturity,'asset': r['asset'],'actual': y,
+44 +                            'mu': mu,'scale': scale,'df': df,'loss': loss}
+45 |     if not result:
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/experiment.py:77:24
+   |
+75 |           raw = (st.fmean(mus)/0.05, math.log(st.fmean(scales)/0.05),
+76 |                  math.sqrt(st.fmean((m-st.fmean(mus))**2 for m in mus))/0.05)
+77 |           batches.append(dict(time=t,maturity=max(r['maturity'] for rr in assets for r in rr),
+   |  ________________________^
+78 | |                             assets=assets,raw_context=raw))
+   | |__________________________________________________________^
+79 |       return batches
+   |
+help: Rewrite as a literal
+   |
+76 |                math.sqrt(st.fmean((m-st.fmean(mus))**2 for m in mus))/0.05)
+   -         batches.append(dict(time=t,maturity=max(r['maturity'] for rr in assets for r in rr),
+   -                             assets=assets,raw_context=raw))
+77 +         batches.append({'time': t,'maturity': max(r['maturity'] for rr in assets for r in rr),
+78 +                             'assets': assets,'raw_context': raw})
+79 |     return batches
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:117:33
+    |
+115 |           candidates.append((st.fmean(scores),-temperature,router))
+116 |       chosen = min(candidates,key=lambda c:(c[0],c[1]))
+117 |       return chosen[2],normalizer,dict(candidates=[{'temperature':-t,'nll':s} for s,t,r in candidates],
+    |  _________________________________^
+118 | |                                   selected_temperature=-chosen[1],selection_nll=chosen[0],
+119 | |                                   first_selection_date=validation[boundary]['time'],
+120 | |                                   center=normalizer[0],unit=normalizer[1])
+    | |__________________________________________________________________________^
+help: Rewrite as a literal
+    |
+116 |     chosen = min(candidates,key=lambda c:(c[0],c[1]))
+    -     return chosen[2],normalizer,dict(candidates=[{'temperature':-t,'nll':s} for s,t,r in candidates],
+    -                                   selected_temperature=-chosen[1],selection_nll=chosen[0],
+    -                                   first_selection_date=validation[boundary]['time'],
+    -                                   center=normalizer[0],unit=normalizer[1])
+117 +     return chosen[2],normalizer,{'candidates': [{'temperature':-t,'nll':s} for s,t,r in candidates],
+118 +                                   'selected_temperature': -chosen[1],'selection_nll': chosen[0],
+119 +                                   'first_selection_date': validation[boundary]['time'],
+120 +                                   'center': normalizer[0],'unit': normalizer[1]}
+121 |
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:150:29
+    |
+148 |                   end = datetime(maturity.year,maturity.month,1,tzinfo=UTC)
+149 |                   start = datetime(end.year-1,12,1,tzinfo=UTC) if end.month==1 else datetime(end.year,end.month-1,1,tzinfo=UTC)
+150 |                   rows.append(dict(time=int(start.timestamp()),end=int(end.timestamp()),available_at=r['time'],
+    |  _____________________________^
+151 | |                                  asset=r['asset'],return_value=math.expm1(r['actual']),
+152 | |                                  forecast=Forecast(r['asset'],mu,variance)))
+    | |___________________________________________________________________________^
+153 |           for row in rows:
+154 |               row['return'] = row.pop('return_value')
+    |
+help: Rewrite as a literal
+    |
+149 |                 start = datetime(end.year-1,12,1,tzinfo=UTC) if end.month==1 else datetime(end.year,end.month-1,1,tzinfo=UTC)
+    -                 rows.append(dict(time=int(start.timestamp()),end=int(end.timestamp()),available_at=r['time'],
+    -                                  asset=r['asset'],return_value=math.expm1(r['actual']),
+    -                                  forecast=Forecast(r['asset'],mu,variance)))
+150 +                 rows.append({'time': int(start.timestamp()),'end': int(end.timestamp()),'available_at': r['time'],
+151 +                                  'asset': r['asset'],'return_value': math.expm1(r['actual']),
+152 +                                  'forecast': Forecast(r['asset'],mu,variance)})
+153 |         for row in rows:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:156:25
+    |
+154 |               row['return'] = row.pop('return_value')
+155 |           ps = periods(rows,'USD')
+156 |           results[mode] = dict(nll=st.fmean(scores),date_nll=scores,selection=selected,
+    |  _________________________^
+157 | |                              trace=trace,periods=ps,final_state=router.state() if mode in Router.MODES else None)
+    | |_________________________________________________________________________________________________________________^
+158 |       return results
+    |
+help: Rewrite as a literal
+    |
+155 |         ps = periods(rows,'USD')
+    -         results[mode] = dict(nll=st.fmean(scores),date_nll=scores,selection=selected,
+    -                              trace=trace,periods=ps,final_state=router.state() if mode in Router.MODES else None)
+156 +         results[mode] = {'nll': st.fmean(scores),'date_nll': scores,'selection': selected,
+157 +                              'trace': trace,'periods': ps,'final_state': router.state() if mode in Router.MODES else None}
+158 |     return results
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:180:21
+    |
+178 |           after=sum(holdings.values())+cash
+179 |           fees+=tr['fee'];peak=max(peak,after);drawdown=max(drawdown,1-after/peak)
+180 |           rows.append(dict(time=p['time'],end=p['end'],nav_start=before,nav_end=after,
+    |  _____________________^
+181 | |                          net_factor=after/before,fee=tr['fee'],holdings=holdings.copy(),cash=cash))
+    | |__________________________________________________________________________________________________^
+182 |       liquidation=fee*sum(holdings.values())
+183 |       terminal=sum(holdings.values())+cash-liquidation
+    |
+help: Rewrite as a literal
+    |
+179 |         fees+=tr['fee'];peak=max(peak,after);drawdown=max(drawdown,1-after/peak)
+    -         rows.append(dict(time=p['time'],end=p['end'],nav_start=before,nav_end=after,
+    -                          net_factor=after/before,fee=tr['fee'],holdings=holdings.copy(),cash=cash))
+180 +         rows.append({'time': p['time'],'end': p['end'],'nav_start': before,'nav_end': after,
+181 +                          'net_factor': after/before,'fee': tr['fee'],'holdings': holdings.copy(),'cash': cash})
+182 |     liquidation=fee*sum(holdings.values())
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:187:12
+    |
+185 |       rows[-1]['net_factor']=terminal/rows[-1]['nav_start']
+186 |       rows[-1]['liquidation_fee']=liquidation
+187 |       return dict(terminal_wealth=terminal,fees=fees+liquidation,
+    |  ____________^
+188 | |                 max_drawdown=max(drawdown,1-terminal/peak),periods=rows)
+    | |________________________________________________________________________^
+help: Rewrite as a literal
+    |
+186 |     rows[-1]['liquidation_fee']=liquidation
+    -     return dict(terminal_wealth=terminal,fees=fees+liquidation,
+    -                 max_drawdown=max(drawdown,1-terminal/peak),periods=rows)
+187 +     return {'terminal_wealth': terminal,'fees': fees+liquidation,
+188 +                 'max_drawdown': max(drawdown,1-terminal/peak),'periods': rows}
+189 |
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:200:27
+    |
+198 |           ledgers['volatility_managed']=volatility_ledger(cells['zero']['periods'],cost)
+199 |           candidate=ledgers['context']
+200 |           comparisons={name:dict(relative_wealth=candidate['terminal_wealth']/r['terminal_wealth']-1,
+    |  ___________________________^
+201 | |                               intervals=[paired_interval([p['net_factor'] for p in candidate['periods']],
+202 | |                               [p['net_factor'] for p in r['periods']],block=b) for b in (3,6)])
+    | |_______________________________________________________________________________________________^
+203 |                        for name,r in ledgers.items() if name!='context'}
+204 |           output[str(cost)]=dict(ledgers=ledgers,comparisons=comparisons)
+    |
+help: Rewrite as a literal
+    |
+199 |         candidate=ledgers['context']
+    -         comparisons={name:dict(relative_wealth=candidate['terminal_wealth']/r['terminal_wealth']-1,
+    -                               intervals=[paired_interval([p['net_factor'] for p in candidate['periods']],
+    -                               [p['net_factor'] for p in r['periods']],block=b) for b in (3,6)])
+200 +         comparisons={name:{'relative_wealth': candidate['terminal_wealth']/r['terminal_wealth']-1,
+201 +                               'intervals': [paired_interval([p['net_factor'] for p in candidate['periods']],
+202 +                               [p['net_factor'] for p in r['periods']],block=b) for b in (3,6)]}
+203 |                      for name,r in ledgers.items() if name!='context'}
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:204:27
+    |
+202 |                               [p['net_factor'] for p in r['periods']],block=b) for b in (3,6)])
+203 |                      for name,r in ledgers.items() if name!='context'}
+204 |         output[str(cost)]=dict(ledgers=ledgers,comparisons=comparisons)
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+205 |     return output
+    |
+help: Rewrite as a literal
+    |
+203 |                      for name,r in ledgers.items() if name!='context'}
+    -         output[str(cost)]=dict(ledgers=ledgers,comparisons=comparisons)
+204 +         output[str(cost)]={'ledgers': ledgers,'comparisons': comparisons}
+205 |     return output
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:229:28
+    |
+227 |                         scores[mode].append(mixture_nll(losses,w))
+228 |                     router.observe(Episode(t,t+delay*30*86400,(float(regime),),losses))
+229 |             records.append(dict(family=family,seed=seed,nll={m:st.fmean(v) for m,v in scores.items()}))
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+230 |     means={f:{m:st.fmean(r['nll'][m] for r in records if r['family']==f) for m in Router.MODES}
+231 |            for f in ('null','recurrence','abrupt','delayed')}
+    |
+help: Rewrite as a literal
+    |
+228 |                     router.observe(Episode(t,t+delay*30*86400,(float(regime),),losses))
+    -             records.append(dict(family=family,seed=seed,nll={m:st.fmean(v) for m,v in scores.items()}))
+229 +             records.append({'family': family,'seed': seed,'nll': {m:st.fmean(v) for m,v in scores.items()}})
+230 |     means={f:{m:st.fmean(r['nll'][m] for r in records if r['family']==f) for m in Router.MODES}
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/experiment.py:234:12
+    |
+232 |       gate=(means['null']['context']-means['null']['equal']<=0.01 and
+233 |             all(means['recurrence'][m]-means['recurrence']['context']>0 for m in ('equal','recent','random')))
+234 |       return dict(records=records,means=means,gate_passed=gate,
+    |  ____________^
+235 | |                 interpretation='Generated prescribed signals only; not evidence of market predictability')
+    | |__________________________________________________________________________________________________________^
+help: Rewrite as a literal
+    |
+233 |           all(means['recurrence'][m]-means['recurrence']['context']>0 for m in ('equal','recent','random')))
+    -     return dict(records=records,means=means,gate_passed=gate,
+    -                 interpretation='Generated prescribed signals only; not evidence of market predictability')
+234 +     return {'records': records,'means': means,'gate_passed': gate,
+235 +                 'interpretation': 'Generated prescribed signals only; not evidence of market predictability'}
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s5/run.py:2:1
+   |
+ 1 |   """Immutable S5-R1 runner with an enforced lightweight worker budget."""
+ 2 | / from __future__ import annotations
+ 3 | |
+ 4 | | import argparse
+ 5 | | import json
+ 6 | | import os
+ 7 | | import platform
+ 8 | | import resource
+ 9 | | import statistics as st
+10 | | import subprocess
+11 | | import sys
+12 | | import time
+13 | | import traceback
+14 | | from dataclasses import asdict, is_dataclass
+15 | | from datetime import UTC, datetime
+16 | | from pathlib import Path
+17 | |
+18 | | from scripts.public_equity_backtests import memory_snapshot
+19 | | from successors.frem_portfolio_v1.evidence import ensemble_periods, sha256, write
+20 | | from .experiment import EXPERTS, FOLDS, ROOT, SEEDS, inputs, market_cell, mechanisms, portfolio
+   | |_______________________________________________________________________________________________^
+21 |
+22 |   SPEC = ROOT/'research/frem_s5_20261013/specification.json'
+   |
+help: Organize imports
+   |
+19 | from successors.frem_portfolio_v1.evidence import ensemble_periods, sha256, write
+20 +
+21 | from .experiment import EXPERTS, FOLDS, ROOT, SEEDS, inputs, market_cell, mechanisms, portfolio
+   |
+
+F401 [*] `os` imported but unused
+ --> successors/frem_s5/run.py:6:8
+  |
+4 | import argparse
+5 | import json
+6 | import os
+  |        ^^
+7 | import platform
+8 | import resource
+  |
+help: Remove unused import: `os`
+  |
+5 | import json
+  - import os
+6 | import platform
+  |
+
+F401 [*] `.experiment.EXPERTS` imported but unused
+  --> successors/frem_s5/run.py:20:25
+   |
+18 | from scripts.public_equity_backtests import memory_snapshot
+19 | from successors.frem_portfolio_v1.evidence import ensemble_periods, sha256, write
+20 | from .experiment import EXPERTS, FOLDS, ROOT, SEEDS, inputs, market_cell, mechanisms, portfolio
+   |                         ^^^^^^^
+21 |
+22 | SPEC = ROOT/'research/frem_s5_20261013/specification.json'
+   |
+help: Remove unused import: `.experiment.EXPERTS`
+   |
+19 | from successors.frem_portfolio_v1.evidence import ensemble_periods, sha256, write
+   - from .experiment import EXPERTS, FOLDS, ROOT, SEEDS, inputs, market_cell, mechanisms, portfolio
+20 + from .experiment import FOLDS, ROOT, SEEDS, inputs, market_cell, mechanisms, portfolio
+21 |
+   |
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/run.py:51:36
+   |
+49 |     save(out,'mechanisms.json',mech)
+50 |     if not mech['gate_passed']:
+51 |         save(out,'completion.json',dict(status='MECHANISM_GATE_FAILED',market_cells=0,base_fits=0,protected_access=False))
+   |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+52 |         return
+53 |     records=[]
+   |
+help: Rewrite as a literal
+   |
+50 |     if not mech['gate_passed']:
+   -         save(out,'completion.json',dict(status='MECHANISM_GATE_FAILED',market_cells=0,base_fits=0,protected_access=False))
+51 +         save(out,'completion.json',{'status': 'MECHANISM_GATE_FAILED','market_cells': 0,'base_fits': 0,'protected_access': False})
+52 |         return
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/run.py:62:28
+   |
+60 |             save(out,f'{fold}/{seed}/forecasts.json',cells)
+61 |             save(out,f'{fold}/{seed}/portfolio.json',economics)
+62 |             records.append(dict(fold=fold,seed=seed,nll={m:r['nll'] for m,r in cells.items()}))
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+63 |         combined={m:dict(periods=ensemble_periods([c[m]['periods'] for c in families])) for m in families[0]}
+64 |         economics=portfolio(combined)
+   |
+help: Rewrite as a literal
+   |
+61 |             save(out,f'{fold}/{seed}/portfolio.json',economics)
+   -             records.append(dict(fold=fold,seed=seed,nll={m:r['nll'] for m,r in cells.items()}))
+62 +             records.append({'fold': fold,'seed': seed,'nll': {m:r['nll'] for m,r in cells.items()}})
+63 |         combined={m:dict(periods=ensemble_periods([c[m]['periods'] for c in families])) for m in families[0]}
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/run.py:63:21
+   |
+61 |             save(out,f'{fold}/{seed}/portfolio.json',economics)
+62 |             records.append(dict(fold=fold,seed=seed,nll={m:r['nll'] for m,r in cells.items()}))
+63 |         combined={m:dict(periods=ensemble_periods([c[m]['periods'] for c in families])) for m in families[0]}
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+64 |         economics=portfolio(combined)
+65 |         save(out,f'{fold}/ensemble/portfolio.json',economics)
+   |
+help: Rewrite as a literal
+   |
+62 |             records.append(dict(fold=fold,seed=seed,nll={m:r['nll'] for m,r in cells.items()}))
+   -         combined={m:dict(periods=ensemble_periods([c[m]['periods'] for c in families])) for m in families[0]}
+63 +         combined={m:{'periods': ensemble_periods([c[m]['periods'] for c in families])} for m in families[0]}
+64 |         economics=portfolio(combined)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/run.py:71:23
+   |
+69 |           ps=json.loads((out/fold/'ensemble/portfolio.json').read_text())
+70 |           nll={m:st.fmean(r['nll'][m] for r in records if r['fold']==fold) for m in records[0]['nll']}
+71 |           summary[fold]=dict(seed_mean_nll=nll,primary_10bps={name:r['relative_wealth'] for name,r in ps['10']['comparisons'].items()},
+   |  _______________________^
+72 | |                            terminal_wealth_10bps={name:r['terminal_wealth'] for name,r in ps['10']['ledgers'].items()})
+   | |_______________________________________________________________________________________________________________________^
+73 |       broad=all(all(summary[f]['primary_10bps'][b]>0 for b in ('equal_weight','buy_hold','recent','random','linear')) for f in FOLDS)
+74 |       stretch=all(all(summary[f]['primary_10bps'][b]>=.06 for b in ('equal_weight','buy_hold')) for f in FOLDS)
+   |
+help: Rewrite as a literal
+   |
+70 |         nll={m:st.fmean(r['nll'][m] for r in records if r['fold']==fold) for m in records[0]['nll']}
+   -         summary[fold]=dict(seed_mean_nll=nll,primary_10bps={name:r['relative_wealth'] for name,r in ps['10']['comparisons'].items()},
+   -                            terminal_wealth_10bps={name:r['terminal_wealth'] for name,r in ps['10']['ledgers'].items()})
+71 +         summary[fold]={'seed_mean_nll': nll,'primary_10bps': {name:r['relative_wealth'] for name,r in ps['10']['comparisons'].items()},
+72 +                            'terminal_wealth_10bps': {name:r['terminal_wealth'] for name,r in ps['10']['ledgers'].items()}}
+73 |     broad=all(all(summary[f]['primary_10bps'][b]>0 for b in ('equal_weight','buy_hold','recent','random','linear')) for f in FOLDS)
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+  --> successors/frem_s5/run.py:77:32
+   |
+75 |       memory=all(all(summary[f]['seed_mean_nll'][b]-summary[f]['seed_mean_nll']['context']>.01 for b in ('equal','recent','random','linear')) for f in FOLDS)
+76 |       verify(out)
+77 |       save(out,'completion.json',dict(status='COMPLETE_EXPLORATORY_REPLAY',market_cells=6,base_fits=0,
+   |  ________________________________^
+78 | |         generated_cells=12,summary=summary,broad_benchmark_point_win=broad,stretch_6pct_met=stretch,
+79 | |         memory_practical_point_gain_all_controls=memory,protected_access=False,
+80 | |         fresh_training_status='BLOCKED_RESOURCE_AND_FRESH_STAGE_PROTOCOL',
+81 | |         peak_rss_mib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/(2**20 if platform.system()=='Darwin' else 1024),
+82 | |         limitation='Previously inspected survivor histories and retained forecasts; no protected confirmation, new base fit, calibrated funding probability or investment claim.'))
+   | |__________________________________________________________________________________________________________________________________________________________________________________^
+help: Rewrite as a literal
+   |
+76 |     verify(out)
+   -     save(out,'completion.json',dict(status='COMPLETE_EXPLORATORY_REPLAY',market_cells=6,base_fits=0,
+   -         generated_cells=12,summary=summary,broad_benchmark_point_win=broad,stretch_6pct_met=stretch,
+   -         memory_practical_point_gain_all_controls=memory,protected_access=False,
+   -         fresh_training_status='BLOCKED_RESOURCE_AND_FRESH_STAGE_PROTOCOL',
+   -         peak_rss_mib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/(2**20 if platform.system()=='Darwin' else 1024),
+   -         limitation='Previously inspected survivor histories and retained forecasts; no protected confirmation, new base fit, calibrated funding probability or investment claim.'))
+77 +     save(out,'completion.json',{'status': 'COMPLETE_EXPLORATORY_REPLAY','market_cells': 6,'base_fits': 0,
+78 +         'generated_cells': 12,'summary': summary,'broad_benchmark_point_win': broad,'stretch_6pct_met': stretch,
+79 +         'memory_practical_point_gain_all_controls': memory,'protected_access': False,
+80 +         'fresh_training_status': 'BLOCKED_RESOURCE_AND_FRESH_STAGE_PROTOCOL',
+81 +         'peak_rss_mib': resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/(2**20 if platform.system()=='Darwin' else 1024),
+82 +         'limitation': 'Previously inspected survivor histories and retained forecasts; no protected confirmation, new base fit, calibrated funding probability or investment claim.'})
+83 |
+   |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/run.py:100:41
+    |
+ 98 |           snapshots.append(memory_snapshot());time.sleep(1)
+ 99 |       admitted=min(s['available_mib'] for s in snapshots)>=512 and snapshots[-1]['pageouts']<=snapshots[0]['pageouts']
+100 |       write(out/'resource_admission.json',dict(samples=snapshots,normal_floor_mib=512,
+    |  _________________________________________^
+101 | |         fresh_training_admitted=admitted,fresh_training_started=False,
+102 | |         bounded_replay='Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard'))
+    | |______________________________________________________________________________________________________________^
+103 |       write(out/'freeze.json',dict(frozen_at=datetime.now(UTC).isoformat(),identities=identities(),
+104 |           specification=json.loads(SPEC.read_text()),python=sys.version,platform=platform.platform(),
+    |
+help: Rewrite as a literal
+    |
+99  |     admitted=min(s['available_mib'] for s in snapshots)>=512 and snapshots[-1]['pageouts']<=snapshots[0]['pageouts']
+    -     write(out/'resource_admission.json',dict(samples=snapshots,normal_floor_mib=512,
+    -         fresh_training_admitted=admitted,fresh_training_started=False,
+    -         bounded_replay='Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard'))
+100 +     write(out/'resource_admission.json',{'samples': snapshots,'normal_floor_mib': 512,
+101 +         'fresh_training_admitted': admitted,'fresh_training_started': False,
+102 +         'bounded_replay': 'Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard'})
+103 |     write(out/'freeze.json',dict(frozen_at=datetime.now(UTC).isoformat(),identities=identities(),
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/run.py:103:29
+    |
+101 |           fresh_training_admitted=admitted,fresh_training_started=False,
+102 |           bounded_replay='Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard'))
+103 |       write(out/'freeze.json',dict(frozen_at=datetime.now(UTC).isoformat(),identities=identities(),
+    |  _____________________________^
+104 | |         specification=json.loads(SPEC.read_text()),python=sys.version,platform=platform.platform(),
+105 | |         protected_access=False))
+    | |_______________________________^
+106 |       # Runtime integrity checks before any generated or market outcome evaluation.
+107 |       with (out/'tests.log').open('x') as log:
+    |
+help: Rewrite as a literal
+    |
+102 |         bounded_replay='Separate stdlib artifact analysis at128MiB/300seconds; no override of training guard'))
+    -     write(out/'freeze.json',dict(frozen_at=datetime.now(UTC).isoformat(),identities=identities(),
+    -         specification=json.loads(SPEC.read_text()),python=sys.version,platform=platform.platform(),
+    -         protected_access=False))
+103 +     write(out/'freeze.json',{'frozen_at': datetime.now(UTC).isoformat(),'identities': identities(),
+104 +         'specification': json.loads(SPEC.read_text()),'python': sys.version,'platform': platform.platform(),
+105 +         'protected_access': False})
+106 |     # Runtime integrity checks before any generated or market outcome evaluation.
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+PLW1510 `subprocess.run` without explicit `check` argument
+   --> successors/frem_s5/run.py:108:16
+    |
+106 |     # Runtime integrity checks before any generated or market outcome evaluation.
+107 |     with (out/'tests.log').open('x') as log:
+108 |         tested=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests/s5','-v'],cwd=ROOT,stdout=log,stderr=subprocess.…
+    |                ^^^^^^^^^^^^^^
+109 |     if tested.returncode:
+110 |         write(out/'failure.json',dict(stage='integrity',returncode=tested.returncode));return
+    |
+help: Add explicit `check=False`
+    |
+107 |     with (out/'tests.log').open('x') as log:
+    -         tested=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests/s5','-v'],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,timeout=60)
+108 +         tested=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests/s5','-v'],check=False, cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,timeout=60)
+109 |     if tested.returncode:
+    |
+note: This suggestion may be incorrect or produce invalid syntax. It requires manual review and cannot be applied automatically
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/run.py:110:34
+    |
+108 |         tested=subprocess.run([sys.executable,'-m','unittest','discover','-s','tests/s5','-v'],cwd=ROOT,stdout=log,stderr=subprocess.…
+109 |     if tested.returncode:
+110 |         write(out/'failure.json',dict(stage='integrity',returncode=tested.returncode));return
+    |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+111 |     start=time.monotonic();peak=0.0
+112 |     with (out/'worker.log').open('x') as log:
+    |
+help: Rewrite as a literal
+    |
+109 |     if tested.returncode:
+    -         write(out/'failure.json',dict(stage='integrity',returncode=tested.returncode));return
+110 +         write(out/'failure.json',{'stage': 'integrity','returncode': tested.returncode});return
+111 |     start=time.monotonic();peak=0.0
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+PLW1510 `subprocess.run` without explicit `check` argument
+   --> successors/frem_s5/run.py:116:25
+    |
+114 |         try:
+115 |             while proc.poll() is None:
+116 |                 current=subprocess.run(['ps','-o','rss=','-p',str(proc.pid)],capture_output=True,text=True)
+    |                         ^^^^^^^^^^^^^^
+117 |                 if current.stdout.strip():
+118 |                     peak=max(peak,float(current.stdout.strip())/1024)
+    |
+help: Add explicit `check=False`
+    |
+115 |             while proc.poll() is None:
+    -                 current=subprocess.run(['ps','-o','rss=','-p',str(proc.pid)],capture_output=True,text=True)
+116 +                 current=subprocess.run(['ps','-o','rss=','-p',str(proc.pid)],check=False, capture_output=True,text=True)
+117 |                 if current.stdout.strip():
+    |
+note: This suggestion may be incorrect or produce invalid syntax. It requires manual review and cannot be applied automatically
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/run.py:125:38
+    |
+123 | …timeError(f'Worker failed: {proc.returncode}')
+124 | …
+125 | …ocess.json',dict(returncode=proc.returncode,elapsed_seconds=time.monotonic()-start,peak_sampled_rss_mib=peak,threads=1))
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+126 | …as error:
+127 | …) is None:
+    |
+help: Rewrite as a literal
+    |
+124 |             verify(out)
+    -             write(out/'process.json',dict(returncode=proc.returncode,elapsed_seconds=time.monotonic()-start,peak_sampled_rss_mib=peak,threads=1))
+125 +             write(out/'process.json',{'returncode': proc.returncode,'elapsed_seconds': time.monotonic()-start,'peak_sampled_rss_mib': peak,'threads': 1})
+126 |         except Exception as error:
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+C408 Unnecessary `dict()` call (rewrite as a literal)
+   --> successors/frem_s5/run.py:133:38
+    |
+131 |                 except subprocess.TimeoutExpired:
+132 |                     proc.kill();proc.wait()
+133 |             write(out/'failure.json',dict(error=repr(error),traceback=traceback.format_exc(),peak_sampled_rss_mib=peak))
+    |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+134 |             raise
+135 |     print((out/'completion.json').read_text())
+    |
+help: Rewrite as a literal
+    |
+132 |                     proc.kill();proc.wait()
+    -             write(out/'failure.json',dict(error=repr(error),traceback=traceback.format_exc(),peak_sampled_rss_mib=peak))
+133 +             write(out/'failure.json',{'error': repr(error),'traceback': traceback.format_exc(),'peak_sampled_rss_mib': peak})
+134 |             raise
+    |
+note: This is an unsafe fix and may change runtime behavior
+
+Found 30 errors.
+[*] 4 fixable with `--fix` (24 unsafe fixes available with `--fix --unsafe-fixes`).

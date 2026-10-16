@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 155, in main
+    result = audit(args.root, args.manifest, args.output)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/audit.py", line 75, in audit
+    item = audit_ledger(ledger, cost_bps=float(cost), decision_assets=assets)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/ledger.py", line 82, in audit_ledger
+    close(liquidation, cost_bps / 10000 * math.fsum(holdings.values()), "liquidation fee")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_audit_v1/ledger.py", line 45, in close
+    raise ValueError(f"{name} mismatch: {left} != {right}")
+ValueError: liquidation fee mismatch: 0.0 != 98.09350597536981

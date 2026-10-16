@@ -1,0 +1,2 @@
+tests/test_catalog_critical_audit.py:444: error: "ScenarioLibrary" has no attribute "__iter__" (not iterable)  [attr-defined]
+Found 1 error in 1 file (checked 6 source files)

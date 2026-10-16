@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-11T16:15:29.857799+00:00",
+  "integrity": "19 passed after retained attempt2 failures",
+  "repairs": [
+    "Infer declared horizon from future window shape instead of assuming one step",
+    "Use float64 descriptor preprocessing consistently across save/load; unchanged strict tolerance"
+  ],
+  "gate_details": "Confidence also attenuates absolute descriptor distance; exact formulas frozen in source before outcomes. Random control age-binned and asset-matched. Fourteen arms. Six-month sensitivity reports unavailable when fewer than two blocks, never shortens block to force a result. Holm family includes all seven declared comparisons in both folds.",
+  "status": "IMPLEMENTATION_FROZEN_FOR_STAGED_EXECUTION",
+  "protected_outcomes_accessed": false
+}

@@ -1,0 +1,4 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 639, in main\n    result = diagnose(args.root, args.output, args.freeze)\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 447, in diagnose\n    value = audit_ledger(ledger, int(cost), returns)\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/scripts/diagnose_s8_completion.py\", line 219, in audit_ledger\n    require(abs(row[\"weights\"][a] - post[a] / (nav - fee)) < 1e-10, \"saved exposure mismatch\")\n                ~~~^^^^^^^^^^^\nKeyError: 'weights'\n",
+  "source_sha256": "edb9765116b95e461f51e68aec5696e7928483424d57a122e558e57b64336ecd"
+}

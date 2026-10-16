@@ -1,0 +1,2359 @@
+{
+  "scope": "Exact conditional planning arithmetic, not a backtest, forecast or fitted distribution",
+  "as_of": "2026-10-13",
+  "grid": {
+    "status": "HYPOTHETICAL_SENSITIVITY_GRID_NOT_FORECAST",
+    "as_of": "2026-10-13",
+    "assumptions_known_at": "2026-10-13",
+    "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+    "rows": [
+      {
+        "annual_net_growth_assumption": "-1/20",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "operating_shortfall": {
+          "exact": "104579387/640",
+          "usd": "163405.29"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "-104579387/640",
+          "usd": "-163405.29"
+        },
+        "residual_after_operating": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "requested_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "retained_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "0/1",
+          "usd": "0.00"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "-1/20",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "operating_shortfall": {
+          "exact": "181530270053219973133537/1493865710777888640",
+          "usd": "121517.13"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "-181530270053219973133537/1493865710777888640",
+          "usd": "-121517.13"
+        },
+        "residual_after_operating": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "requested_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "retained_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "0/1",
+          "usd": "0.00"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "-1/20",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "215420613/640",
+          "usd": "336594.71"
+        },
+        "operating_shortfall": {
+          "exact": "578051245307161851/6786879598720",
+          "usd": "85171.87"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "-578051245307161851/6786879598720",
+          "usd": "-85171.87"
+        },
+        "residual_after_operating": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "requested_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "retained_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "0/1",
+          "usd": "0.00"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "0",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "operating_shortfall": {
+          "exact": "50000/1",
+          "usd": "50000.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "-50000/1",
+          "usd": "-50000.00"
+        },
+        "residual_after_operating": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "requested_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "retained_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "0/1",
+          "usd": "0.00"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "0",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "operating_shortfall": {
+          "exact": "18934363489947100000/2334165173090451",
+          "usd": "8111.84"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "-18934363489947100000/2334165173090451",
+          "usd": "-8111.84"
+        },
+        "residual_after_operating": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "requested_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "retained_flexibility": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "0/1",
+          "usd": "0.00"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "0",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "450000/1",
+          "usd": "450000.00"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "9580840931353125/339343979936",
+          "usd": "28233.42"
+        },
+        "residual_after_operating": {
+          "exact": "9580840931353125/339343979936",
+          "usd": "28233.42"
+        },
+        "requested_flexibility": {
+          "exact": "1916168186270625/339343979936",
+          "usd": "5646.68"
+        },
+        "retained_flexibility": {
+          "exact": "1916168186270625/339343979936",
+          "usd": "5646.68"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "1916168186270625/84835994984",
+          "usd": "22586.74"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/50",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "270378614/78125",
+          "usd": "3460.85"
+        },
+        "residual_after_operating": {
+          "exact": "270378614/78125",
+          "usd": "3460.85"
+        },
+        "requested_flexibility": {
+          "exact": "270378614/390625",
+          "usd": "692.17"
+        },
+        "retained_flexibility": {
+          "exact": "270378614/390625",
+          "usd": "692.17"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "1081514456/390625",
+          "usd": "2768.68"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/50",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "8269693904079723269264914/182356654147691484375",
+          "usd": "45349.01"
+        },
+        "residual_after_operating": {
+          "exact": "8269693904079723269264914/182356654147691484375",
+          "usd": "45349.01"
+        },
+        "requested_flexibility": {
+          "exact": "8269693904079723269264914/911783270738457421875",
+          "usd": "9069.80"
+        },
+        "retained_flexibility": {
+          "exact": "8269693904079723269264914/911783270738457421875",
+          "usd": "9069.80"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "33078775616318893077059656/911783270738457421875",
+          "usd": "36279.21"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/50",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "39332878614/78125",
+          "usd": "503460.85"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "2165816974351302379329/26511248432500000",
+          "usd": "81694.27"
+        },
+        "residual_after_operating": {
+          "exact": "2165816974351302379329/26511248432500000",
+          "usd": "81694.27"
+        },
+        "requested_flexibility": {
+          "exact": "2165816974351302379329/132556242162500000",
+          "usd": "16338.85"
+        },
+        "retained_flexibility": {
+          "exact": "2165816974351302379329/132556242162500000",
+          "usd": "16338.85"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "2165816974351302379329/33139060540625000",
+          "usd": "65355.41"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/25",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "4851065696/78125",
+          "usd": "62093.64"
+        },
+        "residual_after_operating": {
+          "exact": "4851065696/78125",
+          "usd": "62093.64"
+        },
+        "requested_flexibility": {
+          "exact": "4851065696/390625",
+          "usd": "12418.73"
+        },
+        "retained_flexibility": {
+          "exact": "4851065696/390625",
+          "usd": "12418.73"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "19404262784/390625",
+          "usd": "49674.91"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/25",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "18961774159709446182518896/182356654147691484375",
+          "usd": "103981.81"
+        },
+        "residual_after_operating": {
+          "exact": "18961774159709446182518896/182356654147691484375",
+          "usd": "103981.81"
+        },
+        "requested_flexibility": {
+          "exact": "18961774159709446182518896/911783270738457421875",
+          "usd": "20796.36"
+        },
+        "retained_flexibility": {
+          "exact": "18961774159709446182518896/911783270738457421875",
+          "usd": "20796.36"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "75847096638837784730075584/911783270738457421875",
+          "usd": "83185.44"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "1/25",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "43913565696/78125",
+          "usd": "562093.64"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "3720245559598604766081/26511248432500000",
+          "usd": "140327.06"
+        },
+        "residual_after_operating": {
+          "exact": "3720245559598604766081/26511248432500000",
+          "usd": "140327.06"
+        },
+        "requested_flexibility": {
+          "exact": "3720245559598604766081/132556242162500000",
+          "usd": "28065.41"
+        },
+        "retained_flexibility": {
+          "exact": "3720245559598604766081/132556242162500000",
+          "usd": "28065.41"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "3720245559598604766081/33139060540625000",
+          "usd": "112261.65"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "3/50",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "9866372681/78125",
+          "usd": "126289.57"
+        },
+        "residual_after_operating": {
+          "exact": "9866372681/78125",
+          "usd": "126289.57"
+        },
+        "requested_flexibility": {
+          "exact": "9866372681/390625",
+          "usd": "25257.91"
+        },
+        "retained_flexibility": {
+          "exact": "9866372681/390625",
+          "usd": "25257.91"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "39465490724/390625",
+          "usd": "101031.66"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "3/50",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "30668329056453719119619131/182356654147691484375",
+          "usd": "168177.73"
+        },
+        "residual_after_operating": {
+          "exact": "30668329056453719119619131/182356654147691484375",
+          "usd": "168177.73"
+        },
+        "requested_flexibility": {
+          "exact": "30668329056453719119619131/911783270738457421875",
+          "usd": "33635.55"
+        },
+        "retained_flexibility": {
+          "exact": "30668329056453719119619131/911783270738457421875",
+          "usd": "33635.55"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "122673316225814876478476524/911783270738457421875",
+          "usd": "134542.19"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "3/50",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "48928872681/78125",
+          "usd": "626289.57"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "5422159792489325419041/26511248432500000",
+          "usd": "204522.99"
+        },
+        "residual_after_operating": {
+          "exact": "5422159792489325419041/26511248432500000",
+          "usd": "204522.99"
+        },
+        "requested_flexibility": {
+          "exact": "5422159792489325419041/132556242162500000",
+          "usd": "40904.60"
+        },
+        "retained_flexibility": {
+          "exact": "5422159792489325419041/132556242162500000",
+          "usd": "40904.60"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "5422159792489325419041/33139060540625000",
+          "usd": "163618.39"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "2/25",
+        "annual_reserve_discount_assumption": "0",
+        "wealth": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "allocated_operating_reserve": {
+          "exact": "500000/1",
+          "usd": "500000.00"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "15348555344/78125",
+          "usd": "196461.51"
+        },
+        "residual_after_operating": {
+          "exact": "15348555344/78125",
+          "usd": "196461.51"
+        },
+        "requested_flexibility": {
+          "exact": "15348555344/390625",
+          "usd": "39292.30"
+        },
+        "retained_flexibility": {
+          "exact": "15348555344/390625",
+          "usd": "39292.30"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "61394221376/390625",
+          "usd": "157169.21"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "2/25",
+        "annual_reserve_discount_assumption": "1/50",
+        "wealth": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "allocated_operating_reserve": {
+          "exact": "1069308691380650050000/2334165173090451",
+          "usd": "458111.84"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "43464648900948583722670144/182356654147691484375",
+          "usd": "238349.67"
+        },
+        "residual_after_operating": {
+          "exact": "43464648900948583722670144/182356654147691484375",
+          "usd": "238349.67"
+        },
+        "requested_flexibility": {
+          "exact": "43464648900948583722670144/911783270738457421875",
+          "usd": "47669.93"
+        },
+        "retained_flexibility": {
+          "exact": "43464648900948583722670144/911783270738457421875",
+          "usd": "47669.93"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "173858595603794334890680576/911783270738457421875",
+          "usd": "190679.74"
+        }
+      },
+      {
+        "annual_net_growth_assumption": "2/25",
+        "annual_reserve_discount_assumption": "1/25",
+        "wealth": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "allocated_implementation_costs": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "implementation_cost_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "wealth_after_implementation_costs": {
+          "exact": "54411055344/78125",
+          "usd": "696461.51"
+        },
+        "required_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "allocated_operating_reserve": {
+          "exact": "143123950039846875/339343979936",
+          "usd": "421766.58"
+        },
+        "operating_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "signed_surplus_before_flexibility": {
+          "exact": "7282505476087884468609/26511248432500000",
+          "usd": "274694.93"
+        },
+        "residual_after_operating": {
+          "exact": "7282505476087884468609/26511248432500000",
+          "usd": "274694.93"
+        },
+        "requested_flexibility": {
+          "exact": "7282505476087884468609/132556242162500000",
+          "usd": "54938.99"
+        },
+        "retained_flexibility": {
+          "exact": "7282505476087884468609/132556242162500000",
+          "usd": "54938.99"
+        },
+        "flexibility_shortfall": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "facility_capacity": {
+          "exact": "7282505476087884468609/33139060540625000",
+          "usd": "219755.94"
+        }
+      }
+    ],
+    "funding_probability": null,
+    "uses_wins_balance_or_pnl": false,
+    "reserve_rates_are_locked_yields": false,
+    "implementation_costs": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "implementation_cost_assumption": "Explicit zero-cost planning assumption; not a fee quote",
+    "target": "2033-01-01_before_first_payment"
+  },
+  "dated_reserve_price_sensitivities": [
+    {
+      "valuation_date": "2027-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "0",
+      "reserve_cost": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "1",
+        "2035": "1",
+        "2036": "1",
+        "2037": "1",
+        "2038": "1",
+        "2039": "1",
+        "2040": "1",
+        "2041": "1",
+        "2042": "1"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2027-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/50",
+      "reserve_cost": {
+        "exact": "16707948302822657031250000000000/41072642160770556400888251",
+        "usd": "406790.20"
+      },
+      "discount_factors": {
+        "2033": "15625000000/17596287801",
+        "2034": "781250000000/897410677851",
+        "2035": "39062500000000/45767944570401",
+        "2036": "1953125000000000/2334165173090451",
+        "2037": "97656250000000000/119042423827613001",
+        "2038": "4882812500000000000/6071163615208263051",
+        "2039": "244140625000000000000/309629344375621415601",
+        "2040": "12207031250000000000000/15791096563156692195651",
+        "2041": "610351562500000000000000/805345924720991301978201",
+        "2042": "30517578125000000000000000/41072642160770556400888251"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2027-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/25",
+      "reserve_cost": {
+        "exact": "34942370615196990966796875/104828708892857870336",
+        "usd": "333328.26"
+      },
+      "discount_factors": {
+        "2033": "244140625/308915776",
+        "2034": "6103515625/8031810176",
+        "2035": "152587890625/208827064576",
+        "2036": "3814697265625/5429503678976",
+        "2037": "95367431640625/141167095653376",
+        "2038": "2384185791015625/3670344486987776",
+        "2039": "59604644775390625/95428956661682176",
+        "2040": "1490116119384765625/2481152873203736576",
+        "2041": "37252902984619140625/64509974703297150976",
+        "2042": "931322574615478515625/1677259342285725925376"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2028-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "0",
+      "reserve_cost": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "1",
+        "2035": "1",
+        "2036": "1",
+        "2037": "1",
+        "2038": "1",
+        "2039": "1",
+        "2040": "1",
+        "2041": "1",
+        "2042": "1"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2028-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/50",
+      "reserve_cost": {
+        "exact": "334158966056453140625000000000/805345924720991301978201",
+        "usd": "414926.00"
+      },
+      "discount_factors": {
+        "2033": "312500000/345025251",
+        "2034": "15625000000/17596287801",
+        "2035": "781250000000/897410677851",
+        "2036": "39062500000000/45767944570401",
+        "2037": "1953125000000000/2334165173090451",
+        "2038": "97656250000000000/119042423827613001",
+        "2039": "4882812500000000000/6071163615208263051",
+        "2040": "244140625000000000000/309629344375621415601",
+        "2041": "12207031250000000000000/15791096563156692195651",
+        "2042": "610351562500000000000000/805345924720991301978201"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2028-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/25",
+      "reserve_cost": {
+        "exact": "1397694824607879638671875/4031873418956071936",
+        "usd": "346661.39"
+      },
+      "discount_factors": {
+        "2033": "9765625/11881376",
+        "2034": "244140625/308915776",
+        "2035": "6103515625/8031810176",
+        "2036": "152587890625/208827064576",
+        "2037": "3814697265625/5429503678976",
+        "2038": "95367431640625/141167095653376",
+        "2039": "2384185791015625/3670344486987776",
+        "2040": "59604644775390625/95428956661682176",
+        "2041": "1490116119384765625/2481152873203736576",
+        "2042": "37252902984619140625/64509974703297150976"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2031-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "0",
+      "reserve_cost": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "1",
+        "2035": "1",
+        "2036": "1",
+        "2037": "1",
+        "2038": "1",
+        "2039": "1",
+        "2040": "1",
+        "2041": "1",
+        "2042": "1"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2031-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/50",
+      "reserve_cost": {
+        "exact": "2673271728451625125000000/6071163615208263051",
+        "usd": "440322.79"
+      },
+      "discount_factors": {
+        "2033": "2500/2601",
+        "2034": "125000/132651",
+        "2035": "6250000/6765201",
+        "2036": "312500000/345025251",
+        "2037": "15625000000/17596287801",
+        "2038": "781250000000/897410677851",
+        "2039": "39062500000000/45767944570401",
+        "2040": "1953125000000000/2334165173090451",
+        "2041": "97656250000000000/119042423827613001",
+        "2042": "4882812500000000000/6071163615208263051"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2031-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/25",
+      "reserve_cost": {
+        "exact": "89452468774904296875/229396530436736",
+        "usd": "389946.91"
+      },
+      "discount_factors": {
+        "2033": "625/676",
+        "2034": "15625/17576",
+        "2035": "390625/456976",
+        "2036": "9765625/11881376",
+        "2037": "244140625/308915776",
+        "2038": "6103515625/8031810176",
+        "2039": "152587890625/208827064576",
+        "2040": "3814697265625/5429503678976",
+        "2041": "95367431640625/141167095653376",
+        "2042": "2384185791015625/3670344486987776"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2033-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "0",
+      "reserve_cost": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "1",
+        "2035": "1",
+        "2036": "1",
+        "2037": "1",
+        "2038": "1",
+        "2039": "1",
+        "2040": "1",
+        "2041": "1",
+        "2042": "1"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2033-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/50",
+      "reserve_cost": {
+        "exact": "1069308691380650050000/2334165173090451",
+        "usd": "458111.84"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "50/51",
+        "2035": "2500/2601",
+        "2036": "125000/132651",
+        "2037": "6250000/6765201",
+        "2038": "312500000/345025251",
+        "2039": "15625000000/17596287801",
+        "2040": "781250000000/897410677851",
+        "2041": "39062500000000/45767944570401",
+        "2042": "1953125000000000/2334165173090451"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    },
+    {
+      "valuation_date": "2033-01-01",
+      "currency": "USD",
+      "source_kind": "scenario_assumption",
+      "source": "Declared 2026-10-13 team policy sensitivities; hypothetical rates, not market observations",
+      "assumptions_known_at": "2026-10-13",
+      "as_of": "2026-10-13",
+      "flat_discount_rate": "1/25",
+      "reserve_cost": {
+        "exact": "143123950039846875/339343979936",
+        "usd": "421766.58"
+      },
+      "discount_factors": {
+        "2033": "1",
+        "2034": "25/26",
+        "2035": "625/676",
+        "2036": "15625/17576",
+        "2037": "390625/456976",
+        "2038": "9765625/11881376",
+        "2039": "244140625/308915776",
+        "2040": "6103515625/8031810176",
+        "2041": "152587890625/208827064576",
+        "2042": "3814697265625/5429503678976"
+      },
+      "executable_quote": false,
+      "implementation_costs_assumed": "0"
+    }
+  ],
+  "required_constant_growth_to_fund_reserve_only": [
+    {
+      "reserve_rate_assumption": "0",
+      "status": "BRACKETED",
+      "target_wealth": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "lower_rate": "1258967/67108864",
+      "upper_rate": "2517935/134217728",
+      "lower_wealth": {
+        "exact": "1427247673929585304453835951463228137618523616059375/2854495385411919762116571938898990272765493248",
+        "usd": "499999.99"
+      },
+      "upper_wealth": {
+        "exact": "91343854919760966089302863033760926422009060776509375/182687704666362864775460604089535377456991567872",
+        "usd": "500000.01"
+      },
+      "interpretation": "Required constant annual net return; not a forecast or probability"
+    },
+    {
+      "reserve_rate_assumption": "1/50",
+      "status": "BRACKETED",
+      "target_wealth": {
+        "exact": "1069308691380650050000/2334165173090451",
+        "usd": "458111.84"
+      },
+      "lower_rate": "52975/16777216",
+      "upper_rate": "423801/134217728",
+      "lower_wealth": {
+        "exact": "319257346680829476338646525203137664239001709375/696898287454081973172991196020261297061888",
+        "usd": "458111.83"
+      },
+      "upper_wealth": {
+        "exact": "83691401411059918999339068016596498131702676366159375/182687704666362864775460604089535377456991567872",
+        "usd": "458111.84"
+      },
+      "interpretation": "Required constant annual net return; not a forecast or probability"
+    },
+    {
+      "reserve_rate_assumption": "1/25",
+      "status": "BRACKETED",
+      "target_wealth": {
+        "exact": "143123950039846875/339343979936",
+        "usd": "421766.58"
+      },
+      "lower_rate": "-763157/67108864",
+      "upper_rate": "-1526313/134217728",
+      "lower_wealth": {
+        "exact": "1203930733260349191154879869439234458350782478184375/2854495385411919762116571938898990272765493248",
+        "usd": "421766.57"
+      },
+      "upper_wealth": {
+        "exact": "77051570217717279780325684960054627969459230380859375/182687704666362864775460604089535377456991567872",
+        "usd": "421766.59"
+      },
+      "interpretation": "Required constant annual net return; not a forecast or probability"
+    }
+  ],
+  "cost_and_flexibility_sensitivities": [
+    {
+      "retained_fraction_assumption": "0",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "residual_after_operating": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "requested_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "retained_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": "0",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "599000/1",
+        "usd": "599000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "residual_after_operating": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "requested_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "retained_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": "0",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "595000/1",
+        "usd": "595000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "residual_after_operating": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "requested_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "retained_flexibility": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".20",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "residual_after_operating": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "requested_flexibility": {
+        "exact": "20000/1",
+        "usd": "20000.00"
+      },
+      "retained_flexibility": {
+        "exact": "20000/1",
+        "usd": "20000.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "80000/1",
+        "usd": "80000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".20",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "599000/1",
+        "usd": "599000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "residual_after_operating": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "requested_flexibility": {
+        "exact": "19800/1",
+        "usd": "19800.00"
+      },
+      "retained_flexibility": {
+        "exact": "19800/1",
+        "usd": "19800.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "79200/1",
+        "usd": "79200.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".20",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "595000/1",
+        "usd": "595000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "residual_after_operating": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "requested_flexibility": {
+        "exact": "19000/1",
+        "usd": "19000.00"
+      },
+      "retained_flexibility": {
+        "exact": "19000/1",
+        "usd": "19000.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "76000/1",
+        "usd": "76000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".30",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "residual_after_operating": {
+        "exact": "100000/1",
+        "usd": "100000.00"
+      },
+      "requested_flexibility": {
+        "exact": "30000/1",
+        "usd": "30000.00"
+      },
+      "retained_flexibility": {
+        "exact": "30000/1",
+        "usd": "30000.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "70000/1",
+        "usd": "70000.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".30",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "1000/1",
+        "usd": "1000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "599000/1",
+        "usd": "599000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "residual_after_operating": {
+        "exact": "99000/1",
+        "usd": "99000.00"
+      },
+      "requested_flexibility": {
+        "exact": "29700/1",
+        "usd": "29700.00"
+      },
+      "retained_flexibility": {
+        "exact": "29700/1",
+        "usd": "29700.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "69300/1",
+        "usd": "69300.00"
+      }
+    },
+    {
+      "retained_fraction_assumption": ".30",
+      "assumptions": "Hypothetical wealth600000,reserve500000,costs as specified",
+      "wealth": {
+        "exact": "600000/1",
+        "usd": "600000.00"
+      },
+      "required_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "allocated_implementation_costs": {
+        "exact": "5000/1",
+        "usd": "5000.00"
+      },
+      "implementation_cost_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "wealth_after_implementation_costs": {
+        "exact": "595000/1",
+        "usd": "595000.00"
+      },
+      "required_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "allocated_operating_reserve": {
+        "exact": "500000/1",
+        "usd": "500000.00"
+      },
+      "operating_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "signed_surplus_before_flexibility": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "residual_after_operating": {
+        "exact": "95000/1",
+        "usd": "95000.00"
+      },
+      "requested_flexibility": {
+        "exact": "28500/1",
+        "usd": "28500.00"
+      },
+      "retained_flexibility": {
+        "exact": "28500/1",
+        "usd": "28500.00"
+      },
+      "flexibility_shortfall": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "facility_capacity": {
+        "exact": "66500/1",
+        "usd": "66500.00"
+      }
+    }
+  ],
+  "hypothetical_2031_communication_example": {
+    "balance_kind": "hypothetical_future_balance_not_observed",
+    "valuation_date": "2031-01-01",
+    "as_of": "2026-10-13",
+    "starting_wealth": {
+      "exact": "600000/1",
+      "usd": "600000.00"
+    },
+    "nominal_operating_cash_assumed_secured": {
+      "exact": "500000/1",
+      "usd": "500000.00"
+    },
+    "surplus_equity": {
+      "exact": "60000/1",
+      "usd": "60000.00"
+    },
+    "secured_surplus_cash": {
+      "exact": "40000/1",
+      "usd": "40000.00"
+    },
+    "cash_return_assumption": "0",
+    "implementation_cost_assumption": "0, assumed already budgeted",
+    "no_leverage_no_withdrawal_no_rebalancing_into_secured_cash": true,
+    "funding_probability": null,
+    "conditional_communicated_range": [
+      {
+        "exact": "32000/1",
+        "usd": "32000.00"
+      },
+      {
+        "exact": "80000/1",
+        "usd": "80000.00"
+      }
+    ],
+    "range_basis": "Algebraic bounds of the proposed capped gift rule, conditional on protected cash and operating reserve remaining intact",
+    "scenarios": [
+      {
+        "two_year_surplus_equity_return_assumption": "-1",
+        "status": "WITHIN_ATTESTED_FLOOR_AND_CAP",
+        "terminal_surplus_after_reserve_and_costs": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "surplus_deficit": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "secured_surplus_floor": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "promised_facility_floor": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "communicated_facility_cap": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "realized_capped_gift": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "remaining_flexibility": {
+          "exact": "8000/1",
+          "usd": "8000.00"
+        },
+        "secured_surplus_floor_breached": false,
+        "promised_facility_floor_breached": false,
+        "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+        "funding_probability": null,
+        "is_unconditional_guarantee": false
+      },
+      {
+        "two_year_surplus_equity_return_assumption": "-2/5",
+        "status": "WITHIN_ATTESTED_FLOOR_AND_CAP",
+        "terminal_surplus_after_reserve_and_costs": {
+          "exact": "76000/1",
+          "usd": "76000.00"
+        },
+        "surplus_deficit": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "secured_surplus_floor": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "promised_facility_floor": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "communicated_facility_cap": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "realized_capped_gift": {
+          "exact": "60800/1",
+          "usd": "60800.00"
+        },
+        "remaining_flexibility": {
+          "exact": "15200/1",
+          "usd": "15200.00"
+        },
+        "secured_surplus_floor_breached": false,
+        "promised_facility_floor_breached": false,
+        "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+        "funding_probability": null,
+        "is_unconditional_guarantee": false
+      },
+      {
+        "two_year_surplus_equity_return_assumption": "0",
+        "status": "WITHIN_ATTESTED_FLOOR_AND_CAP",
+        "terminal_surplus_after_reserve_and_costs": {
+          "exact": "100000/1",
+          "usd": "100000.00"
+        },
+        "surplus_deficit": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "secured_surplus_floor": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "promised_facility_floor": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "communicated_facility_cap": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "realized_capped_gift": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "remaining_flexibility": {
+          "exact": "20000/1",
+          "usd": "20000.00"
+        },
+        "secured_surplus_floor_breached": false,
+        "promised_facility_floor_breached": false,
+        "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+        "funding_probability": null,
+        "is_unconditional_guarantee": false
+      },
+      {
+        "two_year_surplus_equity_return_assumption": "21/100",
+        "status": "WITHIN_ATTESTED_FLOOR_AND_CAP",
+        "terminal_surplus_after_reserve_and_costs": {
+          "exact": "112600/1",
+          "usd": "112600.00"
+        },
+        "surplus_deficit": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "secured_surplus_floor": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "promised_facility_floor": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "communicated_facility_cap": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "realized_capped_gift": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "remaining_flexibility": {
+          "exact": "32600/1",
+          "usd": "32600.00"
+        },
+        "secured_surplus_floor_breached": false,
+        "promised_facility_floor_breached": false,
+        "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+        "funding_probability": null,
+        "is_unconditional_guarantee": false
+      },
+      {
+        "two_year_surplus_equity_return_assumption": "1",
+        "status": "WITHIN_ATTESTED_FLOOR_AND_CAP",
+        "terminal_surplus_after_reserve_and_costs": {
+          "exact": "160000/1",
+          "usd": "160000.00"
+        },
+        "surplus_deficit": {
+          "exact": "0/1",
+          "usd": "0.00"
+        },
+        "secured_surplus_floor": {
+          "exact": "40000/1",
+          "usd": "40000.00"
+        },
+        "promised_facility_floor": {
+          "exact": "32000/1",
+          "usd": "32000.00"
+        },
+        "communicated_facility_cap": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "realized_capped_gift": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "remaining_flexibility": {
+          "exact": "80000/1",
+          "usd": "80000.00"
+        },
+        "secured_surplus_floor_breached": false,
+        "promised_facility_floor_breached": false,
+        "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+        "funding_probability": null,
+        "is_unconditional_guarantee": false
+      }
+    ],
+    "protection_breach_counterexample": {
+      "status": "SECURED_SURPLUS_FLOOR_BREACHED",
+      "terminal_surplus_after_reserve_and_costs": {
+        "exact": "30000/1",
+        "usd": "30000.00"
+      },
+      "surplus_deficit": {
+        "exact": "0/1",
+        "usd": "0.00"
+      },
+      "secured_surplus_floor": {
+        "exact": "40000/1",
+        "usd": "40000.00"
+      },
+      "promised_facility_floor": {
+        "exact": "32000/1",
+        "usd": "32000.00"
+      },
+      "communicated_facility_cap": {
+        "exact": "80000/1",
+        "usd": "80000.00"
+      },
+      "realized_capped_gift": {
+        "exact": "24000/1",
+        "usd": "24000.00"
+      },
+      "remaining_flexibility": {
+        "exact": "6000/1",
+        "usd": "6000.00"
+      },
+      "secured_surplus_floor_breached": true,
+      "promised_facility_floor_breached": true,
+      "floor_basis": "Caller-attested protected surplus after operating reserve and implementation costs; unauthenticated",
+      "funding_probability": null,
+      "is_unconditional_guarantee": false
+    }
+  },
+  "hypothetical_strategic_target": {
+    "valuation_date": "2031-01-01",
+    "source_kind": "scenario_assumption",
+    "source": "600k wealth,500k current reserve requirement,zero incremental costs, not Laura observed NAV",
+    "policy_status": "EXPLICIT_TEAM_PROPOSAL_CONDITIONAL_ON_RESERVE_PRICING",
+    "wealth": {
+      "exact": "600000/1",
+      "usd": "600000.00"
+    },
+    "required_reserve": {
+      "exact": "500000/1",
+      "usd": "500000.00"
+    },
+    "required_implementation_costs": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "allocated_implementation_costs": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "implementation_cost_shortfall": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "wealth_after_implementation_costs": {
+      "exact": "600000/1",
+      "usd": "600000.00"
+    },
+    "operating_reserve_allocation": {
+      "exact": "500000/1",
+      "usd": "500000.00"
+    },
+    "operating_shortfall": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "equity_target": {
+      "exact": "60000/1",
+      "usd": "60000.00"
+    },
+    "short_usd_liquidity_target": {
+      "exact": "40000/1",
+      "usd": "40000.00"
+    },
+    "required_secured_surplus_floor": {
+      "exact": "40000/1",
+      "usd": "40000.00"
+    },
+    "allocated_secured_surplus_floor": {
+      "exact": "40000/1",
+      "usd": "40000.00"
+    },
+    "secured_surplus_floor_shortfall": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "unencumbered_liquidity_target": {
+      "exact": "0/1",
+      "usd": "0.00"
+    },
+    "secured_floor_basis": "Caller-attested net protected surplus; unauthenticated; included in liquidity target, not additional wealth",
+    "surplus_equity_fraction": "3/5",
+    "overall_equity_cap": "2/5",
+    "equity_cap_basis": "post-cost net wealth",
+    "uses_wins_balance_or_pnl": false
+  },
+  "market_observations_used": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "wins_pnl_used": false,
+  "calibrated_probabilities": null
+}

@@ -1,0 +1,100 @@
+{
+  "definitions": "Operational interpretations disclosed to user; alternate equations were not supplied",
+  "items": [
+    {
+      "request": "Reservoir-encoded engram kernel",
+      "status": "IMPLEMENTED_TESTED",
+      "evidence": "Contractive recurrent branches, Fourier/product features, delayed date memory"
+    },
+    {
+      "request": "JEPA-style representation prediction",
+      "status": "IMPLEMENTED_TESTED_NOT_MARKET_TRAINED",
+      "evidence": "Tanh encoder, predictor, stopped EMA target, explicit anti-collapse variance penalty"
+    },
+    {
+      "request": "Quantized rebound ripples",
+      "status": "IMPLEMENTED_TESTED",
+      "evidence": "Delayed finite schedules, rounding error feedback, update bounds and immediate/unquantized controls"
+    },
+    {
+      "request": "Mathematical proofing and exampling",
+      "status": "IMPLEMENTED_BOUNDED_CONTRACTS",
+      "evidence": "Analytical invariants, exact-reference and adversarial examples, finite-difference gradients"
+    },
+    {
+      "request": "Network divergence",
+      "status": "IMPLEMENTED_FIXED_BRANCHES",
+      "evidence": "Interacting fixed branches; autonomous architecture growth not implemented"
+    },
+    {
+      "request": "Full partial zero context",
+      "status": "IMPLEMENTED_TESTED",
+      "evidence": "Zero sequence inputs retains training-derived parameters and matured memory; equal-router control available"
+    },
+    {
+      "request": "XGBoost",
+      "status": "IMPLEMENTED_OPTIONAL_RUNTIME_UNEXERCISED",
+      "evidence": "Real histogram-tree estimator, declared fixed budget, no fallback"
+    },
+    {
+      "request": "Non-Gaussian potential outcomes",
+      "status": "IMPLEMENTED_TESTED_UNCALIBRATED",
+      "evidence": "Exact Student mixtures and bounded correlated heavy-tail/jump scenarios"
+    },
+    {
+      "request": "Multinational dual functionality",
+      "status": "IMPLEMENTED_ACCOUNTING_AND_PLANNING",
+      "evidence": "Explicit FX/simple-return arithmetic plus forecast and multi-period policy APIs; no admitted multinational data"
+    },
+    {
+      "request": "Longer-horizon planning and costs",
+      "status": "IMPLEMENTED_TESTED",
+      "evidence": "Finite-candidate log-wealth CVaR/shortfall objective, cash/caps/turnover, exact initial fees; actual research ledgers liquidate"
+    },
+    {
+      "request": "Causal relationships",
+      "status": "CHRONOLOGY_ENFORCED_CAUSAL_EFFECTS_UNIDENTIFIED",
+      "evidence": "No intervention-identification assumptions or evidence supplied"
+    },
+    {
+      "request": "Physics and stochastic calculus speedups",
+      "status": "NOT_ESTABLISHED",
+      "evidence": "Stable structured recurrence is implemented; no novel physics solver or measured speed advantage"
+    },
+    {
+      "request": "Multiple trainings and upscalings",
+      "status": "MATRIX_IMPLEMENTED_MARKET_EXECUTION_BLOCKED",
+      "evidence": "24 declared fits across3seeds,3contexts,2widths and controls; no scientific fits"
+    },
+    {
+      "request": "All-dataset rigorous backtests",
+      "status": "BLOCKED",
+      "evidence": "Existing survivor/factor/synthetic datasets have distinct contracts; no admitted fresh window data; no protected reuse"
+    },
+    {
+      "request": "Fresh confirmation and independent retraining",
+      "status": "NOT_PERFORMED",
+      "evidence": "No supported development result or confirmatory freeze"
+    },
+    {
+      "request": "Laura current predictions and moves",
+      "status": "BLOCKED_INPUTS_AND_NO_MARKET_TRAINED_CHECKPOINT",
+      "evidence": "No invented tickers, quantities or calibrated funding probabilities"
+    },
+    {
+      "request": "Market manipulation",
+      "status": "NOT_IMPLEMENTED",
+      "evidence": "Only lawful analytical transaction-cost and scenario modeling"
+    },
+    {
+      "request": "Ultimate model with nothing to improve",
+      "status": "NOT_A_VERIFIABLE_COMPLETION_CLAIM",
+      "evidence": "Universal profitable optimality, novelty and future returns are not established"
+    },
+    {
+      "request": "All45S5backlog items",
+      "status": "NOT_ALL_COMPLETED",
+      "evidence": "Conditional items and unrun objective/attribution/precision/liability work remain explicit"
+    }
+  ]
+}

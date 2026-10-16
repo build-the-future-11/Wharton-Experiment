@@ -1,0 +1,3 @@
+Using CPython 3.12.14 interpreter at: successors/frem_s10/.venv/bin/python
+Creating virtual environment at: research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env
+Activate with: source research/frem_s10_repair_20261015/integrated_verification_attempt2/clean_env/bin/activate

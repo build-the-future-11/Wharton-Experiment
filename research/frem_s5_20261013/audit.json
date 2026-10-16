@@ -1,0 +1,9 @@
+{
+  "status": "PASS_ARITHMETIC_AND_FROZEN_IDENTITIES",
+  "score_rows": 7128,
+  "ledgers": 312,
+  "max_nll_error": 4.440892098500626e-16,
+  "max_accounting_residual": 2.9103830456733704e-11,
+  "frozen_files": 111,
+  "independent_retraining": false
+}

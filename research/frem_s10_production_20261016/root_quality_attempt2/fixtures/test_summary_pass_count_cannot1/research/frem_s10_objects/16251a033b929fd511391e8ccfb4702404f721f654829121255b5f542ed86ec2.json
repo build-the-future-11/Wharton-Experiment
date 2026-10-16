@@ -1,0 +1,1 @@
+{"schema":"s10-command-output-v1","stderr":"","stdout":"tests/test_a.py::test_a[0]\ntests/test_a.py::test_a[1]\n\n2 tests collected in 0.01s\n"}

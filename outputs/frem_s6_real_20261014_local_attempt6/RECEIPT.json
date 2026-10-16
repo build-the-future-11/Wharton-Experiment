@@ -1,0 +1,31 @@
+{
+  "status": "BLOCKED_RESOURCE_ADMISSION",
+  "game_tab": "Verified absent in browser tab inventory; closure call encountered concurrent browser state changes, so agent attribution is uncertain.",
+  "attempts": [
+    "outputs/frem_s6_real_20261014_local_attempt5",
+    "outputs/frem_s6_real_20261014_local_attempt6"
+  ],
+  "latest_admission": {
+    "checked_at": "2026-10-14T10:07:35.272169+00:00",
+    "samples": [
+      {
+        "available_mib": 359.3125,
+        "pageouts": 242028
+      },
+      {
+        "available_mib": 256.96875,
+        "pageouts": 242084
+      },
+      {
+        "available_mib": 200.1875,
+        "pageouts": 242108
+      }
+    ],
+    "admitted": false,
+    "market_fits_started": 0
+  },
+  "market_fits_started": 0,
+  "protected_access": false,
+  "guard_modified": false,
+  "baseline_results_available": false
+}

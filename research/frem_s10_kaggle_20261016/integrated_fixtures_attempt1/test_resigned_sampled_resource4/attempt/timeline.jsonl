@@ -1,0 +1,4 @@
+{"event":{"state":"PREFLIGHT"},"previous":"0000000000000000000000000000000000000000000000000000000000000000","sequence":0}
+{"event":{"marker_sha256":"7bebfcb4ad61e2870109b604311d89cd6be8c150ebe36f579983082c8e31feee","state":"CONSUMED"},"previous":"eca07cbbdfa6f0e14ed3e86fb9f348257fb57d7bfb971ef235e66c8d55cbb12f","sequence":1}
+{"event":{"state":"RUNNING"},"previous":"ca443097c212c0ed1bdef2356ffd3105917464dff6a2cae89eee4686a9927792","sequence":2}
+{"event":{"state":"COMPLETE"},"previous":"8e9e2a9dd21d0ca7d57fd92fa8ece8b72d12b8e09e1728440af80512aaea60c3","sequence":3}

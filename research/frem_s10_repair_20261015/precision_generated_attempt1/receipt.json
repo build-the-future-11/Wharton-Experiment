@@ -1,0 +1,19 @@
+{
+  "command": [
+    "successors/frem_s10/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-c",
+    "successors/frem_s10/pyproject.toml",
+    "successors/frem_s10/tests/test_precision_inputs_audit.py",
+    "-q",
+    "-W",
+    "error",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "exit_code": 0,
+  "wall_seconds": 2.35659883300832,
+  "child_max_rss_bytes_macos": 61767680
+}

@@ -1,0 +1,22 @@
+E702 Multiple statements on one line (semicolon)
+   --> successors/frem_s10/tests/test_catalog_numerics_audit.py:178:40
+    |
+176 |     total = math.fsum(weights)
+177 |     means = [math.fsum(w / total * float(item.a[j]) for w, item in zip(weights, selected, strict=True)) for j in range(3)]
+178 |     expected = np.exp(-np.array(means)); expected /= expected.sum()
+    |                                        ^
+179 |     np.testing.assert_allclose(result.individual_alpha, expected, rtol=1e-14)
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> successors/frem_s10/tests/test_catalog_numerics_audit.py:194:43
+    |
+192 |         with pytest.raises(ContractError):
+193 |             crra_utility(np.array([bad]))
+194 |     utilities = np.array([-3.0, 0.5, 2.0]); p = np.array([0.0, 0.4, 0.6])
+    |                                           ^
+195 |     values = [float(((1 - 0.05) * p + 0.05 * vertex) @ utilities) for vertex in np.eye(3)]
+196 |     assert robust_objective(utilities, p)[0] == pytest.approx(min(values))
+    |
+
+Found 3 errors (1 fixed, 2 remaining).

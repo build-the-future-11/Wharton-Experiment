@@ -1,0 +1,88 @@
+{
+  "id": "FREM-HORIZON-SIMPLE-RETURN-CANDIDATE-20261014",
+  "status": "PROPOSED_NOT_RUN_READY_NOT_FROZEN",
+  "date": "2026-10-14",
+  "previous_finding": "S8 predictive practical-support gate failed with intervals including zero; primary economic gate failed and gross zero-cost wealth was below initial wealth.",
+  "remaining_problem": "Separate weak predictive information from decision-horizon and joint-risk approximation error without selecting on closed outcomes.",
+  "question": "Does a directly horizon-matched simple-return forecast with fixed shrinkage and one additional historical-context group improve a fully predeclared economic procedure against equal-weight, risk-only and unchanged-information controls?",
+  "hypothesis": "A longer historical-context group improves subsequent simple-return calibration and net terminal wealth under the same policy, while a joint scenario policy improves use of a common forecast relative to the diagonal surrogate.",
+  "identification_warning": "These are two separable hypotheses. Use crossed controls and do not attribute a policy improvement to memory or improved forecasting. No novelty is claimed.",
+  "material_difference": [
+    "Forecast the realized simple total return at the exact policy holding endpoint, instead of extending weekly log coefficients across four intervals.",
+    "Make the entire feature/calibration/model/policy selection process part of a fixed nested chronological procedure.",
+    "Treat fixed averaging and zero-memory as legitimate incumbents; no new memory component in the first stage."
+  ],
+  "inputs": {
+    "scope": "A declared fixed instrument set with contemporaneous price, distribution and instrument metadata; any survivor/revision limitations retained.",
+    "base_features": "The unchanged eight visible daily close-return observations, with actual availability and issue times.",
+    "one_added_group": "Historical cumulative returns over 21, 63 and 126 observed trading sessions plus 21-session realized volatility and downside semivariance; train-only scaling and no forward fill. Freeze exact formulas before implementation.",
+    "cross_asset_features": "Excluded from the first added group; a later separately declared hypothesis.",
+    "targets": "Simple total return from actual execution to the directly forecast holding endpoint, including declared distribution treatment; primary H=1 continuous weekly interval, H=4 prespecified diagnostic head only.",
+    "actual_horizon": "Record number of sessions and elapsed seconds per target; purge training and calibration on label availability, not merely origin date."
+  },
+  "models": {
+    "primary": "Direct ridge conditional mean with train-only feature scaling and a finite historical joint residual-scenario distribution.",
+    "controls": ["Zero mean", "Expanding historical mean", "Unchanged-information ridge", "Identity/no mean calibration", "Fixed forecast mixing", "Risk-only allocation"],
+    "excluded_first_stage": ["New JEPA branches", "Additional memory capacity", "Learned retrieval", "RL policy", "News models", "Unspecified external framework", "Fundamental or macro fields without timestamped vintages"],
+    "calibration": "Identity incumbent plus a fixed chronological inner choice among shrinkage strengths 0, 0.5 and 1; separate mean and scale diagnostics. No outer-window choice.",
+    "refit": "Quarterly expanding refit versus frozen model as a declared ablation; all training/calibration labels strictly available before issue. Residual scenarios rebuilt with out-of-fit predictions and model-version identities."
+  },
+  "decision_layer": {
+    "primary": "Finite empirical joint-scenario expected log-growth objective with explicit self-financing transaction costs, cash sleeve and an unchanged long-only 80 percent risk-budget / one-third asset-cap contract.",
+    "interpretation": "Exact expectation under the declared finite scenario distribution only; no claim it is exact expected utility under the true market law.",
+    "controls": ["Unchanged S8 diagonal surrogate with the same horizon and forecasts", "Equal-weight 80 percent assets / 20 percent cash at the same review times", "Original full-exposure equal-weight benchmark retained", "Buy and hold", "Cash", "Covariance-based minimum-risk allocation with the same constraints"],
+    "joint_risk": "Keep contemporaneous asset residuals together. Any tail flooring, total-loss mass or re-centering is part of the model and must be disclosed and validated.",
+    "fees": "10 bps one-way primary, 0/20/40 bps sensitivity; fixed-position fee bridge reported separately from policy response.",
+    "cash_yield": "Dated cash-return observations with availability evidence if supplied. Otherwise zero-cash-yield exploratory scope must remain explicit.",
+    "liability_use": "Excluded from return-advantage claims until a separate dated mandate simulation is admitted; preserve the existing liability-first plan."
+  },
+  "success_contract": {
+    "primary_economic_estimand": "Candidate terminal wealth / matched benchmark terminal wealth - 1 over the full fixed outer horizon, with identical starting wealth, cash flows, costs and liquidation convention.",
+    "minimum": 0.06,
+    "stretch": 0.36,
+    "benchmark_family": ["Original equal-weight assets", "Exposure- and constraint-matched equal-weight assets/cash", "Risk-only incumbent", "Cash"],
+    "point_claim": "Report point uplift separately for every benchmark. A target claim requires at least 6 percent for each predeclared required comparator, without choosing the comparator after results.",
+    "support_claim": "A stronger reliability claim additionally requires a predeclared procedure-level uncertainty lower bound above 6 percent for the full required family; planning must justify that precision before any protected use.",
+    "predictive_claim": "Original memory hypothesis retains 0.01 nats per observation for matched log-density scores and all existing fixed interval families. A different forecast scale or non-density model must not silently reuse that numerical threshold; predeclare a separate predictive endpoint without claiming it tests the original memory hypothesis.",
+    "risk_constraints": "No leverage or shorts; identical per-asset caps, risky-exposure ceiling, costs, review calendar and cash-flow dates; report turnover, drawdown, exposure and downside jointly with wealth."
+  },
+  "selection_and_statistics": {
+    "selection": "Nested expanding chronological folds; fit features, model, calibration and any selected policy only inside the inner folds. Purge by complete label maturity plus actual publication lag.",
+    "outer_window": null,
+    "outer_window_status": "NOT_IDENTIFIED_OR_ADMITTED; no invented unseen period",
+    "closed_windows": ["2019 S7", "2020-2022 S8", "S3/S4 2023-October2024 outcomes"],
+    "protected_boundary": "2025-01-01: no access or implied permission from this proposal",
+    "units": "Common decision date with all contemporaneous assets; asset rows and optimization seeds are not independent financial histories.",
+    "conditional_intervals": "May describe saved forecast/decision paths only and must be labeled conditional.",
+    "procedure_uncertainty": "Evaluate fitting and inner selection inside every declared outer fold; retain dependence across folds. Do not claim ordinary iid nested-CV or a saved-score bootstrap supplies calibrated financial procedure intervals.",
+    "precision_gate": "Estimate serial dependence and effective blocks from permitted pre-existing development data only, report uncertainty of the estimate, and perform a prespecified simulation-based precision/power analysis. No numerical required sample size is asserted without that calculation.",
+    "multiplicity": "One primary economic procedure and a fixed required benchmark family. Secondary predictive, feature, policy and memory claims remain separate families; no best-arm replacement."
+  },
+  "budget": {
+    "status": "PROPOSED_CEILING_NOT_EXECUTION_AUTHORIZATION_OR_SPEND",
+    "maximum_model_configurations": 6,
+    "maximum_inner_fits_per_outer_fold": 24,
+    "maximum_outer_folds": 3,
+    "workers": 1,
+    "threads": 1,
+    "maximum_wall_seconds": 7200,
+    "fallback": "If complete fixed matrix cannot fit the resource/data/precision contract, record incomplete and stop; no omitted failing arms or optional expansion."
+  },
+  "falsifiers": [
+    "Added information does not improve declared subsequent mean/ranking calibration against unchanged information.",
+    "Joint policy fails to improve the same forecast under the same constraints.",
+    "Minimum economic uplift fails for any required comparator.",
+    "Any claimed adaptive-memory increment fails against fixed/global/recent controls in a separate memory experiment.",
+    "Chronology, data or accounting defect invalidates the affected test and requires an additive corrected freeze, not deletion."
+  ],
+  "run_ready_gates": [
+    "A real unconsumed outer dataset/window with documented exposure status, not a new download name for inspected outcomes.",
+    "Source timestamps, total returns, cash assumptions and rights fit the intended claim.",
+    "Precision analysis shows that the bounded design can distinguish the stated practical target; otherwise close as inconclusive.",
+    "Exact formulas, model/calibration/refit rules, scenario generation and solver tolerances implemented and independently checked.",
+    "Complete numerical, chronology, accounting and pipeline tests plus a measured bounded dry run.",
+    "Complete source/data/environment/analysis freeze and append-only consumption receipt before outcomes.",
+    "Resource admission or an applicable explicit existing waiver; no unrelated-process termination."
+  ],
+  "current_recommendation": "Do not run new market fits now. Finish and preserve the existing negative/inconclusive package and implement only reviewable, outcome-independent methodology repairs if useful. No defined unconsumed outer window or procedure-level precision evidence currently supports spending the protected tail."
+}

@@ -1,0 +1,15 @@
+{
+  "decision_id": "FREM-RETAINED-LOSS-DIAGNOSIS-20261011",
+  "observation": "The user requested all reasons FREM is losing. Retained synthetic forecasts show a large negative mean bias, poor calibration and a separately trained no-memory model with better NLL. The fixed-checkpoint memory correction marginally improves NLL.",
+  "hypothesized_cause": "The principal measured failure is the learned forecast location; short optimization, evolving residual references and controller/objective mismatch are plausible upstream mechanisms, not yet causally isolated.",
+  "decision": "Add a hash-bound, standard-library descriptive diagnosis of the saved synthetic evidence. Preserve the negative run, all eight distribution-field swaps and supplementary arithmetic. Do not retune or refit this completed result. Distinguish proved numerical contributions from source-supported hypotheses and propose fresh controlled development evidence.",
+  "predicted_effect": "Replace an unsupported claim that memory directly causes the loss with an auditable mechanism-level diagnosis and discriminating next tests.",
+  "discriminating_experiment": "No new training experiment. Recompute saved paired scores; score base versus corrected forecasts; attribute the saved neural NLL gap across location, scale and degrees of freedom; inspect retained fit and memory histories; run five diagnostic and eight audit tests.",
+  "result": "COMPLETE_DESCRIPTIVE_DIAGNOSIS_OF_RETAINED_SYNTHETIC_RUN",
+  "receipt": "research/frem_loss_diagnosis_20261011/diagnosis.json",
+  "report": "research/frem_loss_diagnosis_20261011/REPORT.md",
+  "verification": "research/frem_loss_diagnosis_20261011/verification.json",
+  "new_model_fits": 0,
+  "protected_outcomes_accessed": false,
+  "scientific_status": "NOT_EVALUATED"
+}

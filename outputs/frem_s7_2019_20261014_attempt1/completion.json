@@ -1,0 +1,1 @@
+{"status":"COMPLETE","base_fits":3,"seeds":[11,29,47],"variants":["adaptive_volatility","equal","memory","mixture_global","mixture_ungated","recent","reservoir_jepa","ridge","s7","trend","xgboost_hist","zero"],"protected_access":false,"scope":"2019 retrospective continuous-week development; dividends accrued/reinvested weekly, not actual fills or independently unseen history"}

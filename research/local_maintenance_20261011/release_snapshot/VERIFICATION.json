@@ -1,0 +1,20 @@
+{
+  "FREM.json": {
+    "status": "PASS",
+    "entries_checked": 276,
+    "errors": [],
+    "scope": "Listed byte identities only; no runtime or scientific verification"
+  },
+  "RE-JEPA.json": {
+    "status": "PASS",
+    "entries_checked": 79,
+    "errors": [],
+    "scope": "Listed byte identities only; no runtime or scientific verification"
+  },
+  "RENG-JEPA.json": {
+    "status": "PASS",
+    "entries_checked": 39,
+    "errors": [],
+    "scope": "Listed byte identities only; no runtime or scientific verification"
+  }
+}

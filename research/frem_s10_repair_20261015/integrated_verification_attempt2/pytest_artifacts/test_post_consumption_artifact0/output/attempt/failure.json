@@ -1,0 +1,1 @@
+{"attempt_id":"attempt","completion_valid":false,"consumed":true,"error":"injected consumed journal failure","error_type":"ArtifactIOError","freeze_id":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","operation":"precision","replay_permitted":false,"state":"FAILED"}

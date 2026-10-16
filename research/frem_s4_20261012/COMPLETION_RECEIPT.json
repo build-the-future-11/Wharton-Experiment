@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "paper_pages": 28,
+  "visual_review": "All28 pages rendered and inspected; no overfull/undefined-reference log findings",
+  "pdf_sha256": "b4d4babbaecb6baaae2b4ae0ed8bd5527ab48a8a1a76a992c153af380fa7356f",
+  "run": "outputs/frem_s4_20261012_attempt1/completion.json",
+  "audit": "research/frem_s4_20261012/audit.json",
+  "public_rules": "research/frem_s4_20261012/PUBLIC_RULES_AND_LAURA.md",
+  "no_trades": true,
+  "protected_outcomes_accessed": false,
+  "remaining": [
+    "official2026-2027 approved instrument list unavailable publicly",
+    "holdings/NAV and team numerical policy unknown",
+    "current admissible forecast/risk inputs absent",
+    "no demonstrated memory gain or confirmation",
+    "canonical data, independent reproduction and final scientific review"
+  ]
+}

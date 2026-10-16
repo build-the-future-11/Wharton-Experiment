@@ -1,0 +1,20 @@
+{
+  "schema": "s10-heartbeat-observation-v1",
+  "scheduled_at": "2026-10-16T06:06:32.565Z",
+  "automation_id": "frem-s10-guarded-research-continuation",
+  "controller_invocations": 1,
+  "exit_code": 3,
+  "outcome": {
+    "status": "BLOCKED",
+    "stage": "verification",
+    "plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+    "host": {
+      "path": "research/frem_s10_production_20261016/execution/controller/verification-000005/host.json",
+      "sha256": "e5aaae15218cbac4b06126e17fcbb27fc0db237cf00104e6e42cdca408ee2ea4"
+    },
+    "consumed": false,
+    "automatic_retry_permitted": true
+  },
+  "canonical_update_required": false,
+  "reason": "Unchanged unconsumed resource block; retain active schedule and controller journal; no scientific or code changes."
+}

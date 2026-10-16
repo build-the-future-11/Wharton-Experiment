@@ -1,0 +1,25 @@
+{
+  "selected": {
+    "weight": 0.0,
+    "power": 0.0,
+    "nll": -1.1854125078136857,
+    "half_gains": [
+      0.0,
+      0.0
+    ],
+    "eligible": true
+  },
+  "candidates": [
+    {
+      "weight": 0.0,
+      "power": 0.0,
+      "nll": -1.1854125078136857,
+      "half_gains": [
+        0.0,
+        0.0
+      ],
+      "eligible": true
+    }
+  ],
+  "validation_boundary": 1635724800000000000
+}

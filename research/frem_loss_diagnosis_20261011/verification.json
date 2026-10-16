@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-11T12:55:13.778579+00:00",
+  "checks": [
+    {
+      "name": "tests",
+      "command": [
+        "rtk",
+        "proxy",
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "tests.test_frem_loss_diagnosis",
+        "tests.test_evidence_audit",
+        "-v"
+      ],
+      "returncode": 0,
+      "log": "research/frem_loss_diagnosis_20261011/tests.log"
+    },
+    {
+      "name": "lint",
+      "command": [
+        "rtk",
+        "proxy",
+        ".venv/bin/ruff",
+        "check",
+        "scripts/diagnose_frem_loss.py",
+        "tests/test_frem_loss_diagnosis.py"
+      ],
+      "returncode": 0,
+      "log": "research/frem_loss_diagnosis_20261011/lint.log"
+    }
+  ],
+  "new_tests": 5,
+  "supporting_audit_tests": 8,
+  "initial_lint_attempt": {
+    "status": "failed",
+    "diagnostic": "C408 dict() instead of literal in test fixture; corrected without scientific change"
+  },
+  "new_model_fits": 0,
+  "scientific_status": "NOT_EVALUATED"
+}

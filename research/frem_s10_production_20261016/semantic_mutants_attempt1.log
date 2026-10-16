@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/scripts/run_semantic_mutants.py", line 170, in <module>
+    main()
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/scripts/run_semantic_mutants.py", line 166, in main
+    print(json.dumps(run(args.source, args.output), indent=2))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s10/scripts/run_semantic_mutants.py", line 156, in run
+    raise RuntimeError("mutation or source invariance gate failed; all copies and logs retained")
+RuntimeError: mutation or source invariance gate failed; all copies and logs retained
