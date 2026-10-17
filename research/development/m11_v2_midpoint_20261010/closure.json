@@ -1,0 +1,119 @@
+{
+  "schema": "bounded.engineering.closure.v1",
+  "status": "CLOSED_ENGINEERING_VERIFIED",
+  "closed_at": "2026-10-10T10:50:39.233701+00:00",
+  "repository": "build-the-future-11/Wharton-Experiment",
+  "parent_commit": "8dd558b6c90e96f990dbe2e63777498ad4d7f8e0",
+  "parent_tree": "f289766b981ec4757b7ff1bc0bf7747108309fe0",
+  "contract": "research/development/m11_v2_midpoint_20261010/contract.json",
+  "contract_sha256": "9709a89423b32d7de6891a965785a53441535092daa7506bdbd1b9ba04ac7378",
+  "scope": "numerical software correction only",
+  "budget": {
+    "commands_used": 3,
+    "commands_limit": 3,
+    "child_command_wall_seconds": 21.57661474397173,
+    "wall_seconds_limit": 90,
+    "all_commands_within_30_seconds": true,
+    "new_cases": 18,
+    "new_cases_limit": 20,
+    "fixtures": 1,
+    "optimizer_calls": 0,
+    "training_steps": 0,
+    "paid_calls": 0,
+    "protected_evaluations": 0,
+    "closed_predecessor_budgets_changed": false,
+    "unused_seconds_retired": 68.42338525602827
+  },
+  "baseline": {
+    "status": "COLLECTION_FAILED_NO_TESTS_EXECUTED",
+    "failed_tests": 0,
+    "collection_errors": 1,
+    "description": "Selective snapshot lacked eagerly imported wharton_lab.models.base. The error is retained; all117 exact-parent Python source files were then materialized before the final gate. No baseline retry."
+  },
+  "final_verification": {
+    "passed": 61,
+    "new_cases": 18,
+    "inherited_cases": 43,
+    "deselected": 3,
+    "warnings_as_errors": true,
+    "scope": "selected generated CPU cases; no full repository/scientific matrix qualification"
+  },
+  "command_receipts": {
+    "baseline": {
+      "path": "research/development/m11_v2_midpoint_20261010/baseline_receipt.json",
+      "sha256": "58d963ea6518827aa3e461b0e7f7cbf01af31ee0bfd2d3c2e80a5028df025d74",
+      "returncode": 2,
+      "child_command_wall_seconds": 2.4919988779874984
+    },
+    "final": {
+      "path": "research/development/m11_v2_midpoint_20261010/final_receipt.json",
+      "sha256": "822950c3270cccdfd42df664e25e2f55d96e25e454a1fdf1d2b3f01ff1935f7d",
+      "returncode": 0,
+      "child_command_wall_seconds": 10.59817392998957
+    },
+    "fixture": {
+      "path": "research/development/m11_v2_midpoint_20261010/fixture_receipt.json",
+      "sha256": "9f15bda3a5074cbe417fc9bc4f7808b5fce5270f2fda163644a0be00bd11be48",
+      "returncode": 0,
+      "child_command_wall_seconds": 8.486441935994662
+    }
+  },
+  "fixture_result": {
+    "path": "research/development/m11_v2_midpoint_20261010/fixture_result.json",
+    "sha256": "83929972adf7cc7260e7f310d59e589a88d8ec19aad9e09722b15e6504b7ead3",
+    "status": "COMPLETED_ENGINEERING_FIXTURE",
+    "raw_archive": "research/development/m11_v2_midpoint_20261010/fixture_artifacts.tar.gz",
+    "raw_archive_sha256": "7cb18cb9378e5eb3ec94b7121529ea5e72a7fc21a8186d1e99b6ef8658c40196"
+  },
+  "source_sha256": {
+    "src/wharton_lab/models/m11/mpc_v2.py": "a298c650dae52c9885b08d5531ae973d9912fffd978678a5fe5dd7bbd227df01",
+    "tests/unit/test_m11_v2_midpoint.py": "94c8063b943d553ca8d009b53efd776dd625899f8a30d5df01ccd73d944b8369"
+  },
+  "frozen_sources_sha256": {
+    "src/wharton_lab/models/m11/mpc.py": "af467317a6356010f0c5cb4098048d298c76b63c3030bfa2af6eb4aa5666fcbf",
+    "src/wharton_lab/competition/stress.py": "c0e4ebd27545219069578a08cab228f727ed84e04e08e66e1ccaa1713808f351",
+    "src/wharton_lab/models/m11/model.py": "191533cd656e4afa4f88f32864be8dd6c4e83eb051a9abbe446be45feed83508",
+    "src/wharton_lab/models/m11/config.py": "a2628770c8a60f9d51b089c4fde115ddfeacf3142efbabb5d826c221de63fa89"
+  },
+  "independent_review": {
+    "status": "PASS_SOURCE_ONLY",
+    "reviewer": "independent root agent",
+    "reviewer_execution": false,
+    "runtime_and_tests": "Runtime corrections, contracts and new tests reviewed before final fixtures.",
+    "resolved_finding": "Retain original derived metrics/table bytes as a separate hashed artifact before deletion/regeneration; applied before the single fixture execution.",
+    "no_runtime_changes_after_final_gate": true
+  },
+  "failures": [
+    {
+      "stage": "source_materialization",
+      "description": "Initial combined tool payload exceeded exec argument size; rejected before process creation. Chunked exact-blob materialization succeeded.",
+      "numerical_execution": false
+    },
+    {
+      "stage": "baseline_collection",
+      "description": "Selective snapshot lacked eagerly imported wharton_lab.models.base. The error is retained; all117 exact-parent Python source files were then materialized before the final gate. No baseline retry.",
+      "verification_command_consumed": 1,
+      "optimizer_calls": 0
+    }
+  ],
+  "limits": [
+    "Opt-in M11-v2 only; legacy mpc, stress, model/factory/config and historical findings remain unchanged.",
+    "Fallback corrects endpoint-sum overflow only; other unrepresentable cash/turnover/gain/objective arithmetic is not newly qualified.",
+    "Ordinary midpoint operations are unchanged; high-range rational oracle tolerances account for sequential binary64 last bits.",
+    "Three inherited optimizer tests were explicitly deselected; no optimizer called.",
+    "No market evaluation, new funding conclusion, forecasting claim, trade or submission."
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "torch": null,
+    "scipy": "1.17.0",
+    "device": "CPU",
+    "numeric_threads": 1
+  },
+  "archive_manifest": "archive_manifest.json",
+  "history_rule": "All incoming canonical/source snapshots and failed evidence retained; old studies and completed budgets unchanged.",
+  "scientific_complete": false,
+  "next_gate": "A separately defined and frozen prospective scientific protocol is still required before hypothesis testing. No protected evaluation performed.",
+  "test_oracle_pre_execution_correction": "The unexecuted high-cash objective assertion was aligned with the already specified ULP tolerance before command2; the exact test bytes present during failed collection are preserved under incoming/baseline_test_m11_v2_midpoint.py.snapshot."
+}

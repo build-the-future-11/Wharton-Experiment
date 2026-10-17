@@ -1,0 +1,65 @@
+{
+  "schema": "bounded.engineering.contract.v1",
+  "session": "m11_v2_midpoint_20261010",
+  "recorded_at": "2026-10-10T10:37:20.083826+00:00",
+  "repository": "build-the-future-11/Wharton-Experiment",
+  "status": "PROSPECTIVE_IMMUTABLE",
+  "parent_commit": "8dd558b6c90e96f990dbe2e63777498ad4d7f8e0",
+  "parent_tree": "f289766b981ec4757b7ff1bc0bf7747108309fe0",
+  "parent_pr": 3,
+  "specification": "protocol/M11_V2_MIDPOINT_AMENDMENT_20261010.md",
+  "specification_sha256": "f4c601f48fd3534b2b422002ef1e5f9848aba85f3ea5b74705bd5c829664c6bd",
+  "incoming": {
+    "EXECUTION_STATE.json": {
+      "sha256": "a97f683e0a4626ce1ab589a32eb79ae8869e1a6e06dd847d1931ab03b5a3f1bd",
+      "git_blob": "c622df6a879fc614d9e33b443fa882076694704d",
+      "snapshot": "research/development/m11_v2_midpoint_20261010/incoming/EXECUTION_STATE.json.snapshot",
+      "bytes": 2477
+    },
+    "src/wharton_lab/models/m11/mpc_v2.py": {
+      "sha256": "81ebf89c490f652dc2dc3153ae05ae03256f20c20e20621584081eb529d53d1a",
+      "git_blob": "017a68324d76a62d12d5d84f4b968c5c674bdc48",
+      "snapshot": "research/development/m11_v2_midpoint_20261010/incoming/mpc_v2.py.snapshot",
+      "bytes": 11155
+    },
+    "src/wharton_lab/models/m11/mpc.py": {
+      "sha256": "af467317a6356010f0c5cb4098048d298c76b63c3030bfa2af6eb4aa5666fcbf",
+      "git_blob": "4047e51225d8b012fc8443ed8295669056ebe7fc",
+      "snapshot": "research/development/m11_v2_midpoint_20261010/incoming/mpc.py.snapshot",
+      "bytes": 3564
+    },
+    "src/wharton_lab/competition/stress.py": {
+      "sha256": "c0e4ebd27545219069578a08cab228f727ed84e04e08e66e1ccaa1713808f351",
+      "git_blob": "e8c66dc9e6ba1dbab6716d88a885454152561a67",
+      "snapshot": "research/development/m11_v2_midpoint_20261010/incoming/stress.py.snapshot",
+      "bytes": 6156
+    }
+  },
+  "frozen_sources_sha256": {
+    "src/wharton_lab/models/m11/mpc.py": "af467317a6356010f0c5cb4098048d298c76b63c3030bfa2af6eb4aa5666fcbf",
+    "src/wharton_lab/competition/stress.py": "c0e4ebd27545219069578a08cab228f727ed84e04e08e66e1ccaa1713808f351",
+    "src/wharton_lab/models/m11/model.py": "191533cd656e4afa4f88f32864be8dd6c4e83eb051a9abbe446be45feed83508",
+    "src/wharton_lab/models/m11/config.py": "a2628770c8a60f9d51b089c4fde115ddfeacf3142efbabb5d826c221de63fa89"
+  },
+  "allocation": {
+    "verification_commands": 3,
+    "per_command_timeout_seconds": 30,
+    "total_child_command_wall_seconds": 90,
+    "max_new_test_cases": 20,
+    "planned_new_test_cases": 18,
+    "optimizer_calls": 0,
+    "training_steps": 0,
+    "retained_generated_fixture_commands": 1,
+    "paid_calls": 0,
+    "protected_runs": 0
+  },
+  "plan": [
+    "new regressions against unchanged runtime source",
+    "new plus relevant inherited numerical/evidence regressions; no optimizer tests",
+    "one retained generated fixture after independent source review"
+  ],
+  "stop": "no silent retries; retain every failure; close at sufficient verification or allocated limit",
+  "prior_budgets": "unchanged; no previous session reopened",
+  "source_control": "selective authenticated snapshot; full remote parent leaves retained in publication",
+  "materialization_issue": "Initial overlarge tool argument was rejected before process creation; split materialization then verified exact Git blobs. No test or scientific command occurred."
+}

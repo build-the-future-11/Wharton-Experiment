@@ -41,6 +41,49 @@
       "scientific_runs_performed": false,
       "protected_evaluation_performed": false,
       "remaining_gate": "Separately freeze a prospective scientific comparison before any new evaluation"
+    },
+    "m11_v2_midpoint_20261010": {
+      "status": "CLOSED_OPT_IN_ENGINEERING_VERIFIED; PROSPECTIVE_STUDY_NOT_RUN",
+      "contract": "research/development/m11_v2_midpoint_20261010/contract.json",
+      "protocol": "protocol/M11_V2_MIDPOINT_AMENDMENT_20261010.md",
+      "source_parent": "8dd558b6c90e96f990dbe2e63777498ad4d7f8e0",
+      "incoming_canonical_snapshot": "research/development/m11_v2_midpoint_20261010/incoming/EXECUTION_STATE.json.snapshot",
+      "scientific_runs_performed": false,
+      "protected_evaluation_performed": false,
+      "budget": {
+        "verification_commands": 3,
+        "per_command_timeout_seconds": 30,
+        "total_child_command_wall_seconds": 90,
+        "max_new_test_cases": 20,
+        "planned_new_test_cases": 18,
+        "optimizer_calls": 0,
+        "training_steps": 0,
+        "retained_generated_fixture_commands": 1,
+        "paid_calls": 0,
+        "protected_runs": 0
+      },
+      "closure": "research/development/m11_v2_midpoint_20261010/closure.json",
+      "closure_sha256": "b7345ca9b42deabd18aae02bb596f1e6064edfb0d3feb5d45c7fb5f6e4087882",
+      "source_sha256": "a298c650dae52c9885b08d5531ae973d9912fffd978678a5fe5dd7bbd227df01",
+      "validation": "61 selected tests passed:18 new plus43 inherited;3 optimizer cases deselected. One actual5-scenario/2-period cash-only fixture; no optimizer.",
+      "budget_used": {
+        "commands_used": 3,
+        "commands_limit": 3,
+        "child_command_wall_seconds": 21.57661474397173,
+        "wall_seconds_limit": 90,
+        "all_commands_within_30_seconds": true,
+        "new_cases": 18,
+        "new_cases_limit": 20,
+        "fixtures": 1,
+        "optimizer_calls": 0,
+        "training_steps": 0,
+        "paid_calls": 0,
+        "protected_evaluations": 0,
+        "closed_predecessor_budgets_changed": false,
+        "unused_seconds_retired": 68.42338525602827
+      },
+      "failures_retained": true,
+      "remaining_gate": "A separately defined and frozen prospective scientific protocol is still required before hypothesis testing. No protected evaluation performed."
     }
   },
   "astra_finish": {
@@ -53,5 +96,81 @@
     "tests": "60_passed",
     "submission": "BLOCKED",
     "authoritative_status": "STATUS.md"
-  }
+  },
+  "engineering_session_history": [
+    {
+      "timestamp": "2026-10-10T10:37:20.083826+00:00",
+      "type": "prospective_engineering_session",
+      "session": "m11_v2_midpoint_20261010",
+      "contract": "research/development/m11_v2_midpoint_20261010/contract.json",
+      "specification": "protocol/M11_V2_MIDPOINT_AMENDMENT_20261010.md",
+      "source_parent": "8dd558b6c90e96f990dbe2e63777498ad4d7f8e0",
+      "incoming_canonical_snapshot": "research/development/m11_v2_midpoint_20261010/incoming/EXECUTION_STATE.json.snapshot",
+      "new_scientific_evidence": false,
+      "budget": {
+        "verification_commands": 3,
+        "per_command_timeout_seconds": 30,
+        "total_child_command_wall_seconds": 90,
+        "max_new_test_cases": 20,
+        "planned_new_test_cases": 18,
+        "optimizer_calls": 0,
+        "training_steps": 0,
+        "retained_generated_fixture_commands": 1,
+        "paid_calls": 0,
+        "protected_runs": 0
+      }
+    },
+    {
+      "type": "engineering_session_closed",
+      "timestamp": "2026-10-10T10:50:39.233701+00:00",
+      "session": "m11_v2_midpoint_20261010",
+      "record": "research/development/m11_v2_midpoint_20261010/closure.json",
+      "record_sha256": "b7345ca9b42deabd18aae02bb596f1e6064edfb0d3feb5d45c7fb5f6e4087882",
+      "status": "CLOSED_ENGINEERING_VERIFIED",
+      "source_parent": "8dd558b6c90e96f990dbe2e63777498ad4d7f8e0",
+      "source_sha256": {
+        "src/wharton_lab/models/m11/mpc_v2.py": "a298c650dae52c9885b08d5531ae973d9912fffd978678a5fe5dd7bbd227df01",
+        "tests/unit/test_m11_v2_midpoint.py": "94c8063b943d553ca8d009b53efd776dd625899f8a30d5df01ccd73d944b8369"
+      },
+      "verification": {
+        "passed": 61,
+        "new_cases": 18,
+        "inherited_cases": 43,
+        "deselected": 3,
+        "warnings_as_errors": true,
+        "scope": "selected generated CPU cases; no full repository/scientific matrix qualification"
+      },
+      "budget": {
+        "commands_used": 3,
+        "commands_limit": 3,
+        "child_command_wall_seconds": 21.57661474397173,
+        "wall_seconds_limit": 90,
+        "all_commands_within_30_seconds": true,
+        "new_cases": 18,
+        "new_cases_limit": 20,
+        "fixtures": 1,
+        "optimizer_calls": 0,
+        "training_steps": 0,
+        "paid_calls": 0,
+        "protected_evaluations": 0,
+        "closed_predecessor_budgets_changed": false,
+        "unused_seconds_retired": 68.42338525602827
+      },
+      "new_scientific_evidence": false,
+      "failures_retained": true
+    }
+  ],
+  "engineering_failures": [
+    {
+      "stage": "source_materialization",
+      "description": "Initial combined tool payload exceeded exec argument size; rejected before process creation. Chunked exact-blob materialization succeeded.",
+      "numerical_execution": false
+    },
+    {
+      "stage": "baseline_collection",
+      "description": "Selective snapshot lacked eagerly imported wharton_lab.models.base. The error is retained; all117 exact-parent Python source files were then materialized before the final gate. No baseline retry.",
+      "verification_command_consumed": 1,
+      "optimizer_calls": 0
+    }
+  ]
 }
