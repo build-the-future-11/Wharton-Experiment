@@ -1,0 +1,139 @@
+"""Existing M11-v2 cash equations at a finite large binary64 scale."""
+from __future__ import annotations
+
+from fractions import Fraction
+import hashlib
+import json
+import math
+from pathlib import Path
+
+import numpy as np
+import pytest
+
+from wharton_lab.competition.stress import rebalance as frozen_rebalance
+from wharton_lab.models.m11.mpc import PortfolioState
+from wharton_lab.models.m11 import mpc_v2
+
+
+def _ledger(holdings, cash, weights, cost_bps=0):
+    return mpc_v2.simulate_cash_ledger_v2(
+        state=PortfolioState(np.asarray(holdings), cash),
+        scenario_returns=np.zeros((1, 1, len(holdings))),
+        obligations=np.zeros(1), weights=np.asarray([weights]), cost_bps=cost_bps,
+    )
+
+
+def _close_ulp(actual, exact, ulps=4):
+    expected = float(exact)
+    assert math.isfinite(actual)
+    assert abs(actual - expected) <= ulps * math.ulp(expected)
+
+
+@pytest.mark.parametrize("cash", [1e308, 1.6e308, np.finfo(float).max])
+def test_cash_only_large_wealth_remains_exact_and_finite(cash):
+    with np.errstate(over="raise", invalid="raise"):
+        result = _ledger([0.0], cash, [0.0])
+    assert result.cash[0, 0] == result.wealth[0, 0] == cash
+    for name in ("holdings", "payments", "arrears", "fees", "turnover", "asset_gains"):
+        assert not np.any(getattr(result, name))
+
+
+@pytest.mark.parametrize("cost_bps", [0, 25, 100])
+def test_large_buy_satisfies_independent_fixed_point_and_fee_oracle(cost_bps):
+    cash, weight = 1e308, 0.5
+    with np.errstate(over="raise", invalid="raise"):
+        result = _ledger([0.0], cash, [weight], cost_bps)
+    rate = Fraction(cost_bps / 10000)
+    after = Fraction(cash) / (1 + rate * Fraction(weight))
+    target = Fraction(weight) * after
+    fee = rate * target
+    _close_ulp(result.holdings[0, 0, 0], target)
+    _close_ulp(result.turnover[0, 0], target)
+    _close_ulp(result.fees[0, 0], fee)
+    _close_ulp(result.cash[0, 0], Fraction(cash) - target - fee)
+    _close_ulp(result.wealth[0, 0], after)
+
+
+@pytest.mark.parametrize("cost_bps", [25, 100])
+def test_large_sell_retains_actual_notional_fees_and_cash(cost_bps):
+    held = 1e308
+    with np.errstate(over="raise", invalid="raise"):
+        result = _ledger([held], 0.0, [0.0], cost_bps)
+    fee = Fraction(cost_bps / 10000) * Fraction(held)
+    assert result.holdings[0, 0, 0] == 0
+    assert result.turnover[0, 0] == held
+    _close_ulp(result.fees[0, 0], fee)
+    _close_ulp(result.cash[0, 0], Fraction(held) - fee)
+
+
+def test_large_two_asset_purchase_retains_cash_reserve_and_total_fee():
+    cash = 1e308
+    weights = [0.25, 0.5]
+    with np.errstate(over="raise", invalid="raise"):
+        result = _ledger([0.0, 0.0], cash, weights, 100)
+    rate = Fraction(100 / 10000)
+    exposure = sum(map(Fraction, weights))
+    after = Fraction(cash) / (1 + rate * exposure)
+    for i, weight in enumerate(weights):
+        _close_ulp(result.holdings[0, 0, i], Fraction(weight) * after)
+    _close_ulp(result.cash[0, 0], (1 - exposure) * after, ulps=8)
+    _close_ulp(result.fees[0, 0], rate * exposure * after)
+    _close_ulp(result.wealth[0, 0], after)
+
+
+@pytest.mark.parametrize("holdings,cash,weights,cost_bps", [
+    ([0.0, 0.0], 1.0, [0.2, 0.3], 5),
+    ([0.7, 0.2], 0.1, [0.1, 0.6], 25),
+    ([50.0, 50.0], 0.0, [0.5, 0.5], 100),
+    ([0.0], 4e307, [0.5], 50),
+])
+def test_finite_ordinary_midpoint_path_matches_frozen_rebalance_bitwise(holdings, cash, weights, cost_bps):
+    expected_h, expected_c, expected_f, expected_t = frozen_rebalance(holdings, cash, weights, cost_bps)
+    result = _ledger(holdings, cash, weights, cost_bps)
+    np.testing.assert_array_equal(result.holdings[0, 0], expected_h)
+    assert result.cash[0, 0] == expected_c
+    assert result.fees[0, 0] == expected_f
+    assert result.turnover[0, 0] == expected_t
+
+
+@pytest.mark.parametrize("reward", [0.0, 0.5])
+def test_large_cash_only_solver_uses_declared_objective_without_optimizer(monkeypatch, reward):
+    monkeypatch.setattr(mpc_v2, "minimize", lambda *a, **kw: pytest.fail("cash-only entered optimizer"))
+    with np.errstate(over="raise", invalid="raise"):
+        result = mpc_v2.solve_mpc_v2(
+            state=PortfolioState(np.zeros(1), 1e308),
+            scenario_returns=np.zeros((5, 2, 1)), obligations=np.array([1e307, 2e307]),
+            min_cash_buffer=1, terminal_wealth_weight=reward, tcost_bps=100,
+        )
+    assert result.success
+    # The ledger keeps its sequential binary64 subtractions. Compare with the
+    # exact equation within the contract's rounding tolerance, not exact bits.
+    exact_terminal = Fraction(1e308) - Fraction(1e307) - Fraction(2e307)
+    _close_ulp(result.objective, -Fraction(reward) * exact_terminal, ulps=2)
+    expected = [float(Fraction(1e308) - Fraction(1e307)),
+                float(Fraction(1e308) - Fraction(1e307) - Fraction(2e307))]
+    np.testing.assert_allclose(result.ledger.cash, np.tile(expected, (5, 1)), rtol=2e-16)
+    np.testing.assert_array_equal(result.ledger.payments, np.tile([1e307, 2e307], (5, 1)))
+    assert not np.any(result.ledger.arrears)
+
+
+def test_frozen_competition_legacy_model_and_config_sources_are_unchanged():
+    contract = json.loads(Path("research/development/m11_v2_midpoint_20261010/contract.json").read_text())
+    for path, expected in contract["frozen_sources_sha256"].items():
+        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == expected
+
+
+def test_genuinely_nonfinite_ledger_does_not_become_success():
+    with np.errstate(over="ignore", invalid="ignore"):
+        with pytest.raises(ArithmeticError, match="non-finite cash ledger"):
+            mpc_v2.simulate_cash_ledger_v2(
+                state=PortfolioState(np.array([1e308]), 0.0),
+                scenario_returns=np.array([[[10.0]]]), obligations=np.zeros(1),
+                weights=np.ones((1, 1)),
+            )
+
+
+def test_frozen_high_wealth_failure_is_preserved_and_not_reinterpreted():
+    with np.errstate(over="ignore", invalid="ignore"):
+        held, cash, fee, turnover = frozen_rebalance([0.0], 1e308, [0.0], 0)
+    assert not all(np.isfinite(value).all() for value in (held, cash, fee, turnover))

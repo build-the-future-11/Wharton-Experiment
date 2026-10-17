@@ -1,0 +1,18 @@
+
+==================================== ERRORS ====================================
+_____________ ERROR collecting tests/unit/test_m11_v2_midpoint.py ______________
+ImportError while importing test module '/workspace/scratch/2a0c1e6ddd92/continuation-extra-1032/Wharton-Experiment/tests/unit/test_m11_v2_midpoint.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_m11_v2_midpoint.py:14: in <module>
+    from wharton_lab.models.m11.mpc import PortfolioState
+src/wharton_lab/models/__init__.py:3: in <module>
+    from wharton_lab.models.base import BaseModel
+E   ModuleNotFoundError: No module named 'wharton_lab.models.base'
+=========================== short test summary info ============================
+ERROR tests/unit/test_m11_v2_midpoint.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.49s

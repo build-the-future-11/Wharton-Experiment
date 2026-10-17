@@ -1,0 +1,57 @@
+{
+  "updated_at": "2026-10-10T04:49:56+00:00",
+  "code_commit_for_repaired_run": "2b146663bd2efca373d3b5f93ee3f2a4018ff8ed",
+  "matrix": {
+    "smoke": 34,
+    "pilot": 187,
+    "overnight": 360,
+    "full": 600,
+    "status": "LEAKAGE_CONTAMINATED (D-050..D-052)"
+  },
+  "lockbox": "OPENED_ONCE; synthetic arm INVALID_LEAKAGE; ETF arm NEGATIVE",
+  "factorial": "INVALID (D-054)",
+  "multiplicity": "reports/evidence_bank/MULTIPLICITY_RESULTS.json (0/10 testable)",
+  "repaired_eval": "runs/repaired/REPAIRED_RESULTS.json (exploratory null vs historical mean)",
+  "selected_stack_recorded": [
+    "B_RIDGE",
+    "B_EWMA_COV"
+  ],
+  "recommended_stack": "Candidate strategic allocation / reserve process; EWMA monitoring unvalidated; no return forecast selected",
+  "ips_draft_pdf": "output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf",
+  "tests": "60_passed",
+  "blocked": [
+    "COMPLETE_CLIENT_CASE",
+    "TRADING_RULES",
+    "TEAM_ELIGIBILITY",
+    "WINS_EXECUTIONS",
+    "FINAL_REPORT_INSTRUCTIONS",
+    "STUDENT_REVIEW",
+    "SUBMISSION_AUTH"
+  ],
+  "development_amendments": {
+    "m11_v2_objective_numerics_20261010": {
+      "status": "OPT_IN_IMPLEMENTATION_VERIFIED; PROSPECTIVE_STUDY_NOT_RUN",
+      "protocol": "protocol/M11_V2_ACCOUNTING_AMENDMENT_20261010.md",
+      "reviewed_parent_commit": "42e5aa0c7b9b2fdc5c4ab560aafefb8c30929b37",
+      "source": "src/wharton_lab/models/m11/mpc_v2.py",
+      "source_sha256": "81ebf89c490f652dc2dc3153ae05ae03256f20c20e20621584081eb529d53d1a",
+      "validation": "48 bounded controller/accounting tests passed; fictional fixtures only",
+      "verification_command": "PYTHONPATH=src python -m pytest tests/unit/test_m11_v2_objective_numerics.py tests/unit/test_m11_v2.py tests/unit/test_m11.py tests/unit/test_competition_stress.py -q",
+      "scope": "Finite prospective objective and exact fractional CVaR accumulation; preserved legacy model, evidence and conclusions",
+      "scientific_runs_performed": false,
+      "protected_evaluation_performed": false,
+      "remaining_gate": "Separately freeze a prospective scientific comparison before any new evaluation"
+    }
+  },
+  "astra_finish": {
+    "updated_at": "2026-09-27T04:59:41.494925+00:00",
+    "local_package": "COMPLETE_WITH_EXTERNAL_BLOCKERS",
+    "official_instruction_pdfs": "RECOVERED",
+    "case": "MISSING",
+    "stress_cells": 75,
+    "replayed_contrasts": 68,
+    "tests": "60_passed",
+    "submission": "BLOCKED",
+    "authoritative_status": "STATUS.md"
+  }
+}
