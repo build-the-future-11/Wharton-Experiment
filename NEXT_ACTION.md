@@ -1,3 +1,11 @@
+# Next research action - 19 October 2026
+
+Freeze one separately versioned falsification study of **M08 learned graph versus uniform off-diagonal mixing versus no edges**, retaining historical mean. Separate autoregressive-sign and volatility changes in a predeclared 2-by-2 synthetic design; match parameters, initialization and training budget. The learned-graph-minus-uniform contrast tests the mechanism, and a forecasting-value claim must also beat historical mean. Use fresh development seeds only after the new protocol is written. This is a proposed successor, **not executed** and not a reopening of the closed study.
+
+The competition's separate documentary gate is the current organizer case PDF and genuine executed WInS notes/roster records. The current report does not invent or submit those records.
+
+## Preserved predecessor next-action record
+
 # Next action
 
 Local finishing is complete within the recorded scope; see ASTRA_FINAL_REPORT.md.

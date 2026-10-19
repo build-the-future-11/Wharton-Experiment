@@ -1,0 +1,23 @@
+{
+  "dependency_note": "Observed environment inventory, not a portable package lock or a claim these exact wheels are available on Kaggle.",
+  "identity_note": "The inherited upstream_sha identifies historical provenance; source_parent and frozen file hashes identify this execution.",
+  "matrix_source_fingerprint": "8369f937581a33d013e34815bdb663f0669ccac0e1268a926e641d3ec7318811",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0",
+    "torch": "2.14.0+cpu"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_parent": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+  "threads": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "upstream_sha": "8e3d790dd513a93b7d80d5726a8b2708e8615b71"
+}

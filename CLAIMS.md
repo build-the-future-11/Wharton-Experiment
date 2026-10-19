@@ -1,3 +1,9 @@
+# Current claim record - 19 October 2026
+
+The new development claims are mapped in [CLAIM_EVIDENCE.json](reports/integrity_20261019/CLAIM_EVIDENCE.json), with their exact scope and limitations. The current results support split/policy/data-clock/failure-preservation properties on executed fixtures and a reproducible synthetic workflow. They do not establish market alpha, novelty, client suitability, calibrated population tail risk, or model promotion. The zero-forecast portfolio is distinct from cash-only. Same-host replay is not independent replication.
+
+## Preserved predecessor claims
+
 # Claims and evidence
 
 The canonical claim map is `reports/competition_package/EVIDENCE_APPENDIX.md` (C01-C09).

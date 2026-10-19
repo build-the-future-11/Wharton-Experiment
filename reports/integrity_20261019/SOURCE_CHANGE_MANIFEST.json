@@ -1,0 +1,339 @@
+{
+  "repository": "build-the-future-11/Wharton-Experiment",
+  "branch": "research/wharton-integrity-20261019",
+  "parent_commit": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+  "parent_tree": "152351834b1eab78b2a1e91ec6a7f76400c4358a",
+  "files": [
+    {
+      "path": "CLAIMS.md",
+      "status": "modified",
+      "parent_git_blob_sha1": "06529ca87d9f2f5308df131c3723a18b84475051",
+      "git_blob_sha1": "08d426a1e636ee3c69effe838e8d5f3cdd45647a",
+      "sha256": "df2339d799f4941ace0dbeec444c8fdde74dcfc0b9a884ea9dbd801117703645",
+      "bytes": 1773
+    },
+    {
+      "path": "EXECUTION_STATE.json",
+      "status": "modified",
+      "parent_git_blob_sha1": "9f5e5714a5ee45cb77acd7cde1d3d85980ba5ab9",
+      "git_blob_sha1": "e13cd2f16b58a501d4a112e5694586a1cc44be4b",
+      "sha256": "bbc9a3c3c683d1d6d902d0455e4d5452c63e68178ba5ad1bcf06c2f4ec82642d",
+      "bytes": 3776
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "status": "modified",
+      "parent_git_blob_sha1": "62e390c6a8521ee01f01a1265ca044c57be3bb44",
+      "git_blob_sha1": "c9634f5498b7de7ba649f96b93190dc0e8bdcda0",
+      "sha256": "43a43efcac16d438168ecf7049cd62fe20e164d7395d4bc03a0191639ea869f7",
+      "bytes": 3406
+    },
+    {
+      "path": "NEXT_ACTION.md",
+      "status": "modified",
+      "parent_git_blob_sha1": "16a83397e15f99fae6ba55b287f55bd188a2c456",
+      "git_blob_sha1": "89336c9fde58b5b50cf9209b1ac1fb4ed845bb25",
+      "sha256": "df91a9c47e0e6a1d9aac929c2977ee9347a4156e50a35cdc68b703d5d2b6ef4a",
+      "bytes": 1924
+    },
+    {
+      "path": "RESEARCH_HANDOFF.md",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "5ba0cbd60ebe4c82027b2f6bd2100d96528dc381",
+      "sha256": "774f548cb19334baf9b7d2d3ee2bd7e8e3cc36ac75f5f824810c4453f690224a",
+      "bytes": 4815
+    },
+    {
+      "path": "STATUS.md",
+      "status": "modified",
+      "parent_git_blob_sha1": "43127325f185f42cb2a5093e44ad6984a86886ce",
+      "git_blob_sha1": "1e112f4c7169d5fb0ad13cf27aca933475a8cb9e",
+      "sha256": "6c418c5922fc54d6b598e4fbb2728a9350e9ec2fcb82c6b8b6894721dd63571a",
+      "bytes": 3193
+    },
+    {
+      "path": "literature/INTEGRITY_RELATED_WORK_20261019.md",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "f9fa00e4e36cdb396b5eb93df3afb7e321e73afe",
+      "sha256": "bfbaf737cba22dae9fbff1dd366da73b340c89da8d47cb2cc0d339346f3c4e0b",
+      "bytes": 11374
+    },
+    {
+      "path": "reports/integrity_20261019/CLAIM_EVIDENCE.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "1aa3bf8530dc0b37081b6b440c716d009feb804b",
+      "sha256": "1304f6fd832b0c7784b37fdd92c119c709ee570e64df7d846ba32f61bac22abb",
+      "bytes": 4189
+    },
+    {
+      "path": "reports/integrity_20261019/ENVIRONMENT_OBSERVED.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "29418cc1b779014270bd331fed6be334c0c1bbc3",
+      "sha256": "8445f097481422f2e75bed018f6460e53fdf3e33fe97e56c4b296d4ff34c3c34",
+      "bytes": 933
+    },
+    {
+      "path": "reports/integrity_20261019/REPRODUCTION.md",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "4d533bbd6f4159ed1b22340d33eba70afadc7062",
+      "sha256": "4a4816e1fed76f0035bdf2fd8697e5f22a77bc9a65a28dea63c1cf57255de19b",
+      "bytes": 10209
+    },
+    {
+      "path": "reports/integrity_20261019/RESULTS.md",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "dceedd824189caa9e862f721388f1f01cf60e72a",
+      "sha256": "0c30146fcad19e170a1e296e2a493ff7eda0a1058f483249a28df0c0425285d2",
+      "bytes": 17714
+    },
+    {
+      "path": "reports/integrity_20261019/VERIFICATION.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "e27d1aaedde0d1a89c6d4677ac8f887c68a64146",
+      "sha256": "f8494b9863ac69db0959ee7c0d85ed3e4197b9e9389b9255c9870317912e67e9",
+      "bytes": 13754
+    },
+    {
+      "path": "reports/integrity_20261019/demo_forecast_metrics.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "33df232487d899d951074c3fbe532ec784629794",
+      "sha256": "2050d38432f14a082ed5deb408aebfbcab165048117f91351293bf1095fa28fd",
+      "bytes": 155
+    },
+    {
+      "path": "reports/integrity_20261019/demo_portfolio_metrics.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "efa3788882632022f318e1944b8be716e4d27bed",
+      "sha256": "eb37a2044f7949701b8741725bd8ee674f89f8c3d980a4047cdf9d25fda0a2ad",
+      "bytes": 961
+    },
+    {
+      "path": "reports/integrity_20261019/matrix_paired_seeds.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "30e9e3439536b7ad48c7f532b656e84c036419f2",
+      "sha256": "c8dcebd5c8011eeb2db9336bbec5192c562994a816afee28b80bfddb92aef1c8",
+      "bytes": 26926
+    },
+    {
+      "path": "reports/integrity_20261019/matrix_paired_summary.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "d9136f4f0b2be333b3d0c5320820761ab6d8f182",
+      "sha256": "8bce9bc21543ae8316b6c0e049f88650b715bd9a6da919b48e48e719ebb49cfa",
+      "bytes": 28931
+    },
+    {
+      "path": "reports/integrity_20261019/secondary_baseline_seeds.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "3b566570f966aca63c51282ad7060e9e91574080",
+      "sha256": "b1d217f2c7c74fed3aa5bd334943f6008137169732fea3ae9d46faf6bab4f792",
+      "bytes": 45730
+    },
+    {
+      "path": "reports/integrity_20261019/secondary_baseline_summary.csv",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "080455a795a4eae8b20f9f092bc929ec83418e9e",
+      "sha256": "267906ba8581dc9ca5e030a98a225da71ef391b4c399f5690f64e7a57d9da9ee",
+      "bytes": 20759
+    },
+    {
+      "path": "research/DEVELOPMENT_RESEARCH_SPEC_20261019.md",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "541e39aab6aa8e585ae96c631210e5cc83234312",
+      "sha256": "31cf6e030e8ad4deadaf73d37c0e9e3ed167051534f3fced16f0bdeacc020adf",
+      "bytes": 20100
+    },
+    {
+      "path": "research/SOURCE_MAP_20261019.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "edfc5735df0347aa047d3ee0e177efc7e2be21e3",
+      "sha256": "bab10a902272672dcfe02eb93d3cbfd2664a3f887b48d695d9a58ad5fb49af2e",
+      "bytes": 3641
+    },
+    {
+      "path": "research/development/integrity_20261019/contract.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "ea62c6e65f8a8895e2369290b3217ef411fe5064",
+      "sha256": "30f46fd480f9099b3b1f026f5e6471d0898e19ac0b21545ccb83471caa3f9885",
+      "bytes": 1936
+    },
+    {
+      "path": "research/development/integrity_20261019/development_matrix.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "a6ba5fa978b959047d677b7589ea5b4685612d77",
+      "sha256": "0b1f279de40a0efb0523167cd818a38bf9d3442090d70f2d5961d629c8efd11e",
+      "bytes": 4028
+    },
+    {
+      "path": "research/development/integrity_20261019/matrix_source_freeze.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "e54fdc8cceae8bc9aa554bb6dc2a0b6fa7ea63e5",
+      "sha256": "645b44ad9ceba23d3d5fff7fa6e38fb5e5f76e252c51e3d589bee68fd878eef7",
+      "bytes": 14288
+    },
+    {
+      "path": "research/development/integrity_20261019/reporting_amendment.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "f9e308d8f5ed7a3902e0251ab129283c74efb13b",
+      "sha256": "28d4cceeb635291281e80ec60399b05c3613e0bfc29111216f7aa84af06f78cb",
+      "bytes": 1372
+    },
+    {
+      "path": "research/development/integrity_20261019/resource_amendment.json",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "c8ee9b7a3c5c51cc484c9db31d97b2a2ed103572",
+      "sha256": "0d42e63e937278d6de484394f2f506b6e0ed6b1f077ab0dfee6d616d5ed40348",
+      "bytes": 3132
+    },
+    {
+      "path": "scripts/analyze_integrity_development.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "15e106c7654fa7d7e256cddcc8c0916c99983577",
+      "sha256": "538d0a65697d0424bcdb8a13ff6109e88580e01e10991d98463a3768f319d6b6",
+      "bytes": 44774
+    },
+    {
+      "path": "scripts/record_validation.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "9d6434586996eafd80be718f5fa6c1c9c7301954",
+      "sha256": "f42c22e6af3450d28b53bf678b57558ee0104c5aa2676e737d9e6b4478e343cd",
+      "bytes": 3680
+    },
+    {
+      "path": "scripts/run_development_demo.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "6eb47f5d1c73ffd6f74370f47644085d60df66e9",
+      "sha256": "af2fbf55e808203b051d1bf470cdaf7b72f259399c7407ca17ed41b2ecb178ad",
+      "bytes": 938
+    },
+    {
+      "path": "scripts/run_integrity_kaggle.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "766b5c7c350db8c63b543e97130da54b035041bf",
+      "sha256": "49abbf954fffde146a8aee1b5d4bbad0cc737b1cf5b13b008ecc136bd61d980c",
+      "bytes": 24054
+    },
+    {
+      "path": "src/wharton_lab/data/point_in_time.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "9a4df0f717fbb96771b794b8b4ad4c6846a66e2b",
+      "sha256": "e49c9e3a4fffaa1c1ed1b32af0099275dd1431fbdacd5a368734363436397f17",
+      "bytes": 11317
+    },
+    {
+      "path": "src/wharton_lab/models/__init__.py",
+      "status": "modified",
+      "parent_git_blob_sha1": "eb3bc8ecd2b98e6072a854819ecb9eea03c4f10d",
+      "git_blob_sha1": "0d70b940c536875594ad8c0fc7162915f67ebf10",
+      "sha256": "7568baf034e264af6f6745c796e5984e98d569fd3661cfda772fdb2a8bee6673",
+      "bytes": 1052
+    },
+    {
+      "path": "src/wharton_lab/models/m11/mpc_verified.py",
+      "status": "modified",
+      "parent_git_blob_sha1": "14f84dd51de86598cca5a0963232b4677ba4da67",
+      "git_blob_sha1": "b44d572435c31839d281524c8396df27ab007ef8",
+      "sha256": "a0324958ab6551f12abf2e0e9c32a68f64913d9a4076f245be7842ba236ba5b8",
+      "bytes": 6888
+    },
+    {
+      "path": "src/wharton_lab/research/development_demo.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "7be67907ac8100f31e41ec3d355953b60b809b53",
+      "sha256": "1704ab0108deb123aeb9f130c3800bbaab85293eb256e01d2a32619cd8063b5e",
+      "bytes": 28520
+    },
+    {
+      "path": "src/wharton_lab/splits/walk_forward.py",
+      "status": "modified",
+      "parent_git_blob_sha1": "712a12d137d195b2cb3ead3247312bbc45f1e835",
+      "git_blob_sha1": "e7d85f1c5355bcd0aa90164599b09b183c07a81d",
+      "sha256": "f9c1bc223407475380d3fed2031dbd8449c70232e35f3096767d50d451d8e29b",
+      "bytes": 3754
+    },
+    {
+      "path": "tests/test_kaggle_driver_contract.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "95ef5caa02be58d2fa0a217c83cb8a6da64d096e",
+      "sha256": "16daa667f788acab009df7e2da8534d8960e2749bac8104e52f463dea55ade6a",
+      "bytes": 10561
+    },
+    {
+      "path": "tests/unit/test_development_demo.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "911bea8861a4a5d3676222b44bcf59ccf5b57be9",
+      "sha256": "530e6591ba715194d8d0f4528edfb2e88b1248776ee3c115a6288f1758b71a07",
+      "bytes": 7835
+    },
+    {
+      "path": "tests/unit/test_mpc_policy_contract.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "8e7573a81226652314ee2796a3391aeebbf8c91b",
+      "sha256": "6c87a1dad5ad9259f52b9e025b90874cea6c0a47c87f8d14b9bf077419d60e03",
+      "bytes": 7219
+    },
+    {
+      "path": "tests/unit/test_numerical_gradients.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "f2aede580b3dc296e0f19be171816b81f4ce82e6",
+      "sha256": "f3794f5ce283150ef828ffddb023f144ba5de4aeeedb8371336e17cc010ec0ba",
+      "bytes": 2707
+    },
+    {
+      "path": "tests/unit/test_optional_model_imports.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "ff2abb8a1d34707c89151f295ce94e5f57ab4573",
+      "sha256": "015728c892a82bf1dc7f6308643c85c23aa245dfdd9dd89965b83352d70ce09e",
+      "bytes": 1388
+    },
+    {
+      "path": "tests/unit/test_point_in_time.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "4500046f47451a41a6a9e202d4d7162fc47cba90",
+      "sha256": "f13f06e0eb292b777ebadd3b3da7a93977effbd635e63c4793966172342df99d",
+      "bytes": 10581
+    },
+    {
+      "path": "tests/unit/test_split_boundaries.py",
+      "status": "new",
+      "parent_git_blob_sha1": null,
+      "git_blob_sha1": "c05a5f64808adc9397b24673562f301ea390eeb8",
+      "sha256": "8b85593a3744647dae8d5593eea06aa5442dcab3914a160fe0040955e70f7055",
+      "bytes": 4232
+    }
+  ],
+  "self_hash_omitted": true,
+  "unchanged_history": "Base Git tree preserves every parent path; no deletion, rewrite, default merge, or workflow change.",
+  "source_snapshot": "201 original files checked against Git blob SHA1 before edits; transient bytecode and environments excluded."
+}

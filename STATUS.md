@@ -1,3 +1,15 @@
+# Current status - 19 October 2026
+
+The bounded integrity study is complete. The predeclared primary matrix completed **288/288 cells with zero cell failures**, and the declared **24-cell** same-host subset replayed exactly. All 336 cell executions (including 24 preflight and 24 replay) passed score verification. Engineering properties are supported within the tested fixtures; synthetic model characterization is **MIXED**, with **no model promotion**. Several apparent gains fail against simpler retained controls.
+
+Read [EXECUTION_STATE.json](EXECUTION_STATE.json) and [RESEARCH_HANDOFF.md](RESEARCH_HANDOFF.md) before future work. The current report is [RESULTS.md](reports/integrity_20261019/RESULTS.md). Exact source, tests, resources, receipts, and interpretation are linked there. This is a separate development generation on `research/wharton-integrity-20261019`, based on `fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c`.
+
+The private case working copy and current public requirements were recovered; organizer version matching and actual team/WInS records remain unresolved. No authenticated Kaggle job, protected confirmation, market evaluation, trade, or submission is claimed.
+
+## Preserved 27 September snapshot
+
+The following text retains its historical date and scope. Statements about missing files, test counts, controller defects and unperformed matrix work are predecessor observations, not overrides of the dated current record.
+
 # Status - 2026-09-27
 
 | Dimension | State | Evidence / next gate |

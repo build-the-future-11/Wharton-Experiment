@@ -1,0 +1,25 @@
+{
+  "version": "secondary-control-reporting-20261019-v2",
+  "recorded_utc": "2026-10-19T14:03:48.396942+00:00",
+  "stage": "after all frozen development runs and first analysis; before corrected analysis",
+  "observation": "The first analysis summarized primary and ablation contrasts but omitted already retained simpler secondary controls. Several apparent improvements over the named comparator do not survive these controls.",
+  "change": "Independently re-score all saved secondary-control predictions for M01-M10 and M12; independently reduce saved equal-weight path losses for M11 with the narrower scope explicit. Add all 156 seed/control rows and 52 model/world/control summaries.",
+  "unchanged": [
+    "models",
+    "model source",
+    "datasets",
+    "seeds",
+    "hyperparameters",
+    "primary endpoints",
+    "ablation contrasts",
+    "independent-unit definition",
+    "budget",
+    "stopping rule"
+  ],
+  "additional_fits": 0,
+  "prior_analysis_preserved": "analysis/",
+  "corrected_analysis_destination": "analysis_v2/",
+  "prior_analysis_sha256": "97ee8ea087b239cb7bb26d6a9667d49865c0ad427fec47a191360af0733d943b",
+  "analysis_script_sha256": "538d0a65697d0424bcdb8a13ff6109e88580e01e10991d98463a3768f319d6b6",
+  "interpretation": "Reporting completeness amendment; exploratory development evidence only. No model promotion or new success criterion."
+}

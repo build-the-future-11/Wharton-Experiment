@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-10-19T13:48:17.788202+00:00",
+  "source_lines": [
+    {
+      "role": "primary development destination",
+      "repository": "build-the-future-11/Wharton-Experiment",
+      "development_branch": "research/wharton-integrity-20261019",
+      "parent_ref": "research/portfolio-verification-2026-09-29",
+      "parent_commit": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+      "historical_repaired_commit": "c72c46232719b5fd144fa992f5f605ea00e8923f",
+      "main_commit": "eb046213280edad62ab4db3bb348d5a3b38b3d76",
+      "common_ancestor_with_main": "8e3d790dd513a93b7d80d5726a8b2708e8615b71",
+      "ancestry": "Main is 7 commits ahead and 9 behind the repaired parent. The repaired parent is 2 commits ahead of historical c72. Preserve both lines and their distinct model generations.",
+      "entrypoint": "scripts/run_portfolio_research.py",
+      "fresh_development_entrypoint": "scripts/run_development_demo.py",
+      "model_registry": "src/wharton_lab/models/m01..m12",
+      "scope": "Working repaired task adapters and portfolio accounting plus current development integrity repairs. Model labels do not establish novelty or a complete integrated financial architecture."
+    },
+    {
+      "role": "separate read-only public prototype",
+      "repository": "build-the-future-11/Wharton-GYIC-Model-Stochastic-Engram-Reservoir-JEPA-for-Regime-Aware-Financial-Forecasting",
+      "main_commit": "4e11e7e87a6ded4a082b5c4b2a62a3d0b98e5b3e",
+      "main_contents": "LICENSE and README only",
+      "most_complete_observed_branch": "codex/frem-economic-spec-proposed-20261011",
+      "most_complete_observed_commit": "a6d9f3dc2c07b801a8425866b9d8ac63e51d8bfa",
+      "csv_admission_commit": "52cb26d582d2529af85a1fb7ce00ab1b89d47b03",
+      "prs": "Pull requests 1-5 were closed unmerged on 16 October 2026; no open pull request was found during the source audit.",
+      "entrypoints": [
+        "frem/benchmark.py",
+        "frem/component_audit.py"
+      ],
+      "implemented": [
+        "Fourier summaries",
+        "Fixed 12-dimensional tanh recurrent reservoir with spectral scaling 0.75, reset for each window",
+        "Optional small JEPA-style context encoder and EMA target, hidden dimension 24 and latent dimension 8",
+        "Nine-bin sign-bigram histogram",
+        "Deterministic Ridge point readout",
+        "Chronological CSV admission and component experiment scripts"
+      ],
+      "not_established_in_this_public_source": [
+        "Engram episodic retrieval and gate",
+        "XGBoost readout",
+        "Stochastic prediction or calibrated uncertainty head",
+        "Coupled JEPA-to-reservoir training pipeline",
+        "Regime gate",
+        "Portfolio economic ledger",
+        "Market alpha"
+      ],
+      "scope_caution": "Private FREM work has a separate, unverified source identity; this public inventory does not characterize private runtime completeness."
+    }
+  ],
+  "execution_identity": {
+    "local_worktree": "partial source snapshot, not a local Git clone",
+    "recovered_files": 201,
+    "validation": "each recovered byte sequence matched its source Git blob SHA1 before editing",
+    "writer": "root sole remote writer on the new primary branch; delegated edits assigned disjoint files"
+  },
+  "history_preserved": [
+    "Withdrawn leaked synthetic win",
+    "Invalid 1,181-cell legacy matrix",
+    "Original lockbox opened on 26 September and therefore spent",
+    "M04 historical negative studies",
+    "M11 v1 rejection and narrower subsequent engineering status",
+    "Closed main-branch development amendments",
+    "Existing frozen protocols and results"
+  ]
+}
