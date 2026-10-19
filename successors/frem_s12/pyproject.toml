@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "frem-s12"
-version = "0.1.4"
+version = "0.1.5"
 description = "Causal multiscale memory-router research with reproducible campaign execution"
 requires-python = ">=3.12,<3.14"
 dependencies = [
@@ -23,7 +23,7 @@ quality = ["pytest==8.4.2", "ruff==0.17.0", "mypy>=1.19,<2"]
 where = ["src"]
 
 [tool.setuptools.package-data]
-frem_s12 = ["py.typed", "protocol_p0.json", "protocol_p0_v3.json", "protocol_p0_v4.json", "protocol_p0_v5.json", "protocol_p0_v6.json", "protocol_p0_v7.json", "sources.json"]
+frem_s12 = ["py.typed", "protocol_p0.json", "protocol_p0_v3.json", "protocol_p0_v4.json", "protocol_p0_v5.json", "protocol_p0_v6.json", "protocol_p0_v7.json", "protocol_p0_v8.json", "sources.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

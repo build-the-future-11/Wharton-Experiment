@@ -185,3 +185,37 @@ and `--expected-mode qualify-kaggle`. Proceed only if
 scientific shards, separately close the documented cross-saved-version
 consumption-ledger reconciliation gap; a local claim directory alone is not a
 global one-use proof.
+
+## P0v8 global saved-version and policy-reference amendment
+
+P0v8 prospectively supersedes P0v7 before any P0v7 upload, archive acquisition,
+market outcome, scientific cell, or protected outcome. It preserves the model,
+144/120 cell registries, controls, thresholds, inference and budgets. The
+amendment adds two engineering contracts: (1) a complete external Kaggle
+saved-version ledger must be audited for unique search/fixed claims before any
+scientific cell is admissible, and (2) the optimized secondary policy selector
+must equal a retained scalar reference selector.
+
+The fixed-epoch v0.1.5 wheel is
+`frem_s12-0.1.5-py3-none-any.whl`, SHA-256
+`052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba`
+(59,908 bytes); two independent fixed-epoch builds were byte-identical. Its
+notebook SHA-256 is
+`419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8`,
+the P0v8 protocol SHA-256 is
+`1a5ae9db14076255dbf71ff18bf54e91c41f8d6bde7266c0902e6c62eca8f5a2`,
+and the source identity is
+`0bb6c77ee48d1eae34b5d15a9b7d2a66709b4dcf07b6c4315222a1b08cdbfb5d`.
+
+All 65 warning-strict tests pass, including randomized scalar-versus-vector
+policy equality and duplicate-ledger rejection. Source/test lint, formatting
+and strict typing pass. A fresh-target installation from the exact wheel
+reproduced the source identity. The retained ledger lists the two known prior
+Kaggle versions but has `complete: false`; the clean-wheel audit fails closed
+as intended. It does not confer a scientific admission.
+
+The next admissible action is to upload this exact private candidate, run a
+CPU-only, internet-disabled `qualify-kaggle` session, download and verify its
+complete bundle, then export a complete saved-version inventory and make
+`audit-saved-versions` pass. No official archive, scientific cell, market fit
+or protected outcome can be consumed before those gates pass.

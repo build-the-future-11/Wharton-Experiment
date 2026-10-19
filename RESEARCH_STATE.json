@@ -1,9 +1,9 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.1.4-s12-p0v7-ready",
+  "version": "0.1.5-s12-p0v8-ready",
   "created": "2026-10-10",
-  "updated": "2026-10-18",
-  "phase": "s12_p0v7_verified_kaggle_upload_pending_science_not_run",
+  "updated": "2026-10-19",
+  "phase": "s12_p0v8_verified_kaggle_upload_and_external_ledger_completion_pending_science_not_run",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -28,7 +28,7 @@
   },
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
-  "compute_authorized_this_session": "User requested another all-in pre-execution improvement pass. P0v7 was frozen prospectively as an end-to-end evidence-chain amendment before market access, locally verified and packaged as v0.1.4. It adds exact calendar and validation-control reconstruction, complete campaign inventories, acquisition-to-data receipt continuity, cross-seed outcome identity and semantic qualification reconstruction without changing models, cells, controls, thresholds, inference or budgets. Upload and Kaggle P0v7 qualification remain pending because Chrome local-file access is not enabled. Cross-saved-version consumption reconciliation must also close before scientific shards. No official data, market fit, scientific consumption or protected access occurred.",
+  "compute_authorized_this_session": "User requested completion of the actionable repair checklist. P0v8 was frozen prospectively before market access, locally verified and packaged as v0.1.5. It adds a complete external saved-version ledger audit and scalar-reference policy-selector contract without changing models, cells, controls, thresholds, inference or budgets. Kaggle P0v8 upload and qualification remain pending; the retained external ledger is truthfully incomplete and fails closed. No official data, market fit, scientific consumption or protected access occurred.",
   "development_budget_proposed": {
     "max_trials": 24,
     "max_wall_clock_hours": 12,
@@ -66,14 +66,14 @@
     "next_gate": "Fresh passing exact-source host receipt, then declared archive acquisition, runtime verification, data admission and one development consumption"
   },
   "frem_s12": {
-    "status": "P0V7_ENGINEERING_VERIFIED_KAGGLE_UPLOAD_PENDING_SCIENCE_NOT_RUN",
+    "status": "P0V8_ENGINEERING_VERIFIED_EXTERNAL_LEDGER_AND_KAGGLE_QUALIFICATION_PENDING_SCIENCE_NOT_RUN",
     "relationship": "Distinct successor; S8-S11 are not reopened and S11 remains an unconsumed mandatory control",
     "base_protocol": "successors/frem_s12/src/frem_s12/protocol_p0.json",
     "preserved_protocol_v3": "successors/frem_s12/src/frem_s12/protocol_p0_v3.json",
     "preserved_protocol_v4": "successors/frem_s12/src/frem_s12/protocol_p0_v4.json",
     "preserved_protocol_v5": "successors/frem_s12/src/frem_s12/protocol_p0_v5.json",
     "preserved_protocol_v6": "successors/frem_s12/src/frem_s12/protocol_p0_v6.json",
-    "protocol": "successors/frem_s12/src/frem_s12/protocol_p0_v7.json",
+    "protocol": "successors/frem_s12/src/frem_s12/protocol_p0_v8.json",
     "plan": "research/frem_s12_20261018/PLAN.md",
     "kaggle_campaign": "research/frem_s12_20261018/KAGGLE_CAMPAIGN.md",
     "flaw_checklist": "research/frem_s12_20261018/FLAW_CHECKLIST.md",
@@ -86,7 +86,8 @@
     "preserved_p0v4_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V4_READY.json",
     "preserved_p0v5_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V5_READY.json",
     "preserved_p0v6_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V6_READY.json",
-    "implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V7_READY.json",
+    "preserved_p0v7_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V7_READY.json",
+    "implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V8_READY.json",
     "engineering_verification": "research/frem_s12_20261018/ENGINEERING_VERIFICATION.md",
     "decisions": [
       "research/decisions/frem_s12_planning_20261018.json",
@@ -102,9 +103,10 @@
       "research/decisions/frem_s12_p0v5_failure_manifest_correction_20261018.json",
       "research/decisions/frem_s12_p0v6_evidence_integrity_20261018.json",
       "research/decisions/frem_s12_p0v7_evidence_chain_20261018.json",
-      "research/decisions/frem_s12_p0v7_output_location_guard_20261018.json"
+      "research/decisions/frem_s12_p0v7_output_location_guard_20261018.json",
+      "research/decisions/frem_s12_p0v8_global_ledger_policy_reference_20261019.json"
     ],
-    "source_identity": "87b2378b9180b79cdb1ca1a90fb33f8150bcf4d1613deb07ba23af7797450ca5",
+    "source_identity": "0bb6c77ee48d1eae34b5d15a9b7d2a66709b4dcf07b6c4315222a1b08cdbfb5d",
     "hypothesis": "A learned causal router over multiscale Fourier-reservoir and engram-retrieval scenario laws may distinguish persistent expert skill from transient correlated errors under regime change.",
     "primary": "At least five-percent relative energy-score improvement over S11 and the strongest predeclared non-FREM baseline, corrected uncertainty, fold consistency and variogram noninferiority",
     "development_budget": "At most 24 search trials, 2000 model cell-equivalents, 60 GPU-hours, 120 CPU-hours and two calendar weeks; live quota and measured projection can only reduce these ceilings",
@@ -115,7 +117,7 @@
     "source_rights_contamination_audit_complete": true,
     "protocol_frozen": true,
     "model_implemented": true,
-    "generated_tests": "60 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "generated_tests": "65 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
     "one_use_consumption": "Search and fixed cells claim deterministic source/gate-bound ledger identities; duplicate attempts fail and only exact checkpoint resume is permitted",
     "raw_evidence": "Search and fixed bundles retain outcomes and every issued finite-law atom/probability for independent score reconstruction; fixed bundles also separate targets and holdings",
     "inference": "Algorithmic seeds are averaged within family-fold before equal-fold/equal-family point aggregation; fold identities and circular 12-month blocks are resampled jointly across the three shared-calendar families",
@@ -123,7 +125,7 @@
     "generated_smoke": "MIXED_NEGATIVE_ENGINEERING_OBSERVATION_NO_SCIENTIFIC_INFERENCE",
     "kaggle_probe_run": true,
     "kaggle_qualification": {
-      "status": "P0V3_REJECTED_P0V4_NOT_UPLOADED_P0V5_NOT_UPLOADED_P0V6_NOT_UPLOADED_P0V7_PENDING_UPLOAD",
+      "status": "P0V3_REJECTED_P0V4_NOT_UPLOADED_P0V5_NOT_UPLOADED_P0V6_NOT_UPLOADED_P0V7_SUPERSEDED_P0V8_PENDING_UPLOAD",
       "private_dataset_url": "https://www.kaggle.com/datasets/ryangomez010/frem-s12-input",
       "private_notebook_url": "https://www.kaggle.com/code/ryangomez010/frem-s12-campaign?scriptVersionId=359671420",
       "initial_upload_version_id": 359670132,
@@ -199,7 +201,20 @@
       "qualification_repeats": 3,
       "projection_statistic": "maximum",
       "semantic_verification": "Exact calendar, validation law/control, complete campaign inventory, provenance chain, cross-seed outcome, isolated install and qualification projection reconstruction",
-      "upload_status": "PENDING_CHROME_EXTENSION_LOCAL_FILE_ACCESS"
+      "upload_status": "NOT_UPLOADED_SUPERSEDED_BY_P0V8"
+    },
+    "p0v8_artifacts": {
+      "wheel": "frem_s12-0.1.5-py3-none-any.whl",
+      "wheel_sha256": "052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba",
+      "wheel_bytes": 59908,
+      "wheel_rebuild_byte_identical": true,
+      "notebook_sha256": "419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8",
+      "protocol_sha256": "1a5ae9db14076255dbf71ff18bf54e91c41f8d6bde7266c0902e6c62eca8f5a2",
+      "source_identity": "0bb6c77ee48d1eae34b5d15a9b7d2a66709b4dcf07b6c4315222a1b08cdbfb5d",
+      "saved_version_ledger": "research/frem_s12_20261018/KAGGLE_SAVED_VERSION_LEDGER.json",
+      "saved_version_ledger_complete": false,
+      "semantic_verification": "Complete external saved-version audit plus scalar-reference equality for the vectorized secondary policy selector",
+      "upload_status": "PENDING_PRIVATE_KAGGLE_UPLOAD"
     },
     "data_acquired": false,
     "data_parsed": false,
@@ -209,7 +224,7 @@
     "market_ledgers": 0,
     "protected_access": false,
     "scientific_result": "NOT_EVALUATED",
-    "next_gate": "Enable local-file access for the ChatGPT Chrome extension, upload exact wheel SHA-256 e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72 as a new private dataset version, upload notebook SHA-256 6db7e62e45fa90b29fe9bafda454239f411cc3227b50aa668fa9b0873916afb3, and run P0v7 qualification with CPU and internet disabled. Download the complete bundle and run verify-run-bundle with the exact wheel, version 0.1.4 and expected mode qualify-kaggle; eligible_for_next_stage must be true. Before any scientific shard, reconcile a complete fork-free saved-version consumption ledger. Only then can archive admission and the 144-cell search be considered."
+    "next_gate": "Upload exact P0v8 wheel SHA-256 052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba as a new private Kaggle dataset version, import notebook SHA-256 419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8, and run P0v8 qualification with CPU and internet disabled. Download the complete bundle and run verify-run-bundle with the exact wheel, version 0.1.5 and expected mode qualify-kaggle; eligible_for_next_stage must be true. Before any scientific shard, export and audit a complete fork-free saved-version consumption ledger; the retained incomplete ledger must not be promoted. Only then can archive admission and the 144-cell search be considered."
   },
   "claims": {
     "novelty": "candidate; not established",

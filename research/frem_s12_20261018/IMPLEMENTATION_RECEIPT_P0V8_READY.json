@@ -1,0 +1,57 @@
+{
+  "schema": "frem-s12-p0v8-implementation-receipt-v1",
+  "observed_utc": "2026-10-19T03:09:25Z",
+  "status": "P0V8_LOCAL_ENGINEERING_VERIFIED_EXTERNAL_LEDGER_AND_KAGGLE_QUALIFICATION_PENDING_SCIENCE_NOT_RUN",
+  "decision_journal_entry_sha256": "bbe255ae01a1fbad1f996c9c24306c5a32f4f042e1ddfe739f9af062918c946f",
+  "protocol": {
+    "path": "successors/frem_s12/src/frem_s12/protocol_p0_v8.json",
+    "sha256": "1a5ae9db14076255dbf71ff18bf54e91c41f8d6bde7266c0902e6c62eca8f5a2"
+  },
+  "package": {
+    "version": "0.1.5",
+    "source_identity": "0bb6c77ee48d1eae34b5d15a9b7d2a66709b4dcf07b6c4315222a1b08cdbfb5d",
+    "wheel_path": "research/frem_s12_20261018/kaggle_upload_p0v8_qualification_01/dataset_reproducible/frem_s12-0.1.5-py3-none-any.whl",
+    "wheel_bytes": 59908,
+    "wheel_sha256": "052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba",
+    "wheel_rebuild_sha256": "052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba",
+    "source_date_epoch": 1792321200,
+    "wheel_byte_reproducible": true
+  },
+  "notebook": {
+    "path": "successors/frem_s12/kaggle/frem_s12_campaign.ipynb",
+    "sha256": "419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8",
+    "package_version": "0.1.5",
+    "requires_acquisition_receipt": true,
+    "python_warnings_are_errors": true
+  },
+  "verification": {
+    "tests": "65 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "ruff_lint": "passed over source and tests",
+    "ruff_format": "passed over source and tests",
+    "mypy_strict": "passed over 22 source modules",
+    "uv_lock": "resolved 15 packages and updated the local package identity to 0.1.5",
+    "wheel_rebuild": "two fixed-epoch builds byte-identical",
+    "clean_wheel_install": "installed with uv into a fresh target and reproduced the declared source identity",
+    "incomplete_saved_version_ledger": "clean-wheel audit-saved-versions failed closed as required because complete is false"
+  },
+  "repairs": [
+    "Every scientific cell now requires an externally complete saved-version inventory audit before it can be considered admissible.",
+    "Duplicate search or fixed claims across saved Kaggle versions fail closed.",
+    "The vectorized secondary policy selector is locked to a retained scalar reference selector by randomized equality tests.",
+    "The P0v8 wheel, notebook, protocol and source identity are hash-bound and reproducibly packaged."
+  ],
+  "preserved_failures": [
+    "The retained external saved-version ledger is incomplete and therefore intentionally cannot pass the audit.",
+    "The first non-fixed-epoch P0v8 wheel rebuild differed by archive timestamps; it is retained as a packaging observation and the fixed-epoch candidate is the only upload artifact.",
+    "No Kaggle P0v8 upload or qualification has occurred yet.",
+    "No official archive, market cell, market fit, protected outcome or scientific claim has been consumed."
+  ],
+  "kaggle_executed": false,
+  "archives_acquired": 0,
+  "market_fits": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "protected_access": false,
+  "scientific_admitted": false,
+  "scientific_status": "NOT_EVALUATED"
+}

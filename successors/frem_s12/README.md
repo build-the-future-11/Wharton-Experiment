@@ -10,8 +10,9 @@ The P0v2 base protocol and P0v3 integrity amendment are preserved in
 `protocol_p0.json` and `protocol_p0_v3.json`. The prospective Kaggle runtime
 portability amendment is frozen in `protocol_p0_v4.json`, P0v5 delivery
 hardening is preserved in `protocol_p0_v5.json`, P0v6 evidence reconstruction
-is preserved in `protocol_p0_v6.json`, and the operative P0v7 end-to-end
-evidence-chain amendment is frozen in `protocol_p0_v7.json`. The package
+is preserved in `protocol_p0_v6.json`, P0v7 preserves the end-to-end evidence
+chain in `protocol_p0_v7.json`, and operative P0v8 adds the external
+saved-version audit and policy-reference contract in `protocol_p0_v8.json`. The package
 admits only the exact Python-major/minor and NumPy pairs declared there and
 implements causal finite-law forecasting, the learned delayed router,
 matched controls, policy diagnostics, immutable evidence bundles, exact-origin
@@ -27,14 +28,15 @@ Read, in order:
 4. `protocol_p0_v5.json`
 5. `protocol_p0_v6.json`
 6. `protocol_p0_v7.json`
-7. `research/frem_s12_20261018/MODEL_SPEC.md`
-8. `research/frem_s12_20261018/SOURCE_AND_CONTAMINATION.md`
-9. `research/frem_s12_20261018/KAGGLE_CAMPAIGN.md`
-10. `research/frem_s12_20261018/STATUS.md`
+7. `protocol_p0_v8.json`
+8. `research/frem_s12_20261018/MODEL_SPEC.md`
+9. `research/frem_s12_20261018/SOURCE_AND_CONTAMINATION.md`
+10. `research/frem_s12_20261018/KAGGLE_CAMPAIGN.md`
+11. `research/frem_s12_20261018/STATUS.md`
 
 Core commands are `plan`, `qualify`, `qualify-kaggle`, `acquire`, `admit-data`,
 `run-search-cell`, `select-search`, `run-cell`, `generated-smoke`, `shard-plan`,
-`analyze`, and `verify-run-bundle`. Search is restricted to Fold A validation and produces one
+`analyze`, `verify-run-bundle`, and `audit-saved-versions`. Search is restricted to Fold A validation and produces one
 source-current selection receipt. `run-cell` requires that receipt, the explicit
 `--execute` flag, source-current environment/data receipts and a deterministic
 consumption root. Search and fixed claims are one-use; only an exact checkpoint
@@ -78,6 +80,12 @@ environment, source, selection and consumption evidence. Qualification intake
 now validates the isolated installation identity, runtime allowlist, three
 timing repeats, byte stability and recomputed resource projections before it
 can report `eligible_for_next_stage`.
+
+P0v8 preserves the scientific design while requiring a complete external
+Kaggle saved-version ledger before scientific cells. Its vectorized secondary
+policy selector is locked to a scalar reference implementation by regression
+tests. Use `audit-saved-versions` only with an externally complete ledger; an
+incomplete ledger fails closed.
 
 The next legitimate work is a Kaggle qualification run, followed by exact
 source acquisition and admission. Market execution remains gated until those

@@ -1,0 +1,17 @@
+{
+  "attempts": [
+    {
+      "claims": [],
+      "saved_version_id": 359671420,
+      "status": "REJECTED"
+    },
+    {
+      "claims": [],
+      "saved_version_id": 359681231,
+      "status": "ENGINEERING_ONLY"
+    }
+  ],
+  "complete": false,
+  "schema": "frem-s12-saved-version-ledger-v1",
+  "scope": "kaggle"
+}

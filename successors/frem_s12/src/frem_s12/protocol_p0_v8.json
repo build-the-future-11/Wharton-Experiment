@@ -1,0 +1,17 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 8,
+  "status": "FROZEN_PROSPECTIVE_GLOBAL_SAVED_VERSION_AUDIT_AND_POLICY_REFERENCE_MARKET_EXECUTION_GATED",
+  "base_protocol_sha256": "6dd4652afaf76506736abc7e8bef027c12d1aa08f6b53a4be0a96881f233af10",
+  "supersedes_evidence_contract_only": "P0v7",
+  "market_outcomes_observed_before_amendment": false,
+  "saved_version_consumption_contract": "a_complete_external_kaggle_saved_version_inventory_must_be_audited_for_unique_claims_before_scientific_cells",
+  "policy_reference_contract": "the_secondary_policy_vectorization_must_match_the_retained_scalar_reference_selector",
+  "model": "unchanged_from_p0v7",
+  "cells": "unchanged_from_p0v7",
+  "controls": "unchanged_from_p0v7",
+  "thresholds": "unchanged_from_p0v7",
+  "inference": "unchanged_from_p0v7",
+  "budgets": "unchanged_from_p0v7",
+  "scientific_status": "NOT_EVALUATED"
+}

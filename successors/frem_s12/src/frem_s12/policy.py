@@ -24,14 +24,12 @@ def action_grid() -> NDArray[np.float64]:
 _ACTIONS = action_grid()
 
 
-def choose_action(law: Law, current: NDArray[np.float64], *, cost_bps: float = 10.0) -> NDArray[np.float64]:
-    """Choose maximum frozen 95/5 nominal-worst expected log utility."""
+def _choose_action_reference(
+    law: Law, current: NDArray[np.float64], *, cost_bps: float = 10.0
+) -> NDArray[np.float64]:
+    """Retain the scalar definition used to validate the vectorized selector."""
     holdings = np.asarray(current, dtype=np.float64)
-    if holdings.shape != (7,) or np.any(holdings < 0) or not np.isclose(holdings.sum(), 1.0):
-        raise NumericalError("current allocation is invalid")
     risky_growth = 1 + law.atoms
-    if np.any(risky_growth <= 0):
-        raise NumericalError("law implies total loss beyond policy domain")
     utilities = np.empty(len(_ACTIONS), dtype=np.float64)
     fee_rate = cost_bps / 10_000
     for index, action in enumerate(_ACTIONS):
@@ -41,6 +39,23 @@ def choose_action(law: Law, current: NDArray[np.float64], *, cost_bps: float = 1
         nominal = float(law.probabilities @ np.log(growth))
         worst = float(np.min(np.log(growth)))
         utilities[index] = 0.95 * nominal + 0.05 * worst
+    return np.asarray(_ACTIONS[int(np.argmax(utilities))], dtype=np.float64).copy()
+
+
+def choose_action(law: Law, current: NDArray[np.float64], *, cost_bps: float = 10.0) -> NDArray[np.float64]:
+    """Choose maximum frozen 95/5 nominal-worst expected log utility."""
+    holdings = np.asarray(current, dtype=np.float64)
+    if holdings.shape != (7,) or np.any(holdings < 0) or not np.isclose(holdings.sum(), 1.0):
+        raise NumericalError("current allocation is invalid")
+    risky_growth = 1 + law.atoms
+    if np.any(risky_growth <= 0):
+        raise NumericalError("law implies total loss beyond policy domain")
+    fee_rate = cost_bps / 10_000
+    turnover = np.abs(_ACTIONS[:, 1:] - holdings[None, 1:]).sum(axis=1)
+    investable = 1 - fee_rate * turnover
+    growth = investable[:, None] * (_ACTIONS[:, :1] + _ACTIONS[:, 1:] @ risky_growth.T)
+    log_growth = np.log(growth)
+    utilities = 0.95 * (log_growth @ law.probabilities) + 0.05 * log_growth.min(axis=1)
     return np.asarray(_ACTIONS[int(np.argmax(utilities))], dtype=np.float64).copy()
 
 

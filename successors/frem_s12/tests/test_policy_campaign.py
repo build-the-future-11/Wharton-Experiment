@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 
 from frem_s12.campaign import cells, registry, search_space, shard_cells
-from frem_s12.policy import action_grid, choose_action, realize
+from frem_s12.policy import _choose_action_reference, action_grid, choose_action, realize
 from frem_s12.scores import Law
 
 
@@ -38,3 +38,13 @@ def test_realize_applies_turnover_cost() -> None:
     factor, holdings = realize(action, np.zeros(6), prior, cost_bps=10)
     assert factor == pytest.approx(0.9995)
     assert holdings.sum() == pytest.approx(1.0)
+
+
+def test_vectorized_policy_matches_scalar_reference() -> None:
+    generator = np.random.default_rng(1912)
+    for _ in range(20):
+        law = Law(generator.normal(0, 0.04, size=(11, 6)), generator.dirichlet(np.ones(11)))
+        current = generator.dirichlet(np.ones(7))
+        np.testing.assert_array_equal(
+            choose_action(law, current, cost_bps=10), _choose_action_reference(law, current, cost_bps=10)
+        )

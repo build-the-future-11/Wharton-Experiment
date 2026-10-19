@@ -27,6 +27,7 @@ from frem_s12.evidence import atomic_json, package_identity, read_json, sha256_f
 from frem_s12.experiment import Fold, run_fold
 from frem_s12.generated import generated_panel
 from frem_s12.run_bundle import verify_run_bundle
+from frem_s12.saved_versions import audit_saved_versions
 from frem_s12.search import (
     SEARCH_SEEDS,
     config_from_selection,
@@ -124,6 +125,11 @@ def _parser() -> argparse.ArgumentParser:
         ),
     )
     verify_bundle.add_argument("--output", type=Path)
+    saved_versions = commands.add_parser(
+        "audit-saved-versions", help="verify the complete external Kaggle saved-version inventory"
+    )
+    saved_versions.add_argument("--ledger", type=Path, required=True)
+    saved_versions.add_argument("--output", type=Path)
     return parser
 
 
@@ -268,6 +274,11 @@ def main(argv: list[str] | None = None) -> int:  # noqa: C901
                 expected_package_version=arguments.expected_package_version,
                 expected_mode=arguments.expected_mode,
             )
+            if arguments.output is not None:
+                atomic_json(arguments.output, value)
+            _emit(value)
+        elif arguments.command == "audit-saved-versions":
+            value = audit_saved_versions(arguments.ledger)
             if arguments.output is not None:
                 atomic_json(arguments.output, value)
             _emit(value)

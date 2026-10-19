@@ -19,7 +19,7 @@ def test_kaggle_notebook_code_is_parseable() -> None:
 
 def test_kaggle_install_is_isolated_and_offline() -> None:
     source = "\n".join(_notebook_sources())
-    assert 'PACKAGE_VERSION = "0.1.4"' in source
+    assert 'PACKAGE_VERSION = "0.1.5"' in source
     assert 'SITE = Path("/kaggle/working/frem-s12-site")' in source
     assert '"--no-index"' in source
     assert '"--no-deps"' in source
@@ -86,3 +86,11 @@ def test_p0v7_closes_evidence_chain_without_changing_science() -> None:
     assert protocol["cells"] == "unchanged_from_p0v6"
     assert protocol["thresholds"] == "unchanged_from_p0v6"
     assert protocol["inference"] == "unchanged_from_p0v6"
+
+
+def test_p0v8_closes_global_consumption_and_policy_reference_gaps() -> None:
+    protocol = json.loads((ROOT / "src" / "frem_s12" / "protocol_p0_v8.json").read_text())
+    assert protocol["version"] == 8
+    assert protocol["market_outcomes_observed_before_amendment"] is False
+    assert protocol["model"] == "unchanged_from_p0v7"
+    assert protocol["cells"] == "unchanged_from_p0v7"

@@ -713,3 +713,21 @@ Notebook SHA-256:
 Kaggle qualification remains unrun. Before scientific shards, reconcile a
 complete fork-free saved-version consumption ledger; per-run claims are not a
 global one-use proof. Scientific status remains `NOT_EVALUATED`.
+
+## 19 October 2026 — FREM-S12 P0v8 global ledger contract verified
+
+P0v8 supersedes P0v7 before upload or market access, with the scientific model,
+cells, controls, thresholds, inference and budgets unchanged. It adds a
+fail-closed audit over a complete external Kaggle saved-version inventory and a
+scalar-reference equality contract for the optimized policy selector. The known
+two-version ledger is retained with `complete: false`, and its clean-wheel audit
+fails closed as required.
+
+Sixty-five warning-strict tests, source/test Ruff, strict mypy, lock resolution,
+fresh-target exact-wheel install, and two fixed-epoch byte-identical v0.1.5
+wheel builds pass. The upload candidate SHA-256 is
+`052caa05cfb4f5eec70a2744bf5429c7a1c8d12db48ec3d8aa69d7082c9373ba`; the
+notebook SHA-256 is
+`419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8`.
+Kaggle P0v8 qualification and complete saved-version export remain required;
+scientific status remains `NOT_EVALUATED`.
