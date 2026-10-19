@@ -132,3 +132,7 @@ Linked CSVs are public curated exports. Entries below refer to the private evide
 | Demonstration accounting and provenance | [Demo tests](../../tests/unit/test_development_demo.py), [PIT tests](../../tests/unit/test_point_in_time.py), [portfolio CSV](demo_portfolio_metrics.csv) | `demo_v2_primary/artifacts/`, `demo_v2_replay/artifacts/` |
 
 The separate verifier's largest score discrepancy is 1.78e-15. Its M11 primary re-score reuses the shared ledger; demonstration accounting uses an independent reconstruction. Source, data, configuration, prediction, failure, environment, and timing receipts are archived. Recorded matrix source fingerprint: `8369f937581a33d013e34815bdb663f0669ccac0e1268a926e641d3ec7318811`.
+
+## Final delivery identity and checkpoint scope
+
+Tested source commit: `5081e37dadfc9cbb0ae5e06c46385ba89c05e50c`. See [DELIVERY_MANIFEST.json](DELIVERY_MANIFEST.json) for the pinned notebook and private evidence archive identity. The original multi-seed runner preserves a representative checkpoint for each model/variant at the first seed of each invocation; every cell retains raw predictions, targets and dataset/configuration identity, but not every fitted seed state was checkpointed. The supplied Kaggle driver invokes each seed separately. The first source-change manifest is a snapshot at this source commit; later delivery documentation does not change the frozen model source.

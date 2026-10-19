@@ -6,7 +6,7 @@ Read `EXECUTION_STATE.json` first. Its predecessor fields are preserved; `curren
 
 The executed scope is an engineering repair and a bounded synthetic characterization of the existing M01-M12 implementations. The engineering properties are supported on the tested fixtures; model results are MIXED and no model is promoted. Market usefulness, a novel integrated FREM architecture, population tail calibration and competition readiness are not established.
 
-Primary branch: `research/wharton-integrity-20261019`, parent `fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c`, on `research/portfolio-verification-2026-09-29`. The final source identity is the Git commit containing this handoff; the pinned notebook added afterward identifies the tested source commit explicitly. Main remains a distinct generation. The separate FREM repository is read-only and unchanged. See [source map](research/SOURCE_MAP_20261019.json).
+Primary branch: `research/wharton-integrity-20261019`, parent `fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c`, on `research/portfolio-verification-2026-09-29`. The tested published source commit is `5081e37dadfc9cbb0ae5e06c46385ba89c05e50c`. The delivered notebook pins that source explicitly; later delivery metadata leaves the frozen model code unchanged. Main remains a distinct generation. The separate FREM repository is read-only and unchanged. See [source map](research/SOURCE_MAP_20261019.json).
 
 Local work began from 201 byte-verified Git blobs, not a local clone. Normal remote commits preserve the parent's complete tree, including historical files not materialized locally. Root is the sole remote writer; subagents edited assigned disjoint files. Never force-push over a collaborator or merge this work into default without separate authorization.
 

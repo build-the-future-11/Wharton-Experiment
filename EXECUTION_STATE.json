@@ -25,6 +25,7 @@
     "canonical_handoff": "RESEARCH_HANDOFF.md",
     "claim_evidence": "reports/integrity_20261019/CLAIM_EVIDENCE.json",
     "competition_recovery": "Current public requirements and private case working copy recovered separately. Organizer case PDF version match, real WInS notes, roster/eligibility receipts and current portal instructions remain unverified.",
+    "delivery_manifest": "reports/integrity_20261019/DELIVERY_MANIFEST.json",
     "disposition": {
       "engineering_properties": "SUPPORTED_WITHIN_TESTED_SCOPE",
       "market_efficacy": "NOT_ESTABLISHED",
@@ -49,7 +50,9 @@
     "research_specification": "research/DEVELOPMENT_RESEARCH_SPEC_20261019.md",
     "results": "reports/integrity_20261019/RESULTS.md",
     "session_id": "integrity_20261019",
+    "source_commit": "5081e37dadfc9cbb0ae5e06c46385ba89c05e50c",
     "source_map": "research/SOURCE_MAP_20261019.json",
+    "source_published": true,
     "updated_utc": "2026-10-19T14:15:28.838813+00:00",
     "verification": "reports/integrity_20261019/VERIFICATION.json"
   },

@@ -78,3 +78,7 @@ Download the output `replay_bundle.zip` and `replay_bundle.sha256`, and preserve
 ## Decision rule and scope
 
 All results remain development evidence. The independent unit is the simulation seed within a world; dates, assets, paths and replays are not extra samples. Keep task-specific units separate. Three seeds and descriptive t intervals with two degrees of freedom do not establish discovery. Preserve the original spent lockbox and invalid legacy results. No successor experiment, protected evaluation, market allocation, trade or submission is part of this reproduction procedure.
+
+## Final delivery identity and checkpoint scope
+
+Tested source commit: `5081e37dadfc9cbb0ae5e06c46385ba89c05e50c`. See [DELIVERY_MANIFEST.json](DELIVERY_MANIFEST.json) for the pinned notebook and private evidence archive identity. The original multi-seed runner preserves a representative checkpoint for each model/variant at the first seed of each invocation; every cell retains raw predictions, targets and dataset/configuration identity, but not every fitted seed state was checkpointed. The supplied Kaggle driver invokes each seed separately. The first source-change manifest is a snapshot at this source commit; later delivery documentation does not change the frozen model source.

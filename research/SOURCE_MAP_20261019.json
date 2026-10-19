@@ -14,7 +14,8 @@
       "entrypoint": "scripts/run_portfolio_research.py",
       "fresh_development_entrypoint": "scripts/run_development_demo.py",
       "model_registry": "src/wharton_lab/models/m01..m12",
-      "scope": "Working repaired task adapters and portfolio accounting plus current development integrity repairs. Model labels do not establish novelty or a complete integrated financial architecture."
+      "scope": "Working repaired task adapters and portfolio accounting plus current development integrity repairs. Model labels do not establish novelty or a complete integrated financial architecture.",
+      "published_tested_source_commit": "5081e37dadfc9cbb0ae5e06c46385ba89c05e50c"
     },
     {
       "role": "separate read-only public prototype",
