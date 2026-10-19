@@ -1,0 +1,92 @@
+{
+  "claims": [
+    {
+      "claim": "Invalid split parameters can no longer create the witnessed train/holdout intersection.",
+      "evidence": "tests/unit/test_split_boundaries.py",
+      "experiment": "before_fix and patched_integrity",
+      "id": "I01",
+      "limit": "Exercised interval contracts and fixtures; no universal market leakage guarantee",
+      "source": "src/wharton_lab/splits/walk_forward.py",
+      "status": "LOCALLY_TESTED"
+    },
+    {
+      "claim": "The repaired controller scores the same feasible policy it returns.",
+      "evidence": "tests/unit/test_mpc_policy_contract.py",
+      "experiment": "patched_integrity",
+      "id": "I02",
+      "limit": "Numerical policy contract, not optimizer optimality or investment performance",
+      "source": "src/wharton_lab/models/m11/mpc_verified.py",
+      "status": "LOCALLY_TESTED"
+    },
+    {
+      "claim": "Declared point-in-time clocks, revisions, universe membership, and byte identities are enforced on admitted records.",
+      "evidence": "tests/unit/test_point_in_time.py",
+      "experiment": "patched_integrity",
+      "id": "I03",
+      "limit": "Supplied declarations are not proof of vendor truth or license rights",
+      "source": "src/wharton_lab/data/point_in_time.py",
+      "status": "LOCALLY_TESTED"
+    },
+    {
+      "claim": "Completed model-selection attempts and fitted states survive a later fit failure.",
+      "evidence": "tests/unit/test_development_demo.py",
+      "experiment": "demo_journal_regression",
+      "id": "I04",
+      "limit": "Injected failure path; no guarantee after device loss or storage failure",
+      "source": "src/wharton_lab/research/development_demo.py",
+      "status": "LOCALLY_TESTED"
+    },
+    {
+      "analysis": "scripts/analyze_integrity_development.py",
+      "claim": "The synthetic carried-holdings ledger agrees with an independent scalar reconstruction.",
+      "experiment": "analysis_v2_execution",
+      "id": "I05",
+      "limit": "One synthetic seed and disclosed execution conventions",
+      "raw_artifact": "demo_v2_primary/artifacts/ledger.csv",
+      "status": "SUPPORTED_WITHIN_FIXTURE",
+      "table": "demo_portfolio_metrics.csv"
+    },
+    {
+      "analysis": "scripts/verify_portfolio_artifacts.py",
+      "claim": "All 288 declared primary cells completed and their scalar scores were verified.",
+      "experiment": "matrix_null, matrix_linear_signal, matrix_regime_shift, matrix_heavy_tails",
+      "id": "I06",
+      "limit": "Model-specific development losses; no pooled model rank",
+      "raw_artifact": "matrix_*/artifacts/raw/*.npz",
+      "status": "LOCALLY_TESTED",
+      "table": "matrix_paired_seeds.csv"
+    },
+    {
+      "analysis": "scripts/analyze_integrity_development.py",
+      "claim": "The declared 24-cell subset reproduced identical arrays on the same host.",
+      "experiment": "matrix_replay",
+      "id": "I07",
+      "limit": "Not all 288 cells replayed; not independent scientific replication",
+      "raw_artifact": "matrix_replay/artifacts/raw/*.npz",
+      "status": "SAME_HOST_REPLAY"
+    },
+    {
+      "analysis": "analysis_v2 secondary-control audit",
+      "claim": "Several apparent shift gains over the named comparator disappear against the saved simpler control.",
+      "experiment": "matrix_regime_shift",
+      "id": "I08",
+      "limit": "Post-outcome reporting expansion of retained controls, all rows disclosed, three seeds per world",
+      "raw_artifact": "matrix_regime_shift/artifacts/raw/*.npz",
+      "status": "DESCRIPTIVE_DEVELOPMENT",
+      "table": "secondary_baseline_seeds.csv"
+    },
+    {
+      "claim": "No model is promoted; market alpha, mechanism novelty, calibrated tail risk, and client suitability are not established.",
+      "evidence": [
+        "RESULTS.md",
+        "VERIFICATION.json",
+        "../../research/DEVELOPMENT_RESEARCH_SPEC_20261019.md"
+      ],
+      "id": "I09",
+      "limit": "A narrow component pattern does not establish a full architectural claim",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "public_tables": "reports/integrity_20261019/",
+  "raw_path_prefix_in_private_evidence": "research/development/integrity_20261019/"
+}

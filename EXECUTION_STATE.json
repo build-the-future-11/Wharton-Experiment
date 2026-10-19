@@ -1,24 +1,15 @@
 {
-  "updated_at": "2026-09-27T04:59:41.494925+00:00",
-  "code_commit_for_repaired_run": "2b146663bd2efca373d3b5f93ee3f2a4018ff8ed",
-  "matrix": {
-    "smoke": 34,
-    "pilot": 187,
-    "overnight": 360,
-    "full": 600,
-    "status": "LEAKAGE_CONTAMINATED (D-050..D-052)"
+  "astra_finish": {
+    "authoritative_status": "STATUS.md",
+    "case": "MISSING",
+    "local_package": "COMPLETE_WITH_EXTERNAL_BLOCKERS",
+    "official_instruction_pdfs": "RECOVERED",
+    "replayed_contrasts": 68,
+    "stress_cells": 75,
+    "submission": "BLOCKED",
+    "tests": "60_passed",
+    "updated_at": "2026-09-27T04:59:41.494925+00:00"
   },
-  "lockbox": "OPENED_ONCE; synthetic arm INVALID_LEAKAGE; ETF arm NEGATIVE",
-  "factorial": "INVALID (D-054)",
-  "multiplicity": "reports/evidence_bank/MULTIPLICITY_RESULTS.json (0/10 testable)",
-  "repaired_eval": "runs/repaired/REPAIRED_RESULTS.json (exploratory null vs historical mean)",
-  "selected_stack_recorded": [
-    "B_RIDGE",
-    "B_EWMA_COV"
-  ],
-  "recommended_stack": "Candidate strategic allocation / reserve process; EWMA monitoring unvalidated; no return forecast selected",
-  "ips_draft_pdf": "output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf",
-  "tests": "60_passed",
   "blocked": [
     "COMPLETE_CLIENT_CASE",
     "TRADING_RULES",
@@ -28,15 +19,61 @@
     "STUDENT_REVIEW",
     "SUBMISSION_AUTH"
   ],
-  "astra_finish": {
-    "updated_at": "2026-09-27T04:59:41.494925+00:00",
-    "local_package": "COMPLETE_WITH_EXTERNAL_BLOCKERS",
-    "official_instruction_pdfs": "RECOVERED",
-    "case": "MISSING",
-    "stress_cells": 75,
-    "replayed_contrasts": 68,
-    "tests": "60_passed",
-    "submission": "BLOCKED",
-    "authoritative_status": "STATUS.md"
-  }
+  "code_commit_for_repaired_run": "2b146663bd2efca373d3b5f93ee3f2a4018ff8ed",
+  "current_session": {
+    "branch": "research/wharton-integrity-20261019",
+    "canonical_handoff": "RESEARCH_HANDOFF.md",
+    "claim_evidence": "reports/integrity_20261019/CLAIM_EVIDENCE.json",
+    "competition_recovery": "Current public requirements and private case working copy recovered separately. Organizer case PDF version match, real WInS notes, roster/eligibility receipts and current portal instructions remain unverified.",
+    "delivery_manifest": "reports/integrity_20261019/DELIVERY_MANIFEST.json",
+    "disposition": {
+      "engineering_properties": "SUPPORTED_WITHIN_TESTED_SCOPE",
+      "market_efficacy": "NOT_ESTABLISHED",
+      "model_characterization": "MIXED",
+      "model_promotion": "NONE",
+      "novel_integrated_architecture": "NOT_ESTABLISHED"
+    },
+    "executed": {
+      "matrix_failures": 0,
+      "preflight_cells": 24,
+      "primary_matrix_cells": 288,
+      "same_host_replay_cells": 24,
+      "secondary_saved_control_comparisons": 156
+    },
+    "future_session_rule": "Read this state and RESEARCH_HANDOFF.md before starting; append new decisions and failures before finishing. Preserve this closed development record and every predecessor outcome.",
+    "next_single_research_action": "Freeze a separately versioned M08 learned-graph versus uniform-mixing versus no-edges falsifier with historical mean and an AR-sign/volatility factorial, before fresh development seeds are observed.",
+    "parent_commit": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+    "phase": "BOUNDED_DEVELOPMENT_CLOSED",
+    "protected_boundary": "Original lockbox remains spent; no new protected evaluation opened or relabeled.",
+    "remote_execution": "NOT_EXECUTED; provide pinned Kaggle notebook and preserve actual future run identity if the user launches it.",
+    "repository": "build-the-future-11/Wharton-Experiment",
+    "research_specification": "research/DEVELOPMENT_RESEARCH_SPEC_20261019.md",
+    "results": "reports/integrity_20261019/RESULTS.md",
+    "session_id": "integrity_20261019",
+    "source_commit": "5081e37dadfc9cbb0ae5e06c46385ba89c05e50c",
+    "source_map": "research/SOURCE_MAP_20261019.json",
+    "source_published": true,
+    "updated_utc": "2026-10-19T14:15:28.838813+00:00",
+    "verification": "reports/integrity_20261019/VERIFICATION.json"
+  },
+  "factorial": "INVALID (D-054)",
+  "historical_snapshot_notice": "All predecessor fields above retain their 27 September meaning. The current session below is a separate development generation; do not reinterpret old tests, blockers, or withdrawn results as current evidence.",
+  "ips_draft_pdf": "output/pdf/WHARTON_IPS_DRAFT_BLOCKED.pdf",
+  "lockbox": "OPENED_ONCE; synthetic arm INVALID_LEAKAGE; ETF arm NEGATIVE",
+  "matrix": {
+    "full": 600,
+    "overnight": 360,
+    "pilot": 187,
+    "smoke": 34,
+    "status": "LEAKAGE_CONTAMINATED (D-050..D-052)"
+  },
+  "multiplicity": "reports/evidence_bank/MULTIPLICITY_RESULTS.json (0/10 testable)",
+  "recommended_stack": "Candidate strategic allocation / reserve process; EWMA monitoring unvalidated; no return forecast selected",
+  "repaired_eval": "runs/repaired/REPAIRED_RESULTS.json (exploratory null vs historical mean)",
+  "selected_stack_recorded": [
+    "B_RIDGE",
+    "B_EWMA_COV"
+  ],
+  "tests": "60_passed",
+  "updated_at": "2026-09-27T04:59:41.494925+00:00"
 }

@@ -1,0 +1,36 @@
+{
+  "source_commit": "5081e37dadfc9cbb0ae5e06c46385ba89c05e50c",
+  "source_tree": "da97ebc9084d16726f3bfe2c6418788e46d2b343",
+  "branch": "research/wharton-integrity-20261019",
+  "recorded_utc": "2026-10-19T14:27:41.040165+00:00",
+  "delivery_revision": "The Git commit containing this manifest; the notebook pins the tested source commit above.",
+  "notebook": "notebooks/wharton_integrity_kaggle.ipynb",
+  "notebook_validation": {
+    "notebook": "notebooks/wharton_integrity_kaggle.ipynb",
+    "json_and_cell_structure_checked": true,
+    "all_code_cells_ast_parsed": true,
+    "cells": 6,
+    "execution_counts_all_null": true,
+    "formal_nbformat_schema_validation": "UNAVAILABLE: nbformat and jsonschema packages absent; do not claim full schema validator execution",
+    "remote_execution": "NOT_EXECUTED"
+  },
+  "evidence_archive": {
+    "filename": "Wharton_Integrity_Evidence_20261019.zip",
+    "sha256": "fd598192bd8711fdcbb2497655118be7b47664d0b2a829716dc96bc197963dc9",
+    "bytes": 14425800,
+    "members": 701,
+    "all_members_verified": true,
+    "access": "Private supplement supplied with the report, not uploaded to the public repository"
+  },
+  "source_snapshot_manifest": "reports/integrity_20261019/SOURCE_CHANGE_MANIFEST.json at the source_commit above",
+  "checkpoint_scope": "Original multi-seed matrix saved representative first-seed checkpoints per invocation, with predictions/targets for every cell. The future driver uses one-seed invocations.",
+  "disposition": {
+    "engineering": "SUPPORTED_WITHIN_TESTED_SCOPE",
+    "development_models": "MIXED",
+    "model_promotion": "NONE",
+    "market_alpha": "NOT_ESTABLISHED",
+    "integrated_FREM_novelty": "NOT_ESTABLISHED",
+    "remote_execution": "NOT_EXECUTED",
+    "protected_confirmation": "NOT_EXECUTED"
+  }
+}

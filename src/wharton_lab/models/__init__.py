@@ -1,35 +1,29 @@
-"""Forecasting and decision models."""
+"""Models with optional backends loaded on demand.
 
-from wharton_lab.models.base import BaseModel
-from wharton_lab.models.m01 import M01RegimeDistributionalGBM
-from wharton_lab.models.m02 import M02FactorResidualRanker
-from wharton_lab.models.m03 import M03ConditionalNonlinearFactor
-from wharton_lab.models.m04 import M04FinancialAPEN
-from wharton_lab.models.m05 import QAPENModel
-from wharton_lab.models.m06 import FIJEPAModel
-from wharton_lab.models.m07 import EigenJEPAModel
-from wharton_lab.models.m08 import GraphFIJEPAModel
-from wharton_lab.models.m09 import M09Config, M09Model
-from wharton_lab.models.m10 import M10Config, M10Model
-from wharton_lab.models.m11 import M11Config, M11Model
-from wharton_lab.models.m12 import M12Config, M12Model
+NumPy accounting does not require optional neural models. Public class names
+and their defining modules are unchanged, preserving serialized identities.
+"""
+from importlib import import_module
 
-__all__ = [
-    "BaseModel",
-    "M01RegimeDistributionalGBM",
-    "M02FactorResidualRanker",
-    "M03ConditionalNonlinearFactor",
-    "M04FinancialAPEN",
-    "QAPENModel",
-    "FIJEPAModel",
-    "EigenJEPAModel",
-    "GraphFIJEPAModel",
-    "M09Model",
-    "M09Config",
-    "M10Model",
-    "M10Config",
-    "M11Model",
-    "M11Config",
-    "M12Model",
-    "M12Config",
-]
+_EXPORTS = {
+    "BaseModel": ".base", "M01RegimeDistributionalGBM": ".m01",
+    "M02FactorResidualRanker": ".m02", "M03ConditionalNonlinearFactor": ".m03",
+    "M04FinancialAPEN": ".m04", "QAPENModel": ".m05", "FIJEPAModel": ".m06",
+    "EigenJEPAModel": ".m07", "GraphFIJEPAModel": ".m08",
+    "M09Model": ".m09", "M09Config": ".m09", "M10Model": ".m10",
+    "M10Config": ".m10", "M11Model": ".m11", "M11Config": ".m11",
+    "M12Model": ".m12", "M12Config": ".m12",
+}
+__all__ = list(_EXPORTS)
+
+
+def __getattr__(name):
+    if name not in _EXPORTS:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    value = getattr(import_module(_EXPORTS[name], __name__), name)
+    globals()[name] = value
+    return value
+
+
+def __dir__():
+    return sorted(set(globals()) | set(__all__))

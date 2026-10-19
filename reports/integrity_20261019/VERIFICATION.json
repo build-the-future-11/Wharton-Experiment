@@ -1,0 +1,399 @@
+{
+  "analysis_source_sha256": "538d0a65697d0424bcdb8a13ff6109e88580e01e10991d98463a3768f319d6b6",
+  "budget": {
+    "authorized_child_wall_seconds": 900,
+    "charged_child_wall_seconds": 254.34932576699794,
+    "compute_lanes": 1,
+    "initial_recorder_failure_conservative_charge_seconds": 90,
+    "numeric_threads": 1,
+    "peak_child_rss_kib": 445412,
+    "recorded_child_wall_seconds": 164.34932576699794
+  },
+  "demo": {
+    "evaluated_samples": [
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+    ],
+    "forecast_mse": {
+      "historical_mean": 8.760212999778458e-05,
+      "ridge": 8.944215823794368e-05,
+      "trailing_5_momentum": 0.0001079575006918733,
+      "zero_no_change": 8.646060491087302e-05
+    },
+    "forecast_rows": 960,
+    "ledger_rows": 480,
+    "maturity_checks": 82,
+    "portfolios": {
+      "cash_only": {
+        "cumulative_return": 0.0,
+        "final_wealth": 1.0,
+        "gross_turnover": 0.0,
+        "max_csv_numerical_discrepancy": 0.0,
+        "max_drawdown": 0.0,
+        "max_identity_residual": 0.0,
+        "total_cost": 0.0
+      },
+      "equal_weight": {
+        "cumulative_return": -0.03078262642349361,
+        "final_wealth": 0.9692173735765064,
+        "gross_turnover": 1.1642828238293808,
+        "max_csv_numerical_discrepancy": 8.659739592076221e-15,
+        "max_drawdown": 0.053791651103909155,
+        "max_identity_residual": 4.440892098500626e-16,
+        "total_cost": 0.0011617155000199916
+      },
+      "historical_mean": {
+        "cumulative_return": -0.029469146653450795,
+        "final_wealth": 0.9705308533465492,
+        "gross_turnover": 1.89233357836881,
+        "max_csv_numerical_discrepancy": 4.107825191113079e-15,
+        "max_drawdown": 0.07416960965739783,
+        "max_identity_residual": 2.220446049250313e-16,
+        "total_cost": 0.0018698310394840761
+      },
+      "ridge": {
+        "cumulative_return": -0.07936815299103361,
+        "final_wealth": 0.9206318470089664,
+        "gross_turnover": 25.028001385140115,
+        "max_csv_numerical_discrepancy": 6.439293542825908e-15,
+        "max_drawdown": 0.10520811690237242,
+        "max_identity_residual": 4.440892098500626e-16,
+        "total_cost": 0.024162023352485414
+      },
+      "trailing_5_momentum": {
+        "cumulative_return": -0.04794905324134413,
+        "final_wealth": 0.9520509467586559,
+        "gross_turnover": 21.009006790923326,
+        "max_csv_numerical_discrepancy": 4.440892098500626e-15,
+        "max_drawdown": 0.08094287092858732,
+        "max_identity_residual": 4.440892098500626e-16,
+        "total_cost": 0.020546852585863123
+      },
+      "zero_no_change": {
+        "cumulative_return": -0.04359572601172357,
+        "final_wealth": 0.9564042739882764,
+        "gross_turnover": 1.123634703097562,
+        "max_csv_numerical_discrepancy": 4.3298697960381105e-15,
+        "max_drawdown": 0.0611259336956379,
+        "max_identity_residual": 2.220446049250313e-16,
+        "total_cost": 0.0011160677031378872
+      }
+    }
+  },
+  "evidence_class": "SYNTHETIC_DEVELOPMENT_AND_LOCAL_ENGINEERING",
+  "execution_receipts": {
+    "analysis_execution": {
+      "exit_status": 0,
+      "max_rss_kib": 155680,
+      "path_in_evidence": "research/development/integrity_20261019/analysis_execution/receipt.json",
+      "sha256": "d573052252c66d29ee40d9a5a303a6c424c8fec459555baa4614dd8974472db9",
+      "wall_seconds": 5.480592097999761
+    },
+    "analysis_v2_execution": {
+      "exit_status": 0,
+      "max_rss_kib": 156492,
+      "path_in_evidence": "research/development/integrity_20261019/analysis_v2_execution/receipt.json",
+      "sha256": "a3b5b6b0e258ebdd1ae76a37947fca5401669cec3e2b1d4d49981b5b8d731761",
+      "wall_seconds": 7.1969304970043595
+    },
+    "before_fix": {
+      "exit_status": 1,
+      "max_rss_kib": 343948,
+      "path_in_evidence": "research/development/integrity_20261019/before_fix/receipt.json",
+      "sha256": "bf6d52cb93d9dd8eeda42b3361d1d7554d4073871e3faff3a4286fc91a744c9c",
+      "wall_seconds": 11.354089025000576
+    },
+    "demo_journal_regression": {
+      "exit_status": 0,
+      "max_rss_kib": 142680,
+      "path_in_evidence": "research/development/integrity_20261019/demo_journal_regression/receipt.json",
+      "sha256": "9fe83a152c663ad1cccbd026031c9f17d55311b4d1bad75f413278cfcd408d61",
+      "wall_seconds": 4.334018294997804
+    },
+    "demo_replay": {
+      "exit_status": 0,
+      "max_rss_kib": 135940,
+      "path_in_evidence": "research/development/integrity_20261019/demo_replay/receipt.json",
+      "sha256": "507e53623cce674c54812ea55435bdff9c8ca872cfab7c2e7452f168fb24da65",
+      "wall_seconds": 2.872893974999897
+    },
+    "demo_v2_primary": {
+      "exit_status": 0,
+      "max_rss_kib": 136868,
+      "path_in_evidence": "research/development/integrity_20261019/demo_v2_primary/receipt.json",
+      "sha256": "e09c24fb031e2c3d385b5968ff0fbbedde5e216d3f19fbd26f5de3f7f301fb9e",
+      "wall_seconds": 3.078720303004957
+    },
+    "demo_v2_replay": {
+      "exit_status": 0,
+      "max_rss_kib": 136828,
+      "path_in_evidence": "research/development/integrity_20261019/demo_v2_replay/receipt.json",
+      "sha256": "a5e3b3dd805bb764c560b8a3508fcd8d34750515eb15129a91ef3c3d4a9cebf8",
+      "wall_seconds": 2.977579678998154
+    },
+    "finite_difference_gradients": {
+      "exit_status": 0,
+      "max_rss_kib": 347380,
+      "path_in_evidence": "research/development/integrity_20261019/finite_difference_gradients/receipt.json",
+      "sha256": "81a32f0da563850602dc8f375978117e969c89275f654e9b5a26fedd4ac65a0c",
+      "wall_seconds": 7.739596042003541
+    },
+    "kaggle_driver_contract": {
+      "exit_status": 0,
+      "max_rss_kib": 20444,
+      "path_in_evidence": "research/development/integrity_20261019/kaggle_driver_contract/receipt.json",
+      "sha256": "d2078d3fda214d6ba8da4275e031aeec642c7d9872231184b7786ee2d556ef6c",
+      "wall_seconds": 1.218445499005611
+    },
+    "kaggle_driver_contract_final": {
+      "exit_status": 0,
+      "max_rss_kib": 20572,
+      "path_in_evidence": "research/development/integrity_20261019/kaggle_driver_contract_final/receipt.json",
+      "sha256": "479e0d3daefc4f999785c3644e21c793eeabaa6dbdbf6bd9be562396af71a41a",
+      "wall_seconds": 1.1688791119959205
+    },
+    "matrix_heavy_tails": {
+      "exit_status": 0,
+      "max_rss_kib": 444736,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_heavy_tails/receipt.json",
+      "sha256": "00eb4c5726bf63824e5718655788c06b92f0a869ecdbb192880043eb34bc6139",
+      "wall_seconds": 15.014897604996804
+    },
+    "matrix_linear_signal": {
+      "exit_status": 0,
+      "max_rss_kib": 441728,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_linear_signal/receipt.json",
+      "sha256": "6dcf5c5900d1fabc7c90f882948f39fc27367d232a9de3ac388b746040bc9024",
+      "wall_seconds": 16.363367295998614
+    },
+    "matrix_null": {
+      "exit_status": 0,
+      "max_rss_kib": 445348,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_null/receipt.json",
+      "sha256": "35a70614a97ea72f2e2a0b5819304a8cea3d571ab70c375a2314cb73ad405ff6",
+      "wall_seconds": 15.86323910200008
+    },
+    "matrix_preflight": {
+      "exit_status": 0,
+      "max_rss_kib": 445412,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_preflight/receipt.json",
+      "sha256": "0447909411d665d18ff2fc8dbd96ff859140acfbf9150444878091f65ce6d1f9",
+      "wall_seconds": 11.404563496995252
+    },
+    "matrix_regime_shift": {
+      "exit_status": 0,
+      "max_rss_kib": 445296,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_regime_shift/receipt.json",
+      "sha256": "9800cc3e14447ec98ca17bd68f04c556d13572fbdcfa7f47d778cbcbf19b7190",
+      "wall_seconds": 17.619713886997488
+    },
+    "matrix_replay": {
+      "exit_status": 0,
+      "max_rss_kib": 445028,
+      "path_in_evidence": "research/development/integrity_20261019/matrix_replay/receipt.json",
+      "sha256": "bcf06cd2274e6d8ec50a5b9c97e5e4f394c2009935019361e7ea254eee051655",
+      "wall_seconds": 10.844079482005327
+    },
+    "model_tensor_regressions": {
+      "exit_status": 0,
+      "max_rss_kib": 443496,
+      "path_in_evidence": "research/development/integrity_20261019/model_tensor_regressions/receipt.json",
+      "sha256": "a5d8cda19de421f9c31eacc29c16cdb994631446d2ed785d5a4bd1a20f0d4d16",
+      "wall_seconds": 11.902527300997463
+    },
+    "patched_integrity": {
+      "exit_status": 0,
+      "max_rss_kib": 142616,
+      "path_in_evidence": "research/development/integrity_20261019/patched_integrity/receipt.json",
+      "sha256": "9f4ff9e0aed269ce14fbf39bc91c09c419c05c312eb45b7070ddd690f3f6e110",
+      "wall_seconds": 7.496313617004489
+    },
+    "verify_matrix_heavy_tails": {
+      "exit_status": 0,
+      "max_rss_kib": 93124,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_heavy_tails/receipt.json",
+      "sha256": "11793227c8a489c4c9c17a852a547dd8d914ab3fa7dd8ee7b094c51a8a8814ef",
+      "wall_seconds": 1.870429893002438
+    },
+    "verify_matrix_linear_signal": {
+      "exit_status": 0,
+      "max_rss_kib": 93272,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_linear_signal/receipt.json",
+      "sha256": "15d8855f0cf054856a19898e9e7343bbf00f414abd131a28afa1f1b41f9091d3",
+      "wall_seconds": 1.7196916959946975
+    },
+    "verify_matrix_null": {
+      "exit_status": 0,
+      "max_rss_kib": 92860,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_null/receipt.json",
+      "sha256": "52c59084e2cc20fe25085dcb90da95b8ea42ac6f6ab1ab5b49febe49fc982e49",
+      "wall_seconds": 1.7702328899977147
+    },
+    "verify_matrix_preflight": {
+      "exit_status": 0,
+      "max_rss_kib": 93008,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_preflight/receipt.json",
+      "sha256": "8e98455485f3c0245cd9d6ca789f1ad6ace8b49333a97b21016198058a733dc2",
+      "wall_seconds": 1.6690597209963016
+    },
+    "verify_matrix_regime_shift": {
+      "exit_status": 0,
+      "max_rss_kib": 93116,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_regime_shift/receipt.json",
+      "sha256": "178f7881b4d269c99cbbeffc47c577f933260103e77935b93ac331e08ee9404f",
+      "wall_seconds": 1.7201833479994093
+    },
+    "verify_matrix_replay": {
+      "exit_status": 0,
+      "max_rss_kib": 93132,
+      "path_in_evidence": "research/development/integrity_20261019/verify_matrix_replay/receipt.json",
+      "sha256": "03e62605c7edd0bfa40d735c2775a09601e2947fcaa00e712eec52b9944b36e1",
+      "wall_seconds": 1.6692819070012774
+    }
+  },
+  "matrix_source_fingerprint": "8369f937581a33d013e34815bdb663f0669ccac0e1268a926e641d3ec7318811",
+  "maximum_score_recomputation_discrepancy": 1.7763568394002505e-15,
+  "not_executed": [
+    "Authenticated Kaggle job",
+    "Protected confirmation",
+    "Market backtest",
+    "Separate FREM experiment",
+    "GitHub Actions dispatch",
+    "Trade or competition submission"
+  ],
+  "preflight_cells": 24,
+  "primary_matrix": {
+    "completed": 288,
+    "expected": 288,
+    "failed_cells": 0,
+    "independent_seeds_per_world": 3,
+    "models": 12,
+    "variants_per_model": 2,
+    "worlds": 4
+  },
+  "recorded_utc": "2026-10-19T14:15:28.838813+00:00",
+  "replay": {
+    "demo_deterministic_files": 13,
+    "independent_reproduction": false,
+    "matrix_arrays_bitwise_equal": true
+  },
+  "replay_cells": 24,
+  "retained_failures": [
+    "Expected before-fix regressions",
+    "Original demo recorder IsADirectoryError after the numerical child completed",
+    "Original resource admission denial before matrix cells, followed by a recorded cache-aware amendment"
+  ],
+  "secondary_controls": {
+    "M11_scope": "Independent CVaR reduction of saved equal-weight path losses; no independent equal-weight ledger reconstruction",
+    "all_verified": true,
+    "model_world_control_summaries": 52,
+    "seed_comparisons": 156
+  },
+  "source_parent": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+  "tests": {
+    "before_fix": {
+      "exit_status": 1,
+      "reported": "30 failed, 8 passed, 9 subtests passed",
+      "scope": "Expected failure against preserved parent source; failed subtests are not 30 distinct defects"
+    },
+    "demo_journal_regression": {
+      "exit_status": 0,
+      "reported": "9 passed; eight repeated and one new late-failure test"
+    },
+    "finite_difference_gradients": {
+      "exit_status": 0,
+      "reported": "3 passed"
+    },
+    "kaggle_driver_contract": {
+      "exit_status": 0,
+      "reported": "8 passed; repeated final-source helper check. No authenticated Kaggle execution"
+    },
+    "model_tensor_regressions": {
+      "exit_status": 0,
+      "reported": "44 passed"
+    },
+    "patched_integrity": {
+      "exit_status": 0,
+      "reported": "58 passed, 70 subtests passed"
+    }
+  },
+  "verified_cell_executions": 336
+}

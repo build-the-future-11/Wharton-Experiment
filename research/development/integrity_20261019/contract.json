@@ -1,0 +1,46 @@
+{
+  "session": "integrity_20261019",
+  "phase": "development_engineering_only",
+  "parent_commit": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+  "branch": "research/wharton-integrity-20261019",
+  "owner": "ChatGPT /root, sole remote writer; subagents assigned disjoint new files",
+  "protected_evaluation_access": false,
+  "old_results_rewritten": false,
+  "budget": {
+    "compute_lanes": 1,
+    "numeric_threads": 1,
+    "total_child_wall_seconds_limit": 900,
+    "per_command_timeout_seconds": 180,
+    "development_seed": 2026101908,
+    "confirmation_runs": 0,
+    "market_downloads": 0,
+    "paid_compute": 0,
+    "github_action_runs_requested": 0
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "cpu_count": 9,
+    "cgroup_memory_limit_bytes": 8589934592,
+    "cgroup_memory_current_bytes": 8038412288,
+    "packages": {
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "scikit-learn": "1.8.0",
+      "pandas": "2.2.3"
+    }
+  },
+  "source_snapshot": "201 hash-verified files retrieved via GitHub connector; exact baseline retained outside working source",
+  "planned_commands": [
+    "before-fix targeted regression tests",
+    "patched accounting/split/causal tests",
+    "development as-of/baseline/portfolio demonstration",
+    "exact numerical replay for same-host determinism",
+    "bounded tensor interface tests if local CPU PyTorch becomes usable"
+  ],
+  "blocking_external_evidence": {
+    "Kaggle": "no connector, local browser plugin timed out; cloud Kaggle shows Login, no authenticated notebook/quota/accelerator verified",
+    "GitHub_Actions_billing": "no account billing capability exposed; inherited workflow is restricted to another branch, no workflow edited or dispatched",
+    "market_data": "exact historical ETF cache not recovered; no licensed point-in-time market evaluation admitted"
+  }
+}

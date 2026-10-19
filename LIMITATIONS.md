@@ -1,3 +1,13 @@
+# Current limitations - 19 October 2026
+
+Current development uses synthetic data and three simulation seeds per world. Only the declared 24-cell subset was replayed; all 288 primary cells were score-verified. M11 has four held-out obligation paths per cell, so empirical CVaR95 is their maximum. The regime-shift generator changes both serial dependence and volatility. Several mechanisms lose to their own ablation, and simpler stored controls overturn apparent named-comparator gains. No clean independent host reproduction or market evaluation has been executed.
+
+The new admission module enforces declarations, bytes and clocks; it does not certify external data or rewrite the permissive legacy ETF loader. The older chronological/HAC aggregation issue remains contained and unused in the new analysis. Private case text is a working-copy recovery, not an independently version-matched organizer PDF. Full integrated FREM implementation, novelty, capacity-aware nonlinear comparisons, current team records and final submission readiness remain unestablished. See [RESULTS.md](reports/integrity_20261019/RESULTS.md) for the full scope.
+
+## Preserved predecessor limitations
+
+The following numbered items describe the earlier generation. They are retained rather than silently rewritten after current repairs and source recovery.
+
 # Limitations
 
 1. The full client case, quantitative constraints, current security/trading rules, team registration/roster, WInS records and final-report rubric are missing. Recovered deliverable PDFs do not fill these gaps or authenticate later Apply updates.

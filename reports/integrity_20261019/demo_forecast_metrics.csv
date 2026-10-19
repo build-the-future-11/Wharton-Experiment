@@ -1,0 +1,5 @@
+model,mse
+historical_mean,8.760212999778458e-05
+ridge,8.944215823794368e-05
+trailing_5_momentum,0.0001079575006918733
+zero_no_change,8.646060491087302e-05

@@ -1,0 +1,130 @@
+{
+  "amendment_id": "D-INTEGRITY-20261019-MATRIX-1",
+  "recorded_utc": "2026-10-19T13:37:21.515963+00:00",
+  "phase": "DEVELOPMENT",
+  "parent_contract_sha256": "30f46fd480f9099b3b1f026f5e6471d0898e19ac0b21545ccb83471caa3f9885",
+  "rationale": "Characterize unchanged model-specific full and predeclared ablation variants after the local tensor gate passed; do not optimize or select from outcomes.",
+  "source_parent": "fc90bc05b4a8df90f5b3ca5da86e5ed9791ff54c",
+  "source_identity": "Each runner records its entire src and runner SHA256 set before its first cell; source remains fixed during matrix cells.",
+  "preflight": {
+    "seed": 2026101910,
+    "worlds": [
+      "null"
+    ],
+    "models": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12"
+    ],
+    "n_test": 20,
+    "variants": 2,
+    "expected_cells": 24,
+    "artifacts": "matrix_preflight/artifacts",
+    "timeout_seconds": 120
+  },
+  "matrix": {
+    "seeds": [
+      2026101911,
+      2026101912,
+      2026101913
+    ],
+    "worlds": [
+      "null",
+      "linear_signal",
+      "regime_shift",
+      "heavy_tails"
+    ],
+    "models": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12"
+    ],
+    "n_test": 20,
+    "expected_cells": 288,
+    "runs": [
+      {
+        "world": "null",
+        "artifacts": "matrix_null/artifacts",
+        "timeout_seconds": 180
+      },
+      {
+        "world": "linear_signal",
+        "artifacts": "matrix_linear_signal/artifacts",
+        "timeout_seconds": 180
+      },
+      {
+        "world": "regime_shift",
+        "artifacts": "matrix_regime_shift/artifacts",
+        "timeout_seconds": 180
+      },
+      {
+        "world": "heavy_tails",
+        "artifacts": "matrix_heavy_tails/artifacts",
+        "timeout_seconds": 180
+      }
+    ]
+  },
+  "replay": {
+    "seed": 2026101911,
+    "worlds": [
+      "null"
+    ],
+    "models": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12"
+    ],
+    "n_test": 20,
+    "expected_cells": 24,
+    "artifacts": "matrix_replay/artifacts",
+    "timeout_seconds": 120,
+    "class": "same_host_replay_not_independent_replication"
+  },
+  "primary_contrasts": [
+    "full loss minus own baseline loss",
+    "full loss minus own ablation loss"
+  ],
+  "losses_and_baselines": "protocol/PORTFOLIO_RESEARCH_V1.md unchanged, exact per-cell configs and task labels retained",
+  "independent_unit": "simulation seed within one world, never dates/assets/paths/replays",
+  "uncertainty": "all3paired seed values,mean,min,max,and exploratory95%Student-t interval with df2; no p-values, multiplicity discovery, or cross-task raw-loss leaderboard",
+  "selection": "none; fixedmodels,hyperparameters,worlds,seedorder and every failedcell retained",
+  "budgets": {
+    "single_compute_lane": true,
+    "numeric_threads": 1,
+    "session_child_wall_limit_seconds": 900,
+    "used_before_amendment_seconds": 123.62582391800242,
+    "recorder_failure_charged_full_timeout_seconds": 90,
+    "minimum_cgroup_available_bytes_before_command": 1073741824,
+    "paid_compute": 0,
+    "confirmation_runs": 0
+  },
+  "stopping": "Preflight must complete without cellfailure. Full matrix starts only if 12*measured preflight wall plus a 120second verification reserve fits remaining session budget. Before every world check remaining time and memory. A command never exceeds180seconds. On error, timeout, resource gate or exhausted budget retain attempted results and stop the matrix; no seed replacement or score-based extension.",
+  "interpretation": "Constructed model-characterization only. M11 empiricalCVaR95 with four heldout windows is their maximum; not calibrated population tail risk. No market alpha, novel architecture, independent reproduction or client suitability claim."
+}
