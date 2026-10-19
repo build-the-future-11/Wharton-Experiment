@@ -1,0 +1,8 @@
+{
+  "observation": "Corrected full Kaggle run: 699 S10 tests and 37 wrapper tests passed; no failures/skips.",
+  "hypothesized_cause": "Recorded launcher repairs and unique-origin replay validation resolve every observed failure.",
+  "change": "Reconcile canonical state and handoff to verified full generated engineering suite. Preserve previous failed archives and scientific history.",
+  "predicted_effect": "Future sessions can reproduce exact test evidence without conflating it with production/scientific qualification.",
+  "discriminating_experiment": "Downloaded saved version359065132 result ZIP matches live SHA256; all699 identical node IDs passed; JUnit and source inventory match; resource counters stable; CPU stop UI verified.",
+  "result": "KAGGLE_FULL_S10_ENGINEERING_SUITE_VERIFIED; scientific_status NOT_EVALUATED; production_qualified false."
+}

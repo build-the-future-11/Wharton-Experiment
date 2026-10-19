@@ -1,0 +1,23 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 6,
+  "status": "FROZEN_PROSPECTIVE_EVIDENCE_RECONSTRUCTION_AND_WARNING_STRICTNESS_MARKET_EXECUTION_GATED",
+  "base_protocol_sha256": "8c746364f07224b4790c7424f07eceb7da6a2d407c522e250c4a8c073b7d3002",
+  "supersedes_delivery_contract_only": "P0v5.1",
+  "market_outcomes_observed_before_amendment": false,
+  "target_warning_contract": "python_warnings_are_errors_for_all_packaged_target_commands",
+  "download_contract": "complete_regular_non_symlink_inventory_verified_by_independent_local_command",
+  "search_reconstruction_contract": "selection_reloads_raw_laws_outcomes_and_scores_and_reconstructs_each_energy_score",
+  "fixed_reconstruction_contract": "analysis_reconstructs_energy_variogram_holdings_and_wealth_from_raw_laws_targets_and_outcomes",
+  "path_ownership_contract": "search_and_fixed_bundle_paths_must_match_embedded_cell_identity",
+  "artifact_schema": 2,
+  "checkpoint_schema": 2,
+  "search_artifact_schema": 2,
+  "model": "unchanged_from_p0v5",
+  "cells": "unchanged_from_p0v5",
+  "controls": "unchanged_from_p0v5",
+  "thresholds": "unchanged_from_p0v5",
+  "inference": "unchanged_from_p0v5",
+  "budgets": "unchanged_from_p0v5",
+  "scientific_status": "NOT_EVALUATED"
+}

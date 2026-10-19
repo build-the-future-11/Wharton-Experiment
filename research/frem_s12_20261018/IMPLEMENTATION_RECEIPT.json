@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-10-18T08:28:55Z",
+  "status": "P0V2_IMPLEMENTED_LOCAL_ENGINEERING_VERIFIED_WITH_ONE_USE_CONSUMPTION_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "git_head": "0201c2df8b470271543a9b1c9a5de0e46d6418ec",
+  "branch": "codex/repo-cleanup-efficiency",
+  "decision_journal_entry_sha256": "d7de8cbeba7e589621b9c7d3d60981e42e0c54195219c693926473fa5bf2e346",
+  "source_identity": "eac738e4d7eec6a81029c15bb93fb1529a14dacc169fd433c058883d89240240",
+  "protocol": {
+    "path": "successors/frem_s12/protocol_p0.json",
+    "version": 2,
+    "sha256": "97c83d00d4cdcec38edf2070e1827b554e2f94bdccc55a308c1e55a0baa1052c"
+  },
+  "tests": {
+    "passed": 34,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "seconds": 19.63
+  },
+  "quality": {
+    "ruff_lint": "PASS",
+    "ruff_format": "PASS",
+    "mypy_strict_modules": 20,
+    "mypy_strict": "PASS",
+    "build": "PASS",
+    "clean_wheel_cli": "PASS",
+    "notebook_json": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "wheel_sha256": "f96e194b4c4eda1355f242e17b49449546ff20309ae4881ee5f52545c14d78e8",
+  "sdist_sha256": "323016c4612f17d85980523bf56c113550c551cc2475a61a78df77557d2235ce",
+  "kaggle_notebook_sha256": "c6f9973c328c1934a101f34a90d405e3d5d3b83cf92dc6cffea6f47d1aaaf41c",
+  "generated_smoke": {
+    "path": "research/frem_s12_20261018/generated_smoke_p0v2_consumption_final",
+    "manifest_sha256": "5bba30d63612e4c4a9e98057e36f91c6c357ca2a1d68b1b144e914b384d882b0",
+    "arrays_sha256": "c6b9e8c93a71c010835a1c7935d359f6c1fec5529693bf3c8c3dd7e31fdd69ef",
+    "summary_sha256": "71d29df2eb512937398077bf83d8fe59f6b11a44cb59a834dcf96e7df94b1e03",
+    "origins": 24,
+    "engineering_only": true,
+    "candidate_mean_energy": 0.02384071844215631,
+    "s11_mean_energy": 0.023121430210044324,
+    "selected_non_frem": "var",
+    "selected_non_frem_mean_energy": 0.022861457510486,
+    "disposition": "MIXED_NEGATIVE_ENGINEERING_OBSERVATION_NO_SCIENTIFIC_INFERENCE"
+  },
+  "preserved_pre_consumption_smoke": "research/frem_s12_20261018/generated_smoke_p0v2",
+  "registries": {
+    "search_trials": 24,
+    "search_cells": 144,
+    "search_validation": "Fold A 199801-199912 only",
+    "fixed_cells": 120
+  },
+  "evidence": {
+    "literature_review_complete": true,
+    "source_rights_contamination_audit_complete": true,
+    "protocol_frozen": true,
+    "model_implemented": true,
+    "kaggle_session_started": false,
+    "archives_acquired": 0,
+    "data_rows_parsed": 0,
+    "search_cells_consumed": 0,
+    "fixed_cells_consumed": 0,
+    "market_fits": 0,
+    "protected_access": false,
+    "scientific_status": "NOT_EVALUATED"
+  }
+}

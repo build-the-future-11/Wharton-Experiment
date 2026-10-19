@@ -1,0 +1,9 @@
+Using Python 3.12.14 environment at: s10_full_tests_attempt3/runtime/venv
+Resolved 5 packages in 253ms
+Prepared 5 packages in 137ms
+Installed 5 packages in 45ms
+ + iniconfig==2.3.1
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pygments==2.21.0
+ + pytest==8.4.2

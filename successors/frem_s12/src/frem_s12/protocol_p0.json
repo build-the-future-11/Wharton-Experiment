@@ -1,0 +1,19 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 2,
+  "status": "FROZEN_FOR_IMPLEMENTATION_AND_GENERATED_VERIFICATION_MARKET_EXECUTION_GATED",
+  "development_release": 201608,
+  "development_cutoff": 201512,
+  "families": ["size_bm", "size_op", "size_inv"],
+  "search": {
+    "maximum_trials": 24,
+    "seeds": [11, 29],
+    "selection_fold": "A_validation_199801_199912_only",
+    "cell_count": 144,
+    "fixed_matrix_requires_source_current_selection_receipt": true
+  },
+  "fixed_matrix_seeds": [11, 29, 47, 71, 97],
+  "primary_relative_improvement": 0.05,
+  "variogram_noninferiority": 0.01,
+  "market_execution": "requires separate source, environment, host, data, search-selection, campaign and consumption receipts"
+}

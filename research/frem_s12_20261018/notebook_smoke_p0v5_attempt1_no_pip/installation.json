@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s12/.venv/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--no-compile",
+    "--target",
+    "/tmp/frem-s12-p0v5-notebook-sim-site-1330",
+    "/tmp/frem-s12-p0v5-notebook-sim-input-1330/frem_s12-0.1.2-py3-none-any.whl"
+  ],
+  "returncode": 1,
+  "schema": "frem-s12-isolated-install-v1",
+  "stderr": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s12/.venv/bin/python: No module named pip\n",
+  "stdout": "",
+  "target": "/tmp/frem-s12-p0v5-notebook-sim-site-1330",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "verification_returncode": null,
+  "verification_stderr": null,
+  "verification_stdout": null
+}

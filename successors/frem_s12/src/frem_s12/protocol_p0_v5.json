@@ -1,0 +1,29 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 5,
+  "status": "FROZEN_PROSPECTIVE_KAGGLE_DELIVERY_HARDENING_MARKET_EXECUTION_GATED",
+  "base_protocol_sha256": "8c746364f07224b4790c7424f07eceb7da6a2d407c522e250c4a8c073b7d3002",
+  "supersedes_delivery_contract_only": "P0v4",
+  "market_outcomes_observed_before_amendment": false,
+  "runtime_allowlist": {
+    "python_3.12": "numpy==2.5.4",
+    "python_3.13": "numpy==2.1.3"
+  },
+  "qualification_timing_repeats": 3,
+  "qualification_projection_statistic": "maximum_observed_seconds",
+  "qualification_artifact_size_requirement": "byte_count_stable_across_repeats",
+  "installation_contract": "exact_hash_wheel_installed_no_index_no_deps_no_compile_into_fresh_isolated_target",
+  "input_contract": "recursive_regular_non_symlink_inventory_with_canonical_sha256",
+  "output_contract": "fresh_output_root_and_no_overwrite_hash_size_manifest",
+  "thread_contract": "single_thread_reference_environment",
+  "artifact_schema": 2,
+  "checkpoint_schema": 2,
+  "search_artifact_schema": 2,
+  "model": "unchanged_from_p0v4",
+  "cells": "unchanged_from_p0v4",
+  "controls": "unchanged_from_p0v4",
+  "thresholds": "unchanged_from_p0v4",
+  "inference": "unchanged_from_p0v4",
+  "budgets": "unchanged_from_p0v4",
+  "scientific_status": "NOT_EVALUATED"
+}

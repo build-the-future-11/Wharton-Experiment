@@ -1,0 +1,8 @@
+{
+  "observation": "User requests full S10 test suite on Kaggle after completed generated smoke.",
+  "hypothesized_cause": "Full current S10 Linux test compatibility is unverified.",
+  "change": "Separate generated engineering test attempt: all S10 pytest cases without selection plus all Kaggle wrapper unittest cases. CPU only, one BLAS thread, 1 GiB per-process address ceiling, 600 CPU seconds per process, 900 seconds per test command wall ceiling, 512 MiB reserve and stable visible namespace pressure samples. Source and tests uploaded only; no market data. Hidden ancestor constraints remain UNKNOWN; production gate unchanged. Fresh attempt directories preserve failures.",
+  "predicted_effect": "Expose and repair actual Linux portability defects without reopening studies.",
+  "discriminating_experiment": "Upload exact inventory, execute complete tests with warnings as errors, retain logs and per-node results, fix defects then rerun full suite and retrieve final artifacts.",
+  "result": "PROPOSED_BEFORE_FULL_TEST_EXECUTION"
+}

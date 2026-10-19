@@ -1,0 +1,10 @@
+{
+  "status": "AUTHORED_NOT_EXECUTED_ON_KAGGLE",
+  "source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+  "runner_sha256": "a919a94c7956c9d93df609178b5f9778fd7c34f34edfab3329e7aae4079b206c",
+  "notebook_sha256": "612c500036e9a42ddffe3780039c325969fa7a6b0b4c4cd2ca31152ea11de0af",
+  "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+  "sections": 12,
+  "cloud_execution": false,
+  "scientific_status": "NOT_EVALUATED"
+}

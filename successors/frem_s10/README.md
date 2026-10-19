@@ -10,7 +10,7 @@ From the repository root, first obtain passing fresh host admission before full 
 
 ```bash
 rtk proxy env UV_CACHE_DIR=research/frem_s10_implementation_20261015/uv_cache uv sync --project successors/frem_s10 --locked --offline --group quality --group build
-rtk proxy env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 successors/frem_s10/.venv/bin/python -B -m pytest -c successors/frem_s10/pyproject.toml successors/frem_s10/tests -q -W error -p no:cacheprovider
+rtk proxy env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 successors/frem_s10/.venv/bin/python -B -m pytest -c successors/frem_s10/pyproject.toml successors/frem_s10/tests -q -W error -p no:cacheprovider
 rtk proxy successors/frem_s10/.venv/bin/mypy --config-file successors/frem_s10/pyproject.toml successors/frem_s10/src/frem_s10 successors/frem_s10/tests
 rtk proxy successors/frem_s10/.venv/bin/ruff check --config successors/frem_s10/pyproject.toml successors/frem_s10/src/frem_s10 successors/frem_s10/tests
 rtk proxy successors/frem_s10/.venv/bin/s10-research plan --manifest successors/frem_s10/src/frem_s10/science.json

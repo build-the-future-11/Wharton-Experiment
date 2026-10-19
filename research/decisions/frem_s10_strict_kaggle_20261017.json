@@ -1,0 +1,7 @@
+{
+  "observation": "Actual Kaggle CPU retry again denied namespaces, lacked bubblewrap and hid cgroup ancestors.",
+  "change": "Remove unsandboxed Kaggle verification branch; reject namespace-only host and replayed resource receipts; keep catalog partial. Preserve prior alternatives and probe.",
+  "discriminating_experiment": "Three stdlib regression checks and scoped lint pass; actual metadata probe blocked at unchanged platform requirements.",
+  "result": "No scientific attempt consumed; zero market work. Scheduled six-hour guarded follow-up in this chat.",
+  "receipt": "research/frem_s10_strict_kaggle_20261017/RECEIPT.json"
+}

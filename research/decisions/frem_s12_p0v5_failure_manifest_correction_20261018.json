@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-10-18T13:35:38Z",
+  "iteration": "FREM-S12-P0V5.1",
+  "scope": "PRE_UPLOAD_FAILURE_EVIDENCE_CORRECTION",
+  "observation": "End-to-end notebook review found that an unadmitted qualification raised in the command cell before the final run-manifest cell, preserving preflight, installation and environment receipts but omitting the whole-run manifest promised by P0v5. No Kaggle upload, market archive or outcome had occurred.",
+  "hypothesized_cause": "The admission postcondition was checked before evidence finalization instead of after it.",
+  "change": "Capture command stdout, stderr and return code in immutable command.json; defer command/admission failure until after the final hash-and-size run manifest is written; then raise to keep the Kaggle version visibly failed closed.",
+  "predicted_effect": "Both successful and failed qualification attempts retain a complete auditable output inventory without allowing an unadmitted run to continue into science.",
+  "discriminating_experiment": "Compile all notebook cells, run the exact notebook generated-smoke path through isolated installation, verify command.json and run-manifest.json, and statically require that the postcondition error is raised only after manifest creation.",
+  "result": "FAILURE_MANIFEST_ORDER_CORRECTED_BEFORE_UPLOAD",
+  "superseded_notebook_sha256": "d4907c8fe47182de579ee2e7a47394c9e002cd623223cea33f604504dcc489d3",
+  "notebook_sha256": "605bdd9d99d7e421ca088c4161ea18589a99ab0e2a53177f609363da4ac2c5ce",
+  "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06",
+  "model_changed": false,
+  "cells_changed": false,
+  "controls_changed": false,
+  "thresholds_changed": false,
+  "inference_changed": false,
+  "budgets_changed": false,
+  "archives_acquired": 0,
+  "market_fits": 0,
+  "scientific_status": "NOT_EVALUATED"
+}

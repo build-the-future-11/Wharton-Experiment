@@ -1,0 +1,36 @@
+{
+  "status": "PASS_LOCAL_READBACK_OF_KAGGLE_RESULT_ARCHIVE",
+  "pytest_collected": 699,
+  "pytest_passed": 699,
+  "pytest_failed": 0,
+  "pytest_skipped": 0,
+  "wrapper_passed": 37,
+  "same_node_ids_as_failing_attempt": true,
+  "source_inventory_exact_match": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 14 2026, 15:34:45) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "packages": {
+      "frem-s10": "0.1.0",
+      "pluggy": "1.7.0",
+      "numpy": "2.5.4",
+      "iniconfig": "2.3.1",
+      "packaging": "26.3",
+      "pytest": "8.4.2",
+      "Pygments": "2.21.0"
+    }
+  },
+  "source_file_count": 150,
+  "source_inventory_sha256": "4e7f9a0e855a6699a6c90277709fb502da626919c48d6e4b5edc545f71e595ac",
+  "result_archive_sha256": "76a49f321c8090bbb84fda56edbe7adddcdce80054733144e1b4da61f487541d",
+  "prior_failure_archive_sha256": "3875a4512e90bbc697ae47025984474841d249309b834171d2053a905d319cdc",
+  "postflight_pressure_unchanged": true,
+  "scientific_status": "NOT_EVALUATED",
+  "production_qualified": false,
+  "saved_version_verification": "SAVED_VERSION_DOWNLOAD_HASH_VERIFIED",
+  "script_version_id": 359065132,
+  "saved_version_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-full-test-suite-2026-10-16/output?scriptVersionId=359065132",
+  "session_stopped_ui_verified": true,
+  "verified_utc": "2026-10-16T16:22:43.053358+00:00",
+  "local_source_and_tests_match": true
+}

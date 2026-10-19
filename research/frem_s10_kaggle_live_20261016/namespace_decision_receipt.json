@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-16T10:33:57.575267+00:00",
+  "previous": "5e441f15ef0a30352f3284b06f84b5749a8950a647726c3db8cc9b900c6f6eda",
+  "event": {
+    "observation": "Actual Kaggle Python3.12.14/NumPy2.5.4 probe succeeds; full-root host contract rejects cgroup namespace. Visible namespace memory.max=32212254720, current=1863487488, all memory.events zero.",
+    "hypothesized_cause": "Production full-ancestor visibility contract is stricter than a container can expose. This is an unsupported platform, not a false resource PASS.",
+    "change": "Add separate generated-smoke-only namespace contract: require three stable samples, at least 1536 MiB visible headroom (1 GiB address ceiling plus original 512 MiB reserve), stable pswpout and memory.events, fixed namespace identity, hard 1 GiB address-space / 75s CPU bounds and existing parent wall deadlines. Allow only fixed sealed 12-origin generated smoke commands. Production full-ancestry gate remains unchanged; hidden ancestors remain explicitly unverified.",
+    "predicted_effect": "Bound the tiny engineering worker independently while preserving truthful namespace limitations; no production, development-engineering or market admission.",
+    "discriminating_experiment": "Stdlib adverse namespace/command fixtures, then exact target probe, external persistence verification, interrupt/resume/evaluate/export and saved-output readback.",
+    "result": "PROPOSED_BEFORE_NUMERICAL_EXECUTION; preserve first rejected probe and prior wrappers."
+  },
+  "sha256": "50090f72ca19debb263308730745c773705a74c6059488c1ff9002e2a94992f4"
+}

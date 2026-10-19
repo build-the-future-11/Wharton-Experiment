@@ -224,16 +224,20 @@ def _observed_resources(reference: JSONValue, root: Path, completion: JSONObject
     with path.open("rb") as stream:
         for line in stream:
             event = object_json(object_json(parse_json(line))["event"])
+            from frem_s10.runtime.kaggle_contract import CONTRACT
+
+            kaggle = event.get("resource_contract") == CONTRACT
+            available_name = "host_available_mib" if kaggle else "free_plus_speculative_mib"
+            pressure_name = "pressure_counter" if kaggle else "pageouts"
             values = tuple(
-                event[name]
-                for name in ("elapsed_seconds", "owned_rss_mib", "output_bytes", "free_plus_speculative_mib")
+                event[name] for name in ("elapsed_seconds", "owned_rss_mib", "output_bytes", available_name)
             )
             if any(
                 type(value) not in (float, int) or not math.isfinite(float(str(value))) for value in values
             ):
                 raise IntegrityError("finite observed resource measurements required")
             elapsed, rss, size, available = (float(str(value)) for value in values)
-            current_pageouts = event["pageouts"]
+            current_pageouts = event[pressure_name]
             if type(current_pageouts) is not int or (pageouts is not None and current_pageouts != pageouts):
                 raise IntegrityError("qualification pageouts increased or became unavailable")
             if (
@@ -243,7 +247,7 @@ def _observed_resources(reference: JSONValue, root: Path, completion: JSONObject
                 or size < 0
                 or not 0 < rss <= 256
                 or size > 2_147_483_648
-                or available < 512
+                or available < (1536 if kaggle else 512)
             ):
                 raise IntegrityError("qualification exceeded its observed resource bounds")
             peak, previous, pageouts = max(peak, rss), elapsed, current_pageouts

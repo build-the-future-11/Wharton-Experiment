@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-18T09:43:50Z",
+  "iteration": "FREM-S12-P0V3",
+  "scope": "PRE_DATA_KAGGLE_COST_PROJECTION_CORRECTION",
+  "observation": "Final admission-receipt review found that the first P0v3 Kaggle probe timed the default configuration on Fold A and multiplied it by all 264 search/fixed cells. Fold A is the earliest and generally cheapest chronology, and the default configuration is not the largest declared search configuration, so the claimed conservative projection could understate runtime. No Kaggle session, official archive, search/fixed cell, market fit or protected outcome had been accessed.",
+  "hypothesized_cause": "The representative probe conflated a functional end-to-end check with a worst-declared-shape budget bound.",
+  "change": "Measure the largest declared configuration (trial 23) separately on the latest fixed fold H and on a complete Fold-A search cell. Project 120 fixed cells and 144 search cells using their separate measured times, and bound each of eight shards by 33 copies of the slower/larger measured unit. Retain the earlier P0v3 receipt and smoke as stale-source engineering evidence, issue a new final source identity and no-overwrite smoke, and do not change the protocol, hypothesis, thresholds, cells or budgets.",
+  "predicted_effect": "Kaggle admission can no longer be granted from an early/default workload that understates the declared campaign; actual target timing may only reduce admissible work relative to the frozen ceilings.",
+  "discriminating_experiment": "The final source must pass all 40 warnings-as-errors tests, Ruff, strict mypy, build and clean-wheel verification; the wheel must embed both protocols; the new smoke must bind the final source; and actual Kaggle qualify-kaggle must retain both phase measurements and pass every projection limit.",
+  "result": "P0V3_FINAL_INTEGRITY_HARDENED_LOCAL_ENGINEERING_VERIFIED_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "source_identity": "308c50495c66bf536be0ab39226442e7bdb042f399c15bdca1c9692b3cfbe4c8",
+  "protocol_sha256": "fe8ecbbff4dc8a63d8354a7a9cab82c778b3eb5b1ba5a54bf1b115a69c03ab9d",
+  "tests": {
+    "passed": 40,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "seconds": 22.66
+  },
+  "wheel_sha256": "cae8c17b2f0ae34062854e510d4fd033d4f5d3a5631b0fef7cd780159e59df52",
+  "sdist_sha256": "efdf79f98f823f8514ac734adced5983d59563004eff4158b0147075af8bfd0e",
+  "generated_smoke_manifest_sha256": "0541ed7e9d787fb0ed122a6adc96108e12b2f569ac24fa098eb59c117d957593",
+  "duplicate_generated_smoke_note": "A second generated-smoke command was inadvertently started while the first command's asynchronous completion was not visible. generated_smoke_p0v3_final and generated_smoke_p0v3_final_b are byte-identical and engineering-only; both are preserved and neither consumes science.",
+  "kaggle_session_started": false,
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

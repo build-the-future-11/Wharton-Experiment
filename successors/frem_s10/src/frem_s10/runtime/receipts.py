@@ -5,7 +5,7 @@ from pathlib import Path
 
 from frem_s10.errors import IntegrityError
 from frem_s10.identities import JSONObject, digest_bytes, object_json, parse_json
-from frem_s10.metadata import finite_float, parse_utc_timestamp, strict_int
+from frem_s10.metadata import finite_float, strict_int
 from frem_s10.runtime.artifacts import _plain_directory, read_verified_json
 from frem_s10.runtime.declarations import _read, _reference
 from frem_s10.runtime.journal import inspect_journal
@@ -99,29 +99,12 @@ def _audit_preflight(result: JSONObject, root: Path) -> int:
     samples = host.get("samples")
     if host.get("status") != "PASS" or not isinstance(samples, list) or len(samples) != 3:
         raise IntegrityError("three passing preflight observations required")
-    rows = tuple(object_json(sample) for sample in samples)
-    pageouts = strict_int(rows[0].get("pageouts"), name="pageouts", minimum=0)
-    previous_clock: int | None = None
-    for row in rows:
-        clock = parse_utc_timestamp(row.get("timestamp"))
-        if previous_clock is not None and clock - previous_clock < 1_000_000:
-            raise IntegrityError("preflight resource samples are less than one second apart")
-        previous_clock = clock
-        available = (
-            (
-                strict_int(row.get("free_pages"), name="free pages", minimum=0)
-                + strict_int(row.get("speculative_pages"), name="speculative pages", minimum=0)
-            )
-            * strict_int(row.get("page_size_bytes"), name="page size", minimum=1)
-            / 2**20
-        )
-        if (
-            available != row.get("available_mib")
-            or available < 512
-            or strict_int(row.get("pageouts"), name="pageouts", minimum=0) != pageouts
-        ):
-            raise IntegrityError("preflight memory floor or pageout condition failed")
-    return pageouts
+    from frem_s10.runtime.resources import audit_memory_rows
+
+    try:
+        return audit_memory_rows(samples)
+    except Exception as exc:
+        raise IntegrityError("preflight memory floor or pressure condition failed") from exc
 
 
 def _audit_resources(result: JSONObject, supervisor: JSONObject, root: Path) -> None:
@@ -169,10 +152,16 @@ def _audit_resources(result: JSONObject, supervisor: JSONObject, root: Path) -> 
 
 
 def _resource_row(row: JSONObject, supervisor: JSONObject, pageouts: int) -> None:
-    if (
-        finite_float(row.get("free_plus_speculative_mib"), name="host MiB") < 512
-        or strict_int(row.get("pageouts"), name="pageouts", minimum=0) != pageouts
-    ):
+    from frem_s10.runtime.kaggle_contract import CONTRACT
+
+    kaggle = row.get("resource_contract") == CONTRACT
+    available = finite_float(
+        row.get("host_available_mib" if kaggle else "free_plus_speculative_mib"), name="host MiB"
+    )
+    pressure = strict_int(
+        row.get("pressure_counter" if kaggle else "pageouts"), name="pressure counter", minimum=0
+    )
+    if available < (1536 if kaggle else 512) or pressure != pageouts:
         raise IntegrityError("host resource condition failed during operation")
     rss = finite_float(row.get("owned_rss_mib"), name="observed RSS")
     if not 0 < rss <= 256 or rss > finite_float(

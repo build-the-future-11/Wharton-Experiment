@@ -1,0 +1,29 @@
+{
+  "status": "GENERATED_CPU_ENGINEERING_COMPLETE",
+  "scientific_status": "NOT_EVALUATED",
+  "binding": {
+    "source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+    "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+    "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765",
+    "deadline": "2026-10-16T16:30:00+00:00",
+    "total_reserved_seconds_cap": 600,
+    "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"
+  },
+  "full_state_export": {
+    "archive": "state-1c8d804796d34fc49812a89254f9d2f2.zip",
+    "sha256": "1b13386989ffc25384bbbcc56a0a9278b5b2c23ab0020b05ba36fd9258b63180",
+    "files": 116,
+    "binding": {
+      "source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a",
+      "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031",
+      "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765",
+      "deadline": "2026-10-16T16:30:00+00:00",
+      "total_reserved_seconds_cap": 600,
+      "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"
+    },
+    "created_utc": "2026-10-16T11:13:28.096698+00:00",
+    "resumable": true,
+    "restore_note": "Only a terminal snapshot can resume; active invocation snapshots retain unknown time."
+  },
+  "platform_session_stopped": "NOT_OBSERVED_REQUIRES_KAGGLE_UI"
+}

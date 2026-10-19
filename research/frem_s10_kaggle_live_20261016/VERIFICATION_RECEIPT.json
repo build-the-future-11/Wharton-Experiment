@@ -1,0 +1,84 @@
+{
+  "status": "KAGGLE_GENERATED_CPU_END_TO_END_VERIFIED",
+  "verified_utc": "2026-10-16T11:19:49.492078+00:00",
+  "private_version": 3,
+  "script_version_id": 358985139,
+  "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-corrected-cpu-end-to-end-2026-10-16/output?scriptVersionId=358985139",
+  "full_state_sha256": "1b13386989ffc25384bbbcc56a0a9278b5b2c23ab0020b05ba36fd9258b63180",
+  "inventory_files_verified": 116,
+  "smoke_export_artifacts_verified": 48,
+  "smoke_export_total_members": 50,
+  "smoke_export_sha256": "9fc1c480945d131108f6e5017bb298717bf827b1b82f6aedbccd2c78089c4a32",
+  "stages": {
+    "interrupt": {
+      "active_seconds": 0.8936560140004985,
+      "binding": "1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa",
+      "completed": 3,
+      "gpu_execution": false,
+      "market_execution": false,
+      "output": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke",
+      "planned": 12,
+      "scientific_status": "NOT_EVALUATED",
+      "status": "INTERRUPTED"
+    },
+    "resume": {
+      "active_seconds": 2.593068430000585,
+      "binding": "1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa",
+      "completed": 12,
+      "gpu_execution": false,
+      "market_execution": false,
+      "output": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke",
+      "planned": 12,
+      "scientific_status": "NOT_EVALUATED",
+      "status": "COMPLETE"
+    },
+    "evaluate": {
+      "completed": 12,
+      "evidence_scope": "GENERATED_ENGINEERING",
+      "mean_contextual_energy_score": {
+        "primary": 1.177717243217002
+      },
+      "planned": 12,
+      "scientific_status": "NOT_EVALUATED",
+      "score_reconstruction": "exact binary64 equality in the bound environment",
+      "state_ids": {
+        "primary": "11311c2ae9a9077a0a5c9e13233f370c4e37abbcce92feaf5dc6443e6f34d867"
+      },
+      "status": "COMPLETE"
+    },
+    "completed-reuse": {
+      "completed": 12,
+      "evidence_scope": "GENERATED_ENGINEERING",
+      "mean_contextual_energy_score": {
+        "primary": 1.177717243217002
+      },
+      "output": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke",
+      "planned": 12,
+      "scientific_status": "NOT_EVALUATED",
+      "score_reconstruction": "exact binary64 equality in the bound environment",
+      "state_ids": {
+        "primary": "11311c2ae9a9077a0a5c9e13233f370c4e37abbcce92feaf5dc6443e6f34d867"
+      },
+      "status": "COMPLETE_REUSED",
+      "validated": true
+    },
+    "export": {
+      "archive": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke-export.zip",
+      "artifacts": 48,
+      "bytes": 775598,
+      "evidence_scope": "GENERATED_ENGINEERING",
+      "status": "COMPLETE"
+    }
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "device": "cpu"
+  },
+  "tests_passed": 37,
+  "session_stopped_ui_verified": true,
+  "production_qualified": false,
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "verification_note": "Initial nested ZIP check wrongly expected 48 total members; inspected schema and verified 48 artifacts plus generated evaluation.json and inventory.json. No archive or model change."
+}

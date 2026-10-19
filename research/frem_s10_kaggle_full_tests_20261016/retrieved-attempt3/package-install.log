@@ -1,0 +1,5 @@
+Using Python 3.12.14 environment at: s10_full_tests_attempt3/runtime/venv
+Resolved 1 package in 2ms
+Prepared 1 package in 2.60s
+Installed 1 package in 1ms
+ + frem-s10==0.1.0 (from file:///kaggle/working/s10_full_tests_attempt3/source/successors/frem_s10)

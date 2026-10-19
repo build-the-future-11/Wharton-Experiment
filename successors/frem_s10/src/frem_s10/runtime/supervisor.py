@@ -24,7 +24,7 @@ from frem_s10.identities import JSONValue, parse_json
 from frem_s10.runtime.artifacts import _plain_directory, publish_json, read_verified_json
 from frem_s10.runtime.consumption import consume
 from frem_s10.runtime.journal import Journal, inspect_journal, write_failure_receipt
-from frem_s10.runtime.resources import check_host, sample_memory
+from frem_s10.runtime.resources import check_host, pressure_counter, sample_memory
 
 
 @dataclass(frozen=True)
@@ -279,13 +279,26 @@ def _sample_guard(
     rss = sum(p.rss_bytes for p in records) / 2**20
     memory = sample_memory()
     size = directory_bytes(output)
+    from frem_s10.runtime.kaggle_contract import CONTRACT, active
+
+    host_fields = (
+        {
+            "host_available_mib": memory.available_mib,
+            "pressure_counter": pressure_counter(memory),
+            "resource_contract": CONTRACT,
+        }
+        if active()
+        else {
+            "free_plus_speculative_mib": memory.available_mib,
+            "pageouts": pressure_counter(memory),
+        }
+    )
     journal.append(
         {
             "elapsed_seconds": elapsed,
             "owned_rss_mib": rss,
             "output_bytes": size,
-            "free_plus_speculative_mib": memory.available_mib,
-            "pageouts": memory.pageouts,
+            **host_fields,
             "owned_processes": [{"pid": p.pid, "start_identity": p.started} for p in records],
         }
     )
@@ -295,7 +308,8 @@ def _sample_guard(
         )
     if elapsed > budget.wall_seconds or rss > budget.rss_mib or size > budget.output_bytes:
         raise ResourceLimitError("elapsed/RSS/output budget exceeded", details={"observed_rss_mib": rss})
-    if memory.available_mib < 512 or memory.pageouts != baseline_pageouts:
+    floor = 1536 if active() else 512
+    if memory.available_mib < floor or pressure_counter(memory) != baseline_pageouts:
         raise ResourceLimitError("host resource admission no longer holds", details={"observed_rss_mib": rss})
     _preflight_disk(output, 0, budget)
     if clock.read() - measurement_started > 0.5:
@@ -385,14 +399,19 @@ def _preflight(
     host_samples = host["samples"]
     if not isinstance(host_samples, list) or not host_samples or not isinstance(host_samples[-1], dict):
         raise ResourceLimitError("preflight sample provenance unavailable")
+    from frem_s10.runtime.resources import audit_memory_rows
+
+    expected_pressure = audit_memory_rows(host_samples)
     baseline = sample_memory()
-    if baseline.pageouts != host_samples[-1]["pageouts"]:
+    if pressure_counter(baseline) != expected_pressure:
         raise ResourceLimitError("pageouts changed immediately before consumption")
-    if baseline.available_mib < 512:
+    from frem_s10.runtime.kaggle_contract import active
+
+    if baseline.available_mib < (1536 if active() else 512):
         raise ResourceLimitError("resource floor failed immediately before consumption")
     if clock.elapsed() >= budget.wall_seconds:
         raise ResourceLimitError("budget expired immediately before consumption")
-    return baseline.pageouts, controller
+    return pressure_counter(baseline), controller
 
 
 def execute_operation(

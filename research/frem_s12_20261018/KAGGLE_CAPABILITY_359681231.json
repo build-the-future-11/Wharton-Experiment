@@ -1,0 +1,32 @@
+{
+  "schema_version": "frem-s12-kaggle-capability-observation-v1",
+  "script_version_id": 359681231,
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s12-campaign?scriptVersionId=359681231",
+  "run_status": "SUCCESS",
+  "runtime_seconds": 24.2,
+  "engineering_only": true,
+  "scientific_admitted": false,
+  "python": "3.13.15",
+  "python_executable": "/usr/bin/python3",
+  "numpy": "2.1.3",
+  "numpy_path": "/usr/local/lib/python3.13/dist-packages/numpy/__init__.py",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "processor_count": 4,
+  "input_root_exists": true,
+  "input_root_statvfs_read_only": true,
+  "network_disabled_observed": true,
+  "network_observation": "direct_tcp_connection_failed:TimeoutError",
+  "input_files": {
+    "datasets/ryangomez010/frem-s12-input/frem_s12-0.1.0-py3-none-any.whl": {
+      "bytes": 42574,
+      "sha256": "d476fd0ddc3b5914b96f8602b1361f4b3e6ca0dccd573fdf6999be62ff6e48fe"
+    }
+  },
+  "working_disk": {
+    "free_bytes": 20940541952,
+    "total_bytes": 20957446144,
+    "used_bytes": 126976
+  },
+  "evidence_boundary": "Transcribed exactly from the successful private Kaggle saved-version output; no market data or model code was accessed."
+}

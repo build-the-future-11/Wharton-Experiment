@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-18T04:25:13+00:00",
+  "iteration": "FREM-S11",
+  "scope": "NEW_SUCCESSOR_DESIGN_AND_IMPLEMENTATION_BEFORE_DATA_PARSE",
+  "observation": "S8 predictive effects were below the fixed practical threshold and its economic gate failed; S9 and S10 have no market result. Existing public ETF evidence is narrow and current-vintage, while S10 specialists share finite historical support and weakly differentiated information.",
+  "hypothesized_cause": "A narrow survivor-ETF sample, weak specialist diversity, sparse context and forecast-policy confounding may limit transferable signal. This is a hypothesis, not an established explanation of prior losses.",
+  "change": "Create separate FREM-S11 using historical release vintages of six reconstituted Fama/French size-value portfolios, four causal finite-law specialists, delayed capped score stacking, simple incumbents, revision stress and crossed policy attribution. Preserve all predecessor studies and thresholds.",
+  "predicted_effect": "Broader reconstituted histories and differentiated specialists may improve forecast stability and reveal whether any gain survives data revisions and simple baselines. Positive performance is not guaranteed.",
+  "discriminating_experiment": "One fixed two-fold development run on the August 2016 release through July 2016, plus common-cutoff August 2008/2016/2024 revision stress. Primary support requires at least five percent relative energy-score improvement over equal mixing and recency with paired intervals above zero in both folds.",
+  "result": "DESIGN_FROZEN_IMPLEMENTATION_IN_PROGRESS_DATA_UNACQUIRED_NOT_EVALUATED",
+  "protected_access": false,
+  "data_parsed": false,
+  "market_fits": 0,
+  "predecessors_reopened": false,
+  "original_frem_p0_unchanged": true,
+  "protocol": "successors/frem_s11/src/frem_s11/protocol.json",
+  "plan": "research/frem_s11_20261018/PLAN.md"
+}

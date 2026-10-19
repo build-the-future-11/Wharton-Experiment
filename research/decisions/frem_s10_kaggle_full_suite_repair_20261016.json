@@ -1,0 +1,8 @@
+{
+  "observation": "Full Kaggle suite: 688 passed and 11 failed; all 37 wrappers passed.",
+  "hypothesized_cause": "Eight smoke cases fail because launcher omits NUMEXPR/VECLIB controls; two import-isolation cases correctly remove PYTHONPATH but package was not installed. Existing causal future-perturbation regression reveals replay validates duplicate shared origins rather than the unique forecast origin union.",
+  "change": "Set all five declared thread controls before imports; install exact candidate as editable with no dependency substitution; validate forecast origins against sorted unique union across evaluation windows. Retain per-frame metadata and exact origin-set checks. Production fold schedules remain unchanged.",
+  "predicted_effect": "All original tests pass without skips or altered expected values. Shared generated-window origins reuse a single forecast while each ledger retains its own replay.",
+  "discriminating_experiment": "Run all 699 parameterized S10 tests and 37 wrappers on fresh candidate copy with exact inventory and retrieve logs.",
+  "result": "PROPOSED_BEFORE_CORRECTED_EXECUTION"
+}

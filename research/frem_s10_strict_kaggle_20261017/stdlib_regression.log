@@ -1,0 +1,8 @@
+test_namespace_receipt_rejected (__main__.StrictTests.test_namespace_receipt_rejected) ... ok
+test_no_unsandboxed_kaggle_route (__main__.StrictTests.test_no_unsandboxed_kaggle_route) ... ok
+test_strict_probe_identity (__main__.StrictTests.test_strict_probe_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.281s
+
+OK

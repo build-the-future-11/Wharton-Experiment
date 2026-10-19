@@ -1,0 +1,15 @@
+{
+  "command_returncode": 0,
+  "command_succeeded": true,
+  "execute": false,
+  "file_count": 6,
+  "input_inventory_sha256": "fe8610990fd3b358640f0cb169c8a97cfd10043844a98f927718bffc0f69bc4b",
+  "manifest_sha256": "3051dea1199a6dffe24971e598d985c11a4c96e5147398013dd79dd030f286cc",
+  "mode": "generated-smoke",
+  "package_version": "0.1.2",
+  "schema": "frem-s12-downloaded-run-verification-v1",
+  "scientific_admitted": false,
+  "total_bytes": 691590,
+  "verified": true,
+  "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06"
+}

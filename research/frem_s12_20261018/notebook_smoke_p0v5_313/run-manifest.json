@@ -1,0 +1,47 @@
+{
+  "command": [
+    "/usr/local/bin/python3.13",
+    "-m",
+    "frem_s12.cli",
+    "generated-smoke",
+    "--seed",
+    "11",
+    "--output",
+    "/tmp/frem-s12-p0v5-notebook-sim-output-1331/generated-smoke"
+  ],
+  "execute": false,
+  "files": {
+    "generated-smoke/arrays.npz": {
+      "sha256": "2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f",
+      "size": 682269
+    },
+    "generated-smoke/manifest.json": {
+      "sha256": "f8a00153b0f87bdc5205020775236a51c27d0ec6ef7fb84f51fb9957ebe4796c",
+      "size": 255
+    },
+    "generated-smoke/summary.json": {
+      "sha256": "631641c862e5ff916923e676ffd585662a2bbd353b8488340d04d5a5030e93ff",
+      "size": 1563
+    },
+    "installation.json": {
+      "sha256": "0b3732221794d75a142d219c7e9b6cf9f6c39b25f0f1e9948370706b4cb983e2",
+      "size": 3742
+    },
+    "preflight.json": {
+      "sha256": "dfde3377f904a0eb652dabe8a9ef6ee277599a82109f2f2774dddede3993cdc0",
+      "size": 925
+    }
+  },
+  "input_inventory_sha256": "fe8610990fd3b358640f0cb169c8a97cfd10043844a98f927718bffc0f69bc4b",
+  "mode": "generated-smoke",
+  "package_version": "0.1.2",
+  "schema": "frem-s12-kaggle-run-manifest-v1",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06"
+}

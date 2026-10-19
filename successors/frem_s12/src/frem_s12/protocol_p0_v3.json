@@ -1,0 +1,18 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 3,
+  "status": "FROZEN_PROSPECTIVE_VALIDITY_AMENDMENT_MARKET_EXECUTION_GATED",
+  "base_protocol_sha256": "97c83d00d4cdcec38edf2070e1827b554e2f94bdccc55a308c1e55a0baa1052c",
+  "market_outcomes_observed_before_amendment": false,
+  "artifact_schema": 2,
+  "checkpoint_schema": 2,
+  "search_artifact_schema": 2,
+  "inference": "average algorithmic seeds within family-fold; equal folds within family; equal fixed families; resample folds and circular 12-month blocks",
+  "positive_fraction_unit": "eight folds after equal family and seed averaging",
+  "scientific_environment_scope": "kaggle_scientific",
+  "local_environment_scope": "local_engineering_nonadmitting",
+  "causal_mlp_target": "raw_pre_outcome_network_mean",
+  "primary_thresholds": "unchanged_from_p0v2",
+  "budgets": "unchanged_from_p0v2",
+  "scientific_status": "NOT_EVALUATED"
+}

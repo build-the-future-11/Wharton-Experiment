@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-18T08:21:12Z",
+  "iteration": "FREM-S12-P0V2",
+  "scope": "PRE_DATA_PROTOCOL_FREEZE_IMPLEMENTATION_AND_LOCAL_GENERATED_VERIFICATION",
+  "observation": "The literature and source reviews found substantial prior art and a bounded public three-family source contract. During implementation review, a global all-fold validation search was identified as temporally unsafe because later validation could influence earlier tests. No S12 market bytes or outcomes had been accessed.",
+  "hypothesized_cause": "A causally delayed learned router may improve joint distribution forecasts, but additional flexibility and a leaky model-selection calendar could create spurious gains unless selection, controls, completeness and evidence identity are enforced prospectively.",
+  "change": "Freeze P0v2 with no broad novelty claim; restrict all 24 configurations to Fold A validation across three families and two seeds; require a complete 144-cell source-current selection receipt before any of 120 fixed cells; implement the router, controls, exact scores, checkpoint/resume, no-overwrite bundles, complete analysis and Kaggle launcher.",
+  "predicted_effect": "P0v2 should distinguish learned routing from controls without later-fold model-selection leakage. No positive market result is predicted, and missing cells must block interpretation.",
+  "discriminating_experiment": "After actual Kaggle qualification and exact data admission, consume all 144 Fold-A search cells once, freeze one selection, then run 120 fixed family-fold-seed cells. Require at least five-percent energy improvement over S11 and the selected strongest non-FREM control, Holm-corrected positive uncertainty, 75-percent positive folds, no negative family and variogram noninferiority.",
+  "result": "P0V2_IMPLEMENTED_LOCAL_ENGINEERING_VERIFIED_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "source_identity": "1a2e57452ec94d9a2a9350ed0d9278c7e9f66af35cf8132aa58b72ab4d5b648b",
+  "implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT.json",
+  "tests": {
+    "passed": 33,
+    "failed": 0
+  },
+  "generated_smoke_disposition": "MIXED_NEGATIVE_ENGINEERING_OBSERVATION_NO_SCIENTIFIC_INFERENCE",
+  "predecessors_reopened": false,
+  "s11_consumed": false,
+  "kaggle_session_started": false,
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

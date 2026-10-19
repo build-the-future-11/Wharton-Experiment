@@ -1,0 +1,69 @@
+{
+  "schema": "s10-kaggle-retrospective-readiness-v1",
+  "status": "BLOCKED_PLATFORM_BEFORE_SCIENTIFIC_EXECUTION",
+  "user_confirmed_scope": "Fixed 192-ledger retrospective development study including precision pilot and platform qualification",
+  "capability_receipt": "CAPABILITY_RECEIPT.json",
+  "capability_sha256": "cd0894db6072cfb6e8cd74186a7d174c62206c6a794ecb7877863cfdf2d9d50d",
+  "observed_utc": "2026-10-16T16:37:43.101543+00:00",
+  "blocking_evidence": [
+    {
+      "requirement": "Linux verification namespaces and mandatory bubblewrap",
+      "observation": "bubblewrap absent; actual required namespace creation exits1 Operation not permitted",
+      "source": "successors/frem_s10/src/frem_s10/runtime/isolation.py:107"
+    },
+    {
+      "requirement": "Supported production interpreter/environment",
+      "observation": "Production observe_environment currently accepts Python3.12 Darwin arm64 only; Linux full-suite evidence is not that production receipt",
+      "source": "successors/frem_s10/src/frem_s10/runtime/provenance.py:169"
+    },
+    {
+      "requirement": "Production full-root cgroup visibility",
+      "observation": "Actual /proc/self/cgroup is 0::/; parent limits remain hidden. Prior scoped generated-test contract does not admit a market run.",
+      "source": "successors/frem_s10/src/frem_s10/runtime/resources.py"
+    }
+  ],
+  "engineering_tests_retained": {
+    "s10": 699,
+    "wrappers": 37,
+    "failed": 0,
+    "skipped": 0
+  },
+  "next_stages": [
+    {
+      "stage": "production platform qualification",
+      "status": "BLOCKED",
+      "acceptance": "Actually verified isolation and production memory/environment contract on a compatible execution host; no skipped boundary checks"
+    },
+    {
+      "stage": "new exact candidate verification",
+      "status": "NOT_RUN",
+      "acceptance": "Complete static, packaging/clean-install and eleven semantic mutation checks bound to corrected source/environment"
+    },
+    {
+      "stage": "pre2010 precision pilot",
+      "status": "NOT_RUN",
+      "acceptance": "Fresh one-use declaration and passing identifiable precision outcome; preserve negative/inconclusive terminal results"
+    },
+    {
+      "stage": "full-calendar generated qualification",
+      "status": "NOT_RUN",
+      "acceptance": "All fixed variants and maximum-support/action shapes under actual measured limits"
+    },
+    {
+      "stage": "192-ledger retrospective campaign and saved-output audit",
+      "status": "NOT_RUN",
+      "acceptance": "Only after all prerequisites pass; exact new freeze, unchanged protocol, complete retained analysis"
+    }
+  ],
+  "scientific_attempt_consumed": false,
+  "market_fits": 0,
+  "market_ledgers": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "prior_production_plan_reused": false,
+  "session_stopped_ui_verified": true,
+  "script_version_id": 359072074,
+  "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-retrospective-platform-qualification?scriptVersionId=359072074",
+  "saved_rendered_output_verified": true,
+  "decision": "research/decisions/frem_s10_kaggle_experiment_platform_20261016.json"
+}

@@ -1,0 +1,8 @@
+{
+  "observation": "User confirmed full192-ledger retrospective study. Actual Kaggle required-namespace probe exits1 Operation not permitted; bwrap absent; cgroup namespace hides ancestors.",
+  "hypothesized_cause": "Hosted container capability restrictions conflict with mandatory production isolation/resource contract; passing generated tests does not resolve that mismatch.",
+  "change": "Preserve actual platform refusal, prepare ordered readiness record, stop before scientific consumption. Leave production gates and historical plan unchanged.",
+  "predicted_effect": "Prevent unsupported production execution and false scientific completion while retaining verified engineering results.",
+  "discriminating_experiment": "Read-only CPU metadata plus bounded unshare required-namespace creation probe; exact receipt captured and hash verified.",
+  "result": "BLOCKED_PLATFORM_BEFORE_SCIENTIFIC_EXECUTION; zero new market fits/ledgers and no protected access."
+}

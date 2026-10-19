@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "script_version_id": 358983684,
+  "private": true,
+  "status": "Successful",
+  "method": "Quick Save with output",
+  "contains_namespace_directory": true,
+  "external_retrieval_verified": true,
+  "probe_sha256": "e14c5d6e687856920a810f0ad6ce292d79d269a4d543e8c45c63d47e42b78c50",
+  "retrieval_receipt": "retrieval-receipt-version2.json"
+}

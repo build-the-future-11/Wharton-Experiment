@@ -1,0 +1,61 @@
+{
+  "prior_plan_sha256": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+  "checks": [
+    {
+      "artifact": "code",
+      "path": "research/frem_s10_objects/11a0e935a9e0c8ba208b520704f3c6b75180273a32ca069b0f9d817a9b960696.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "environment",
+      "path": "research/frem_s10_objects/f59dcf61fbb80d0924b8e360b80eec9a89fbf187e971339a2659c1f3a5918e8d.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "configuration",
+      "path": "research/frem_s10_objects/69c61a6ce000efba4accd44e6691ba2aed9730f75b1735243b0fe48c89ec6baf.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "calendar",
+      "path": "research/frem_s10_objects/cfae795b7f39efa8c30174f89a2321cb7a54903c5c6d6a27ee1e8d8e760f906d.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "clock",
+      "path": "research/frem_s10_production_20261016/data_provenance/sessions_2005_2016.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "source_admission",
+      "path": "research/frem_s10_production_20261016/source_admission_attempt1/admission.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "catalog",
+      "path": "research/frem_s10_production_20261016/CATALOG_CANDIDATE_PLAN.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "data_pilot",
+      "path": "research/frem_s10_objects/05a5bdb593aa10e15e034f0a14bff9f331f54d119335331102b54b2542ad9793.json",
+      "exists": true,
+      "sha256_matches": true
+    },
+    {
+      "artifact": "data_campaign",
+      "path": "research/frem_s10_objects/d119b910aee703465c1ef77a33cbe61a95a0793f8a4584004ac2bbc57d7e3cf8.json",
+      "exists": true,
+      "sha256_matches": true
+    }
+  ],
+  "reuse_authorized": false,
+  "reason": "Historical candidate/environment do not match current corrected Linux source; retain unchanged."
+}

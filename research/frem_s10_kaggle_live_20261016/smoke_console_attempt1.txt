@@ -1,0 +1,177 @@
+Browser tab: 793902318, Title: "Kaggle Notebook Editor", URL: "https://www.kaggle.com/code/ryangomez010/wharton-s10-corrected-cpu-end-to-end-2026-10-16/edit".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 80, 96, 125, 170-174
+~				50 button (disabled) Run current cell
+~				51 button Stop execution
+~					52 text stop
+~					53 text Cancel Run
++													247 container
++														248 button Cell executed in 11.733s at 4:00pm
++															249 container Cell executed in 11.733s at 4:00pm
++																250 text playlist_play
++														251 image
++													252 container
++														253 button Cell executed in 0.012s at 4:01pm
++															254 container Cell executed in 0.012s at 4:01pm
++																255 text playlist_play
++														256 image
++													257 container
++														258 button Cell executed in 1.476s at 4:07pm
++															259 container Cell executed in 1.476s at 4:07pm
++																260 text playlist_play
++														261 image
+~											164 container Description: Code Cell Content with Output, ID: 63102fac-3756-4bfd-b968-dd598958c410
++													262 container
++														263 progress indicator Description: Loading, Value: 100
++														264 progress indicator Loading
++														265 image
++												266 container
++													267 container
++														268 text {
+  "schema": "s10-portable-preflight-v1",
+  "timestamp": "2026-10-16T11:12:54.482302+00:00",
+  "status": "READY_FOR_CPU_SMOKE_METADATA_ONLY",
+  "reasons": [],
+  "requested_device": "cpu",
+  "effective_device": "cpu",
+  "supported_devices": [
+    "cpu"
+  ],
+  "precision": "float64",
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "system": "Linux",
+  "machine": "x86_64",
+  "kernel_release": "6.18.48+",
+  "numpy": {
+    "status": "METADATA_OBSERVED",
+    "version": "2.5.4",
+    "runtime_import_tested": false
+  },
+  "pytorch": {
+    "status": "NOT_INSTALLED",
+    "version": null,
+    "required_for_s10": false
+  },
+  "cuda": {
+    "backend_implemented": false,
+    "nvidia_smi_available": false,
+    "nvidia_smi_executed": false,
+    "cuda_runtime_version": null,
+    "runtime_version_status": "NOT_OBSERVED_WITHOUT_NUMERICAL_IMPORT",
+    "gpu_test": "NOT_RUN",
+    "gpu_pass": false
+  },
+  "cpu_smoke": {
+    "metadata_compatible": true,
+    "runtime_test": "NOT_RUN",
+    "resource_admission": "NOT_PERFORMED"
+  },
+  "resources": {
+    "status": "OBSERVED_NOT_ADMISSION",
+    "timestamp": "2026-10-16T11:12:54.483109+00:00",
+    "mem_available_kib": 31509232,
+    "mem_available_mib": 30770.734375,
+    "pswpout_pages": 0,
+    "memory_semantics": "Linux MemAvailable estimate; includes reclaimable memory",
+    "swap_semantics": "Linux pswpout cumulative pages swapped out; not macOS Pageouts",
+    "container_limit": "NOT_OBSERVED; host /proc values may exceed cgroup limits",
+    "production_admission": false,
+    "sampling_limit": "Single observation; no swap-counter stability or execution monitoring"
+  },
+  "production": {
+    "status": "BLOCKED",
+    "platform_matches_supported_contract": false,
+    "required_environment": "Darwin arm64, Python 3.12, complete exact resolved macOS lock",
+    "reasons": [
+      "EXACT_RESOLVED_ENVIRONMENT_LOCK_NOT_VERIFIED",
+      "FRESH_PRODUCTION_RESOURCE_ADMISSION_NOT_RUN",
+      "CURRENT_SOURCE_VERIFICATION_AND_OPERATION_DECLARATION_REQUIRED",
+      "LINUX_ADAPTERS_REQUIRE_ACTUAL_PLATFORM_VERIFICATION",
+      "LINUX_PRODUCTION_MEMORY_SUPERVISOR_NOT_IMPLEMENTED",
+      "EXACT_LINUX_PRODUCTION_ENVIRONMENT_NOT_IMPLEMENTED"
+    ],
+    "production_admission": false
+  },
+  "data": {
+    "status": "NOT_INSPECTED",
+    "instruction": "Use admit and the exact operation declaration for data admission"
+  },
+  "scientific_execution": false,
+  "dependencies_changed": false
+}
+{"name": "preflight", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 0.5695854670002518, "utc": "2026-10-16T11:12:54.513064+00:00", "log": "command-5e38edcceb294267a54c029e69cde474.log", "log_sha256": "a0f38677f59325274f070bf9c6fdc62454cfb589a5a7e3dec620232dc569238a", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"source_sha256": "133f3df09eb189849f8b2fb9c34fbbf10dcf4f003aa70a947f77e58796049e3e", "python": "3.12.14 (main, Aug 14 2026, 15:34:45) [Clang 22.1.3 ]", "numpy": "2.5.4", "numpy_artifacts": {"schema": "s10-numpy-artifacts-v1", "version": "2.5.4", "manifest_sha256": "d252886bfd1bc7aba7694d77b37ea185a33f912d60ca3e3d7c2149bbb1a349e0", "files": 905, "bytes": 56201601, "scope": "installed NumPy runtime files and bundled libraries; generated bytecode excluded"}, "python_runtime": {"sha256": "8f9781a98200d9ecda7e00464e4c64b1327abae788ae8e6979d5c859311410c7", "bytes": 30889232, "implementation": "cpython", "cache_tag": "cpython-312", "soabi": "cpython-312-x86_64-linux-gnu", "build": ["main", "Aug 14 2026 15:34:45"], "compiler": "Clang 22.1.3 "}, "platform": "Linux-6.18.48+-x86_64-with-glibc2.39", "machine": "x86_64", "precision": "float64", "device": "cpu"}
+{"name": "runtime-identity", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 1.1044074329997784, "utc": "2026-10-16T11:12:55.654959+00:00", "log": "command-5582e49aa9124a3aa632328cc56dc7ed.log", "log_sha256": "ca3a0b14beb7f1bc5bffcfdc36dae18eb67ebd613d304c55e92e583345f10fe6", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2936.476299227, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1949736960, "available_bytes": 30262517760, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2937.477539206, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1950253056, "available_bytes": 30262001664, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2938.478693807, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1950253056, "available_bytes": 30262001664, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}
+{"name": "host-interrupt", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 2.2027185039996766, "utc": "2026-10-16T11:12:57.897290+00:00", "log": "command-46e38b9f21d94d61bf27cc318ae042ed.log", "log_sha256": "581065f2c6e59c705a3c436821dd8e6fb5a7f05934a05c6625364b1b3a420ed1", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"worker_resource_contract": {"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2938.706544235, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1949925376, "available_bytes": 30262329344, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2939.707838299, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1949925376, "available_bytes": 30262329344, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2940.70904658, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1949921280, "available_bytes": 30262333440, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}, "limits_applied": true}
+{"active_seconds":0.7422187660004056,"checkpoint":"checkpoint-0001-ef9b0ebf4453470fb3e8e818d9593ff7.json","elapsed_seconds":0.10345642199990834,"evidence_scope":"GENERATED_ENGINEERING","global_step":1,"origins_per_second":1.3472764844935332,"phase":"generated-forecast","process_peak_rss_mib":54.25,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:01.592027+00:00","variants":{"primary":{"contextual_energy_score":1.674714133080274,"global_fit":false,"issued_id":"7289b62b3781bf6194d1c7a7570a11315499c6b19add7ddbc12040f4a05335d9","local_fit":false,"matured_feedback":0,"state_id":"dc980b30104ee8426cb733923e834326875ca087773cae115c738585842596b7","support":66}}}
+{"active_seconds":0.8030824540005597,"checkpoint":"checkpoint-0002-403b760ef4264dc38fc4b05947333be4.json","elapsed_seconds":0.16432133699981932,"evidence_scope":"GENERATED_ENGINEERING","global_step":2,"origins_per_second":2.490347645993755,"phase":"generated-forecast","process_peak_rss_mib":54.25,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:01.652893+00:00","variants":{"primary":{"contextual_energy_score":1.5426791651643652,"global_fit":false,"issued_id":"59495d19cae4d4c4fbb59e8ae1ec1f3bfd0a9a57ca0f997f8c9ba7d50d7a1e7a","local_fit":false,"matured_feedback":0,"state_id":"4b41e831d3864a8b8cac254babc79983ef3b8007fcd1bb19e365e0b00daedb52","support":67}}}
+{"active_seconds":0.8650628980003603,"checkpoint":"checkpoint-0003-f353701bef8f41b594572eb9ca2cfea6.json","elapsed_seconds":0.22629507000010562,"evidence_scope":"GENERATED_ENGINEERING","global_step":3,"origins_per_second":3.4678939053068016,"phase":"generated-forecast","process_peak_rss_mib":54.25,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:01.714861+00:00","variants":{"primary":{"contextual_energy_score":0.8118187087908872,"global_fit":false,"issued_id":"d14da5cf8e1c7be03d474552426a2485a6aafbd7282f5432fb67cf8c66a354fc","local_fit":false,"matured_feedback":0,"state_id":"f7a84595d7ec53a9ea8373c7936c3bb66ca6182de0c7b8a24c1820c914ce3fe0","support":68}}}
+{"active_seconds":0.8936560140004985,"binding":"1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa","completed":3,"elapsed_seconds":0.2761156030001075,"gpu_execution":false,"market_execution":false,"output":"/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke","planned":12,"process_peak_rss_mib":54.25,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","scientific_status":"NOT_EVALUATED","status":"INTERRUPTED","timestamp":"2026-10-16T11:13:01.764685+00:00"}
+{
+  "status": "INTERRUPTED",
+  "completed": 3,
+  "planned": 12,
+  "active_seconds": 0.8936560140004985,
+  "output": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke",
+  "binding": "1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa",
+  "scientific_status": "NOT_EVALUATED",
+  "market_execution": false,
+  "gpu_execution": false
+}
+{"name": "interrupt", "returncode": 130, "failure": null, "cleanup_errors": [], "elapsed_seconds": 3.8996255230003953, "utc": "2026-10-16T11:13:01.832241+00:00", "log": "command-069b53ac9549456bb98ba3ece150fbd1.log", "log_sha256": "9ff0cffe9326c10ae4bc6e6eff7c75b608528387565b39e22fedda41bdbb3117", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"saved_full_state": {"archive": "state-e16067837be74cb0a94bc3805a766caa.zip", "sha256": "3c10a572da01ad733a98fb4187758309655d7623528ca068e53e07dbd20dd32b", "files": 52, "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "created_utc": "2026-10-16T11:13:01.879248+00:00", "resumable": false, "restore_note": "Only a terminal snapshot can resume; active invocation snapshots retain unknown time."}}
+{"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2942.690394087, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951674368, "available_bytes": 30260580352, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2943.691736802, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951674368, "available_bytes": 30260580352, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2944.693124285, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951670272, "available_bytes": 30260584448, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}
+{"name": "host-resume", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 2.187686669999948, "utc": "2026-10-16T11:13:04.106293+00:00", "log": "command-0b2840e792864a348f0fefcc2cbbd073.log", "log_sha256": "33cc47a876bf4104feb70e163b93dbb807ff1e2206dd355926021199af43f2e1", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"worker_resource_contract": {"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2944.90962873, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951567872, "available_bytes": 30260686848, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2945.910869129, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951567872, "available_bytes": 30260686848, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2946.912316281, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1951567872, "available_bytes": 30260686848, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}, "limits_applied": true}
+{"active_seconds":1.9895683490008196,"checkpoint":"checkpoint-0004-353ec8851cef41119b926a8e2f7434fc.json","elapsed_seconds":0.105561335999937,"evidence_scope":"GENERATED_ENGINEERING","global_step":4,"origins_per_second":1.3651757556756057,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:07.786642+00:00","variants":{"primary":{"contextual_energy_score":0.7130000958299088,"global_fit":false,"issued_id":"23bcb17b8145174596b21549ba836cfa2eb1a664af55af2b7a38fe5f94e1aa54","local_fit":false,"matured_feedback":0,"state_id":"ba57d5c44fcbcc29eb423813c5ada21697a63592b6dd11556b5e66a953233fdf","support":69}}}
+{"active_seconds":2.0612658480008577,"checkpoint":"checkpoint-0005-1ca82988d9134eec99e12e85c06381c4.json","elapsed_seconds":0.17726343999993333,"evidence_scope":"GENERATED_ENGINEERING","global_step":5,"origins_per_second":2.486931433336965,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:07.858343+00:00","variants":{"primary":{"contextual_energy_score":0.8457591743823303,"global_fit":false,"issued_id":"bf1f7563b1ccbd17007b6aa6f8f0efa951bf7a83e8501b28a7abee0d45035df6","local_fit":false,"matured_feedback":0,"state_id":"d5b3fa83aa3dfaaa8f73bf0c2c2dc4a94a3ea838c785d37ca39f5eee15690039","support":70}}}
+{"active_seconds":2.130865750000794,"checkpoint":"checkpoint-0006-c0e74dde691346e095331bc894ac3a32.json","elapsed_seconds":0.24685434699995312,"evidence_scope":"GENERATED_ENGINEERING","global_step":6,"origins_per_second":3.433274602784021,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:07.927936+00:00","variants":{"primary":{"contextual_energy_score":0.8797476772819353,"global_fit":false,"issued_id":"9ce75480324257134ab873e5b7697d325acc32f2cfa4de354af04ae7320db6eb","local_fit":false,"matured_feedback":1,"state_id":"a33199e15afa9aa169308fa29c896e011da6ce8964f402726a7f61d461a1a88a","support":71}}}
+{"active_seconds":2.201731242000733,"checkpoint":"checkpoint-0007-064768f81e3a4c169a69fedc032497a5.json","elapsed_seconds":0.3177261840000938,"evidence_scope":"GENERATED_ENGINEERING","global_step":7,"origins_per_second":4.234289083727456,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:07.998807+00:00","variants":{"primary":{"contextual_energy_score":1.6164952904998189,"global_fit":false,"issued_id":"b3765f89888f75a0e3276363db87d4694ad5b49040ef115706cff46767cba1d4","local_fit":false,"matured_feedback":1,"state_id":"af4f144db5bd5e7ea304e1752a96a272abbc1a18cc0579e72939a66e4c6e89f3","support":72}}}
+{"active_seconds":2.275158217000808,"checkpoint":"checkpoint-0008-457eb257a557480fabda3771b7c7aa58.json","elapsed_seconds":0.3911480689998825,"evidence_scope":"GENERATED_ENGINEERING","global_step":8,"origins_per_second":4.911134793737655,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:08.072227+00:00","variants":{"primary":{"contextual_energy_score":1.119481693605291,"global_fit":false,"issued_id":"f3a6e477341f0a771cdeb910f8f76489abfd423202e673de21a2c9188231a1d1","local_fit":false,"matured_feedback":1,"state_id":"e58121181d245767b3b29ed9722a089e3eedd61d1ee7a6cf07cd15bfc4d7e07d","support":73}}}
+{"active_seconds":2.34927284800051,"checkpoint":"checkpoint-0009-faaab55ee8664318966506a7612c0889.json","elapsed_seconds":0.4652630450000288,"evidence_scope":"GENERATED_ENGINEERING","global_step":9,"origins_per_second":5.493451903755781,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:08.146341+00:00","variants":{"primary":{"contextual_energy_score":1.4655331265965998,"global_fit":false,"issued_id":"53bd9cafee1b3e43a69e2c33ee78134704e7f657e34c0633cdc1b978b4af232f","local_fit":false,"matured_feedback":1,"state_id":"afbbeeabb59b4a59fec85c0ccc4db4280dabf276b39f799528cd613c3a4ef2ce","support":74}}}
+{"active_seconds":2.421588385000632,"checkpoint":"checkpoint-0010-4d40a2a14cd7470aa0c405686c7a51f2.json","elapsed_seconds":0.5375770670002566,"evidence_scope":"GENERATED_ENGINEERING","global_step":10,"origins_per_second":6.0110380984558915,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:08.218657+00:00","variants":{"primary":{"contextual_energy_score":1.0529170334750249,"global_fit":false,"issued_id":"dc24e3ab3e55444f5f451bc83cecdfcbd689d4e11526f58be0208cd03ff97afa","local_fit":false,"matured_feedback":1,"state_id":"872b23c1094ce8edd8a0bbb3a2431eeebdf081df1850ec170b8e6f5495a2c62a","support":75}}}
+{"active_seconds":2.493198380000649,"checkpoint":"checkpoint-0011-85ea95f8bb2041ceb66138d4063051c6.json","elapsed_seconds":0.6091883600001893,"evidence_scope":"GENERATED_ENGINEERING","global_step":11,"origins_per_second":6.4717837255486925,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:08.290266+00:00","variants":{"primary":{"contextual_energy_score":1.0587070956162512,"global_fit":false,"issued_id":"b9db9e487e0148d8f87b696da6c7aa8222d21263936640a8e5c3208734872c91","local_fit":false,"matured_feedback":1,"state_id":"0764538cba1361353b448686e27ff20ffc607e3b1664ec061b2e3c4ed02370ad","support":76}}}
+{"active_seconds":2.5663516460008395,"checkpoint":"checkpoint-0012-afd08f16bed94ab8b651acd4e522bc2e.json","elapsed_seconds":0.6823423169998932,"evidence_scope":"GENERATED_ENGINEERING","global_step":12,"origins_per_second":6.873964708356026,"phase":"generated-forecast","process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","seed":11,"timestamp":"2026-10-16T11:13:08.363421+00:00","variants":{"primary":{"contextual_energy_score":1.3517537242813382,"global_fit":false,"issued_id":"0d94bf6c38351561ebcf46e4fe4673e3c9e583be8275289b42ecf7610c8a3c92","local_fit":false,"matured_feedback":1,"state_id":"11311c2ae9a9077a0a5c9e13233f370c4e37abbcce92feaf5dc6443e6f34d867","support":77}}}
+{"active_seconds":2.593068430000585,"binding":"1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa","completed":12,"elapsed_seconds":0.730088675999923,"gpu_execution":false,"market_execution":false,"output":"/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke","planned":12,"process_peak_rss_mib":54.23828125,"run_id":"generated-1a00360793da93fe","schema":"s10-progress-v1","scientific_status":"NOT_EVALUATED","status":"COMPLETE","timestamp":"2026-10-16T11:13:08.411168+00:00"}
+{
+  "status": "COMPLETE",
+  "completed": 12,
+  "planned": 12,
+  "active_seconds": 2.593068430000585,
+  "output": "/kaggle/working/frem_s10_kaggle_namespace_20261016/session/smoke",
+  "binding": "1a00360793da93fe1e26a186b81260fc11ed726e67d03547003e03a982275daa",
+  "scientific_status": "NOT_EVALUATED",
+  "market_execution": false,
+  "gpu_execution": false
+}
+{"name": "resume", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 4.3369242939998, "utc": "2026-10-16T11:13:08.479510+00:00", "log": "command-43cd45b3e2804c629f133eb0aa16742c.log", "log_sha256": "c8942693311994ba2c0326d4cd9c1cfa39b1e1d98d277fb5855b135819861344", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"saved_full_state": {"archive": "state-f74cfd0b019f49909667b90f956a892b.zip", "sha256": "a82c46101ce64aa7ef7633575672059c6d7cac85f265fba876c5c85190366856", "files": 90, "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "created_utc": "2026-10-16T11:13:08.631583+00:00", "resumable": false, "restore_note": "Only a terminal snapshot can resume; active invocation snapshots retain unknown time."}}
+{"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2949.435615728, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956315136, "available_bytes": 30255939584, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2950.437494763, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956286464, "available_bytes": 30255968256, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2951.438782978, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956057088, "available_bytes": 30256197632, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}
+{"name": "host-evaluate", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 2.1872203849998186, "utc": "2026-10-16T11:13:10.854595+00:00", "log": "command-b86b46412dec44eda6c1176a03548e64.log", "log_sha256": "4d083c01ebff1adfb7c5e7245860e87f921faed71d66897ba3f727772538ef7c", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"worker_resource_contract": {"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2951.666232111, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956352000, "available_bytes": 30255902720, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2952.667475227, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956352000, "available_bytes": 30255902720, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2953.668749412, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1956061184, "available_bytes": 30256193536, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}, "limits_applied": true}
+{
+  "status": "COMPLETE",
+  "completed": 12,
+  "planned": 12,
+  "state_ids": {
+    "primary": "11311c2ae9a9077a0a5c9e13233f370c4e37abbcce92feaf5dc6443e6f34d867"
+  },
+  "mean_contextual_energy_score": {
+    "primary": 1.177717243217002
+  },
+  "evidence_scope": "GENERATED_ENGINEERING",
+  "scientific_status": "NOT_EVALUATED",
+  "score_reconstruction": "exact binary64 equality in the bound environment"
+}
+{"name": "evaluate", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 3.7110882000001766, "utc": "2026-10-16T11:13:14.601520+00:00", "log": "command-bf23abab173c4fc3a04c7e39651021c2.log", "log_sha256": "e0f2ab12bd521677199e3110393dfd04d921e761f9af452788127676872d6928", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+{"saved_full_state": {"archive": "state-da52f223dcde424f8e8257e116a879c9.zip", "sha256": "f478bda20d49b5d0f1f4e4c91e2924bfe941233dd31447fb5cc573aa86814b6d", "files": 97, "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "created_utc": "2026-10-16T11:13:14.762618+00:00", "resumable": false, "restore_note": "Only a terminal snapshot can resume; active invocation snapshots retain unknown time."}}
+{"status": "SMOKE_ONLY_ADMITTED", "contract": "s10-kaggle-namespace-smoke-v1", "samples": [{"monotonic": 2955.573378397, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1957421056, "available_bytes": 30254833664, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2956.574563847, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1957421056, "available_bytes": 30254833664, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}, {"monotonic": 2957.575783476, "membership": "0::/", "mount": "721 720 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot", "maximum": 32212254720, "high": 32212254720, "current": 1957421056, "available_bytes": 30254833664, "pswpout": 0, "events": {"low": 0, "high": 0, "max": 0, "oom": 0, "oom_kill": 0, "oom_group_kill": 0}}], "worker_address_bytes": 1073741824, "reserve_bytes": 536870912, "hidden_ancestor_constraints": "UNKNOWN", "production_admission": false, "scientific_status": "NOT_EVALUATED"}
+{"name": "host-completed-reuse", "returncode": 0, "failure": null, "cleanup_errors": [], "elapsed_seconds": 2.1863841270001103, "utc": "2026-10-16T11:13:16.988960+00:00", "log": "command-f01ad5d4ccbc4b3aad43b678cab1f59f.log", "log_sha256": "5cedfb8703d3c21e1cdba574e5b4622a7dda0831def57a7acc0aee6657c60323", "binding": {"source_bundle_sha256": "a03c0e1886ece933427b554c555d2e914dff7f9d8df10e5c6caca94a74b2237a", "candidate_identity": "6cc8dde2716cfd6085a31d28ee0f9a4cb22adbfa1e6619918a0e6eaa3071a031", "runner_sha256": "c97a9e669d68b2d949cd25cf84e732ec823a3455f75d2f996d0dfb48db818765", "deadline": "2026-10-16T16:30:00+00:00", "total_reserved_seconds_cap": 600, "namespace_guard_sha256": "fbb8780f27bc529bd7f6215a2a0f7259fa0cbc6e2d8867df01eaff332675c87b"}, "accepted": true}
+
+~							219 heading Output (284.8MiB / 19.5GiB), Value: 3
+~								220 text Output (284.8MiB / 19.5GiB)
+~							221 button (expanded) Description: Collapse Output (284.8MiB / 19.5GiB), Secondary Actions: Collapse
+The focused UI element is 164 container Description: Code Cell Content with Output, ID: 63102fac-3756-4bfd-b968-dd598958c410

@@ -325,3 +325,391 @@ Quick Save with output retention produced private version 1 (scriptVersionId 358
 CPU launch to Stop Session click spanned 273.046 seconds; Kaggle displayed 11 seconds of notebook runtime. Neither is provider billing. Stop was requested and the UI showed Off plus a stopping message. Final account inactivity/quota confirmation failed because the browser tool could not initialize on the full system disk. Last successful quota display was 00:00 used / 30 hours at 07:16:41 UTC, before this probe; the postrun balance is unknown. No GPU was allocated and allocation remains disabled.
 
 Immediate follow-up: confirm this Wharton session is inactive and inspect current account quota, leaving unrelated jobs alone. Establish a reviewed compatible CPU runtime before target numerical checks. The absolute campaign deadline is 16 October 2026, 22:00 IST. Linux production qualification, complete exact-source verification, precision, data/time/split/rights admission, affordable prospective freeze, complete comparisons and independent reproduction remain gates. Do not reuse the old source-drifted production plan or reopen completed hypotheses. No dependency upgrade, commit, push, public submission or new automation occurred.
+
+
+## 16 October 2026 Kaggle runtime repair
+
+New delivery: `tools/kaggle/FREM_S10_KAGGLE_CPU.ipynb`; instructions in
+`tools/kaggle/README.md`. It prepares isolated Python 3.12 and hash-pinned
+NumPy 2.5.4, and explicitly uses that interpreter for every helper/model child.
+The notebook kernel remains untouched. Setup requires Internet and retains
+logs/failure receipts under its separate 300-second bound. The original deadline
+remains 22:00 IST on 16 October; no scientific or numerical gate was relaxed.
+
+28 stdlib tests passed under Python 3.12; the same 28 passed under Python 3.14
+before the final installer-isolation flag change. Nine generated notebook code
+cells parse; embedded helper, requirement bytes and source archive hashes match.
+Scoped E9/F lint passed. Duplicate JSON keys are rejected; active invocation
+exports are explicitly nonresumable; descendant cleanup errors are retained.
+Prior source and Kaggle evidence directories are unchanged against HEAD.
+
+Actual Linux dependency download/install and target numerical execution are
+NOT_RUN. Local numerical admission failed (361.59 / 688.42 / 596.58 MiB; all
+three must exceed 512 MiB). No full-suite or all-bugs-free claim is made.
+Scientific status remains NOT_EVALUATED. Read
+`research/frem_s10_kaggle_fix_20261016/RECEIPT.json` for exact checks and hashes.
+
+## 16 October 2026 live Kaggle namespace probe
+
+Actual private CPU setup passed: isolated Python 3.12.14 / NumPy 2.5.4 on Linux
+x86_64. The first full-root probe rejected hidden cgroup ancestors and remains
+preserved in private saved Version 1 (script version 358975473). The subsequent
+explicit namespace-only generated-smoke contract passed on the actual target;
+production admission remains false and hidden ancestors UNKNOWN. See
+`research/decisions/frem_s10_kaggle_namespace_20261016.json` and
+`research/frem_s10_kaggle_live_20261016/REPORT.md`.
+
+37 stdlib wrapper tests and scoped E9/F lint passed after this change. This is
+bounded engineering evidence. External retrieval of the namespace probe remains
+pending because saved-version creation/editor loading failed; the browser was
+reconnected by the user but Kaggle then reported a reCAPTCHA connectivity error.
+No numerical smoke or protected outcome access occurred. No final platform stop
+has been confirmed. Continue from the live notebook and existing ledger, preserving
+all charges and failed probes; do not fabricate the retrieval receipt. Original
+16:30 UTC deadline and scientific NOT_EVALUATED status remain unchanged.
+
+## Final live verification — 16 October 2026
+
+KAGGLE_GENERATED_CPU_END_TO_END_VERIFIED. Private Version 2 (358983684)
+externally retrieved probe matched its producer SHA-256. The single numerical
+campaign interrupted at origin 3, resumed to 12, reconstructed evaluation with
+exact binary64 equality, validated completed reuse and exported successfully.
+The model active time was 2.593 seconds; this excludes setup, admission, wrapper,
+UI and persistence time. The wrapper reserved 593 of its 600 command seconds.
+
+Private final Version 3 (358985139) saved successfully. Its terminal archive SHA-256
+is `1b13386989ffc25384bbbcc56a0a9278b5b2c23ab0020b05ba36fd9258b63180`.
+All 116 inventory hashes passed locally. The nested smoke export contains 48
+verified artifacts plus generated evaluation and inventory files; its evaluation
+matches the recorded stage. The separately retrieved finalization receipt reports
+GENERATED_CPU_ENGINEERING_COMPLETE. Kaggle UI confirmed Off and Session stopped.
+
+The save failure was diagnosed as a duplicate embedded payload exceeding Kaggle's
+1 MB kernel source limit. Removing the duplicate payload from the draft resolved
+it; Version 1 and all earlier evidence remain preserved. The source package was
+unchanged. No GPU, market run, production qualification or protected evaluation
+was performed. Scientific status remains NOT_EVALUATED. This evidence supersedes
+the pending status above; it does not claim all possible bugs are absent.
+
+Receipt: `research/frem_s10_kaggle_live_20261016/VERIFICATION_RECEIPT.json`.
+Final URL: https://www.kaggle.com/code/ryangomez010/wharton-s10-corrected-cpu-end-to-end-2026-10-16/output?scriptVersionId=358985139
+
+
+## 16 October 2026 — full S10 suite verified on Kaggle
+
+The latest requested generated engineering suite is complete. Actual Kaggle Python 3.12.14 / NumPy 2.5.4 / pytest 8.4.2 ran **699 S10 tests (183.95 s) plus 37 Kaggle-wrapper tests (1.291 s), all passed, no skips**. This covers every collected test in `successors/frem_s10/tests` and `tools/kaggle/test_*.py`, not the separate root/legacy/other successor suites.
+
+The earlier complete run (688 passed, 11 failed) is preserved. Repairs: retain nested ZIP bytes despite Kaggle automatic extraction; set NUMEXPR and VECLIB controls alongside the other three numerical thread controls; install the exact source package for isolated imports; compare replay forecast origins with the unique union across generated windows. No test assertion or scientific threshold was changed. The existing future-perturbation regression now passes; strict missing/extra origin and frame metadata checks remain.
+
+Evidence: `research/frem_s10_kaggle_full_tests_20261016/VERIFICATION_RECEIPT.json`, per-node observations, JUnit, exact source inventories, both failed/passing result archives and retained drivers. Saved private Version 1, script ID **359065132**, was downloaded and verified against SHA-256 `76a49f321c8090bbb84fda56edbe7adddcdce80054733144e1b4da61f487541d`. Source/tests match the local corrected candidate; README instructions were updated afterward. Session stopped is UI-verified.
+
+Notebook: https://www.kaggle.com/code/ryangomez010/wharton-s10-full-test-suite-2026-10-16/output?scriptVersionId=359065132
+
+The namespace contract is generated-tests-only, with hidden ancestor constraints UNKNOWN. This does not qualify the production environment/supervisor, wheel/clean-install/mutation campaign, full-scale qualification or scientific/market studies. Old freezes, negative evidence, previous smoke source and consumed ledgers are unchanged. The dated full-suite notebook refuses to overwrite its attempt directory; future use needs a fresh directory and reviewed setup deadline.
+
+## 2026-10-16 — Full retrospective scope: Kaggle production platform blocked
+
+The user confirmed the fixed 192-ledger retrospective study, including precision and qualification. A real CPU probe at 16:37:43 UTC found mandatory namespace creation exits 1 (`Operation not permitted`), no bubblewrap, and hidden cgroup ancestors (`0::/`). Production environment admission also remains Python 3.12 Darwin arm64 only. These are production blockers; the previous generated-test allowance cannot admit market execution.
+
+Evidence: `research/frem_s10_kaggle_experiment_20261016/READINESS.json`, exact `CAPABILITY_RECEIPT.json` (SHA-256 `cd0894db6072cfb6e8cd74186a7d174c62206c6a794ecb7877863cfdf2d9d50d`), and `REPORT.md`. Saved Kaggle script version 359072074 retains the output; session stopped was UI-verified. Prior 699 S10 + 37 wrapper tests remain passing engineering evidence. Nine prior-plan references retain their hashes; the plan was not reused. No data upload, pilot, market ledger, protected access, or scientific attempt occurred. Decision: `research/decisions/frem_s10_kaggle_experiment_platform_20261016.json`.
+
+Continuation requires a supported execution host or a separately designed and validated equivalent Kaggle production contract, then current exact candidate verification, precision, full-scale qualification, freeze, campaign and audit. No check was disabled.
+
+
+## 17 October 2026 — host audit and fail-closed network repair
+
+See `research/frem_s10_host_audit_20261017/RECEIPT.json` and `DIAGNOSIS.md`. Two fresh local admission checks failed; the configured remote SSH timed out. Authorized Kaggle login succeeded, but the inspected draft editor stalled and production boundary equivalence remains unqualified. No scientific run started. The pre-existing Kaggle network checker accepted timeouts as denial; errno=None is now rejected. Five stdlib regression tests pass; preserved original source produces two expected failures. Scoped Ruff passed. No full suite or production qualification claimed. Old source bytes and canonical files are preserved under `before/`; prior selected receipts remain hash-identical. Closed S7/S8 outcomes, thresholds and protected boundary remain unchanged. Existing production bundles predate this repair and must not inherit its verification.
+
+
+## 17 October 2026 — strict Kaggle qualification retry
+
+Actual CPU metadata probe at 07:40:36 UTC again returned namespace Operation not permitted, no bubblewrap, and hidden cgroup ancestors. Private notebook notebook67853df4e8 Version 1 quick-save with output succeeded; Session stopped was UI-confirmed. Locally reconstructed output matches producer SHA256 201723e84473050d61a5e2447b84f3b6014bf32c3309be7ec943322791d271d7; no external saved-file download claimed. See research/frem_s10_strict_kaggle_20261017/RECEIPT.json.
+
+Removed the unsandboxed Kaggle verification branch. All Linux commands now require the existing bubblewrap adapter. Namespace-only resource admission and saved-receipt acceptance fail closed, and the catalog remains PARTIAL. Three bounded stdlib regressions and scoped Ruff passed; full suite and Linux production qualification did not run. Old sources are preserved under before/. No scientific attempt or market result. Six-hour heartbeat s10-strict-kaggle-qualification-follow-up is active in this chat; the old fixed-source automation remains paused. The old uploaded production bundle predates these repairs and must not be used as the repaired candidate.
+
+
+## 17 October 2026 — alternative host inventory
+
+Kaggle retry heartbeat is now PAUSED at user request. See research/frem_s10_host_selection_20261017/RECEIPT.json. Local admission failed; existing GCP credentials cannot refresh; HF Jobs tool unavailable. GitHub standard macos-15 arm64 is a candidate, not an admitted host. Private Actions access exists, but billing balance is inaccessible; a five-minute metadata-only probe is prepared at macos-capability.yml ($0.31 compute ceiling at published rate). No remote job submitted, no private data published, no scientific attempt consumed or performance repair verified. Full execution requires fresh candidate verification and all unchanged gates.
+
+
+## 18 October 2026 — FREM-S11 corrected successor, host blocked
+
+Read `successors/frem_s11/README.md`, preserved P0 `protocol.json`, operative P1
+`protocol_v2.json`, `research/frem_s11_20261018/PLAN.md`, and both S11 decision
+records before continuation. S11 is a distinct release-vintage six-portfolio
+study; it does not reopen S8-S10 or turn their engineering evidence into market
+support.
+
+The pre-parse audit corrected four validity defects before any archive access:
+LoBM/HiBM labels and value-state direction, rolling-versus-expanding wording,
+post-return drifted allocation accounting, and executable release/receipt
+binding. P0 is preserved; P1 retains the same folds, 5 percent primary margin,
+controls, bootstrap settings and zero-trial budget. The CLI now requires fresh
+source/interpreter-bound host admission, exact archive receipts, a separate
+data-admission receipt and a one-shot consumption record. Complete arrays,
+provenance and hashes are retained, including failed-attempt receipts.
+
+Generated engineering verification completed: 28 tests passed, strict mypy,
+Ruff lint/format, sdist/wheel build and clean-wheel CLI checks passed. These are
+not market evidence. Archive acquisition, parsing, fits, scoring and revision
+diagnostics did not run. The latest three-sample receipt at
+`research/frem_s11_20261018/host_admission_attempt2.json` is `BLOCKED`:
+179.91/161.52/219.13 MiB available versus 512 MiB, with pageouts increasing
+2,061,218 to 2,061,237. Do not bypass this receipt or reuse it after source
+changes. The next valid step is a fresh passing receipt on the exact candidate,
+then acquisition, static/runtime verification, data admission and one
+development consumption in that order.
+
+## 18 October 2026 — FREM-S11 P1 engineering verified, science blocked
+
+This section supersedes the S11 status paragraph immediately above without
+rewriting its retained pre-verification receipt. Read
+`research/frem_s11_20261018/ENGINEERING_VERIFICATION.md`, `STATUS.md`, and
+`FLAW_CHECKLIST.md` before continuation. Exact source identity is
+`20b462e9eed989362dc34198e4325e5e6dd678357eb366055f642016ea1a9fca`.
+
+The final corrected P1 candidate passed 28 generated tests with warnings as
+errors, strict mypy, Ruff lint/format, sdist/wheel build and clean-wheel CLI
+verification. The CLI imports no NumPy before host admission. Official archive
+contracts now correctly use 2008 TXT and 2016/2024 CSV. P0 remains preserved;
+only P1 may execute. Source/interpreter-bound host and archive receipts, a
+separate data-admission receipt, one-use consumption, post-run pressure
+validation and complete hashed arrays are enforced.
+
+The fresh exact-candidate receipt
+`research/frem_s11_20261018/host_admission_attempt2.json` is `BLOCKED`:
+179.906/161.516/219.125 MiB available against 512 MiB and pageouts
+2,061,218/2,061,225/2,061,237. Zero archives were acquired, zero rows parsed,
+and zero market fits, scores, ledgers or protected outcomes exist. Do not run
+acquisition on this receipt. The next admissible action is one fresh P1
+source-bound host admission; only `PASS` permits acquisition, data admission
+and the single fixed development consumption.
+
+## 18 October 2026 — FREM-S12 complete draft plan, not frozen
+
+The user requested a separate S12 plan with heavy Kaggle experimentation. Read
+`successors/frem_s12/README.md`, `protocol_draft.json`, and every file under
+`research/frem_s12_20261018/` before S12 work. S12 is a proposal only:
+`DRAFT_PLANNED_NOT_FROZEN_NOT_IMPLEMENTED_NOT_EVALUATED`. S11 remains
+engineering-verified, host-blocked and unconsumed; no predecessor is reopened.
+
+The proposed mechanism is a causally delayed learned router over multiscale
+Fourier-reservoir and engram-retrieval scenario laws. Mandatory controls include
+the frozen S11 stacker, simple empirical laws, shrinkage distribution models,
+a regularized VAR, a credible compute-matched neural baseline and router-off.
+The draft primary gate requires five-percent relative energy-score improvement
+over S11 and the strongest non-FREM control, corrected paired uncertainty,
+fold consistency and variogram-score noninferiority. Secondary policy evidence
+cannot rescue a forecast failure.
+
+The heavy-development ceiling is 24 search trials, 2,000 model cell-equivalents,
+60 GPU-hours, 120 CPU-hours and two calendar weeks; live quota and measured cost
+can only reduce it. Kaggle shards are limited to 8.5 active hours and 15 GiB
+retained output. GPU use requires CPU/GPU numerical equivalence and at least
+1.5x representative end-to-end speedup. Presets do not self-authorize execution.
+
+S12 explicitly does not inherit S10's failed production qualification. It needs
+a separate Kaggle-native public-data threat model and actual qualification
+receipt before scientific work. Literature/novelty, exact sources, rights,
+contamination, dates, strongest baselines, equations, tolerances and protected
+confirmation all remain gates. Zero S12 data, code, Kaggle session, fit, ledger
+or protected access exists. The next action is G0/G1 review and an adversarial
+S12-P0 freeze—not model implementation or cloud execution.
+
+## 18 October 2026 — FREM-S12 P0v2 implemented locally; Kaggle/science unrun
+
+This section supersedes the S12 draft status above while preserving it as
+decision history. Read `successors/frem_s12/protocol_p0.json`,
+`research/frem_s12_20261018/ENGINEERING_VERIFICATION.md`, `STATUS.md`,
+`FLAW_CHECKLIST.md`, and `IMPLEMENTATION_RECEIPT.json` before continuation.
+Exact package identity is
+`eac738e4d7eec6a81029c15bb93fb1529a14dacc169fd433c058883d89240240`.
+
+P0v2 corrects the draft's global all-fold search chronology before any market
+access: all 24 configurations are selected only on Fold A validation across
+three families and seeds 11/29, so the required search registry has 144 cells.
+Its source-current selection receipt is mandatory before the 120-cell fixed
+matrix. The package implements all forecast/control laws, exact proper-score
+gradient, variogram guard, policy diagnostic, source/environment/data/selection
+gates, exact-origin checkpoints, one-use source/gate-bound consumption claims,
+no-overwrite bundles, shard registry, complete-campaign analysis and the thin
+Kaggle launcher.
+
+Thirty-four tests passed with warnings as errors; strict mypy, Ruff
+lint/format, sdist/wheel build and clean-wheel CLI checks passed. One retained
+generated smoke was mixed/negative: S12 mean energy 0.0238407 versus S11
+0.0231214, VAR 0.0228615 and recent empirical 0.0218097. This is engineering
+evidence only; it cannot tune P0v2 or support/oppose the market hypothesis.
+
+No Kaggle S12 session, official archive acquisition/parsing, search cell, fixed
+market cell, protected access or scientific result exists. Next run private
+Kaggle `qualify` with the final wheel and download/verify its receipt. Only a
+pass plus an admissible full-campaign projection permits archive acquisition,
+data admission and the one-time 144-cell search.
+
+## 18 October 2026 — FREM-S12 P0v3 integrity hardening; Kaggle/science unrun
+
+This section supersedes the P0v2 implementation status above while preserving
+its protocol, receipt, artifacts and mixed/negative generated observation.
+Read `successors/frem_s12/protocol_p0_v3.json` and
+`research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_READY.json`. Exact package
+identity is `8b50a3be55fac9ae7ee10b1b0e3c42bcd239d1461c5b80c83d84a50214f1bb4a`.
+
+Before any market access, an adversarial review found incomplete raw forecast
+retention, algorithmic-seed pseudoreplication, a local-receipt admission path,
+target/holding ambiguity and a residual-shifted MLP training target. P0v3 fixes
+these without changing the hypothesis, data, controls, cells, thresholds or
+budgets. Search/fixed artifacts now retain outcomes and every issued finite-law
+atom/probability for score reconstruction. Inference averages seeds within
+family-fold, weights folds within family and fixed families equally, then
+resamples shared fold identities and circular 12-month blocks jointly across
+the three families. Policy targets and post-return holdings are separate.
+
+Local qualification is explicitly non-scientific. Search/fixed execution now
+requires an exact-source `kaggle_scientific` receipt. `qualify-kaggle` verifies
+the target paths, input mode, blocked direct egress and exact runtime. It times
+the largest declared trial separately on Fold-A search and latest Fold-H fixed
+execution, then applies phase-specific conservative total/shard projections.
+GPU remains unadmitted absent equivalence plus at least 1.5x speedup.
+
+Forty-one tests pass with warnings as errors; Ruff, strict mypy, sdist/wheel build,
+embedded-protocol inventory, clean-wheel CLI/receipt, notebook JSON and diff
+checks pass. Final wheel SHA-256 is
+`d476fd0ddc3b5914b96f8602b1361f4b3e6ca0dccd573fdf6999be62ff6e48fe` and
+sdist SHA-256 is
+`72ec59c43deffc5a7afd4520d6e6e567847fcb98eb1b00f76a7586062af0ff97`.
+The P0v3 generated smoke remains mixed/negative engineering evidence. No Kaggle
+session, official data, scientific cell or protected outcome exists. The next
+action is private Kaggle `qualify-kaggle`, not market execution.
+
+## 18 October 2026 — FREM-S12 private Kaggle qualification rejected
+
+This section supersedes only the prior "Kaggle session unrun" status. The final
+source identity remains
+`8b50a3be55fac9ae7ee10b1b0e3c42bcd239d1461c5b80c83d84a50214f1bb4a` and the
+wheel SHA-256 remains
+`d476fd0ddc3b5914b96f8602b1361f4b3e6ca0dccd573fdf6999be62ff6e48fe`.
+The hardened notebook SHA-256 is
+`53675a4e74efba8f08c30b0a9e7ab79f1fc58f234867762ff4a408009669ccf4`.
+
+The wheel and notebook were uploaded privately to Kaggle. Initial upload
+version `359670132` was a no-execution save. Qualification version `359671420`
+ran with accelerator None and internet disabled and finalized as a failure in
+19.9 seconds. Its standard-library preflight reported Python 3.13.15, while the
+frozen runtime requires Python 3.12; it also observed no files at the expected
+input mount. One 261-byte `frem-s12-output/preflight.json` output was preserved,
+and `scientific_admitted` was false.
+
+The failure occurred before wheel installation, package import, official data,
+market parsing, search/fixed consumption, fitting or protected access. Do not
+retry version `359671420` unchanged and do not weaken the runtime pin. The next
+admissible action is an exact Python 3.12 target qualification, or a prospective
+runtime amendment followed by clean equivalence verification before any market
+access. Scientific status remains `NOT_EVALUATED`. Read
+`research/frem_s12_20261018/KAGGLE_QUALIFICATION_359671420.json` and
+`research/decisions/frem_s12_kaggle_qualification_20261018.json`.
+
+## 18 October 2026 — FREM-S12 P0v4 portability verified; upload blocked
+
+Private saved version `359681231` completed an engineering-only capability
+probe in 24.2 seconds and observed Python 3.13.15, NumPy 2.1.3, Linux x86_64,
+four CPUs, a read-only recursive `/kaggle/input` layout and blocked direct TCP
+egress. It imported no S12 model package or market data and recorded
+`scientific_admitted=false`.
+
+P0v4 was frozen prospectively before market access. It retains Python 3.12 /
+NumPy 2.5.4 and adds Python 3.13 / NumPy 2.1.3; recursively requires one exact
+wheel filename and SHA-256; and uses statvfs/mountinfo for the read-only mount
+check. No model, data, split, cell, control, threshold, inference, budget or
+one-use rule changed.
+
+Final package identity is
+`019357f8bb87118ee31f29eb361dc5284f10186e7eeb795f331f8bd3f6c6a3cc`.
+Wheel v0.1.1 SHA-256 is
+`d4d65ad0913393b69b70f6a9f3b12f1960ab5905529695e22757e1a2024cee4e`;
+notebook SHA-256 is
+`e5f5a6daa767f963a1eb49025093bf4ed5caa5270e79da827b847317082e0b13`.
+Forty-three Python 3.12 warning-strict tests, Ruff, format, strict mypy, lock,
+build and clean-wheel checks pass. Installed-wheel generated outputs are
+byte-identical on the 3.12/2.5.4 and 3.13/2.1.3 pairs. The local macOS 3.13
+warning-strict run retained 36 passes and seven floating-point-status warning
+stops; Kaggle Linux qualification remains authoritative.
+
+Chrome exited repeatedly at the new private dataset file chooser, so no P0v4
+dataset version, notebook upload or qualification is claimed. Resume by opening
+the authenticated Chrome Kaggle session, uploading exactly the wheel/notebook
+above, keeping accelerator None and internet disabled, then downloading and
+hash-verifying the qualification receipt. No official archive, market fit,
+scientific cell or protected outcome has been accessed; status is
+`NOT_EVALUATED`.
+
+## 18 October 2026 — FREM-S12 P0v5 delivery hardening verified
+
+P0v5 prospectively supersedes only the P0v4 delivery contract. No official
+archive or market outcome was accessed first. Model, cells, controls,
+thresholds, inference, budgets and one-use semantics are unchanged.
+
+The exact v0.1.2 wheel installs offline into a fresh isolated target instead of
+mutating Kaggle's base environment. The notebook rejects input symlinks, hashes
+the canonical regular-file inventory, fixes numerical libraries to one thread,
+preserves installation verification, refuses a pre-existing output root and
+writes a no-overwrite hash/size manifest for the full run. Qualification repeats
+the largest declared search and latest fixed probes three times, requires stable
+artifact byte counts and projects from the slowest timing.
+
+Forty-eight Python 3.12 warning-strict tests, Ruff, strict mypy, offline lock
+checking and notebook compilation pass. Two fixed-epoch wheel builds were
+byte-identical at
+`dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06`.
+Clean-wheel generated arrays, summary and manifest are byte-identical under the
+admitted 3.12/2.5.4 and 3.13/2.1.3 pairs. The retained sdist did not rebuild
+byte-identically and is not an upload candidate. The local macOS 3.13 NumPy
+status warnings remain preserved; Kaggle Linux qualification is authoritative.
+
+Notebook SHA-256 is
+`605bdd9d99d7e421ca088c4161ea18589a99ab0e2a53177f609363da4ac2c5ce`;
+package source identity is
+`d4b06d915f62f0cf6f1f0015481f6fdd0b88ef34028f62349a1f5e3a1012f6d3`.
+Chrome local-file access still blocks upload, so no P0v5 Kaggle qualification or
+scientific pass is claimed. Status remains `NOT_EVALUATED`.
+
+## 18 October 2026 — FREM-S12 P0v6 evidence integrity verified
+
+P0v6 prospectively supersedes only evidence intake and target warning behavior.
+No official archive, market outcome, search/fixed cell or protected outcome was
+accessed. The model, cells, controls, thresholds, inference and budgets are
+unchanged. Search selection now reconstructs every energy score from retained
+laws and outcomes; fixed analysis reconstructs energy, variogram, holdings and
+wealth; and cell directories must match embedded identities.
+
+The new `verify-run-bundle` command independently checks downloaded file
+inventories, hashes, sizes, candidate/input identities, command receipts and
+qualification state. Target commands are warning-strict and output symlinks or
+special files fail closed. Fifty-three warning-strict tests, Ruff, strict mypy,
+lock validation, notebook compilation, two byte-identical final wheel builds
+and a clean-wheel generated smoke passed. The exact v0.1.3 wheel SHA-256 is
+`e86605be211ca5ba922cf6742c0af4c88d575915b149cb36da4d20254192b24d`;
+the notebook SHA-256 is
+`12d769b45107796b43f1d8237a45b940d42e9d8fad7c501c6997eb849298bced`.
+Kaggle P0v6 upload/qualification remains pending and science remains
+`NOT_EVALUATED`.
+
+## 18 October 2026 — FREM-S12 P0v7 evidence chain verified
+
+P0v7 prospectively supersedes P0v6 before upload or market access. It changes
+no model, cells, controls, thresholds, inference or budgets. It retains raw
+validation outcomes/laws and reconstructs the selected non-FREM control; binds
+every search/fixed bundle to exact calendars; rejects foreign campaign files;
+checks acquisition/data/environment/source/selection/consumption chains and
+cross-seed outcome identity; and semantically reconstructs isolated install,
+runtime, three-repeat timing, byte-stability and resource qualification.
+
+Sixty warning-strict tests, source/test Ruff, strict mypy, lock validation, two
+byte-identical fixed-epoch wheels and clean-wheel readback pass. Exact wheel
+SHA-256: `e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72`.
+Notebook SHA-256:
+`6db7e62e45fa90b29fe9bafda454239f411cc3227b50aa668fa9b0873916afb3`.
+Kaggle qualification remains unrun. Before scientific shards, reconcile a
+complete fork-free saved-version consumption ledger; per-run claims are not a
+global one-use proof. Scientific status remains `NOT_EVALUATED`.

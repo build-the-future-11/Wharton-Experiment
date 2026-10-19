@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-10-18T10:04:21Z",
+  "iteration": "FREM-S12-P0V3",
+  "scope": "PRE_DATA_CROSS_FAMILY_DEPENDENCE_CORRECTION",
+  "observation": "Final statistical review found that P0v3 kept families fixed and equally weighted but sampled fold identities and month blocks independently within each family. The three portfolio families share the same market calendar, so independent resampling weakens contemporaneous cross-family covariance. No official archive, market fit, search/fixed cell, Kaggle scientific session or protected outcome had been accessed.",
+  "hypothesized_cause": "The bootstrap corrected algorithmic-seed pseudoreplication but did not fully carry the shared-calendar dependence constraint through the random-index generator.",
+  "change": "Sample each fold identity once per bootstrap draw and use the same circular 12-month block indices across all three fixed families. Average the three family values within each shared resampled fold, then average folds. Reject registries whose families do not share identical fold keys and month counts. Preserve all earlier receipts and issue one final source-bound receipt; do not change the hypothesis, point estimator, cells, thresholds or budgets.",
+  "predicted_effect": "Bootstrap uncertainty preserves contemporaneous cross-family shocks instead of treating the overlapping portfolio families as independently timed observations.",
+  "discriminating_experiment": "A constructed two-family opposing-fold example must produce exactly zero in every synchronized draw, while all prior aggregation, reconstruction, checkpoint, admission and numerical tests remain passing. Final source/wheel/smoke identities must agree.",
+  "result": "P0V3_READY_FOR_TARGET_QUALIFICATION_SCIENCE_NOT_RUN",
+  "source_identity": "8b50a3be55fac9ae7ee10b1b0e3c42bcd239d1461c5b80c83d84a50214f1bb4a",
+  "tests": {
+    "passed": 41,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "seconds": 135.46
+  },
+  "wheel_sha256": "d476fd0ddc3b5914b96f8602b1361f4b3e6ca0dccd573fdf6999be62ff6e48fe",
+  "sdist_sha256": "72ec59c43deffc5a7afd4520d6e6e567847fcb98eb1b00f76a7586062af0ff97",
+  "generated_smoke_manifest_sha256": "0256fa5284313a40daf4d061efebf8814afcc25ee50042b97a16b7527f84abdb",
+  "kaggle_session_started": false,
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

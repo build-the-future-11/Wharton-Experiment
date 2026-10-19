@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-17T08:28:41.478534+00:00",
+  "status": "AWAITING_PRIVATE_HOST_COMPUTE_BUDGET",
+  "scientific_status": "NOT_EVALUATED",
+  "market_ledgers": 0,
+  "kaggle_retry_automation": "PAUSED",
+  "local": "FAIL: fresh samples below512MiB and increasing pageouts",
+  "gcp": "Existing configured account ryangomez@thebu1ld.com refresh invalid_grant; VM inventory unavailable",
+  "hugging_face": "Authenticated RyanG2010 non-Pro; jobs tool UNAVAILABLE",
+  "github": "Authenticated admin access; main Wharton repository public; private research repository Actions enabled and zero self-hosted runners",
+  "candidate": "GitHub standard macos-15 arm64; actual probe not run",
+  "billing": "Usage endpoint404 missing user scope; included balance unknown",
+  "proposal": {
+    "destination": "new private build-the-future-11/wharton-s10-execution",
+    "probe_timeout_minutes": 5,
+    "probe_compute_ceiling_usd": 0.31,
+    "rate_usd_per_minute": 0.062,
+    "full_execution_requires": "Fresh exact candidate and full unchanged qualification gates; scientific limits unchanged"
+  },
+  "repairs": "Integrity repairs only; no S10 performance effect measured",
+  "workflow_sha256": "88005d2d66628476760301c88b3c9628d0b0eb55b583a49003fa2aa76c713a6e"
+}

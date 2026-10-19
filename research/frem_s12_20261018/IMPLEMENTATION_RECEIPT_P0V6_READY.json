@@ -1,0 +1,65 @@
+{
+  "schema": "frem-s12-implementation-receipt-v6",
+  "observed_utc": "2026-10-18T14:18:34Z",
+  "status": "P0V6_ENGINEERING_VERIFIED_KAGGLE_UPLOAD_PENDING_SCIENCE_NOT_RUN",
+  "protocol": {
+    "path": "successors/frem_s12/src/frem_s12/protocol_p0_v6.json",
+    "sha256": "c540f44bf9ca46164af3b62d3e8d01f2c99a359d435c452c7138a1e7bdd088f2"
+  },
+  "package": {
+    "version": "0.1.3",
+    "source_identity": "0f36843500f72cc72c8454343ae8ec61602bd0429222b1f69e9c33bfe93834c1",
+    "wheel_path": "research/frem_s12_20261018/kaggle_upload_p0v6_qualification_01/dataset_reproducible/frem_s12-0.1.3-py3-none-any.whl",
+    "wheel_bytes": 50472,
+    "wheel_sha256": "e86605be211ca5ba922cf6742c0af4c88d575915b149cb36da4d20254192b24d",
+    "wheel_rebuild_sha256": "e86605be211ca5ba922cf6742c0af4c88d575915b149cb36da4d20254192b24d",
+    "source_date_epoch": 1792321200,
+    "wheel_byte_reproducible": true,
+    "superseded_pre_readme_sync_wheel_sha256": "df5c515e332a06c8bfb61367a08e172e13b108ee8f58b125282a7d185e070e47"
+  },
+  "notebook": {
+    "path": "successors/frem_s12/kaggle/frem_s12_campaign.ipynb",
+    "sha256": "12d769b45107796b43f1d8237a45b940d42e9d8fad7c501c6997eb849298bced",
+    "python_warnings_are_errors": true,
+    "output_symlinks_rejected": true,
+    "output_special_files_rejected": true,
+    "final_manifest_written_before_postcondition_failure": true
+  },
+  "verification": {
+    "tests": "53 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "mypy_strict": "passed over 21 source modules",
+    "uv_lock_check": "passed after resolving 15 packages against current metadata",
+    "notebook_json_and_code_compilation": "passed",
+    "wheel_rebuild": "two fixed-epoch builds byte-identical",
+    "clean_wheel_generated_smoke": "passed warning-strict under Python 3.12 / NumPy 2.5.4",
+    "clean_wheel_arrays_sha256": "2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f",
+    "clean_wheel_summary_sha256": "eaff7d9279314999cf9c6a825c87d448abda38cb5962a4d0f1c83f37e9eff37c",
+    "clean_wheel_manifest_sha256": "ea5500930d1f7f84a1a8c35bffbf19c82ed5875744fe34d52099d086cc4cc203",
+    "legacy_downloaded_bundle_verification": "research/frem_s12_20261018/P0V6_LEGACY_BUNDLE_VERIFICATION.json",
+    "legacy_run_manifest_sha256": "3051dea1199a6dffe24971e598d985c11a4c96e5147398013dd79dd030f286cc"
+  },
+  "repairs": [
+    "Search selection reloads arrays and reconstructs every energy score before aggregation.",
+    "Fixed analysis reconstructs energy, variogram, holdings and wealth from raw evidence before reading headline summaries.",
+    "Search and fixed bundle directory identities must match their embedded cell identities.",
+    "Downloaded run verification rejects missing, extra, changed, symlinked and special files and cross-checks preflight and command receipts.",
+    "Kaggle target subprocesses promote Python warnings to errors."
+  ],
+  "preserved_failures": [
+    "The first concurrent 53-test run observed a source-stale temporary search artifact because source files changed while the test was running; the stable-source rerun passed all 53 tests.",
+    "The first isolated uv build attempted network dependency resolution and failed under restricted DNS; no wheel was produced.",
+    "The first offline no-isolation uv build found no setuptools in the package-local environment; no wheel was produced.",
+    "The first reproducible v0.1.3 wheel pair was built before the final package README sync and is preserved as superseded, not an upload candidate.",
+    "The earlier Python 3.13 / NumPy 2.1.3 smoke warnings remain preserved; P0v6 will now fail closed if they recur on Kaggle Linux."
+  ],
+  "kaggle_executed": false,
+  "scientific_admitted": false,
+  "archives_acquired": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

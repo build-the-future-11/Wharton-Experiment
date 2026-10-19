@@ -1,0 +1,25 @@
+{
+  "responses": [
+    {
+      "url": "https://ir.theice.com/press/news-details/2016/NYSE-Group-Announces-2017-Holiday-and-Early-Closings-Calendar/default.aspx",
+      "attempted_at": "2026-10-16T02:42:58.342554+00:00",
+      "status": "FAILED",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ir.theice.com/press/news-details/2012/IntercontinentalExchange-Announces-Hurricane-Sandy-Market-Update/default.aspx",
+      "attempted_at": "2026-10-16T02:42:59.469373+00:00",
+      "status": "FAILED",
+      "reason": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html?ncid=mbr_idnedulnk00000001",
+      "attempted_at": "2026-10-16T02:42:59.524122+00:00",
+      "status": "RETAINED",
+      "path": "research/frem_s10_production_20261016/data_provenance/yahoo_terms.html",
+      "sha256": "4bcdd5402dcb56638165e1566de0c6a980b31a42eb3ab7ff092e1f9dacb2a257",
+      "http_date": "Fri, 16 Oct 2026 02:43:01 GMT",
+      "bytes": 167945
+    }
+  ]
+}

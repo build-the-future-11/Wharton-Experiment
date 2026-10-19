@@ -1,0 +1,11 @@
+{
+  "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-corrected-cpu-end-to-end-2026-10-16/edit",
+  "private_verified": true,
+  "accelerator": "None",
+  "internet": true,
+  "transport_sha256": "0275b10fe928d60ebff50eb58a7272e7fc2b7bda0355db3f909c14e89583c6c5",
+  "editor_readback_exact": true,
+  "scope": "generated CPU probe and engineering smoke only",
+  "launch_action": "Run All clicked; starting observed",
+  "scientific_status": "NOT_EVALUATED"
+}

@@ -1,0 +1,20 @@
+name: S10 macOS capability probe
+on: workflow_dispatch
+permissions: {}
+jobs:
+  probe:
+    runs-on: macos-15
+    timeout-minutes: 5
+    steps:
+      - name: Observe platform and sandbox capability only
+        shell: bash
+        run: |
+          set -euo pipefail
+          date -u
+          uname -sm
+          test "$(uname -m)" = arm64
+          for sample in 1 2 3; do /usr/bin/vm_stat; sleep 1; done
+          /usr/bin/sandbox-exec -p '(version 1)(allow default)(deny network*)' /usr/bin/true
+          /bin/ps -o pid,ppid,rss,comm -p $$
+          df -Pk .
+          echo 'CAPABILITY OBSERVATIONS ONLY; NOT PRODUCTION QUALIFICATION'

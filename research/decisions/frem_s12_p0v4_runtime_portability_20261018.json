@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-18T11:54:41Z",
+  "iteration": "FREM-S12-P0V4",
+  "scope": "PROSPECTIVE_PRE_MARKET_KAGGLE_RUNTIME_PORTABILITY_AMENDMENT",
+  "observation": "Private engineering-only Kaggle saved version 359681231 completed successfully in 24.2 seconds and observed Python 3.13.15, NumPy 2.1.3, Linux x86_64, four CPUs, a genuinely read-only /kaggle/input mount, blocked direct TCP egress, and the attached v0.1.0 wheel nested under datasets/ryangomez010/frem-s12-input. No market data, model package, fit, score, scientific cell or protected outcome was accessed. The preserved v3 qualification failure 359671420 remains unchanged.",
+  "hypothesized_cause": "P0v3 encoded a Python 3.12-only runtime and a legacy flat Kaggle dataset mount, while Kaggle's current CPU image supplies a supported numerical stack at Python 3.13 / NumPy 2.1.3 and exposes attached data under a recursive read-only owner/slug path.",
+  "change": "Freeze P0v4 before market access. Retain Python 3.12 / NumPy 2.5.4 and add Python 3.13 / NumPy 2.1.3 as exact runtime pairs; recursively locate exactly one expected wheel below /kaggle/input; bind it by exact filename and SHA-256; use no-index/no-deps installation; replace permission-bit inference with statvfs/mountinfo read-only observation. Do not change the hypothesis, model, data, splits, cells, controls, thresholds, inference, budgets or one-use gates.",
+  "predicted_effect": "The current Kaggle CPU image can reach the existing exact-source resource projection without accepting an unobserved dependency stack or ambiguous input file, while all scientific execution remains closed unless the fresh v4 qualification receipt passes.",
+  "discriminating_experiment": "Upload exact wheel SHA-256 4b66fbd23640c641f69b50fd12fde95eb86532951c0411465ff965d4575d0780 and notebook SHA-256 f60cbb4f3ca8acb747513b23def1bc080dbb462d701b5af8bbf013ab2dccd3a3 privately, run qualify-kaggle with accelerator None and internet disabled, then download and independently hash the environment receipt. Any runtime, input, egress, source, projection, quota or output mismatch fails closed before market access.",
+  "result": "P0V4_LOCAL_ENGINEERING_VERIFIED_TARGET_QUALIFICATION_PENDING_BROWSER_UPLOAD_BLOCK",
+  "capability_script_version_id": 359681231,
+  "capability_receipt": "research/frem_s12_20261018/KAGGLE_CAPABILITY_359681231.json",
+  "protocol_sha256": "8c746364f07224b4790c7424f07eceb7da6a2d407c522e250c4a8c073b7d3002",
+  "source_identity": "019357f8bb87118ee31f29eb361dc5284f10186e7eeb795f331f8bd3f6c6a3cc",
+  "wheel_sha256": "4b66fbd23640c641f69b50fd12fde95eb86532951c0411465ff965d4575d0780",
+  "notebook_sha256": "f60cbb4f3ca8acb747513b23def1bc080dbb462d701b5af8bbf013ab2dccd3a3",
+  "tests": {
+    "python_3_12_passed": 43,
+    "python_3_12_failed": 0,
+    "warnings_as_errors": true,
+    "cross_runtime_generated_outputs": "byte-identical"
+  },
+  "retained_local_python_3_13_observation": "The local macOS arm64 NumPy 2.1.3 build issued floating-point status RuntimeWarnings on finite matmul operations; 36 tests passed and 7 warning-strict cases stopped. Installed-wheel generated artifacts remained byte-identical to Python 3.12. Kaggle Linux qualification is authoritative and still pending.",
+  "upload_block": "Chrome repeatedly exited while the new private dataset file chooser was opening. The prepared upload is not represented as completed.",
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

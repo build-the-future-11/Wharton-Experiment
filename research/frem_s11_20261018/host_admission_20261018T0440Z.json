@@ -1,0 +1,42 @@
+{
+  "floor_mib": 512.0,
+  "interpreter": "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "observed_utc": "2026-10-18T04:42:30.128114+00:00",
+  "platform": "darwin",
+  "pressure_rule": "pageouts equal across all samples",
+  "python": "3.12.14",
+  "reasons": [
+    "AVAILABLE_MEMORY_BELOW_512_MIB",
+    "PAGEOUT_COUNTER_CHANGED"
+  ],
+  "samples": [
+    {
+      "available_mib": 141.53125,
+      "free_pages": 6437,
+      "page_size_bytes": 16384,
+      "pageouts": 2058718,
+      "speculative_pages": 2621,
+      "timestamp_utc": "2026-10-18T04:42:27.707789+00:00"
+    },
+    {
+      "available_mib": 112.203125,
+      "free_pages": 4464,
+      "page_size_bytes": 16384,
+      "pageouts": 2058792,
+      "speculative_pages": 2717,
+      "timestamp_utc": "2026-10-18T04:42:29.088004+00:00"
+    },
+    {
+      "available_mib": 111.859375,
+      "free_pages": 4375,
+      "page_size_bytes": 16384,
+      "pageouts": 2058852,
+      "speculative_pages": 2784,
+      "timestamp_utc": "2026-10-18T04:42:30.112693+00:00"
+    }
+  ],
+  "schema": "frem-s11-host-admission-v1",
+  "scientific_execution": false,
+  "source_identity": "20b462e9eed989362dc34198e4325e5e6dd678357eb366055f642016ea1a9fca",
+  "status": "BLOCKED"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "frem-s12-p0v7-implementation-receipt-v1",
+  "observed_utc": "2026-10-18T14:55:35Z",
+  "status": "P0V7_ENGINEERING_VERIFIED_KAGGLE_UPLOAD_PENDING_SCIENCE_NOT_RUN",
+  "decision_journal_entry_sha256": "b46270868c4261d1d7d992663a76afe74fb63154df0490a63aa891670807b477",
+  "protocol": {
+    "path": "successors/frem_s12/src/frem_s12/protocol_p0_v7.json",
+    "sha256": "6dd4652afaf76506736abc7e8bef027c12d1aa08f6b53a4be0a96881f233af10"
+  },
+  "package": {
+    "version": "0.1.4",
+    "source_identity": "87b2378b9180b79cdb1ca1a90fb33f8150bcf4d1613deb07ba23af7797450ca5",
+    "wheel_path": "research/frem_s12_20261018/kaggle_upload_p0v7_qualification_01/dataset_reproducible/frem_s12-0.1.4-py3-none-any.whl",
+    "wheel_bytes": 57699,
+    "wheel_sha256": "e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72",
+    "wheel_rebuild_sha256": "e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72",
+    "source_date_epoch": 1792321200,
+    "wheel_byte_reproducible": true
+  },
+  "notebook": {
+    "path": "successors/frem_s12/kaggle/frem_s12_campaign.ipynb",
+    "sha256": "6db7e62e45fa90b29fe9bafda454239f411cc3227b50aa668fa9b0873916afb3",
+    "package_version": "0.1.4",
+    "requires_acquisition_receipt": true,
+    "python_warnings_are_errors": true
+  },
+  "verification": {
+    "tests": "60 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "ruff_lint": "passed over source and tests",
+    "ruff_format": "passed over source and tests",
+    "mypy_strict": "passed over 21 source modules",
+    "uv_lock_check": "passed offline with 15 packages resolved",
+    "notebook_json_and_code_compilation": "passed",
+    "wheel_rebuild": "two fixed-epoch builds byte-identical",
+    "clean_wheel_generated_smoke": "passed warning-strict under Python 3.12 / NumPy 2.5.4",
+    "clean_wheel_arrays_sha256": "b04c37b7fdbd14cc4821a69632802fc6bbb0bd1503fc16fbb1fc08ef0acf53b8",
+    "clean_wheel_summary_sha256": "1bdb272c5025026be91b5ab110a681bc30e03bb736fb73ce0af21844b714ee87",
+    "clean_wheel_manifest_sha256": "afdd3e43d1f27cd9440f360d2301254cb2194cbd3b858e7c61d6b810e619954b",
+    "legacy_p0v5_bundle": "research/frem_s12_20261018/P0V7_LEGACY_BUNDLE_VERIFICATION.json; integrity verified with command success; eligible_for_next_stage false because it is generated engineering evidence"
+  },
+  "repairs": [
+    "Exact search and fixed calendars are independently reconstructed from the frozen registry.",
+    "Validation outcomes and finite laws are retained; validation scores and selected non-FREM controls reconstruct independently.",
+    "Search and fixed campaign readers reject every missing, extra, symlinked or special file.",
+    "Scientific cells bind environment, acquisition, data, archive, source, consumption and fixed-selection receipts.",
+    "Algorithmic seeds within each family-fold must share identical validation and test outcomes.",
+    "Downloaded qualification verification validates isolated installation identity and recomputes runtime, timing, storage and budget admission semantics.",
+    "Bundle integrity is separated from eligible_for_next_stage, and verifier output cannot be written inside the immutable bundle.",
+    "Search selection and fixed analysis outputs cannot be written inside their immutable campaign roots."
+  ],
+  "preserved_failures": [
+    "Both initial offline no-isolation wheel builds failed because setuptools was absent from the package environment; no wheel was produced.",
+    "Both isolated offline wheel builds failed because pinned setuptools and wheel were not yet cached; no wheel was produced.",
+    "The first clean-wheel execution used the system Python 3.12 interpreter without NumPy and failed before creating an output directory; the package-environment Python 3.12 rerun passed.",
+    "A repository-wide Ruff probe included notebooks and reported notebook docstring and formatting findings; the declared Ruff gate is source and tests, while the final campaign notebook separately passed JSON and code-cell compilation. The historical capability-probe notebook was not rewritten.",
+    "The initial P0v7 candidate wheel b3717d7482fbd574ab49728f4d6bb31769344ac3b11b539620d297e2448a849d and source identity cd89c212aa7cd141c859cf025b9150dafbeca574eaebdcfde5353222600def55 were superseded before upload after the output-location mutability defect was found; the wheel is preserved under superseded_pre_output_location_guard.",
+    "P0v6 remains preserved as a locally verified but never uploaded or scientifically executed predecessor.",
+    "Kaggle has no cross-version atomic filesystem; all saved-version consumption claims still require complete external attempt reconciliation before scientific interpretation."
+  ],
+  "kaggle_executed": false,
+  "archives_acquired": 0,
+  "market_fits": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "protected_access": false,
+  "scientific_admitted": false,
+  "scientific_status": "NOT_EVALUATED"
+}

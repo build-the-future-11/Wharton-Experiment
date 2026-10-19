@@ -1,0 +1,211 @@
+{
+  "protocol_id": "FREM-S12-DRAFT",
+  "version": 0,
+  "status": "DRAFT_NOT_FROZEN",
+  "created": "2026-10-18",
+  "relationship": {
+    "predecessors_reopened": false,
+    "s11_consumed": false,
+    "statement": "Separate successor design. It does not modify S8-S11 protocols, results, thresholds, receipts, or dispositions."
+  },
+  "research_statement": "Existing delayed expert mixtures may fail under regime change because fixed score-to-weight rules cannot distinguish persistent expert skill from transient correlated errors. FREM-S12 proposes a causally delayed, stability-constrained router over multiscale Fourier-reservoir and engram-retrieval scenario laws; the mechanism predicts better joint probabilistic forecasts under repeated walk-forward shifts without relying on extra future information or an unfair compute advantage.",
+  "question": "Does a learned causal memory router improve joint monthly return-distribution forecasts over the frozen S11 stacker and strong compute-matched non-memory baselines across repeated walk-forward folds?",
+  "falsification": "Reject support if the candidate fails the practical energy-score margin against either mandatory control, degrades dependence scoring beyond its noninferiority margin, fails more than the allowed folds, violates compute matching, or depends on leakage, post-outcome tuning, omitted seeds, or invalid artifacts.",
+  "scope": {
+    "included": [
+      "public research-portfolio return forecasting",
+      "development calibration under nested chronology",
+      "repeated walk-forward evaluation",
+      "mechanism ablation, robustness, scaling, and efficiency",
+      "Kaggle CPU and GPU engineering qualification",
+      "Kaggle development execution after an exact freeze"
+    ],
+    "excluded": [
+      "individual-security point-in-time claims",
+      "live trading or broker actions",
+      "investment advice or mandate certification",
+      "public submission",
+      "protected confirmation before a separate freeze",
+      "claims of novelty, profitability, or state of the art before evidence"
+    ]
+  },
+  "candidate_model": {
+    "name": "causal_multiscale_memory_router",
+    "inputs": "train-only standardized causal return states and matured past proper-score feedback",
+    "fourier_reservoir": "fixed random Fourier features feeding a spectrally normalized recurrent state; no future outcomes enter the state",
+    "engram_bank": "bounded matured context/outcome records with short, medium, long, context-nearest and tail-regime retrieval laws",
+    "router": "small causal neural gate trained only on matured specialist regret, state summaries and uncertainty features",
+    "constraints": [
+      "simplex weights",
+      "maximum expert weight",
+      "minimum entropy or explicit shrinkage",
+      "feedback delay equal to label maturity",
+      "no evaluation-time parameter updates unless frozen as online adaptation",
+      "identical information set for candidate and controls"
+    ],
+    "output": "finite multivariate scenario law with retained scenario identities and mixture weights",
+    "policy_role": "secondary diagnostic only; cannot rescue failure of the forecast endpoint"
+  },
+  "mandatory_controls": [
+    "S11 delayed capped fixed stacker",
+    "equal specialist mixture",
+    "recency empirical law",
+    "shrinkage multivariate Gaussian",
+    "shrinkage multivariate Student-t",
+    "regularized VAR with matched residual scenario law",
+    "compute-matched neural sequence baseline selected before the final freeze",
+    "candidate with router disabled"
+  ],
+  "data": {
+    "status": "CANDIDATES_ONLY_SOURCE_AND_RIGHTS_AUDIT_REQUIRED",
+    "development_candidates": [
+      "Kenneth French six size/book-to-market research portfolios",
+      "Kenneth French twenty-five size/book-to-market research portfolios",
+      "Kenneth French industry research portfolios"
+    ],
+    "requirements": [
+      "official source URLs and release timestamps",
+      "release-vintage or revision contract where available",
+      "exact redistribution and publication boundary",
+      "contiguous calendar and missing-value rules",
+      "prior-exposure and contamination ledger",
+      "dataset-family unit definition",
+      "no numeric protected-outcome inspection before freeze"
+    ],
+    "confirmation_source": "TBD_AFTER_CONTAMINATION_AUDIT_AND_SEPARATE_FREEZE",
+    "claim_boundary": "Research portfolios are not individual tradable securities or a deployable feed."
+  },
+  "splits": {
+    "status": "ALGORITHMIC_DRAFT_EXACT_DATES_PENDING_METADATA_ONLY_COVERAGE_AUDIT",
+    "minimum_training_months": 120,
+    "validation_months": 24,
+    "test_months": 24,
+    "test_stride_months": 24,
+    "minimum_development_folds": 6,
+    "target_development_folds": 8,
+    "purge": "one complete forecast horizon plus all label and feedback maturity lag",
+    "nested_tuning": true,
+    "protected_confirmation": "No confirmation dates or source may be opened until a later versioned freeze."
+  },
+  "primary": {
+    "statistical_unit": "forecast origin with all contemporaneous portfolio dimensions retained jointly",
+    "endpoint": "mean multivariate energy score",
+    "mandatory_comparisons": [
+      "candidate versus S11 stacker",
+      "candidate versus strongest predeclared non-FREM baseline"
+    ],
+    "minimum_relative_improvement": 0.05,
+    "uncertainty": "paired hierarchical circular moving-block bootstrap by dataset family and fold; primary 12-month block, 10000 draws, fixed seed 1912; 6/24-month sensitivities descriptive",
+    "multiplicity": "Holm correction across the two mandatory comparisons",
+    "fold_rule": "pooled corrected interval above zero, at least 75 percent of eligible folds positive, and no dataset family with a materially negative pooled effect",
+    "dependence_guard": "variogram-score degradation no worse than 1 percent relative to each mandatory control",
+    "decision": "All primary and dependence conditions must pass; secondary wealth cannot override failure."
+  },
+  "secondary": [
+    "variogram score",
+    "marginal CRPS",
+    "rank and coverage calibration",
+    "tail-event Brier scores",
+    "expert weight entropy and turnover",
+    "forecast scenario effective sample size",
+    "net-of-cost policy utility and wealth as non-rescuing diagnostics",
+    "runtime, peak memory, GPU utilization, energy proxy, parameter count and serialized state size"
+  ],
+  "development": {
+    "hyperparameter_trials_max": 24,
+    "search_seeds": [11, 29],
+    "final_matrix_seeds": [11, 29, 47, 71, 97],
+    "selection": "nested chronological validation only; one candidate selected before the fixed development matrix",
+    "maximum_model_cell_equivalents": 2000,
+    "automatic_retries": 0,
+    "valid_failure_policy": "Preserve and count failures; never omit a failing seed or fold.",
+    "scientific_runs": "Only stages whose preceding gate passes are authorized; the existence of a preset does not authorize executing it."
+  },
+  "matrix": {
+    "core": "selected candidate plus all mandatory controls over every admitted family, fold and final-matrix seed",
+    "ablations": [
+      "no Fourier reservoir",
+      "no engram retrieval",
+      "fixed S11 router",
+      "no delayed feedback",
+      "no entropy or shrinkage constraint",
+      "single memory scale",
+      "no tail specialist"
+    ],
+    "robustness": [
+      "missing causal inputs",
+      "return perturbation scaled from training data only",
+      "calendar-edge truncation",
+      "transaction-cost sensitivity for secondary policy",
+      "release revision stress where historical vintages exist"
+    ],
+    "scaling": [
+      "portfolio dimension",
+      "history length",
+      "reservoir width",
+      "engram capacity",
+      "CPU versus one-GPU throughput"
+    ]
+  },
+  "kaggle": {
+    "contract": "KAGGLE_NATIVE_DRAFT_REQUIRES_PLATFORM_QUALIFICATION",
+    "platform_assumptions_observed_2026_10_18": {
+      "session_limit_hours": 12,
+      "autosaved_working_disk_gib": 20,
+      "cpu_ram_gib": 30,
+      "gpu_ram_gib": 29,
+      "gpu_options_documented": ["P100", "T4x2"],
+      "quota": "Account- and demand-dependent; live receipt required before every launch."
+    },
+    "scientific_shard_limit_hours": 8.5,
+    "scientific_shard_output_limit_gib": 15,
+    "development_ceiling": {
+      "gpu_hours": 60,
+      "cpu_hours": 120,
+      "calendar_weeks": 2,
+      "effective_limit": "minimum of these ceilings, observed account quota and measured projection"
+    },
+    "confirmation_ceiling": "UNAUTHORIZED; proposed separately after a valid development result",
+    "accelerator_policy": "Use GPU only after a measured representative speedup and CPU/GPU numerical-equivalence gate; otherwise use CPU.",
+    "isolation": "Separate S12 threat model: private notebook, read-only attached inputs, internet disabled for scientific shards, exact hashes, environment fingerprint, no secrets, bounded writable output. This does not inherit or claim S10 bubblewrap equivalence.",
+    "persistence": "Save-and-run version plus downloaded output archive, producer/local SHA-256 agreement, cell ledger and explicit stopped-session receipt",
+    "resume": "Only exact checkpoint continuation within the same consumed shard; no new scientific retry after a valid completed result"
+  },
+  "compute_matching": {
+    "information": "identical causal inputs and label availability",
+    "search": "same declared tuning opportunity or a reported disadvantage to the candidate",
+    "budget": "matched wall-clock and accelerator class for learned controls; classical controls receive sufficient convergence budget",
+    "reporting": "actual steps, parameters, wall time, peak memory, device utilization and failures"
+  },
+  "gates": [
+    "G0 literature and novelty boundary",
+    "G1 source, rights and contamination audit",
+    "G2 exact P0 model and experiment freeze",
+    "G3 implementation and mathematical verification",
+    "G4 generated end-to-end dry run",
+    "G5 Kaggle capability, environment and persistence qualification",
+    "G6 measured cost projection within live quota",
+    "G7 bounded nested development search",
+    "G8 fixed full development matrix and independent saved-output audit",
+    "G9 separate confirmation freeze only after valid support",
+    "G10 independent reproduction, paper and release review"
+  ],
+  "terminal_rules": {
+    "negative_or_inconclusive": "Close the frozen S12 version. A new mechanism requires S13 or a separately versioned successor.",
+    "invalid": "Record the validity defect and preserve the attempt; only a prospectively corrected freeze may run.",
+    "positive_development": "Development support only. No profitability, confirmation, deployment or publication claim.",
+    "protected": "No outcome-driven threshold, fold, block, seed, baseline, retry or dataset substitution."
+  },
+  "current_evidence": {
+    "literature_review_complete": false,
+    "data_acquired": false,
+    "data_parsed": false,
+    "model_implemented": false,
+    "kaggle_probe_run": false,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "scientific_status": "NOT_EVALUATED"
+  }
+}
+

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-18T10:57:53Z",
+  "status": "PRIVATE_KAGGLE_UPLOAD_COMPLETE_QUALIFICATION_REJECTED_SCIENCE_NOT_RUN",
+  "preserves": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_READY.json",
+  "source_identity": "8b50a3be55fac9ae7ee10b1b0e3c42bcd239d1461c5b80c83d84a50214f1bb4a",
+  "wheel_sha256": "d476fd0ddc3b5914b96f8602b1361f4b3e6ca0dccd573fdf6999be62ff6e48fe",
+  "notebook_sha256": "53675a4e74efba8f08c30b0a9e7ab79f1fc58f234867762ff4a408009669ccf4",
+  "notebook_change": "Added a standard-library preflight receipt before package installation and made offline wheel installation use --no-deps so the frozen runtime and NumPy requirements cannot be repaired or substituted silently.",
+  "private_dataset_url": "https://www.kaggle.com/datasets/ryangomez010/frem-s12-input",
+  "private_notebook_url": "https://www.kaggle.com/code/ryangomez010/frem-s12-campaign",
+  "initial_upload_version_id": 359670132,
+  "qualification_version_id": 359671420,
+  "qualification_receipt": "research/frem_s12_20261018/KAGGLE_QUALIFICATION_359671420.json",
+  "decision_journal_entry_sha256": "7f3a29112388a060637dfe20f3b5883df2d923ca15f1c146be2b1a4dc7f18cfc",
+  "qualification_result": "REJECTED_UNSUPPORTED_RUNTIME",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

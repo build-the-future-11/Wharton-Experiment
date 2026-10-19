@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-18T04:39:45+00:00",
+  "iteration": "FREM-S11",
+  "scope": "CORRECTED_FREEZE_BEFORE_ACQUISITION_OR_DATA_PARSE",
+  "observation": "A static pre-execution audit found that FREM-S11-P0 reversed the semantic LoBM and HiBM asset labels, described a fixed 120-month law as expanding, carried target rather than post-return drifted portfolio weights into the next policy decision, and left CLI release and cutoff arguments insufficiently bound to the frozen design. No archive had been acquired or parsed and no market outcome had been observed.",
+  "hypothesized_cause": "The defects arose while translating the conceptual successor design into labels, policy accounting and executable guardrails. They are implementation and protocol-validity defects, not reactions to a result.",
+  "change": "Preserve FREM-S11-P0 and freeze FREM-S11-P1 in protocol_v2.json. Correct growth/value labels and state direction, use post-return drifted allocations, bind development and revision commands to exact releases and cutoffs, require fresh interpreter-and-source-bound host and archive receipts, retain complete hashed arrays, and compute explicit primary and secondary dispositions.",
+  "predicted_effect": "The repair removes semantic inversion, stale-weight turnover bias and out-of-protocol execution paths. It does not predict or guarantee improved predictive or economic performance.",
+  "discriminating_experiment": "Unchanged one-shot two-fold development evaluation on the August 2016 archive through July 2016, with the same five percent energy-score thresholds and paired moving-block intervals, followed only by the two declared common-cutoff revision comparisons.",
+  "result": "CORRECTED_DESIGN_FROZEN_IMPLEMENTATION_STATICALLY_CHECKED_DATA_UNACQUIRED_NOT_EVALUATED",
+  "protected_access": false,
+  "archives_acquired": false,
+  "data_parsed": false,
+  "market_fits": 0,
+  "predecessors_reopened": false,
+  "original_protocol_preserved": "successors/frem_s11/src/frem_s11/protocol.json",
+  "corrected_protocol": "successors/frem_s11/src/frem_s11/protocol_v2.json",
+  "plan": "research/frem_s11_20261018/PLAN.md"
+}

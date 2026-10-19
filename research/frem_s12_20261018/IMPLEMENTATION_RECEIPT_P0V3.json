@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-10-18T09:36:56Z",
+  "status": "P0V3_INTEGRITY_HARDENED_LOCAL_ENGINEERING_VERIFIED_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "git_head": "0201c2df8b470271543a9b1c9a5de0e46d6418ec",
+  "branch": "codex/repo-cleanup-efficiency",
+  "decision_journal_entry_sha256": "bcfefaa8c8ec390abf01272c3017bbf53651de7ffecebca57d4b00a447016247",
+  "source_identity": "96f46ba678c3f70d437715780c7e4b21a3f71ede06c8f2ab0c68300b11ebb6fb",
+  "protocol": {
+    "base_path": "successors/frem_s12/protocol_p0.json",
+    "base_version": 2,
+    "base_sha256": "97c83d00d4cdcec38edf2070e1827b554e2f94bdccc55a308c1e55a0baa1052c",
+    "amendment_path": "successors/frem_s12/protocol_p0_v3.json",
+    "version": 3,
+    "amendment_sha256": "fe8ecbbff4dc8a63d8354a7a9cab82c778b3eb5b1ba5a54bf1b115a69c03ab9d"
+  },
+  "tests": {
+    "passed": 40,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "seconds": 37.22
+  },
+  "quality": {
+    "ruff_lint": "PASS",
+    "ruff_format": "PASS",
+    "mypy_strict_modules": 20,
+    "mypy_strict": "PASS",
+    "build": "PASS",
+    "embedded_p0v2_and_p0v3_inventory": "PASS",
+    "clean_wheel_cli": "PASS",
+    "clean_wheel_local_receipt_nonadmitting": "PASS",
+    "notebook_json": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "wheel_sha256": "dfa03338625b66ae5bea2cef130134d8009827a239bfdbc4071e9f19c2d08e00",
+  "sdist_sha256": "ffb39a2e3e2ecd529886d11e52c0faea18801ed50fa7befb37aa7c9bda20d541",
+  "kaggle_notebook_sha256": "a632db1aa4cc230a3a59c9f51f487015274905cc3f88d816b4f78f10d340155e",
+  "generated_smoke": {
+    "path": "research/frem_s12_20261018/generated_smoke_p0v3_integrity",
+    "manifest_sha256": "777670c597173538ac8e69b892b6866585b5b61b4841940a1e1bc1446ffe7ffd",
+    "arrays_sha256": "2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f",
+    "summary_sha256": "cc4e96c4e1870b695b57f9505b8819c35617c16b26b53d9ff762a2d180852fc7",
+    "origins": 24,
+    "engineering_only": true,
+    "candidate_mean_energy": 0.02384071844215631,
+    "s11_mean_energy": 0.023121430210044324,
+    "selected_non_frem": "var",
+    "selected_non_frem_mean_energy": 0.022861457510486,
+    "disposition": "MIXED_NEGATIVE_ENGINEERING_OBSERVATION_NO_SCIENTIFIC_INFERENCE"
+  },
+  "preserved_prior_smokes": [
+    "research/frem_s12_20261018/generated_smoke_p0v2",
+    "research/frem_s12_20261018/generated_smoke_p0v2_consumption_final"
+  ],
+  "integrity_amendments": {
+    "fold_artifacts_reconstructable": true,
+    "search_artifacts_reconstructable": true,
+    "targets_and_holdings_separate": true,
+    "algorithmic_seeds_averaged_before_inference": true,
+    "equal_family_equal_fold_aggregation": true,
+    "local_receipts_cannot_admit_science": true,
+    "kaggle_generated_projection_required": true,
+    "gpu_admitted": false,
+    "causal_mlp_raw_mean_target": true
+  },
+  "registries": {
+    "search_trials": 24,
+    "search_cells": 144,
+    "search_validation": "Fold A 199801-199912 only",
+    "fixed_cells": 120
+  },
+  "evidence": {
+    "protocol_frozen": true,
+    "model_implemented": true,
+    "kaggle_session_started": false,
+    "archives_acquired": 0,
+    "data_rows_parsed": 0,
+    "search_cells_consumed": 0,
+    "fixed_cells_consumed": 0,
+    "market_fits": 0,
+    "protected_access": false,
+    "scientific_status": "NOT_EVALUATED"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/usr/local/bin/python3.13",
+    "-m",
+    "frem_s12.cli",
+    "qualify-kaggle",
+    "--output",
+    "/tmp/frem-s12-p0v5-fail-sim-output-1337/environment.json"
+  ],
+  "execute": false,
+  "files": {
+    "command.json": {
+      "sha256": "b99008f35cd017c3e62d2250cba348569e7b568ada633d2ea545874bd67df184",
+      "size": 4236
+    },
+    "environment.json": {
+      "sha256": "3718f3be12c2a92c81cf8ab3abfe37504d3beb7b343f6e115feab39c64fd69ee",
+      "size": 3672
+    },
+    "installation.json": {
+      "sha256": "cc110fd5a0cc43c5aab9eecc009e72720d0df32d132f58ac23176815b18b8804",
+      "size": 3726
+    },
+    "preflight.json": {
+      "sha256": "97289f6453554a1dfac9fd333946150751ba62bf2066bdae3775ac61c09ba707",
+      "size": 924
+    }
+  },
+  "input_inventory_sha256": "fe8610990fd3b358640f0cb169c8a97cfd10043844a98f927718bffc0f69bc4b",
+  "mode": "qualify-kaggle",
+  "package_version": "0.1.2",
+  "schema": "frem-s12-kaggle-run-manifest-v1",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06"
+}

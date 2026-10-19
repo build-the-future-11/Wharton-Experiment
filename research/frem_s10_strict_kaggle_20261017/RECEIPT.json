@@ -1,0 +1,36 @@
+{
+  "status": "BLOCKED_PLATFORM_WITH_STRICT_GATES_REPAIRED",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "market_ledgers": 0,
+  "protected_access": false,
+  "probe_sha256": "201723e84473050d61a5e2447b84f3b6014bf32c3309be7ec943322791d271d7",
+  "probe_evidence": "UI-observed output reconstructed locally with exact producer SHA256 match; saved-version creation UI confirmed, no external downloaded-file retrieval claimed.",
+  "notebook": "https://www.kaggle.com/code/ryangomez010/notebook67853df4e8",
+  "saved_version": 1,
+  "session_stopped_ui_verified": true,
+  "accelerator": "None",
+  "verification": {
+    "stdlib_regressions_passed": 3,
+    "scoped_ruff": "PASS",
+    "full_suite": "NOT_RUN",
+    "actual_linux_qualification": "BLOCKED"
+  },
+  "source_sha256": {
+    "successors/frem_s10/src/frem_s10/runtime/verification.py": "78b570e44ab7dad318f85c9e9b8484cfa23c8175419609dc3586d5bdd181add9",
+    "successors/frem_s10/src/frem_s10/runtime/resources.py": "85cbf75566dbdfda8b848b639a4ff04112ba5725ab1109416a7e082ccc45e930",
+    "successors/frem_s10/tests/test_kaggle_production_contract_audit.py": "f00960bc65919367929accb9f8fac88316dbe6295f064be2f5e26b7229546f09",
+    "tools/kaggle/production_runner.py": "e24dfee6ace4937ffc79661f105f9a0809ef7873403b19813ab411299c140b8f"
+  },
+  "repairs": [
+    "All Linux verification commands use mandatory bubblewrap adapter, including Kaggle marker.",
+    "Namespace-only memory cannot pass admission or saved receipt audit.",
+    "Catalog no longer declares unqualified Kaggle boundary BOUNDED_COMPLETE."
+  ],
+  "automation": {
+    "id": "s10-strict-kaggle-qualification-follow-up",
+    "status": "ACTIVE",
+    "interval_hours": 6
+  },
+  "model_repair_effects": "NOT_EVALUATED; no new market ablation outcomes."
+}

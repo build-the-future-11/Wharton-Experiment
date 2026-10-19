@@ -1,0 +1,18 @@
+{
+  "schema": "frem-s12-downloaded-run-verification-v1",
+  "verified": true,
+  "manifest_sha256": "3051dea1199a6dffe24971e598d985c11a4c96e5147398013dd79dd030f286cc",
+  "file_count": 6,
+  "total_bytes": 691590,
+  "mode": "generated-smoke",
+  "execute": false,
+  "package_version": "0.1.2",
+  "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06",
+  "input_inventory_sha256": "fe8610990fd3b358640f0cb169c8a97cfd10043844a98f927718bffc0f69bc4b",
+  "installed_source_identity": "d4b06d915f62f0cf6f1f0015481f6fdd0b88ef34028f62349a1f5e3a1012f6d3",
+  "command_returncode": 0,
+  "command_succeeded": true,
+  "scientific_admitted": false,
+  "eligible_for_next_stage": false,
+  "interpretation": "Backward-compatibility engineering verification only; not a P0v7 qualification or scientific admission."
+}

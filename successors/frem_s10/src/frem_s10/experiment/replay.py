@@ -565,7 +565,8 @@ def replay_cell(
 def _validate_tape(inputs: ReplayInputs, tape: ForecastTape) -> None:
     if tape.transform_id != inputs.transform.record_id or tape.evidence_scope != inputs.evidence_scope:
         raise IntegrityError("forecast tape transform or evidence scope mismatch")
-    indices = tuple(sorted(index for window in inputs.windows for index in window.origin_indices))
+    # Generated windows may share an origin; one forecast serves both ledgers.
+    indices = tuple(sorted({index for window in inputs.windows for index in window.origin_indices}))
     if tuple(dict.fromkeys(frame.anchor_index for frame in tape.frames)) != indices:
         raise IntegrityError("forecast tape differs from the exact retained evaluation origins")
     records = {record.anchor_index: record for record in inputs.origins}

@@ -1,0 +1,1926 @@
+{
+  "authorizes_scientific_execution": false,
+  "design": "FREM-S10-design4-CL16",
+  "evidence_scope": "GENERATED_ENGINEERING_PLAN_NOT_EXECUTION",
+  "historical_catalog": "research/frem_s10_repair_20261015/VERIFICATION_FINAL.json",
+  "historical_catalog_sha256": "6551f6ec8079ef4ee24577410302dbd94bc41ff906add593e434cc0d6b5e318c",
+  "historical_mutation_receipt": {
+    "current_source_execution": false,
+    "path": "research/frem_s10_production_20261016/semantic_mutants_attempt2/receipt.json",
+    "sha256": "d62e06a5977f81ba8ef6be91c8a0567b0c564bb60e145f33763d3582d0ae1a66"
+  },
+  "obligations": [
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_all_declared_units_reject_every_wrong_unit_without_conversion"
+      ],
+      "test_id": "TEST-001"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "test_families": [
+        "tests/test_actions_audit.py::test_action_set_rejects_invalid_indices_and_cash",
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_catalog_critical_audit.py::test_permuted_asset_feature_payload_cannot_reuse_canonical_origin_identity",
+        "tests/test_catalog_faults_audit.py::test_source_asset_order_and_terminal_event_cannot_be_silently_reinterpreted",
+        "tests/test_catalog_numerics_audit.py::test_typed_numeric_boundary_rejects_shape_dtype_and_nonfinite",
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes",
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted",
+        "tests/test_readback_audit.py::test_resigned_header_axes_cannot_relabel_saved_values"
+      ],
+      "test_id": "TEST-002"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-001"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_quantity_domains_reject_nonfinite_and_invalid_values",
+        "tests/test_catalog_numerics_audit.py::test_typed_numeric_boundary_rejects_shape_dtype_and_nonfinite",
+        "tests/test_data_audit.py::test_dividend_corruption_is_rejected",
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly",
+        "tests/test_math_audit.py::test_probability_tolerance_fail_closed",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed"
+      ],
+      "test_id": "TEST-003"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-002",
+        "REQ-054"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_every_source_convention_and_schema_rejects_unsupported_values",
+        "tests/test_catalog_numerics_audit.py::test_timestamp_without_timezone_is_not_assumed_utc",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling",
+        "tests/test_data_audit.py::test_source_parser_rejects_ambiguous_or_nonfinite_json",
+        "tests/test_operations_audit.py::test_json_rejects_ambiguous_or_nonfinite_text",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes"
+      ],
+      "test_id": "TEST-004"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-003"
+      ],
+      "test_families": [
+        "tests/test_actions_audit.py::test_public_grid_and_targets_are_immutable",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_math_audit.py::test_utility_outputs_are_immutable",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "test_id": "TEST-005"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-004",
+        "REQ-049"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_every_source_convention_and_schema_rejects_unsupported_values",
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling",
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+        "tests/test_production_data_audit.py::test_calendar_hash_and_clock_tampering_rejected",
+        "tests/test_production_data_audit.py::test_exact_close_clock_and_scope_filtered_admission",
+        "tests/test_production_data_audit.py::test_metadata_validation_imports_no_numerical_or_model_modules",
+        "tests/test_production_data_audit.py::test_production_source_corruption_retains_failure_without_consumption",
+        "tests/test_production_data_audit.py::test_source_mutation_and_false_empirical_scope_rejected"
+      ],
+      "test_id": "TEST-006"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-005"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_source_asset_order_and_terminal_event_cannot_be_silently_reinterpreted",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target",
+        "tests/test_data_audit.py::test_source_defects_fail_before_silent_intersection_or_filling",
+        "tests/test_experiment_audit.py::test_replay_rejects_wrong_transform_missing_frame_wrong_source_ownership_and_shrunken_production_fold",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_production_data_audit.py::test_calendar_hash_and_clock_tampering_rejected",
+        "tests/test_production_data_audit.py::test_exact_close_clock_and_scope_filtered_admission",
+        "tests/test_production_data_audit.py::test_metadata_validation_imports_no_numerical_or_model_modules",
+        "tests/test_production_data_audit.py::test_production_source_corruption_retains_failure_without_consumption",
+        "tests/test_production_data_audit.py::test_source_mutation_and_false_empirical_scope_rejected"
+      ],
+      "test_id": "TEST-007"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-004"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_source_reader_rejects_traversal_symlinks_and_overlarge_files",
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail"
+      ],
+      "test_id": "TEST-008"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-006"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_burnin_nonzero_feature_scale_floor_is_strict",
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_data_audit.py::test_burnin_population_scales_match_independent_closed_form"
+      ],
+      "test_id": "TEST-009"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-006"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_burnin_63_64_strict_cutoff_population_scaling_and_immutability",
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity"
+      ],
+      "test_id": "TEST-010"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_weekly_anchor_clock_handles_dst_holidays_and_iso_year_boundaries"
+      ],
+      "test_id": "TEST-011"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_current_quote_affects_valuation_but_not_available_context",
+        "tests/test_catalog_numerics_audit.py::test_feature_equal_or_after_decision_is_unavailable",
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_math_audit.py::test_reject_bool_neighbor_count_and_noninteger_clock"
+      ],
+      "test_id": "TEST-012"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-005"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_thirteen_irregular_anchor_intervals_preserve_exact_feature_order",
+        "tests/test_data_audit.py::test_context_is_asset_major_and_excludes_current_open_label",
+        "tests/test_data_audit.py::test_feature_availability_is_strict_and_missing_interval_fails",
+        "tests/test_data_audit.py::test_missing_iso_week_fails_instead_of_constructing_an_irregular_target"
+      ],
+      "test_id": "TEST-013"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-008"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_data_audit.py::test_target_cash_sum_includes_nonanchor_daily_dividend"
+      ],
+      "test_id": "TEST-014"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-008"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_admission_preserves_exact_per_asset_event_ids_including_zero_amount",
+        "tests/test_data_audit.py::test_asset_event_provenance_rejects_missing_misaligned_or_duplicate_identity",
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_grouped_source_event_ids_are_retained_exactly_and_duplicate_groups_fail",
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing"
+      ],
+      "test_id": "TEST-015"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-007"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_direct_h4_target_cash_dividends_excludes_origin_includes_endpoint",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed"
+      ],
+      "test_id": "TEST-016"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-009"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_future_price_dividend_changes_preserve_all_earlier_states_and_actions",
+        "tests/test_data_audit.py::test_future_target_perturbation_does_not_change_observable_origin_identity",
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed"
+      ],
+      "test_id": "TEST-017"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-010"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_simultaneous_maturities_are_ordered_and_checkpoint_replay_is_identical",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_audit.py::test_duplicate_cursor_immature_and_omitted_outcomes_fail_without_mutation",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "test_id": "TEST-018"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-011"
+      ],
+      "test_families": [
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_audit.py::test_issued_forecast_is_not_recomputed_after_library_changes"
+      ],
+      "test_id": "TEST-019"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-010"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_library_and_feedback_eviction_keep_exact_declared_recent_membership",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "test_id": "TEST-020"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-012"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_weekly_trace_is_complete_across_retained_fold_boundaries",
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_archive_audit.py::test_callback_retains_nonselected_origins_and_failure_stops_next_issue",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_model_archive_audit.py::test_rejects_mismatched_saved_state_mixture_and_maturity",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "test_id": "TEST-021"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-012"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_simultaneous_maturities_are_ordered_and_checkpoint_replay_is_identical",
+        "tests/test_catalog_critical_audit.py::test_combined_model_ledger_restore_preserves_every_event_boundary",
+        "tests/test_ledger_audit.py::test_immutable_state_can_be_independently_reconstructed_then_continued",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_archive_audit.py::test_callback_retains_nonselected_origins_and_failure_stops_next_issue",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_model_archive_audit.py::test_rejects_mismatched_saved_state_mixture_and_maturity",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip",
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state"
+      ],
+      "test_id": "TEST-022"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-013"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_exact_expert_probabilities_and_label_independent_neighbor_ties",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays"
+      ],
+      "test_id": "TEST-023"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-013"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_leave_one_out_threshold_31_32_33_matches_scalar_order_statistic"
+      ],
+      "test_id": "TEST-024"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-014"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_splitting_or_reordering_atoms_preserves_every_policy_objective",
+        "tests/test_catalog_numerics_audit.py::test_joint_law_moments_psd_and_atom_split_invariance",
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "test_id": "TEST-025"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_one_atom_energy_crps_mse_and_cross_mixture_reference",
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units"
+      ],
+      "test_id": "TEST-026"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "test_families": [
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "test_id": "TEST-027"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_one_atom_energy_crps_mse_and_cross_mixture_reference",
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "test_id": "TEST-028"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_score_rotations_rescaling_and_stable_large_coordinate_distance",
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance"
+      ],
+      "test_id": "TEST-029"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-014"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_joint_law_moments_psd_and_atom_split_invariance"
+      ],
+      "test_id": "TEST-030"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-016"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_one_atom_energy_crps_mse_and_cross_mixture_reference",
+        "tests/test_catalog_statistics_audit.py::test_every_fixed_calibration_edge_sparse_boundary_and_exact_loss_events",
+        "tests/test_experiment_audit.py::test_discrete_interval_endpoint_ties_and_raw_diagnostics_have_exact_units",
+        "tests/test_math_audit.py::test_discrete_quantiles_and_fixed_calibration_edges"
+      ],
+      "test_id": "TEST-031"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-015"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_score_rotations_rescaling_and_stable_large_coordinate_distance",
+        "tests/test_data_audit.py::test_finite_inputs_with_overflow_fail_as_numerical_errors",
+        "tests/test_math_audit.py::test_overflowing_scores_fail_explicitly"
+      ],
+      "test_id": "TEST-032"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_real_bordered_condition_sides_and_original_scale_multiplier",
+        "tests/test_math_audit.py::test_simplex_hand_interior_face_and_vertex",
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate"
+      ],
+      "test_id": "TEST-033"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_simplex_clipping_is_not_projection_and_identical_experts_keep_anchor"
+      ],
+      "test_id": "TEST-034"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_simplex_clipping_is_not_projection_and_identical_experts_keep_anchor",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip"
+      ],
+      "test_id": "TEST-035"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_condition_equality_and_singular_solve_fail_without_candidate_skipping",
+        "tests/test_catalog_critical_audit.py::test_real_bordered_condition_sides_and_original_scale_multiplier",
+        "tests/test_catalog_numerics_audit.py::test_simplex_clipping_is_not_projection_and_identical_experts_keep_anchor",
+        "tests/test_math_audit.py::test_simplex_rejects_bad_curvature_and_preserves_scale_certificate",
+        "tests/test_math_audit.py::test_solver_tolerances_fail_closed"
+      ],
+      "test_id": "TEST-036"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-017"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_tiny_negative_simplex_face_is_corrected_only_within_tolerance",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip"
+      ],
+      "test_id": "TEST-037"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-018"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_global_25_26_local_32_33_and_recency_individual_reference",
+        "tests/test_catalog_numerics_audit.py::test_local_effective_count_at_and_below_floor",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules"
+      ],
+      "test_id": "TEST-038"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-018"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_feedback_permutation_requires_matched_weights_and_preserves_fit",
+        "tests/test_catalog_numerics_audit.py::test_exact_expert_probabilities_and_label_independent_neighbor_ties",
+        "tests/test_catalog_numerics_audit.py::test_global_25_26_local_32_33_and_recency_individual_reference",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws"
+      ],
+      "test_id": "TEST-039"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-019"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_exact_expert_probabilities_and_label_independent_neighbor_ties",
+        "tests/test_catalog_numerics_audit.py::test_global_25_26_local_32_33_and_recency_individual_reference",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_audit.py::test_full_declared_arms_and_owned_immutable_issued_arrays",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "test_id": "TEST-040"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "test_families": [
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing"
+      ],
+      "test_id": "TEST-041"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_sale_root_near_one_crra_and_all_contamination_vertices",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_math_audit.py::test_all_cash_rebalance_preserves_exact_known_root",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal"
+      ],
+      "test_id": "TEST-042"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-020"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_fee_root_near_brackets_and_forced_hundred_iteration_exhaustion"
+      ],
+      "test_id": "TEST-043"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "test_families": [
+        "tests/test_actions_audit.py::test_feasible_hold_deduplicates_only_exact_grid_match",
+        "tests/test_catalog_boundaries_audit.py::test_asset_and_total_caps_on_both_sides_of_tolerance",
+        "tests/test_ledger_audit.py::test_exact_hold_preserves_shares_and_cannot_hide_a_trade",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "test_id": "TEST-044"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "test_families": [
+        "tests/test_actions_audit.py::test_action_counts_and_exact_grid_constraints"
+      ],
+      "test_id": "TEST-045"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-021"
+      ],
+      "test_families": [
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference",
+        "tests/test_policy_benchmarks_audit.py::test_global_ties_do_not_chain_and_turnover_then_lexicographic_is_order_independent"
+      ],
+      "test_id": "TEST-046"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-022"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_all_adverse_atoms_select_exact_cash_even_with_zero_nominal_mass",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_cash_is_exact_on_flat_zero_cost_path_and_infeasible_hold_is_excluded",
+        "tests/test_policy_benchmarks_audit.py::test_every_candidate_has_exact_zero_utility_on_zero_cost_flat_atom",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "test_id": "TEST-047"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-023"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_sale_root_near_one_crra_and_all_contamination_vertices",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_math_audit.py::test_utility_rejects_implicit_dtype_changes",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference"
+      ],
+      "test_id": "TEST-048"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-023"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_sale_root_near_one_crra_and_all_contamination_vertices",
+        "tests/test_math_audit.py::test_crra_matches_decimal_and_zero_nominal_atoms_affect_robustness",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference",
+        "tests/test_policy_benchmarks_audit.py::test_zero_mass_adverse_atom_changes_robust_decision"
+      ],
+      "test_id": "TEST-049"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_ordinary_hold_and_forced_sale_paths_have_identical_dividend_ownership",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "test_id": "TEST-050"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "test_families": [
+        "tests/test_catalog_ledger_audit.py::test_saved_event_dollars_match_independent_decimal_buy_dividend_exit_reference",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_math_audit.py::test_all_cash_rebalance_preserves_exact_known_root"
+      ],
+      "test_id": "TEST-051"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "test_families": [
+        "tests/test_catalog_ledger_audit.py::test_fixed_action_full_ledger_scales_and_zero_cost_is_not_reoptimized",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal"
+      ],
+      "test_id": "TEST-052"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-024"
+      ],
+      "test_families": [
+        "tests/test_catalog_ledger_audit.py::test_daily_trough_between_decisions_recovers_and_entry_fee_is_drawdown",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_duplicate_events_clock_and_missing_daily_marks_fail_closed",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path"
+      ],
+      "test_id": "TEST-053"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "test_families": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_policy_benchmarks_audit.py::test_buy_hold_preserves_dividends_and_drift_above_policy_caps",
+        "tests/test_policy_benchmarks_audit.py::test_fixed_benchmarks_and_entry_fees"
+      ],
+      "test_id": "TEST-054"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "test_families": [
+        "tests/test_policy_benchmarks_audit.py::test_inverse_volatility_floor_and_projection",
+        "tests/test_policy_benchmarks_audit.py::test_projection_matches_independent_active_face_enumeration"
+      ],
+      "test_id": "TEST-055"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-025"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_fixed_shrinkage_reverses_raw_covariance_ranking",
+        "tests/test_policy_benchmarks_audit.py::test_minimum_variance_flat_tie_uses_actual_turnover",
+        "tests/test_policy_benchmarks_audit.py::test_population_covariance_and_fixed_shrink_grid_are_exact",
+        "tests/test_policy_benchmarks_audit.py::test_variance_uses_cl16_exact_objective_ties_not_utility_tolerance"
+      ],
+      "test_id": "TEST-056"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-026"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_cartesian_matrix_is_independently_exact",
+        "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_operations_audit.py::test_plan_enumerates_complete_unique_matrix_without_claiming_run"
+      ],
+      "test_id": "TEST-057"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-026"
+      ],
+      "test_families": [
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing",
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_readback_audit.py::test_fully_resigned_tape_envelope_cannot_admit_duplicate_variant",
+        "tests/test_readback_audit.py::test_resigned_partial_cannot_be_claimed_complete"
+      ],
+      "test_id": "TEST-058"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "test_families": [
+        "tests/test_experiment_audit.py::test_full_kernel_clock_uses_direct_h4_maturity_and_future_changes_cannot_alter_current_forecasts"
+      ],
+      "test_id": "TEST-059"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "test_families": [
+        "tests/test_actions_audit.py::test_hold_switch_is_strict_boolean",
+        "tests/test_catalog_critical_audit.py::test_a5_hold_grid_collision_changes_only_special_hold_semantics",
+        "tests/test_experiment_audit.py::test_cl15_sells_after_entering_dividend_before_reentry_and_final_exit_once",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_experiment_audit.py::test_frozen_state_freezes_entire_law_separately_per_fold_and_controls_share_laws",
+        "tests/test_ledger_audit.py::test_a4_forced_sale_and_reentry_charge_both_fees_after_endpoint_dividend",
+        "tests/test_ledger_audit.py::test_a4_phase_capability_duplicates_and_bypass_are_rejected",
+        "tests/test_ledger_audit.py::test_a4_zero_positions_and_final_liquidation_do_not_create_fees_or_reentry",
+        "tests/test_model_audit.py::test_global_local_and_individual_controls_follow_exact_rules",
+        "tests/test_policy_benchmarks_audit.py::test_exact_hold_keeps_actual_dollars_and_cash"
+      ],
+      "test_id": "TEST-060"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-027"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_library_and_feedback_eviction_keep_exact_declared_recent_membership",
+        "tests/test_catalog_boundaries_audit.py::test_neighbor_ablation_keeps_exact_k_and_matched_fallback",
+        "tests/test_model_audit.py::test_ablation_combinations_are_not_silently_admitted",
+        "tests/test_model_audit.py::test_duplicate_is_rejected_after_library_eviction"
+      ],
+      "test_id": "TEST-061"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "test_families": [
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing",
+        "tests/test_catalog_critical_audit.py::test_labeled_paired_resampling_preserves_asset_method_cost_and_fold_axes",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices",
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction",
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling"
+      ],
+      "test_id": "TEST-062"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "test_families": [
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "test_id": "TEST-063"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-028"
+      ],
+      "test_families": [
+        "tests/test_endpoints_audit.py::test_pooled_score_bootstrap_uses_original_date_weights_and_shared_indices"
+      ],
+      "test_id": "TEST-064"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-029"
+      ],
+      "test_families": [
+        "tests/test_catalog_statistics_audit.py::test_relative_gain_exact_denominator_threshold_observed_and_resampled",
+        "tests/test_endpoints_audit.py::test_exact_five_percent_boundary_does_not_pass_from_subtraction_roundoff",
+        "tests/test_endpoints_audit.py::test_undefined_bootstrap_draw_invalidates_the_endpoint_even_with_positive_observed_mean",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted",
+        "tests/test_statistics_audit.py::test_relative_gain_is_ratio_of_means_and_paired_resampling",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted"
+      ],
+      "test_id": "TEST-065"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-028",
+        "REQ-031"
+      ],
+      "test_families": [
+        "tests/test_catalog_statistics_audit.py::test_all_5000_rng_draws_are_independent_of_operation_order",
+        "tests/test_statistics_audit.py::test_exact_campaign_stream_order_and_scalar_block_construction"
+      ],
+      "test_id": "TEST-066"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-030"
+      ],
+      "test_families": [
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference"
+      ],
+      "test_id": "TEST-067"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-030"
+      ],
+      "test_families": [
+        "tests/test_ablations_audit.py::test_all_sixteen_centered_tests_and_structural_zeros_are_retained",
+        "tests/test_ablations_audit.py::test_centering_direction_plus_one_and_global_holm_match_independent_reference",
+        "tests/test_ablations_audit.py::test_incomplete_family_wrong_pairing_and_policy_only_variation_fail",
+        "tests/test_statistics_audit.py::test_complete_holm_family_matches_hand_calculation"
+      ],
+      "test_id": "TEST-068"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-029"
+      ],
+      "test_families": [
+        "tests/test_catalog_ledger_audit.py::test_noncash_liquidatable_increments_telescope_without_charging_marks",
+        "tests/test_endpoints_audit.py::test_h3_uses_equal_date_block_utility_and_separate_terminal_values",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_ledger_audit.py::test_cash_path_hypothetical_boundaries_and_log_increments_telescope",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path"
+      ],
+      "test_id": "TEST-069"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031"
+      ],
+      "test_families": [
+        "tests/test_catalog_statistics_audit.py::test_precision_sample_standard_deviation_matches_scalar_reference",
+        "tests/test_data_audit.py::test_calendar_plan_has_fixed_four_anchor_progression_and_unused_tail",
+        "tests/test_precision_inputs_audit.py::test_pilot_never_builds_targets_from_fold_values",
+        "tests/test_precision_inputs_audit.py::test_pilot_rejects_later_value_declaration_before_source_io",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker",
+        "tests/test_statistics_audit.py::test_perfectly_constant_apparent_gain_does_not_pass_precision",
+        "tests/test_statistics_audit.py::test_precision_requires_all_four_results_and_uses_prospective_counts",
+        "tests/test_statistics_audit.py::test_undefined_draw_is_not_silently_deleted"
+      ],
+      "test_id": "TEST-070"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-032",
+        "REQ-058"
+      ],
+      "test_families": [
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing",
+        "tests/test_catalog_statistics_audit.py::test_valid_negative_disposition_keeps_both_failed_hypotheses",
+        "tests/test_endpoints_audit.py::test_economic_point_gates_cannot_be_rescued_by_statistical_success",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_endpoints_audit.py::test_missing_matrix_or_integrity_rejects_support_and_bad_pairing_fails",
+        "tests/test_endpoints_audit.py::test_one_failing_fold_or_control_cannot_be_replaced_by_favorable_pooled_result",
+        "tests/test_endpoints_audit.py::test_undefined_required_score_endpoint_is_inconclusive_without_dropping_family",
+        "tests/test_endpoints_audit.py::test_unfavorable_required_block_length_cannot_be_omitted"
+      ],
+      "test_id": "TEST-071"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-033"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_endianness_canonicalization_and_strict_array_storage_tags",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision"
+      ],
+      "test_id": "TEST-072"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-033",
+        "REQ-053"
+      ],
+      "test_families": [
+        "tests/test_data_audit.py::test_wrong_calendar_identity_units_and_unreviewed_source_fail",
+        "tests/test_declarations_audit.py::test_config_threshold_change_and_missing_review_rejected",
+        "tests/test_declarations_audit.py::test_environment_change_cannot_reuse_previous_verification",
+        "tests/test_declarations_audit.py::test_stale_code_and_modified_artifact_hash_rejected",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_archive_audit.py::test_callback_retains_nonselected_origins_and_failure_stops_next_issue",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_model_archive_audit.py::test_rejects_mismatched_saved_state_mixture_and_maturity",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip",
+        "tests/test_model_audit.py::test_changed_pending_metadata_invalidates_state_hash",
+        "tests/test_model_audit.py::test_checkpoint_rejects_excessive_json_nesting_with_typed_error",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_pending_members_and_identity_sets",
+        "tests/test_model_audit.py::test_state_constructor_rejects_direct_invalid_members",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes",
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_production_data_audit.py::test_calendar_hash_and_clock_tampering_rejected",
+        "tests/test_production_data_audit.py::test_exact_close_clock_and_scope_filtered_admission",
+        "tests/test_production_data_audit.py::test_metadata_validation_imports_no_numerical_or_model_modules",
+        "tests/test_production_data_audit.py::test_production_source_corruption_retains_failure_without_consumption",
+        "tests/test_production_data_audit.py::test_source_mutation_and_false_empirical_scope_rejected",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker",
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-073"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-034",
+        "REQ-052"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_failure_before_temp_creation_retains_no_success",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_supervisor_audit.py::test_journal_preserves_chain_and_rejects_tamper",
+        "tests/test_supervisor_audit.py::test_partial_journal_rejected_without_repair",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt",
+        "tests/test_supervisor_audit.py::test_running_journal_failure_still_cleans_child_and_records_failure"
+      ],
+      "test_id": "TEST-074"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035",
+        "REQ-054"
+      ],
+      "test_families": [
+        "tests/test_catalog_boundaries_audit.py::test_concurrent_consumption_claim_has_exactly_one_winner",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_operations_audit.py::test_publish_is_immutable_verified_and_corruption_is_rejected",
+        "tests/test_production_data_audit.py::test_calendar_hash_and_clock_tampering_rejected",
+        "tests/test_production_data_audit.py::test_exact_close_clock_and_scope_filtered_admission",
+        "tests/test_production_data_audit.py::test_metadata_validation_imports_no_numerical_or_model_modules",
+        "tests/test_production_data_audit.py::test_production_source_corruption_retains_failure_without_consumption",
+        "tests/test_production_data_audit.py::test_source_mutation_and_false_empirical_scope_rejected",
+        "tests/test_supervisor_audit.py::test_complete_generated_attempt_is_consumed_once"
+      ],
+      "test_id": "TEST-075"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035"
+      ],
+      "test_families": [
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_production_gate_catalog.py::test_all_controllers_import_with_only_import_machinery_reads",
+        "tests/test_production_gate_catalog.py::test_each_operation_preserves_immediate_post_consumption_crash",
+        "tests/test_production_gate_catalog.py::test_each_operation_rejects_failed_preflight_without_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_requires_its_own_prerequisites_before_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_uses_actual_shared_guard_for_runtime_faults",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker",
+        "tests/test_supervisor_audit.py::test_launch_failure_keeps_consumption",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt",
+        "tests/test_supervisor_audit.py::test_preflight_failure_cannot_consume_or_launch",
+        "tests/test_supervisor_audit.py::test_preflight_requires_process_measurement_before_consumption"
+      ],
+      "test_id": "TEST-076"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_sigint_after_real_generated_phase_retains_prefix_and_consumption",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child",
+        "tests/test_supervisor_audit.py::test_cancellation_cleans_generated_descendant",
+        "tests/test_supervisor_audit.py::test_parent_exit_and_group_escape_cannot_leave_observed_child",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "test_id": "TEST-077"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-035",
+        "REQ-054"
+      ],
+      "test_families": [
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_consumption_is_per_operation_persistent_and_cannot_be_reused",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker"
+      ],
+      "test_id": "TEST-078"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-034",
+        "REQ-052"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_failure_of_last_durable_destination_is_explicit",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_supervisor_audit.py::test_post_consumption_artifact_failure_has_independent_durable_receipt"
+      ],
+      "test_id": "TEST-079"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036",
+        "REQ-051"
+      ],
+      "test_families": [
+        "tests/test_operations_audit.py::test_memory_threshold_pageouts_and_required_counters",
+        "tests/test_production_gate_catalog.py::test_all_controllers_import_with_only_import_machinery_reads",
+        "tests/test_production_gate_catalog.py::test_each_operation_preserves_immediate_post_consumption_crash",
+        "tests/test_production_gate_catalog.py::test_each_operation_rejects_failed_preflight_without_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_requires_its_own_prerequisites_before_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_uses_actual_shared_guard_for_runtime_faults",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker",
+        "tests/test_supervisor_audit.py::test_escaped_pid_reuse_never_signals_replacement",
+        "tests/test_supervisor_audit.py::test_monotonic_regression_is_rejected",
+        "tests/test_supervisor_audit.py::test_no_resource_observations_cannot_report_complete",
+        "tests/test_supervisor_audit.py::test_process_accounting_includes_controller_and_descendants",
+        "tests/test_supervisor_audit.py::test_resource_faults_terminate_owned_worker_and_preserve_consumption",
+        "tests/test_supervisor_audit.py::test_runtime_clock_regression_cleans_worker_and_writes_failure"
+      ],
+      "test_id": "TEST-080"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Actual saved-report regeneration must be independently audited through completed qualification.",
+      "requirement_ids": [
+        "REQ-037"
+      ],
+      "test_families": [
+        "tests/test_catalog_ledger_audit.py::test_saved_event_dollars_match_independent_decimal_buy_dividend_exit_reference",
+        "tests/test_readback_audit.py::test_full192_readonly_roundtrip_preserves_arrays_accounting_and_scope",
+        "tests/test_report_audit.py::test_report_rejects_missing_or_duplicate_required_rows",
+        "tests/test_report_audit.py::test_report_retains_all_comparisons_and_rejects_unsupported_claim_scope"
+      ],
+      "test_id": "TEST-081"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-031",
+        "REQ-036",
+        "REQ-050"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_warning_and_unexpected_chained_failure_remain_visible",
+        "tests/test_endpoints_audit.py::test_nonfinite_secondary_utility_is_an_explicit_numerical_failure",
+        "tests/test_experiment_audit.py::test_failed_a4_selection_preserves_completed_source_credit_and_forced_sale",
+        "tests/test_model_audit.py::test_checkpoint_rejects_malformed_nested_state_with_typed_error",
+        "tests/test_operations_audit.py::test_cli_receipt_cannot_overwrite_and_has_no_run_route",
+        "tests/test_operations_audit.py::test_fault_before_atomic_publication_keeps_no_success",
+        "tests/test_policy_benchmarks_audit.py::test_failures_are_not_silently_cash_success",
+        "tests/test_supervisor_audit.py::test_nonzero_exit_is_retained_failure"
+      ],
+      "test_id": "TEST-082"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-038"
+      ],
+      "test_families": [
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_experiment_audit.py::test_late_cell_failure_retains_all_previous_cell_evidence",
+        "tests/test_experiment_audit.py::test_real_kernel_to_policy_to_ledger_bridge_uses_generated_inputs_only"
+      ],
+      "test_id": "TEST-083"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-039"
+      ],
+      "test_families": [
+        "tests/test_operations_audit.py::test_metadata_import_does_not_import_numpy_or_predecessor",
+        "tests/test_production_gate_catalog.py::test_all_controllers_import_with_only_import_machinery_reads",
+        "tests/test_production_gate_catalog.py::test_each_operation_preserves_immediate_post_consumption_crash",
+        "tests/test_production_gate_catalog.py::test_each_operation_rejects_failed_preflight_without_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_requires_its_own_prerequisites_before_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_uses_actual_shared_guard_for_runtime_faults",
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-084"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-040",
+        "REQ-055",
+        "REQ-059"
+      ],
+      "test_families": [
+        "tests/test_catalog_faults_audit.py::test_misspelled_pytest_marker_is_a_collection_error",
+        "tests/test_operations_audit.py::test_plan_rejects_even_equal_python_boolean_or_numeric_type_changes",
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-085"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "VERIFIED",
+      "remaining_evidence": "Actual fixed package build, archive, offline clean install, import and CLI receipt must be independently audited.",
+      "requirement_ids": [
+        "REQ-041",
+        "REQ-057"
+      ],
+      "test_families": [
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-086"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-042"
+      ],
+      "test_families": [
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-087"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-043"
+      ],
+      "test_families": [
+        "tests/test_catalog_critical_audit.py::test_separate_process_hash_seed_and_mapping_order_preserve_science",
+        "tests/test_experiment_audit.py::test_one_cell_replay_is_bitwise_deterministic",
+        "tests/test_model_audit.py::test_checkpoint_replay_matches_every_forecast_byte_and_final_state",
+        "tests/test_operations_audit.py::test_typed_identity_has_no_scalar_object_or_type_collision"
+      ],
+      "test_id": "TEST-088"
+    },
+    {
+      "coverage_review": "UNIMPLEMENTED",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "No Linux execution evidence. This cannot be closed by macOS tests, emulated metadata or internal review.",
+      "requirement_ids": [
+        "REQ-043"
+      ],
+      "test_families": [],
+      "test_id": "TEST-089"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Actual fixed maximum-shape resource qualification must be independently audited after a passing pilot.",
+      "requirement_ids": [
+        "REQ-044",
+        "REQ-051"
+      ],
+      "test_families": [
+        "tests/test_experiment_audit.py::test_full_192_generated_matrix_completes_and_each_fold_starts_from_cash",
+        "tests/test_model_archive_audit.py::test_all_weekly_generations_restore_exact_maturities_and_issued_laws",
+        "tests/test_model_archive_audit.py::test_callback_retains_nonselected_origins_and_failure_stops_next_issue",
+        "tests/test_model_archive_audit.py::test_failed_generation_retains_prefix_and_forbids_automatic_continuation",
+        "tests/test_model_archive_audit.py::test_rejects_mismatched_saved_state_mixture_and_maturity",
+        "tests/test_model_archive_audit.py::test_solver_certificates_survive_compact_exact_roundtrip",
+        "tests/test_precision_inputs_audit.py::test_real_generated_pilot_retains_all_fixed_blocks"
+      ],
+      "test_id": "TEST-090"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Scalar/vectorized fee and policy, shared-score cache equivalence pass. Complete allocations/time comparison at declared maximum shapes is resource-blocked.",
+      "requirement_ids": [
+        "REQ-044",
+        "REQ-053"
+      ],
+      "test_families": [
+        "tests/test_experiment_audit.py::test_shared_scores_are_computed_once_and_match_uncached_replay",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_policy_benchmarks_audit.py::test_all_policy_candidates_match_scalar_reference"
+      ],
+      "test_id": "TEST-091"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-045",
+        "REQ-056"
+      ],
+      "test_families": [
+        "tests/test_preservation_audit.py::test_complete_preservation_streams_non_json_bytes",
+        "tests/test_preservation_audit.py::test_historical_inventory_cannot_omit_duplicate_or_escape",
+        "tests/test_preservation_audit.py::test_missing_before_source_requires_exact_archived_fallback",
+        "tests/test_preservation_audit.py::test_preserved_identity_corruption_fails",
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification"
+      ],
+      "test_id": "TEST-092"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Actual full local verification under denied network/data access and an empty protected fixture must be independently audited; local verification does not establish remote CI or Linux parity.",
+      "requirement_ids": [
+        "REQ-046"
+      ],
+      "test_families": [
+        "tests/test_production_gate_catalog.py::test_all_controllers_import_with_only_import_machinery_reads",
+        "tests/test_production_gate_catalog.py::test_each_operation_preserves_immediate_post_consumption_crash",
+        "tests/test_production_gate_catalog.py::test_each_operation_rejects_failed_preflight_without_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_requires_its_own_prerequisites_before_consumption",
+        "tests/test_production_gate_catalog.py::test_each_operation_uses_actual_shared_guard_for_runtime_faults"
+      ],
+      "test_id": "TEST-093"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-047",
+        "REQ-055",
+        "REQ-056",
+        "REQ-060"
+      ],
+      "test_families": [
+        "tests/test_catalog_readiness_audit.py::test_all_parameter_cases_and_exact_requirement_registry_are_mandatory",
+        "tests/test_catalog_readiness_audit.py::test_catalog_cannot_relabel_another_design_as_current",
+        "tests/test_catalog_readiness_audit.py::test_catalog_gaps_never_disappear_behind_passing_counts",
+        "tests/test_catalog_readiness_audit.py::test_complete_constructed_registry_is_not_scientific_authorization",
+        "tests/test_catalog_readiness_audit.py::test_external_receipt_never_waives_required_generated_checks",
+        "tests/test_catalog_readiness_audit.py::test_operation_scope_does_not_create_a_pilot_qualification_cycle",
+        "tests/test_catalog_readiness_audit.py::test_outcome_for_uncollected_test_is_rejected",
+        "tests/test_catalog_readiness_audit.py::test_pytest_observation_receipt_is_explicit_and_exclusive",
+        "tests/test_catalog_readiness_audit.py::test_pytest_observations_retain_all_phase_failures",
+        "tests/test_catalog_readiness_audit.py::test_receipt_plugin_registers_with_pytest_fixture_discovery"
+      ],
+      "test_id": "TEST-094"
+    },
+    {
+      "coverage_review": "BOUNDED_COMPLETE",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PARTIAL",
+      "remaining_evidence": "Authored bounded assertions; every parameter case must pass current exact-source verification.",
+      "requirement_ids": [
+        "REQ-032",
+        "REQ-049",
+        "REQ-056",
+        "REQ-057",
+        "REQ-058",
+        "REQ-060"
+      ],
+      "test_families": [
+        "tests/test_analysis_adapter_audit.py::test_analysis_bundle_has_exact_axes_ablation_order_and_shared_streams",
+        "tests/test_analysis_adapter_audit.py::test_incomplete_or_unsupported_scope_never_produces_a_bundle",
+        "tests/test_analysis_adapter_audit.py::test_unreported_control_cell_cannot_hide_bad_pairing",
+        "tests/test_endpoints_audit.py::test_fixed_required_comparisons_and_retrospective_claim_scope",
+        "tests/test_experiment_audit.py::test_endpoint_adapter_rejects_engineering_incomplete_small_and_unpaired_evidence",
+        "tests/test_production_runtime.py::test_cli_module_entry_cannot_succeed_silently",
+        "tests/test_production_runtime.py::test_cli_requires_explicit_execution_and_never_accepts_resume",
+        "tests/test_production_runtime.py::test_complete_provenance_inventory_is_accepted_by_freeze_and_remains_hash_bound",
+        "tests/test_production_runtime.py::test_execution_receipt_audits_actual_marker_and_resource_chain",
+        "tests/test_production_runtime.py::test_fixed_worker_dispatch_keeps_resource_refusal_unconsumed",
+        "tests/test_production_runtime.py::test_generated_pilot_worker_phase_archives_and_regenerates",
+        "tests/test_production_runtime.py::test_historical_structural_precision_cannot_authorize_production_campaign",
+        "tests/test_production_runtime.py::test_precision_resigned_corruption_cannot_pass",
+        "tests/test_production_runtime.py::test_resigned_lifecycle_cannot_run_before_consumption",
+        "tests/test_production_runtime.py::test_resigned_sampled_resource_failure_cannot_be_complete",
+        "tests/test_production_runtime.py::test_review_cannot_swap_independently_verified_operation",
+        "tests/test_production_runtime.py::test_saved_precision_regenerates_fixed_status_and_preserves_every_array",
+        "tests/test_production_runtime.py::test_storage_allowances_cannot_relax_fixed_compute_limits",
+        "tests/test_production_runtime.py::test_structural_pass_cannot_bypass_real_operation_producer",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_production_runtime.py::test_worker_start_boundary_is_exclusive_and_retains_marker",
+        "tests/test_production_verification_audit.py::test_code_inventory_detects_modified_added_and_omitted_python",
+        "tests/test_production_verification_audit.py::test_controller_imports_without_io_mutation_network_threads_or_numpy",
+        "tests/test_production_verification_audit.py::test_editable_build_metadata_does_not_change_observed_versions",
+        "tests/test_production_verification_audit.py::test_environment_receipt_cannot_claim_another_scope",
+        "tests/test_production_verification_audit.py::test_environment_rejects_non_numpy_locked_version_drift",
+        "tests/test_production_verification_audit.py::test_fixed_command_inventory_includes_every_source_and_test_scope",
+        "tests/test_production_verification_audit.py::test_importable_nonpython_member_cannot_escape_code_inventory",
+        "tests/test_production_verification_audit.py::test_structural_v1_pass_never_certifies_production_verification",
+        "tests/test_report_claims_audit.py::test_claim_check_requires_exact_existing_audit_and_report_fields",
+        "tests/test_report_claims_audit.py::test_existing_report_claim_map_stays_computational_and_hash_bound",
+        "tests/test_report_claims_audit.py::test_missing_or_corrupted_retained_evidence_blocks_report_export",
+        "tests/test_report_claims_audit.py::test_report_cli_rejects_forged_independent_claim_before_publication",
+        "tests/test_report_claims_audit.py::test_resigned_unsupported_report_claims_are_rejected"
+      ],
+      "test_id": "TEST-095"
+    },
+    {
+      "coverage_review": "PARTIAL",
+      "execution_state": "PENDING_CURRENT_SOURCE_BOUND_OBSERVATIONS",
+      "original_review_status": "PENDING",
+      "remaining_evidence": "Fresh current-source baseline and all fixed normative isolated targeted mutant executions must be independently audited; the earlier four-mutation receipt is historical only.",
+      "requirement_ids": [
+        "REQ-048",
+        "REQ-059"
+      ],
+      "test_families": [
+        "tests/test_catalog_numerics_audit.py::test_tiny_negative_simplex_face_is_corrected_only_within_tolerance",
+        "tests/test_experiment_audit.py::test_exact_192_registry_and_no_combined_or_cost_shifted_ablations",
+        "tests/test_ledger_audit.py::test_entering_share_dividend_before_endpoint_sale_and_negative_path",
+        "tests/test_ledger_audit.py::test_new_buyers_do_not_receive_opening_dividend_and_repeated_marks_charge_nothing",
+        "tests/test_math_audit.py::test_energy_score_cross_terms_and_law_invariance",
+        "tests/test_math_audit.py::test_exact_fee_roots_and_batch_agree_with_decimal",
+        "tests/test_model_audit.py::test_current_target_has_no_issuance_input_and_feedback_is_delayed",
+        "tests/test_model_audit.py::test_issued_forecast_is_not_recomputed_after_library_changes",
+        "tests/test_mutation_check_audit.py::test_isolated_copy_detects_tampering",
+        "tests/test_mutation_check_audit.py::test_mutation_budget_is_fixed_and_fail_closed",
+        "tests/test_mutation_check_audit.py::test_mutation_observation_contract",
+        "tests/test_mutation_check_audit.py::test_mutation_refuses_host_before_test_dispatch",
+        "tests/test_mutation_check_audit.py::test_nonassertion_or_wrong_phase_does_not_kill",
+        "tests/test_mutation_check_audit.py::test_rehashed_mutation_receipt_cannot_omit_fixed_runs",
+        "tests/test_mutation_check_audit.py::test_reviewed_mutation_anchor_requires_exact_unique_source",
+        "tests/test_policy_benchmarks_audit.py::test_price_only_exit_fee_preserves_dividend_cash",
+        "tests/test_production_runtime.py::test_worker_refuses_consumed_identity_from_another_output_before_import_or_values",
+        "tests/test_supervisor_audit.py::test_cancel_terminates_owned_child"
+      ],
+      "test_id": "TEST-096"
+    }
+  ],
+  "preservation_audits": [
+    {
+      "path": "research/frem_s10_production_20261016/historical_manifest_audit_attempt1.json",
+      "sha256": "2873e4f07449cb271bb1b91f19f9ca79482e397b7ee8baf359f8360bb784666b"
+    },
+    {
+      "path": "research/frem_s10_production_20261016/preservation_audit_v3.json",
+      "sha256": "f2ac2919a4a97a4cf7169b488db5863296824855b38a6914f51bce7a1ed8ac09"
+    }
+  ],
+  "requirement_ids": [
+    "REQ-001",
+    "REQ-002",
+    "REQ-003",
+    "REQ-004",
+    "REQ-005",
+    "REQ-006",
+    "REQ-007",
+    "REQ-008",
+    "REQ-009",
+    "REQ-010",
+    "REQ-011",
+    "REQ-012",
+    "REQ-013",
+    "REQ-014",
+    "REQ-015",
+    "REQ-016",
+    "REQ-017",
+    "REQ-018",
+    "REQ-019",
+    "REQ-020",
+    "REQ-021",
+    "REQ-022",
+    "REQ-023",
+    "REQ-024",
+    "REQ-025",
+    "REQ-026",
+    "REQ-027",
+    "REQ-028",
+    "REQ-029",
+    "REQ-030",
+    "REQ-031",
+    "REQ-032",
+    "REQ-033",
+    "REQ-034",
+    "REQ-035",
+    "REQ-036",
+    "REQ-037",
+    "REQ-038",
+    "REQ-039",
+    "REQ-040",
+    "REQ-041",
+    "REQ-042",
+    "REQ-043",
+    "REQ-044",
+    "REQ-045",
+    "REQ-046",
+    "REQ-047",
+    "REQ-048",
+    "REQ-049",
+    "REQ-050",
+    "REQ-051",
+    "REQ-052",
+    "REQ-053",
+    "REQ-054",
+    "REQ-055",
+    "REQ-056",
+    "REQ-057",
+    "REQ-058",
+    "REQ-059",
+    "REQ-060"
+  ],
+  "requirement_registry_sha256": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+  "schema": "s10-operation-catalog-plan-v1",
+  "stage_rules": {
+    "TEST-081": "Campaign requires actual saved-report regeneration independently audited through qualification, plus listed generated contract tests.",
+    "TEST-086": "Both operations require actual fixed build/archive/offline install/import/CLI evidence independently audited by the verifier, plus listed contract tests.",
+    "TEST-089": "Required only when the actual verified target is Linux; no Linux evidence inferred from macOS.",
+    "TEST-090": "Campaign requires actual qualified maximum shapes/resource counts independently audited, plus listed bounded shape/archive checks; excluded from pilot to preserve CL09 ordering.",
+    "TEST-091": "No optimization benefit is claimed. Original before/after allocations/time obligation remains open and is not replaced by passing equivalence tests.",
+    "TEST-093": "Both operations require actual restricted full local verification with denied network, denied raw/research/output data reads except exact evidence work and retained build wheel, and an empty protected fixture. No remote CI or Linux parity is claimed.",
+    "TEST-096": "Both operations require independently audited current-source baseline plus fixed normative targeted mutants; every listed generated guard test must also pass. The fixed list retains the four earlier faults and adds the seven missing normative cases within20 mutants and600seconds.",
+    "both_operations_release_only": [
+      "TEST-091"
+    ],
+    "prepare-precision_exclusions": [
+      "TEST-041",
+      "TEST-042",
+      "TEST-043",
+      "TEST-044",
+      "TEST-045",
+      "TEST-046",
+      "TEST-047",
+      "TEST-048",
+      "TEST-049",
+      "TEST-050",
+      "TEST-051",
+      "TEST-052",
+      "TEST-053",
+      "TEST-054",
+      "TEST-055",
+      "TEST-056",
+      "TEST-057",
+      "TEST-058",
+      "TEST-059",
+      "TEST-060",
+      "TEST-061",
+      "TEST-067",
+      "TEST-068",
+      "TEST-069",
+      "TEST-071",
+      "TEST-081",
+      "TEST-083",
+      "TEST-090"
+    ]
+  }
+}

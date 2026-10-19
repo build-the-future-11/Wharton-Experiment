@@ -1,0 +1,74 @@
+{
+  "schema": "frem-s12-implementation-receipt-v5",
+  "observed_utc": "2026-10-18T13:30:22Z",
+  "status": "P0V5_ENGINEERING_VERIFIED_KAGGLE_UPLOAD_PENDING_SCIENCE_NOT_RUN",
+  "protocol": {
+    "path": "successors/frem_s12/src/frem_s12/protocol_p0_v5.json",
+    "sha256": "f194a4591e9aa54a9d7d809a91382ddbb000e802912b60ac424ad2ab63073b21"
+  },
+  "package": {
+    "version": "0.1.2",
+    "source_identity": "d4b06d915f62f0cf6f1f0015481f6fdd0b88ef34028f62349a1f5e3a1012f6d3",
+    "wheel_path": "research/frem_s12_20261018/kaggle_upload_p0v5_qualification_01/dataset_reproducible/frem_s12-0.1.2-py3-none-any.whl",
+    "wheel_bytes": 45892,
+    "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06",
+    "wheel_rebuild_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06",
+    "source_date_epoch": 1792321200,
+    "wheel_byte_reproducible": true,
+    "sdist_path": "research/frem_s12_20261018/kaggle_upload_p0v5_qualification_01/dataset_reproducible/frem_s12-0.1.2.tar.gz",
+    "sdist_sha256": "0c5875245924ed253f6611f80af89267dbd8151d9ec9efa6aeab77a0f3d295e7",
+    "sdist_rebuild_sha256": "35a5d30c93d73cc6e95ebd20014d2f78937c6f4e4da37825c83a29ec0bf9d77b",
+    "sdist_upload_candidate": false
+  },
+  "notebook": {
+    "path": "successors/frem_s12/kaggle/frem_s12_campaign.ipynb",
+    "sha256": "605bdd9d99d7e421ca088c4161ea18589a99ab0e2a53177f609363da4ac2c5ce",
+    "isolated_target_install": true,
+    "no_index": true,
+    "no_dependencies": true,
+    "input_inventory_hash": true,
+    "output_hash_size_manifest": true,
+    "failed_command_manifested_before_error": true,
+    "fresh_output_required": true,
+    "single_thread_reference": true
+  },
+  "qualification": {
+    "timing_repeats": 3,
+    "projection_statistic": "maximum",
+    "artifact_byte_count_stability_required": true,
+    "kaggle_executed": false,
+    "scientific_admitted": false
+  },
+  "verification": {
+    "tests": "48 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "ruff_lint": "passed",
+    "ruff_format": "passed",
+    "mypy_strict": "passed",
+    "uv_lock_check_offline": "passed",
+    "notebook_json_and_compile": "passed",
+    "notebook_end_to_end_generated_smoke": "passed under Python 3.13 / NumPy 2.1.3 with isolated install and final manifest",
+    "notebook_smoke_path": "research/frem_s12_20261018/notebook_smoke_p0v5_313_final",
+    "notebook_smoke_run_manifest_sha256": "3051dea1199a6dffe24971e598d985c11a4c96e5147398013dd79dd030f286cc",
+    "notebook_smoke_command_sha256": "2bc3ee961aa489732858ef2f64bcd350e7a5960e241d264c36e4271e9ff3f439",
+    "notebook_local_non_kaggle_qualification": "failed closed after writing environment, command and run manifests",
+    "notebook_local_failure_manifest_path": "research/frem_s12_20261018/notebook_qualification_fail_closed_p0v5_local",
+    "notebook_local_failure_manifest_sha256": "a6c8c3ddbc67de80f45573304bdfa461579ab37a6b58a659e41c8bf000893149",
+    "clean_wheel_python_3_12_numpy_2_5_4": "passed",
+    "clean_wheel_python_3_13_numpy_2_1_3": "passed_with_retained_macos_arm64_matmul_status_warnings",
+    "cross_runtime_arrays_sha256": "2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f",
+    "cross_runtime_summary_sha256": "631641c862e5ff916923e676ffd585662a2bbd353b8488340d04d5a5030e93ff",
+    "cross_runtime_manifest_sha256": "f8a00153b0f87bdc5205020775236a51c27d0ec6ef7fb84f51fb9957ebe4796c"
+  },
+  "preserved_observations": [
+    "P0v4 wheel and notebook remain preserved and were not uploaded during the blocked attempt.",
+    "The first local notebook harness used a uv-created interpreter without pip and failed closed before package import; its installation receipt is preserved at research/frem_s12_20261018/notebook_smoke_p0v5_attempt1_no_pip.",
+    "The v0.1.2 wheel rebuilt byte-identically; the sdist container did not and is retained as a non-upload candidate.",
+    "Local macOS arm64 Python 3.13.1 / NumPy 2.1.3 emitted floating-point status RuntimeWarnings while producing finite outputs identical to Python 3.12.",
+    "No official archives, market outcomes, scientific cells or protected outcomes were accessed."
+  ],
+  "archives_acquired": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "scientific_status": "NOT_EVALUATED"
+}

@@ -120,21 +120,156 @@ class LinuxSample:
         return min(limits) / 2**20
 
 
-def memory_observation(sample: MemorySample | LinuxSample) -> JSONObject:
+@dataclass(frozen=True)
+class KaggleSample:
+    """Visible Kaggle namespace counters under the explicit platform contract."""
+
+    timestamp: str
+    mem_available_kib: int
+    pswpout_pages: int
+    memory_max_bytes: int
+    memory_high_bytes: int
+    memory_current_bytes: int
+    memory_events: tuple[tuple[str, int], ...]
+
+    def __post_init__(self) -> None:
+        """Reject malformed, incomplete, or inconsistent platform counters."""
+        try:
+            parse_utc_timestamp(self.timestamp)
+        except ContractError as exc:
+            raise ResourceLimitError("Kaggle sample timestamp unavailable") from exc
+        for name, value in (
+            ("MemAvailable", self.mem_available_kib),
+            ("pswpout", self.pswpout_pages),
+            ("memory.max", self.memory_max_bytes),
+            ("memory.high", self.memory_high_bytes),
+            ("memory.current", self.memory_current_bytes),
+        ):
+            _nonnegative(value, name)
+        if self.memory_high_bytes > self.memory_max_bytes:
+            raise ResourceLimitError("Kaggle memory.high exceeds memory.max")
+        names = tuple(name for name, _ in self.memory_events)
+        if len(names) != len(set(names)) or not {"high", "max", "oom", "oom_kill"} <= set(names):
+            raise ResourceLimitError("complete unique Kaggle pressure events required")
+        for name, value in self.memory_events:
+            if not re.fullmatch(r"[a-z_]+", name):
+                raise ResourceLimitError("malformed Kaggle pressure event name")
+            _nonnegative(value, name)
+
+    @property
+    def available_mib(self) -> float:
+        """Return the smaller host or visible cgroup headroom."""
+        ceiling = min(self.memory_max_bytes, self.memory_high_bytes)
+        return min(self.mem_available_kib * 1024, max(0, ceiling - self.memory_current_bytes)) / 2**20
+
+
+def memory_observation(sample: MemorySample | LinuxSample | KaggleSample) -> JSONObject:
     """Serialize original counters without assigning Linux values macOS labels."""
     raw = asdict(sample)
     if isinstance(sample, LinuxSample):
         raw["cgroup_limits"] = [asdict(item) for item in sample.cgroup_limits]
+    if isinstance(sample, KaggleSample):
+        raw["memory_events"] = [[name, value] for name, value in sample.memory_events]
     row = object_json(checked_json(raw))
     row["available_mib"] = sample.available_mib
     if isinstance(sample, LinuxSample):
         row.update({"platform": "linux", "contract": LINUX_CONTRACT, "cgroup_hierarchy": "FULL_ROOT_VISIBLE"})
+    if isinstance(sample, KaggleSample):
+        from frem_s10.runtime.kaggle_contract import CONTRACT
+
+        row.update(
+            {
+                "platform": "linux",
+                "contract": CONTRACT,
+                "cgroup_hierarchy": "KAGGLE_NAMESPACE_ROOT",
+            }
+        )
     return row
 
 
-def pressure_counter(sample: MemorySample | LinuxSample) -> int:
+def pressure_counter(sample: MemorySample | LinuxSample | KaggleSample) -> int:
     """Return the platform's pressure counter; receipt names keep its actual meaning."""
-    return sample.pswpout_pages if isinstance(sample, LinuxSample) else sample.pageouts
+    return sample.pswpout_pages if isinstance(sample, (LinuxSample, KaggleSample)) else sample.pageouts
+
+
+def _counter_pairs(text: str, *, name: str) -> tuple[tuple[str, int], ...]:
+    rows: list[tuple[str, int]] = []
+    for line in text.splitlines():
+        fields = line.split()
+        if len(fields) != 2 or re.fullmatch(r"[a-z_]+", fields[0]) is None:
+            raise ResourceLimitError(f"malformed {name} row")
+        rows.append((fields[0], int(_limit_integer(fields[1]) or 0)))
+    if not rows:
+        raise ResourceLimitError(f"empty {name} counters")
+    return tuple(rows)
+
+
+def sample_kaggle_memory(
+    proc_root: Path = Path("/proc"), cgroup_root: Path = Path("/sys/fs/cgroup")
+) -> KaggleSample:
+    """Read the exact visible namespace counters accepted by Kaggle contract v1."""
+    from frem_s10.runtime.kaggle_contract import require_platform
+    from frem_s10.runtime.preflight import parse_linux_resources
+
+    require_platform()
+    if _read_linux_text(proc_root / "self/cgroup").strip() != "0::/":
+        raise ResourceLimitError("Kaggle contract requires the observed namespace-root membership")
+    maximum = _limit_integer(_read_linux_text(cgroup_root / "memory.max"))
+    current = _limit_integer(_read_linux_text(cgroup_root / "memory.current"))
+    high_raw = _read_linux_text(cgroup_root / "memory.high").strip()
+    high = maximum if high_raw == "max" else _limit_integer(high_raw)
+    assert maximum is not None and current is not None and high is not None
+    raw = parse_linux_resources(
+        _read_linux_text(proc_root / "meminfo"),
+        _read_linux_text(proc_root / "vmstat"),
+        datetime.now(UTC).isoformat(),
+    )
+    events = _counter_pairs(_read_linux_text(cgroup_root / "memory.events"), name="memory.events")
+    if _read_linux_text(proc_root / "self/cgroup").strip() != "0::/":
+        raise ResourceLimitError("Kaggle cgroup membership changed during observation")
+    return KaggleSample(
+        raw.timestamp,
+        raw.mem_available_kib,
+        raw.pswpout_pages,
+        maximum,
+        high,
+        current,
+        events,
+    )
+
+
+def assess_kaggle(samples: tuple[KaggleSample, ...]) -> dict[str, object]:
+    """Assess three Kaggle samples with reserve and pressure-event stability."""
+    from frem_s10.runtime.kaggle_contract import CONTRACT
+
+    if len(samples) != 3:
+        raise ResourceLimitError("exactly three Kaggle admission samples required")
+    reasons: list[str] = ["KAGGLE_ANCESTOR_MEMORY_CONSTRAINTS_UNVERIFIED"]
+    if any(sample.available_mib < 1536 for sample in samples):
+        reasons.append("KAGGLE_VISIBLE_HEADROOM_BELOW_WORKER_PLUS_512_MIB_RESERVE")
+    for first, second in pairwise(samples):
+        if first.pswpout_pages != second.pswpout_pages:
+            reasons.append("KAGGLE_PSWPOUT_CHANGED")
+        if first.memory_events != second.memory_events:
+            reasons.append("KAGGLE_MEMORY_EVENTS_CHANGED")
+        if (first.memory_max_bytes, first.memory_high_bytes) != (
+            second.memory_max_bytes,
+            second.memory_high_bytes,
+        ):
+            reasons.append("KAGGLE_MEMORY_LIMIT_CHANGED")
+    times = [parse_utc_timestamp(sample.timestamp) for sample in samples]
+    if any(b - a < 1_000_000 for a, b in pairwise(times)):
+        reasons.append("KAGGLE_SAMPLE_SPACING_BELOW_ONE_SECOND")
+    return {
+        "status": "BLOCKED" if reasons else "PASS",
+        "platform": "linux",
+        "contract": CONTRACT,
+        "reasons": list(dict.fromkeys(reasons)),
+        "floor_mib": 1536,
+        "samples": [memory_observation(sample) for sample in samples],
+        "scientific_execution": False,
+        "scope": "Kaggle platform admission; worker supervision remains a separate gate",
+    }
 
 
 def _read_linux_text(path: Path) -> str:
@@ -326,8 +461,49 @@ def _linux_row(row: JSONObject) -> LinuxSample:
     )
 
 
-def _memory_row(row: JSONObject) -> MemorySample | LinuxSample:
+def _kaggle_row(row: JSONObject) -> KaggleSample:
+    expected = {
+        "timestamp",
+        "mem_available_kib",
+        "pswpout_pages",
+        "memory_max_bytes",
+        "memory_high_bytes",
+        "memory_current_bytes",
+        "memory_events",
+        "available_mib",
+        "platform",
+        "contract",
+        "cgroup_hierarchy",
+    }
+    if set(row) != expected or row.get("cgroup_hierarchy") != "KAGGLE_NAMESPACE_ROOT":
+        raise ResourceLimitError("exact Kaggle memory receipt fields required")
+    events = row["memory_events"]
+    if not isinstance(events, list):
+        raise ResourceLimitError("Kaggle memory events must be a list")
+    parsed: list[tuple[str, int]] = []
+    for item in events:
+        if not isinstance(item, list) or len(item) != 2 or not isinstance(item[0], str):
+            raise ResourceLimitError("malformed Kaggle memory event")
+        parsed.append((item[0], _nonnegative(item[1], item[0])))
+    if not isinstance(row["timestamp"], str):
+        raise ResourceLimitError("Kaggle timestamp required")
+    return KaggleSample(
+        row["timestamp"],
+        _nonnegative(row["mem_available_kib"], "MemAvailable"),
+        _nonnegative(row["pswpout_pages"], "pswpout"),
+        _nonnegative(row["memory_max_bytes"], "memory.max"),
+        _nonnegative(row["memory_high_bytes"], "memory.high"),
+        _nonnegative(row["memory_current_bytes"], "memory.current"),
+        tuple(parsed),
+    )
+
+
+def _memory_row(row: JSONObject) -> MemorySample | LinuxSample | KaggleSample:
     if "platform" in row:
+        from frem_s10.runtime.kaggle_contract import CONTRACT
+
+        if row.get("contract") == CONTRACT:
+            raise ResourceLimitError("Kaggle namespace-only receipt cannot prove ancestor memory constraints")
         return _linux_row(row)
     if set(row) != {
         "timestamp",
@@ -352,6 +528,24 @@ def _memory_row(row: JSONObject) -> MemorySample | LinuxSample:
     )
 
 
+def _stable_resource_identity(
+    first: MemorySample | LinuxSample | KaggleSample, second: MemorySample | LinuxSample | KaggleSample
+) -> None:
+    if (
+        isinstance(first, LinuxSample)
+        and isinstance(second, LinuxSample)
+        and (_linux_identity(first) != _linux_identity(second))
+    ):
+        raise ResourceLimitError("cgroup constraint identity changed")
+    if (
+        isinstance(first, KaggleSample)
+        and isinstance(second, KaggleSample)
+        and (first.memory_max_bytes, first.memory_high_bytes, first.memory_events)
+        != (second.memory_max_bytes, second.memory_high_bytes, second.memory_events)
+    ):
+        raise ResourceLimitError("Kaggle resource constraint identity changed")
+
+
 def audit_memory_rows(rows: list[JSONValue]) -> int:
     """Recompute either platform's three-sample passing receipt and stable pressure counter."""
     if len(rows) != 3:
@@ -368,12 +562,7 @@ def audit_memory_rows(rows: list[JSONValue]) -> int:
         for first, second in pairwise(samples):
             if type(first) is not type(second) or pressure_counter(first) != pressure_counter(second):
                 raise ResourceLimitError("resource platform or pressure counter changed")
-            if (
-                isinstance(first, LinuxSample)
-                and isinstance(second, LinuxSample)
-                and (_linux_identity(first) != _linux_identity(second))
-            ):
-                raise ResourceLimitError("cgroup constraint identity changed")
+            _stable_resource_identity(first, second)
         if any(b - a < 1_000_000 for a, b in pairwise(times)):
             raise ResourceLimitError("resource sample timestamps must be at least one second apart")
         return pressure_counter(samples[-1])
@@ -395,8 +584,13 @@ def parse_vm_stat(output: str, timestamp: str) -> MemorySample:
     return MemorySample(timestamp, int(header[0]), *values)
 
 
-def sample_memory() -> MemorySample:
+def sample_memory() -> MemorySample | KaggleSample:
     """Collect one sample on the supported host; unavailable is not admission."""
+    if sys.platform == "linux":
+        from frem_s10.runtime.kaggle_contract import active
+
+        if active():
+            return sample_kaggle_memory()
     if sys.platform != "darwin":
         raise ResourceLimitError("equivalent host memory/pageout measurement unverified on this platform")
     try:
@@ -428,6 +622,14 @@ def assess(samples: tuple[MemorySample, ...]) -> dict[str, object]:
 def check_host() -> dict[str, object]:
     """Take three readings at least one second apart without running a model."""
     if sys.platform == "linux":
+        from frem_s10.runtime.kaggle_contract import active
+
+        if active():
+            kaggle_samples = [sample_kaggle_memory()]
+            for _ in range(2):
+                time.sleep(1)
+                kaggle_samples.append(sample_kaggle_memory())
+            return assess_kaggle(tuple(kaggle_samples))
         linux_samples = [sample_linux_memory()]
         for _ in range(2):
             time.sleep(1)

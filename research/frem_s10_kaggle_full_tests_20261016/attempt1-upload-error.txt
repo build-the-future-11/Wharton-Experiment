@@ -1,0 +1,119 @@
+
+                - generic: pre=admission();(ROOT/(name+'-admission.json')).write_text(json.dumps(pre))
+                - generic: start=time.monotonic(); print('START',name,flush=True)
+                - generic: "with (ROOT/(name+'.log')).open('xb') as stream:"
+                - generic: p=subprocess.Popen(cmd,cwd=SOURCE,env=ENV,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True,preexec_fn=limits)
+                - generic: error=None
+                - generic: "try:"
+                - generic: "while p.poll() is None:"
+                - generic: "if time.monotonic()-start>900: raise TimeoutError('900 second command ceiling')"
+                - generic: row=guard.sample()
+                - generic: "if row['available_bytes']<512*2**20 or any(row[k]!=pre['samples'][-1][k] for k in ('pswpout','events','membership','mount')):"
+                - generic: raise RuntimeError('resource pressure changed')
+                - generic: time.sleep(1)
+                - generic: "except BaseException as exc:"
+                - generic: error=repr(exc)
+                - generic: try:os.killpg(p.pid,signal.SIGKILL)
+                - generic: except ProcessLookupError:pass
+                - generic: p.wait(timeout=5)
+                - generic: post=guard.sample()
+                - generic: "result={'name':name,'exit_code':p.returncode,'error':error,'seconds':time.monotonic()-start,'postflight':post}"
+                - generic: results.append(result)
+                - generic: print((ROOT/(name+'.log')).read_text()[-24000:],flush=True)
+                - generic: print(json.dumps(result),flush=True)
+                - generic: "(ROOT/'results.json').write_text(json.dumps({'scope':'all maintained S10 tests and Kaggle wrappers','results':results,'scientific_status':'NOT_EVALUATED','production_qualified':False},indent=2))"
+                - generic: artifact=Path('/kaggle/working/s10-full-tests-attempt1-results.zip')
+                - generic: "with zipfile.ZipFile(artifact,'w',zipfile.ZIP_DEFLATED) as z:"
+                - generic: "for p in ROOT.iterdir():"
+                - generic: if p.is_file():z.write(p,p.name)
+                - generic: print('RESULT_ARCHIVE',str(artifact),hashlib.sha256(artifact.read_bytes()).hexdigest(),flush=True)
+                - generic: assert all(r['exit_code']==0 and r['error'] is None for r in results), 'full suite has failures; retained logs require repair'
+                - generic: print('FULL_SUITE_COMPLETE',flush=True)
+              - text: "--------------------------------------------------------------------------- AssertionError Traceback (most recent call last)"
+              - text: "/tmp/ipykernel_49/255656863.py in <cell line: 0>() 12 for name,digest in INVENTORY.items(): 13 p=INPUT"
+              - generic: /
+              - text: name ---> 14 assert p.is_file() and not p.is_symlink() and hashlib.sha256(p.read_bytes()).hexdigest()==digest, name 15 q=SOURCE
+              - generic: /
+              - text: name;q.parent.mkdir(parents=True,exist_ok=True);q.write_bytes(p.read_bytes()) 16 (ROOT
+              - generic: /
+              - text: "'source-inventory.json').write_text(json.dumps(INVENTORY,sort_keys=True)) AssertionError: research/frem_s10_kaggle_20261016/source_bundle.zip"
+              - button "add Code":
+                - generic: add
+                - text: Code
+              - button "add Markdown":
+                - generic: add
+                - text: Markdown
+  - button "Open console": terminal
+  - button "Open command palette": keyboard
+  - separator
+  - heading "Notebook" [level=2]
+  - heading "Input" [level=3]
+  - button "Collapse Input" [expanded]: keyboard_arrow_up
+  - button "Add Input":
+    - generic: Add Input
+  - button "Upload":
+    - generic: upload
+    - generic: Upload
+  - generic: DATASETS
+  - list:
+    - button "arrow_right":
+      - generic: arrow_right
+    - paragraph: Wharton S10 full suite source 2026-10-16
+    - button "Copy file path (Wharton S10 full suite source 2026-10-16)": content_copy
+    - button "More actions for (Wharton S10 full suite source 2026-10-16)": more_vert
+  - heading "Output (112KiB / 19.5GiB)" [level=3]
+  - button "Collapse Output (112KiB / 19.5GiB)" [expanded]: keyboard_arrow_up
+  - list:
+    - button "arrow_right":
+      - generic: arrow_right
+    - generic: folder
+    - paragraph: /kaggle/working
+    - button "Copy directory path (/kaggle/working)": content_copy
+    - button "Refresh directory contents (/kaggle/working)": directory_sync
+  - heading "Table of contents" [level=3]
+  - button "Collapse Table of contents" [expanded]: keyboard_arrow_up
+  - heading "No sections detected" [level=6]
+  - paragraph: Add markdown headers to add a section
+  - heading "Session options" [level=3]
+  - button "Collapse Session options" [expanded]: keyboard_arrow_up
+  - generic "Select Accelerator. None currently selected.": Accelerator
+  - combobox "Select Accelerator. None currently selected.":
+    - generic: None
+  - textbox: None
+  - generic: Accelerator
+  - paragraph
+  - generic "Select Language. Python currently selected.": Language
+  - combobox "Select Language. Python currently selected.":
+    - generic: Python
+  - textbox: Python
+  - generic: Language
+  - generic "Select Persistence. No persistence currently selected.": Persistence
+  - combobox "Select Persistence. No persistence currently selected.":
+    - generic: No persistence
+  - textbox: No persistence
+  - generic: Persistence
+  - generic "Select Environment. Pin to original environment currently selected.": Environment
+  - combobox "Select Environment. Pin to original environment currently selected.":
+    - generic: Pin to original environment
+  - textbox: "[object Object]"
+  - generic: Environment
+  - paragraph:
+    - text: You won't get new packages, but your code is less likely to break.
+    - button "What is a notebook environment?"
+  - generic: Internet
+  - checkbox "Internet on" [checked]
+  - generic: check
+  - generic: Internet on
+  - generic: Tags
+  - button "Add Tags":
+    - generic: Add Tags
+  - generic: Dependency Manager
+  - button "Install Dependencies":
+    - generic: package_2
+    - generic: Install Dependencies
+  - paragraph: Some accelerators, such as TPUs, require identity verification. Verify identity
+  - heading "Schedule a notebook to run" [level=3]
+  - button "Expand Schedule a notebook to run": keyboard_arrow_down
+  - button "Collapse Sidebar":
+    - generic "Collapse Sidebar": arrow_right
+- alert: Session started.

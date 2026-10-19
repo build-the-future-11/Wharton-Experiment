@@ -1,0 +1,89 @@
+{
+  "protocol_id": "FREM-S11-P1",
+  "version": 2,
+  "status": "FROZEN_AFTER_PREPARSE_VALIDITY_REPAIR",
+  "supersedes": "FREM-S11-P0",
+  "freeze_boundary": {
+    "archives_acquired": false,
+    "data_parsed": false,
+    "outcomes_observed": false,
+    "repairs": [
+      "Correct LoBM and HiBM asset labels to growth and value respectively",
+      "Describe the unconditional specialist as a fixed rolling-window empirical law rather than expanding",
+      "Carry post-return drifted allocations into the next policy decision",
+      "Bind commands to exact releases, cutoffs, receipts, source identity and host admission"
+    ]
+  },
+  "question": "Does causal online stacking of four fixed rolling-window finite-law specialists improve joint monthly forecasts for six reconstituted US research portfolios?",
+  "scope": "Development and data-revision robustness; not individual-security PIT confirmation, confirmation, or deployment",
+  "source": {
+    "provider": "Kenneth French Data Library",
+    "dataset": "6 Portfolios Formed on Size and Book-to-Market (2 x 3), value-weighted monthly returns",
+    "asset_order": [
+      "small_growth",
+      "small_neutral",
+      "small_value",
+      "big_growth",
+      "big_neutral",
+      "big_value"
+    ],
+    "url_contract": "sources.json",
+    "development_release": 201608,
+    "development_cutoff": 201607,
+    "revision_comparisons": [
+      {"older": 200808, "newer": 201608, "through": 200807},
+      {"older": 201608, "newer": 202408, "through": 201607}
+    ],
+    "post_201607_numeric_parse": "PROHIBITED_IN_DEVELOPMENT"
+  },
+  "folds": [
+    {"id": "A", "start": 200001, "end": 200712},
+    {"id": "B", "start": 200801, "end": 201607}
+  ],
+  "experts": {
+    "unconditional": "uniform empirical law over the latest 120 mature monthly outcomes",
+    "recent": "36-month half-life weighted empirical law over the latest 120 mature monthly outcomes",
+    "context": "24 nearest causal six-state contexts over the latest 120 mature monthly outcomes",
+    "tail_regime": "volatility and sign matched empirical law with 10 percent uniform shrinkage"
+  },
+  "stacker": {
+    "feedback": "matured specialist energy scores only",
+    "score_half_life_months": 36,
+    "shrink_to_equal": 0.25,
+    "maximum_expert_weight": 0.60,
+    "minimum_feedback_months": 24
+  },
+  "primary": {
+    "endpoint": "mean_multivariate_energy_score",
+    "controls": ["equal", "recent"],
+    "minimum_relative_improvement": 0.05,
+    "uncertainty": "paired circular 12-month moving-block 95 percent interval, 5000 draws, seed 1911",
+    "rule": "both control-minus-stacked intervals above zero and both point improvements at least 5 percent in both folds"
+  },
+  "secondary": {
+    "policy": "fixed 25 percent grid, 50 percent per-asset cap, 95/5 nominal-worst log utility",
+    "cost_bps": 10,
+    "cost_convention": "one-way risky-weight turnover fee reduces investable wealth before the monthly return",
+    "state_transition": "turnover from post-return drifted holdings; next holdings are the realized drifted allocation",
+    "benchmarks": ["cash", "equal_assets_monthly_rebalanced_no_cost"],
+    "rule": "stacked terminal wealth exceeds equal-law policy, recent-law policy and both benchmarks in both folds; cannot rescue failed primary"
+  },
+  "integrity": {
+    "months": "unique increasing contiguous YYYYMM values",
+    "archive": "one bounded UTF-8 CSV or TXT member matching the frozen release-format contract",
+    "acquisition": "exact URL-release allowlist, response metadata, SHA-256, byte count, package source identity, no overwrite",
+    "execution": "fresh passing host receipt bound to interpreter and package source identity",
+    "retention": "all months, scores, stack weights, allocations, wealth paths, benchmark paths, provenance, consumption, summaries and file hashes"
+  },
+  "budget": {
+    "hyperparameter_trials": 0,
+    "workers": 1,
+    "threads": 1,
+    "host_memory_floor_mib": 512,
+    "admission_samples": 3,
+    "pageout_counter_must_remain_stable_through_execution": true,
+    "development_runs": 1,
+    "confirmation_runs": 0
+  },
+  "stopping": "Valid negative or inconclusive development closes this version; no outcome-driven threshold, fold, expert or block change"
+}

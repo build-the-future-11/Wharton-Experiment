@@ -1,0 +1,57 @@
+{
+  "arms": [
+    "s12_router",
+    "expert_equal",
+    "s11_stacker",
+    "recent",
+    "gaussian",
+    "student_t",
+    "var",
+    "causal_mlp",
+    "router_off"
+  ],
+  "family": "generated",
+  "fold": "A",
+  "mean_energy": {
+    "causal_mlp": 0.026433846634588264,
+    "expert_equal": 0.02388375857275218,
+    "gaussian": 0.02580818170944195,
+    "recent": 0.021809737638588473,
+    "router_off": 0.02388375857275218,
+    "s11_stacker": 0.023121430210044324,
+    "s12_router": 0.02384071844215631,
+    "student_t": 0.026293691788049568,
+    "var": 0.022861457510486
+  },
+  "mean_variogram": {
+    "causal_mlp": 0.06318894269207607,
+    "expert_equal": 0.02892769062695716,
+    "gaussian": 0.05893353764282025,
+    "recent": 0.02479359764288951,
+    "router_off": 0.02892769062695716,
+    "s11_stacker": 0.02834451881987066,
+    "s12_router": 0.02892568537016311,
+    "student_t": 0.06731269714807371,
+    "var": 0.035316393275667234
+  },
+  "provenance": {
+    "engineering_only": true,
+    "generated": true
+  },
+  "rows": 24,
+  "schema": "frem-s12-fold-summary-v1",
+  "seed": 11,
+  "selected_non_frem": "var",
+  "source_identity": "eac738e4d7eec6a81029c15bb93fb1529a14dacc169fd433c058883d89240240",
+  "terminal_wealth": {
+    "causal_mlp": 1.043720184937023,
+    "expert_equal": 0.9452373110326968,
+    "gaussian": 0.9195238297075045,
+    "recent": 0.9478212773503356,
+    "router_off": 0.9452373110326968,
+    "s11_stacker": 0.9594008566343313,
+    "s12_router": 0.9443341263971664,
+    "student_t": 0.9439106608481841,
+    "var": 0.9562413861342641
+  }
+}

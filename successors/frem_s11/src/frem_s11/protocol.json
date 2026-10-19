@@ -1,0 +1,43 @@
+{
+  "protocol_id": "FREM-S11-P0",
+  "version": 1,
+  "status": "FROZEN_BEFORE_DATA_PARSE",
+  "question": "Does causal online stacking of expanding, recency, state-neighbor and tail-regime finite laws improve joint monthly forecasts for six reconstituted US research portfolios?",
+  "scope": "Development and data-revision robustness; not individual-security PIT confirmation or deployment",
+  "source": {
+    "provider": "Kenneth French Data Library",
+    "dataset": "6 Portfolios Formed on Size and Book-to-Market (2 x 3), value-weighted monthly returns",
+    "development_release": 201608,
+    "development_cutoff": 201607,
+    "revision_releases": [200808, 202408],
+    "post_201607_access": "PROHIBITED_IN_DEVELOPMENT"
+  },
+  "folds": [
+    {"id": "A", "start": 200001, "end": 200712},
+    {"id": "B", "start": 200801, "end": 201607}
+  ],
+  "experts": ["unconditional", "recent", "context", "tail_regime"],
+  "primary": {
+    "endpoint": "mean_multivariate_energy_score",
+    "controls": ["equal", "recent"],
+    "minimum_relative_improvement": 0.05,
+    "uncertainty": "paired circular 12-month moving-block 95 percent interval, 5000 draws, seed 1911",
+    "rule": "both control-minus-stacked intervals above zero and both point improvements at least 5 percent in both folds"
+  },
+  "secondary": {
+    "policy": "fixed 25 percent grid, 50 percent per-asset cap, 95/5 nominal-worst log utility",
+    "cost_bps": 10,
+    "rule": "stacked terminal wealth exceeds equal-law policy, recent-law policy, cash and equal-weight assets in both folds; cannot rescue failed primary"
+  },
+  "budget": {
+    "hyperparameter_trials": 0,
+    "workers": 1,
+    "threads": 1,
+    "host_memory_floor_mib": 512,
+    "pressure_counter_must_not_rise": true,
+    "development_runs": 1,
+    "confirmation_runs": 0
+  },
+  "stopping": "Valid negative or inconclusive development closes this version; no outcome-driven threshold, fold, expert or block change"
+}
+

@@ -1,0 +1,55 @@
+{
+  "scope": "all maintained S10 tests and Kaggle wrappers",
+  "results": [
+    {
+      "name": "s10",
+      "exit_code": 0,
+      "error": null,
+      "seconds": 186.26442763299997,
+      "postflight": {
+        "monotonic": 1179.079252354,
+        "membership": "0::/",
+        "mount": "732 731 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot",
+        "maximum": 32212254720,
+        "high": 32212254720,
+        "current": 2841604096,
+        "available_bytes": 29370650624,
+        "pswpout": 0,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      }
+    },
+    {
+      "name": "wrappers",
+      "exit_code": 0,
+      "error": null,
+      "seconds": 2.013603489000161,
+      "postflight": {
+        "monotonic": 1183.09963571,
+        "membership": "0::/",
+        "mount": "732 731 0:28 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw,nsdelegate,memory_recursiveprot",
+        "maximum": 32212254720,
+        "high": 32212254720,
+        "current": 2841825280,
+        "available_bytes": 29370429440,
+        "pswpout": 0,
+        "events": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0
+        }
+      }
+    }
+  ],
+  "scientific_status": "NOT_EVALUATED",
+  "production_qualified": false
+}

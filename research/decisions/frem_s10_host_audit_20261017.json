@@ -1,0 +1,8 @@
+{
+  "observation": "Local resource admission failed twice; configured remote timed out. Uncommitted Kaggle contract accepted timeout as proof of offline isolation.",
+  "hypothesized_cause": "Insufficient host resources and unsupported hosted isolation contract; timeout classification is a separate confirmed false-pass defect.",
+  "change": "Preserve old contract bytes; reject ambiguous socket errors; add five stdlib regressions; record loss diagnosis without retuning closed studies.",
+  "discriminating_experiment": "Old source fails timeout and unspecified-error regressions; corrected source passes all five tests.",
+  "result": "Engineering false-pass repair verified; supported host and equivalent Kaggle boundaries still unavailable; zero scientific work.",
+  "receipt": "research/frem_s10_host_audit_20261017/RECEIPT.json"
+}

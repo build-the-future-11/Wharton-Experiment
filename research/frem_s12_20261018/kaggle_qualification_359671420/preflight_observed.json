@@ -1,0 +1,9 @@
+{
+  "input_exists": false,
+  "input_files": {},
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "python_executable": "/usr/bin/python3",
+  "python_version": "3.13.15",
+  "schema_version": "frem-s12-kaggle-preflight-v1",
+  "scientific_admitted": false
+}

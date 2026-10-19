@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-18T04:45:09+00:00",
+  "iteration": "FREM-S11",
+  "scope": "PRE_DATA_PROVENANCE_AND_EXECUTION_CONTRACT_REPAIR",
+  "observation": "The official Kenneth French historical archive index supplies the August 2008 six size/book-to-market portfolio vintage as TXT, not CSV. The unexecuted S11 sources file named a nonexistent CSV archive, and the parser only accepted CSV. The frozen plan also required host admission and retained evidence that the CLI did not yet enforce.",
+  "hypothesized_cause": "The source-format assumption and initial minimal CLI were authored before checking the official archive links and before an adversarial run-readiness pass.",
+  "change": "Correct only the 2008 URL/format, add generated TXT parser coverage, enforce host, receipt, identity, no-overwrite and raw-artifact contracts, and define the previously ambiguous policy fee as a one-way risky-weight turnover reduction to investable wealth before returns with exact post-return drift.",
+  "predicted_effect": "The declared official vintages can be acquired and parsed without weakening scientific gates, while unsupported hosts, source drift, mismatched receipts and repeat outputs fail closed.",
+  "discriminating_experiment": "Generated CSV/TXT equivalence, malformed archive/receipt/admission cases, causal backtest reconstruction, strict tests, typing, lint, format and package build before any market bytes are acquired.",
+  "result": "PRE_DATA_REPAIR_FROZEN_STATIC_CHECKS_PASS_RUNTIME_RESOURCE_BLOCKED",
+  "scientific_parameters_changed": false,
+  "prospective_accounting_clarification": "No data or outcomes existed. The 10 bps fee level and action grid are unchanged; only the predeclared self-financing timing convention is made exact.",
+  "data_acquired": false,
+  "data_parsed": false,
+  "market_fits": 0,
+  "protected_access": false,
+  "official_archive_index": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/six_portfolios_archive.html",
+  "protocol": "successors/frem_s11/src/frem_s11/protocol_v2.json"
+}

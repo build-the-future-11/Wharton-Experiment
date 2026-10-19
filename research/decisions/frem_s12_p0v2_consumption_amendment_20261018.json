@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-18T08:26:00Z",
+  "iteration": "FREM-S12-P0V2",
+  "scope": "PRE_DATA_ONE_USE_CONSUMPTION_INTEGRITY_AMENDMENT",
+  "observation": "Final implementation audit found that no-overwrite result paths alone did not prevent the same search or fixed scientific cell from being rerun into a different directory. No S12 market archive, Kaggle scientific session, search cell, fixed cell or protected outcome had been accessed.",
+  "hypothesized_cause": "Artifact immutability and scientific consumption uniqueness are distinct invariants; enforcing only the first leaves an outcome-driven retry path.",
+  "change": "Add deterministic source-bound search/fixed consumption claims. A first attempt irreversibly claims its cell, automatic retries are zero, duplicate claims fail, and only an exact checkpoint resume with identical identity and gate hashes may reuse the claim. Add regression coverage and wire the ledger into the Kaggle launcher.",
+  "predicted_effect": "Every scientific attempt, including a failed one, remains in the denominator and cannot be silently replaced by a fresh output directory.",
+  "discriminating_experiment": "Regression tests must prove duplicate refusal, exact resume acceptance and changed-gate resume rejection; the complete Kaggle campaign must retain all claim receipts alongside outputs.",
+  "result": "P0V2_IMPLEMENTED_LOCAL_ENGINEERING_VERIFIED_WITH_ONE_USE_CONSUMPTION_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "source_identity": "eac738e4d7eec6a81029c15bb93fb1529a14dacc169fd433c058883d89240240",
+  "implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT.json",
+  "tests": {
+    "passed": 34,
+    "failed": 0
+  },
+  "kaggle_session_started": false,
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

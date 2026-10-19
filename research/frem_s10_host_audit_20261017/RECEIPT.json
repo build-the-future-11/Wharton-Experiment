@@ -1,0 +1,63 @@
+{
+  "status": "BLOCKED_NO_QUALIFIED_EXECUTION_HOST",
+  "observed_utc": "2026-10-17T07:02:56.515320+00:00",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "market_ledgers": 0,
+  "protected_access": false,
+  "repair": "Reject errno=None in Kaggle offline probe; a timeout is not enforced network denial.",
+  "verification": {
+    "stdlib_tests_passed": 5,
+    "old_source_expected_failures": 2,
+    "ruff": "PASS",
+    "full_suite": "NOT_RUN"
+  },
+  "host_checks": [
+    {
+      "utc": "2026-10-17T06:56:34+00:00",
+      "available_mib": [
+        250.640625,
+        405.296875,
+        330.375
+      ],
+      "pageouts": [
+        1795289,
+        1795367,
+        1795367
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "utc": "2026-10-17T07:02:06+00:00",
+      "available_mib": [
+        195.90625,
+        153.203125,
+        132.359375
+      ],
+      "pageouts": [
+        1796683,
+        1796832,
+        1796832
+      ],
+      "status": "BLOCKED"
+    }
+  ],
+  "remote": "Configured SSH alias timed out with BatchMode and 8 second ConnectTimeout outside local sandbox.",
+  "kaggle": "Authorized correct-account sign-in succeeded. Production bundle listed. Inspected draft editor remains Loading after reload and 30-second wait. Active events displayed a separate FIM interactive session, left untouched. No S10 worker started by this session. Isolation and ancestor-memory equivalence remain unqualified.",
+  "previous_artifacts": {
+    "research/frem_s8_20261014/FINAL_REPORT.md": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44",
+    "research/frem_s10_production_20261016/EXECUTION_PLAN.json": "852e85d6e4889687d7ae555afdadb21b1a563a8392c206a17ca75ebb3a32eba2",
+    "research/frem_s10_kaggle_full_tests_20261016/VERIFICATION_RECEIPT.json": "f377d58c8bf5b59e13811d1d8a00c095c9dfcf02eeea6f0536bc4bfeada9882d"
+  },
+  "source_changed": [
+    "successors/frem_s10/src/frem_s10/runtime/kaggle_contract.py",
+    "tools/kaggle/test_network_denial_stdlib.py"
+  ],
+  "report": "research/frem_s10_host_audit_20261017/DIAGNOSIS.md",
+  "preservation_verified": {
+    "old_state_fields_unchanged": true,
+    "journal_prefix_unchanged": true,
+    "handoff_and_static_prefix_unchanged": true,
+    "selected_predecessor_hashes_unchanged": true
+  }
+}

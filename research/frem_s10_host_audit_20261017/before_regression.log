@@ -1,0 +1,32 @@
+test_connection_refused_does_not_prove_isolation (network_regression.NetworkDenialTests.test_connection_refused_does_not_prove_isolation) ... ok
+test_explicit_denials_retained (network_regression.NetworkDenialTests.test_explicit_denials_retained) ... ok
+test_reachable_network_rejected (network_regression.NetworkDenialTests.test_reachable_network_rejected) ... ok
+test_timeout_is_unknown_not_denial (network_regression.NetworkDenialTests.test_timeout_is_unknown_not_denial) ... FAIL
+test_unspecified_error_is_unknown (network_regression.NetworkDenialTests.test_unspecified_error_is_unknown) ... FAIL
+
+======================================================================
+FAIL: test_timeout_is_unknown_not_denial (network_regression.NetworkDenialTests.test_timeout_is_unknown_not_denial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/tools/kaggle/test_network_denial_stdlib.py", line 26, in test_timeout_is_unknown_not_denial
+    self.check_result(TimeoutError("timed out"), False)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/tools/kaggle/test_network_denial_stdlib.py", line 22, in check_result
+    with self.assertRaises(IntegrityError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: IntegrityError not raised
+
+======================================================================
+FAIL: test_unspecified_error_is_unknown (network_regression.NetworkDenialTests.test_unspecified_error_is_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/tools/kaggle/test_network_denial_stdlib.py", line 29, in test_unspecified_error_is_unknown
+    self.check_result(OSError("unknown failure"), False)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/tools/kaggle/test_network_denial_stdlib.py", line 22, in check_result
+    with self.assertRaises(IntegrityError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: IntegrityError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+FAILED (failures=2)

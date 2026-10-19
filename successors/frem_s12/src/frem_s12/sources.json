@@ -1,0 +1,21 @@
+{
+  "schema": "frem-s12-sources-v1",
+  "development_release": 201608,
+  "revision_release": 202408,
+  "families": {
+    "size_bm": {
+      "201608": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202016%20Update/ftp/6_Portfolios_2x3_CSV.zip",
+      "202408": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202024%20Update/ftp/6_Portfolios_2x3_CSV.zip"
+    },
+    "size_op": {
+      "201608": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202016%20Update/ftp/6_Portfolios_ME_OP_2x3_CSV.zip",
+      "202408": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202024%20Update/ftp/6_Portfolios_ME_OP_2x3_CSV.zip"
+    },
+    "size_inv": {
+      "201608": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202016%20Update/ftp/6_Portfolios_ME_INV_2x3_CSV.zip",
+      "202408": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/Historical_Archives/08%202024%20Update/ftp/6_Portfolios_ME_INV_2x3_CSV.zip"
+    }
+  },
+  "rights": "Public download availability is not redistribution permission; retain raw archives privately."
+}
+

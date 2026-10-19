@@ -1,0 +1,61 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 3,
+  "status": "FROZEN_PROSPECTIVE_VALIDITY_AMENDMENT_MARKET_EXECUTION_GATED",
+  "frozen": "2026-10-18",
+  "supersedes": "FREM-S12-P0v2",
+  "base_protocol": {
+    "path": "successors/frem_s12/protocol_p0.json",
+    "sha256": "97c83d00d4cdcec38edf2070e1827b554e2f94bdccc55a308c1e55a0baa1052c"
+  },
+  "reason": "Prospective implementation-integrity defects were found before any official archive, market fit, search consumption, fixed-cell consumption, protected access or scientific result.",
+  "unchanged": {
+    "claim": "All P0v2 claim limits and the exact scientific question",
+    "data": "The three families, 201608 development release, 201512 cutoff and eight chronological folds",
+    "model": "The candidate architecture, mandatory arms and frozen hyperparameter search space",
+    "search": "24 trials by three families by seeds 11 and 29 on Fold A validation only, 144 complete cells",
+    "fixed_matrix": "Three families by eight folds by five seeds, 120 complete cells",
+    "primary_thresholds": "Five-percent relative energy improvement, 12-month blocks, 10000 draws, Holm correction, 0.75 positive-fold fraction and one-percent variogram noninferiority",
+    "budgets": "2000 model-cell equivalents, 60 GPU-hours, 120 CPU-hours, two weeks, no automatic retries",
+    "stopping": "Negative or inconclusive closes P0; invalid attempts remain preserved; no outcome-driven changes"
+  },
+  "amendments": {
+    "artifact_schema": {
+      "fold_schema": 2,
+      "retained": [
+        "validation months and all validation-arm scores",
+        "test outcomes",
+        "every issued finite-law atom, probability and active length for every arm and origin",
+        "expert scores and router weights",
+        "energy and variogram scores",
+        "pre-return policy targets, post-return holdings and wealth paths"
+      ],
+      "search_schema": 2,
+      "search_retained": "Validation outcomes and every issued routed-law atom and probability, sufficient to reconstruct every selection score"
+    },
+    "inference": {
+      "algorithmic_seeds": "Average the five algorithmic repeats within each family-fold before inference; never treat seeds sharing outcomes as independent market clusters",
+      "point_aggregation": "Average months within fold, folds within family, then the three families equally",
+      "bootstrap": "Keep families fixed and equally weighted; resample eight folds within each family and circular 12-month blocks within each selected fold",
+      "positive_fold_fraction": "Compute over eight folds after equal averaging across families and seeds",
+      "family_guard": "Compute each family mean after equal fold and seed aggregation",
+      "variogram_guard": "Compare the two fully aggregated means rather than averaging cellwise ratios"
+    },
+    "causal_mlp": "Train the network and append residuals against the raw pre-outcome network mean, not the potentially shifted empirical-law mean; retain only the latest 120 residuals.",
+    "kaggle_admission": {
+      "local_receipts": "Engineering-only and structurally incapable of admitting a scientific cell",
+      "required_scope": "kaggle_scientific",
+      "requirements": [
+        "Kaggle paths detected",
+        "exact Python and NumPy versions",
+        "attached input mode observed read-only",
+        "direct external TCP egress observed blocked",
+        "representative generated fold and full artifact write complete",
+        "conservative 264-fold-equivalent projection below total CPU, shard-hour, shard-output and live free-space ceilings"
+      ],
+      "gpu": "Not admitted without a separate equivalence receipt and at least 1.5x measured end-to-end speedup"
+    },
+    "checkpoint_schema": 2
+  },
+  "evidence_boundary": "Generated verification can establish engineering integrity only. Kaggle qualification, official data, search, fixed matrix and scientific inference remain NOT_EVALUATED until their exact gates pass."
+}

@@ -1,0 +1,10 @@
+test_connection_refused_does_not_prove_isolation (network_regression.NetworkDenialTests.test_connection_refused_does_not_prove_isolation) ... ok
+test_explicit_denials_retained (network_regression.NetworkDenialTests.test_explicit_denials_retained) ... ok
+test_reachable_network_rejected (network_regression.NetworkDenialTests.test_reachable_network_rejected) ... ok
+test_timeout_is_unknown_not_denial (network_regression.NetworkDenialTests.test_timeout_is_unknown_not_denial) ... ok
+test_unspecified_error_is_unknown (network_regression.NetworkDenialTests.test_unspecified_error_is_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK

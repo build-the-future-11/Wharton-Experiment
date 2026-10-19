@@ -1,0 +1,32 @@
+{
+  "protocol_id": "FREM-S12-P0",
+  "version": 4,
+  "status": "FROZEN_PROSPECTIVE_KAGGLE_RUNTIME_PORTABILITY_AMENDMENT_MARKET_EXECUTION_GATED",
+  "base_protocol_sha256": "4f788c0243519abad85595ffea52d74bf8841ee35eecaf6f517146ecb62d9e9c",
+  "supersedes_runtime_contract_only": "P0v3",
+  "market_outcomes_observed_before_amendment": false,
+  "capability_probe_script_version": 359681231,
+  "capability_probe_notebook_sha256": "ccc4cc994d89c5b4a416ed15203d4cb139415c9fcc85b6e07c695f063b9cd3fa",
+  "runtime_allowlist": {
+    "python_3.12": "numpy==2.5.4",
+    "python_3.13": "numpy==2.1.3"
+  },
+  "kaggle_observed_runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "machine": "x86_64",
+    "processor_count": 4
+  },
+  "kaggle_input_contract": "recursively_locate_one_exact_name_and_sha256_beneath_read_only_/kaggle/input",
+  "artifact_schema": 2,
+  "checkpoint_schema": 2,
+  "search_artifact_schema": 2,
+  "inference": "unchanged_from_p0v3",
+  "positive_fraction_unit": "unchanged_from_p0v3",
+  "scientific_environment_scope": "kaggle_scientific",
+  "local_environment_scope": "local_engineering_nonadmitting",
+  "causal_mlp_target": "unchanged_from_p0v3",
+  "primary_thresholds": "unchanged_from_p0v3",
+  "budgets": "unchanged_from_p0v3",
+  "scientific_status": "NOT_EVALUATED"
+}

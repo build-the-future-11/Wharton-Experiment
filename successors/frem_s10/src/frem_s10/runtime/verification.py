@@ -14,7 +14,7 @@ from pathlib import Path
 
 from frem_s10.errors import ContractError, IntegrityError
 from frem_s10.identities import JSONObject, JSONValue, checked_json, object_json, parse_json
-from frem_s10.metadata import finite_float, parse_utc_timestamp, strict_int
+from frem_s10.metadata import finite_float, strict_int
 from frem_s10.runtime.artifacts import _plain_directory
 from frem_s10.runtime.declarations import BOUND_ROLES, DESIGN, SCOPES, _reference, _schema
 from frem_s10.runtime.provenance import (
@@ -25,7 +25,7 @@ from frem_s10.runtime.provenance import (
     read_object,
     save_object,
 )
-from frem_s10.runtime.resources import check_host
+from frem_s10.runtime.resources import audit_memory_rows, check_host
 
 CHECK_NAMES = ("collection", "tests", "lint", "format", "types", "packaging", "mutations", "boundary_probe")
 BOUNDARY_PROBE = """import errno, os, pathlib, socket, sys
@@ -426,27 +426,10 @@ def _audit_host(reference: JSONValue, root: Path) -> None:
     samples = host.get("samples")
     if host.get("status") != "PASS" or not isinstance(samples, list) or len(samples) != 3:
         raise IntegrityError("three admitted host samples before complete engineering execution required")
-    previous, pageouts = None, None
-    for sample in samples:
-        row = object_json(sample)
-        clock = parse_utc_timestamp(row.get("timestamp"))
-        available = (
-            (
-                strict_int(row.get("free_pages"), name="free", minimum=0)
-                + strict_int(row.get("speculative_pages"), name="speculative", minimum=0)
-            )
-            * strict_int(row.get("page_size_bytes"), name="page size", minimum=1)
-            / 2**20
-        )
-        current = strict_int(row.get("pageouts"), name="pageouts", minimum=0)
-        if (
-            available != row.get("available_mib")
-            or available < 512
-            or (pageouts is not None and current != pageouts)
-            or (previous is not None and clock - previous < 1_000_000)
-        ):
-            raise IntegrityError("engineering preflight resource admission failed")
-        previous, pageouts = clock, current
+    try:
+        audit_memory_rows(samples)
+    except Exception as exc:
+        raise IntegrityError("engineering preflight resource admission failed") from exc
 
 
 def _save_local_metadata(path: Path, root: Path) -> JSONValue:
@@ -560,7 +543,10 @@ def _audit_scoped_checks(evidence: JSONObject, root: Path, source: Path, counts:
         operation="prepare-precision"
         if evidence["operation"] == "prepare-precision"
         else "run-development-campaign",
-        target_platform="macOS",
+        target_platform="Linux"
+        if platform.system() == "Linux"
+        and __import__("frem_s10.runtime.kaggle_contract", fromlist=["active"]).active()
+        else "macOS",
         requirements=REQUIREMENT_IDS,
         collected_nodeids=nodes,
         test_outcomes=outcomes,

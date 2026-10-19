@@ -1,0 +1,59 @@
+{
+  "schema": "s10-kaggle-production-capability-v1",
+  "observed_utc": "2026-10-16T16:37:43.101543+00:00",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "numerical_imports": false,
+  "market_data_access": false,
+  "scientific_attempt_consumed": false,
+  "tools": {
+    "bwrap": null,
+    "unshare": "/usr/bin/unshare",
+    "uv": "/usr/local/bin/uv",
+    "ps": "/usr/bin/ps"
+  },
+  "namespace": {
+    "user": "user:[4026531837]",
+    "mnt": "mnt:[4026532436]",
+    "net": "net:[4026532441]",
+    "cgroup": "cgroup:[4026532440]"
+  },
+  "resources": {
+    "/proc/self/cgroup": "0::/\n",
+    "/sys/fs/cgroup/memory.max": "32212254720\n",
+    "/sys/fs/cgroup/memory.current": "870043648\n",
+    "/sys/fs/cgroup/memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "capabilities": [
+    "CapInh:\t0000000000000000",
+    "CapPrm:\t00000000a80425fb",
+    "CapEff:\t00000000a80425fb",
+    "CapBnd:\t00000000a80425fb",
+    "CapAmb:\t0000000000000000",
+    "NoNewPrivs:\t0",
+    "Seccomp:\t2",
+    "Seccomp_filters:\t1"
+  ],
+  "probes": [
+    {
+      "name": "required_namespaces",
+      "command": [
+        "/usr/bin/unshare",
+        "--user",
+        "--map-root-user",
+        "--mount",
+        "--pid",
+        "--fork",
+        "--net",
+        "--ipc",
+        "--uts",
+        "--",
+        "/bin/true"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "unshare: unshare failed: Operation not permitted\n"
+    }
+  ],
+  "status": "CAPABILITY_OBSERVED_NOT_PRODUCTION_QUALIFICATION"
+}

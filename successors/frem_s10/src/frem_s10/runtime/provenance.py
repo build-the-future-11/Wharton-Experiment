@@ -2,6 +2,7 @@
 
 import importlib.metadata
 import importlib.util
+import os
 import platform
 import re
 import shutil
@@ -172,10 +173,22 @@ def observe_environment(source_root: Path) -> JSONObject:
     expected = source_root.absolute() / PACKAGE / "src/frem_s10/__init__.py"
     if spec is None or spec.origin is None or Path(spec.origin).resolve() != expected.resolve():
         raise IntegrityError("verification interpreter does not import the declared local source package")
-    if sys.version_info[:2] != (3, 12) or platform.system() != "Darwin" or platform.machine() != "arm64":
-        raise IntegrityError("this production environment requires actually verified Python3.12 macOSarm64")
+    from frem_s10.runtime import kaggle_contract
+
+    kaggle = kaggle_contract.active()
+    if sys.version_info[:2] != (3, 12):
+        raise IntegrityError("production requires Python3.12")
+    if kaggle:
+        kaggle_contract.require_platform()
+        sealed = os.environ.get("FREM_S10_SEALED_INPUT")
+        if not sealed:
+            raise IntegrityError("sealed Kaggle input identity required")
+        sealed_path = kaggle_contract.require_sealed_input(Path(sealed))
+        kaggle_contract.network_unreachable()
+    elif platform.system() != "Darwin" or platform.machine() != "arm64":
+        raise IntegrityError("this production environment requires verified macOSarm64 or Kaggle contract v1")
     versions = _installed_versions(source_root)
-    return {
+    observation: JSONObject = {
         "schema": "s10-environment-observation-v1",
         "python": sys.version,
         "executable": str(Path(sys.executable).absolute()),
@@ -190,6 +203,15 @@ def observe_environment(source_root: Path) -> JSONObject:
         "offline_installer": _installer_identity(),
         "required_worker_thread_environment": dict(THREAD_ENV),
     }
+    if kaggle:
+        observation["execution_contract"] = kaggle_contract.CONTRACT
+        observation["sealed_input"] = {
+            "path": str(sealed_path),
+            "sha256": digest_bytes(sealed_path.read_bytes()),
+        }
+        observation["network"] = "PLATFORM_SETTING_OBSERVED_UNREACHABLE"
+        observation["accelerator"] = "None"
+    return observation
 
 
 def _installer_identity() -> JSONObject:

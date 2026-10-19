@@ -36,6 +36,75 @@ See [release inventory and historical reproduction commands](RELEASE_INVENTORY.m
 
 No trade, message to a third party, deployment or public submission was performed.
 
+## 18 October 2026: FREM-S11 P1 successor boundary
+
+FREM-S11 is a separate release-vintage development successor and does not alter
+the original FREM conclusion or closed S8 evidence. Its original flawed P0 is
+preserved; corrected P1 was frozen before archive acquisition or parsing.
+Twenty-eight generated tests, strict typing, lint/format, package builds and a
+clean-wheel CLI check pass. The adversarial checklist finds application-level
+novelty at most: proper energy scoring and online probabilistic aggregation are
+established prior art, so no algorithmic novelty claim is supported.
+
+The exact P1 host admission is blocked at 161.516-219.125 MiB available with
+rising pageouts. No official archive was acquired, no market row parsed and no
+scientific cell executed. Current disposition is
+`ENGINEERING_VERIFIED_HOST_BLOCKED_SCIENCE_NOT_EVALUATED`. A fresh passing host
+receipt is required before the exact acquisition -> data admission -> one-use
+development sequence. A valid non-supporting result closes P1; a supporting
+development result still requires a separately frozen unused-data confirmation.
+
+## 18 October 2026: FREM-S12 P0v3 engineering boundary
+
+FREM-S12 is implemented and integrity-hardened locally under the prospective
+P0v3 amendment. Forty-one tests plus lint, format, strict typing, build and
+clean-wheel checks pass. Raw search/fixed forecast laws and outcomes are now
+retained for reconstruction; repeated algorithmic seeds are averaged before
+hierarchical fold/month-block inference with synchronized shared-calendar
+draws across families; local qualification cannot admit a
+scientific cell; and the generated Kaggle cost probe is mandatory.
+
+This is not a completed experiment. No S12 Kaggle qualification, official
+archive, market fit, search cell, fixed cell or protected outcome exists. The
+retained generated smoke is mixed/negative engineering evidence only.
+Scientific status remains `NOT_EVALUATED`; the next gate is a private Kaggle
+`qualify-kaggle` run using the final hash-bound wheel.
+
+The private Kaggle gate was attempted as saved version `359671420` and rejected
+before package import: Kaggle supplied Python 3.13.15 while P0v3 requires 3.12.
+The run preserved a non-admitting preflight receipt, consumed zero scientific
+cells and accessed no protected outcome. Do not retry unchanged or weaken the
+pin. S12 remains `NOT_EVALUATED` and blocked on a supported runtime (or a new
+prospective runtime amendment plus clean equivalence verification).
+
+P0v4 now supplies that prospective portability amendment without changing the
+scientific design. Engineering-only saved version `359681231` established the
+current Kaggle capability facts: Python 3.13.15 / NumPy 2.1.3, recursive
+read-only input mounts, blocked egress and four CPUs. Locally, 43 warning-strict
+tests pass on the preserved 3.12/2.5.4 pair, and clean installed-wheel generated
+evidence is byte-identical across the 3.12 and 3.13 pairs. The exact v0.1.1
+wheel and qualification notebook are frozen by SHA-256.
+
+This is still not a completed experiment or a passing Kaggle qualification.
+Chrome exited repeatedly at the private dataset file chooser, so no P0v4 upload
+or run is claimed. Official archives, market fits, search/fixed cells and
+protected outcomes remain zero; scientific status remains `NOT_EVALUATED`.
+
+P0v5 now hardens the prospective Kaggle launch without changing any scientific
+choice. The v0.1.2 wheel is installed into an isolated offline target; inputs
+and outputs are hash-bound at run level; reference threading is fixed; stale
+output roots fail closed; and cost admission uses the slowest of three
+byte-stable qualification repetitions. Forty-eight warning-strict tests and all
+static/package gates pass, the wheel rebuilds byte-identically, and clean-wheel
+generated evidence matches across both admitted runtime pairs. The sdist's
+non-reproducible container hash is retained and excluded from upload.
+
+This still is not a scientific run. Chrome local-file access must be enabled,
+then the exact v0.1.2 wheel and P0v5 notebook must pass private CPU/no-internet
+Kaggle qualification and be downloaded/hash-verified before any official
+archive acquisition or 144-cell search. Scientific status remains
+`NOT_EVALUATED`.
+
 
 ## 14 October 2026: S8 successor closed
 
@@ -44,3 +113,24 @@ S7 diagnosis and S8 development are complete. Read [the final report](../researc
 S8 used delayed soft density gating and continuous four-interval committed allocation, frozen before 2020-2022 acquisition with one intake-only corrected source freeze before fitting. Three base fits/seeds, 153 weekly intervals, 15 forecast variants, four policies/four costs completed. NLL gains were +0.0013675 versus equal mixing and +0.0006838 versus S6 memory; both fixed interval families include zero. At 10bps, same-policy H4 wealth was S8 $98,745.27, equal forecasts $96,211.62, S6 memory $97,134.00. Cash was $100,000 and equal-weight assets $104,927.25. Prediction is inconclusive; the economic gate failed. No favorable secondary arm replaces the primary.
 
 125 unchanged S6/S7 tests and 18 S8 checks passed in retained runs; 34,560 NLL values, 1,230 soft-gate decisions, 2,640 labels and 252 ledgers reconciled. All 319 predecessor file hashes are unchanged. Tests, DNS/intake/analysis failures, source freezes, checkpoints and ledgers remain preserved. Legacy SPY/GLD feature-cache exposure means newly acquired/held out from S6/S7 is not globally untouched confirmation. No protected 2025+ access. Do not tune or rerun the closed 2019 or 2020-2022 evaluation; a further successor requires a new hypothesis and freeze.
+
+## 18 October 2026: S12 P0v6 evidence integrity
+
+The current S12 candidate is v0.1.3/P0v6. It closes raw-evidence reconstruction,
+download verification, path ownership and warning-strict target-execution gaps
+without changing the scientific hypothesis or matrix. Local engineering gates
+pass, but the exact P0v6 wheel/notebook has not been uploaded or qualified on
+Kaggle. Search remains 0/144, fixed cells remain 0/120, market fits remain zero,
+and protected outcomes remain untouched. The project is not empirically
+complete.
+
+## 18 October 2026: S12 P0v7 evidence chain
+
+The current S12 candidate is v0.1.4/P0v7. It closes exact-calendar,
+validation-control reconstruction, foreign-attempt inventory,
+acquisition-to-data chain, cross-seed outcome and semantic qualification gaps.
+Local engineering gates pass. The exact P0v7 wheel/notebook has not been
+uploaded or qualified; search remains 0/144, fixed cells 0/120, market fits
+zero and protected outcomes untouched. Cross-saved-version consumption
+reconciliation remains a pre-science blocker. Scientific status is
+`NOT_EVALUATED`.

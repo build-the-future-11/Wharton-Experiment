@@ -1,0 +1,41 @@
+{
+  "status": "LOCAL_WRAPPER_VERIFIED_TARGET_EXECUTION_PENDING",
+  "tests_passed": 28,
+  "tests": "tests_final.log",
+  "test_scope": "stdlib subprocess and mocked dependency setup; no numerical imports",
+  "scientific_status": "NOT_EVALUATED",
+  "kaggle_execution_this_session": false,
+  "dependency_install_tested_on_linux": false,
+  "source_and_prior_evidence_unchanged": [
+    "successors/frem_s10",
+    "research/frem_s10_tonight_20261016",
+    "research/frem_s10_kaggle_20261016"
+  ],
+  "notebook": "tools/kaggle/FREM_S10_KAGGLE_CPU.ipynb",
+  "host_admission": {
+    "status": "BLOCKED",
+    "observed_utc": "2026-10-16T10:01:00.339674+00:00",
+    "available_mib": [
+      361.59375,
+      688.421875,
+      596.578125
+    ],
+    "floor_mib": 512,
+    "pageouts": [
+      1558057,
+      1558057,
+      1558057
+    ]
+  },
+  "files": {
+    "tools/kaggle/FREM_S10_KAGGLE_CPU.ipynb": "612c500036e9a42ddffe3780039c325969fa7a6b0b4c4cd2ca31152ea11de0af",
+    "tools/kaggle/NOTEBOOK_IDENTITY.json": "8a3018180bed0b87f3a8c36ee596a763bf58f7f1373b0fd0c5e225d4b6893f5c",
+    "tools/kaggle/README.md": "698e42483376dc7afdf5477523d2b324e9aea13b0bf4382f879e996b4faca8ab",
+    "tools/kaggle/bootstrap.py": "9a0021bee9ccd91db6260fe9cac0d2a0470beabd839dfc8fc798207473cdbdc9",
+    "tools/kaggle/build_notebook.py": "0504ae4944836efe243325204740972022476a45081b4627cf97cbafb17628a5",
+    "tools/kaggle/requirements-cpu.txt": "15fcd9e3a74ee39e920b7750270a4dbf645ae45e270f200e020aae8c584f07b6",
+    "tools/kaggle/runner.py": "a919a94c7956c9d93df609178b5f9778fd7c34f34edfab3329e7aae4079b206c",
+    "tools/kaggle/test_bootstrap.py": "099dccc1112edc21e17f3b91e3d4ac7d54c211e9a0673d2430c00a0921d450e1",
+    "tools/kaggle/test_runner.py": "e788096b1de2c3c2b996f215b1e2472a851224cc5e39f7abb37feea1ec79b920"
+  }
+}

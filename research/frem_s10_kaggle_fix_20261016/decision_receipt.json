@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-16T10:03:43.557424+00:00",
+  "previous": "edccabfdbaf4c9ccd3e05ade27fbf3e0e903eff170533941aa96f905726d599d",
+  "event": {
+    "observation": "Kaggle probe failed Python3.13/NumPy2.1.3 versus sealed Python3.12/NumPy2.5.4; wrapper audit exposed ambiguous JSON, snapshot labeling and child cleanup failure handling.",
+    "hypothesized_cause": "Notebook kernel interpreter was reused directly; wrapper accepted duplicate keys and did not distinguish active snapshots or reliably retain cleanup errors.",
+    "change": "Add separate tools/kaggle delivery with isolated managed Python3.12 and hash-pinned NumPy setup, explicit subprocess interpreter, strict JSON, resumability label and durable cleanup failures. Preserve previous bundle and research artifacts.",
+    "predicted_effect": "Compatible CPU subprocesses without changing model/environment requirements or notebook kernel; clearer and durable failures.",
+    "discriminating_experiment": "28 stdlib regression checks, embedded notebook byte readback; actual target dependency installation and numerical smoke still required.",
+    "result": "LOCAL_WRAPPER_VERIFIED_TARGET_EXECUTION_PENDING; scientific NOT_EVALUATED; local numerical host admission failed."
+  },
+  "sha256": "5e441f15ef0a30352f3284b06f84b5749a8950a647726c3db8cc9b900c6f6eda"
+}

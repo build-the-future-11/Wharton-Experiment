@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-18T09:36:02Z",
+  "iteration": "FREM-S12-P0V3",
+  "scope": "PROSPECTIVE_PRE_DATA_IMPLEMENTATION_AND_INFERENCE_INTEGRITY_AMENDMENT",
+  "observation": "An adversarial implementation review found that P0v2 fixed bundles did not retain the issued finite forecast laws, search bundles did not retain validation laws/outcomes, algorithmic seeds sharing the same market outcomes were treated as independent bootstrap clusters, local qualification receipts could satisfy the environment gate, policy arrays conflated pre-return targets with post-return holdings, and the causal MLP trained against a residual-shifted law mean. No S12 official archive, market fit, search cell, fixed cell, Kaggle scientific session or protected outcome had been accessed.",
+  "hypothesized_cause": "The first implementation encoded the headline workflow but left independent reconstruction, dependence-aware inference and target-platform admission less strict than the written evidence boundary.",
+  "change": "Freeze P0v3 without changing the hypothesis, data, cells, controls, thresholds or budgets. Retain complete search/fixed forecast laws and outcomes; separate targets from holdings; average algorithmic seeds before equal-family/equal-fold inference; resample folds and 12-month blocks; aggregate variogram means before the relative guard; train the MLP against its raw causal mean; require an exact-source Kaggle-scientific admission receipt and conservatively measured generated workload projection; keep GPU unadmitted without equivalence and speedup evidence.",
+  "predicted_effect": "Every reported score can be reconstructed from raw retained laws, repeated seeds cannot inflate the market sample size, policy accounting is auditable, and neither a local receipt nor an unmeasured Kaggle host can unlock scientific execution.",
+  "discriminating_experiment": "Warnings-as-errors tests must reconstruct fold and search scores, prove bit-exact resume with retained laws and policy paths, verify seed-first aggregation and local-receipt rejection, pass strict typing/lint/build/clean-wheel checks, and preserve a new no-overwrite generated artifact under the final source identity. The actual Kaggle qualification must still run and pass before data/search execution.",
+  "result": "P0V3_INTEGRITY_HARDENED_LOCAL_ENGINEERING_VERIFIED_KAGGLE_AND_SCIENCE_NOT_RUN",
+  "source_identity": "96f46ba678c3f70d437715780c7e4b21a3f71ede06c8f2ab0c68300b11ebb6fb",
+  "base_protocol_sha256": "97c83d00d4cdcec38edf2070e1827b554e2f94bdccc55a308c1e55a0baa1052c",
+  "amendment_protocol": "successors/frem_s12/protocol_p0_v3.json",
+  "amendment_protocol_sha256": "fe8ecbbff4dc8a63d8354a7a9cab82c778b3eb5b1ba5a54bf1b115a69c03ab9d",
+  "tests": {
+    "passed": 40,
+    "failed": 0,
+    "warnings_as_errors": true
+  },
+  "wheel_sha256": "dfa03338625b66ae5bea2cef130134d8009827a239bfdbc4071e9f19c2d08e00",
+  "sdist_sha256": "ffb39a2e3e2ecd529886d11e52c0faea18801ed50fa7befb37aa7c9bda20d541",
+  "generated_smoke_manifest_sha256": "777670c597173538ac8e69b892b6866585b5b61b4841940a1e1bc1446ffe7ffd",
+  "retained_build_packaging_attempt": "The first P0v3 build succeeded but omitted the embedded v3 amendment because package-data listed only P0v2. That temporary build remains under /tmp and was superseded before delivery by a wheel whose inventory contains both protocols.",
+  "kaggle_session_started": false,
+  "archives_acquired": 0,
+  "data_rows_parsed": 0,
+  "search_cells_consumed": 0,
+  "fixed_cells_consumed": 0,
+  "market_fits": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

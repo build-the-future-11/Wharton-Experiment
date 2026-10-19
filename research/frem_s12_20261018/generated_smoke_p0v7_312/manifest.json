@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "files": {
+    "arrays.npz": "b04c37b7fdbd14cc4821a69632802fc6bbb0bd1503fc16fbb1fc08ef0acf53b8",
+    "summary.json": "1bdb272c5025026be91b5ab110a681bc30e03bb736fb73ce0af21844b714ee87"
+  },
+  "schema": "frem-s12-fold-manifest-v3"
+}

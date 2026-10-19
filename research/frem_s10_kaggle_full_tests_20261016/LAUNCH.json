@@ -1,0 +1,16 @@
+{
+  "status": "KAGGLE_FULL_SUITE_RUNNING",
+  "notebook": "https://www.kaggle.com/code/ryangomez010/wharton-s10-full-test-suite-2026-10-16/edit",
+  "private_source_dataset": "https://www.kaggle.com/datasets/ryangomez010/wharton-s10-full-suite-source-2026-10-16",
+  "source_zip_sha256": "e9c746747ddaf1ff6a960d06ccad1594c0889e05ced0468a19b583b7027561e1",
+  "driver_sha256": "a83cc32d1b4c7767396f158c735e2f160b3b2e0e3ecaede4bcc31bacab77e4ba",
+  "scope": [
+    "all successors/frem_s10/tests",
+    "all tools/kaggle/test_*.py"
+  ],
+  "test_selection_filters": [],
+  "attempt1": "FAILED_BEFORE_TESTS: Kaggle recursively expands nested ZIP inputs",
+  "attempt2": "RUNNING: original nested archive embedded and hash verified",
+  "scientific_status": "NOT_EVALUATED",
+  "production_qualified": false
+}

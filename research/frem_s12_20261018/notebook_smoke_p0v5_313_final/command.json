@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/local/bin/python3.13",
+    "-m",
+    "frem_s12.cli",
+    "generated-smoke",
+    "--seed",
+    "11",
+    "--output",
+    "/tmp/frem-s12-p0v5-notebook-sim-output-1336/generated-smoke"
+  ],
+  "returncode": 0,
+  "schema": "frem-s12-command-result-v1",
+  "stderr": "/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/model.py:107: RuntimeWarning: divide by zero encountered in matmul\n  self.recurrent @ states[index] + self.config.input_scale * (self.input_weights @ features)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/model.py:107: RuntimeWarning: overflow encountered in matmul\n  self.recurrent @ states[index] + self.config.input_scale * (self.input_weights @ features)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/model.py:107: RuntimeWarning: invalid value encountered in matmul\n  self.recurrent @ states[index] + self.config.input_scale * (self.input_weights @ features)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/baselines.py:109: RuntimeWarning: divide by zero encountered in matmul\n  hidden = np.tanh(self.w1 @ features + self.b1)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/baselines.py:109: RuntimeWarning: overflow encountered in matmul\n  hidden = np.tanh(self.w1 @ features + self.b1)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/baselines.py:109: RuntimeWarning: invalid value encountered in matmul\n  hidden = np.tanh(self.w1 @ features + self.b1)\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/scores.py:70: RuntimeWarning: divide by zero encountered in matmul\n  cross[i, j] = left.probabilities @ distances @ right.probabilities\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/scores.py:70: RuntimeWarning: overflow encountered in matmul\n  cross[i, j] = left.probabilities @ distances @ right.probabilities\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/scores.py:70: RuntimeWarning: invalid value encountered in matmul\n  cross[i, j] = left.probabilities @ distances @ right.probabilities\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/policy.py:40: RuntimeWarning: divide by zero encountered in matmul\n  growth = investable * (action[0] + risky_growth @ action[1:])\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/policy.py:40: RuntimeWarning: overflow encountered in matmul\n  growth = investable * (action[0] + risky_growth @ action[1:])\n/tmp/frem-s12-p0v5-notebook-sim-site-1336/frem_s12/policy.py:40: RuntimeWarning: invalid value encountered in matmul\n  growth = investable * (action[0] + risky_growth @ action[1:])\n",
+  "stdout": "{\n  \"complete\": true,\n  \"files\": {\n    \"arrays.npz\": \"2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f\",\n    \"summary.json\": \"631641c862e5ff916923e676ffd585662a2bbd353b8488340d04d5a5030e93ff\"\n  },\n  \"schema\": \"frem-s12-fold-manifest-v2\"\n}\n"
+}

@@ -1,9 +1,9 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.1.1-runtime-gated",
+  "version": "0.1.4-s12-p0v7-ready",
   "created": "2026-10-10",
-  "updated": "2026-10-16",
-  "phase": "s10_kaggle_probe_persisted_runtime_incompatible",
+  "updated": "2026-10-18",
+  "phase": "s12_p0v7_verified_kaggle_upload_pending_science_not_run",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -28,7 +28,7 @@
   },
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
-  "compute_authorized_this_session": "Bounded CPU preparation and actual private Kaggle probe. Target Python 3.13.15 / NumPy 2.1.3 failed sealed 3.12 / 2.5.4 before numerical imports. Local 512 MiB/pageout admission also failed. GPU allocation remained disabled. CPU Stop Session requested with UI off, but final inactivity/quota confirmation remains unverified after browser disk-space failure.",
+  "compute_authorized_this_session": "User requested another all-in pre-execution improvement pass. P0v7 was frozen prospectively as an end-to-end evidence-chain amendment before market access, locally verified and packaged as v0.1.4. It adds exact calendar and validation-control reconstruction, complete campaign inventories, acquisition-to-data receipt continuity, cross-seed outcome identity and semantic qualification reconstruction without changing models, cells, controls, thresholds, inference or budgets. Upload and Kaggle P0v7 qualification remain pending because Chrome local-file access is not enabled. Cross-saved-version consumption reconciliation must also close before scientific shards. No official data, market fit, scientific consumption or protected access occurred.",
   "development_budget_proposed": {
     "max_trials": 24,
     "max_wall_clock_hours": 12,
@@ -38,6 +38,178 @@
   "protected_evaluation": {
     "status": "not accessed",
     "freeze_required": true
+  },
+  "frem_s11": {
+    "status": "BLOCKED_UNCONSUMED_NOT_EVALUATED",
+    "relationship": "Distinct successor; S8-S10 remain closed or unexecuted under their own evidence",
+    "preserved_protocol": "successors/frem_s11/src/frem_s11/protocol.json",
+    "operative_protocol": "successors/frem_s11/src/frem_s11/protocol_v2.json",
+    "plan": "research/frem_s11_20261018/PLAN.md",
+    "decisions": [
+      "research/decisions/frem_s11_initiation_20261018.json",
+      "research/decisions/frem_s11_preparse_validity_amendment_20261018.json",
+      "research/decisions/frem_s11_predata_repair_20261018.json",
+      "research/decisions/frem_s11_engineering_verification_20261018.json"
+    ],
+    "source_identity": "20b462e9eed989362dc34198e4325e5e6dd678357eb366055f642016ea1a9fca",
+    "verification": "research/frem_s11_20261018/ENGINEERING_VERIFICATION.md",
+    "flaw_checklist": "research/frem_s11_20261018/FLAW_CHECKLIST.md",
+    "host_receipt": "research/frem_s11_20261018/host_admission_attempt2.json",
+    "host_observation": "179.90625/161.515625/219.125 MiB available against 512 MiB; pageouts 2061218/2061225/2061237",
+    "static_checks": "Ruff lint/format, strict mypy and git diff --check pass",
+    "runtime_tests": "28 generated tests passed with warnings as errors; engineering evidence only",
+    "package_verification": "sdist/wheel build and clean wheel CLI verification pass",
+    "archives_acquired": 0,
+    "data_parsed": false,
+    "market_fits": 0,
+    "scientific_result": "NOT_EVALUATED",
+    "next_gate": "Fresh passing exact-source host receipt, then declared archive acquisition, runtime verification, data admission and one development consumption"
+  },
+  "frem_s12": {
+    "status": "P0V7_ENGINEERING_VERIFIED_KAGGLE_UPLOAD_PENDING_SCIENCE_NOT_RUN",
+    "relationship": "Distinct successor; S8-S11 are not reopened and S11 remains an unconsumed mandatory control",
+    "base_protocol": "successors/frem_s12/src/frem_s12/protocol_p0.json",
+    "preserved_protocol_v3": "successors/frem_s12/src/frem_s12/protocol_p0_v3.json",
+    "preserved_protocol_v4": "successors/frem_s12/src/frem_s12/protocol_p0_v4.json",
+    "preserved_protocol_v5": "successors/frem_s12/src/frem_s12/protocol_p0_v5.json",
+    "preserved_protocol_v6": "successors/frem_s12/src/frem_s12/protocol_p0_v6.json",
+    "protocol": "successors/frem_s12/src/frem_s12/protocol_p0_v7.json",
+    "plan": "research/frem_s12_20261018/PLAN.md",
+    "kaggle_campaign": "research/frem_s12_20261018/KAGGLE_CAMPAIGN.md",
+    "flaw_checklist": "research/frem_s12_20261018/FLAW_CHECKLIST.md",
+    "status_record": "research/frem_s12_20261018/STATUS.md",
+    "planning_receipt": "research/frem_s12_20261018/PLANNING_RECEIPT.json",
+    "preserved_p0v2_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT.json",
+    "preserved_initial_p0v3_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3.json",
+    "preserved_pre_joint_bootstrap_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_FINAL.json",
+    "preserved_p0v3_ready_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_READY.json",
+    "preserved_p0v4_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V4_READY.json",
+    "preserved_p0v5_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V5_READY.json",
+    "preserved_p0v6_implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V6_READY.json",
+    "implementation_receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V7_READY.json",
+    "engineering_verification": "research/frem_s12_20261018/ENGINEERING_VERIFICATION.md",
+    "decisions": [
+      "research/decisions/frem_s12_planning_20261018.json",
+      "research/decisions/frem_s12_p0v2_implementation_20261018.json",
+      "research/decisions/frem_s12_p0v2_consumption_amendment_20261018.json",
+      "research/decisions/frem_s12_p0v3_integrity_amendment_20261018.json",
+      "research/decisions/frem_s12_p0v3_cost_projection_correction_20261018.json",
+      "research/decisions/frem_s12_p0v3_joint_bootstrap_correction_20261018.json",
+      "research/decisions/frem_s12_kaggle_qualification_20261018.json",
+      "research/decisions/frem_s12_p0v4_runtime_portability_20261018.json",
+      "research/decisions/frem_s12_p0v4_reproducible_package_20261018.json",
+      "research/decisions/frem_s12_p0v5_delivery_hardening_20261018.json",
+      "research/decisions/frem_s12_p0v5_failure_manifest_correction_20261018.json",
+      "research/decisions/frem_s12_p0v6_evidence_integrity_20261018.json",
+      "research/decisions/frem_s12_p0v7_evidence_chain_20261018.json",
+      "research/decisions/frem_s12_p0v7_output_location_guard_20261018.json"
+    ],
+    "source_identity": "87b2378b9180b79cdb1ca1a90fb33f8150bcf4d1613deb07ba23af7797450ca5",
+    "hypothesis": "A learned causal router over multiscale Fourier-reservoir and engram-retrieval scenario laws may distinguish persistent expert skill from transient correlated errors under regime change.",
+    "primary": "At least five-percent relative energy-score improvement over S11 and the strongest predeclared non-FREM baseline, corrected uncertainty, fold consistency and variogram noninferiority",
+    "development_budget": "At most 24 search trials, 2000 model cell-equivalents, 60 GPU-hours, 120 CPU-hours and two calendar weeks; live quota and measured projection can only reduce these ceilings",
+    "search_registry": "24 trials by three families by seeds 11 and 29 on Fold A validation only; 144 complete cells required",
+    "fixed_registry": "Three families by eight folds by five seeds; 120 complete cells required",
+    "kaggle_contract": "Separate Kaggle-native public-data threat model requiring qualification; S10 production qualification is not inherited",
+    "literature_review_complete": true,
+    "source_rights_contamination_audit_complete": true,
+    "protocol_frozen": true,
+    "model_implemented": true,
+    "generated_tests": "60 passed with warnings as errors under Python 3.12 / NumPy 2.5.4",
+    "one_use_consumption": "Search and fixed cells claim deterministic source/gate-bound ledger identities; duplicate attempts fail and only exact checkpoint resume is permitted",
+    "raw_evidence": "Search and fixed bundles retain outcomes and every issued finite-law atom/probability for independent score reconstruction; fixed bundles also separate targets and holdings",
+    "inference": "Algorithmic seeds are averaged within family-fold before equal-fold/equal-family point aggregation; fold identities and circular 12-month blocks are resampled jointly across the three shared-calendar families",
+    "environment_gate": "Local receipts are non-admitting; only exact-source kaggle_scientific receipts with isolated install, canonical input inventory, fixed reference threads, target, egress, read-only-input and three-repeat maximum-timing largest-trial/latest-fold projections can unlock science",
+    "generated_smoke": "MIXED_NEGATIVE_ENGINEERING_OBSERVATION_NO_SCIENTIFIC_INFERENCE",
+    "kaggle_probe_run": true,
+    "kaggle_qualification": {
+      "status": "P0V3_REJECTED_P0V4_NOT_UPLOADED_P0V5_NOT_UPLOADED_P0V6_NOT_UPLOADED_P0V7_PENDING_UPLOAD",
+      "private_dataset_url": "https://www.kaggle.com/datasets/ryangomez010/frem-s12-input",
+      "private_notebook_url": "https://www.kaggle.com/code/ryangomez010/frem-s12-campaign?scriptVersionId=359671420",
+      "initial_upload_version_id": 359670132,
+      "qualification_version_id": 359671420,
+      "runtime_seconds": 19.9,
+      "accelerator": "None",
+      "internet": "disabled",
+      "python_observed": "3.13.15",
+      "python_required": "3.12",
+      "input_mount_expected_path_observed": false,
+      "scientific_admitted": false,
+      "receipt": "research/frem_s12_20261018/KAGGLE_QUALIFICATION_359671420.json"
+    },
+    "kaggle_capability": {
+      "status": "SUCCESS_ENGINEERING_ONLY",
+      "private_notebook_url": "https://www.kaggle.com/code/ryangomez010/frem-s12-campaign?scriptVersionId=359681231",
+      "script_version_id": 359681231,
+      "runtime_seconds": 24.2,
+      "python": "3.13.15",
+      "numpy": "2.1.3",
+      "machine": "x86_64",
+      "processor_count": 4,
+      "input_read_only": true,
+      "network_disabled_observed": true,
+      "scientific_admitted": false,
+      "receipt": "research/frem_s12_20261018/KAGGLE_CAPABILITY_359681231.json"
+    },
+    "p0v4_artifacts": {
+      "wheel": "frem_s12-0.1.1-py3-none-any.whl",
+      "wheel_sha256": "d4d65ad0913393b69b70f6a9f3b12f1960ab5905529695e22757e1a2024cee4e",
+      "notebook_sha256": "e5f5a6daa767f963a1eb49025093bf4ed5caa5270e79da827b847317082e0b13",
+      "protocol_sha256": "8c746364f07224b4790c7424f07eceb7da6a2d407c522e250c4a8c073b7d3002",
+      "cross_runtime_generated_outputs": "byte-identical Python 3.12/NumPy 2.5.4 versus Python 3.13/NumPy 2.1.3",
+      "upload_status": "BLOCKED_CHROME_EXITED_AT_FILE_CHOOSER"
+    },
+    "p0v5_artifacts": {
+      "wheel": "frem_s12-0.1.2-py3-none-any.whl",
+      "wheel_sha256": "dac39add6e47f0bb5c6c47ebdd246c161a44d7b25c4ee2f43b52c3e6a1e50a06",
+      "wheel_bytes": 45892,
+      "wheel_rebuild_byte_identical": true,
+      "notebook_sha256": "605bdd9d99d7e421ca088c4161ea18589a99ab0e2a53177f609363da4ac2c5ce",
+      "protocol_sha256": "f194a4591e9aa54a9d7d809a91382ddbb000e802912b60ac424ad2ab63073b21",
+      "cross_runtime_generated_outputs": "byte-identical Python 3.12/NumPy 2.5.4 versus Python 3.13/NumPy 2.1.3",
+      "qualification_repeats": 3,
+      "projection_statistic": "maximum",
+      "upload_status": "NOT_UPLOADED_SUPERSEDED_BY_P0V7"
+    },
+    "p0v6_artifacts": {
+      "wheel": "frem_s12-0.1.3-py3-none-any.whl",
+      "wheel_sha256": "e86605be211ca5ba922cf6742c0af4c88d575915b149cb36da4d20254192b24d",
+      "wheel_bytes": 50472,
+      "wheel_rebuild_byte_identical": true,
+      "notebook_sha256": "12d769b45107796b43f1d8237a45b940d42e9d8fad7c501c6997eb849298bced",
+      "protocol_sha256": "c540f44bf9ca46164af3b62d3e8d01f2c99a359d435c452c7138a1e7bdd088f2",
+      "source_identity": "0f36843500f72cc72c8454343ae8ec61602bd0429222b1f69e9c33bfe93834c1",
+      "generated_smoke_arrays_sha256": "2f8b70ec02f9f3090ce7e73b73f472ec894ba03866f89032416de632db9aa92f",
+      "qualification_repeats": 3,
+      "projection_statistic": "maximum",
+      "semantic_verification": "Independent reconstruction of search/fixed energy score, fixed variogram score, holdings and 10 bps wealth plus exact run-bundle inventory verification",
+      "upload_status": "NOT_UPLOADED_SUPERSEDED_BY_P0V7"
+    },
+    "p0v7_artifacts": {
+      "wheel": "frem_s12-0.1.4-py3-none-any.whl",
+      "wheel_sha256": "e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72",
+      "wheel_bytes": 57699,
+      "wheel_rebuild_byte_identical": true,
+      "notebook_sha256": "6db7e62e45fa90b29fe9bafda454239f411cc3227b50aa668fa9b0873916afb3",
+      "protocol_sha256": "6dd4652afaf76506736abc7e8bef027c12d1aa08f6b53a4be0a96881f233af10",
+      "source_identity": "87b2378b9180b79cdb1ca1a90fb33f8150bcf4d1613deb07ba23af7797450ca5",
+      "superseded_pre_output_location_guard_wheel_sha256": "b3717d7482fbd574ab49728f4d6bb31769344ac3b11b539620d297e2448a849d",
+      "superseded_pre_output_location_guard_source_identity": "cd89c212aa7cd141c859cf025b9150dafbeca574eaebdcfde5353222600def55",
+      "generated_smoke_arrays_sha256": "b04c37b7fdbd14cc4821a69632802fc6bbb0bd1503fc16fbb1fc08ef0acf53b8",
+      "qualification_repeats": 3,
+      "projection_statistic": "maximum",
+      "semantic_verification": "Exact calendar, validation law/control, complete campaign inventory, provenance chain, cross-seed outcome, isolated install and qualification projection reconstruction",
+      "upload_status": "PENDING_CHROME_EXTENSION_LOCAL_FILE_ACCESS"
+    },
+    "data_acquired": false,
+    "data_parsed": false,
+    "search_cells_consumed": 0,
+    "fixed_cells_consumed": 0,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "scientific_result": "NOT_EVALUATED",
+    "next_gate": "Enable local-file access for the ChatGPT Chrome extension, upload exact wheel SHA-256 e9596b134c8bbffebb5688a2627775b449ad87c805897af46503eb7dcda4cd72 as a new private dataset version, upload notebook SHA-256 6db7e62e45fa90b29fe9bafda454239f411cc3227b50aa668fa9b0873916afb3, and run P0v7 qualification with CPU and internet disabled. Download the complete bundle and run verify-run-bundle with the exact wheel, version 0.1.4 and expected mode qualify-kaggle; eligible_for_next_stage must be true. Before any scientific shard, reconcile a complete fork-free saved-version consumption ledger. Only then can archive admission and the 144-cell search be considered."
   },
   "claims": {
     "novelty": "candidate; not established",
@@ -71,7 +243,19 @@
     "S10 production20261016: exact candidate plan and retrospective source integrity admission saved; complete current-source verification and all numerical work remain resource gated. All ten normative semantic faults plus retained omitted-exit fault required. Conditional heartbeat never retries consumed or valid negative work.",
     "Pause the fixed S10 continuation on16October2026 source inventory mismatch. Preserve the original118-file candidate, fourteen additions and seven modified-file observations. No automatic source repair, replacement freeze or retry; portability revision requires separate review and verification.",
     "S10 Kaggle preparation20261016: existing CPU CLI gains strict generated manifests, stateful resume, frozen evaluation/export and worker logs; Linux adapters remain fixture-verified only. Preserve scientific design, thresholds, closed results and concurrent heartbeat source-rejection evidence. No automatic resumption or scientific freeze.",
-    "S10 tonight campaign: retain exact source and strict runtime contract, record the incompatible CPU probe and verified private persistence as PARTIAL CAMPAIGN only. No scientific freeze, threshold change, dependency override or GPU allocation. Require actual final session/quota check and supported target qualification."
+    "S10 tonight campaign: retain exact source and strict runtime contract, record the incompatible CPU probe and verified private persistence as PARTIAL CAMPAIGN only. No scientific freeze, threshold change, dependency override or GPU allocation. Require actual final session/quota check and supported target qualification.",
+    "FREM-S11 is a separate release-vintage successor. Preserve P0 and use corrected pre-parse P1 without changing its folds, controls, five-percent threshold, bootstrap or zero-trial budget. Do not acquire, parse or execute until a fresh exact-source host receipt passes the unchanged 512 MiB and stable-pageout rule.",
+    "FREM-S12 P0v2 is frozen before market access. Search uses only Fold A validation across 144 complete cells; every fixed cell requires the source-current selection receipt. Generated mixed/negative evidence cannot change the model or threshold. Kaggle and market science remain unrun.",
+    "FREM-S12 P0v3 prospectively repairs raw-evidence retention, seed pseudoreplication, local-receipt admission, target/holding ambiguity and the MLP residual target without changing the hypothesis, cells, thresholds or budgets. P0v2 receipts and artifacts remain preserved; Kaggle and market science remain unrun.",
+    "FREM-S12 P0v3 final admission correction measures the largest declared configuration separately on Fold-A search and latest Fold-H fixed execution before projecting all 264 cells. Earlier/default-fold projection evidence is preserved but source-stale; only the final exact-source Kaggle receipt may admit science.",
+    "FREM-S12 P0v3 inference resamples fold identities and month blocks jointly across the three shared-calendar families after algorithmic-seed averaging. Earlier independent-within-family bootstrap source is preserved as stale engineering evidence; no market outcome was observed before correction.",
+    "FREM-S12 private Kaggle qualification saved version 359671420 failed closed on Python 3.13.15 versus the frozen Python 3.12 contract before wheel installation or any scientific cell. Preserve the preflight output, do not retry unchanged or weaken the pin, and keep scientific status NOT_EVALUATED.",
+    "FREM-S12 P0v4 prospectively adds the capability-observed Python 3.13 / NumPy 2.1.3 pair and recursive read-only Kaggle input discovery without changing models, cells, thresholds, inference or budgets. Exact v0.1.1 wheel installs and generated outputs match byte-for-byte across the admitted 3.12 and 3.13 runtime pairs. The target qualification remains pending because Chrome exited at the upload chooser; no upload or scientific pass is claimed.",
+    "FREM-S12 P0v4 uses the durable SOURCE_DATE_EPOCH-normalized wheel as its only upload candidate. Earlier byte-different ordinary builds are preserved as non-uploaded packaging observations; the final notebook binds the durable wheel's exact SHA-256.",
+    "FREM-S12 P0v5 prospectively hardens delivery without changing the model, cells, controls, thresholds, inference or budgets. Use only the reproducible v0.1.2 wheel; isolate installation, bind the input inventory, retain the run manifest and admit cost only from the slowest of three byte-stable qualification repeats. Kaggle qualification and all market science remain unrun.",
+    "FREM-S12 P0v6 prospectively hardens evidence verification without changing the model, cells, controls, thresholds, inference or budgets. Search and fixed summaries must reconstruct from raw laws and outcomes, fixed holdings and 10 bps wealth must independently reconcile, and downloaded run bundles must pass exact-inventory/hash/receipt verification before admission. Use only the reproducible v0.1.3 wheel. Kaggle qualification and all market science remain unrun.",
+    "FREM-S12 P0v7 prospectively closes the end-to-end evidence chain without changing the model, cells, controls, thresholds, inference or budgets. Exact calendars, validation-selected controls, complete campaign inventories, acquisition/data/source/environment/selection/consumption chains, cross-seed outcomes and semantic qualification arithmetic must independently reconcile. Use only the reproducible v0.1.4 wheel. Kaggle qualification and all market science remain unrun; cross-saved-version consumption reconciliation is a pre-science blocker.",
+    "The initial P0v7 build is superseded before upload because select-search and analyze could write derived output inside an immutable campaign root. The corrected v0.1.4 CLI rejects those paths; the old build and smoke remain preserved and no scientific design or evidence changed."
   ],
   "failures": [
     {
@@ -200,6 +384,13 @@
       "status": "SCOPED_FAILURES_REPAIRED_PRODUCTION_BLOCKED",
       "detail": "Initial collection/static/fixture failures retained and corrected. Final bounded checks pass; host admission and actual Linux/full-production verification remain blocked. Canonical concurrent-write guard refused before merge; no history was overwritten.",
       "receipt": "research/frem_s10_kaggle_20261016/RECEIPT.json"
+    },
+    {
+      "date": "2026-10-18",
+      "stage": "FREM-S11_host_admission",
+      "status": "BLOCKED_UNCONSUMED",
+      "detail": "Final exact-source Python 3.12 samples reported 179.90625/161.515625/219.125 MiB available against the fixed 512 MiB floor; pageouts increased 2061218/2061225/2061237. Generated tests and package verification passed, but no archive acquisition, data parse, market fit, market score or protected access occurred.",
+      "receipt": "research/frem_s11_20261018/host_admission_attempt2.json"
     }
   ],
   "history": [
@@ -351,6 +542,56 @@
       "date": "2026-10-16",
       "event": "Wharton/S10 actual private Kaggle CPU probe completed and saved output retrieval verified. Python 3.13.15 / NumPy 2.1.3 incompatible; no numerical/model/scientific/GPU execution. Notebook wrapper 19 and budget helper 16 tests passed. CPU stop requested/UI off, final inactivity and postrun quota unverified after local browser disk-space failure.",
       "receipt": "research/frem_s10_tonight_20261016/RECEIPT.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Preserved flawed S11 P0 and froze corrected pre-data P1. Verified official TXT/CSV archive formats, source/interpreter/receipt/consumption guards, causal model and exact portfolio accounting. 28 generated tests, strict typing, lint/format, sdist/wheel and clean-wheel CLI checks passed. Two actual host receipts failed; final exact-source samples stayed below512MiB with rising pageouts. Zero archives acquired, rows parsed, market fits, ledgers or protected accesses.",
+      "receipt": "research/frem_s11_20261018/ENGINEERING_VERIFICATION.md"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Drafted a complete separate S12 research and Kaggle-heavy campaign plan. Proposed a causal multiscale memory router, mandatory S11/non-FREM controls, repeated walk-forward methodology, bounded 24-trial search, 2000-cell development ceiling, explicit statistical/terminal rules and a new Kaggle-native qualification path. Draft is not frozen or implemented; zero data, Kaggle sessions, fits, ledgers or protected accesses.",
+      "receipt": "research/frem_s12_20261018/STATUS.md"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Closed S12 literature/source gates and froze P0v2 before market access. Corrected the proposed search chronology to Fold A validation only, implemented source-current gates, 144-cell search, 120-cell fixed matrix, exact scores, controls, checkpoints, complete analysis and Kaggle launcher. Thirty-three tests, strict typing/lint/format, builds and clean-wheel CLI passed. Retained a mixed/negative generated smoke. Zero Kaggle sessions, official archives, market fits, scientific cells or protected accesses.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Added the missing one-use scientific consumption invariant before data access. Deterministic source/gate-bound claims now block duplicate search/fixed attempts; only exact checkpoint resume can reuse a claim. Thirty-four tests, strict typing/lint/format, final builds and clean-wheel CLI passed. Zero Kaggle sessions, archives, search/fixed cells or protected accesses.",
+      "receipt": "research/decisions/frem_s12_p0v2_consumption_amendment_20261018.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Prospectively froze P0v3 after an adversarial pre-data audit. Added reconstructable search/fixed laws and outcomes, seed-first hierarchical inference, separate targets/holdings, corrected raw-mean MLP residual learning and a Kaggle-only scientific admission receipt with measured projection. Forty tests and all quality/build/clean-wheel gates pass. Zero Kaggle sessions, archives, market fits, scientific cells or protected accesses.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Corrected the still-pre-data Kaggle projection to time the largest declared trial separately on Fold-A search and latest Fold-H fixed execution, then project 144 and 120 cells by their respective costs. Final source, smoke, wheel and receipt were reissued; prior P0v3 evidence remains preserved. Zero Kaggle sessions, archives, scientific cells or protected accesses.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_FINAL.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Corrected the still-pre-data bootstrap to use shared fold and month-block draws across overlapping portfolio families. Forty-one tests plus all static/build/clean-wheel gates pass under the final source identity. No Kaggle session, official data, scientific cell or protected access exists; next gate is target qualification.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V3_READY.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Froze and verified the prospective P0v6 evidence-integrity amendment. Added independent reconstruction of search/fixed scores, fixed holdings and 10 bps wealth; exact manifest and downloaded run-bundle verification; and adversarial tamper tests. Fifty-three warning-strict tests, lint, format, strict typing, deterministic wheel rebuild, clean-wheel install and generated smoke passed. All P0v5 arrays and earlier failures remain preserved. Zero official data, market fits, scientific cells or protected accesses; exact P0v6 Kaggle qualification remains pending.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V6_READY.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Froze and verified prospective P0v7 before upload or market access. Added exact calendar and raw validation-control reconstruction, complete campaign inventories, acquisition/data/environment/source/selection/consumption chaining, cross-seed outcome identity and semantic qualification reconstruction. Fifty-seven warning-strict tests, lint, format, strict typing, deterministic wheel rebuild and clean-wheel readback passed. All P0v6 evidence and failed build/smoke attempts remain preserved. Zero archives, market fits, scientific cells or protected accesses; Kaggle qualification and cross-saved-version ledger reconciliation remain pending.",
+      "receipt": "research/frem_s12_20261018/IMPLEMENTATION_RECEIPT_P0V7_READY.json"
+    },
+    {
+      "date": "2026-10-18",
+      "event": "Added the final P0v7 output-location guard before upload: selection and analysis outputs must be outside immutable campaign roots. Preserved the superseded first P0v7 wheel and smoke, rebuilt v0.1.4 byte-identically, rebound the notebook, repeated clean-wheel generated readback and added three fail-closed CLI tests for 60 total. Zero archives, market fits, scientific cells or protected accesses.",
+      "receipt": "research/decisions/frem_s12_p0v7_output_location_guard_20261018.json"
     }
   ],
   "prior_reported_evidence": [
@@ -1113,8 +1354,8 @@
     "predecessor_phase": "s8_development_complete_inconclusive_prediction_economic_gate_failed",
     "next_action": "Run unchanged unconsumed frozen matrix in a fresh output directory after resource admission succeeds, then audit every outcome. No blind positive-result search."
   },
-  "current_iteration": "FREM-S10",
-  "current_request_scope": "User-selected Wharton/S10 bounded private Kaggle campaign until 22:00 IST on 16 October 2026. One CPU metadata/persistence probe actually ran; model and scientific execution blocked. No GPU allocation, dependency changes, public release, push, paper submission or new automation.",
+  "current_iteration": "FREM-S12",
+  "current_request_scope": "Full fixed S10 192-ledger retrospective development study explicitly authorized. Actual Kaggle namespace creation failed Operation not permitted; production isolation, environment and resource contracts are unmet. No pilot, market fits, freeze, protected access or scientific attempt consumed. Prior 699+37 passing engineering tests retained.",
   "s10_design_20261015": {
     "status": "DESIGN_COMPLETE_REVIEW_AND_FEASIBILITY_PENDING",
     "predecessor_phase": "s9_exploratory_implemented_resource_blocked",
@@ -1155,7 +1396,7 @@
     ],
     "next_action": "Review the complete S10 design and establish data/precision feasibility before implementing and freezing any experiment."
   },
-  "current_design_revision": 4,
+  "current_design_revision": 7,
   "s10_design_v2_20261015": {
     "status": "EXTENDED_DESIGN_COMPLETE_IMPLEMENTATION_AND_EMPIRICAL_GATES_PENDING",
     "overview": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
@@ -1453,5 +1694,135 @@
     "preprint_empirical_draft_supported": false,
     "independent_empirical_reproduction": false,
     "next_action": "Confirm Wharton's current session is inactive and read account quota; establish a reviewed compatible CPU runtime and actual target qualification before numerical execution. Keep scientific gates and original source unchanged; do not resume old production plan."
+  },
+  "s10_kaggle_fix_20261016": {
+    "status": "SUPERSEDED_BY_LIVE_VERIFICATION",
+    "receipt": "research/frem_s10_kaggle_fix_20261016/RECEIPT.json",
+    "notebook": "tools/kaggle/FREM_S10_KAGGLE_CPU.ipynb",
+    "tests_passed": 28,
+    "scientific_status": "NOT_EVALUATED",
+    "prior_sealed_source_unchanged": true,
+    "actual_linux_setup_and_model_run": "VERIFIED_GENERATED_CPU_ONLY",
+    "next_action": "See s10_kaggle_live_20261016 for corrected namespace wrapper and actual target evidence."
+  },
+  "s10_kaggle_live_20261016": {
+    "status": "KAGGLE_GENERATED_CPU_END_TO_END_VERIFIED",
+    "scientific_status": "NOT_EVALUATED",
+    "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-corrected-cpu-end-to-end-2026-10-16/edit",
+    "runtime_receipt": "research/frem_s10_kaggle_live_20261016/TARGET_RUNTIME.json",
+    "decision": "research/decisions/frem_s10_kaggle_namespace_20261016.json",
+    "tests_passed": 37,
+    "model_runs": 1,
+    "full_root_probe": "RESOURCE_REJECTED_HIDDEN_CGROUP_ANCESTORS",
+    "namespace_smoke_probe": "SMOKE_ONLY_ADMITTED",
+    "production_qualified": false,
+    "protected_access": false,
+    "live_session_last_observed": "Off; Session stopped.",
+    "next_action": "Completed generated engineering run retained. Do not repeat this campaign. Production qualification and scientific execution require their separate supported contracts and admissible data.",
+    "origins_completed": 12,
+    "interrupt_after": 3,
+    "exact_score_reconstruction": true,
+    "completed_reuse_validated": true,
+    "final_archive_sha256": "1b13386989ffc25384bbbcc56a0a9278b5b2c23ab0020b05ba36fd9258b63180",
+    "namespace_probe_external_retrieval_verified": true,
+    "probe_script_version_id": 358983684,
+    "receipt": "research/frem_s10_kaggle_live_20261016/VERIFICATION_RECEIPT.json",
+    "final_script_version_id": 358985139,
+    "final_archive_inventory_files_verified": 116,
+    "smoke_export_artifacts_verified": 48,
+    "session_stopped_ui_verified": true
+  },
+  "s10_kaggle_full_tests_20261016": {
+    "status": "KAGGLE_FULL_S10_ENGINEERING_SUITE_VERIFIED",
+    "receipt": "research/frem_s10_kaggle_full_tests_20261016/VERIFICATION_RECEIPT.json",
+    "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-full-test-suite-2026-10-16/output?scriptVersionId=359065132",
+    "script_version_id": 359065132,
+    "pytest_passed": 699,
+    "wrapper_passed": 37,
+    "failed": 0,
+    "skipped": 0,
+    "prior_attempt": {
+      "passed": 688,
+      "failed": 11,
+      "retained": true
+    },
+    "source_inventory_sha256": "4e7f9a0e855a6699a6c90277709fb502da626919c48d6e4b5edc545f71e595ac",
+    "source_and_tests_match_local": true,
+    "result_archive_sha256": "76a49f321c8090bbb84fda56edbe7adddcdce80054733144e1b4da61f487541d",
+    "saved_version_download_verified": true,
+    "session_stopped_ui_verified": true,
+    "scientific_status": "NOT_EVALUATED",
+    "production_qualified": false,
+    "scope": "Entire maintained S10 suite plus Kaggle wrappers; separate root, legacy and other successor suites not included",
+    "fixes": [
+      "nested ZIP upload preserves original archive bytes",
+      "all five numerical thread controls set before imports",
+      "exact package installed for isolated imports",
+      "replay validates unique forecast origins across generated windows"
+    ],
+    "remaining": "Separate production environment, full packaging/mutation/qualification and scientific/data gates remain; no failing cases remain in executed suite."
+  },
+  "s10_kaggle_experiment_20261016": {
+    "status": "BLOCKED_PLATFORM_BEFORE_SCIENTIFIC_EXECUTION",
+    "user_confirmed_scope": "Fixed 192-ledger retrospective development study including precision pilot and platform qualification",
+    "capability_sha256": "cd0894db6072cfb6e8cd74186a7d174c62206c6a794ecb7877863cfdf2d9d50d",
+    "observed_utc": "2026-10-16T16:37:43.101543+00:00",
+    "script_version_id": 359072074,
+    "notebook_url": "https://www.kaggle.com/code/ryangomez010/wharton-s10-retrospective-platform-qualification?scriptVersionId=359072074",
+    "session_stopped_ui_verified": true,
+    "scientific_attempt_consumed": false,
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "scientific_status": "NOT_EVALUATED",
+    "prior_production_plan_reused": false,
+    "receipt": "research/frem_s10_kaggle_experiment_20261016/READINESS.json",
+    "report": "research/frem_s10_kaggle_experiment_20261016/REPORT.md",
+    "decision": "research/decisions/frem_s10_kaggle_experiment_platform_20261016.json",
+    "next_action": "Establish an actually supported production execution host or separately design and validate equivalent Kaggle production boundaries before exact candidate verification and scientific stages. Do not disable gates or reuse the prior plan."
+  },
+  "s10_host_audit_20261017": {
+    "status": "BLOCKED_NO_QUALIFIED_EXECUTION_HOST",
+    "receipt": "research/frem_s10_host_audit_20261017/RECEIPT.json",
+    "report": "research/frem_s10_host_audit_20261017/DIAGNOSIS.md",
+    "scientific_status": "NOT_EVALUATED",
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "next_action": "Qualify enforced Kaggle boundaries or obtain admitted supported macOS host; bind fresh exact verification before precision, qualification, freeze and campaign."
+  },
+  "s10_strict_kaggle_20261017": {
+    "status": "BLOCKED_PLATFORM_WITH_STRICT_GATES_REPAIRED",
+    "receipt": "research/frem_s10_strict_kaggle_20261017/RECEIPT.json",
+    "market_fits": 0,
+    "market_ledgers": 0,
+    "protected_access": false,
+    "automation": {
+      "id": "s10-strict-kaggle-qualification-follow-up",
+      "status": "ACTIVE",
+      "interval_hours": 6
+    }
+  },
+  "s10_host_selection_20261017": {
+    "timestamp": "2026-10-17T08:28:41.478534+00:00",
+    "status": "AWAITING_PRIVATE_HOST_COMPUTE_BUDGET",
+    "scientific_status": "NOT_EVALUATED",
+    "market_ledgers": 0,
+    "kaggle_retry_automation": "PAUSED",
+    "local": "FAIL: fresh samples below512MiB and increasing pageouts",
+    "gcp": "Existing configured account ryangomez@thebu1ld.com refresh invalid_grant; VM inventory unavailable",
+    "hugging_face": "Authenticated RyanG2010 non-Pro; jobs tool UNAVAILABLE",
+    "github": "Authenticated admin access; main Wharton repository public; private research repository Actions enabled and zero self-hosted runners",
+    "candidate": "GitHub standard macos-15 arm64; actual probe not run",
+    "billing": "Usage endpoint404 missing user scope; included balance unknown",
+    "proposal": {
+      "destination": "new private build-the-future-11/wharton-s10-execution",
+      "probe_timeout_minutes": 5,
+      "probe_compute_ceiling_usd": 0.31,
+      "rate_usd_per_minute": 0.062,
+      "full_execution_requires": "Fresh exact candidate and full unchanged qualification gates; scientific limits unchanged"
+    },
+    "repairs": "Integrity repairs only; no S10 performance effect measured",
+    "workflow_sha256": "88005d2d66628476760301c88b3c9628d0b0eb55b583a49003fa2aa76c713a6e"
   }
 }

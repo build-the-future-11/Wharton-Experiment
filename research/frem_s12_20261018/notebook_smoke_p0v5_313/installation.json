@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/local/bin/python3.13",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--no-compile",
+    "--target",
+    "/tmp/frem-s12-p0v5-notebook-sim-site-1331",
+    "/tmp/frem-s12-p0v5-notebook-sim-input-1331/frem_s12-0.1.2-py3-none-any.whl"
+  ],
+  "returncode": 0,
+  "schema": "frem-s12-isolated-install-v1",
+  "stderr": "WARNING: The directory '/Users/ryan/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n",
+  "stdout": "Processing /tmp/frem-s12-p0v5-notebook-sim-input-1331/frem_s12-0.1.2-py3-none-any.whl\nInstalling collected packages: frem-s12\nSuccessfully installed frem-s12-0.1.2\n",
+  "target": "/tmp/frem-s12-p0v5-notebook-sim-site-1331",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "verification_returncode": 0,
+  "verification_stderr": "",
+  "verification_stdout": "{\"package\": {\"files\": {\"__init__.py\": \"1be2e18dce81b348457d1eab3e12619de825e36384e653b0ba9aec9c88faf6c2\", \"acquisition.py\": \"0b63cd805e0162e2b8d3db7d90fdf8fe6fed7eb7eff6b3ba5f3e439a96aa2767\", \"admission.py\": \"03f5a4aa6be3a5ff2fe3e800fc5216ec237f7a40b45c1419f5a490f818087cf9\", \"analysis.py\": \"5ac22938aa2bcbfedb55d7324ce1135ce86fe5cd2cd1d8646e06fe035a0cdd1b\", \"artifacts.py\": \"2251f8f35209f05ad817847b298eeca47f607d70dac80db44ec0657c7ac4f118\", \"baselines.py\": \"b067df2dd475de8ef259c99232f8a5662b8f3484c7f7737713d35dc8f6a5b817\", \"campaign.py\": \"ae6a3e143d990f1a28c031b8e14f8c3d3fa893b69e6d4586feb40a4b0ec22e77\", \"campaign_io.py\": \"abf99dc3e658428357287733eddddd26b4f431da09a50cd14db79f8e7598f9ce\", \"checkpoints.py\": \"a435e2fd7eb2e05f31cb28f2337184c8a2b287bbcf199320e8f26fec922c7cd2\", \"cli.py\": \"ae712063318acbfe543956e96bf42c71f32c5ba86ce684b1f30a60c9fdaa9d9c\", \"consumption.py\": \"0524bbdd7e81e51620499b687c6616cedbbf82b94c738524201bbe8847a029db\", \"data.py\": \"179ce16d1df73401c1fc38ea6f21d49bcc347e001eefe5ebd9ca6f22dc4dd3a7\", \"errors.py\": \"c2c2ae055c4224e1896441f1e87355b98f0c8289707b6f0b438db1608291a7e1\", \"evidence.py\": \"adf2436ad579f3d9fb56e79c74b5b6aee438cbfc846c412bfbeef5e74abd32dc\", \"experiment.py\": \"58a89b05972c86119d3b838daaad448f4014f03708f423c780481615ddc8d6db\", \"generated.py\": \"250a6077653fe5fb1f150e076753a0f70464cdd27cc518ad4cdf08c805722768\", \"model.py\": \"57801e4133e789874bd14312dc9b79175bbe596a98a7ba4cab7fd02e319a9b4e\", \"policy.py\": \"8dc78d416f4c1e29e59b5f52c9b7e4fc7fbb1263e67e974f860c1eac41071639\", \"protocol_p0.json\": \"3858b49bc1066f56816e5ea8c1060878b8de50fbccf1e9206f6f475b1742b80f\", \"protocol_p0_v3.json\": \"4f788c0243519abad85595ffea52d74bf8841ee35eecaf6f517146ecb62d9e9c\", \"protocol_p0_v4.json\": \"8c746364f07224b4790c7424f07eceb7da6a2d407c522e250c4a8c073b7d3002\", \"protocol_p0_v5.json\": \"f194a4591e9aa54a9d7d809a91382ddbb000e802912b60ac424ad2ab63073b21\", \"py.typed\": \"01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b\", \"scores.py\": \"f1eb68946c9ef28fbbff5121f8ad45b88a10a304e49f57698bdce3e59b258822\", \"search.py\": \"0a2f5f019b90caec3b5c8d928d7ddd2c9e4986b8a48695099e0239f39adc82c7\", \"sources.json\": \"7b0b4325cace91ec19ce9a94967aa9838166408a664c580a1797aface84c8ab2\"}, \"interpreter\": \"/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13\", \"python\": \"3.13.1\", \"schema\": \"frem-s12-package-identity-v1\", \"sha256\": \"d4b06d915f62f0cf6f1f0015481f6fdd0b88ef34028f62349a1f5e3a1012f6d3\"}, \"version\": \"0.1.2\"}\n"
+}

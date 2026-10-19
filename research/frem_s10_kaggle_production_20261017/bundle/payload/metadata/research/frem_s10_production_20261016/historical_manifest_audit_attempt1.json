@@ -1,0 +1,3496 @@
+{
+  "scope": "STREAMING_IDENTITY_CHECK_ONLY_NO_NUMERICAL_OUTCOME_INSPECTION",
+  "manifest_sha256": {
+    "research/frem_s8_20261014/predecessor_manifest.json": "d4bff4476359f3030080a8eea7e64dfd18a9be2d9a9f2cec2f3b60fde6ca169f",
+    "research/frem_s8_20261014/FINAL_MANIFEST_v2.json": "3246fc612e2181c9b6856de567a098fdb641d88dcd858153fbee9886155164f4",
+    "research/frem_s9_20261015/freeze1.json": "b20e019b72ef4054d26ff96e7a2d612d602dadd8fb1ea04bd1d81ffe196afc6e",
+    "research/frem_s10_20261015/RECEIPT.json": "115d6026c9a73ca0f004455f8760f9a82d9a6a6f4fbc5cbfbe3270f2f5b9a485",
+    "research/frem_s10_20261015/design_v2/RECEIPT.json": "0fdd02bcb12d19e6027e674d464ff60d4a42aad738a1ac72cac48cc0ad2b2c6a"
+  },
+  "checked_references": 486,
+  "unique_files": 482,
+  "mismatches": [],
+  "mutable_history_records": [
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "RESEARCH_STATE.json",
+      "old_sha256": "c04fed0553b87577fc62811ee5d5193264adfe44a76e5f0efbb04feb83fda653",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "docs/CODEX_HANDOFF.md",
+      "old_sha256": "26f5fd1e35f07aaea1f9f4bae1782cdd6d00ae71ba2f79eabddff9ba9ae8719a",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "docs/RESEARCH_COMPLETION_STATUS.md",
+      "old_sha256": "49f83883008d0d7df3b8ca9f3b258a7dd8b7b35191797e21111b62b806202324",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "docs/STATIC_VERIFICATION.md",
+      "old_sha256": "fcc38a8ff1901104d9afef3a628f072bcfb3619b07d2b1415fc6aec811cf62d9",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/events.jsonl",
+      "old_sha256": "819cd1b93f837e02ccfa2a0639e2b11dc03b52b67fa0b922480260eb65bc0dfe",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "RESEARCH_STATE.json",
+      "old_sha256": "578b7f29ce928e0586e71bd0b6f092edaaec49b10c74b07d2924a62aed03f334",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "docs/CODEX_HANDOFF.md",
+      "old_sha256": "c9c176181396a22d5b2ea0c3eb652e4a972517dc03d9c0c603f205b96395beca",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/events.jsonl",
+      "old_sha256": "2de983ef62932e289a903223716c570bacf913f910ab7a280b218ab0a8c6e2db",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "RESEARCH_STATE.json",
+      "old_sha256": "7ebb4e410a702c31db09a31f41cd25689c8f9e1a64da1969654c0761a165b901",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "docs/CODEX_HANDOFF.md",
+      "old_sha256": "21ce2dd77ca49bb9e046d9c3ad283bcaa3a5e42c6e03760fe78ea80829977993",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/events.jsonl",
+      "old_sha256": "e8cac67d5a6b0c39b0371cbe76181d44bfaf8f6dabca181f1a6723dd96a7264f",
+      "classification": "INTENTIONALLY_MUTABLE_CANONICAL_HISTORY_NOT_A_RESEARCH_RESULT",
+      "old_expected_unchanged": true
+    }
+  ],
+  "references": [
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/GLD.json",
+      "expected": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "actual": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/SPY.json",
+      "expected": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "actual": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/TLT.json",
+      "expected": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "actual": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/acquisition.json",
+      "expected": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "actual": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/coverage.json",
+      "expected": "cda5f18565e7825cf2531586564aa88a147cc264b03b942337c6943d4d1ce4aa",
+      "actual": "cda5f18565e7825cf2531586564aa88a147cc264b03b942337c6943d4d1ce4aa",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/windows.json",
+      "expected": "bd8b56503a55bff3fdc879f3e575bba8901194798a5f9848da90ae177bcf451e",
+      "actual": "bd8b56503a55bff3fdc879f3e575bba8901194798a5f9848da90ae177bcf451e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s6_real_etf_20261014/windows.json.manifest.json",
+      "expected": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e",
+      "actual": "e034837f8afbddd7900c5f1de8fe0a2569ae3f15074cf715e1601485858bfe5e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/GLD.json",
+      "expected": "1426b2c1e2ca9013f38095787a21d0e4aa9972aa3605ba8c5d7b474ce7764ec4",
+      "actual": "1426b2c1e2ca9013f38095787a21d0e4aa9972aa3605ba8c5d7b474ce7764ec4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/GLD_2019.json",
+      "expected": "30154011e9e03d704a8d6f3a13e835d1819253d1d2ee9b3ab16dca2c9e2e9bfc",
+      "actual": "30154011e9e03d704a8d6f3a13e835d1819253d1d2ee9b3ab16dca2c9e2e9bfc",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/SPY.json",
+      "expected": "7d4123ee20ab76287ec9f74eb3d3188f6ce9cdba673c618acdaed47e7877fd83",
+      "actual": "7d4123ee20ab76287ec9f74eb3d3188f6ce9cdba673c618acdaed47e7877fd83",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/SPY_2019.json",
+      "expected": "f0a7882e3ffbbc612a8c6eda54bc9cfd5457e83a3020a62ee00249ec2c38565e",
+      "actual": "f0a7882e3ffbbc612a8c6eda54bc9cfd5457e83a3020a62ee00249ec2c38565e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/TLT.json",
+      "expected": "ab5c13dd149fba5c67771d2818c2817aa486e9203d4b6d43e9c73837fbfb9603",
+      "actual": "ab5c13dd149fba5c67771d2818c2817aa486e9203d4b6d43e9c73837fbfb9603",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/TLT_2019.json",
+      "expected": "584f2c1abb6562068c1c43c7f76ab62695c8a3bb220d26896c9a301bd136bb55",
+      "actual": "584f2c1abb6562068c1c43c7f76ab62695c8a3bb220d26896c9a301bd136bb55",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/acquisition.json",
+      "expected": "3dc3646960c32d02bae24f8208a924d4a1433d230b69f20ba5855e32040dbc08",
+      "actual": "3dc3646960c32d02bae24f8208a924d4a1433d230b69f20ba5855e32040dbc08",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/coverage.json",
+      "expected": "5c4164ce7d237f71c0c1524d8d14abd97f79ae1687b96b3757d1dbf48935336b",
+      "actual": "5c4164ce7d237f71c0c1524d8d14abd97f79ae1687b96b3757d1dbf48935336b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "data/s7_etf_2019_20261014/windows.json",
+      "expected": "1f3070f41813def0dbc40be171e45cfc1b463d1d1b218f5101246ae6ca20cc38",
+      "actual": "1f3070f41813def0dbc40be171e45cfc1b463d1d1b218f5101246ae6ca20cc38",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_20261013_attempt1/admission.json",
+      "expected": "9a28fed8e9075c1bedfe61855565293bdae018301a2391471db82651de0db1b3",
+      "actual": "9a28fed8e9075c1bedfe61855565293bdae018301a2391471db82651de0db1b3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_20261013_attempt2/admission.json",
+      "expected": "908a0d8957ba4942c280d52941b756cd8082112c5f899eaf93aabc5e2f743461",
+      "actual": "908a0d8957ba4942c280d52941b756cd8082112c5f899eaf93aabc5e2f743461",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_attempt1/admission.json",
+      "expected": "451da50e46628be27fa8127d324e513a0f62546fa5f20317032ce3ae6298b094",
+      "actual": "451da50e46628be27fa8127d324e513a0f62546fa5f20317032ce3ae6298b094",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt2/RECEIPT.json",
+      "expected": "ba58ab6f3e552ff45c4deab59620506bbc90900db1521681778e2f7266032e3e",
+      "actual": "ba58ab6f3e552ff45c4deab59620506bbc90900db1521681778e2f7266032e3e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt2/admission.json",
+      "expected": "ea9060e2ec9b1f94745416c03e8df567f32db52d270a866bbe612f067c461943",
+      "actual": "ea9060e2ec9b1f94745416c03e8df567f32db52d270a866bbe612f067c461943",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt2/state_before_update.json",
+      "expected": "ec6727bb3befb2e333ccf0690402e660944e51e6772d49c4b431e42dfff18a90",
+      "actual": "ec6727bb3befb2e333ccf0690402e660944e51e6772d49c4b431e42dfff18a90",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt3/RECEIPT.json",
+      "expected": "193d082c0280c20422efc0c31f6e87357999a1980d38a0a63fae98324efc33a4",
+      "actual": "193d082c0280c20422efc0c31f6e87357999a1980d38a0a63fae98324efc33a4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt3/REPORT.md",
+      "expected": "92ca822687155c5519165d0a86b4e403d1f1fe598b7223fb5e26af61ff99d859",
+      "actual": "92ca822687155c5519165d0a86b4e403d1f1fe598b7223fb5e26af61ff99d859",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt3/RESEARCH_STATE.before.json",
+      "expected": "03ac673424c6ead5d359f43e4355aa9c03dc87b8ee33bf7c410a603c3819c828",
+      "actual": "03ac673424c6ead5d359f43e4355aa9c03dc87b8ee33bf7c410a603c3819c828",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt3/admission.json",
+      "expected": "95fc746eb9a7a862fbaeb847c74b4696abec7ca709a400914506508bbea9e5cd",
+      "actual": "95fc746eb9a7a862fbaeb847c74b4696abec7ca709a400914506508bbea9e5cd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt4/admission.json",
+      "expected": "af31e7793152c86011dbc110391dc005f97f8dd8e1f26c618774323733f07741",
+      "actual": "af31e7793152c86011dbc110391dc005f97f8dd8e1f26c618774323733f07741",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt5/admission.json",
+      "expected": "d5fc92575afe5b9d2e4aaa1ab6425845d7f4ab0bbecca101ea95b5c57fdcc167",
+      "actual": "d5fc92575afe5b9d2e4aaa1ab6425845d7f4ab0bbecca101ea95b5c57fdcc167",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt6/RECEIPT.json",
+      "expected": "97c28ca6c2a6eef2198c27efd7f9e59a3135d24032b69d57fceaabc444c8407a",
+      "actual": "97c28ca6c2a6eef2198c27efd7f9e59a3135d24032b69d57fceaabc444c8407a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt6/RESEARCH_STATE.before.json",
+      "expected": "0078ba24ee8e8de266eaf5ca8008b3bdc0b0f4927ee6883a0d3839e8c80551cf",
+      "actual": "0078ba24ee8e8de266eaf5ca8008b3bdc0b0f4927ee6883a0d3839e8c80551cf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt6/admission.json",
+      "expected": "365931414a8c6dfeb177b18529e9b4bfd189c6b741ba7b53ebd09860773a4b8d",
+      "actual": "365931414a8c6dfeb177b18529e9b4bfd189c6b741ba7b53ebd09860773a4b8d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt7/admission.json",
+      "expected": "dfe76d1ff116fc3b77528d26f47dd4e97a2248609a4ae370c93db801c1fdcbaf",
+      "actual": "dfe76d1ff116fc3b77528d26f47dd4e97a2248609a4ae370c93db801c1fdcbaf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_local_attempt8/admission.json",
+      "expected": "1456f35b0f66e56ecb150481f249081ae4e9d65150f4137ea674df36eb8cb951",
+      "actual": "1456f35b0f66e56ecb150481f249081ae4e9d65150f4137ea674df36eb8cb951",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/admission.json",
+      "expected": "57da0f45c422c70584382668a81f5f892f783c98dc6dfe39cb5a690c72a76aac",
+      "actual": "57da0f45c422c70584382668a81f5f892f783c98dc6dfe39cb5a690c72a76aac",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/comparisons.json",
+      "expected": "2a2be3e1de1a863e2def2c482de4ef49c7dc7799b86ab5641a78c83aad9a8579",
+      "actual": "2a2be3e1de1a863e2def2c482de4ef49c7dc7799b86ab5641a78c83aad9a8579",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/completion.json",
+      "expected": "beabb50e09431684e5d57fc299aa47602c86335ccde7b6ca7f407df574243242",
+      "actual": "beabb50e09431684e5d57fc299aa47602c86335ccde7b6ca7f407df574243242",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/ensemble_economics.json",
+      "expected": "7f157bf0fd485bbde1ed1d6c2da15316fb35778098fbce1621736e342ff20918",
+      "actual": "7f157bf0fd485bbde1ed1d6c2da15316fb35778098fbce1621736e342ff20918",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/environment.json",
+      "expected": "81072f009d210b4a1c4ec85d6f9d25d195effbc55ee81dff9ee5fa14765c2900",
+      "actual": "81072f009d210b4a1c4ec85d6f9d25d195effbc55ee81dff9ee5fa14765c2900",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/execution_freeze.json",
+      "expected": "3ecafbcee4fffd8d7b8abdbce0cb10d0f584852ff325a6e81831d58c5f830e8a",
+      "actual": "3ecafbcee4fffd8d7b8abdbce0cb10d0f584852ff325a6e81831d58c5f830e8a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/integrity/receipt.json",
+      "expected": "d95c95bf100ddb595e094fd6bfd562868d4e0099014c13c437ac6fa506b676a5",
+      "actual": "d95c95bf100ddb595e094fd6bfd562868d4e0099014c13c437ac6fa506b676a5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/integrity/resources.json",
+      "expected": "a83f7a29c71f58894610642d8788b432bcef6120b905ae7774e90468ee4186a8",
+      "actual": "a83f7a29c71f58894610642d8788b432bcef6120b905ae7774e90468ee4186a8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/integrity/source_hashes.json",
+      "expected": "163ccd68aac3e6a6d9a6648f7f9d66f4562ea45ee6ce862cc521473376514357",
+      "actual": "163ccd68aac3e6a6d9a6648f7f9d66f4562ea45ee6ce862cc521473376514357",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/integrity/tests.log",
+      "expected": "0acb15c49828cd3cd594f9e3893ff289d550b72e62416d4ba69fd0bb9016c578",
+      "actual": "0acb15c49828cd3cd594f9e3893ff289d550b72e62416d4ba69fd0bb9016c578",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/resources.json",
+      "expected": "a1de1f5c50937f2252697ad49209d9c1de4e621572eb6d3e2788b19d256fbe33",
+      "actual": "a1de1f5c50937f2252697ad49209d9c1de4e621572eb6d3e2788b19d256fbe33",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/config.json",
+      "expected": "add4b1001acd0640e12e66895f6ef4e925dc567a773c6a04138b60d5bf9424ad",
+      "actual": "add4b1001acd0640e12e66895f6ef4e925dc567a773c6a04138b60d5bf9424ad",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/economics.json",
+      "expected": "09630c162be050ea1141271a06c2e1b8bf5a92d0ad9c98c882575d93b83aa94e",
+      "actual": "09630c162be050ea1141271a06c2e1b8bf5a92d0ad9c98c882575d93b83aa94e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/fit_checkpoint.json",
+      "expected": "309b398cd6093839219d3bb7af31986a77ac734c4477f1b73530560a81967cd8",
+      "actual": "309b398cd6093839219d3bb7af31986a77ac734c4477f1b73530560a81967cd8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/online_checkpoint.json",
+      "expected": "39a8197b10fbc59aecbbcc5459df82de39d90819d804780d5e0b407a926f53e0",
+      "actual": "39a8197b10fbc59aecbbcc5459df82de39d90819d804780d5e0b407a926f53e0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/predictions.json",
+      "expected": "bc9a4859748bbfd91bb3543abe8ad74cde4bdf59b5ede3947b4ef5b707cff401",
+      "actual": "bc9a4859748bbfd91bb3543abe8ad74cde4bdf59b5ede3947b4ef5b707cff401",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width16/receipt.json",
+      "expected": "af6a7515610b5c115ea54b12ca13bc35a8c71573b5afe3f5526b8513ee0d4488",
+      "actual": "af6a7515610b5c115ea54b12ca13bc35a8c71573b5afe3f5526b8513ee0d4488",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/config.json",
+      "expected": "fb2d0063ee887e875eaa1dc1f46d0f62e78ee91b860306e196e748f4d1565f2f",
+      "actual": "fb2d0063ee887e875eaa1dc1f46d0f62e78ee91b860306e196e748f4d1565f2f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/economics.json",
+      "expected": "db3078f9542e64c05ed78649ea73b1c1dfc296e898319ce7780c0c81bd54af80",
+      "actual": "db3078f9542e64c05ed78649ea73b1c1dfc296e898319ce7780c0c81bd54af80",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/fit_checkpoint.json",
+      "expected": "14be94e4e00befa5603bea180cc6c0dc573e787d1f825df4879e00b2bd274e77",
+      "actual": "14be94e4e00befa5603bea180cc6c0dc573e787d1f825df4879e00b2bd274e77",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/online_checkpoint.json",
+      "expected": "96d57386ba2cbf726c0ced65c6806a83592e427d6a8b29d4c5fea28f5eef80f1",
+      "actual": "96d57386ba2cbf726c0ced65c6806a83592e427d6a8b29d4c5fea28f5eef80f1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/predictions.json",
+      "expected": "ed0bf24b635fb8e10a6160167cd4f70790cce61cdfe336e5642ffbd5898a4b85",
+      "actual": "ed0bf24b635fb8e10a6160167cd4f70790cce61cdfe336e5642ffbd5898a4b85",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8/receipt.json",
+      "expected": "9e294ec41b3429cea9193413c934ef40deb40813414e9565f5d8db334b8517c8",
+      "actual": "9e294ec41b3429cea9193413c934ef40deb40813414e9565f5d8db334b8517c8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/config.json",
+      "expected": "e0065f22824ce9f8e235997249e72ca4412ab3653fd71d3f431ddb144ff5b433",
+      "actual": "e0065f22824ce9f8e235997249e72ca4412ab3653fd71d3f431ddb144ff5b433",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/economics.json",
+      "expected": "52a2f95dfdd5e856415a1a286651a93a6ec1af0573302b8d04713308deab960b",
+      "actual": "52a2f95dfdd5e856415a1a286651a93a6ec1af0573302b8d04713308deab960b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/fit_checkpoint.json",
+      "expected": "5ea05f577b9f2f19c87174eacc968e450eff3265d28fc0213cd8cd6d0e3631d5",
+      "actual": "5ea05f577b9f2f19c87174eacc968e450eff3265d28fc0213cd8cd6d0e3631d5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/online_checkpoint.json",
+      "expected": "db3778b407877d5bec9319965b2ed40a3627dfcf08dcd3cdecc1c5d652600727",
+      "actual": "db3778b407877d5bec9319965b2ed40a3627dfcf08dcd3cdecc1c5d652600727",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/predictions.json",
+      "expected": "2ece9dd7f0734311213b427061082166095c4647f2ee58820ca7436a34ac0735",
+      "actual": "2ece9dd7f0734311213b427061082166095c4647f2ee58820ca7436a34ac0735",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_immediate/receipt.json",
+      "expected": "40e59b6eca18fd29b7372ff4683836291083758be81f1586d73bf6a0505f3468",
+      "actual": "40e59b6eca18fd29b7372ff4683836291083758be81f1586d73bf6a0505f3468",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/config.json",
+      "expected": "67bdf163678ed2ab19260cd4bd89bc3d05d9859f77c11d2d236a0afde2e0c85f",
+      "actual": "67bdf163678ed2ab19260cd4bd89bc3d05d9859f77c11d2d236a0afde2e0c85f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/economics.json",
+      "expected": "da9a1b7e81571af149934e3e7a0896f559830f0144860ce293c3e2c9fe34e535",
+      "actual": "da9a1b7e81571af149934e3e7a0896f559830f0144860ce293c3e2c9fe34e535",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/fit_checkpoint.json",
+      "expected": "c43b57b0027f497ee2b5972b4edaff58907e9cf8528f0d4302c8409b8c94d39d",
+      "actual": "c43b57b0027f497ee2b5972b4edaff58907e9cf8528f0d4302c8409b8c94d39d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/online_checkpoint.json",
+      "expected": "7c8095eac68e9ed203dc5fd5256cb31a057cc44b6a1cd438b99c5b9d74a8ff9e",
+      "actual": "7c8095eac68e9ed203dc5fd5256cb31a057cc44b6a1cd438b99c5b9d74a8ff9e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/predictions.json",
+      "expected": "78386621661f3747c5dc5ad4730d386a485e867e2505afdce79a39a5423589ed",
+      "actual": "78386621661f3747c5dc5ad4730d386a485e867e2505afdce79a39a5423589ed",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_full_width8_no_jepa/receipt.json",
+      "expected": "b53d54cfe9cb765ca7d818913c18b46840f088ba157f08c2f423f888a5ef2841",
+      "actual": "b53d54cfe9cb765ca7d818913c18b46840f088ba157f08c2f423f888a5ef2841",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/config.json",
+      "expected": "552fdda6c05bef645cb0952f255d57e644377a90acb6b524a99b011f086cfdd2",
+      "actual": "552fdda6c05bef645cb0952f255d57e644377a90acb6b524a99b011f086cfdd2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/economics.json",
+      "expected": "0440f81a9ec961aec9d579b6a2ff798007c320da853fc15c4b7d3908bde0ed58",
+      "actual": "0440f81a9ec961aec9d579b6a2ff798007c320da853fc15c4b7d3908bde0ed58",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/fit_checkpoint.json",
+      "expected": "21e78b6a99a9bea63ddfab9cb1ba097961430ee2892fda845997947f1f14afa5",
+      "actual": "21e78b6a99a9bea63ddfab9cb1ba097961430ee2892fda845997947f1f14afa5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/online_checkpoint.json",
+      "expected": "c5dbdebcc6e114902ba6793aff1ba8713df505edbf4ce2fe25f0f3951174c8c8",
+      "actual": "c5dbdebcc6e114902ba6793aff1ba8713df505edbf4ce2fe25f0f3951174c8c8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/predictions.json",
+      "expected": "26ffc53078206d5a97973532da204c962f742e7a556214e943a1e9a3c47ec98e",
+      "actual": "26ffc53078206d5a97973532da204c962f742e7a556214e943a1e9a3c47ec98e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width16/receipt.json",
+      "expected": "3bc11364c84f6814b66a898b02a83c973412b732117ff9a4d9e0100161feae29",
+      "actual": "3bc11364c84f6814b66a898b02a83c973412b732117ff9a4d9e0100161feae29",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/config.json",
+      "expected": "105f2b1ebf8bcbf8e09ecaa1a5a7f763e53eb64df9cfc08f37b7b76cd335882d",
+      "actual": "105f2b1ebf8bcbf8e09ecaa1a5a7f763e53eb64df9cfc08f37b7b76cd335882d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/economics.json",
+      "expected": "a79de0f2bdb3270939eee8bb95fee77a695f5e8162856194530c6b12623aead1",
+      "actual": "a79de0f2bdb3270939eee8bb95fee77a695f5e8162856194530c6b12623aead1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/fit_checkpoint.json",
+      "expected": "a60968c4ac70faa7b95ae5c537188b4b488494f763276578dc0124a9fe366ad7",
+      "actual": "a60968c4ac70faa7b95ae5c537188b4b488494f763276578dc0124a9fe366ad7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/online_checkpoint.json",
+      "expected": "f5eb462747eeeae166aa3481902a0868159a20b3b5ea6eaa641023dbd1bf243c",
+      "actual": "f5eb462747eeeae166aa3481902a0868159a20b3b5ea6eaa641023dbd1bf243c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/predictions.json",
+      "expected": "30f7365d049acd0e91c7bff69ed15bc00948c2e4562fda7d28d066f4a653a796",
+      "actual": "30f7365d049acd0e91c7bff69ed15bc00948c2e4562fda7d28d066f4a653a796",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_half_width8/receipt.json",
+      "expected": "cdb807ff01a97ff170cd6d5ba5ceae00169385824842d0bf350dd672358f5c93",
+      "actual": "cdb807ff01a97ff170cd6d5ba5ceae00169385824842d0bf350dd672358f5c93",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/config.json",
+      "expected": "97f3c58337565050358bf0d704a83ea7b9f32a9f7080924abc023e76a11eb2d6",
+      "actual": "97f3c58337565050358bf0d704a83ea7b9f32a9f7080924abc023e76a11eb2d6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/fit_checkpoint.json",
+      "expected": "4fd65bdd94bc9c933ee53fa9e2e03c2d07cfaf4cd5f75b3f4fdb037fdbd830f8",
+      "actual": "4fd65bdd94bc9c933ee53fa9e2e03c2d07cfaf4cd5f75b3f4fdb037fdbd830f8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/online_checkpoint.json",
+      "expected": "7a0810ab47f41abe36db1db8b00146a5487933e5258e8cd77e53edc9538bce61",
+      "actual": "7a0810ab47f41abe36db1db8b00146a5487933e5258e8cd77e53edc9538bce61",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width16/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/config.json",
+      "expected": "1b9ad402a2cb8503930dbcedb6c6b1683d1e19ca9957c6f340a3ee0a85eea224",
+      "actual": "1b9ad402a2cb8503930dbcedb6c6b1683d1e19ca9957c6f340a3ee0a85eea224",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/fit_checkpoint.json",
+      "expected": "07a4a8700734b583961de43ab976b8df8f6226b3d5f41ebd8d153d96bdf38e1b",
+      "actual": "07a4a8700734b583961de43ab976b8df8f6226b3d5f41ebd8d153d96bdf38e1b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/online_checkpoint.json",
+      "expected": "22509837179aef24aef34a5b79b15e720f89e0a42250253d85ad3f82bc47dbc3",
+      "actual": "22509837179aef24aef34a5b79b15e720f89e0a42250253d85ad3f82bc47dbc3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed11_zero_width8/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/config.json",
+      "expected": "8fa024703d2de84f4cfe281406742d5c8d107cba552ff54b3514b684054d8868",
+      "actual": "8fa024703d2de84f4cfe281406742d5c8d107cba552ff54b3514b684054d8868",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/economics.json",
+      "expected": "30965e2cd717c162e1c3532a7b41e152754bb8888154e01883bd4580d0792d03",
+      "actual": "30965e2cd717c162e1c3532a7b41e152754bb8888154e01883bd4580d0792d03",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/fit_checkpoint.json",
+      "expected": "ebc5175c689f2ada3503c0dcb27c6eac0d2a0b72b438490596d5e259b080fa3f",
+      "actual": "ebc5175c689f2ada3503c0dcb27c6eac0d2a0b72b438490596d5e259b080fa3f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/online_checkpoint.json",
+      "expected": "7fb8436dd943e7378196b1c39141c67d81ef24cfee1d04663bf0d7c212bdff24",
+      "actual": "7fb8436dd943e7378196b1c39141c67d81ef24cfee1d04663bf0d7c212bdff24",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/predictions.json",
+      "expected": "3e3e36ab0e3731858b228ae9c28a26549767627ea92c34537c07ed027a549ce6",
+      "actual": "3e3e36ab0e3731858b228ae9c28a26549767627ea92c34537c07ed027a549ce6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width16/receipt.json",
+      "expected": "0c01cdd7158ec6530a63f19876b838e9212378e3967135e893a06bb55dabdaed",
+      "actual": "0c01cdd7158ec6530a63f19876b838e9212378e3967135e893a06bb55dabdaed",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/config.json",
+      "expected": "60f35f7dd0a8074b5f75b1a382d5ecaee386752a583fa8b0850f1490faeac87d",
+      "actual": "60f35f7dd0a8074b5f75b1a382d5ecaee386752a583fa8b0850f1490faeac87d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/economics.json",
+      "expected": "fcc11c7fc8885b5d341561a22ddf7d2bd92e558e6f26e29aa9835629fdfe6c59",
+      "actual": "fcc11c7fc8885b5d341561a22ddf7d2bd92e558e6f26e29aa9835629fdfe6c59",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/fit_checkpoint.json",
+      "expected": "1ee2901d1d7c6a229ebf97a2e7d78fd0c9ee08eec86b402d489e6d01f10a3a5f",
+      "actual": "1ee2901d1d7c6a229ebf97a2e7d78fd0c9ee08eec86b402d489e6d01f10a3a5f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/online_checkpoint.json",
+      "expected": "70d0cbf19913204fe940143b3db49eacf7bbb63255c7e91d3f8160dfdce4c745",
+      "actual": "70d0cbf19913204fe940143b3db49eacf7bbb63255c7e91d3f8160dfdce4c745",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/predictions.json",
+      "expected": "e07e9c35396fa81b3bd72b19958db9570e57ef1d8801d57e4fa713f9216ddda3",
+      "actual": "e07e9c35396fa81b3bd72b19958db9570e57ef1d8801d57e4fa713f9216ddda3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8/receipt.json",
+      "expected": "454a11758f057a324df68fc995634b92a6bba779a0d1aafcdc6f4308e462549b",
+      "actual": "454a11758f057a324df68fc995634b92a6bba779a0d1aafcdc6f4308e462549b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/config.json",
+      "expected": "4f9fc64e39885579775adc334d4155d7d89a385f23134585cb34b917ffcd4ced",
+      "actual": "4f9fc64e39885579775adc334d4155d7d89a385f23134585cb34b917ffcd4ced",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/economics.json",
+      "expected": "20c6e39094edadc14a2f08e11880b93badd1aa090f711e75db54ccaf69e26fb4",
+      "actual": "20c6e39094edadc14a2f08e11880b93badd1aa090f711e75db54ccaf69e26fb4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/fit_checkpoint.json",
+      "expected": "ac2eb9a4bccac8d2518cc9cefa0d4924de0218df3888e251e64c0fb257a91644",
+      "actual": "ac2eb9a4bccac8d2518cc9cefa0d4924de0218df3888e251e64c0fb257a91644",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/online_checkpoint.json",
+      "expected": "1ab65881f83cf1f9736c05640cac34afcc2b82a64d226c083e8c235ce94070db",
+      "actual": "1ab65881f83cf1f9736c05640cac34afcc2b82a64d226c083e8c235ce94070db",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/predictions.json",
+      "expected": "d632f9f47d9b87b052bbcb8cc7252c932c44d0cb596bfb65c8d5038f4a141f11",
+      "actual": "d632f9f47d9b87b052bbcb8cc7252c932c44d0cb596bfb65c8d5038f4a141f11",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_immediate/receipt.json",
+      "expected": "191b500b21ada8d9b8d82270da52eee8aabf2fd75f28c57697ebee0c63f27dbd",
+      "actual": "191b500b21ada8d9b8d82270da52eee8aabf2fd75f28c57697ebee0c63f27dbd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/config.json",
+      "expected": "4a4e0634fb4da68138a5bcf5ba2700dde3be50e281da657ba7dde9b6207788e2",
+      "actual": "4a4e0634fb4da68138a5bcf5ba2700dde3be50e281da657ba7dde9b6207788e2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/economics.json",
+      "expected": "eaf6ec3881cb04fcd3558b8933ec0825afc419004594a4bbf3c662b090170ad9",
+      "actual": "eaf6ec3881cb04fcd3558b8933ec0825afc419004594a4bbf3c662b090170ad9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/fit_checkpoint.json",
+      "expected": "cff0b6d9ab7ba8eff8e5eab1d322971e7e81e4869a58539174a399310a34785c",
+      "actual": "cff0b6d9ab7ba8eff8e5eab1d322971e7e81e4869a58539174a399310a34785c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/online_checkpoint.json",
+      "expected": "4c78cb669bb63a623b086e2c53f2b55c8a0b1aaeebf30a014c9c8a40d9dc4583",
+      "actual": "4c78cb669bb63a623b086e2c53f2b55c8a0b1aaeebf30a014c9c8a40d9dc4583",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/predictions.json",
+      "expected": "f0ed33a7798844649684a0faf8a409dd8485681e34020a6b8c1153a2af196eb2",
+      "actual": "f0ed33a7798844649684a0faf8a409dd8485681e34020a6b8c1153a2af196eb2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_full_width8_no_jepa/receipt.json",
+      "expected": "610c2d316fce289eb0032ef09b8d54e8db5c4f2b7088b9489fca0c83fc9907d8",
+      "actual": "610c2d316fce289eb0032ef09b8d54e8db5c4f2b7088b9489fca0c83fc9907d8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/config.json",
+      "expected": "5bca12250847f46c21c8b22b7bb585dbdc973ae93977439c42514b82c0b7b34c",
+      "actual": "5bca12250847f46c21c8b22b7bb585dbdc973ae93977439c42514b82c0b7b34c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/economics.json",
+      "expected": "ef08315c099843a8d5e4f8f7c4f909d811e2917d2c68d0a70aa066d8f644ef72",
+      "actual": "ef08315c099843a8d5e4f8f7c4f909d811e2917d2c68d0a70aa066d8f644ef72",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/fit_checkpoint.json",
+      "expected": "d87bed27135387901b92f361a5c399ba42e772929050deb4d450086cc8f8acab",
+      "actual": "d87bed27135387901b92f361a5c399ba42e772929050deb4d450086cc8f8acab",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/online_checkpoint.json",
+      "expected": "f14e0ef560fa69c0cef07a6653a89550a2fdc138ad1fbdc9451a3c14db4e9c7d",
+      "actual": "f14e0ef560fa69c0cef07a6653a89550a2fdc138ad1fbdc9451a3c14db4e9c7d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/predictions.json",
+      "expected": "8f0281c1753f857715638e36599bf520b5f9f35419c84844a3a222c0f4f189bd",
+      "actual": "8f0281c1753f857715638e36599bf520b5f9f35419c84844a3a222c0f4f189bd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width16/receipt.json",
+      "expected": "acfaa0a007e201c4b4118996c2fb302c556e67f2d9f938bd56b61246a263ed7a",
+      "actual": "acfaa0a007e201c4b4118996c2fb302c556e67f2d9f938bd56b61246a263ed7a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/config.json",
+      "expected": "3f1e71385f601e5bb8cef59eddf97ed3437bda1a734bc79ce091e0ae9d9bc18d",
+      "actual": "3f1e71385f601e5bb8cef59eddf97ed3437bda1a734bc79ce091e0ae9d9bc18d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/economics.json",
+      "expected": "1ddd85ffe4e9c3d087d1da6f59cafd084c33d1331817a2ce80e5d53fc99cafa3",
+      "actual": "1ddd85ffe4e9c3d087d1da6f59cafd084c33d1331817a2ce80e5d53fc99cafa3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/fit_checkpoint.json",
+      "expected": "4763cdf8da65d28dd2f1ef0b82cf5aa80bb05facf3d5ac1af753b846f7fab33c",
+      "actual": "4763cdf8da65d28dd2f1ef0b82cf5aa80bb05facf3d5ac1af753b846f7fab33c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/online_checkpoint.json",
+      "expected": "fdebcbff301392a1f8df57e237017c353cc41fca393a7a74b020f908f053b911",
+      "actual": "fdebcbff301392a1f8df57e237017c353cc41fca393a7a74b020f908f053b911",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/predictions.json",
+      "expected": "e62db1d321e2ebbe97cfb9fcf5137c6006ad0cdd8afd24db8ea37fb5edf7e55d",
+      "actual": "e62db1d321e2ebbe97cfb9fcf5137c6006ad0cdd8afd24db8ea37fb5edf7e55d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_half_width8/receipt.json",
+      "expected": "e5b3575e99fbc002c2432db47122545a602eb9aaa1a76efd72dca8b4cddf3a1b",
+      "actual": "e5b3575e99fbc002c2432db47122545a602eb9aaa1a76efd72dca8b4cddf3a1b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/config.json",
+      "expected": "a2a3f8e6881c09d92d3819b945f22c4bce0fc92b8533086825292c329b259d26",
+      "actual": "a2a3f8e6881c09d92d3819b945f22c4bce0fc92b8533086825292c329b259d26",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/fit_checkpoint.json",
+      "expected": "f8c959669232c497af1fbba9dc99410094d2624cca65ed98188441998e84cc78",
+      "actual": "f8c959669232c497af1fbba9dc99410094d2624cca65ed98188441998e84cc78",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/online_checkpoint.json",
+      "expected": "56fb3a8a83d2f0f086c0a1bda67167d174f166173a28938ae19065c1fe28a094",
+      "actual": "56fb3a8a83d2f0f086c0a1bda67167d174f166173a28938ae19065c1fe28a094",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width16/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/config.json",
+      "expected": "a8931c556d580d693fb379ed180517a8d28a3e808c3513ae7d9883977f1d4e53",
+      "actual": "a8931c556d580d693fb379ed180517a8d28a3e808c3513ae7d9883977f1d4e53",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/fit_checkpoint.json",
+      "expected": "e6008b3bd127b09e5a521a20b8662dd145a6528cc3f969129cb775442a49bb2c",
+      "actual": "e6008b3bd127b09e5a521a20b8662dd145a6528cc3f969129cb775442a49bb2c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/online_checkpoint.json",
+      "expected": "74642232511a06e6f5186f45850ae5940db3240936009db01e84bda86eafd5c3",
+      "actual": "74642232511a06e6f5186f45850ae5940db3240936009db01e84bda86eafd5c3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed29_zero_width8/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/config.json",
+      "expected": "c56c676808976cc45a7d6c2b7c5f04d6d6715e2acfe16970fa3f805288afe2a1",
+      "actual": "c56c676808976cc45a7d6c2b7c5f04d6d6715e2acfe16970fa3f805288afe2a1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/economics.json",
+      "expected": "324ef94ee6826e88da1f0bd38e0fa587fe72d40a6b05adc4815a239195442e72",
+      "actual": "324ef94ee6826e88da1f0bd38e0fa587fe72d40a6b05adc4815a239195442e72",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/fit_checkpoint.json",
+      "expected": "2a5fbb92dc9550b1444cb6572ce4fb438c3e8856282a5482c26ab20f514b70c9",
+      "actual": "2a5fbb92dc9550b1444cb6572ce4fb438c3e8856282a5482c26ab20f514b70c9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/online_checkpoint.json",
+      "expected": "d7bc3e824e4ff7cf64a4dc638a3b80d490770b2d99df80ce1b3ee4ad9dea0695",
+      "actual": "d7bc3e824e4ff7cf64a4dc638a3b80d490770b2d99df80ce1b3ee4ad9dea0695",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/predictions.json",
+      "expected": "feaa93d0a65d35c24e2d51ee641acc242ef8db4c7870fae9194819c782190042",
+      "actual": "feaa93d0a65d35c24e2d51ee641acc242ef8db4c7870fae9194819c782190042",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width16/receipt.json",
+      "expected": "1b7bad5abbe553beecd3637c07c6b2b166e5c22b43f29831194c37813591aba8",
+      "actual": "1b7bad5abbe553beecd3637c07c6b2b166e5c22b43f29831194c37813591aba8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/config.json",
+      "expected": "2536fcda8cbf6c6297e90efe19aa847a915c32346d5c375c5b5eb0e30b236872",
+      "actual": "2536fcda8cbf6c6297e90efe19aa847a915c32346d5c375c5b5eb0e30b236872",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/economics.json",
+      "expected": "b0ff1abba9ee1a734a7e1f8bab5d6e05f03e38a1334eb2e7cbabec40b1c694c1",
+      "actual": "b0ff1abba9ee1a734a7e1f8bab5d6e05f03e38a1334eb2e7cbabec40b1c694c1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/fit_checkpoint.json",
+      "expected": "8cd78b46f758444025d1de7cd1bf67a31a737a6902ac879dfb658fe8c897d0d1",
+      "actual": "8cd78b46f758444025d1de7cd1bf67a31a737a6902ac879dfb658fe8c897d0d1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/online_checkpoint.json",
+      "expected": "3fbe17f4271167769763b97f9eca34b421fe6ff5adc96faa5e2be3a53baf19c8",
+      "actual": "3fbe17f4271167769763b97f9eca34b421fe6ff5adc96faa5e2be3a53baf19c8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/predictions.json",
+      "expected": "11bcc630be9491d7fc4abd8f0614d8258fa860a4dda4ba1cbbe414fda8c88668",
+      "actual": "11bcc630be9491d7fc4abd8f0614d8258fa860a4dda4ba1cbbe414fda8c88668",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8/receipt.json",
+      "expected": "f6ad9b610afd2269805d7de93d14c5350d8b0b452d7a4f401db927720995860d",
+      "actual": "f6ad9b610afd2269805d7de93d14c5350d8b0b452d7a4f401db927720995860d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/config.json",
+      "expected": "7d096c916d3624fa39183b914a75b8ac24f1e18326ec7155063b357090b74eb6",
+      "actual": "7d096c916d3624fa39183b914a75b8ac24f1e18326ec7155063b357090b74eb6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/economics.json",
+      "expected": "a4f778e4746e8545743677fb9714b909ed0b352e637f1c7e188c718d13199253",
+      "actual": "a4f778e4746e8545743677fb9714b909ed0b352e637f1c7e188c718d13199253",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/fit_checkpoint.json",
+      "expected": "d40b5e9f8daf8353efbc25c7e86403a5dbc3886bcd832d3daca827deca2f5c10",
+      "actual": "d40b5e9f8daf8353efbc25c7e86403a5dbc3886bcd832d3daca827deca2f5c10",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/online_checkpoint.json",
+      "expected": "e41ba5d7c21f40ab39f82b572bc9af04daf19bd4a2ecc6ba3b7b52192dbbca4d",
+      "actual": "e41ba5d7c21f40ab39f82b572bc9af04daf19bd4a2ecc6ba3b7b52192dbbca4d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/predictions.json",
+      "expected": "7f00578e583d6d699a6a0c807655422b2401c15c4d7b90e26ba3d087dfb3adaf",
+      "actual": "7f00578e583d6d699a6a0c807655422b2401c15c4d7b90e26ba3d087dfb3adaf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_immediate/receipt.json",
+      "expected": "87df43ebf19371ecff036301422e916564125efa1a94b12ee0f3160709a41713",
+      "actual": "87df43ebf19371ecff036301422e916564125efa1a94b12ee0f3160709a41713",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/config.json",
+      "expected": "e2bd1aff414711a26bdeb11075792e08fe7894f2895334cd83315bddbbba371e",
+      "actual": "e2bd1aff414711a26bdeb11075792e08fe7894f2895334cd83315bddbbba371e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/economics.json",
+      "expected": "ae8fd25af09fbfb5a14636cc793c6bc0b1f735bc95a0e187315bb9083ed55fba",
+      "actual": "ae8fd25af09fbfb5a14636cc793c6bc0b1f735bc95a0e187315bb9083ed55fba",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/fit_checkpoint.json",
+      "expected": "e103f545ba1bff69bf5e9b62741870eff4e20bf5e17b3201aa814579f27e50db",
+      "actual": "e103f545ba1bff69bf5e9b62741870eff4e20bf5e17b3201aa814579f27e50db",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/online_checkpoint.json",
+      "expected": "6ee4a197a9e81914e5f3c0c503dbad44b42c865ab3dea020d3efaf6940e18e8d",
+      "actual": "6ee4a197a9e81914e5f3c0c503dbad44b42c865ab3dea020d3efaf6940e18e8d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/predictions.json",
+      "expected": "4bb5b196e39a065eb9885c7353f296ee21d174dc739f7981d9010290b0b9dfba",
+      "actual": "4bb5b196e39a065eb9885c7353f296ee21d174dc739f7981d9010290b0b9dfba",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_full_width8_no_jepa/receipt.json",
+      "expected": "ba1e6a5e0845076f6db644db3d7f66148d66134ff5f439ae758a3dff94d1dbb5",
+      "actual": "ba1e6a5e0845076f6db644db3d7f66148d66134ff5f439ae758a3dff94d1dbb5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/config.json",
+      "expected": "a43851104d1195c80e632a614de568d0d4b90cd7662184d9d7cd9a6a8bae7a33",
+      "actual": "a43851104d1195c80e632a614de568d0d4b90cd7662184d9d7cd9a6a8bae7a33",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/economics.json",
+      "expected": "65298d5b564de16cc9f7f84dcdb8cb60e953945fa2cda152a88f3b2932b96c8b",
+      "actual": "65298d5b564de16cc9f7f84dcdb8cb60e953945fa2cda152a88f3b2932b96c8b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/fit_checkpoint.json",
+      "expected": "792f7a5e2845bf73eff071ba7a224edab9b23e8e786b4b050e693c03dc64e0e7",
+      "actual": "792f7a5e2845bf73eff071ba7a224edab9b23e8e786b4b050e693c03dc64e0e7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/online_checkpoint.json",
+      "expected": "a421655d48380d4a33e0c58c6e3d00c4d822671c6a1f734ae9573b2b0ad85bcb",
+      "actual": "a421655d48380d4a33e0c58c6e3d00c4d822671c6a1f734ae9573b2b0ad85bcb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/predictions.json",
+      "expected": "773a88e5c5b43d319976ded50cce45e352549247f21f97ba4e846adf9469d355",
+      "actual": "773a88e5c5b43d319976ded50cce45e352549247f21f97ba4e846adf9469d355",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width16/receipt.json",
+      "expected": "ab6b4e3176fa6bb265233e5830dd0f1c3e5c44b94c61fb16714a1d36984fce9f",
+      "actual": "ab6b4e3176fa6bb265233e5830dd0f1c3e5c44b94c61fb16714a1d36984fce9f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/config.json",
+      "expected": "1924e3c04e8bdddc7d73c33602593ee5b56fdc4514159fe813b3e94d6b496c22",
+      "actual": "1924e3c04e8bdddc7d73c33602593ee5b56fdc4514159fe813b3e94d6b496c22",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/economics.json",
+      "expected": "61ac91c0d070fd8f2792dbb486ce7f220a4ab991bf382aea333fba994d49d2de",
+      "actual": "61ac91c0d070fd8f2792dbb486ce7f220a4ab991bf382aea333fba994d49d2de",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/fit_checkpoint.json",
+      "expected": "c76f00bea5b0ad2f8c18b1bf28b9b4a0bafe3ca09f35a24747a4605af67fb0b9",
+      "actual": "c76f00bea5b0ad2f8c18b1bf28b9b4a0bafe3ca09f35a24747a4605af67fb0b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/online_checkpoint.json",
+      "expected": "bda4bdef49b92c21dd045ebea0eda4312d18916aa7e2e6e0591f6881ac73b6cc",
+      "actual": "bda4bdef49b92c21dd045ebea0eda4312d18916aa7e2e6e0591f6881ac73b6cc",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/predictions.json",
+      "expected": "8dad412a8aaf4dad88f5f6b2cc80432260243174fefde0c9ff75aa08007c5356",
+      "actual": "8dad412a8aaf4dad88f5f6b2cc80432260243174fefde0c9ff75aa08007c5356",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_half_width8/receipt.json",
+      "expected": "98e3679fbcc73a5d5598705ee672bca6fefd711ddfe3c19415c2639b12d0a212",
+      "actual": "98e3679fbcc73a5d5598705ee672bca6fefd711ddfe3c19415c2639b12d0a212",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/config.json",
+      "expected": "d22d835e26b3d86c5e3c4f391cb70a9b8bf9c919191d6864031b328eb3b44578",
+      "actual": "d22d835e26b3d86c5e3c4f391cb70a9b8bf9c919191d6864031b328eb3b44578",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/fit_checkpoint.json",
+      "expected": "5a58cf69ad79d345cd7d389dfbef021b129638e68eafba971db688bef7a08e82",
+      "actual": "5a58cf69ad79d345cd7d389dfbef021b129638e68eafba971db688bef7a08e82",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/online_checkpoint.json",
+      "expected": "7db113a7716e9add3abab1b1db1f1f3a19338b367039c85ea9c9ccaa4b929da1",
+      "actual": "7db113a7716e9add3abab1b1db1f1f3a19338b367039c85ea9c9ccaa4b929da1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width16/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/config.json",
+      "expected": "cb7864f8da40898dde926bbbe7cdacf58376416cd7b7390772ffec2d3a6b41ad",
+      "actual": "cb7864f8da40898dde926bbbe7cdacf58376416cd7b7390772ffec2d3a6b41ad",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/economics.json",
+      "expected": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "actual": "adaeefdf14424c28eef93caaa8c8af23d66ee20289175d2f7f5dd189a390a4b9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/fit_checkpoint.json",
+      "expected": "65ae24294da22759734c47ce6481399c14013119470e81e53aa2f753db77e296",
+      "actual": "65ae24294da22759734c47ce6481399c14013119470e81e53aa2f753db77e296",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/online_checkpoint.json",
+      "expected": "55df494c86af3464ade5ce3e2153e34da299547688fa80f66cf5eb62ff94b341",
+      "actual": "55df494c86af3464ade5ce3e2153e34da299547688fa80f66cf5eb62ff94b341",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/predictions.json",
+      "expected": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "actual": "3c5ade4d4c9cb371ad9e5e8cd7a319311c767f3ddc27fb0c3b911a609f792358",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed47_zero_width8/receipt.json",
+      "expected": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "actual": "5a3be02025bb0c3de7ad673de4a65355200a3a581eccfe9f786824ef9746b097",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/seed_ensembles.json",
+      "expected": "87b10f5caed569c23a761ef53a9d4d0115f3c4bc47ca21b4967e2f03b95e2959",
+      "actual": "87b10f5caed569c23a761ef53a9d4d0115f3c4bc47ca21b4967e2f03b95e2959",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/worker.log",
+      "expected": "4553f31214808f4913864baa93e405135d4769fca4783f0c1c99384a19777e8b",
+      "actual": "4553f31214808f4913864baa93e405135d4769fca4783f0c1c99384a19777e8b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s6_real_20261014_ram_override_attempt1/worker_admission.json",
+      "expected": "1d87a5b33944b3b429428ffc03a579b51dc0890f23c9714114ef14437032bf64",
+      "actual": "1d87a5b33944b3b429428ffc03a579b51dc0890f23c9714114ef14437032bf64",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/benchmarks.json",
+      "expected": "81e08cd1d642f98a0afdbfe0dea76dffa7346991ba3c8ceba5c340b3007d502b",
+      "actual": "81e08cd1d642f98a0afdbfe0dea76dffa7346991ba3c8ceba5c340b3007d502b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/comparisons.json",
+      "expected": "d074225b2413139b1489862a876e1cfc7883beca8dbe49dadf440d75d0052e84",
+      "actual": "d074225b2413139b1489862a876e1cfc7883beca8dbe49dadf440d75d0052e84",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/completion.json",
+      "expected": "f6f37da51ce6ab1eece52538919d7264f7bb1a240dc8c6d9ddcbdf302c8be13c",
+      "actual": "f6f37da51ce6ab1eece52538919d7264f7bb1a240dc8c6d9ddcbdf302c8be13c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/data_identity.json",
+      "expected": "d43deceee83bcaa929567a705f1045966af4abdd0b3ff93bcf14499274bba534",
+      "actual": "d43deceee83bcaa929567a705f1045966af4abdd0b3ff93bcf14499274bba534",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/economics.json",
+      "expected": "88ef0a58c6b4583d830eb99bcf5cb5c784d8206e87497d31a7926c1c0ca1fad3",
+      "actual": "88ef0a58c6b4583d830eb99bcf5cb5c784d8206e87497d31a7926c1c0ca1fad3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/ensembles.json",
+      "expected": "6cba9e8097f1c8397502fa7c31a8886fb66ef83bbc5569f375966c4c0a0cc8aa",
+      "actual": "6cba9e8097f1c8397502fa7c31a8886fb66ef83bbc5569f375966c4c0a0cc8aa",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/resources.json",
+      "expected": "a9cd0adcbe4f4a91d1cdd2b61723a3ccb669a2dcf32eecae9739726fa76b2066",
+      "actual": "a9cd0adcbe4f4a91d1cdd2b61723a3ccb669a2dcf32eecae9739726fa76b2066",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/fit_checkpoint.json",
+      "expected": "efa716da54ef76361365c69b2725fc0b3ab2b7ce74f270ff142364da92d0d242",
+      "actual": "efa716da54ef76361365c69b2725fc0b3ab2b7ce74f270ff142364da92d0d242",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/online_checkpoint.json",
+      "expected": "558c3e6b6e3842ea947852ae6fb29738a63eeebaaac5ed3b138c44fee4a45b1f",
+      "actual": "558c3e6b6e3842ea947852ae6fb29738a63eeebaaac5ed3b138c44fee4a45b1f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/predictions.json",
+      "expected": "45400e041fe6116742a44f45314558680f5b53edafba575b35cbdf5484bb8cf0",
+      "actual": "45400e041fe6116742a44f45314558680f5b53edafba575b35cbdf5484bb8cf0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/receipt.json",
+      "expected": "b977c79c98f3e22ec3e1c79e26bc754ddc6039852c3b53b6c7103183847d4ee0",
+      "actual": "b977c79c98f3e22ec3e1c79e26bc754ddc6039852c3b53b6c7103183847d4ee0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/router_state.json",
+      "expected": "f3f810301dbaa0a3dae522905844aa82f61378345dde1a3a7b59389c50cf6fe9",
+      "actual": "f3f810301dbaa0a3dae522905844aa82f61378345dde1a3a7b59389c50cf6fe9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed11/selection.json",
+      "expected": "073e728912c86ea47e5eda916106ca1c028d744effb0ef336f3005b09ab394fb",
+      "actual": "073e728912c86ea47e5eda916106ca1c028d744effb0ef336f3005b09ab394fb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/fit_checkpoint.json",
+      "expected": "315726ffd1fab61088ecf04ebc5bf1304f7b75bfa64f5a384bf55856e96dad1e",
+      "actual": "315726ffd1fab61088ecf04ebc5bf1304f7b75bfa64f5a384bf55856e96dad1e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/online_checkpoint.json",
+      "expected": "bbb4cea7e246868f959c7b809544a396430358d649b432aca72445ff430863ec",
+      "actual": "bbb4cea7e246868f959c7b809544a396430358d649b432aca72445ff430863ec",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/predictions.json",
+      "expected": "160259ae299e1f94c59e46f21b05903003ea862246a2dd478a4e9c5f203fe712",
+      "actual": "160259ae299e1f94c59e46f21b05903003ea862246a2dd478a4e9c5f203fe712",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/receipt.json",
+      "expected": "5404fa8e2ed044c44ab1d52f8e89d8567f6a90df075db85e66efb72b390b966b",
+      "actual": "5404fa8e2ed044c44ab1d52f8e89d8567f6a90df075db85e66efb72b390b966b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/router_state.json",
+      "expected": "e4302ec59e65cbb9ee3a9281e1ec66abce362e306d9c55a41e80583203fca42a",
+      "actual": "e4302ec59e65cbb9ee3a9281e1ec66abce362e306d9c55a41e80583203fca42a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed29/selection.json",
+      "expected": "526f61f4758a048031ea69643af758c50cf2f099539e5a2152c2a78efff920e7",
+      "actual": "526f61f4758a048031ea69643af758c50cf2f099539e5a2152c2a78efff920e7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/fit_checkpoint.json",
+      "expected": "4f87e96c26097821c9366a3c675e16e2551db13422b146413a7cb55dd790a52d",
+      "actual": "4f87e96c26097821c9366a3c675e16e2551db13422b146413a7cb55dd790a52d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/online_checkpoint.json",
+      "expected": "bd045b97c2f8621e899917e3cdc3185a83434c3c174ca715b41b21063b8ee47c",
+      "actual": "bd045b97c2f8621e899917e3cdc3185a83434c3c174ca715b41b21063b8ee47c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/predictions.json",
+      "expected": "14a1ea9270656ec24814528fe2cc1b916046691652421b87a62225879c5ec163",
+      "actual": "14a1ea9270656ec24814528fe2cc1b916046691652421b87a62225879c5ec163",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/receipt.json",
+      "expected": "44db0170e27a4f04192e278c83a2dfed57f05f1215bca44ceb25ab3157921b0b",
+      "actual": "44db0170e27a4f04192e278c83a2dfed57f05f1215bca44ceb25ab3157921b0b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/router_state.json",
+      "expected": "ea627e754ca4f19bf4ef92c7f2b65b57ee0c432211873655869c2c9aeadbd83c",
+      "actual": "ea627e754ca4f19bf4ef92c7f2b65b57ee0c432211873655869c2c9aeadbd83c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "outputs/frem_s7_2019_20261014_attempt1/seed47/selection.json",
+      "expected": "d686b83d3447515e9098f0c9ff374351112c2949091772da3c70b88f5c50af08",
+      "actual": "d686b83d3447515e9098f0c9ff374351112c2949091772da3c70b88f5c50af08",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_execution_attempt2_20261013.json",
+      "expected": "861c0148c09fe1b10449be2b04424845637a4369734e03d6db4533e48809e075",
+      "actual": "861c0148c09fe1b10449be2b04424845637a4369734e03d6db4533e48809e075",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_ram_override_20261014.json",
+      "expected": "6405ab548afc7ec5cbdd68570435bf2141efaf03672120d7bc66f93f6c9222c6",
+      "actual": "6405ab548afc7ec5cbdd68570435bf2141efaf03672120d7bc66f93f6c9222c6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_real_freeze_20261014.json",
+      "expected": "071f76b9e116114cefc8549fd8d832fe22fa7492b26f8dbf95537bbd1840a952",
+      "actual": "071f76b9e116114cefc8549fd8d832fe22fa7492b26f8dbf95537bbd1840a952",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_real_intake_20261014.json",
+      "expected": "db4c47c186a7aa38c6da632f6d066a6833b14a6afb0ec0d865985229221a3dfc",
+      "actual": "db4c47c186a7aa38c6da632f6d066a6833b14a6afb0ec0d865985229221a3dfc",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_real_result_20261014.json",
+      "expected": "31c1e9b22f4bc06c085db42b3226f9b931eca261c1f14b648af6da67c48893f3",
+      "actual": "31c1e9b22f4bc06c085db42b3226f9b931eca261c1f14b648af6da67c48893f3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_result_20261013.json",
+      "expected": "e71ced9faeb7d9dc8f2ec87d404a0011fe46a8486d28b6540fc422e1e0d14866",
+      "actual": "e71ced9faeb7d9dc8f2ec87d404a0011fe46a8486d28b6540fc422e1e0d14866",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s6_start_20261013.json",
+      "expected": "ddce3c0852a4550df24a88a7af445b0b3a305341c7bf4d737554f527de802b19",
+      "actual": "ddce3c0852a4550df24a88a7af445b0b3a305341c7bf4d737554f527de802b19",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s7_prefit_repair_20261014.json",
+      "expected": "d74345bb71ef94e295a6a4a1577bf51142b7797d5f31d206e7616e707bff5c72",
+      "actual": "d74345bb71ef94e295a6a4a1577bf51142b7797d5f31d206e7616e707bff5c72",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s7_result_20261014.json",
+      "expected": "c20c1c8235a682368f4ef2b357d7c5523bb55128e25504701cdea95204edd97b",
+      "actual": "c20c1c8235a682368f4ef2b357d7c5523bb55128e25504701cdea95204edd97b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/decisions/frem_s7_start_20261014.json",
+      "expected": "22ac26fdc1b4adad24aef4dc1e65d59ac3e21e73bb9378c3c0efe8cb9ea04152",
+      "actual": "22ac26fdc1b4adad24aef4dc1e65d59ac3e21e73bb9378c3c0efe8cb9ea04152",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/DELIVERY_MANIFEST.json",
+      "expected": "49c019e47462e6b094cae2c9dad74a64e59eae5a31b12bd3ec4382e28dea656a",
+      "actual": "49c019e47462e6b094cae2c9dad74a64e59eae5a31b12bd3ec4382e28dea656a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/FEATURE_DISPOSITION.json",
+      "expected": "63ef31ca1907803c17ffbf7f702abfb745f7c7877e913a8814d1784f659d0464",
+      "actual": "63ef31ca1907803c17ffbf7f702abfb745f7c7877e913a8814d1784f659d0464",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/RECEIPT.json",
+      "expected": "aedf821658dbc1c38c7b501e36f06cd503f2efce009aaf7a15b7fba6ca9eb49b",
+      "actual": "aedf821658dbc1c38c7b501e36f06cd503f2efce009aaf7a15b7fba6ca9eb49b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/REPORT.md",
+      "expected": "99289fbab7b0a826177c0008bbb403319888aef4f61d0a093cffd3bdcc1f124d",
+      "actual": "99289fbab7b0a826177c0008bbb403319888aef4f61d0a093cffd3bdcc1f124d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt1/receipt.json",
+      "expected": "8533fdab4b06c4bf5300a743f3057609267af314da825d681d317a4972047811",
+      "actual": "8533fdab4b06c4bf5300a743f3057609267af314da825d681d317a4972047811",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt1/resources.json",
+      "expected": "21ecc54f1bcf6be87661c811dec77a55476ebdd9da6ad80581923fc938cb8474",
+      "actual": "21ecc54f1bcf6be87661c811dec77a55476ebdd9da6ad80581923fc938cb8474",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt1/tests.log",
+      "expected": "596c8895656ccea5a99818b0e95614b91271f28dba5d68ff523b616506ec55c6",
+      "actual": "596c8895656ccea5a99818b0e95614b91271f28dba5d68ff523b616506ec55c6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt2/receipt.json",
+      "expected": "5317f19221c22fcb1dc011ff49bb8c4f809bdbbf81b1823063a04c164ac0b5cf",
+      "actual": "5317f19221c22fcb1dc011ff49bb8c4f809bdbbf81b1823063a04c164ac0b5cf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt2/resources.json",
+      "expected": "a25e277a19124013945fc2071a33ee5a36a168894528fd39b11e61c40be117f1",
+      "actual": "a25e277a19124013945fc2071a33ee5a36a168894528fd39b11e61c40be117f1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt2/source_hashes.json",
+      "expected": "893d9a45a212d6b8414d98c879f94b313acd1196eab80f9e3080d7dfe8909573",
+      "actual": "893d9a45a212d6b8414d98c879f94b313acd1196eab80f9e3080d7dfe8909573",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt2/tests.log",
+      "expected": "8057c4f15c47a6945c6d44aeff592fc44ac90387bc839c73c41f665c28b34a4a",
+      "actual": "8057c4f15c47a6945c6d44aeff592fc44ac90387bc839c73c41f665c28b34a4a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt3/receipt.json",
+      "expected": "193aaadc7bb5debe7d298d1bd7743190e7f67225afc7edd395f98f29075fbdde",
+      "actual": "193aaadc7bb5debe7d298d1bd7743190e7f67225afc7edd395f98f29075fbdde",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt3/resources.json",
+      "expected": "0481b6b0439d1639847007f7a7678a9440462743c250ba175897f49427e6580d",
+      "actual": "0481b6b0439d1639847007f7a7678a9440462743c250ba175897f49427e6580d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt3/source_hashes.json",
+      "expected": "fbe9ab1f9b174c3b04b84d6f6276411376c35e3e1a3528b371d070a3c54a7c9a",
+      "actual": "fbe9ab1f9b174c3b04b84d6f6276411376c35e3e1a3528b371d070a3c54a7c9a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt3/tests.log",
+      "expected": "953fb60b7e4535f2de12f92edfcab8cf073391fc36542f3806e5a6938252b57b",
+      "actual": "953fb60b7e4535f2de12f92edfcab8cf073391fc36542f3806e5a6938252b57b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt4/receipt.json",
+      "expected": "3617bbb26bc1501fbc93eb5292a6f98bc06e7a12dfe35e240c6f783f0397ce4f",
+      "actual": "3617bbb26bc1501fbc93eb5292a6f98bc06e7a12dfe35e240c6f783f0397ce4f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt4/resources.json",
+      "expected": "1295497aca9717a37fb9568077c2ac84c704bdb09b3da47d2e44e358e3ec5fe6",
+      "actual": "1295497aca9717a37fb9568077c2ac84c704bdb09b3da47d2e44e358e3ec5fe6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt4/source_hashes.json",
+      "expected": "163ccd68aac3e6a6d9a6648f7f9d66f4562ea45ee6ce862cc521473376514357",
+      "actual": "163ccd68aac3e6a6d9a6648f7f9d66f4562ea45ee6ce862cc521473376514357",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/integrity_attempt4/tests.log",
+      "expected": "09226db217fd86190d3cd5b4a7202ef8dab932d644390bacf9efafe780f471d2",
+      "actual": "09226db217fd86190d3cd5b4a7202ef8dab932d644390bacf9efafe780f471d2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/predecessor_hashes.json",
+      "expected": "e63ca0dc42326f0d2eecc87c6fbbc426a10910238cd8d822761fbb80b029ca3f",
+      "actual": "e63ca0dc42326f0d2eecc87c6fbbc426a10910238cd8d822761fbb80b029ca3f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/resource_admission.json",
+      "expected": "bf1aa6a1ddeef79bc0739ddbd16a9656571d92aad51ed8deaf4431df15ade860",
+      "actual": "bf1aa6a1ddeef79bc0739ddbd16a9656571d92aad51ed8deaf4431df15ade860",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/specification.json",
+      "expected": "f4124f0a4f5c71ffaaba6f2f014c1556fe51148c2f1b554d224d62a48849e361",
+      "actual": "f4124f0a4f5c71ffaaba6f2f014c1556fe51148c2f1b554d224d62a48849e361",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_20261013/state_before.json",
+      "expected": "332cdf3f0bc615ae77587cad2fa844b2e500188441ee79f598b06459c9130b3c",
+      "actual": "332cdf3f0bc615ae77587cad2fa844b2e500188441ee79f598b06459c9130b3c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_execution_20261013_attempt2/RECEIPT.json",
+      "expected": "fcfcabf94bf13e45ca1566651cff2c772a0968ace4f6050c11c953a315188c42",
+      "actual": "fcfcabf94bf13e45ca1566651cff2c772a0968ace4f6050c11c953a315188c42",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_execution_20261013_attempt2/REPORT.md",
+      "expected": "2cd6d73661685dc171b495328511a81307b0481e7d63d7b9e6d459987115b8c6",
+      "actual": "2cd6d73661685dc171b495328511a81307b0481e7d63d7b9e6d459987115b8c6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_execution_20261013_attempt2/data_readiness_audit.json",
+      "expected": "001bed1d58dbaf078d112d08bcd455f1f29bd713624c1c21ace1d8f1b8c2d6ad",
+      "actual": "001bed1d58dbaf078d112d08bcd455f1f29bd713624c1c21ace1d8f1b8c2d6ad",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_execution_20261013_attempt2/state_before_update.json",
+      "expected": "a5cf8ae266d04669bb7f0ed3522749b9f822dfc652370cc60060f44803d681c5",
+      "actual": "a5cf8ae266d04669bb7f0ed3522749b9f822dfc652370cc60060f44803d681c5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/RECEIPT.json",
+      "expected": "6cbc79b6892a7fac6e86cf5aa47aaf580fee5841d28a1bbdc21377653da072c1",
+      "actual": "6cbc79b6892a7fac6e86cf5aa47aaf580fee5841d28a1bbdc21377653da072c1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/REPORT.md",
+      "expected": "cda56187049ed8aaad62508238eb4502b947291f5266ec705cf1a70ddd35c37b",
+      "actual": "cda56187049ed8aaad62508238eb4502b947291f5266ec705cf1a70ddd35c37b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/completed_ram_override/ALL_BASELINES.csv",
+      "expected": "6bcad20578a2d25270a1d0be7af6d3f8684d187af15a55968ecd295c4ff80d11",
+      "actual": "6bcad20578a2d25270a1d0be7af6d3f8684d187af15a55968ecd295c4ff80d11",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/completed_ram_override/AUDIT.json",
+      "expected": "b9dd34a01466f30e43a8510ee026234015d57c92fc7bb63d3a1f3c53d3c6f5ba",
+      "actual": "b9dd34a01466f30e43a8510ee026234015d57c92fc7bb63d3a1f3c53d3c6f5ba",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/completed_ram_override/REPORT.md",
+      "expected": "0620fbe0d87ab0da9eab1172ed7d5c3bcda80e99678f4cb61ec87546ef4e2b8b",
+      "actual": "0620fbe0d87ab0da9eab1172ed7d5c3bcda80e99678f4cb61ec87546ef4e2b8b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/completed_ram_override/RESEARCH_STATE.before.json",
+      "expected": "658fa74643648783c712d2a9d2ab730d1f62ae217218a45a08d1da534673eff2",
+      "actual": "658fa74643648783c712d2a9d2ab730d1f62ae217218a45a08d1da534673eff2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/completed_ram_override/audit_attempt1_failure.json",
+      "expected": "c15f60f93ea054d8e1e61789f844973a7cd79280274c79700d71839cb48b16fa",
+      "actual": "c15f60f93ea054d8e1e61789f844973a7cd79280274c79700d71839cb48b16fa",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/compute_retry2/RECEIPT.json",
+      "expected": "aaf3c8683d4a6b1ecb835a79fb2b1d05e678adf3833ce5b2a4ae2e39a4770cc2",
+      "actual": "aaf3c8683d4a6b1ecb835a79fb2b1d05e678adf3833ce5b2a4ae2e39a4770cc2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/compute_retry2/state_before_update.json",
+      "expected": "5084ea4c1bef033e3ce7ed98d144211d0eb8afb29dec7c33db5df68c26e796d4",
+      "actual": "5084ea4c1bef033e3ce7ed98d144211d0eb8afb29dec7c33db5df68c26e796d4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/compute_retry3/RECEIPT.json",
+      "expected": "ab6ec20615275539cad29a3388f28e0bf859cccd51d40f0bcd940898ac519f68",
+      "actual": "ab6ec20615275539cad29a3388f28e0bf859cccd51d40f0bcd940898ac519f68",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/compute_retry3/state_before_update.json",
+      "expected": "50b88446b78e7e8d36f9db2639916da30f9d078aaba2b42a65447fef47341926",
+      "actual": "50b88446b78e7e8d36f9db2639916da30f9d078aaba2b42a65447fef47341926",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/data_reconciliation.json",
+      "expected": "4c713c41b54790b3a785a6f80827ad9b7d3180927255bc368c896ea171bfbfe7",
+      "actual": "4c713c41b54790b3a785a6f80827ad9b7d3180927255bc368c896ea171bfbfe7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze1/protocol.json",
+      "expected": "4587acfded56ddd0116fe891d363cc3b7c7628e1dac7367969b5e7d4f9d8080b",
+      "actual": "4587acfded56ddd0116fe891d363cc3b7c7628e1dac7367969b5e7d4f9d8080b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze1/source_hashes.json",
+      "expected": "726c0b9a3ab5a0af68e1b6fa64b74658fd2cb8f8af38cd388d06c6b756e90951",
+      "actual": "726c0b9a3ab5a0af68e1b6fa64b74658fd2cb8f8af38cd388d06c6b756e90951",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze1/validation.json",
+      "expected": "74fad02654873b654f7680bc48c57923106aefb39fcfe5ed763de50e9b6983a2",
+      "actual": "74fad02654873b654f7680bc48c57923106aefb39fcfe5ed763de50e9b6983a2",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze2/protocol.json",
+      "expected": "fc08a5b75573118ff9f58027b0b73d23aed3c3d53b2b1bf1732fab87cf1c7d77",
+      "actual": "fc08a5b75573118ff9f58027b0b73d23aed3c3d53b2b1bf1732fab87cf1c7d77",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze2/source_hashes.json",
+      "expected": "545f950f15c7ab2b9338a38346cf77d44a03cc972fc94bac870393fd59749873",
+      "actual": "545f950f15c7ab2b9338a38346cf77d44a03cc972fc94bac870393fd59749873",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/freeze2/validation.json",
+      "expected": "fbefcfecb5210012cd3ef634d081616655969f686a1948dd79a885fdb08e6ff4",
+      "actual": "fbefcfecb5210012cd3ef634d081616655969f686a1948dd79a885fdb08e6ff4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/package_manifest.json",
+      "expected": "e2f596b1b273e001a5e9196cfa9a7e589a3b7f1ae579f11f062fa353202751f8",
+      "actual": "e2f596b1b273e001a5e9196cfa9a7e589a3b7f1ae579f11f062fa353202751f8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/private_compute_package.tar.gz",
+      "expected": "3993df43606f6953c8b466b2915296b68622523fead902068e265b50581f8614",
+      "actual": "3993df43606f6953c8b466b2915296b68622523fead902068e265b50581f8614",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/requirements.txt",
+      "expected": "823d8a27090f58baf69adf796f898d331d9bedd5de1e038d8401818b09843d12",
+      "actual": "823d8a27090f58baf69adf796f898d331d9bedd5de1e038d8401818b09843d12",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s6_real_20261014/state_before_update.json",
+      "expected": "6e821c18cf86aefd1787a78d4fbdfe1074dd7730aca136c7ed6af30b9c292017",
+      "actual": "6e821c18cf86aefd1787a78d4fbdfe1074dd7730aca136c7ed6af30b9c292017",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/ALL_BASELINES.csv",
+      "expected": "af92ae9e88e0afa567182ac5ff01297bcd7df283d5d835d2fb0485eb425b2dc4",
+      "actual": "af92ae9e88e0afa567182ac5ff01297bcd7df283d5d835d2fb0485eb425b2dc4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/AUDIT.json",
+      "expected": "6e30cdbccd3b603271a016a12ded769f47392f901c8c82ac18b7257f69a33043",
+      "actual": "6e30cdbccd3b603271a016a12ded769f47392f901c8c82ac18b7257f69a33043",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/REPORT.md",
+      "expected": "bb92587080c126aec817f53326d05220b385b9216cf5bbe46f00eeff0d07d0cc",
+      "actual": "bb92587080c126aec817f53326d05220b385b9216cf5bbe46f00eeff0d07d0cc",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/RESEARCH_STATE.before.json",
+      "expected": "63ba2eedf42ca02b325c321bad838f466a4ec00ee4c9a98fcdb36a187215673f",
+      "actual": "63ba2eedf42ca02b325c321bad838f466a4ec00ee4c9a98fcdb36a187215673f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/audit_saved.py",
+      "expected": "1eaeb5ef8ba28e5e4d9e9b539b899f62b4ae6c76cdfeadf566e372ff59409b46",
+      "actual": "1eaeb5ef8ba28e5e4d9e9b539b899f62b4ae6c76cdfeadf566e372ff59409b46",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/diagnosis.json",
+      "expected": "c5852e09c52f9ce775f823ca6c39c4394d2ea1770e6716a20d848a6d20c60ea7",
+      "actual": "c5852e09c52f9ce775f823ca6c39c4394d2ea1770e6716a20d848a6d20c60ea7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/execution_attempt1.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/freeze1.json",
+      "expected": "0bc4de03cdea22bf0afe887563f1a8fee32ae91406df68382ead67b10d854bd6",
+      "actual": "0bc4de03cdea22bf0afe887563f1a8fee32ae91406df68382ead67b10d854bd6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/freeze2.json",
+      "expected": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14",
+      "actual": "021e4d0340d4197ab8cb03a7ec496bd32b787de42f6c8c3a3a2258021223ef14",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/process_attempt1.json",
+      "expected": "e09fce3f2807bb5a0ee2037671eca8a9bf7ca415437f68929e7340eb4fc10257",
+      "actual": "e09fce3f2807bb5a0ee2037671eca8a9bf7ca415437f68929e7340eb4fc10257",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/test_successor.freeze1.py",
+      "expected": "080b6ecc9f666d7faa25317cdce6ab9d41f13b541f62adfa1fef0fd877384415",
+      "actual": "080b6ecc9f666d7faa25317cdce6ab9d41f13b541f62adfa1fef0fd877384415",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/tests_attempt1.log",
+      "expected": "3bca8e32d7d7b2730b47b0f16d327a62be421c31406aa1f5b4a3a93381660d17",
+      "actual": "3bca8e32d7d7b2730b47b0f16d327a62be421c31406aa1f5b4a3a93381660d17",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/tests_attempt2.log",
+      "expected": "26cbd1039001bbe537ab522f40283b334b5e61327ab0408d12123a55f04220b4",
+      "actual": "26cbd1039001bbe537ab522f40283b334b5e61327ab0408d12123a55f04220b4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "research/frem_s7_20261014/tests_attempt3.log",
+      "expected": "00b1be7ffa4c79bc8102b3f65ab3a712621cd35c2a176f80cacc02bfe1d0e578",
+      "actual": "00b1be7ffa4c79bc8102b3f65ab3a712621cd35c2a176f80cacc02bfe1d0e578",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/MATHEMATICAL_CONTRACT.md",
+      "expected": "897db53e37cd3527bb50e00a7bf783c938adad84671ef042ecbdf19603b8514e",
+      "actual": "897db53e37cd3527bb50e00a7bf783c938adad84671ef042ecbdf19603b8514e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/PRIOR_ART_AND_LIMITS.md",
+      "expected": "0a3c5a208d81250194d11d4a0da315f32f34b58951184d532cb3069db30d7816",
+      "actual": "0a3c5a208d81250194d11d4a0da315f32f34b58951184d532cb3069db30d7816",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/README.md",
+      "expected": "cdf4ab2689a3d4d2a4906d244d13df65bfae5cf597786fe01096055f398e2df5",
+      "actual": "cdf4ab2689a3d4d2a4906d244d13df65bfae5cf597786fe01096055f398e2df5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/__init__.py",
+      "expected": "971e0c1053cc4d8ca2e58f15e53009d64b40912eaee788d4d0d3e4542270e759",
+      "actual": "971e0c1053cc4d8ca2e58f15e53009d64b40912eaee788d4d0d3e4542270e759",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/check.py",
+      "expected": "1c77c7c8bd9386fa776351e32d39a3dc295fb4e83eef0c9cec4aac4b9887052f",
+      "actual": "1c77c7c8bd9386fa776351e32d39a3dc295fb4e83eef0c9cec4aac4b9887052f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/data.py",
+      "expected": "ae7e412727304e06d21e7517959d08b27c64c657996cb1150b45e81b0ff71807",
+      "actual": "ae7e412727304e06d21e7517959d08b27c64c657996cb1150b45e81b0ff71807",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/experiment.py",
+      "expected": "797d08a075d8343a791a950fe778393da2c79e1f7c24886ce120a9c82e5dd062",
+      "actual": "797d08a075d8343a791a950fe778393da2c79e1f7c24886ce120a9c82e5dd062",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/kernel.py",
+      "expected": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f",
+      "actual": "4c1927f4fac19448d58cc3fde6c06197eeb68140fad292e302105e324e67331f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/model.py",
+      "expected": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf",
+      "actual": "ba1359559dfa3d75411ac73a5c85560c560407e763f504b30cd9508a8e0b43bf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/policy.py",
+      "expected": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf",
+      "actual": "e9a9e1cc3b7aa9c037b09331c3e02b629db00b756e4745c25bbe02bdf63f1baf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6/run.py",
+      "expected": "f2b3fb7b9f8060745bb02e43a86a087a9ed3d6b34cb8747c42aa99c4734164ac",
+      "actual": "f2b3fb7b9f8060745bb02e43a86a087a9ed3d6b34cb8747c42aa99c4734164ac",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/__init__.py",
+      "expected": "be477a56167d1ef5536b4d5859fccc07e297149c2f2f62671b2db265aa869156",
+      "actual": "be477a56167d1ef5536b4d5859fccc07e297149c2f2f62671b2db265aa869156",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/freeze.py",
+      "expected": "17ccdb3ecf14dccec1a340b29ae8995fb17d083169fb3b7d6eef4fe52d258bda",
+      "actual": "17ccdb3ecf14dccec1a340b29ae8995fb17d083169fb3b7d6eef4fe52d258bda",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/prepare.py",
+      "expected": "b12eb649334c15a86860b70084fcfc9c03d90a3c2b4f6e1e8b568540c769f556",
+      "actual": "b12eb649334c15a86860b70084fcfc9c03d90a3c2b4f6e1e8b568540c769f556",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/run.py",
+      "expected": "124c2d20916c1f77f7b0d9ce0a9cd9a66fdf50095c14db08033a3593ee09d812",
+      "actual": "124c2d20916c1f77f7b0d9ce0a9cd9a66fdf50095c14db08033a3593ee09d812",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/run_ram_override_20261014.py",
+      "expected": "5f980cc0698b4c676e76f36ec53625be6aebd03d76c6dbe7fe929cb5f3cfae1b",
+      "actual": "5f980cc0698b4c676e76f36ec53625be6aebd03d76c6dbe7fe929cb5f3cfae1b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s6_real/verify_data.py",
+      "expected": "dde67b4bd541a5cbe028386bc2fca703123310a344721ac0d6b7aec318347a39",
+      "actual": "dde67b4bd541a5cbe028386bc2fca703123310a344721ac0d6b7aec318347a39",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s7/__init__.py",
+      "expected": "9a93de424d4fce1a30f71d522fe3508259b34723e64a45e60062fc5fb6ddd730",
+      "actual": "9a93de424d4fce1a30f71d522fe3508259b34723e64a45e60062fc5fb6ddd730",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s7/data.py",
+      "expected": "97a654f17bf0ca82b224fce08411e6c315b81eef1dded1844df341ebb4d4f2e8",
+      "actual": "97a654f17bf0ca82b224fce08411e6c315b81eef1dded1844df341ebb4d4f2e8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s7/prepare.py",
+      "expected": "32f6b9878de8164489e084b9f377c5b40c514dbf44ccaaf2726a221bb1ccfc17",
+      "actual": "32f6b9878de8164489e084b9f377c5b40c514dbf44ccaaf2726a221bb1ccfc17",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s7/router.py",
+      "expected": "acb9bd7c9a2f14324e021e4d2e0ed1b21fadc62405bee36f553f7a2500a74508",
+      "actual": "acb9bd7c9a2f14324e021e4d2e0ed1b21fadc62405bee36f553f7a2500a74508",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "successors/frem_s7/run.py",
+      "expected": "712860d18b81d3dd82a84d4d483d1fdfa96416663bb1b28a50e6a2c037337e26",
+      "actual": "712860d18b81d3dd82a84d4d483d1fdfa96416663bb1b28a50e6a2c037337e26",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_data.py",
+      "expected": "a45d5bf0c24b79bc9e556ed49c52e5555294ed0b403092343dd6fa67558421fd",
+      "actual": "a45d5bf0c24b79bc9e556ed49c52e5555294ed0b403092343dd6fa67558421fd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_experiment.py",
+      "expected": "d5734025525d5ca641741e346c36a9a4acda4e90cb7e41271620cadd3598dbc8",
+      "actual": "d5734025525d5ca641741e346c36a9a4acda4e90cb7e41271620cadd3598dbc8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_independent.py",
+      "expected": "e89583ff6e9021238b4703bdbbcc7557837bd069ae857c240bf2c8ed8af3121c",
+      "actual": "e89583ff6e9021238b4703bdbbcc7557837bd069ae857c240bf2c8ed8af3121c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_kernel.py",
+      "expected": "5ff102db0ec104f11b7708706f99cfc891ad9786ceaee72bc30d545385a5c5ef",
+      "actual": "5ff102db0ec104f11b7708706f99cfc891ad9786ceaee72bc30d545385a5c5ef",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_model.py",
+      "expected": "b9a30fc293a8511231fc6b38411fd23ac5cf82e7452c48fb260e599dcb0a32d6",
+      "actual": "b9a30fc293a8511231fc6b38411fd23ac5cf82e7452c48fb260e599dcb0a32d6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_policy.py",
+      "expected": "3a764644d4bae5e8e046ab3ed74fc5bee15f8e48f5fb67fcfbb67180dd4509b6",
+      "actual": "3a764644d4bae5e8e046ab3ed74fc5bee15f8e48f5fb67fcfbb67180dd4509b6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s6/test_run.py",
+      "expected": "66aa88214c550a1df45fd3bcf67ebe85221ed747954a8c54602393b548792ed0",
+      "actual": "66aa88214c550a1df45fd3bcf67ebe85221ed747954a8c54602393b548792ed0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/predecessor_manifest.json",
+      "path": "tests/s7/test_successor.py",
+      "expected": "36702475cad7bf4995cc10e3b696d4567a48d91e5f1360ae4c7db6ee0a63e716",
+      "actual": "36702475cad7bf4995cc10e3b696d4567a48d91e5f1360ae4c7db6ee0a63e716",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt1/acquisition_failure.json",
+      "expected": "9939d5a5937d5f7712c0a01d9632f92647d432ca9b0005b8e9c70f131d93ddb8",
+      "actual": "9939d5a5937d5f7712c0a01d9632f92647d432ca9b0005b8e9c70f131d93ddb8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/GLD.json",
+      "expected": "14a1cff8b7c8d50bd9732e10a7090612f9e7fea218ba7f7296ca3e109a4b5f35",
+      "actual": "14a1cff8b7c8d50bd9732e10a7090612f9e7fea218ba7f7296ca3e109a4b5f35",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/GLD.receipt.json",
+      "expected": "4ffca5832899fcf8e75c753ec7074a66bba8eea39f2bbcf49d0caf8b9c440d6d",
+      "actual": "4ffca5832899fcf8e75c753ec7074a66bba8eea39f2bbcf49d0caf8b9c440d6d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/SPY.json",
+      "expected": "91370489342339ad55afebb5cbaf7a8703b20fb69b734dc46a682c3549c94a88",
+      "actual": "91370489342339ad55afebb5cbaf7a8703b20fb69b734dc46a682c3549c94a88",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/SPY.receipt.json",
+      "expected": "c259cbece49a0c98d4c441e8b83e38cb213f2aa03ab86dc4c300572d51ba6c02",
+      "actual": "c259cbece49a0c98d4c441e8b83e38cb213f2aa03ab86dc4c300572d51ba6c02",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/TLT.json",
+      "expected": "15f0f8f0131e05e464c019eef1b21a5029b2b6bbde68e9f016315ba0023849f3",
+      "actual": "15f0f8f0131e05e464c019eef1b21a5029b2b6bbde68e9f016315ba0023849f3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/TLT.receipt.json",
+      "expected": "52150f48c405bff8eb0e86de1b45c22201e51954e6d9528c123f464850090b98",
+      "actual": "52150f48c405bff8eb0e86de1b45c22201e51954e6d9528c123f464850090b98",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/acquisition.json",
+      "expected": "9ccbde4be9fa2b7f2bbcb528ed1206b0138b15be1215a4d28cd56a17e2d318e9",
+      "actual": "9ccbde4be9fa2b7f2bbcb528ed1206b0138b15be1215a4d28cd56a17e2d318e9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/coverage.json",
+      "expected": "1a99590844f79b2cd49bd9ef6781f91588b2f7dc5ee362e64c7417f11c3aaf1e",
+      "actual": "1a99590844f79b2cd49bd9ef6781f91588b2f7dc5ee362e64c7417f11c3aaf1e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "data/s8_etf_2020_2022_20261014_attempt2/windows.json",
+      "expected": "e83a400b366f5b02c018caa3d56a5ea80a5413a27f169de11fe6f3da1de267ae",
+      "actual": "e83a400b366f5b02c018caa3d56a5ea80a5413a27f169de11fe6f3da1de267ae",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/benchmarks.json",
+      "expected": "2e46aa94e0c9839dbfed601e0dd9511990c7fe9faf42dc7fde591b9ed4dd08d7",
+      "actual": "2e46aa94e0c9839dbfed601e0dd9511990c7fe9faf42dc7fde591b9ed4dd08d7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/comparisons.json",
+      "expected": "c1b87ef2ec4e6bbe18af3449a4cb0373a3c65edd686f677e174e2cbad9882ba4",
+      "actual": "c1b87ef2ec4e6bbe18af3449a4cb0373a3c65edd686f677e174e2cbad9882ba4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/completion.json",
+      "expected": "f20059d2a5e4999ba7f1c11bc91d68cc8f6cf02e29dea9bbd397f13735d9ed5a",
+      "actual": "f20059d2a5e4999ba7f1c11bc91d68cc8f6cf02e29dea9bbd397f13735d9ed5a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/data_identity.json",
+      "expected": "deb38db6d51cdc47cd4a8c2fe4b4e14332d870549ebccaed3ff405f1dcac272d",
+      "actual": "deb38db6d51cdc47cd4a8c2fe4b4e14332d870549ebccaed3ff405f1dcac272d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/economics.json",
+      "expected": "32a82a54c3b1da4f8a86235a37474425c98e3eb20617c86230ddd938f4e2676c",
+      "actual": "32a82a54c3b1da4f8a86235a37474425c98e3eb20617c86230ddd938f4e2676c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/ensembles.json",
+      "expected": "97ba1cf0bab4f005f30c98a5a2202e72b1ae1f099370d13b33df1779c79a5fcd",
+      "actual": "97ba1cf0bab4f005f30c98a5a2202e72b1ae1f099370d13b33df1779c79a5fcd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/resources.json",
+      "expected": "e1939ff904e458256a40df3c69577e5d683e087e035f10db0f31cc4463ad466e",
+      "actual": "e1939ff904e458256a40df3c69577e5d683e087e035f10db0f31cc4463ad466e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/scores.json",
+      "expected": "dd93d690f60d4180751d8e956def1a9b9e746a35ff3f86995c4cc188c1df0c08",
+      "actual": "dd93d690f60d4180751d8e956def1a9b9e746a35ff3f86995c4cc188c1df0c08",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/evaluation_predictions.json",
+      "expected": "aea8e5489316f3f3dca02f36dbfd123c043495353489573543b1d096ef979fe5",
+      "actual": "aea8e5489316f3f3dca02f36dbfd123c043495353489573543b1d096ef979fe5",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/fit_checkpoint.json",
+      "expected": "9ddc178a59aacbdee1dc67a79da8b12406f76f7438cd509a7775bc02528b2986",
+      "actual": "9ddc178a59aacbdee1dc67a79da8b12406f76f7438cd509a7775bc02528b2986",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/gate_state.json",
+      "expected": "aefe32badcdbb523d630aac538ccbe37daa923e71d8df230299a7a2e7241537f",
+      "actual": "aefe32badcdbb523d630aac538ccbe37daa923e71d8df230299a7a2e7241537f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/gates_before_evaluation.json",
+      "expected": "d71f71f4d0fe4b26e78090a73e6788a361a4b3e64cbcee85dac889365e20cc63",
+      "actual": "d71f71f4d0fe4b26e78090a73e6788a361a4b3e64cbcee85dac889365e20cc63",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/mixture_state.json",
+      "expected": "c38e82ff5807a1f635e6231c1eabcafa359891fafcf9cbbfc0579affc0592835",
+      "actual": "c38e82ff5807a1f635e6231c1eabcafa359891fafcf9cbbfc0579affc0592835",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/online_checkpoint.json",
+      "expected": "de5b907ac0ce9edeaa9c146ec6aae6a4ec7fe5556b1abaddc715862ff0168c34",
+      "actual": "de5b907ac0ce9edeaa9c146ec6aae6a4ec7fe5556b1abaddc715862ff0168c34",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/receipt.json",
+      "expected": "bf568bb205a9f836a8d3eb42e8038f4956fc6d69a93c038f14e5be6850345874",
+      "actual": "bf568bb205a9f836a8d3eb42e8038f4956fc6d69a93c038f14e5be6850345874",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/selection.json",
+      "expected": "50ec2004c5ec22a4d482824534284b63952ab6d87441ecbd4daa1c31a1fe5143",
+      "actual": "50ec2004c5ec22a4d482824534284b63952ab6d87441ecbd4daa1c31a1fe5143",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/selection_predictions.json",
+      "expected": "60a8b71ca8a55690682fef268b9dd34399f13b87139bfe7f4d5a2e121788c7c0",
+      "actual": "60a8b71ca8a55690682fef268b9dd34399f13b87139bfe7f4d5a2e121788c7c0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed11/trace.json",
+      "expected": "5e45c7751f66cb89fac3f4e4940edc64db1d6532b13d61cd7a038584cf8c8850",
+      "actual": "5e45c7751f66cb89fac3f4e4940edc64db1d6532b13d61cd7a038584cf8c8850",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/evaluation_predictions.json",
+      "expected": "907ae2ba6c2e989c55ce119f0ee039e79d828cccd1cab0c2e5648a5751dd9ba7",
+      "actual": "907ae2ba6c2e989c55ce119f0ee039e79d828cccd1cab0c2e5648a5751dd9ba7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/fit_checkpoint.json",
+      "expected": "73820c53e07ed00e308204e354135854599ab2c910e352bf0efe107841fa5cdd",
+      "actual": "73820c53e07ed00e308204e354135854599ab2c910e352bf0efe107841fa5cdd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/gate_state.json",
+      "expected": "6262885e2ea8e72a2ebd1c7355f137054a2422538f31909f5f52d94928707c38",
+      "actual": "6262885e2ea8e72a2ebd1c7355f137054a2422538f31909f5f52d94928707c38",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/gates_before_evaluation.json",
+      "expected": "1f822b8f2dfdc3900f54540b4ff8682d3a5686f8544c7ad82ac66d04d1d1a802",
+      "actual": "1f822b8f2dfdc3900f54540b4ff8682d3a5686f8544c7ad82ac66d04d1d1a802",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/mixture_state.json",
+      "expected": "657103513f1718593fa597a4c2707d5757369cb9872156db22f818b8efa5ce5d",
+      "actual": "657103513f1718593fa597a4c2707d5757369cb9872156db22f818b8efa5ce5d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/online_checkpoint.json",
+      "expected": "07563c14cd56e6dbe36b7a6a3afcb9e63bd3fccab0713de2d4ca159d631558de",
+      "actual": "07563c14cd56e6dbe36b7a6a3afcb9e63bd3fccab0713de2d4ca159d631558de",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/receipt.json",
+      "expected": "2f85c6bb5506028d3f1f85c6f7b2e1449e7a6f1915c725fb4ae5d91cbebad5c4",
+      "actual": "2f85c6bb5506028d3f1f85c6f7b2e1449e7a6f1915c725fb4ae5d91cbebad5c4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/selection.json",
+      "expected": "a579580c2e8f1a5aedbf48559a7c7b23038629f5e77924f22a948e645b7ed681",
+      "actual": "a579580c2e8f1a5aedbf48559a7c7b23038629f5e77924f22a948e645b7ed681",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/selection_predictions.json",
+      "expected": "129833e79454215513ae82cbd6171d7eaebd0acd781c6880972ae369d5d4e1b4",
+      "actual": "129833e79454215513ae82cbd6171d7eaebd0acd781c6880972ae369d5d4e1b4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed29/trace.json",
+      "expected": "4b752d978e2539a62d8bba7db5b8c25a0137ae46155981279cd4a3b0971b8f01",
+      "actual": "4b752d978e2539a62d8bba7db5b8c25a0137ae46155981279cd4a3b0971b8f01",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/evaluation_predictions.json",
+      "expected": "e9966c12b6e43418183921fd91b328feb2a20c0f2c03027be765cbcb02149406",
+      "actual": "e9966c12b6e43418183921fd91b328feb2a20c0f2c03027be765cbcb02149406",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/fit_checkpoint.json",
+      "expected": "7840f9b56d3c5a71052853296f17acad9cd1ab492bf949614538f76a528da131",
+      "actual": "7840f9b56d3c5a71052853296f17acad9cd1ab492bf949614538f76a528da131",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/gate_state.json",
+      "expected": "c9dc9c141c30b9f040f6fd80cd809041da899a66e97747b91e4bc46a6b34ca41",
+      "actual": "c9dc9c141c30b9f040f6fd80cd809041da899a66e97747b91e4bc46a6b34ca41",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/gates_before_evaluation.json",
+      "expected": "a75ed693c1645614a447c7137858a9f8071da042a2d823f07540d59ada0aaa4d",
+      "actual": "a75ed693c1645614a447c7137858a9f8071da042a2d823f07540d59ada0aaa4d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/mixture_state.json",
+      "expected": "590762c249a7a6b0d579e242131d1044932d4611be883ffc0f83bf06921bf693",
+      "actual": "590762c249a7a6b0d579e242131d1044932d4611be883ffc0f83bf06921bf693",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/online_checkpoint.json",
+      "expected": "81c266a00b8f1030448fe30a69e4686d25fedde058497e86029b25f2bb5d03b8",
+      "actual": "81c266a00b8f1030448fe30a69e4686d25fedde058497e86029b25f2bb5d03b8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/receipt.json",
+      "expected": "d855f0df91c1328ad5980ba5ccdabce47e08467f4b1fed92e2445c18558e098d",
+      "actual": "d855f0df91c1328ad5980ba5ccdabce47e08467f4b1fed92e2445c18558e098d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/selection.json",
+      "expected": "ac140d852dea4f3e9df64bf681a9a616e7278a990af989a245655ed3649439bb",
+      "actual": "ac140d852dea4f3e9df64bf681a9a616e7278a990af989a245655ed3649439bb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/selection_predictions.json",
+      "expected": "0b373bf2b8a31c90b7a053a65416b924b8c603b4c7b83c1c0b3abbec191f4634",
+      "actual": "0b373bf2b8a31c90b7a053a65416b924b8c603b4c7b83c1c0b3abbec191f4634",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "outputs/frem_s8_2020_2022_20261014_attempt1/seed47/trace.json",
+      "expected": "e0f937b9057060952e088fb6db45804ff0c056708db8ce1fdbb914d39197523b",
+      "actual": "e0f937b9057060952e088fb6db45804ff0c056708db8ce1fdbb914d39197523b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/decisions/frem_s8_intake_repair_20261014.json",
+      "expected": "83f13fcf2b776b969dc19f7b3bb1e7e4162d838f19e68beb8b60df200cf75cd1",
+      "actual": "83f13fcf2b776b969dc19f7b3bb1e7e4162d838f19e68beb8b60df200cf75cd1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/decisions/frem_s8_result_20261014.json",
+      "expected": "8ae42616df7aa5ceee757cf76c1a4b92a5befcca32303d340712feb614864736",
+      "actual": "8ae42616df7aa5ceee757cf76c1a4b92a5befcca32303d340712feb614864736",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/decisions/frem_s8_start_20261014.json",
+      "expected": "5e28d7ff35f905d57df2145f9662a9bc1a16d87840a66e1447cc3473704baa85",
+      "actual": "5e28d7ff35f905d57df2145f9662a9bc1a16d87840a66e1447cc3473704baa85",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/ALL_BASELINES.csv",
+      "expected": "322ce92655cb2cbac22d0a96574b4bb9c04a56800e74219873030d9ce7db8ffd",
+      "actual": "322ce92655cb2cbac22d0a96574b4bb9c04a56800e74219873030d9ce7db8ffd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/ANNUAL_PREDICTION.csv",
+      "expected": "d687c06a913d79b5bcdc3415284c4f9b3f10c109cfc0f1cbc6a6c7c596f48ff1",
+      "actual": "d687c06a913d79b5bcdc3415284c4f9b3f10c109cfc0f1cbc6a6c7c596f48ff1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/AUDIT.json",
+      "expected": "5e081f8d7ced391df0236afede8c701245f16fa01635ba446019ffea2ad0ede3",
+      "actual": "5e081f8d7ced391df0236afede8c701245f16fa01635ba446019ffea2ad0ede3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/FINAL_MANIFEST.json",
+      "expected": "857968c3d7f027d61339df0f7495e94bed7d0e4f6b635225d46255d8f728a976",
+      "actual": "857968c3d7f027d61339df0f7495e94bed7d0e4f6b635225d46255d8f728a976",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/FINAL_REPORT.initial_figure.md",
+      "expected": "63f28bd8952e431970cb89182c0a8f63f96a84b79b1f60d05e090f5fb98bb814",
+      "actual": "63f28bd8952e431970cb89182c0a8f63f96a84b79b1f60d05e090f5fb98bb814",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/FINAL_REPORT.md",
+      "expected": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44",
+      "actual": "d1915c2ccf09161dbc85eb4ccdd8a18b1b0114484d059b95c1b0f5701cfedc44",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/FRESHNESS_AUDIT.json",
+      "expected": "f8692f6aee524dd3d3396213affab48d353e7810de82d79d17fb412894d9e462",
+      "actual": "f8692f6aee524dd3d3396213affab48d353e7810de82d79d17fb412894d9e462",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/RECEIPT.json",
+      "expected": "15414c1121e2918fe005d809870f858cb337fba1a4b8b52ddaf4bf16d68639c8",
+      "actual": "15414c1121e2918fe005d809870f858cb337fba1a4b8b52ddaf4bf16d68639c8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/REPORT.md",
+      "expected": "38f4944b16102714da7f893f1645ad947e24bfd1259902e757bc1bb67be43a63",
+      "actual": "38f4944b16102714da7f893f1645ad947e24bfd1259902e757bc1bb67be43a63",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/RESEARCH_STATE.before.json",
+      "expected": "921e962001eabd2ef3d3ca62d624240652a419a184d87283c1ea49f1d4620424",
+      "actual": "921e962001eabd2ef3d3ca62d624240652a419a184d87283c1ea49f1d4620424",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/RESULTS.png",
+      "expected": "fa0130664be49ea1961576cd311770ca02747ebe0615371288b337b952a8843d",
+      "actual": "fa0130664be49ea1961576cd311770ca02747ebe0615371288b337b952a8843d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/RESULTS_FINAL.png",
+      "expected": "d96b20c23df5d96da9f6e28c3e915328e6ad70a375ffb1ebcfad4043d9cc2fea",
+      "actual": "d96b20c23df5d96da9f6e28c3e915328e6ad70a375ffb1ebcfad4043d9cc2fea",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/SPECIFICATION.md",
+      "expected": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00",
+      "actual": "d43061e08a889ac6888a7d6e33cfcd007f209aef7cd36c28adeb8d6550941f00",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/SUMMARY.json",
+      "expected": "cf21f95ec67289b6ec1e7651246eabd148c8b61030038e581a947d8d182857d4",
+      "actual": "cf21f95ec67289b6ec1e7651246eabd148c8b61030038e581a947d8d182857d4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/acquisition_attempt1.json",
+      "expected": "c1d8da648095baca984b4f3a3eee26f8fba55df38028d304a809f9663b26ab36",
+      "actual": "c1d8da648095baca984b4f3a3eee26f8fba55df38028d304a809f9663b26ab36",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/acquisition_attempt1.log",
+      "expected": "5d2eb0ae57ce2a39d75aeeee2c65b69af2f0bbe132f66d18d7f9863672145b2c",
+      "actual": "5d2eb0ae57ce2a39d75aeeee2c65b69af2f0bbe132f66d18d7f9863672145b2c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/acquisition_attempt2.json",
+      "expected": "c7160babf2d862c039e4a71827a4f2c6458ca7725fec4fcc51b67237c5e1c1fd",
+      "actual": "c7160babf2d862c039e4a71827a4f2c6458ca7725fec4fcc51b67237c5e1c1fd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/acquisition_attempt2.log",
+      "expected": "6395806e273be066394e8ad66cadeb668c0a6ce4f57c174a5e0b40a49390eacf",
+      "actual": "6395806e273be066394e8ad66cadeb668c0a6ce4f57c174a5e0b40a49390eacf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/analysis_attempt1.json",
+      "expected": "dc43e679df9df1c1a83d0aba8e9cbec94cdfd98a2fa057321fbf03b595701670",
+      "actual": "dc43e679df9df1c1a83d0aba8e9cbec94cdfd98a2fa057321fbf03b595701670",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/analysis_attempt1.log",
+      "expected": "287997d243f9d8140100e343f07e475e746fa596809c55c9bf687b9edfcdf78c",
+      "actual": "287997d243f9d8140100e343f07e475e746fa596809c55c9bf687b9edfcdf78c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/analysis_attempt2.json",
+      "expected": "948ec7c5143fbc683874ae9a9876adf587744d2c7997d3f5eaaff4f386c4a423",
+      "actual": "948ec7c5143fbc683874ae9a9876adf587744d2c7997d3f5eaaff4f386c4a423",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/analysis_attempt2.log",
+      "expected": "97521d04b61973e47ea556bdb24004c2f0f0c064da807e771bb9170d70c550b3",
+      "actual": "97521d04b61973e47ea556bdb24004c2f0f0c064da807e771bb9170d70c550b3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/analyze.py",
+      "expected": "236f11e5f85fffe3561b7fc770bd6496f76c967c76bde77b649d9719eb86dfe9",
+      "actual": "236f11e5f85fffe3561b7fc770bd6496f76c967c76bde77b649d9719eb86dfe9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/audit_attempt1.json",
+      "expected": "a73541427cd0f6c0858399d8b6c6f3b066695beb4322d1a7195242ced74fc456",
+      "actual": "a73541427cd0f6c0858399d8b6c6f3b066695beb4322d1a7195242ced74fc456",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/audit_attempt1.log",
+      "expected": "7db21d83ec6197d483121f630ede719f59eb381b2cf7b86338243ec68bc0b5a0",
+      "actual": "7db21d83ec6197d483121f630ede719f59eb381b2cf7b86338243ec68bc0b5a0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/audit_saved.py",
+      "expected": "49b41a26b73ff76368a2e7b323998910ca19f9a1a68d783c86b124e3d105d012",
+      "actual": "49b41a26b73ff76368a2e7b323998910ca19f9a1a68d783c86b124e3d105d012",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/construction_attempt2.json",
+      "expected": "a831f3728179776d28000613727ef8fba709cf734ab14751fd6200f86275436e",
+      "actual": "a831f3728179776d28000613727ef8fba709cf734ab14751fd6200f86275436e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/diagnosis.json",
+      "expected": "8db8ac92ada13fc27f4942f09ec13b184863c1b6435a38ffacf2a3bc075b5879",
+      "actual": "8db8ac92ada13fc27f4942f09ec13b184863c1b6435a38ffacf2a3bc075b5879",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/evaluation_consumed.json",
+      "expected": "dfcbe30c56f81cb0f13a4676d1cff74fd964c2185fd1a7e29fba7c714b47de6d",
+      "actual": "dfcbe30c56f81cb0f13a4676d1cff74fd964c2185fd1a7e29fba7c714b47de6d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/execution_attempt1.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/freeze.json",
+      "expected": "46b9abc77153689dc160ad01ea75662349f69d53d2f2a959b5962ee68c8a2483",
+      "actual": "46b9abc77153689dc160ad01ea75662349f69d53d2f2a959b5962ee68c8a2483",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/freeze1_sources.zip",
+      "expected": "c1dbbe663eaa4200290c6f0d525c4c13f3a750e44f55ae3e149256e2482755fb",
+      "actual": "c1dbbe663eaa4200290c6f0d525c4c13f3a750e44f55ae3e149256e2482755fb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/freeze2.json",
+      "expected": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457",
+      "actual": "0517a2d55ae53ebe7a3e0e85277d7479cf90618a2f55f9f4114ae4508ce61457",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt1.json",
+      "expected": "9fb197b08f479ff3383ab79f946823b751ab9a0039e9bfe875c55112c3282104",
+      "actual": "9fb197b08f479ff3383ab79f946823b751ab9a0039e9bfe875c55112c3282104",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt1.log",
+      "expected": "260054bf1317738175b453ae6f73468358e493d2eddc744ce9bec56b9df70527",
+      "actual": "260054bf1317738175b453ae6f73468358e493d2eddc744ce9bec56b9df70527",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt2.json",
+      "expected": "164afbfa1fc88af24af6557ebdf70c008f2d8735df789697df54c75558376a7f",
+      "actual": "164afbfa1fc88af24af6557ebdf70c008f2d8735df789697df54c75558376a7f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt2.log",
+      "expected": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt3.json",
+      "expected": "d8b261d7ec6eb5b25cf50856aaae0be3f84bb19f458f12646ca2bd33ecd99624",
+      "actual": "d8b261d7ec6eb5b25cf50856aaae0be3f84bb19f458f12646ca2bd33ecd99624",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/lint_attempt3.log",
+      "expected": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/plot_results.py",
+      "expected": "72c167f35868b81341059cfc2b43c56d415a8ba3257ac3d3d3f100293abbdc58",
+      "actual": "72c167f35868b81341059cfc2b43c56d415a8ba3257ac3d3d3f100293abbdc58",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/plot_results_final.py",
+      "expected": "6eec41a09c34c68700a90c9e50693d7666a347fc5953a4238cb031322cead5c9",
+      "actual": "6eec41a09c34c68700a90c9e50693d7666a347fc5953a4238cb031322cead5c9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/predecessor_manifest.json",
+      "expected": "d4bff4476359f3030080a8eea7e64dfd18a9be2d9a9f2cec2f3b60fde6ca169f",
+      "actual": "d4bff4476359f3030080a8eea7e64dfd18a9be2d9a9f2cec2f3b60fde6ca169f",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/prefit_attempt1_sources.zip",
+      "expected": "e93368c9cf45a0e1ca6a5127117fcaf4ff53e215abebcea8e86d844d116b3dcf",
+      "actual": "e93368c9cf45a0e1ca6a5127117fcaf4ff53e215abebcea8e86d844d116b3dcf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/process_attempt1.json",
+      "expected": "787e13f2625ae59e316a1284a2c454a24b43abbd7abf97097a8e764d90e32ece",
+      "actual": "787e13f2625ae59e316a1284a2c454a24b43abbd7abf97097a8e764d90e32ece",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/repair_lint.json",
+      "expected": "20ae56489751f59fa9a3a1730e85757a67ae58a480a0679e274ca6617bc64743",
+      "actual": "20ae56489751f59fa9a3a1730e85757a67ae58a480a0679e274ca6617bc64743",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/repair_lint.log",
+      "expected": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "actual": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/repair_tests.json",
+      "expected": "cf67557633ca8bae6b41ce84bb757fcd1522695373495300fb4bc1e2423329e1",
+      "actual": "cf67557633ca8bae6b41ce84bb757fcd1522695373495300fb4bc1e2423329e1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/repair_tests.log",
+      "expected": "6cd3bdef61ba19c9a0d9dec191dee18c225d07712df655ee602924c1f65c59df",
+      "actual": "6cd3bdef61ba19c9a0d9dec191dee18c225d07712df655ee602924c1f65c59df",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/test_s8_successor.attempt2.py.txt",
+      "expected": "ef00bb038193735d58a1eb05f4b8b077b79a7c6f86d2d4594cf3425fd8e27704",
+      "actual": "ef00bb038193735d58a1eb05f4b8b077b79a7c6f86d2d4594cf3425fd8e27704",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt1.json",
+      "expected": "7a69a831b732710df8bf63ef24e2837594496ed75129c73cd229b745a45ac2fb",
+      "actual": "7a69a831b732710df8bf63ef24e2837594496ed75129c73cd229b745a45ac2fb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt1.log",
+      "expected": "dfd0375610f80392b65a04b5d086e29113de29a970ed39904d269e49e03a1210",
+      "actual": "dfd0375610f80392b65a04b5d086e29113de29a970ed39904d269e49e03a1210",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt2.json",
+      "expected": "4e726a6e9e511d3fa2ddfbb15c33c230c593b30db51fe6a44b99d8feb37334f9",
+      "actual": "4e726a6e9e511d3fa2ddfbb15c33c230c593b30db51fe6a44b99d8feb37334f9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt2.log",
+      "expected": "c9eeaa8ab5e44bc79c1ead0a813a95e0658d16b78f309ab62dd4606abfeee03c",
+      "actual": "c9eeaa8ab5e44bc79c1ead0a813a95e0658d16b78f309ab62dd4606abfeee03c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt3.json",
+      "expected": "7105305f0c4ab6ac2344bfcef4b52f0060372d2425903df627d9777079ce7d6e",
+      "actual": "7105305f0c4ab6ac2344bfcef4b52f0060372d2425903df627d9777079ce7d6e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_attempt3.log",
+      "expected": "b6c17625bf4069b728e6da7551688f2df65c96353ebf662e31ad5d77db91d240",
+      "actual": "b6c17625bf4069b728e6da7551688f2df65c96353ebf662e31ad5d77db91d240",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_final.json",
+      "expected": "cec819aeca6870f3ed07a4a27d545699ae7be9455ab62a5dc0b822339b26a3b1",
+      "actual": "cec819aeca6870f3ed07a4a27d545699ae7be9455ab62a5dc0b822339b26a3b1",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "research/frem_s8_20261014/tests_final.log",
+      "expected": "4f9fc51a97a393ead269e4b3be7400cb82183d0dc5cb9acec1d1b3b303617126",
+      "actual": "4f9fc51a97a393ead269e4b3be7400cb82183d0dc5cb9acec1d1b3b303617126",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/README.md",
+      "expected": "b6e95ce9f32a53286fd6bcfd645a0ad8abdcdf03f7d4535eb66bb1facf9a2e4b",
+      "actual": "b6e95ce9f32a53286fd6bcfd645a0ad8abdcdf03f7d4535eb66bb1facf9a2e4b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/__init__.py",
+      "expected": "7a4850277cb9e621c196458c1ddd17b722ac01340a1ef88b5bf2653ff98e120a",
+      "actual": "7a4850277cb9e621c196458c1ddd17b722ac01340a1ef88b5bf2653ff98e120a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/policy.py",
+      "expected": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c",
+      "actual": "28513bccd05fbe37cd392567eeceed448ec2c63b23f18947fddf751d932ea03c",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/prepare.py",
+      "expected": "d5c3aaaf98cf56cd5c23f59af4a07934af3e7b6c3d0fa3c6b4844981428056ab",
+      "actual": "d5c3aaaf98cf56cd5c23f59af4a07934af3e7b6c3d0fa3c6b4844981428056ab",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/router.py",
+      "expected": "507428d6675647690bb0dcf1069d2bfdfbb610cec1cf8980290caa92bd683a96",
+      "actual": "507428d6675647690bb0dcf1069d2bfdfbb610cec1cf8980290caa92bd683a96",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "successors/frem_s8/run.py",
+      "expected": "6ced499d0633174e4223d43efa6aac489c0537bdfd59156e65b4f2871dd05f62",
+      "actual": "6ced499d0633174e4223d43efa6aac489c0537bdfd59156e65b4f2871dd05f62",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "tests/s8/test_s8_pipeline.py",
+      "expected": "91ec3e08a9a2aeee269116a9eaeca2b1756ac004921e4d286fd5b5cd14a07802",
+      "actual": "91ec3e08a9a2aeee269116a9eaeca2b1756ac004921e4d286fd5b5cd14a07802",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s8_20261014/FINAL_MANIFEST_v2.json",
+      "path": "tests/s8/test_s8_successor.py",
+      "expected": "97696d48967b1b1cde2259129d3c519ff2aad94b08141237e06a047357ad34ff",
+      "actual": "97696d48967b1b1cde2259129d3c519ff2aad94b08141237e06a047357ad34ff",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/__init__.py",
+      "expected": "66cb6e649151ea1e73474800d35c73c23362c21cb67a2d3d1b3fb76e2f0072b3",
+      "actual": "66cb6e649151ea1e73474800d35c73c23362c21cb67a2d3d1b3fb76e2f0072b3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/data.py",
+      "expected": "5fa68de7f65297ef1e69009dca4cd749bee9b4731c26e297a4a1dc1f72410523",
+      "actual": "5fa68de7f65297ef1e69009dca4cd749bee9b4731c26e297a4a1dc1f72410523",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/experiment.py",
+      "expected": "e40f12a6ef75a14485301b5a5d5a8f6ec73d40af5897d95118a71bee5108196b",
+      "actual": "e40f12a6ef75a14485301b5a5d5a8f6ec73d40af5897d95118a71bee5108196b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/model.py",
+      "expected": "87b21a6e450e25d8d0f8d112e4320c87937a0f3e911d950091da0ab2edca31f9",
+      "actual": "87b21a6e450e25d8d0f8d112e4320c87937a0f3e911d950091da0ab2edca31f9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/policy.py",
+      "expected": "805d89651310ba72f7ab35310f3fb156698fd41fad9decd1fcbf553d042c6cd9",
+      "actual": "805d89651310ba72f7ab35310f3fb156698fd41fad9decd1fcbf553d042c6cd9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/run.py",
+      "expected": "f71850b076c759ddbd6177272270fb4b4ee5cb9050e1b0dc372584934a86bbf4",
+      "actual": "f71850b076c759ddbd6177272270fb4b4ee5cb9050e1b0dc372584934a86bbf4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/__init__.py",
+      "expected": "01568e80630b0a36b9e4df616a83a9572f5105e77c45ea180b7e6507544f8299",
+      "actual": "01568e80630b0a36b9e4df616a83a9572f5105e77c45ea180b7e6507544f8299",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/audit.py",
+      "expected": "aa99f51e67ad75082163a7c5f2e12ea6043ae8249fdfa9b0fdd4d04a01f34532",
+      "actual": "aa99f51e67ad75082163a7c5f2e12ea6043ae8249fdfa9b0fdd4d04a01f34532",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/contracts.py",
+      "expected": "a8fb6e99f69142cecd118055916deee3752edb5d6fbb57617a7b65c5e8fec7b0",
+      "actual": "a8fb6e99f69142cecd118055916deee3752edb5d6fbb57617a7b65c5e8fec7b0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/ledger.py",
+      "expected": "7d94e4c0a3297f41f3ef6f651c1b029bf5e2666d5a8f672fc928d8684108644d",
+      "actual": "7d94e4c0a3297f41f3ef6f651c1b029bf5e2666d5a8f672fc928d8684108644d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_audit_v1/stream.py",
+      "expected": "8452078467ab4d648e9b05acb3f5ae1047504d89c83f366cf968d821e1208f8e",
+      "actual": "8452078467ab4d648e9b05acb3f5ae1047504d89c83f366cf968d821e1208f8e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "tests/s9/test_s9.py",
+      "expected": "b40debe033469959ba7928b3fa417ddbe40312efa02cb69113490dddca60ab6d",
+      "actual": "b40debe033469959ba7928b3fa417ddbe40312efa02cb69113490dddca60ab6d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/SPY.json",
+      "expected": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "actual": "5079111b0a82fb75381ac1ef2585b20c7521ba9c5642929f6cf389dafb33adc8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/TLT.json",
+      "expected": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "actual": "0a417fdb939bbdaed3f0faa8d75ea4a6909ab3dd977be032de1fe8d5bdb6c41d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/GLD.json",
+      "expected": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "actual": "5befc3ccba30ed8d245198336c204596042683c9d662eb8d7c18ff1180ac9a7b",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "data/s6_real_etf_20261014/acquisition.json",
+      "expected": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "actual": "12ce3b9a27d7c206cbd6a74a7ec3d12ba248649a26e74098d3750709ac37f562",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/SPECIFICATION.md",
+      "expected": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+      "actual": "a48f69922b76b77a8cad13047db49b33137125f670b9e7748a65386780cfddba",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/REVIEW.md",
+      "expected": "4343c2bf7da73a8596b7d66e3a22cacaad03949bed6a06df410b2fa78935a235",
+      "actual": "4343c2bf7da73a8596b7d66e3a22cacaad03949bed6a06df410b2fa78935a235",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "research/frem_s9_20261015/DATA_ADMISSION.json",
+      "expected": "5f03ccd6ae529c4f3b6516ec3f9741793162ade384d2d7e33db2aa01accfd992",
+      "actual": "5f03ccd6ae529c4f3b6516ec3f9741793162ade384d2d7e33db2aa01accfd992",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s9_20261015/freeze1.json",
+      "path": "successors/frem_s9/README.md",
+      "expected": "e0de9c58cb223ad4f38fedfa496064bacd0c1fd5125d92f582a72844c982e835",
+      "actual": "e0de9c58cb223ad4f38fedfa496064bacd0c1fd5125d92f582a72844c982e835",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "docs/FREM_S10_DESIGN.md",
+      "expected": "96a1c2ffa138f92c3cd67c0c8249ae5da2b8654e0391d80f17d5e6388ee7e02e",
+      "actual": "96a1c2ffa138f92c3cd67c0c8249ae5da2b8654e0391d80f17d5e6388ee7e02e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/EXPERIMENT_PROTOCOL.md",
+      "expected": "760cb4309611e05cf6ec5a35065fe931bfc0b0aa9b32f3b4c7e3066e08f1f6bb",
+      "actual": "760cb4309611e05cf6ec5a35065fe931bfc0b0aa9b32f3b4c7e3066e08f1f6bb",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/FAILURE_REPAIR_MAP.md",
+      "expected": "17f75e9bafde45d929bdadef4eb87f5a9a0a89f37f94098a00c37a6b202b6cdd",
+      "actual": "17f75e9bafde45d929bdadef4eb87f5a9a0a89f37f94098a00c37a6b202b6cdd",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/IMPLEMENTATION_PLAN.md",
+      "expected": "d7830be5296ef102c1e8826b9db0acece2fc8e11fa3566a25fdc75d4b25eadba",
+      "actual": "d7830be5296ef102c1e8826b9db0acece2fc8e11fa3566a25fdc75d4b25eadba",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/MODEL_SPECIFICATION.md",
+      "expected": "782ce8485691050f254b9e24a8e560c2237f2fe5414b920828b835447c2c769e",
+      "actual": "782ce8485691050f254b9e24a8e560c2237f2fe5414b920828b835447c2c769e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/PRIOR_ART.md",
+      "expected": "e85b337428e422700c0462cbdf884cc695b0814ad5ca38c48070eaadc3532b22",
+      "actual": "e85b337428e422700c0462cbdf884cc695b0814ad5ca38c48070eaadc3532b22",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/REVIEW.md",
+      "expected": "af240b5957b888202f6aa8d8c04c7ddac6f4b7a1c3abccf438af2ea37bf9f258",
+      "actual": "af240b5957b888202f6aa8d8c04c7ddac6f4b7a1c3abccf438af2ea37bf9f258",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/USER_REQUEST.txt",
+      "expected": "05cdc7c61fa659a2434e6fafa855f8df87fa4831ea87bc18a42de3caee5f0570",
+      "actual": "05cdc7c61fa659a2434e6fafa855f8df87fa4831ea87bc18a42de3caee5f0570",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/RESEARCH_STATE.json",
+      "expected": "84fcdeba82b25a09912191acac3f2299cda63f6e19f2fe923e548cb1d26916d9",
+      "actual": "84fcdeba82b25a09912191acac3f2299cda63f6e19f2fe923e548cb1d26916d9",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/docs/CODEX_HANDOFF.md",
+      "expected": "3c0894d1537418b99138b08aaea3e1529a6eaf10c0739118ff0f7c0672c6915d",
+      "actual": "3c0894d1537418b99138b08aaea3e1529a6eaf10c0739118ff0f7c0672c6915d",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before/research/events.jsonl",
+      "expected": "24e07ccbc1750d6bfa0f84b2f8820cb94b4fadae0d5876823da87a3009f08baf",
+      "actual": "24e07ccbc1750d6bfa0f84b2f8820cb94b4fadae0d5876823da87a3009f08baf",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/before_manifest.json",
+      "expected": "d6a28adb9ed8f45f795290655c446f502f14882bb8a7a10dcabc500a7b286359",
+      "actual": "d6a28adb9ed8f45f795290655c446f502f14882bb8a7a10dcabc500a7b286359",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design.json",
+      "expected": "c344616faf89c035f89869b617e79c2fc7563ef9e60cb050091741888b3a05d8",
+      "actual": "c344616faf89c035f89869b617e79c2fc7563ef9e60cb050091741888b3a05d8",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/RECEIPT.json",
+      "path": "research/decisions/frem_s10_design_20261015.json",
+      "expected": "e4ea2725cf83a453e61aa56677331cba667ea598874f99228b8d77e72c93f223",
+      "actual": "e4ea2725cf83a453e61aa56677331cba667ea598874f99228b8d77e72c93f223",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/ADVERSARIAL_FINDINGS.md",
+      "expected": "6bbf82d18102f5494c0d5b8eb76a6d1011e04e854fd7ec096eacf7cb782370e7",
+      "actual": "6bbf82d18102f5494c0d5b8eb76a6d1011e04e854fd7ec096eacf7cb782370e7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/ARCHITECTURE_AND_INTERFACES.md",
+      "expected": "77934e962dc5ce6e622368e26da2821367ffca66c741828b51d142913ae64323",
+      "actual": "77934e962dc5ce6e622368e26da2821367ffca66c741828b51d142913ae64323",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/CODE_QUALITY_AND_CI.md",
+      "expected": "f3ed9be21914fd94a54dda5f761d99de0456009eb330d8dbe066d9162bcb8288",
+      "actual": "f3ed9be21914fd94a54dda5f761d99de0456009eb330d8dbe066d9162bcb8288",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/DELIVERY_PLAN.md",
+      "expected": "f6b28d0ea0155ff1edc42f6b512b65c29778a326650fb3449901a4243f4ec9a4",
+      "actual": "f6b28d0ea0155ff1edc42f6b512b65c29778a326650fb3449901a4243f4ec9a4",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/MODEL_CLARIFICATIONS.md",
+      "expected": "13981354354e992bf788f3b6e695f571977ef84714935fbe15108bda2cff1b06",
+      "actual": "13981354354e992bf788f3b6e695f571977ef84714935fbe15108bda2cff1b06",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/OPERATIONS_AND_ARTIFACTS.md",
+      "expected": "3f71578ba8a534ab6693d58fb68747edcfd64d601eb4a71fc1dfcbab6147ef9e",
+      "actual": "3f71578ba8a534ab6693d58fb68747edcfd64d601eb4a71fc1dfcbab6147ef9e",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/STATIC_VALIDATION.json",
+      "expected": "81aea274280edc3c15f5817856d8fee7fcf370e18b7fa4b017abb95a691e0c43",
+      "actual": "81aea274280edc3c15f5817856d8fee7fcf370e18b7fa4b017abb95a691e0c43",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/USER_REQUEST.txt",
+      "expected": "64dd65aa1b0a7d4244ba02641885236fbef74225ad60ff3ceb064435db0884de",
+      "actual": "64dd65aa1b0a7d4244ba02641885236fbef74225ad60ff3ceb064435db0884de",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/VERIFICATION_CATALOG.md",
+      "expected": "6297841c351133a468a0706d5f4227cc460aca0f24dc6e383f2dfe677635dcd3",
+      "actual": "6297841c351133a468a0706d5f4227cc460aca0f24dc6e383f2dfe677635dcd3",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/before/RESEARCH_STATE.json",
+      "expected": "578b7f29ce928e0586e71bd0b6f092edaaec49b10c74b07d2924a62aed03f334",
+      "actual": "578b7f29ce928e0586e71bd0b6f092edaaec49b10c74b07d2924a62aed03f334",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/before/docs/CODEX_HANDOFF.md",
+      "expected": "c9c176181396a22d5b2ea0c3eb652e4a972517dc03d9c0c603f205b96395beca",
+      "actual": "c9c176181396a22d5b2ea0c3eb652e4a972517dc03d9c0c603f205b96395beca",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/before/research/events.jsonl",
+      "expected": "2de983ef62932e289a903223716c570bacf913f910ab7a280b218ab0a8c6e2db",
+      "actual": "2de983ef62932e289a903223716c570bacf913f910ab7a280b218ab0a8c6e2db",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/before_manifest.json",
+      "expected": "c224274bfb724e365f1eb4ced9f229b474e60fad7c0240847f93c51424244fb0",
+      "actual": "c224274bfb724e365f1eb4ced9f229b474e60fad7c0240847f93c51424244fb0",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/blueprint.json",
+      "expected": "fa3274f2527ad7bf12af02fe687ed86b921469cec4a393f59b1c24f92e16982a",
+      "actual": "fa3274f2527ad7bf12af02fe687ed86b921469cec4a393f59b1c24f92e16982a",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/frem_s10_20261015/design_v2/requirements.json",
+      "expected": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+      "actual": "1df9cf2ba9ccea36a8c2a13f047bc0c82b40903b34fb84173bf9076f0e8a54a7",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
+      "expected": "e2a2f6c7ad4d233831a8678e19799596987977409cc4d8d2002b2fe148efbcd6",
+      "actual": "e2a2f6c7ad4d233831a8678e19799596987977409cc4d8d2002b2fe148efbcd6",
+      "matches": true
+    },
+    {
+      "manifest": "research/frem_s10_20261015/design_v2/RECEIPT.json",
+      "path": "research/decisions/frem_s10_design_v2_20261015.json",
+      "expected": "97de854faea554935ded62a1d00a4ae7fa9ea6fd6ec040d4f7fdf93eb2023b2f",
+      "actual": "97de854faea554935ded62a1d00a4ae7fa9ea6fd6ec040d4f7fdf93eb2023b2f",
+      "matches": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "calendar_acquisition": {
+    "path": "research/frem_s10_production_20261016/data_provenance/calendar_acquisition.json",
+    "sha256": "f89d591f8617d4df543f29066125b05202eb7ca852e6a88e1ce50504e30a7865"
+  },
+  "calendar_license": {
+    "path": "research/frem_s10_production_20261016/data_provenance/calendar_LICENSE",
+    "sha256": "e35c4578f7db4498e62e278978f6c42e0fce6f21f9993a060b08a33549cd3044"
+  },
+  "calendar_source": "exchange_calendars pinned canonical XNYS fixture, not exchange-issued certification",
+  "calendar_source_commit": "5dfce66a1f5b90d3ee658e432518b35d79cbab5c",
+  "external_acquisition": {
+    "path": "research/frem_s10_production_20261016/data_provenance/external_review_acquisition.json",
+    "sha256": "efafb44adae35758d09feea99f7bcb9224ca8bd71ecafe7f8dfce18eb88bdae4"
+  },
+  "historical_terms_at_original_acquisition_certified": false,
+  "new_market_data_collection_performed": false,
+  "primary_checks": [
+    {
+      "access": "web search/open tool; direct HTTP retention failed403",
+      "observation": "NYSE and NYSE Arca cash equities scheduled 13:00 Eastern close on 2016-11-25.",
+      "publication_date": "2016-02-02",
+      "url": "https://ir.theice.com/press/news-details/2016/NYSE-Group-Announces-2017-Holiday-and-Early-Closings-Calendar/default.aspx"
+    },
+    {
+      "access": "web search tool; direct HTTP retention failed403",
+      "observation": "US equity markets remained closed October30 after October29 Hurricane Sandy closure; futures reopening times in the notice are not equity session times.",
+      "publication_date": "2012-10-29",
+      "url": "https://ir.theice.com/press/news-details/2012/IntercontinentalExchange-Announces-Hurricane-Sandy-Market-Update/default.aspx"
+    },
+    {
+      "access": "web search tool",
+      "observation": "NYSE MKT filing describes 09:30-16:00 regular session and announced13:00 early closes around July3, Thanksgiving Friday and December24 in2012-2014; this is supporting historical context, not an independent certification of all fixture rows.",
+      "publication_date": "2012-11-23",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2012-11-23/pdf/FR-2012-11-23.pdf"
+    }
+  ],
+  "provider_permission_established": false,
+  "redistribution_rights_established": false,
+  "reviewed_at": "2026-10-16T02:45:12.671288+00:00",
+  "scheduled_clock_observation": "Calendar timestamps supply a research regular-session mark convention, not observed auction/execution or vendor latency. Exact source sessions will be required to match.",
+  "schema": "s10-terms-calendar-review-v1",
+  "terms_observation": "Current terms condition automated data access or collection on prior express permission; a conditional software/API license does not establish permission for this original acquisition. This audit establishes neither legal permission nor redistribution rights. No new Yahoo collection was made.",
+  "yahoo_terms": {
+    "path": "research/frem_s10_production_20261016/data_provenance/yahoo_terms.html",
+    "sha256": "4bcdd5402dcb56638165e1566de0c6a980b31a42eb3ab7ff092e1f9dacb2a257"
+  },
+  "yahoo_terms_url": "https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html?ncid=mbr_idnedulnk00000001"
+}

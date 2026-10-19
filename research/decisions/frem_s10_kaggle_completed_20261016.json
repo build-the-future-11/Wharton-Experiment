@@ -1,0 +1,8 @@
+{
+  "observation": "Actual Kaggle generated CPU run completed 12 origins after planned interruption at 3. Exact evaluation reconstruction and completed reuse passed. Private Version 3 output was retrieved; terminal archive and 116 inventory hashes verified; nested export 48 artifacts plus evaluation/inventory verified. UI confirmed Session stopped.",
+  "hypothesized_cause": "Isolated supported runtime and bounded namespace-only smoke contract resolve observed Kaggle incompatibilities; duplicate source payload caused a separate 1MB save limit error.",
+  "change": "Accept this exact generated engineering receipt; preserve rejected full-root probe and interrupted checkpoint history. Document one embedded payload per draft. No production gate or scientific hypothesis change.",
+  "predicted_effect": "Reproducible bounded Kaggle CPU engineering delivery with persisted checkpoint evidence.",
+  "discriminating_experiment": "Completed target interrupt/resume/evaluate/reuse/export plus external hash and inventory verification.",
+  "result": "KAGGLE_GENERATED_CPU_END_TO_END_VERIFIED; scientific NOT_EVALUATED; production unqualified. Evidence: research/frem_s10_kaggle_live_20261016/VERIFICATION_RECEIPT.json"
+}

@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-16T10:37:16.153217+00:00",
+  "python": "3.12.14",
+  "numpy": "2.5.4",
+  "system": "Linux x86_64",
+  "namespace_guard": "SMOKE_ONLY_ADMITTED",
+  "hidden_ancestors": "UNKNOWN",
+  "production_admission": false,
+  "probe_sha256": "e14c5d6e687856920a810f0ad6ce292d79d269a4d543e8c45c63d47e42b78c50",
+  "source_readback_verified": true,
+  "namespace_regression_tests": 37
+}
