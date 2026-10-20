@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-20",
+  "type": "exact_design_retry_after_external_infrastructure_failure",
+  "version": "FREM-S14-0.1.5 Kaggle saved version 360505332",
+  "observation": "The exact 0.1.5 notebook was pushed as private Kaggle Version 3 after Version 2 had failed before notebook execution during external dataset mounting. Kaggle independently returned the saved source; normalized cells matched the local candidate exactly. The declared dataset, GPU T4 x2 accelerator, and Internet-off setting were observed, and the version entered RUNNING state.",
+  "decision": "Monitor this single exact-design retry to a terminal state. Do not duplicate the launch, change thresholds, folds, arms, seeds, cohort rules, or budgets, and do not inspect or reinterpret protected outcomes outside the frozen execution order.",
+  "discriminating_evidence": "A valid continuation requires warning-strict target tests, generated CUDA qualification, qualification verification, strict intake, all 171 declared historical cells, suite verification, complete retained outputs, and independent readback. Any failure or unstarted cell remains in the denominator.",
+  "result": "LAUNCHED_RUNNING_NOT_EVALUATED",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "receipt": "research/frem_s14_kaggle_0_1_5_20261020/LAUNCH_RECEIPT.json"
+}

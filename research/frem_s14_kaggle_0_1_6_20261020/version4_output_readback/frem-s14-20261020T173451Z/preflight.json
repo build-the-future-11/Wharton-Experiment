@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "wall_seconds": 3.1303657290000046,
+  "command": [
+    "-m",
+    "frem_s14",
+    "preflight",
+    "--output",
+    "/kaggle/working/frem-s14-20261020T173451Z/host-admission.json"
+  ]
+}

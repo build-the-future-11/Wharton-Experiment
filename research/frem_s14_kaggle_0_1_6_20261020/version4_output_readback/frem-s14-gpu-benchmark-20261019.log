@@ -1,0 +1,90 @@
+[{"stream_name":"stderr","time":6.0743110829999996,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.074358371,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.074364138,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.074369378,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.634384299,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.634416561,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.6344220400000005,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.63442572,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":8.562276176,"data":"Processing ./frem-s14-20261020T173451Z/payload/frem_s14-0.1.6-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":8.569491373,"data":"Installing collected packages: frem-s14\n"}
+,{"stream_name":"stdout","time":8.634370976,"data":"Successfully installed frem-s14-0.1.6\n"}
+,{"stream_name":"stdout","time":8.713693903,"data":"Processing ./frem-s14-20261020T173451Z/payload/frem_s14-0.1.6-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":8.713719074,"data":"Installing collected packages: frem-s14\n"}
+,{"stream_name":"stdout","time":8.713724297,"data":"Successfully installed frem-s14-0.1.6\n"}
+,{"stream_name":"stdout","time":8.713727572,"data":"Verified release and isolated install: /kaggle/working/frem-s14-20261020T173451Z\n"}
+,{"stream_name":"stdout","time":12.054457836,"data":"{\"passed\": true, \"minimum_mib\": 512, \"samples\": [{\"available_mib\": 30293.36328125, \"pageouts\": 0}, {\"available_mib\": 30293.36328125, \"pageouts\": 0}, {\"available_mib\": 30293.36328125, \"pageouts\": 0}], \"time\": \"2026-10-20T17:34:55.634856+00:00\"}\n"}
+,{"stream_name":"stdout","time":12.054510021,"data":"\n"}
+,{"stream_name":"stdout","time":41.454327769,"data":"........................................................................ [ 68%]\n"}
+,{"stream_name":"stdout","time":41.454387216,"data":".................................                                        [100%]\n"}
+,{"stream_name":"stdout","time":41.454395087,"data":"105 passed in 22.79s\n"}
+,{"stream_name":"stdout","time":41.454399854,"data":"\n"}
+,{"stream_name":"stdout","time":72.409243144,"data":"{\n"}
+,{"stream_name":"stdout","time":72.409302832,"data":"  \"output\": \"/kaggle/working/frem-s14-20261020T173451Z/qualification\",\n"}
+,{"stream_name":"stdout","time":72.409314713,"data":"  \"status\": \"COMPLETE\",\n"}
+,{"stream_name":"stdout","time":72.409321436,"data":"  \"cells\": 19\n"}
+,{"stream_name":"stdout","time":72.40932979,"data":"}\n"}
+,{"stream_name":"stdout","time":72.409333468,"data":"\n"}
+,{"stream_name":"stdout","time":77.237410998,"data":"{\n"}
+,{"stream_name":"stdout","time":77.237443996,"data":"  \"verified\": true,\n"}
+,{"stream_name":"stdout","time":77.237449867,"data":"  \"files\": 222,\n"}
+,{"stream_name":"stdout","time":77.237454252,"data":"  \"semantics\": {\n"}
+,{"stream_name":"stdout","time":77.23745886,"data":"    \"cells\": 19,\n"}
+,{"stream_name":"stdout","time":77.237463513,"data":"    \"law_scores_and_ledger_arithmetic_verified\": true\n"}
+,{"stream_name":"stdout","time":77.237467842,"data":"  }\n"}
+,{"stream_name":"stdout","time":77.237471971,"data":"}\n"}
+,{"stream_name":"stdout","time":77.237488467,"data":"\n"}
+,{"stream_name":"stdout","time":80.379054594,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":80.379089289,"data":"  File \"\u003cfrozen runpy\u003e\", line 203, in _run_module_as_main\n"}
+,{"stream_name":"stdout","time":80.37909491,"data":"  File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\n"}
+,{"stream_name":"stdout","time":80.379099723,"data":"  File \"/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py\", line 229, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":80.379103604,"data":"    main()\n"}
+,{"stream_name":"stdout","time":80.379107008,"data":"    ~~~~^^\n"}
+,{"stream_name":"stdout","time":80.37911062,"data":"  File \"/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py\", line 225, in main\n"}
+,{"stream_name":"stdout","time":80.379114477,"data":"    print(json.dumps({\"panel\": str(prepare(args.source, args.output))}))\n"}
+,{"stream_name":"stdout","time":80.379118012,"data":"                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":80.379121729,"data":"  File \"/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py\", line 97, in prepare\n"}
+,{"stream_name":"stdout","time":80.379125835,"data":"    raise ValueError(\n"}
+,{"stream_name":"stdout","time":80.379129288,"data":"        f\"exactly one regular {asset}.us.txt required, found {len(matches)}\"\n"}
+,{"stream_name":"stdout","time":80.379132854,"data":"    )\n"}
+,{"stream_name":"stdout","time":80.379136188,"data":"ValueError: exactly one regular spy.us.txt required, found 2\n"}
+,{"stream_name":"stdout","time":80.379139307,"data":"\n"}
+,{"stream_name":"stderr","time":80.606063726,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":80.606818325,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":80.606846272,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":80.606852424,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":80.606856922,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":80.606861021,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":80.606864423,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":80.60686797299999,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":80.606871919,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":80.606875603,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":80.606879337,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":80.606883759,"data":"Exception encountered at \"In [3]\":\n"}
+,{"stream_name":"stderr","time":80.606887518,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":80.606891305,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":80.606904463,"data":"/tmp/ipykernel_23/1924729295.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":80.606908419,"data":"      1 if MODE == \"historical_suite\":\n"}
+,{"stream_name":"stderr","time":80.606912368,"data":"----\u003e 2     run(\n"}
+,{"stream_name":"stderr","time":80.606916141,"data":"      3         \"intake\",\n"}
+,{"stream_name":"stderr","time":80.606919623,"data":"      4         [\"-m\", \"frem_s14.intake\", \"--source\", \"/kaggle/input\", \"--output\", str(RUN / \"intake\")],\n"}
+,{"stream_name":"stderr","time":80.606923783,"data":"      5         300,\n"}
+,{"stream_name":"stderr","time":80.60692773,"data":"\n"}
+,{"stream_name":"stderr","time":80.606931804,"data":"/tmp/ipykernel_23/1027156711.py in run(name, args, timeout)\n"}
+,{"stream_name":"stderr","time":80.606936596,"data":"    126     print(log.read_text()[-16000:])\n"}
+,{"stream_name":"stderr","time":80.60694096,"data":"    127     if code:\n"}
+,{"stream_name":"stderr","time":80.60694463,"data":"--\u003e 128         raise RuntimeError(f\"{name} failed ({code}); retained {log}\")\n"}
+,{"stream_name":"stderr","time":80.606948636,"data":"    129 \n"}
+,{"stream_name":"stderr","time":80.606952399,"data":"    130 \n"}
+,{"stream_name":"stderr","time":80.606955877,"data":"\n"}
+,{"stream_name":"stderr","time":80.606959226,"data":"RuntimeError: intake failed (1); retained /kaggle/working/frem-s14-20261020T173451Z/intake.log\n"}
+,{"stream_name":"stderr","time":80.606962903,"data":"\n"}
+,{"stream_name":"stderr","time":82.716157997,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":82.716219297,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":82.872039837,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":82.872071473,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":83.600054335,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":83.674387399,"data":"[NbConvertApp] Writing 126111 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":86.112875699,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":86.62379194,"data":"[NbConvertApp] Writing 417771 bytes to __results__.html\n"}
+]

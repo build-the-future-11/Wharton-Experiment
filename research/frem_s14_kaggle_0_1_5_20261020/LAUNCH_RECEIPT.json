@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-10-20T17:28:51+00:00",
+  "notebook": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "version": 360505332,
+  "version_number": 3,
+  "status": "FAILED_ENGINEERING_DURING_GENERATED_QUALIFICATION",
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=360505332",
+  "package_version": "0.1.5",
+  "source_identity": "6ccbee61b0518d0efa297bcfe547e769c4e3a9c51610341f4e8c622258414d37",
+  "release": {
+    "archive": "successors/frem_s14/dist/frem_s14_kaggle_bundle-0.1.5.zip",
+    "archive_sha256": "a9ff2591113db8783d6052a8748f34bd899e576083bbd380cf388be7f2663e00",
+    "wheel": "successors/frem_s14/dist/frem_s14-0.1.5-py3-none-any.whl",
+    "wheel_sha256": "111b293fd34b9007d1b858bda926957f8f4efed6d11fabd8b821e24392590497",
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_5.ipynb",
+    "notebook_sha256": "4b53294ef11fe2d2c582c7d4fb7220af66639da73e8a34c28bd72237b10a10f9"
+  },
+  "saved_source_readback": {
+    "method": "Kaggle CLI pull of the latest saved private source",
+    "downloaded_notebook_sha256": "68fd41562a0b2b10d746d1e8ecebedded0d12db7b57e0132d174da350806250c",
+    "normalized_cells_sha256": "8cc1cb6833be54910ff7dda9f68c7c080b79c3f41ee17317328612f2e27b9c0e",
+    "local_normalized_cells_sha256": "8cc1cb6833be54910ff7dda9f68c7c080b79c3f41ee17317328612f2e27b9c0e",
+    "exact_cell_content_match": true,
+    "note": "Kaggle normalized notebook source arrays to strings and rewrote the outer notebook serialization; normalized cell types, metadata, and source content are byte-identical."
+  },
+  "settings_readback": {
+    "visibility": "Private",
+    "accelerator": "GPU T4 x2",
+    "internet": false,
+    "dataset_sources": [
+      "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
+    ]
+  },
+  "execution_contract": {
+    "mode": "historical_suite",
+    "device": "cuda",
+    "expected_tests": 102,
+    "expected_generated_arms": 19,
+    "expected_historical_cells": 171,
+    "notebook_seconds_ceiling": 13500
+  },
+  "tests_passed": 104,
+  "generated_arms_completed": 14,
+  "failed_generated_arm": "gru-s11",
+  "historical_cells_completed": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "terminal_receipt": "research/frem_s14_kaggle_0_1_5_20261020/FAILURE_RECEIPT.json",
+  "claim": "The exact private retry was saved, independently read back, and executed. It failed during generated qualification before market intake; partial engineering evidence is not scientific evidence."
+}

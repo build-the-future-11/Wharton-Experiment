@@ -23,6 +23,7 @@ from frem_s14.evaluation import (
 from frem_s14.model import S14, nll, objective
 from frem_s14.runtime import digest, write_json
 from frem_s14.training import (
+    GRUForecast,
     load_checkpoint,
     populate,
     predict,
@@ -248,6 +249,15 @@ def test_training_and_epoch_resume_are_equal(cfg, tmp_path):
     before = full.memory.values.clone()
     populate(full, samples, np.array([], dtype=np.int64), DEVICE)
     torch.testing.assert_close(full.memory.values, before)
+
+
+def test_gru_predict_uses_shared_non_trace_interface(cfg):
+    """Regression for Kaggle Version 3's S14-only keyword leak."""
+    samples = Samples(generated_panel(), cfg)
+    model = GRUForecast(cfg.model).to(DEVICE)
+    result = predict(model, samples, samples.validation[:3], DEVICE)
+    assert set(result) == {"mu", "scale", "weights", "mean", "std", "nll"}
+    assert all(np.isfinite(value).all() for value in result.values())
 
 
 @pytest.mark.skipif(DEVICE != "cuda", reason="requires explicitly selected CUDA runtime")

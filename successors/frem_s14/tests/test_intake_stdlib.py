@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from frem_s14.intake import asof_values, read_prices
+from frem_s14.intake import asof_values, read_prices, resolve_etf_source
 
 
 class IntakeTests(unittest.TestCase):
@@ -80,6 +80,29 @@ class IntakeTests(unittest.TestCase):
     def test_timezone_required(self):
         with self.assertRaises(ValueError):
             asof_values(["2000-01-01"], [])
+
+    def test_etf_taxonomy_resolves_stock_basename_collision(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            etf = root / "mounted-dataset" / "Data" / "ETFs" / "spy.us.txt"
+            stock = root / "mounted-dataset" / "Data" / "Stocks" / "spy.us.txt"
+            etf.parent.mkdir(parents=True)
+            stock.parent.mkdir(parents=True)
+            etf.write_text("etf\n")
+            stock.write_text("stock\n")
+            selected, matches = resolve_etf_source(root, "spy")
+            self.assertEqual(selected, etf)
+            self.assertEqual(matches, [etf, stock])
+
+    def test_duplicate_canonical_etf_mounts_fail_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            for mount in ("dataset-a", "dataset-b"):
+                path = root / mount / "Data" / "ETFs" / "spy.us.txt"
+                path.parent.mkdir(parents=True)
+                path.write_text("etf\n")
+            with self.assertRaisesRegex(ValueError, "found 2 canonical"):
+                resolve_etf_source(root, "spy")
 
 
 if __name__ == "__main__":

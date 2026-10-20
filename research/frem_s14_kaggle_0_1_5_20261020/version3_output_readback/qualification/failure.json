@@ -1,0 +1,65 @@
+{
+  "complete_cells": [
+    {
+      "arm": "full",
+      "seed": 11
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11
+    },
+    {
+      "arm": "zero",
+      "seed": 11
+    },
+    {
+      "arm": "ridge",
+      "seed": 11
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11
+    }
+  ],
+  "error": "GRUForecast.forward() got an unexpected keyword argument 'capture_trace'",
+  "expected_cells": 19,
+  "traceback": "Traceback (most recent call last):\n  File \"/kaggle/working/frem-s14-20261020T172750Z/installed/frem_s14/cli.py\", line 219, in campaign\n    model = train_neural(\n        samples, config, arm, seed, cell, deadline, binding, resume\n    )\n  File \"/kaggle/working/frem-s14-20261020T172750Z/installed/frem_s14/training.py\", line 233, in train_neural\n    validation = predict(model, samples, samples.validation, config.device, deadline)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File \"/kaggle/working/frem-s14-20261020T172750Z/installed/frem_s14/training.py\", line 91, in predict\n    output = model(\n        tensor(x, device),\n    ...<2 lines>...\n        capture_trace=capture_trace,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\nTypeError: GRUForecast.forward() got an unexpected keyword argument 'capture_trace'\n",
+  "type": "TypeError",
+  "wall_seconds": 24.994732229999954
+}

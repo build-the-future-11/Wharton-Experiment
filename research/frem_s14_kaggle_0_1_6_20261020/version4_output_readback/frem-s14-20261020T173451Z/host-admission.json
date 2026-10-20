@@ -1,0 +1,19 @@
+{
+  "minimum_mib": 512,
+  "passed": true,
+  "samples": [
+    {
+      "available_mib": 30293.36328125,
+      "pageouts": 0
+    },
+    {
+      "available_mib": 30293.36328125,
+      "pageouts": 0
+    },
+    {
+      "available_mib": 30293.36328125,
+      "pageouts": 0
+    }
+  ],
+  "time": "2026-10-20T17:34:55.634856+00:00"
+}

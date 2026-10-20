@@ -88,12 +88,15 @@ def predict(model, samples, indices, device, deadline=float("inf"), capture_trac
     for ix in samples.batches(indices):
         budget(deadline)
         x, _ = samples.batch(ix)
-        output = model(
+        arguments = (
             tensor(x, device),
             tensor(samples.time[ix], device),
             tensor(samples.asset[ix], device),
-            capture_trace=capture_trace,
         )
+        # Retrieval tracing belongs only to the S14 law.  Do not pass its
+        # private keyword through the shared prediction path to controls such
+        # as GRUForecast, even when tracing is disabled.
+        output = model(*arguments, capture_trace=True) if capture_trace else model(*arguments)
         loss = nll(
             output,
             tensor(samples.y[ix] / samples.target_scale, device, torch.float32),

@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-10-20T17:30:00+00:00",
+  "notebook": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "version": 360505332,
+  "version_number": 3,
+  "status": "FAILED_ENGINEERING_DURING_GENERATED_QUALIFICATION",
+  "runtime_seconds": 101.3,
+  "output_files_reported_by_kaggle": 246,
+  "host_admission": {
+    "passed": true,
+    "minimum_mib": 512,
+    "available_mib": [
+      30294.06640625,
+      30294.06640625,
+      30294.18359375
+    ],
+    "pageouts": [
+      0,
+      0,
+      0
+    ]
+  },
+  "tests": {
+    "passed": 104,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "wall_seconds": 37.62
+  },
+  "qualification": {
+    "expected_cells": 19,
+    "complete_cells": 14,
+    "failed_cells": [
+      {
+        "arm": "gru",
+        "seed": 11,
+        "error": "GRUForecast.forward() got an unexpected keyword argument 'capture_trace'"
+      }
+    ],
+    "not_started_cells": [
+      {"arm": "no_spde", "seed": 11},
+      {"arm": "no_multihorizon", "seed": 11},
+      {"arm": "no_graph", "seed": 11},
+      {"arm": "no_mask", "seed": 11}
+    ],
+    "failure_sha256": "36f2adec5576f1a4e1cb2fa9598cf502e347d915ed62ec31a42f20e36aad05e7",
+    "cells_sha256": "c880202e7cba73344fd32fb2ef18fb4c531eafb9009e510c61b73273cbc45485"
+  },
+  "market_intake_started": false,
+  "historical_cells_completed": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "evidence": "research/frem_s14_kaggle_0_1_5_20261020/version3_output_readback",
+  "decision": "Preserve this partial failure. Correct the interface defect in a separately versioned freeze; do not tune or reinterpret generated qualification as market evidence."
+}

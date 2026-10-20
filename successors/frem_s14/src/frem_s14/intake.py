@@ -24,6 +24,29 @@ FEATURES = (
 )
 
 
+def resolve_etf_source(source_root, asset):
+    """Resolve one asset from the dataset's declared ``Data/ETFs`` taxonomy.
+
+    The upstream archive can contain the same ticker filename in both its
+    ``Stocks`` and ``ETFs`` branches. The cohort is explicitly an ETF cohort,
+    so a repository-wide basename match is ambiguous and incorrect. We still
+    fail closed if more than one canonical ETF path is mounted.
+    """
+    filename = asset + ".us.txt"
+    all_matches = sorted(Path(source_root).rglob(filename))
+    canonical = [
+        path
+        for path in all_matches
+        if len(path.parts) >= 3 and path.parts[-3:] == ("Data", "ETFs", filename)
+    ]
+    if len(canonical) != 1 or canonical[0].is_symlink() or not canonical[0].is_file():
+        raise ValueError(
+            f"exactly one regular Data/ETFs/{filename} required, "
+            f"found {len(canonical)} canonical among {len(all_matches)} basename matches"
+        )
+    return canonical[0], all_matches
+
+
 def read_prices(path, boundary="2025-01-01"):
     if date.fromisoformat(boundary).isoformat() != boundary or boundary > "2025-01-01":
         raise ValueError("invalid or protected price boundary")
@@ -92,12 +115,7 @@ def prepare(source_root, output, start="2007-01-01", stop="2018-01-01"):
     try:
         tables = {}
         for asset in ASSETS:
-            matches = sorted(Path(source_root).rglob(asset + ".us.txt"))
-            if len(matches) != 1 or matches[0].is_symlink() or not matches[0].is_file():
-                raise ValueError(
-                    f"exactly one regular {asset}.us.txt required, found {len(matches)}"
-                )
-            path = matches[0]
+            path, matches = resolve_etf_source(source_root, asset)
             table = read_prices(path, boundary=stop)
             selected = {k: v for k, v in table.items() if start <= k < stop}
             if len(selected) < 200:
@@ -108,6 +126,8 @@ def prepare(source_root, output, start="2007-01-01", stop="2018-01-01"):
                 "bytes": path.stat().st_size,
                 "selected_rows": len(selected),
                 "source_path": str(path),
+                "basename_matches": [str(candidate) for candidate in matches],
+                "selection_rule": "exact Data/ETFs path suffix",
             }
         dates = list(tables[ASSETS[0]])
         for asset, table in tables.items():

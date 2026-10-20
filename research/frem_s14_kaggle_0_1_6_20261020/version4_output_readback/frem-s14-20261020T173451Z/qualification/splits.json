@@ -1,0 +1,20 @@
+{
+  "test": {
+    "first_decision": 959212800000000,
+    "last_decision": 961977600000000,
+    "last_label": 962150400000000,
+    "rows": 132
+  },
+  "train": {
+    "first_decision": 947289600000000,
+    "last_decision": 956016000000000,
+    "last_label": 956188800000000,
+    "rows": 408
+  },
+  "validation": {
+    "first_decision": 956275200000000,
+    "last_decision": 958953600000000,
+    "last_label": 959126400000000,
+    "rows": 128
+  }
+}

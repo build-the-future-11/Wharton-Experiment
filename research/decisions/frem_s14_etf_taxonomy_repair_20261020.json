@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-20",
+  "type": "pre_market_input_discovery_repair",
+  "observation": "Kaggle Version 4 passed 105 warning-strict tests and the complete verified 19-arm CUDA qualification, then failed before any historical cell because a recursive basename lookup found two spy.us.txt files.",
+  "validity_defect": "The declared cohort is eight ETFs and the attached provider archive exposes an explicit Data/ETFs branch. Repository-wide basename discovery is ambiguous and does not implement that fixed source taxonomy.",
+  "decision": "Preserve Version 4 as failed. Freeze a separately versioned 0.1.7 candidate that requires exactly one regular Data/ETFs/<ticker>.us.txt path, records every same-name match, and still refuses zero or multiple canonical ETF mounts.",
+  "unchanged": [
+    "cohort membership",
+    "historical interval",
+    "folds",
+    "seeds",
+    "arms",
+    "labels",
+    "scores",
+    "thresholds",
+    "budgets"
+  ],
+  "discriminating_evidence": "The exact 0.1.7 package must pass all warning-strict tests and 19-arm CUDA qualification, select only the declared ETF branch without canonical ambiguity, and then execute all 171 historical cells.",
+  "result": "CORRECTED_FREEZE_PACKAGED_NOT_NUMERICALLY_QUALIFIED",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "prior_failure_receipt": "research/frem_s14_kaggle_0_1_6_20261020/FAILURE_RECEIPT.json"
+}

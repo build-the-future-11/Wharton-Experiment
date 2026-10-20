@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-20T17:42:43Z",
+  "package_version": "0.1.7",
+  "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
+  "change": "Replace repository-wide ticker basename discovery with exact Data/ETFs taxonomy resolution; retain all matches in the intake receipt and reject duplicate canonical mounts.",
+  "release": {
+    "archive": "successors/frem_s14/dist/frem_s14_kaggle_bundle-0.1.7.zip",
+    "archive_sha256": "054086b6e4f26be99387dc47a4cbea30a5aa76112fd6e3f3093a90b80517c5c7",
+    "wheel": "successors/frem_s14/dist/frem_s14-0.1.7-py3-none-any.whl",
+    "wheel_sha256": "fab2bc0d8d1b9c5dee8cd63054c083a7bbe0f38a9f672e33625bcba165b03520",
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_7.ipynb",
+    "notebook_sha256": "d043efd5965e354474536cff2617f8237bf2f3c4ebe5a63bd89e4e1321c8fb0e",
+    "metadata_sha256": "f43e46d233ff27d1196ed46ea718ced7dac3d9e3b61e674f5259b34122e59fbc"
+  },
+  "local_checks": {
+    "ruff_format": "PASS",
+    "ruff_lint": "PASS",
+    "compileall": "PASS",
+    "source_dependency_free_tests": "24 passed",
+    "wheel_dependency_free_version_tests": "14 passed",
+    "numerical_tests": "NOT_RUN_LOCALLY_RESOURCE_GATE"
+  },
+  "runtime_qualified": false,
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

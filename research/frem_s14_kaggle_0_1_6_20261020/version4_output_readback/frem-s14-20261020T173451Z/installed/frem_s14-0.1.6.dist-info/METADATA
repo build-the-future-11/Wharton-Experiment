@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: frem-s14
+Version: 0.1.6
+Summary: Reservoir, graph engram, stochastic-field JEPA and bounded neurogenesis research
+Requires-Python: <3.14,>=3.11
+Requires-Dist: numpy<3,>=1.26
+Requires-Dist: torch<3,>=2.4
+Requires-Dist: scipy<2,>=1.12
+Requires-Dist: xgboost<4,>=2.1
+Requires-Dist: packaging>=23
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
+Requires-Dist: ruff<1,>=0.9; extra == "dev"
+Requires-Dist: build<2,>=1.2; extra == "dev"

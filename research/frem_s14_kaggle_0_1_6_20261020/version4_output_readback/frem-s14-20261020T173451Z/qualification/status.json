@@ -1,0 +1,87 @@
+{
+  "complete_cells": [
+    {
+      "arm": "full",
+      "seed": 11
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11
+    },
+    {
+      "arm": "zero",
+      "seed": 11
+    },
+    {
+      "arm": "ridge",
+      "seed": 11
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11
+    },
+    {
+      "arm": "gru",
+      "seed": 11
+    },
+    {
+      "arm": "no_spde",
+      "seed": 11
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 11
+    },
+    {
+      "arm": "no_graph",
+      "seed": 11
+    },
+    {
+      "arm": "no_mask",
+      "seed": 11
+    }
+  ],
+  "data_purpose": "generated_engineering",
+  "expected_cells": 19,
+  "kind": "generated_qualification",
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "status": "COMPLETE",
+  "wall_seconds": 29.547526988000016
+}

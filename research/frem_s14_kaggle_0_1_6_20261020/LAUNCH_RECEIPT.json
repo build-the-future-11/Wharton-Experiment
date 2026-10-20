@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-20T17:35:11+00:00",
+  "notebook": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "version": 360508080,
+  "version_number": 4,
+  "status": "RUNNING",
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=360508080",
+  "package_version": "0.1.6",
+  "source_identity": "5d941931c70210f7194833f38fe6abe99f2d8ee21f9c7247f3ea8eedf5393696",
+  "release": {
+    "archive": "successors/frem_s14/dist/frem_s14_kaggle_bundle-0.1.6.zip",
+    "archive_sha256": "5583dd6540a5b95dd6a0c99416f674b06aa9bd6d4d3f761cdc56263fb10dc8b0",
+    "wheel": "successors/frem_s14/dist/frem_s14-0.1.6-py3-none-any.whl",
+    "wheel_sha256": "3840a24ae8873f366f72152461329e5b2646f6bf05b9863dc0d78cfe09e333b7",
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_6.ipynb",
+    "notebook_sha256": "26db486453a326ca7e504bd488f8b438d51e2dc0c21a2bc8255ae7340e696755"
+  },
+  "saved_source_readback": {
+    "downloaded_notebook_sha256": "2b704d2e298296278eefc593b5dc8564e2403beb0a82aee08f450a679440dc57",
+    "normalized_cells_sha256": "08c8be204e480fc14b13e203f476b501a72e562af357881bcc516d475b2bf935",
+    "local_normalized_cells_sha256": "08c8be204e480fc14b13e203f476b501a72e562af357881bcc516d475b2bf935",
+    "exact_cell_content_match": true
+  },
+  "settings_readback": {
+    "visibility": "Private",
+    "accelerator": "GPU T4 x2",
+    "internet": false,
+    "dataset_sources": [
+      "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
+    ]
+  },
+  "execution_contract": {
+    "mode": "historical_suite",
+    "device": "cuda",
+    "expected_tests": 105,
+    "expected_generated_arms": 19,
+    "expected_historical_cells": 171,
+    "notebook_seconds_ceiling": 13500
+  },
+  "tests_passed": null,
+  "generated_arms_completed": null,
+  "historical_cells_completed": 0,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "type": "validity_defect_corrected_freeze",
+  "predecessor": "FREM-S14-0.1.5 Kaggle saved version 360505332",
+  "observation": "Version 3 passed its 512 MiB/no-rising-pageout host admission, passed all 104 warning-strict tests, and completed 14 of 19 generated qualification arms. The GRU arm then failed because the shared predict function passed capture_trace=False to GRUForecast.forward, whose control interface intentionally has no S14 retrieval-trace keyword. Five qualification arms and all market intake and historical cells remained not started.",
+  "defect": "A diagnostic-only S14 keyword leaked through the shared non-trace prediction call into the GRU control. The existing tests covered S14 tracing but did not execute the GRU control through predict.",
+  "repair": "When capture_trace is false, call every model only with the shared positional forecast interface. Pass capture_trace=True only for the full S14 trace request. Add a numerical regression test that sends a generated validation batch through GRUForecast via predict and checks finite forecast laws.",
+  "scientific_change": "None. Thresholds, folds, arms, seeds, cohort rules, budgets, labels, scores, and protected boundaries are unchanged.",
+  "decision": "Freeze the repair as separately versioned FREM-S14-0.1.6. Rebuild immutable artifacts and require complete warning-strict tests and CUDA qualification before market intake. Preserve Version 3 and every failed or not-started cell.",
+  "result": "CORRECTED_FREEZE_REQUIRES_EXECUTION",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "receipt": "research/frem_s14_kaggle_0_1_5_20261020/FAILURE_RECEIPT.json"
+}

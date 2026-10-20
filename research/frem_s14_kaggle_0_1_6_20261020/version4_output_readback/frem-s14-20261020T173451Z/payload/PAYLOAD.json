@@ -1,0 +1,70 @@
+{
+  "CHECKLIST.md": {
+    "bytes": 7148,
+    "sha256": "4bb93bf4564b92c9384cbc50aae64b51728e688260c1f85b556615b8ac9a6655"
+  },
+  "DATA_CONTRACT.md": {
+    "bytes": 3233,
+    "sha256": "9b0225577df30b2f204fd68abc84887e250ce9ca588c05c5cf9f7aa0d4cef8ea"
+  },
+  "README.md": {
+    "bytes": 5291,
+    "sha256": "e2233762a9a9636ad0b62104992f5e325ffab76700d15ad0399760520eff5fb4"
+  },
+  "SPECIFICATION.md": {
+    "bytes": 8823,
+    "sha256": "00ffc31ae04750643886acf859ad788e86c4d94857957aa00f2251a15f56e63c"
+  },
+  "configs/development.json": {
+    "bytes": 1533,
+    "sha256": "c0cf98cf82b704bf25efbd390391b6bfe9a07cc9787f56da247e02560c8f5ff6"
+  },
+  "configs/historical_suite.json": {
+    "bytes": 1845,
+    "sha256": "e10abc7ef027dac9acd9a404430c013dda07e80f5ba2edc02b734ef2a755d9aa"
+  },
+  "frem_s14-0.1.6-py3-none-any.whl": {
+    "bytes": 48800,
+    "sha256": "3840a24ae8873f366f72152461329e5b2646f6bf05b9863dc0d78cfe09e333b7"
+  },
+  "tests/conftest.py": {
+    "bytes": 523,
+    "sha256": "b907af05c5675cceebf0e0dca07681cab34dea1bcbe73fc014f19fa395a3e774"
+  },
+  "tests/test_archive_stdlib.py": {
+    "bytes": 5545,
+    "sha256": "08ef2bb3df48c01c5d8f83c4ddf9b9a200206f30a5b588835eb01a6cc8916519"
+  },
+  "tests/test_hardening_numerical.py": {
+    "bytes": 8921,
+    "sha256": "cc6a865fc57c26a569f28c6ce123942be15a429a3ce50513ced758dabafa42d1"
+  },
+  "tests/test_hardening_stdlib.py": {
+    "bytes": 10887,
+    "sha256": "4c0bb2d87a53421befd7b3cf3980dbe90c75938b9da085bd7c9efc8fb9b7eab5"
+  },
+  "tests/test_intake_stdlib.py": {
+    "bytes": 2933,
+    "sha256": "bd1e457fda9b5b5c51abf3fbc18d7a223ba1afeac75460d78ad7742508e9d01a"
+  },
+  "tests/test_numerical.py": {
+    "bytes": 10665,
+    "sha256": "a85dbff46424a12b42ea24ead86e2cc50885d2497f4e480744ceeba2b4a23242"
+  },
+  "tests/test_readback_numerical.py": {
+    "bytes": 2972,
+    "sha256": "4ce1969d911fde81fd9d662f5c986b4c90ea9f247b5ff1c95de9af27b0ce6adf"
+  },
+  "tests/test_readback_stdlib.py": {
+    "bytes": 3288,
+    "sha256": "6a0c058e2f68c602962e76fd4be2864ba1429d15dca8c81721506521dc22a083"
+  },
+  "tests/test_stdlib.py": {
+    "bytes": 6213,
+    "sha256": "627ad77ccc69c43622e7e82c79d5a5ee095d818607b718886e918b1a48b5ea7e"
+  },
+  "tests/test_upgrades.py": {
+    "bytes": 6566,
+    "sha256": "1f23cdd2b51e6fe2de806d6a2dcf83377cd1fb20d916ae986e99cd4ba42bee96"
+  }
+}

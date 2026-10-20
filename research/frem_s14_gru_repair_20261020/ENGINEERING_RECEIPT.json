@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-10-20T17:34:00+00:00",
+  "candidate": "FREM-S14-0.1.6",
+  "role": "Separately versioned corrected freeze for the Version 3 GRU control-interface defect; scientific design unchanged",
+  "source_identity": "5d941931c70210f7194833f38fe6abe99f2d8ee21f9c7247f3ea8eedf5393696",
+  "release": {
+    "archive": "successors/frem_s14/dist/frem_s14_kaggle_bundle-0.1.6.zip",
+    "archive_sha256": "5583dd6540a5b95dd6a0c99416f674b06aa9bd6d4d3f761cdc56263fb10dc8b0",
+    "wheel": "successors/frem_s14/dist/frem_s14-0.1.6-py3-none-any.whl",
+    "wheel_sha256": "3840a24ae8873f366f72152461329e5b2646f6bf05b9863dc0d78cfe09e333b7",
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_6.ipynb",
+    "notebook_sha256": "26db486453a326ca7e504bd488f8b438d51e2dc0c21a2bc8255ae7340e696755",
+    "metadata": "successors/frem_s14/kaggle/kernel-metadata-0.1.6.json",
+    "metadata_sha256": "94957c22d6f4303285ed13606c25936f5d20d2d2c8d5622a46bcd6cb1d008e15"
+  },
+  "repair": {
+    "file": "successors/frem_s14/src/frem_s14/training.py",
+    "behavior": "Shared non-trace predictions use only positional forecast arguments; capture_trace=True is passed only for an explicit full-S14 trace request.",
+    "regression_test": "successors/frem_s14/tests/test_numerical.py::test_gru_predict_uses_shared_non_trace_interface"
+  },
+  "local_checks": {
+    "ruff_format": "PASS",
+    "ruff_lint": "PASS",
+    "compileall": "PASS",
+    "source_dependency_free_tests": "14 passed with warnings as errors",
+    "clean_wheel_version": "0.1.6",
+    "clean_wheel_dependency_free_tests": "14 passed with warnings as errors",
+    "numerical_tests": "NOT_RUN_LOCAL_RESOURCE_ADMISSION_FAILED"
+  },
+  "local_admission": {
+    "passed": false,
+    "minimum_mib": 512,
+    "available_mib": [
+      189.8125,
+      119.28125,
+      125.953125
+    ],
+    "pageouts": [
+      1071664,
+      1071715,
+      1071725
+    ]
+  },
+  "predecessor": {
+    "version": 360505332,
+    "status": "FAILED_ENGINEERING_DURING_GENERATED_QUALIFICATION",
+    "receipt": "research/frem_s14_kaggle_0_1_5_20261020/FAILURE_RECEIPT.json"
+  },
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "claim": "The corrected candidate is packaged and locally statically checked. Its new numerical regression and complete CUDA qualification still require the admitted Kaggle runtime."
+}

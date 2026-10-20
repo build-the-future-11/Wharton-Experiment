@@ -2,7 +2,7 @@
 
 S14 preserves S13 and all earlier research. It adds a two-dimensional latent stochastic diffusion field, masked multi-offset JEPA, mature-neighbor graph engrams, and training-residual-guided bounded neurogenesis to the reservoir and three-objective routed Student mixture. It retains XGBoost, hybrid XGBoost, ridge, GRU, zero, and mechanism ablations.
 
-**Status: 0.1.5 retrieval-trace candidate; numerical and Kaggle qualification pending.** It preserves terminal 0.1.3 saved version `359955736`, which failed during Kaggle dataset mounting before notebook execution, and the rejected 0.1.4 packaging candidate, while packaging a separate full-arm engram provenance trace. Do not interpret packaging or dependency-free checks as GPU or financial validation. All historical negative results remain closed.
+**Status: 0.1.7 ETF-source taxonomy repair candidate; numerical and Kaggle qualification pending.** It preserves terminal 0.1.3 saved version `359955736`, the rejected 0.1.4 packaging candidate, failed 0.1.5 saved version `360505332`, and failed 0.1.6 saved version `360508080`. Version 4 passed host admission, all 105 warning-strict tests, and all 19 generated CUDA qualification arms with independent verification. It then stopped before any historical cell because a repository-wide basename search found both the upstream `Data/ETFs/spy.us.txt` and `Data/Stocks/spy.us.txt`. Version 0.1.7 selects only the fixed cohort's declared `Data/ETFs` taxonomy, records every same-name match, and still fails closed on duplicate canonical ETF mounts. Thresholds, folds, arms, seeds, cohort membership, labels, scores and budgets are unchanged. Do not interpret qualification as financial validation. All historical negative results remain closed.
 
 ## Kaggle execution
 

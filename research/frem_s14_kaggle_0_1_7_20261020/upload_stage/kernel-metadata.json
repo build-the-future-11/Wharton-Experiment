@@ -1,0 +1,15 @@
+{
+  "id": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "title": "FREM S14 GPU benchmark 20261019",
+  "code_file": "FREM_S14_GPU_0_1_7.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [
+    "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

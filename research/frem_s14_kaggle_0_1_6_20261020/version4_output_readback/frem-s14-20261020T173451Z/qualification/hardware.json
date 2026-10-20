@@ -1,0 +1,5 @@
+{
+  "cuda": "12.8",
+  "device": "cuda",
+  "gpu": "Tesla T4"
+}

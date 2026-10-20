@@ -1,0 +1,26 @@
+{
+  "assets": [
+    "spy",
+    "qqq",
+    "iwm",
+    "dia",
+    "tlt",
+    "ief",
+    "gld",
+    "slv"
+  ],
+  "error": "ValueError: exactly one regular spy.us.txt required, found 2",
+  "files": {},
+  "limitations": [
+    "historical survivor-selected ETF cohort",
+    "no verified publication timestamps",
+    "adjustments may embed later revisions",
+    "no verified terminal distributions",
+    "not a tradable or point-in-time-valid performance claim"
+  ],
+  "rights": "Dataset card lists CC0; provider assertion",
+  "source": "https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+  "start": "2007-01-01",
+  "status": "FAILED",
+  "stop": "2018-01-01"
+}

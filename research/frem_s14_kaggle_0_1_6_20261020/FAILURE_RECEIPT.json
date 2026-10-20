@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-10-20T17:42:43Z",
+  "notebook": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "version": 360508080,
+  "version_number": 4,
+  "status": "FAILED_PRE_MARKET_INTAKE_AMBIGUITY",
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=360508080",
+  "package_version": "0.1.6",
+  "source_identity": "5d941931c70210f7194833f38fe6abe99f2d8ee21f9c7247f3ea8eedf5393696",
+  "archive_sha256": "5583dd6540a5b95dd6a0c99416f674b06aa9bd6d4d3f761cdc56263fb10dc8b0",
+  "wheel_sha256": "3840a24ae8873f366f72152461329e5b2646f6bf05b9863dc0d78cfe09e333b7",
+  "saved_source_normalized_cells_sha256": "08c8be204e480fc14b13e203f476b501a72e562af357881bcc516d475b2bf935",
+  "saved_source_exact_cell_content_match": true,
+  "host_admission": {
+    "passed": true,
+    "minimum_mib": 512,
+    "available_mib": [30293.36328125, 30293.36328125, 30293.36328125],
+    "pageouts": [0, 0, 0]
+  },
+  "tests": {
+    "passed": 105,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "wall_seconds": 22.79
+  },
+  "generated_qualification": {
+    "expected_arms": 19,
+    "completed_arms": 19,
+    "verification_passed": true,
+    "verified_files": 222,
+    "cuda": true
+  },
+  "failure": {
+    "stage": "historical_intake",
+    "error": "ValueError: exactly one regular spy.us.txt required, found 2",
+    "cause": "The fixed ETF cohort used a repository-wide basename search even though the attached source archive declares an explicit Data/ETFs taxonomy.",
+    "historical_cells_started": 0,
+    "market_fits": 0,
+    "protected_access": false
+  },
+  "preserved_output": "research/frem_s14_kaggle_0_1_6_20261020/version4_output_readback",
+  "scientific_status": "NOT_EVALUATED"
+}

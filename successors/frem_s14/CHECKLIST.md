@@ -54,11 +54,29 @@ Checked boxes mean implemented, not numerically validated. This is a bounded, re
 - [x] Keep the package export version synchronized with the wheel and accept both bare RunConfig files and declared suite-plan wrappers in the read-only `plan` CLI.
 - [ ] Execute the new trace contracts in the exact numerical runtime and CUDA qualification; static checks alone do not establish trace correctness.
 
+## Additional 0.1.6 GRU interface repair
+
+- [x] Preserve Kaggle Version 3 (`360505332`) as a failed partial qualification: host admission passed, 104 tests passed, 14/19 arms completed, GRU failed, five arms did not start, and market intake did not start.
+- [x] Keep S14 retrieval tracing out of the shared non-trace prediction call used by controls such as GRU.
+- [x] Add a numerical regression test that exercises `predict` with the GRU control and finite returned laws.
+- [x] Preserve the frozen thresholds, folds, arms, seeds, cohort rules, and budgets.
+- [x] Execute the corrected 0.1.6 package in the exact CUDA runtime: 105 tests and all 19 generated arms passed with independent verification before intake.
+
+## Additional 0.1.7 ETF taxonomy repair
+
+- [x] Preserve Kaggle Version 4 (`360508080`) as a failed pre-market run: generated CUDA qualification passed, intake failed on two `spy.us.txt` basename matches, and zero historical cells started.
+- [x] Resolve only the source archive's declared `Data/ETFs/<ticker>.us.txt` branch for the fixed ETF cohort, while recording all same-name matches.
+- [x] Fail closed if zero or multiple canonical ETF paths are mounted; never select by observed returns or downstream metrics.
+- [x] Add dependency-free regression tests for the stock/ETF basename collision and duplicate canonical mounts.
+- [ ] Execute the separately frozen 0.1.7 package in the exact CUDA runtime; Version 4's evidence does not transfer to changed source.
+
 ## Evidence gates still requiring execution
 
 - [ ] Full numerical suite on exact package, including SPDE matrix exponential/moments, graph causality, gradients and epoch resume.
 - [ ] CUDA and AMP test success; exact GPU package runtime qualification.
-- [ ] Authenticated Kaggle upload, saved notebook identity and run receipt.
+- [x] Authenticated private Kaggle upload, saved Version 3 source identity, and launch/failure receipt for 0.1.5.
+- [x] Authenticated private Kaggle upload, exact saved notebook identity, and terminal pre-market failure receipt for corrected 0.1.6.
+- [ ] Authenticated private Kaggle upload, saved notebook identity, and terminal run receipt for corrected 0.1.7.
 - [ ] Actual selected-dataset intake and all171 benchmark cells, without dropped failures.
 - [ ] Download and independently verify the saved Kaggle results bundle.
 - [ ] Demonstrated predictive improvement, efficiency or generalization. These are outcomes, not implementation properties.

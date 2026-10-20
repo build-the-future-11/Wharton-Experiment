@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-20",
+  "type": "corrected_freeze_gpu_launch",
+  "version": "FREM-S14-0.1.6 Kaggle saved version 360508080",
+  "observation": "The separately versioned GRU-interface repair was packaged as 0.1.6, saved as private Kaggle Version 4, independently read back with exact normalized cell content, and observed running with the declared dataset, GPU T4 x2, and Internet disabled.",
+  "decision": "Monitor this sole corrected-freeze run to a terminal state. Do not duplicate the launch or change thresholds, folds, arms, seeds, cohort rules, labels, scores, or budgets.",
+  "discriminating_evidence": "The run must pass all 105 warning-strict tests including the new GRU predict regression, complete and verify all 19 generated CUDA arms, then pass strict intake and all 171 historical cells with independent readback.",
+  "result": "LAUNCHED_RUNNING_NOT_EVALUATED",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "receipt": "research/frem_s14_kaggle_0_1_6_20261020/LAUNCH_RECEIPT.json"
+}

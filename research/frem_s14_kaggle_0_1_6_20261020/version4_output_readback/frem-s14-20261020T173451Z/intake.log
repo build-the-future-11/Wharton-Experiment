@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py", line 229, in <module>
+    main()
+    ~~~~^^
+  File "/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py", line 225, in main
+    print(json.dumps({"panel": str(prepare(args.source, args.output))}))
+                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/frem-s14-20261020T173451Z/installed/frem_s14/intake.py", line 97, in prepare
+    raise ValueError(
+        f"exactly one regular {asset}.us.txt required, found {len(matches)}"
+    )
+ValueError: exactly one regular spy.us.txt required, found 2
