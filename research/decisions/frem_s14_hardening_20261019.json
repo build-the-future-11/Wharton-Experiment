@@ -1,0 +1,20 @@
+{
+  "version": "FREM-S14-P0.2",
+  "type": "prospective_validity_hardening_before_market_access",
+  "date": "2026-10-19",
+  "predecessor": "research/frem_s14_hardening_20261019/before",
+  "preserved_source": "7c5e45bd2762b7b6b919cebc7a9367cdd1dac216f19fbe0478043664aa58c690",
+  "findings": [
+    "Outer manifests omit nested manifest.json files; special files are ignored.",
+    "Delayed feature availability may place the decision after a target return has been observed.",
+    "CSV extra fields and unvalidated OpenInt can be silently discarded.",
+    "Config permits moving the protected boundary beyond 2025.",
+    "Resume accounting trusts unverified nonfinite JSON wall time.",
+    "AMP graph retrieval may produce half-precision logits that cannot represent the invalid-neighbor sentinel; the AMP test only covered an empty bank.",
+    "Mixture variance subtracts large second moments and can lose small positive variance.",
+    "Completion checks lack explicit per-cell failure/not-started inventory and complete suite readback."
+  ],
+  "scope": "Repair validity, efficiency and rejection contracts while retaining reservoir, engram, masked multi-offset EMA JEPA, finite 2D stochastic field, bounded neurogenesis and multiobjective routing. Keep the 19 arms, three seeds, three folds, fixed budgets and inference thresholds unchanged. No market outcome has been consumed.",
+  "qualification": "New package 0.1.2 requires all current-source CPU/GPU tests and generated qualification; previous passes are historical only.",
+  "protected_access": false
+}

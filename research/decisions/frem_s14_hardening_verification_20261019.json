@@ -1,0 +1,23 @@
+{
+  "version": "FREM-S14-P0.2",
+  "type": "hardening_local_verification_and_gpu_handoff",
+  "date": "2026-10-19T06:11:45.892713+00:00",
+  "receipt": "research/frem_s14_hardening_20261019/RECEIPT.json",
+  "release": {
+    "package_version": "0.1.2",
+    "source_identity": "92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090",
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "2bcb3bee0b6427add1a9a59cb385e6282354286ff5f214b28c8ded21bbd73942",
+    "wheel": "frem_s14-0.1.2-py3-none-any.whl",
+    "wheel_sha256": "b9807bf7673f743ea490ecd8f991f4f6da0f2d265f3f69985b784d1a45d585c5",
+    "notebook_sha256": "06b7e332f53c39722a90189c4ab95117b262d17e66c263ade7f8d9be7303887a",
+    "members": 16,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "stdlib_unique_passes": 48,
+  "numerical_current_source": "NOT_RUN_RESOURCE_BLOCKED",
+  "benchmark": "0/171; design/budgets unchanged",
+  "protected_access": false,
+  "prior_results_preserved": true
+}

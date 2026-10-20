@@ -1,0 +1,110 @@
+Browser tab: 793906046, Title: "FREM S14 GPU benchmark 20261019 | Kaggle", URL: "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit".
+1 AXWebArea FREM S14 GPU benchmark 20261019 | Kaggle, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit
+	2 container root
+		3 container Main Kaggle page navigation
+			4 button Navigation menu
+			5 link Description: Skip to content, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit#site-content
+			6 pop up button Create on Kaggle
+				7 text Create
+			8 container
+				9 container
+					10 content list
+						11 container Home List Item
+							12 link Description: Home, Value: kaggle.com/
+						13 container Competitions List Item
+							14 link Description: Competitions, Value: kaggle.com/competitions
+						15 container Benchmarks List Item
+							16 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						17 container Game Arena List Item
+							18 link Description: Game Arena, Value: kaggle.com/game-arena
+					19 content list
+						20 container Data Hub List Item
+							21 link (collapsed) Description: Data Hub, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit#, Secondary Actions: Expand
+					22 content list
+						23 container More on Kaggle List Item
+							24 link (expanded) Description: More on Kaggle, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit#, Secondary Actions: Collapse
+				92 button (collapsed) Event running 1 View Active Events, Secondary Actions: Expand
+					93 container
+						94 container Event running
+							95 text update
+						96 text 1
+					97 text View Active Events
+		25 container site-content
+			26 container
+				27 heading FREM S14 GPU benchmark 20261019, Value: 1
+					28 container
+						29 text field (settable) Description: Title: FREM S14 GPU benchmark 20261019, Value: FREM S14 GPU benchmark 20261019, ID: notebook-title-input
+				30 text Draft saved
+				31 button File
+				32 button Edit
+				33 button View
+				34 button Run
+				98 button Settings
+				99 button Add-ons
+				35 button Help
+				100 button Share
+				101 button Save Version
+				102 button Description: Show Versions, ID: show-versions-button-trigger
+				36 button (disabled) Add cell
+				37 button Add cell options
+				38 button (disabled) Cut cell
+				39 button (disabled) Copy cell
+				40 button (disabled) Paste cell
+				41 button (disabled) Run current cell
+				42 button (disabled) Run All
+					43 text fast_forward
+					44 text Run All
+				45 button Show options
+				46 button Loading Editor Loading …
+					47 container Loading
+						48 text circle
+					49 text Editor
+					50 text Loading
+					51 text …
+				52 button (disabled) Start session
+				53 button (disabled) Factory reset
+				54 button (disabled) More settings
+				55 container
+					56 button Description: Open console, ID: frame-container-next-focus-element
+					57 button (disabled) Open command palette
+				58 container
+					59 container editor-sidebar-scroll-container
+						60 heading Notebook, Value: 2
+							61 text Notebook
+						62 container
+							63 heading Input, Value: 3
+								64 text Input
+							65 button (expanded) Description: Collapse Input, Secondary Actions: Collapse
+						66 button Add Input
+						67 button Upload
+						68 container
+							69 heading Output, Value: 3
+								70 text Output
+							71 button (expanded) Description: Collapse Output, Secondary Actions: Collapse
+						72 content list
+							73 container
+								74 button (collapsed) arrow_right, Help: Expand /kaggle/working, Secondary Actions: Expand
+								75 text /kaggle/working
+								76 button Description: Copy directory path (/kaggle/working), Help: Copy
+								77 button Refresh directory contents (/kaggle/working)
+						78 container
+							79 heading Table of contents, Value: 3
+								80 text Table of contents
+							81 button (expanded) Description: Collapse Table of contents, Secondary Actions: Collapse
+						82 heading No sections detected, Value: 6
+							83 text No sections detected
+						84 text Add markdown headers to add a section
+						85 container
+							86 heading Session options, Value: 3
+								87 text Session options
+							88 button (collapsed) Description: Expand Session options, Secondary Actions: Expand
+						103 container
+							104 heading Schedule a notebook to run, Value: 3
+								105 text Schedule a notebook to run
+							106 button (collapsed) Description: Expand Schedule a notebook to run, Secondary Actions: Expand
+				89 button Collapse Sidebar
+					90 container Collapse Sidebar
+						91 text arrow_right
+	107 text Could not connect to the reCAPTCHA service. Please check your internet connection and reload to get a reCAPTCHA challenge.
+
+The focused UI element is 1 AXWebArea FREM S14 GPU benchmark 20261019 | Kaggle, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit

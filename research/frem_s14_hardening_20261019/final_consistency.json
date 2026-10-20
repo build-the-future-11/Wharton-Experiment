@@ -1,0 +1,8 @@
+{
+  "predecessor_state_and_gpu_receipt": "UNCHANGED",
+  "candidate_source_and_release": "EXACT",
+  "followup": "ACTIVE_WITH_READY_AND_HASH_GUARDS",
+  "benchmark_completed": 0,
+  "benchmark_expected": 171,
+  "numerical_current_source": "UNRUN"
+}

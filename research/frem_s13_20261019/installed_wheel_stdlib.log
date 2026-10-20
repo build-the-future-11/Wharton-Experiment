@@ -1,0 +1,21 @@
+test_stdlib (unittest.loader._FailedTest.test_stdlib) ... ERROR
+
+======================================================================
+ERROR: test_stdlib (unittest.loader._FailedTest.test_stdlib)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_stdlib
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s13/tests/test_stdlib.py", line 10, in <module>
+    from frem_s13.config import ModelConfig, RunConfig
+ModuleNotFoundError: No module named 'frem_s13'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

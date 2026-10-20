@@ -1,0 +1,11 @@
+{
+  "tests_run": 17,
+  "passed": 16,
+  "errors": 1,
+  "failed": 0,
+  "seconds": 2.107,
+  "test": "test_background_descendant_is_terminated",
+  "error": "PermissionError: [Errno 1] Operation not permitted: ps",
+  "interpretation": "Child termination assertion could not inspect process status under the local sandbox. No passing termination claim is made from this attempt.",
+  "repair": "Replace platform process inspection with a synchronized child heartbeat file and assert it stops changing after runner cleanup."
+}

@@ -1,0 +1,10 @@
+{
+  "archive": "frem_s13_kaggle_bundle.zip",
+  "archive_sha256": "37a08ea61cb9dd9187ff8dbb79f0cff4d524cdbd60403516add1a6c0efce4240",
+  "wheel": "frem_s13-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "03f030d57c8036affc33f2229d38c81ff6d530267c93affce45025ae0a7a30ca",
+  "notebook_sha256": "1d4c8745ee0ddbda946a1791b2b7e4b7d282b104e99923645f723a7efe5b84e3",
+  "members": 10,
+  "runtime_qualified": false,
+  "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+}

@@ -1,0 +1,18 @@
+{
+  "version": 359930995,
+  "status": "FAILED_ENGINEERING_BEFORE_MARKET",
+  "tests": "41 passed, 1 failed",
+  "test_returncode": 1,
+  "archive_sha256": "2a35aab2493600268cfe63334c645f6c2e021607729efbcceed8def5bc565fbc",
+  "files": 65,
+  "delivery": {
+    "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+    "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+    "mode": "historical_suite"
+  },
+  "payload_members_verified_against_local_hash_bound_release": 12,
+  "installed_python_sources_verified": 14,
+  "qualification_started": false,
+  "market_started": false,
+  "readback_defect": "PAYLOAD.json was verified in-memory but not retained; local bound release supplies inventory. Corrected notebook retains inventory and release.zip."
+}

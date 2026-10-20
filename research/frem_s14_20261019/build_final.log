@@ -1,0 +1,76 @@
+running egg_info
+writing src/frem_s14.egg-info/PKG-INFO
+writing dependency_links to src/frem_s14.egg-info/dependency_links.txt
+writing entry points to src/frem_s14.egg-info/entry_points.txt
+writing requirements to src/frem_s14.egg-info/requires.txt
+writing top-level names to src/frem_s14.egg-info/top_level.txt
+reading manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+running bdist_wheel
+running build
+running build_py
+running egg_info
+writing src/frem_s14.egg-info/PKG-INFO
+writing dependency_links to src/frem_s14.egg-info/dependency_links.txt
+writing entry points to src/frem_s14.egg-info/entry_points.txt
+writing requirements to src/frem_s14.egg-info/requires.txt
+writing top-level names to src/frem_s14.egg-info/top_level.txt
+reading manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-26.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-26.0-arm64/wheel
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s14
+copying build/lib/frem_s14/intake.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/baselines.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/verification.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/config.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/suite.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/evaluation.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/runtime.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/model.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/cli.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/__main__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/training.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/data.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/dynamics.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+running install_egg_info
+Copying src/frem_s14.egg-info to build/bdist.macosx-26.0-arm64/wheel/./frem_s14-0.1.0-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s14-0.1.0.dist-info/WHEEL
+creating '/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/tmpoezmhwju/.tmp-bi2gotad/frem_s14-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-26.0-arm64/wheel' to it
+adding 'frem_s14/__init__.py'
+adding 'frem_s14/__main__.py'
+adding 'frem_s14/baselines.py'
+adding 'frem_s14/cli.py'
+adding 'frem_s14/config.py'
+adding 'frem_s14/data.py'
+adding 'frem_s14/dynamics.py'
+adding 'frem_s14/evaluation.py'
+adding 'frem_s14/intake.py'
+adding 'frem_s14/model.py'
+adding 'frem_s14/runtime.py'
+adding 'frem_s14/suite.py'
+adding 'frem_s14/training.py'
+adding 'frem_s14/verification.py'
+adding 'frem_s14-0.1.0.dist-info/METADATA'
+adding 'frem_s14-0.1.0.dist-info/WHEEL'
+adding 'frem_s14-0.1.0.dist-info/entry_points.txt'
+adding 'frem_s14-0.1.0.dist-info/top_level.txt'
+adding 'frem_s14-0.1.0.dist-info/RECORD'
+removing build/bdist.macosx-26.0-arm64/wheel
+Successfully built frem_s14-0.1.0-py3-none-any.whl
+{
+  "archive": "frem_s14_kaggle_bundle.zip",
+  "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+  "wheel": "frem_s14-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+  "notebook_sha256": "34d144ad70e2d8eeb4d3af3bf4a5c1ba532dceca85344c27cf03abe240a39794",
+  "members": 13,
+  "runtime_qualified": false,
+  "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+}
+* Getting build dependencies for wheel...
+* Building wheel...

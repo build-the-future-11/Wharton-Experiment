@@ -1,0 +1,2 @@
+[console_scripts]
+frem-s13 = frem_s13.cli:main

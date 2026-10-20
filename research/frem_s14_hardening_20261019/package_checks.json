@@ -1,0 +1,11 @@
+{
+  "source_files": 15,
+  "wheel_RECORD": "PASS",
+  "installed_stdlib_tests": 48,
+  "byte_identical_rebuild": true,
+  "artifacts": {
+    "successors/frem_s14/dist/frem_s14-0.1.2-py3-none-any.whl": "b9807bf7673f743ea490ecd8f991f4f6da0f2d265f3f69985b784d1a45d585c5",
+    "successors/frem_s14/dist/frem_s14_kaggle_bundle.zip": "2bcb3bee0b6427add1a9a59cb385e6282354286ff5f214b28c8ded21bbd73942",
+    "successors/frem_s14/kaggle/FREM_S14_GPU.ipynb": "06b7e332f53c39722a90189c4ab95117b262d17e66c263ade7f8d9be7303887a"
+  }
+}

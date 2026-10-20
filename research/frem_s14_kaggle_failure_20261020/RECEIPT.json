@@ -1,0 +1,29 @@
+{
+  "observed_at_utc": "2026-10-20T17:12:30Z",
+  "candidate": "FREM-S14-0.1.3",
+  "saved_version": 359955736,
+  "version_number": 2,
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359955736",
+  "status": "FAILED_EXTERNAL_DATASET_MOUNT_BEFORE_NOTEBOOK_EXECUTION",
+  "visibility": "Private observed",
+  "accelerator": "GPU T4 x2 observed",
+  "output_bytes": 0,
+  "notebook_code_started": false,
+  "actual_tests_collected": 0,
+  "generated_qualification_started": false,
+  "historical_cells_completed": 0,
+  "protected_access": false,
+  "error": "mount data: ERRORED_MOUNTING_DATASET: DataSourceUrl.addDataset(gs://kagglesdsdata/datasets/4538/7213 => ...): retry budget exhausted (30 attempts): rpc error: code = Internal desc = dataset loading failed 3 load attempts0",
+  "observation_method": "Authenticated Kaggle saved-version Logs view; terminal status, accelerator, output size, and visible platform error were read directly.",
+  "release": {
+    "package_version": "0.1.3",
+    "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+    "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
+    "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
+    "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419"
+  },
+  "interpretation": "External infrastructure-invalid attempt. This is neither an engineering test result nor a scientific result. Because notebook code did not start and no market cell was consumed, an exact-design retry is admissible after verifying a new saved version.",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "decision_event_sha256": "f0f6ae29aff2d5b3605f3d383d1de478c287306ae23ce2aebfcb423821587152"
+}

@@ -1,0 +1,12 @@
+{
+  "exact_code_match": true,
+  "code_characters": 109904,
+  "code_sha256": "26881a7ca60078661189d917968748eff55e2630780a1c5340f9c44ac77eaf66",
+  "download_sha256": "8ed1ca93f3562a60f549c55c762bc06267ce54b44b597a9d4b4b93e1b832e730",
+  "declared_tests": 102,
+  "prior_versions_observed": [
+    359930995
+  ],
+  "upload_method": "authorized editor paste; native Download Notebook readback",
+  "download_event_timeout": "Event listener timed out; browser download completed and exact local file was verified."
+}

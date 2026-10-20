@@ -1,0 +1,14 @@
+{
+  "version": "FREM-S14-P0",
+  "type": "exact_source_kaggle_gpu_launch",
+  "date": "2026-10-19",
+  "source_identity": "de0efbe21debec8c492f28a6e38c0c26f28a29b6c820fa991ffc77a13a111de1",
+  "notebook_version": 359930995,
+  "reason": "Explicit user authorization for GPU qualification and bounded historical benchmarking after upgrades.",
+  "transmission": "Exact source-code download equals prepared local launch code. Embedded archive SHA256 verified by notebook before install.",
+  "run_budget_seconds": 13500,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "prior_s12_s13_unchanged": true,
+  "receipt": "research/frem_s14_20261019/LAUNCH_RECEIPT.json"
+}

@@ -1,0 +1,8 @@
+Using CPython 3.12.14 interpreter at: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python
+Resolved 1 package in 27ms
+Prepared 1 package in 13ms
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+Installed 1 package in 22ms
+ + frem-s14==0.1.1 (from file:///Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/dist/frem_s14-0.1.1-py3-none-any.whl)

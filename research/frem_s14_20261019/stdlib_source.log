@@ -1,0 +1,26 @@
+test_ambiguous_vintage_rejected (test_intake_stdlib.IntakeTests.test_ambiguous_vintage_rejected) ... ok
+test_bad_envelope_zero_nan_negative_volume_rejected (test_intake_stdlib.IntakeTests.test_bad_envelope_zero_nan_negative_volume_rejected) ... ok
+test_duplicate_date_rejected (test_intake_stdlib.IntakeTests.test_duplicate_date_rejected) ... ok
+test_latest_available_revision_only (test_intake_stdlib.IntakeTests.test_latest_available_revision_only) ... ok
+test_missing_history_not_backfilled (test_intake_stdlib.IntakeTests.test_missing_history_not_backfilled) ... ok
+test_old_revision_does_not_replace_newer_observation (test_intake_stdlib.IntakeTests.test_old_revision_does_not_replace_newer_observation) ... ok
+test_protected_values_discarded_before_parsing (test_intake_stdlib.IntakeTests.test_protected_values_discarded_before_parsing) ... ok
+test_timezone_required (test_intake_stdlib.IntakeTests.test_timezone_required) ... ok
+test_blocked_campaign_retains_failure_before_import (test_stdlib.Contracts.test_blocked_campaign_retains_failure_before_import) ... ok
+test_dimensions_rejected (test_stdlib.Contracts.test_dimensions_rejected) ... ok
+test_json_rejects_ambiguous_identity (test_stdlib.Contracts.test_json_rejects_ambiguous_identity) ... ok
+test_manifest_extra_file_rejected (test_stdlib.Contracts.test_manifest_extra_file_rejected) ... ok
+test_manifest_symlink_rejected (test_stdlib.Contracts.test_manifest_symlink_rejected) ... ok
+test_manifest_tampering (test_stdlib.Contracts.test_manifest_tampering) ... ok
+test_no_overwrite (test_stdlib.Contracts.test_no_overwrite) ... ok
+test_numerical_config_bounds (test_stdlib.Contracts.test_numerical_config_bounds) ... ok
+test_resource_admission (test_stdlib.Contracts.test_resource_admission) ... ok
+test_roundtrip (test_stdlib.Contracts.test_roundtrip) ... ok
+test_run_bounds (test_stdlib.Contracts.test_run_bounds) ... ok
+test_timezone_required_and_equivalent (test_stdlib.Contracts.test_timezone_required_and_equivalent) ... ok
+test_unknown_key_rejected (test_stdlib.Contracts.test_unknown_key_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.047s
+
+OK

@@ -1,0 +1,29 @@
+{
+  "version": "FREM-S14-P0.3",
+  "type": "prospective_operational_hardening_while_exact_gpu_run_active",
+  "date": "2026-10-19T09:41:25.574148+00:00",
+  "saved_version": 359955736,
+  "source_unchanged": true,
+  "release": {
+    "package_version": "0.1.3",
+    "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
+    "wheel": "frem_s14-0.1.3-py3-none-any.whl",
+    "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
+    "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "changes": [
+    "Standalone bounded process runner outside frozen release",
+    "Streaming byte-preserving logs and durable progress",
+    "Atomic terminal receipts and process-group cleanup"
+  ],
+  "validation": "21 warning-strict child-process tests pass; scoped lint/format/AST pass; initial test error preserved",
+  "numerical_admission": "FAILED; no local numerical execution",
+  "scientific_changes": false,
+  "new_gpu_run": false,
+  "evidence": "research/frem_s14_continuation_20261019/RECEIPT.json"
+}

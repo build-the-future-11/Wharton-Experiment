@@ -1,0 +1,26 @@
+{
+  "stdlib_final": {
+    "returncode": 0,
+    "log": "research/frem_s13_20261019/stdlib_final.log"
+  },
+  "ruff_final": {
+    "returncode": 0,
+    "log": "research/frem_s13_20261019/ruff_final.log"
+  },
+  "format_final": {
+    "returncode": 0,
+    "log": "research/frem_s13_20261019/format_final.log"
+  },
+  "numerical_admission": {
+    "returncode": 2,
+    "log": "research/frem_s13_20261019/numerical_admission.log"
+  },
+  "build_final": {
+    "returncode": 0,
+    "log": "research/frem_s13_20261019/build_final.log"
+  },
+  "python_ast": {
+    "files": 15,
+    "passed": true
+  }
+}

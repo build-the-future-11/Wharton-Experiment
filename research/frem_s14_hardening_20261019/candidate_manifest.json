@@ -1,0 +1,134 @@
+{
+  "CHECKLIST.md": {
+    "sha256": "869a2b3dba49e3906d7e29a841e1b8cdcee8e11d2c6c1841e19ae629d5f5cbcf",
+    "bytes": 4837
+  },
+  "DATA_CONTRACT.md": {
+    "sha256": "9b0225577df30b2f204fd68abc84887e250ce9ca588c05c5cf9f7aa0d4cef8ea",
+    "bytes": 3233
+  },
+  "README.md": {
+    "sha256": "1ac0abaea45cab430bea8a83a437dc55737b19280bcc7232a2fa1f07680e7106",
+    "bytes": 4902
+  },
+  "SPECIFICATION.md": {
+    "sha256": "7ab9b75129ce7b33ee3319a1624fe79125c4a2bb7e3da65f95529228099dde22",
+    "bytes": 7992
+  },
+  "configs/development.json": {
+    "sha256": "c0cf98cf82b704bf25efbd390391b6bfe9a07cc9787f56da247e02560c8f5ff6",
+    "bytes": 1533
+  },
+  "configs/historical_suite.json": {
+    "sha256": "e10abc7ef027dac9acd9a404430c013dda07e80f5ba2edc02b734ef2a755d9aa",
+    "bytes": 1845
+  },
+  "kaggle/FREM_S14_GPU.ipynb": {
+    "sha256": "06b7e332f53c39722a90189c4ab95117b262d17e66c263ade7f8d9be7303887a",
+    "bytes": 107623
+  },
+  "kaggle/build_release.py": {
+    "sha256": "69244d632ece6a248505feb902e4edf99c8d2fdda29003d45d98457fb7f1ca27",
+    "bytes": 10174
+  },
+  "kaggle/kernel-metadata.json": {
+    "sha256": "cd4128a80b49eb10681143a6a3f86ac37e811e235d30c456b01fe0b709182869",
+    "bytes": 411
+  },
+  "pyproject.toml": {
+    "sha256": "c1314a238c5ff70b0832404a6e9700bf37755ed854172dddf68e62ee0994a08d",
+    "bytes": 748
+  },
+  "src/frem_s14/__init__.py": {
+    "sha256": "5aa6a13fb302b0603fbec9451e5519d78e68db8fc906d15eea1f6ec3bb2493ea",
+    "bytes": 97
+  },
+  "src/frem_s14/__main__.py": {
+    "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "bytes": 48
+  },
+  "src/frem_s14/archive.py": {
+    "sha256": "ca6d140fb14e8512f985e690b0d12970438bc4e4bf8a2e83f541f3c116cff6ce",
+    "bytes": 6702
+  },
+  "src/frem_s14/baselines.py": {
+    "sha256": "57f2177ff7d28d31d8e872d375e517842e647452d449fcf20810268691f48fb1",
+    "bytes": 6255
+  },
+  "src/frem_s14/cli.py": {
+    "sha256": "671b4b5ee42e5b7a7aebd793c16cc7bef53babfea919ba8e49d31470910562c6",
+    "bytes": 16028
+  },
+  "src/frem_s14/config.py": {
+    "sha256": "c1210428fc58e2ab243cef9f380665d4e65c5a3482047e91c2acb6365e8a1ada",
+    "bytes": 7625
+  },
+  "src/frem_s14/data.py": {
+    "sha256": "4195d882c7672342a3a797108a938d17779b142af340a94bda0c4f496239aa5e",
+    "bytes": 11656
+  },
+  "src/frem_s14/dynamics.py": {
+    "sha256": "413336a7f83b0557ea2e5e480aae40ac9a61af7d26638d1c325d0139b7c69f08",
+    "bytes": 3133
+  },
+  "src/frem_s14/evaluation.py": {
+    "sha256": "c9ff53daa2b279466e0323327eefd5c1f14fcc4bbc1fff4ed837cfec713508ee",
+    "bytes": 10796
+  },
+  "src/frem_s14/intake.py": {
+    "sha256": "29f2a4fbf6d20c62a174756ebe065a3a70d643a0c791cc94487eade164017063",
+    "bytes": 9646
+  },
+  "src/frem_s14/model.py": {
+    "sha256": "99cad16102d20ab840e2beb17464890a7f00742a20f50e84c6ad025a07ea3ad9",
+    "bytes": 19235
+  },
+  "src/frem_s14/runtime.py": {
+    "sha256": "0908b1d014e7cf7350cced0c0c70c0da9c3de75bc18dbe0f2b0352727fc5b241",
+    "bytes": 8322
+  },
+  "src/frem_s14/suite.py": {
+    "sha256": "78a5df70a8dc6d8b8d72f1acad0b7f4c3a8b98e9e469e7b3618c01d3ccce7ec9",
+    "bytes": 5597
+  },
+  "src/frem_s14/training.py": {
+    "sha256": "9391715ce1e67c2d5075fa68486a3b612878366e93e7bd886434409f149c4298",
+    "bytes": 10460
+  },
+  "src/frem_s14/verification.py": {
+    "sha256": "b37fd7e8050f0a5cd8a116ada615f51ef5b41cdd7b483bafb3ee0b4c113192da",
+    "bytes": 13047
+  },
+  "tests/conftest.py": {
+    "sha256": "b907af05c5675cceebf0e0dca07681cab34dea1bcbe73fc014f19fa395a3e774",
+    "bytes": 523
+  },
+  "tests/test_archive_stdlib.py": {
+    "sha256": "08ef2bb3df48c01c5d8f83c4ddf9b9a200206f30a5b588835eb01a6cc8916519",
+    "bytes": 5545
+  },
+  "tests/test_hardening_numerical.py": {
+    "sha256": "cc6a865fc57c26a569f28c6ce123942be15a429a3ce50513ced758dabafa42d1",
+    "bytes": 8921
+  },
+  "tests/test_hardening_stdlib.py": {
+    "sha256": "4c0bb2d87a53421befd7b3cf3980dbe90c75938b9da085bd7c9efc8fb9b7eab5",
+    "bytes": 10887
+  },
+  "tests/test_intake_stdlib.py": {
+    "sha256": "bd1e457fda9b5b5c51abf3fbc18d7a223ba1afeac75460d78ad7742508e9d01a",
+    "bytes": 2933
+  },
+  "tests/test_numerical.py": {
+    "sha256": "e03fee7c8dfe916a89f0bca049f8b3a9879e2ed209cb90b3a77d12f81f6a051f",
+    "bytes": 10214
+  },
+  "tests/test_stdlib.py": {
+    "sha256": "6e2145f80753af098e950a8fde9f6ab48819f11b9b81c38aecb2105584df7d1a",
+    "bytes": 5393
+  },
+  "tests/test_upgrades.py": {
+    "sha256": "2ffc5df96d052d907d025a7be3053f38aa5ff745ecd76e20015ccbe828601a28",
+    "bytes": 5356
+  }
+}

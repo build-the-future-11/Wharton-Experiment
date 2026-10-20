@@ -1,0 +1,14 @@
+{
+  "version": "FREM-S14-P0",
+  "type": "prospective_successor_implementation",
+  "date": "2026-10-19T05:02:43.354173+00:00",
+  "predecessor": "FREM-S13 preserved byte-for-byte",
+  "reason": "User requests major JEPA, dimensional stochastic PDE, engram, efficiency and rigorous dataset benchmark upgrades, followed by private Kaggle GPU upload/execution.",
+  "new_hypothesis": "Masked multi-offset latent prediction with an anisotropic stochastic diffusion transition and mature-neighbor graph retrieval improves out-of-time probabilistic score relative to removal controls.",
+  "scope": "Engineering qualification and historical development only; no protected 2025+ use.",
+  "authorization": "User explicitly requests Kaggle GPU upload and execution after upgrades. No public submission or trading.",
+  "bounded_execution": "One all-arm generated qualification, then three fixed historical prefix folds, three seeds, 19 arms, 20-day horizon, 10 epochs maximum, one GPU worker, 13500-second total notebook ceiling. No outcome-driven retries.",
+  "falsifier": "Failure to beat simpler controls or ablations, invalid causal/accounting contracts, or an incomplete declared matrix does not support improvement.",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

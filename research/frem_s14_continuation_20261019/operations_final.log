@@ -1,0 +1,27 @@
+test_atomic_publication_does_not_replace_existing (test_run_stage.ProcessRunnerTests.test_atomic_publication_does_not_replace_existing) ... ok
+test_background_descendant_is_terminated (test_run_stage.ProcessRunnerTests.test_background_descendant_is_terminated) ... ok
+test_broken_console_does_not_lose_evidence (test_run_stage.ProcessRunnerTests.test_broken_console_does_not_lose_evidence) ... ok
+test_child_can_close_output_before_exiting (test_run_stage.ProcessRunnerTests.test_child_can_close_output_before_exiting) ... ok
+test_cli_retains_nonzero_exit (test_run_stage.ProcessRunnerTests.test_cli_retains_nonzero_exit) ... ok
+test_command_is_argv_not_shell (test_run_stage.ProcessRunnerTests.test_command_is_argv_not_shell) ... ok
+test_cwd_and_eof_stdin (test_run_stage.ProcessRunnerTests.test_cwd_and_eof_stdin) ... ok
+test_deadline_kills_child_and_preserves_partial_log (test_run_stage.ProcessRunnerTests.test_deadline_kills_child_and_preserves_partial_log) ... ok
+test_exhausted_budget_does_not_start_command (test_run_stage.ProcessRunnerTests.test_exhausted_budget_does_not_start_command) ... ok
+test_existing_evidence_is_never_replaced (test_run_stage.ProcessRunnerTests.test_existing_evidence_is_never_replaced) ... ok
+test_interrupt_records_failure_and_stops_child (test_run_stage.ProcessRunnerTests.test_interrupt_records_failure_and_stops_child) ... ok
+test_invalid_arguments_create_no_evidence (test_run_stage.ProcessRunnerTests.test_invalid_arguments_create_no_evidence) ... ok
+test_large_output_is_drained_without_truncation (test_run_stage.ProcessRunnerTests.test_large_output_is_drained_without_truncation) ... ok
+test_missing_executable_is_recorded (test_run_stage.ProcessRunnerTests.test_missing_executable_is_recorded) ... ok
+test_no_output_child_still_has_heartbeat (test_run_stage.ProcessRunnerTests.test_no_output_child_still_has_heartbeat) ... ok
+test_nonzero_failure_retains_output (test_run_stage.ProcessRunnerTests.test_nonzero_failure_retains_output) ... ok
+test_output_and_heartbeat_exist_before_process_finishes (test_run_stage.ProcessRunnerTests.test_output_and_heartbeat_exist_before_process_finishes) ... ok
+test_success_cannot_extend_global_deadline (test_run_stage.ProcessRunnerTests.test_success_cannot_extend_global_deadline) ... ok
+test_success_exact_binary_log_and_receipt (test_run_stage.ProcessRunnerTests.test_success_exact_binary_log_and_receipt) ... ok
+test_timeout_terminates_descendants (test_run_stage.ProcessRunnerTests.test_timeout_terminates_descendants) ... ok
+test_total_deadline_shortens_stage_budget (test_run_stage.ProcessRunnerTests.test_total_deadline_shortens_stage_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 3.173s
+
+OK
+

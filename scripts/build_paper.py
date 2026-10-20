@@ -38,7 +38,7 @@ def main() -> int:
     # bibliography repair or changing the generated page references.
     with tempfile.TemporaryDirectory(prefix="frem_paper_") as temporary:
         build = Path(temporary)
-        sources = sorted([*paper.glob("*.tex"), *paper.glob("*.bib")])
+        sources = sorted([*paper.glob("*.tex"), *paper.glob("*.bib"), *paper.glob("*.sty")])
         source_hashes = {}
         for source in sources:
             shutil.copyfile(source, build / source.name)

@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-19T09:23:28.492826+00:00",
+  "user_confirmed_kaggle_signed_in": true,
+  "monitor_status": "ACTIVE",
+  "monitor_id": "finish-s14-kaggle-gpu-qualification",
+  "repository_available": false,
+  "visible_volumes": [
+    "Macintosh HD"
+  ],
+  "external_physical_disk_listing": "No devices returned by successful diskutil list external physical",
+  "browser_check": "Unable to start browser-control Node runtime from missing workspace",
+  "saved_version": 359955736,
+  "current_execution_status": "UNKNOWN_NOT_OBSERVED_THIS_TURN",
+  "test_counts": null,
+  "historical_cells_completed": null,
+  "new_run_launched": false,
+  "existing_run_cancelled": false,
+  "source_modified": false,
+  "required_action": "Reconnect PRO-BLADE; then verify exact saved version before any further execution.",
+  "canonical_state_updated": false,
+  "canonical_update_reason": "Repository is unavailable; retain this record and reconcile it once reconnected."
+}

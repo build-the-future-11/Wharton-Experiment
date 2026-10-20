@@ -731,3 +731,144 @@ notebook SHA-256 is
 `419a2b42071ba5c8c3c719b2ecddbd390af24ede8fa68ef0f88aed5426e2acb8`.
 Kaggle P0v8 qualification and complete saved-version export remain required;
 scientific status remains `NOT_EVALUATED`.
+
+
+## 19 October 2026 — S13 GPU architecture implementation candidate
+
+The separate `successors/frem_s13` package adds contracting multiscale reservoirs,
+causal spectral/ngram engram memory, EMA JEPA, bounded training-only neurogenesis,
+multiobjective expert routing, XGBoost and a validation-selected hybrid,
+chronological benchmarks and cost-aware portfolio replay. The full checklist
+and mathematical/data contracts are in that directory. Earlier S12 and research
+results are unchanged.
+
+Status: **IMPLEMENTED/PACKAGED; NUMERICAL VERIFICATION RESOURCE-BLOCKED**.
+Thirteen standard-library tests passed from source and from a clean wheel;
+Ruff/format/AST, notebook compilation, payload checks and reproducible wheel/ZIP
+builds passed. These overlapping test runs are not 26 unique tests. Numerical
+pytest exited before collection at 403.39/278.59/195.33 MiB available against
+512 MiB. No numerical pass, CUDA pass, generated end-to-end completion, market
+fit, protected access or Kaggle run occurred.
+
+Read `research/frem_s13_20261019/RECEIPT.json` and `VERIFICATION.md`. The exact
+Kaggle notebook and ZIP are local candidates, not a target qualification receipt.
+Run the included tests and generated matrix on an admitted compatible target,
+then independently verify all outputs before real-data development. Do not
+relax memory admission, replace unavailable baselines, or inherit S12 results.
+
+
+## 19 October 2026 — S14 private GPU launch, qualification pending
+
+S14 is separately implemented under `successors/frem_s14`, retaining all earlier sources and results. It adds masked multi-offset EMA JEPA, exact conditional Gaussian latent diffusion on a2D lattice, mature-neighbor graph retrieval, vectorized FIFO writes and training-residual-guided bounded recruitment. The self-contained notebook declares19 arms, three seeds and three historical proxy folds (171 cells), with strict intake, purging, cost accounting and independent score/allocation readback. These are implementation claims only.
+
+21 unique dependency-free tests pass from source and installed wheel; final scoped Ruff/format, AST/notebook compilation, archive/wheel/source hashes and identical rebuild pass. The initial notebook formatting failures are retained and corrected. Numerical pytest stopped before collection at failed512MiB/pageout admission.
+
+Private Kaggle version359930995 is running on GPU T4 x2 with internet off and the Huge Stock Market Dataset attached. The downloaded draft launch code matches local bytes exactly. No numerical pass, market result or model improvement is yet established. See `research/frem_s14_20261019/LAUNCH_RECEIPT.json`; do not rerun completed result cells to seek improvement. Source dataset prices are a historical adjusted-close proxy, not verified point-in-time tradable total returns. The2025+ boundary remains closed.
+
+
+### S14 version1 numerical finding and prospective correction
+
+Kaggle version359930995 completed with41 passing tests and1 failure in19.28s. The float32 CUDA norm was0.8500010371208191, exceeding the unchanged0.850001 acceptance bound. Tests stopped before qualification/market fitting. Downloaded65-file output archive passed CRC; all12 payload members and14 installed Python sources match the original local release. Original source/notebook and ZIP are retained. The separately built0.1.1 repair normalizes in float64 with a dimension-scaled float32 rounding margin; no test tolerance, scientific hypothesis, data or threshold changed. Notebook output now also retains release.zip and PAYLOAD.json. Corrected-source GPU requalification is pending. See `research/decisions/frem_s14_norm_repair_20261019.json` and `research/frem_s14_20261019/KAGGLE_VERSION1_RECEIPT.json`.
+
+
+## 19 October 2026 — S14 repaired candidate and scheduled continuation
+
+Current status: **GPU V1 FAILED; 0.1.1 PACKAGED; CORRECTED GPU RUN PENDING**.
+The earlier launch entry above is a historical observation, not the current run
+status. Version 359930995 completed with 41 passing tests and one reservoir-norm
+failure. No generated qualification, market intake or historical benchmark cell
+started. Its source, output ZIP and independently checked receipt remain intact.
+
+The 0.1.1 candidate uses float64 reservoir normalization with a conservative
+float32 rounding margin; the contraction bound and acceptance tolerance are
+unchanged. It also retains the release ZIP and payload inventory in saved output.
+The 21 unique standard-library tests passed from source and installed wheel;
+scoped static checks, source/wheel identity and a deterministic rebuild passed.
+The previous GPU passes do not qualify this changed candidate. Local numerical
+admission still fails: 86.98/125.03/123.20 MiB available, with rising pageouts,
+against the unchanged 512 MiB floor.
+
+Kaggle's editor reports that it cannot connect to the reCAPTCHA service. The
+corrected notebook has not been uploaded or queued. The user's later-follow-up
+request is implemented by `finish-s14-kaggle-gpu-qualification`, active every
+30 minutes in this chat. It retries supported editor access, preserves security
+and research gates, verifies saved code identity before launching, and continues
+the fixed 171-cell historical proxy suite only after complete engineering
+qualification. It avoids duplicate runs, retains all failures, and stays quiet
+on unchanged state. No valid completed market result may be repeated to seek a
+better outcome. Pause the follow-up when the fixed work completes or requires a
+human decision.
+
+Read `research/frem_s14_20261019/RECEIPT.json` for the current candidate, prior GPU
+run, automation and remaining work separately. The original `LAUNCH_RECEIPT.json`
+is preserved as historical evidence. Scientific status remains `NOT_EVALUATED`;
+completed historical cells are 0/171 and protected access is zero.
+
+
+## 19 October 2026 — S14 0.1.2 hardening and exact-source handoff
+
+Current candidate is 0.1.2, source identity
+`92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090`.
+Read `research/frem_s14_hardening_20261019/AUDIT.md` and `RECEIPT.json`.
+The full 0.1.1 candidate is preserved in that directory's `before/`; the failed
+0.1.0 Kaggle version 359930995 and all predecessor results remain unchanged.
+
+Repairs cover delayed decisions, protected-boundary drift, malformed CSV/JSON,
+exact timestamps, admission samples, nested manifests/special files, resume
+accounting, AMP engram retrieval, stable mixture variance, complete cell inventories,
+retained-calendar and suite verification, and anchored downloaded-ZIP readback.
+Read-only strided compounding and optional training metric collection remove
+unnecessary work; no speedup is measured or claimed. The core architecture,
+19 arms, three seeds, three folds, budgets, blocks and thresholds are unchanged.
+
+48 unique dependency-free tests pass with warnings as errors from source and
+fresh installed wheel. Six previous defects are reproduced against the preserved
+source and rejected by the repaired source. Ruff/format including notebook,
+AST/compile, 15-module wheel/source equality, RECORD checks, embedded ZIP equality,
+a generated archive contract fixture and identical rebuild pass. Static inventory
+declares 84 tests, including 36 numerical tests not executed on current source.
+Numerical admission failed at 293.08/417.56/220.45 MiB with rising pageouts.
+
+Kaggle still reports unavailable reCAPTCHA after one supported reload. No 0.1.2
+upload or run occurred, and historical cells remain 0/171. The active 30-minute
+follow-up requires `candidate_preparation == READY_FOR_GPU_QUALIFICATION` plus
+matching current source/wheel/archive/notebook identities before any upload.
+Then it must run complete tests, generated CUDA qualification, the fixed full
+suite and independent archive/numerical readback. Never duplicate a running or
+completed candidate or retry valid market results to obtain a favorable outcome.
+Scientific status remains `NOT_EVALUATED`.
+
+
+## 19 October 2026 — S14 0.1.3 input-to-result verification
+
+Exact candidate 0.1.3 preserves 0.1.2 in research/frem_s14_readback_20261019/before. New checks retain CSV inputs and reconstruct labels, splits, preprocessing, risk samples and cell bindings; verify full UTC fold prefixes; reject altered model policies, broadcast vectors and inference metadata. Architecture, 19 arms, three seeds, three folds, thresholds and budgets are unchanged. 56 unique dependency-free tests pass from source and installed wheel. The declared target suite has 102 tests, including 46 pending numerical cases. Static/package/rebuild checks pass; local numerical admission failed. Kaggle editor recovered; corrected GPU upload is pending. Read research/frem_s14_readback_20261019/RECEIPT.json and AUDIT.md. All prior failures/results remain preserved; market completion is 0/171 and scientific status NOT_EVALUATED.
+
+
+### S14 0.1.3 private GPU run launched
+
+Version 359955736 (version 2) is running with GPU T4 x2, internet off and the fixed dataset attached. Draft launch code was downloaded and matched all 109,904 local code characters exactly. Only original failed version 359930995 existed before launch. Chrome blocked the saved-version download endpoint; that security control was not bypassed, and saved code/output readback remains pending. Tests, generated qualification and market outcomes are not yet known. Do not launch an equivalent duplicate. See research/frem_s14_readback_20261019/LAUNCH_RECEIPT.json.
+
+
+### S14 account access blocked; run outcome unknown
+
+At approximately 08:19 UTC on 19 October, saved version 359955736 was still reported running on GPU T4 x2 with 0 B exposed output. At 08:28 UTC the same private page became inaccessible because the browser was signed out. A normal Google sign-in led to unexpected new-account registration, which was cancelled. The existing ryangomez010 login requires user credentials. This is an access blocker, not an observed execution failure. Actual test counts, generated qualification completion and historical cells remain unknown; no benchmark result is inferred from the UI.
+
+The follow-up is PAUSED pending user login, per its human-action stop rule. The GPU run was not cancelled, duplicated or modified; source/release artifacts and all prior evidence remain intact. Read research/frem_s14_access_20261019/RECEIPT.json, which retains the previous canonical state and candidate receipt. After access is restored, inspect exact version 359955736 first, obtain saved outputs and perform the existing independent archive and numerical verification. The declared denominator remains 171; zero cells have independently verified completion.
+
+
+### S14 access restored; prospective operational hardening
+
+The user restored Kaggle sign-in and PRO-BLADE. Exact saved version 359955736 again shows RUNNING on GPU T4 x2, at 10,005.6 seconds with 0 B exposed output. Actual 102-test counts, 19-arm qualification completion and 171-cell historical progress remain unknown. Monitoring is ACTIVE. All current source, wheel, archive and notebook hashes still match the launched 0.1.3 candidate; no new run was launched or cancelled.
+
+Local numerical admission failed at 112.45/99.41/125.55 MiB with increasing pageouts. No tensor/numerical import or local market fit was attempted. A separate operations/run_stage.py now provides streaming logs, durable progress, atomic non-overwriting receipts, stage/overall deadlines, process-group cleanup and explicit failure/timeout/interruption states. It passes 21 warning-strict real child-process tests plus scoped lint/format/AST checks. An initial process-inspection test error is preserved and its test was changed to verify a synchronized descendant heartbeat without sandbox-inaccessible ps. These operational tests are separate from the frozen model's 102 target tests.
+
+The operations directory is outside the running wheel/notebook. Future launcher integration requires a new preserved artifact identity and exact-launch verification; it must not repeat valid completed market cells. No predictive, efficiency or scientific improvement is claimed. Read research/frem_s14_continuation_20261019/RECEIPT.json.
+
+
+## 20 October 2026 — terminal Kaggle mount failure and 0.1.5 retry boundary
+
+Authenticated readback now shows saved version 359955736 as failed. Kaggle exhausted its retry budget while mounting the declared dataset before notebook code ran; visible output is 0 B. Therefore zero tests were collected, generated CUDA qualification did not start, historical completion remains 0/171, and protected access remains false. Preserve `research/frem_s14_kaggle_failure_20261020/RECEIPT.json`. This is an external infrastructure-invalid attempt, not a negative or positive model result. An exact-design retry is admissible; thresholds, arms, folds, seeds, budgets, and the protected boundary must not change.
+
+The separately versioned 0.1.5 candidate binds retrieval provenance to source identity `6ccbee61b0518d0efa297bcfe547e769c4e3a9c51610341f4e8c622258414d37`, archive SHA-256 `a9ff2591113db8783d6052a8748f34bd899e576083bbd380cf388be7f2663e00`, wheel SHA-256 `111b293fd34b9007d1b858bda926957f8f4efed6d11fabd8b821e24392590497`, and notebook SHA-256 `4b53294ef11fe2d2c582c7d4fb7220af66639da73e8a34c28bd72237b10a10f9`. Fifty-seven warning-strict dependency-free tests pass from source and the same 57 pass from a clean wheel; Ruff, compileall, offline lock consistency, exact package hashes, and the 57-cell arm-seed plan pass. A plain unsupported Python 3.15 invocation without `PYTHONPATH` failed collection and is retained as an invocation defect. Numerical/CUDA qualification remains unrun because local admission is unchanged. Kaggle's editor remained at `Editor Loading`; no 0.1.5 upload or saved version is claimed.
+
+Next: once the editor loads, upload only the bound 0.1.5 notebook, verify the saved code and runtime settings, then run the complete qualification before any historical proxy cell. Retain and independently reconstruct the saved bundle. A valid negative result closes the tested claim; do not repeat it to seek a favorable outcome.

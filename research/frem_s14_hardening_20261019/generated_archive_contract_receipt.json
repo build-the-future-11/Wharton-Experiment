@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "8a86b9fb145c7034249dd8ddcf0e86f699f2b15e8b0915afc32cac9e5419c204",
+  "claim": "Integrity readback only; absent stages and nonzero return codes are not passes.",
+  "files": 34,
+  "fixture_only": true,
+  "installed_sources_verified": 15,
+  "integrity_verified": true,
+  "manifests_verified": [],
+  "numerical_semantics_verified": false,
+  "payload_members_verified": 16,
+  "release_sha256": "2bcb3bee0b6427add1a9a59cb385e6282354286ff5f214b28c8ded21bbd73942",
+  "source_identity": "92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090",
+  "stages": {
+    "tests": {
+      "command": [
+        "generated_fixture_no_test_execution"
+      ],
+      "returncode": 1,
+      "wall_seconds": 0
+    }
+  }
+}

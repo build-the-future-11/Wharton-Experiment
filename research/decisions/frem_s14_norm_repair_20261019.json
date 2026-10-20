@@ -1,0 +1,12 @@
+{
+  "version": "FREM-S14-P0.1",
+  "type": "numerical_validity_repair_before_market_access",
+  "date": "2026-10-19",
+  "failed_version": 359930995,
+  "evidence": "GPU suite: 41 passed, 1 failed in19.28s; CUDA float32 spectral norm0.8500010371208191 exceeds0.850001 test acceptance. No qualification/market fit started.",
+  "repair": "Compute reservoir normalization in float64 and reserve32*n*eps32 relative rounding margin before casting to float32. Keep contraction0.85 and test tolerance unchanged.",
+  "hypothesis_and_benchmark": "Unchanged; new exact-source engineering qualification required.",
+  "prior_failure_preserved": "research/frem_s14_20261019/version1_source and Kaggle version359930995",
+  "protected_access": false,
+  "retry_justification": "Numerical validity defect before any market result, not performance-driven retry."
+}

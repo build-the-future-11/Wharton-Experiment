@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-19T05:18:47.754089+00:00",
+  "iteration": "FREM-S14",
+  "status": "KAGGLE_GPU_RUNNING_QUALIFICATION_PENDING",
+  "source_identity": "de0efbe21debec8c492f28a6e38c0c26f28a29b6c820fa991ffc77a13a111de1",
+  "release": {
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+    "wheel": "frem_s14-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+    "notebook_sha256": "095777d31eec384f211bd4074ae12b40e360b48d84be65c171da36725482259f",
+    "members": 13,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "kaggle_url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359930995",
+  "script_version_id": 359930995,
+  "visibility": "Private observed",
+  "accelerator": "GPU T4 x2 observed",
+  "internet": "off observed",
+  "dataset": "borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+  "source_transmission": "Pasted launch code from exact notebook via supported editor. Downloaded draft code is byte-identical.",
+  "local_tests": "21 unique stdlib cases passed from source and installed wheel; no tensor cases executed locally",
+  "static_checks": "Ruff, formatting, AST, notebook compilation, archive/wheel/source identity and deterministic rebuild passed",
+  "local_numerical_status": "BLOCKED_BEFORE_COLLECTION: available 78.4375/99.859375/90.265625 MiB; pageouts410989/410989/410992",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "expected_historical_cells": 171,
+  "notebook_seconds_ceiling": 13500,
+  "prior_results": "S13 and all earlier sources/results unchanged",
+  "delivery_issues": [
+    "Three automatic approval-service capacity failures, later recovered",
+    "File chooser timed out; supported editor paste succeeded",
+    "Download event timed out, but file was downloaded and verified",
+    "Initial notebook import/format lint failures corrected; attempt1 retained"
+  ]
+}

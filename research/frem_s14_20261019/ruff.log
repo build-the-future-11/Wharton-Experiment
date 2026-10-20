@@ -1,0 +1,60 @@
+E401 [*] Multiple imports on one line
+ --> successors/frem_s14/kaggle/FREM_S14_GPU.ipynb:cell 2:1:1
+  |
+1 | import base64, hashlib, io, importlib.metadata, json, os, pathlib, subprocess, sys, time, zipfile
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | from packaging.requirements import Requirement
+3 | from packaging.version import Version
+  |
+help: Split imports
+  ::: cell 2
+   |
+   - import base64, hashlib, io, importlib.metadata, json, os, pathlib, subprocess, sys, time, zipfile
+1  + import base64
+2  + import hashlib
+3  + import io
+4  + import importlib.metadata
+5  + import json
+6  + import os
+7  + import pathlib
+8  + import subprocess
+9  + import sys
+10 + import time
+11 + import zipfile
+12 | from packaging.requirements import Requirement
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+ --> successors/frem_s14/kaggle/FREM_S14_GPU.ipynb:cell 2:1:1
+  |
+1 | / import base64, hashlib, io, importlib.metadata, json, os, pathlib, subprocess, sys, time, zipfile
+2 | | from packaging.requirements import Requirement
+3 | | from packaging.version import Version
+  | |_____________________________________^
+4 |   MODE = "historical_suite"
+5 |   DEVICE = "cuda"
+  |
+help: Organize imports
+  ::: cell 2
+   |
+   - import base64, hashlib, io, importlib.metadata, json, os, pathlib, subprocess, sys, time, zipfile
+1  + import base64
+2  + import hashlib
+3  + import importlib.metadata
+4  + import io
+5  + import json
+6  + import os
+7  + import pathlib
+8  + import subprocess
+9  + import sys
+10 + import time
+11 + import zipfile
+12 +
+13 | from packaging.requirements import Requirement
+14 | from packaging.version import Version
+15 +
+16 | MODE = "historical_suite"
+   |
+
+Found 2 errors.
+[*] 2 fixable with `--fix`.

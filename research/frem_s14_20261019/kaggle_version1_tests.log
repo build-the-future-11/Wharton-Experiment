@@ -1,0 +1,22 @@
+............F.............................                               [100%]
+=================================== FAILURES ===================================
+____________________ test_reservoir_contraction_and_growth _____________________
+
+cfg = RunConfig(model=ModelConfig(input_dim=4, context=8, horizon=2, latent=8, reservoir=8, initial_neurons=4, growth_step=2..._dates=4, cost_bps=10.0, max_weight=0.25, risk_aversion=3.0, xgb_rounds=5, protected_start='2025-01-01T00:00:00+00:00')
+
+    def test_reservoir_contraction_and_growth(cfg):
+        model = S14(cfg.model).to(DEVICE)
+        for matrix in model.encoder.recurrent:
+>           assert float(torch.linalg.matrix_norm(matrix, 2)) <= cfg.model.contraction + 1e-6
+E           AssertionError: assert 0.8500010371208191 <= (0.85 + 1e-06)
+E            +  where 0.8500010371208191 = float(tensor(0.8500, device='cuda:0'))
+E            +    where tensor(0.8500, device='cuda:0') = <built-in function linalg_matrix_norm>(tensor([[-0.1921,  0.0737, -0.0668,  0.0614, -0.1136, -0.1126,  0.2661,  0.0223],\n        [-0.1192, -0.2257, -0.0180, ...8,  0.0372],\n        [ 0.0513, -0.2993, -0.0917,  0.1128,  0.0232,  0.0877, -0.1547,  0.1471]],\n       device='cuda:0'), 2)
+E            +      where <built-in function linalg_matrix_norm> = <module 'torch.linalg' from '/usr/local/lib/python3.13/dist-packages/torch/linalg/__init__.py'>.matrix_norm
+E            +        where <module 'torch.linalg' from '/usr/local/lib/python3.13/dist-packages/torch/linalg/__init__.py'> = torch.linalg
+E            +  and   0.85 = ModelConfig(input_dim=4, context=8, horizon=2, latent=8, reservoir=8, initial_neurons=4, growth_step=2, growth_every=1...0.5, experts=3, router_cap=0.8, student_df=5.0, ema=0.99, field_rows=4, graph_mix=0.25, mask_fraction=0.25, arm='full').contraction
+E            +    where ModelConfig(input_dim=4, context=8, horizon=2, latent=8, reservoir=8, initial_neurons=4, growth_step=2, growth_every=1...0.5, experts=3, router_cap=0.8, student_df=5.0, ema=0.99, field_rows=4, graph_mix=0.25, mask_fraction=0.25, arm='full') = RunConfig(model=ModelConfig(input_dim=4, context=8, horizon=2, latent=8, reservoir=8, initial_neurons=4, growth_step=2..._dates=4, cost_bps=10.0, max_weight=0.25, risk_aversion=3.0, xgb_rounds=5, protected_start='2025-01-01T00:00:00+00:00').model
+
+tests/test_numerical.py:104: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_numerical.py::test_reservoir_contraction_and_growth - Asser...
+1 failed, 41 passed in 19.28s

@@ -21,6 +21,8 @@ data/public_regional_factors_*/monthly.csv
 dist/
 tmp/
 build/
+.scratch/
+paper/build_*/
 *.whl
 
 # LaTeX intermediates; source and reviewed PDFs remain versioned.

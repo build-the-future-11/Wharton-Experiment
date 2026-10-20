@@ -1,0 +1,17 @@
+test_blocked_campaign_retains_failure_before_import (test_stdlib.Contracts.test_blocked_campaign_retains_failure_before_import) ... ok
+test_dimensions_rejected (test_stdlib.Contracts.test_dimensions_rejected) ... ok
+test_manifest_extra_file_rejected (test_stdlib.Contracts.test_manifest_extra_file_rejected) ... ok
+test_manifest_symlink_rejected (test_stdlib.Contracts.test_manifest_symlink_rejected) ... ok
+test_manifest_tampering (test_stdlib.Contracts.test_manifest_tampering) ... ok
+test_no_overwrite (test_stdlib.Contracts.test_no_overwrite) ... ok
+test_numerical_config_bounds (test_stdlib.Contracts.test_numerical_config_bounds) ... ok
+test_resource_admission (test_stdlib.Contracts.test_resource_admission) ... ok
+test_roundtrip (test_stdlib.Contracts.test_roundtrip) ... ok
+test_run_bounds (test_stdlib.Contracts.test_run_bounds) ... ok
+test_timezone_required_and_equivalent (test_stdlib.Contracts.test_timezone_required_and_equivalent) ... ok
+test_unknown_key_rejected (test_stdlib.Contracts.test_unknown_key_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.035s
+
+OK

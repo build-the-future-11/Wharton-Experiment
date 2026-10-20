@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-10-19T06:51:35.924067+00:00",
+  "revision": "0.1.3",
+  "status": "GPU_0_1_3_RUNNING_QUALIFICATION_PENDING",
+  "candidate_preparation": "READY_FOR_GPU_QUALIFICATION",
+  "release": {
+    "package_version": "0.1.3",
+    "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
+    "wheel": "frem_s14-0.1.3-py3-none-any.whl",
+    "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
+    "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "stdlib_unique_tests": 56,
+  "source_and_installed_passed": true,
+  "declared_target_tests": 102,
+  "numerical_tests_executed_current_source": 0,
+  "declared_numerical_tests": 46,
+  "local_admission": {
+    "minimum_mib": 512,
+    "passed": false,
+    "samples": [
+      {
+        "available_mib": 108.34375,
+        "pageouts": 457789
+      },
+      {
+        "available_mib": 127.15625,
+        "pageouts": 457795
+      },
+      {
+        "available_mib": 116.890625,
+        "pageouts": 457795
+      }
+    ],
+    "time": "2026-10-19T06:46:26.567679+00:00"
+  },
+  "static_checks": "Scoped Ruff/format, compile, 15 wheel sources, wheel RECORD, embedded ZIP and byte-identical rebuild passed",
+  "prior_candidate": "research/frem_s14_readback_20261019/before",
+  "prior_gpu_run": {
+    "version": 359930995,
+    "status": "FAILED_ENGINEERING_BEFORE_MARKET",
+    "tests": "41 passed, 1 failed",
+    "test_returncode": 1,
+    "archive_sha256": "2a35aab2493600268cfe63334c645f6c2e021607729efbcceed8def5bc565fbc",
+    "files": 65,
+    "delivery": {
+      "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+      "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+      "mode": "historical_suite"
+    },
+    "payload_members_verified_against_local_hash_bound_release": 12,
+    "installed_python_sources_verified": 14,
+    "qualification_started": false,
+    "market_started": false,
+    "readback_defect": "PAYLOAD.json was verified in-memory but not retained; local bound release supplies inventory. Corrected notebook retains inventory and release.zip.",
+    "package_version": "0.1.0",
+    "source_identity": "de0efbe21debec8c492f28a6e38c0c26f28a29b6c820fa991ffc77a13a111de1",
+    "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359930995",
+    "accelerator": "GPU T4 x2 observed",
+    "visibility": "Private observed",
+    "internet": "off observed",
+    "receipt": "research/frem_s14_20261019/KAGGLE_VERSION1_RECEIPT.json"
+  },
+  "current_gpu_uploaded": true,
+  "historical_cells_completed": 0,
+  "historical_cells_expected": 171,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "browser": "Editor recovered; saved version history contains only failed version 1; no equivalent corrected run.",
+  "current_gpu_run": {
+    "timestamp": "2026-10-19T06:55:15.384646+00:00",
+    "version": 359955736,
+    "version_number": 2,
+    "status": "RUNNING",
+    "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359955736",
+    "package_version": "0.1.3",
+    "release": {
+      "package_version": "0.1.3",
+      "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+      "archive": "frem_s14_kaggle_bundle.zip",
+      "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
+      "wheel": "frem_s14-0.1.3-py3-none-any.whl",
+      "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
+      "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419",
+      "members": 18,
+      "runtime_qualified": false,
+      "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+    },
+    "visibility": "Private observed",
+    "accelerator": "GPU T4 x2 observed",
+    "internet": "off observed",
+    "dataset": "Huge Stock Market Dataset attached",
+    "draft_readback": "research/frem_s14_readback_20261019/DRAFT_READBACK.json",
+    "saved_version_download": "Chrome ERR_BLOCKED_BY_CLIENT on download link; not bypassed. Saved output/code readback remains pending.",
+    "expected_tests": 102,
+    "expected_generated_arms": 19,
+    "expected_historical_cells": 171,
+    "notebook_seconds_ceiling": 13500,
+    "tests_passed": null,
+    "historical_cells_completed": 0,
+    "protected_access": false,
+    "prior_versions_before_launch": [
+      359930995
+    ]
+  }
+}

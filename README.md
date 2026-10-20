@@ -1,3 +1,5 @@
+> **19 October 2026:** [FREM-S13 implementation and Kaggle candidate](successors/frem_s13/README.md) is packaged; numerical/CUDA verification remains resource-blocked. See the [verification receipt](research/frem_s13_20261019/VERIFICATION.md). Earlier studies remain unchanged.
+
 # FREM: Causal Fourier–Reservoir Engram Memory
 
 Latest evidence: [research completion status](docs/RESEARCH_COMPLETION_STATUS.md) and the [completed FREM-S3 report](research/frem_s3_20261011/REPORT.md). S2, the six-window public study, and S3 have completed exploratory runs. S3 did not establish its primary memory advantage. The 23-page manuscript predates those public results and submission readiness remains blocked.
@@ -117,3 +119,6 @@ These are proposed ceilings, not measured costs or an authorization to run every
 There are no admitted-market accuracy, profitability, or data-efficiency results in this release. Local synthetic timing measurements are explicitly bounded engineering evidence and do not establish research performance. The earlier APEN/graph-memory failures reported in the user’s preparation document remain recorded as prior reported evidence whose raw runs were not re-audited. A new implementation is not proof that those failures are solved.
 
 The next researcher must keep failed runs, complete seed families and protected-tail consumption receipts. A valid negative result closes this version’s tested claim; a new mechanism requires a successor hypothesis. Consult `docs/RESEARCH_PIPELINE.md`, `AGENTS.md` and the canonical state before modifying the project.
+
+
+S14 GPU successor: see [implementation](successors/frem_s14/README.md), [current audit](research/frem_s14_readback_20261019/AUDIT.md), and the [terminal version-2 receipt](research/frem_s14_kaggle_failure_20261020/RECEIPT.json). Private GPU version 359955736 failed before notebook execution when Kaggle exhausted retries mounting the attached dataset; it produced 0 B, collected zero tests, and completed 0/171 historical cells. This is an external infrastructure-invalid attempt, not model evidence. The hash-bound 0.1.5 retrieval-provenance candidate passes 57 warning-strict tests from source and the same 57 from a clean wheel, plus scoped Ruff, compile, lock, package, and plan checks. Its numerical/CUDA qualification and market execution remain pending. The original 41-pass/one-failure GPU version and every earlier result remain preserved.

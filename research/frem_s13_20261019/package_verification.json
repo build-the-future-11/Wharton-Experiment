@@ -1,0 +1,29 @@
+{
+  "release": {
+    "archive": "frem_s13_kaggle_bundle.zip",
+    "archive_sha256": "7ea4f9b44be392e5f000924cd2b1d93a291c48d46e8a29b99eaf7e81c136e9b9",
+    "wheel": "frem_s13-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "1822deea9c54a8415a9719d933bd1b4c2dea7879fadf6197866d0f7092325467",
+    "notebook_sha256": "dc765d634937023bbbdc10f1508fe50872ce4df7d9896e29cd671d96bc766ff7",
+    "members": 10,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "two_builds_byte_identical": true,
+  "notebook_code_cells_compiled": 3,
+  "payload_members_verified": 9,
+  "wheel_matches_source": true,
+  "installed_wheel_stdlib_tests": 13,
+  "installed": {
+    "path": "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s13_20261019/installed_wheel/frem_s13/__init__.py",
+    "source_identity": "a9844938bb73c5a006a1817fea9c3d53ce06dd7fded8c8eeecb841a8a56ecfbf"
+  },
+  "numerical_tests": "NOT_RUN_RESOURCE_ADMISSION_FAILED",
+  "cuda_tests": "NOT_RUN",
+  "market_fits": 0,
+  "protected_access": false,
+  "retained_failed_attempts": [
+    "initial uv installation failed on cache path; repaired with explicit writable cache",
+    "installed_wheel_stdlib.log records attempt before successful isolated install"
+  ]
+}

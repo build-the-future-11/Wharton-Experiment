@@ -1,0 +1,119 @@
+[
+  {
+    "name": "ruff",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/ruff",
+      "check",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14",
+      "--exclude",
+      "dist",
+      "--exclude",
+      "build"
+    ],
+    "returncode": 1
+  },
+  {
+    "name": "format",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/ruff",
+      "format",
+      "--check",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14",
+      "--exclude",
+      "dist",
+      "--exclude",
+      "build"
+    ],
+    "returncode": 1
+  },
+  {
+    "name": "stdlib_source",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/tests",
+      "-p",
+      "*stdlib.py",
+      "-v"
+    ],
+    "returncode": 0
+  },
+  {
+    "name": "numerical_attempt",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+      "-m",
+      "pytest",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/tests",
+      "-W",
+      "error",
+      "-q"
+    ],
+    "returncode": 2
+  },
+  {
+    "name": "install_wheel",
+    "command": [
+      "/Users/ryan/.local/bin/uv",
+      "pip",
+      "install",
+      "--python",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+      "--target",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s14_20261019/installed_wheel",
+      "--no-deps",
+      "--no-index",
+      "--cache-dir",
+      "/tmp/frem-s14-uv-cache",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/dist/frem_s14-0.1.0-py3-none-any.whl"
+    ],
+    "returncode": 0
+  },
+  {
+    "name": "stdlib_installed",
+    "command": [
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/tests",
+      "-p",
+      "*stdlib.py",
+      "-v"
+    ],
+    "returncode": 0
+  },
+  {
+    "name": "ast_notebook_embedded_archive_wheel_source",
+    "returncode": 0,
+    "python_files": 20,
+    "notebook_cells": 3,
+    "archive_members": 13
+  },
+  {
+    "name": "ruff_final",
+    "returncode": 0
+  },
+  {
+    "name": "format_final",
+    "returncode": 0
+  },
+  {
+    "name": "identical_rebuild",
+    "returncode": 0,
+    "files": {
+      "frem_s14_kaggle_bundle.zip": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+      "RELEASE.json": "455790a39159106b258e0454216e0f21e0958a1251d7b292540b7f224640b2e6",
+      "frem_s14-0.1.0-py3-none-any.whl": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+      "FREM_S14_GPU.ipynb": "095777d31eec384f211bd4074ae12b40e360b48d84be65c171da36725482259f"
+    }
+  },
+  {
+    "name": "final_notebook_embedded_release",
+    "returncode": 0
+  }
+]

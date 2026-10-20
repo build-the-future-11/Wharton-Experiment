@@ -1,0 +1,15 @@
+{
+  "version": "FREM-S14-P0.3",
+  "type": "prospective_input_to_result_verification",
+  "date": "2026-10-19",
+  "predecessor": "research/frem_s14_readback_20261019/before",
+  "preserved_source": "92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090",
+  "findings": [
+    "Readback did not reconstruct retained labels, splits or preprocessing from input CSV.",
+    "Suite panel hash and fold-prefix construction were not independently reconciled.",
+    "Cell bindings, model policy and full inference metadata were not checked; scalar prediction shapes could broadcast."
+  ],
+  "scope": "Input retention and stricter evidence verification only. Core architecture, 19 arms, three seeds, three folds, thresholds and budgets unchanged. No market cells started.",
+  "qualification": "0.1.3 requires exact-source full tests and 19-arm generated CUDA qualification before the 171-cell historical proxy suite.",
+  "protected_access": false
+}

@@ -1,0 +1,136 @@
+Browser tab: 793906189, Title: "FREM S14 GPU benchmark 20261019", URL: "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736".
+1 AXWebArea FREM S14 GPU benchmark 20261019, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736
+	2 container root
+		3 container Main Kaggle page navigation
+			4 button Navigation menu
+			5 link Description: Skip to content, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736#site-content
+			6 link Description: Return to Kaggle home page, Value: kaggle.com/
+			7 pop up button Create on Kaggle
+				8 text Create
+			9 container
+				10 container
+					11 content list
+						12 container Home List Item
+							13 link Description: Home, Value: kaggle.com/
+						14 container Competitions List Item
+							15 link Description: Competitions, Value: kaggle.com/competitions
+						16 container Benchmarks List Item
+							17 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						18 container Game Arena List Item
+							19 link Description: Game Arena, Value: kaggle.com/game-arena
+					20 content list
+						21 container Data Hub List Item
+							22 container
+								23 link (collapsed) Description: Data Hub, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736#, Secondary Actions: Expand
+								24 button Expand
+					25 content list
+						26 container More on Kaggle List Item
+							27 container
+								28 link (expanded) Description: More on Kaggle, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736#, Secondary Actions: Collapse
+								29 button Collapse
+						30 container Discussions List Item
+							31 link Description: Discussions, Value: kaggle.com/discussions
+						32 container Kaggle Learn List Item
+							33 link Description: Kaggle Learn, Value: kaggle.com/learn
+						34 container Kaggle Rankings List Item
+							35 link Description: Kaggle Rankings, Value: kaggle.com/rankings
+						36 container Progression List Item
+							37 link Description: Progression, Value: kaggle.com/progression
+						38 container Documentation List Item
+							39 link Description: Documentation, Value: kaggle.com/docs
+						40 container Host a Competition List Item
+							41 link Description: Host a Competition, Value: kaggle.com/c/about/host
+						42 container Research Grants List Item
+							43 link Description: Research Grants, Value: kaggle.com/research-grants
+						44 container Educator Resources List Item
+							45 link Description: Educator Resources, Value: kaggle.com/edu
+						46 container Support/Contact List Item
+							47 link Description: Support/Contact, Value: kaggle.com/contact
+						48 container Community Guidelines List Item
+							49 link Description: Community Guidelines, Value: kaggle.com/community-guidelines
+						50 container Team List Item
+							51 link Description: Team, Value: kaggle.com/about/team
+						52 container Blog List Item
+							53 link Description: Blog, Value: kaggle.com/blog
+						54 container Terms List Item
+							55 link Description: Terms, Value: kaggle.com/terms
+						56 container Privacy List Item
+							57 link Description: Privacy, Value: kaggle.com/privacy
+				58 content list
+					59 container Your Work List Item
+						60 container
+							61 link Description: Your Work, Value: kaggle.com/work
+							62 button (expanded) Description: Collapse Your Work, Help: Collapse
+					63 container Collapse Viewed List Item
+						64 container
+							65 link (expanded) Description: Collapse Viewed, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736#, Secondary Actions: Collapse
+							66 button Collapse Viewed
+					67 content list
+						68 container FREM S14 GPU benchmark 20261019 List Item
+							69 link Description: FREM S14 GPU benchmark 20261019, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019
+						70 container Fim Chaos V15 R1 20261019 List Item
+							71 link Description: Fim Chaos V15 R1 20261019, Value: kaggle.com/code/ryangomez010/fim-chaos-v15-r1-20261019
+						72 container Fim Chaos V15 Cpu R2 20261019 List Item
+							73 link Description: Fim Chaos V15 Cpu R2 20261019, Value: kaggle.com/code/ryangomez010/fim-chaos-v15-cpu-r2-20261019
+						74 container Fim Chaos V15 Cpu R1 20261019 List Item
+							75 link Description: Fim Chaos V15 Cpu R1 20261019, Value: kaggle.com/code/ryangomez010/fim-chaos-v15-cpu-r1-20261019
+						76 container Fim Chaos V15 R2 20261019 List Item
+							77 link Description: Fim Chaos V15 R2 20261019, Value: kaggle.com/code/ryangomez010/fim-chaos-v15-r2-20261019
+					78 container Collapse Edited List Item
+						79 container
+							80 link (expanded) Description: Collapse Edited, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736#, Secondary Actions: Collapse
+							81 button Collapse Edited
+					82 content list
+						83 container APEN_3D_S1_Optimization_r2_wrapper2 List Item
+							84 link Description: APEN_3D_S1_Optimization_r2_wrapper2, Value: kaggle.com/code/ryangomez010/apen-3d-s1-optimization-r2-wrapper2
+						85 container World Series WPINN guarded pilot v6 20261018 List Item
+							86 link Description: World Series WPINN guarded pilot v6 20261018, Value: kaggle.com/code/ryangomez010/world-series-wpinn-guarded-pilot-v6-20261018
+						87 container FREM S14 GPU benchmark 20261019 List Item
+							88 link Description: FREM S14 GPU benchmark 20261019, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019
+						89 container Olympus flagship v2 CUDA qualification r1 20261019 List Item
+							90 link Description: Olympus flagship v2 CUDA qualification r1 20261019, Value: kaggle.com/code/ryangomez010/olympus-flagship-v2-cuda-qualification-r1-20261019
+						91 container APEN_3D_S1_Optimization_r2 List Item
+							92 link Description: APEN_3D_S1_Optimization_r2, Value: kaggle.com/code/ryangomez010/apen-3d-s1-optimization-r2
+				93 button (collapsed) Event running 3 View Active Events, Secondary Actions: Expand
+					129 container
+						130 container Event running
+							131 text update
+						132 text 3
+					133 text View Active Events
+		94 container Main menu, search and your account
+			95 container
+				96 text field (settable) :r6:
+				97 button Ryan Gomez010
+					98 image
+		99 container site-content
+			100 link Description: Ryan Gomez010's profile, Value: kaggle.com/ryangomez010
+			101 text Ryan Gomez010 · 
+			102 container Description: 3 hours ago, Help: Mon Oct 19 2026 12:23:30 GMT+0530 (India Standard Time)
+				103 text 3h ago
+			104 text  ·  11 views  ·  Private
+			105 container
+				106 button Upvote
+				107 button 0 votes
+			108 button Share
+			109 link Description: Edit, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit/run/359955736
+			110 pop up button (collapsed) Download, Secondary Actions: Expand
+			111 button More options for this notebook
+			112 heading FREM S14 GPU benchmark 20261019, Value: 1
+				113 text FREM S14 GPU benchmark 20261019
+			114 button Edit title
+			115 tab group
+				116 tab (selectable, settable, boolean) Description: Notebook, 1 of 6, Value: 0
+				117 tab (selectable, settable, boolean) Description: Input, 2 of 6, Value: 0
+				118 tab (selectable, settable, boolean) Description: Output, 3 of 6, Value: 0
+				119 tab (selected, settable, boolean) Description: Logs, 4 of 6, Value: 1
+				120 tab (selectable, settable, boolean) Description: Comments (0), 5 of 6, Value: 0
+				121 tab (selectable, settable, boolean) Description: Settings, 6 of 6, Value: 0
+			122 heading Logs, Value: 2
+				123 text Logs
+			124 container
+				125 progress indicator Loading
+				126 heading Running for 10005.6s, Value: 5
+					127 text Running for 10005.6s
+				128 text Accelerator GPU T4 x2 Environment Latest Container Image Output 0 B
+
+The focused UI element is 1 AXWebArea FREM S14 GPU benchmark 20261019, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=359955736

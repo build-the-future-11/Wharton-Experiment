@@ -1,0 +1,14 @@
+{
+  "version": "FREM-S13-P0",
+  "type": "engineering_verification_disposition",
+  "date": "2026-10-19",
+  "status": "IMPLEMENTED_PACKAGED_NUMERICAL_VERIFICATION_BLOCKED",
+  "source_identity": "a9844938bb73c5a006a1817fea9c3d53ce06dd7fded8c8eeecb841a8a56ecfbf",
+  "receipt": "research/frem_s13_20261019/RECEIPT.json",
+  "receipt_sha256": "368e9fa239a8c0440ed150c59998b54c782779e62d46474035668fd250ee3c0d",
+  "tests_passed": "13 distinct standard-library cases, repeated from clean installed wheel",
+  "numerical_tests": "Admission refused before collection; no runtime pass",
+  "market_fits": 0,
+  "protected_access": false,
+  "next_gate": "Exact target numerical tests plus generated CUDA qualification; no inherited S12 admission"
+}

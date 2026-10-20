@@ -1,0 +1,35 @@
+{
+  "source_equal": true,
+  "source_length": 81766,
+  "download_source_length": 81766,
+  "download_sha256": "8784a866089d74b7ca81346b70dac0b3944bbdc86531ed2b2370e53765957ef7",
+  "download_code_sha256": "0e7637095aafc65994b602506fa659c753d439c161d1ea5a54f86229fbb52cd9",
+  "metadata": {
+    "kernelspec": {
+      "language": "python",
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.6.6",
+      "mimetype": "text/x-python",
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "pygments_lexer": "ipython3",
+      "nbconvert_exporter": "python",
+      "file_extension": ".py"
+    },
+    "kaggle": {
+      "accelerator": "none",
+      "dataSources": [],
+      "dockerImageVersionId": 28755,
+      "isInternetEnabled": false,
+      "language": "python",
+      "sourceType": "notebook",
+      "isGpuEnabled": false
+    }
+  }
+}

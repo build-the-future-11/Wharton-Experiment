@@ -1,0 +1,13 @@
+{
+  "counts_derived_from_AST_not_runtime_collection": {
+    "test_hardening_stdlib.py": 16,
+    "test_intake_stdlib.py": 8,
+    "test_stdlib.py": 13,
+    "test_upgrades.py": 7,
+    "test_hardening_numerical.py": 15,
+    "test_archive_stdlib.py": 11,
+    "test_numerical.py": 14
+  },
+  "total": 84,
+  "numeric_executed_locally": false
+}

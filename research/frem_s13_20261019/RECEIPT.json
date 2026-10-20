@@ -1,0 +1,62 @@
+{
+  "version": "FREM-S13-P0",
+  "date": "2026-10-19",
+  "status": "IMPLEMENTED_PACKAGED_NUMERICAL_VERIFICATION_BLOCKED",
+  "scientific_status": "NOT_EVALUATED",
+  "source_identity": "a9844938bb73c5a006a1817fea9c3d53ce06dd7fded8c8eeecb841a8a56ecfbf",
+  "scope": "Separate development successor preserving earlier protocols, implementations, data, outcomes and receipts.",
+  "checklist": "successors/frem_s13/CHECKLIST.md",
+  "specification": "successors/frem_s13/SPECIFICATION.md",
+  "source_package": "successors/frem_s13",
+  "registered_arms": 15,
+  "default_declared_cells": 45,
+  "passed": {
+    "stdlib_tests": 13,
+    "clean_wheel_stdlib_tests": 13,
+    "source_test_builder_ruff": true,
+    "source_test_builder_format": true,
+    "python_ast_files": 15,
+    "notebook_code_cells_compiled": 3,
+    "two_wheel_and_zip_builds_identical": true,
+    "wheel_members_match_source": true,
+    "payload_hashes": true
+  },
+  "not_run": [
+    "numerical tests (session stopped before collection by memory admission)",
+    "CUDA/AMP tests",
+    "generated 15-arm qualification",
+    "Kaggle target run",
+    "market data training/benchmarking",
+    "protected evaluation"
+  ],
+  "resource_receipt": "research/frem_s13_20261019/numerical_admission.log",
+  "latest_available_mib": [
+    403.390625,
+    278.59375,
+    195.328125
+  ],
+  "minimum_available_mib": 512,
+  "latest_pageouts": [
+    392546,
+    392546,
+    392546
+  ],
+  "release": {
+    "archive": "frem_s13_kaggle_bundle.zip",
+    "archive_sha256": "7ea4f9b44be392e5f000924cd2b1d93a291c48d46e8a29b99eaf7e81c136e9b9",
+    "wheel": "frem_s13-0.1.0-py3-none-any.whl",
+    "wheel_sha256": "1822deea9c54a8415a9719d933bd1b4c2dea7879fadf6197866d0f7092325467",
+    "notebook_sha256": "dc765d634937023bbbdc10f1508fe50872ce4df7d9896e29cd671d96bc766ff7",
+    "members": 10,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "market_fits": 0,
+  "protected_access": false,
+  "limitations": [
+    "No zero-defect guarantee",
+    "New numerical source is not runtime-qualified",
+    "See checklist for explicit model/data exclusions and remaining evidence"
+  ],
+  "next_action": "Run exact notebook and ZIP on an admitted compatible CUDA target; preserve and independently verify generated results before supplying any market dataset."
+}

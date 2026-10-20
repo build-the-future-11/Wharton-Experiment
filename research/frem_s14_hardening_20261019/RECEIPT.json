@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-10-19T06:11:45.892713+00:00",
+  "iteration": "FREM-S14",
+  "revision": "0.1.2",
+  "status": "HARDENED_PACKAGED_GPU_REQUALIFICATION_PENDING",
+  "candidate_preparation": "READY_FOR_GPU_QUALIFICATION",
+  "scientific_status": "NOT_EVALUATED",
+  "release": {
+    "package_version": "0.1.2",
+    "source_identity": "92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090",
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "2bcb3bee0b6427add1a9a59cb385e6282354286ff5f214b28c8ded21bbd73942",
+    "wheel": "frem_s14-0.1.2-py3-none-any.whl",
+    "wheel_sha256": "b9807bf7673f743ea490ecd8f991f4f6da0f2d265f3f69985b784d1a45d585c5",
+    "notebook_sha256": "06b7e332f53c39722a90189c4ab95117b262d17e66c263ade7f8d9be7303887a",
+    "members": 16,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "source_identity": "92cbf6368cce53b6ad9784a7ccd3051457582eda6f5e88275ffd728c0d8b9090",
+  "source_manifest": "research/frem_s14_hardening_20261019/candidate_manifest.json",
+  "scope": "Validity and engineering hardening; core architecture, 19 arms, three seeds, three folds, budgets and thresholds preserved.",
+  "stdlib_tests": {
+    "unique": 48,
+    "source_passed": true,
+    "fresh_installed_wheel_passed": true,
+    "double_counted": false
+  },
+  "declared_numerical_tests": 36,
+  "numerical_tests_executed_current_source": 0,
+  "declared_total_tests": 84,
+  "regression_reproductions": {
+    "previous_defects_reproduced": 6,
+    "current_cases_passed": 6,
+    "receipt": "research/frem_s14_hardening_20261019/regression_reproduction.json"
+  },
+  "static_checks": "Ruff and formatting including generated notebook, AST/compile, wheel RECORD/source equality, source-anchored archive fixture, embedded release byte equality and identical rebuild passed.",
+  "local_numerical_admission": {
+    "minimum_mib": 512,
+    "passed": false,
+    "samples": [
+      {
+        "available_mib": 293.078125,
+        "pageouts": 441851
+      },
+      {
+        "available_mib": 417.5625,
+        "pageouts": 441851
+      },
+      {
+        "available_mib": 220.453125,
+        "pageouts": 442624
+      }
+    ],
+    "time": "2026-10-19T06:05:19.920593+00:00"
+  },
+  "prior_gpu_run": {
+    "version": 359930995,
+    "status": "FAILED_ENGINEERING_BEFORE_MARKET",
+    "tests": "41 passed, 1 failed",
+    "test_returncode": 1,
+    "archive_sha256": "2a35aab2493600268cfe63334c645f6c2e021607729efbcceed8def5bc565fbc",
+    "files": 65,
+    "delivery": {
+      "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+      "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+      "mode": "historical_suite"
+    },
+    "payload_members_verified_against_local_hash_bound_release": 12,
+    "installed_python_sources_verified": 14,
+    "qualification_started": false,
+    "market_started": false,
+    "readback_defect": "PAYLOAD.json was verified in-memory but not retained; local bound release supplies inventory. Corrected notebook retains inventory and release.zip.",
+    "package_version": "0.1.0",
+    "source_identity": "de0efbe21debec8c492f28a6e38c0c26f28a29b6c820fa991ffc77a13a111de1",
+    "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359930995",
+    "accelerator": "GPU T4 x2 observed",
+    "visibility": "Private observed",
+    "internet": "off observed",
+    "receipt": "research/frem_s14_20261019/KAGGLE_VERSION1_RECEIPT.json"
+  },
+  "current_gpu_uploaded": false,
+  "current_gpu_qualified": false,
+  "historical_cells_completed": 0,
+  "historical_cells_expected": 171,
+  "protected_access": false,
+  "blocker": "Kaggle editor still reports unavailable reCAPTCHA service after a supported reload; no corrected upload or run.",
+  "blocker_evidence": "research/frem_s14_hardening_20261019/kaggle_blocked.txt",
+  "followup": {
+    "id": "finish-s14-kaggle-gpu-qualification",
+    "status": "ACTIVE",
+    "interval_minutes": 30,
+    "guard": "Current candidate must be READY_FOR_GPU_QUALIFICATION and all source/release hashes must match before upload."
+  },
+  "preservation": {
+    "previous_candidate": "research/frem_s14_hardening_20261019/before",
+    "previous_gpu_outputs": "research/frem_s14_20261019/kaggle_version1_outputs.zip",
+    "s12_s13_state_unchanged": true,
+    "s13_source_identity": "a9844938bb73c5a006a1817fea9c3d53ce06dd7fded8c8eeecb841a8a56ecfbf",
+    "historical_suite_configs_byte_identical": true
+  },
+  "tooling_failures_preserved": [
+    "Initial Ruff findings were corrected before final lint; no numeric claim derives from lint.",
+    "First wheel install failed because the default uv cache could not initialize; a task-local /private/tmp cache succeeded.",
+    "Final numerical admission failed at 293.08/417.56/220.45 MiB with pageouts rising from 441851 to 442624."
+  ],
+  "remaining": [
+    "Upload and independently confirm exact saved notebook identity when editor becomes accessible.",
+    "Execute the full 84-test target suite (report actual pass/fail/skip counts), then complete the 19-arm generated CUDA qualification.",
+    "Execute strict fixed-cohort intake and the full 171-cell historical proxy benchmark within existing ceilings.",
+    "Download the archive, verify the trusted release/source and independently reconstruct every fold, cell, score, ledger and complete comparison family."
+  ],
+  "claims": "No numerical/GPU success for 0.1.2, market efficacy, measured speedup, tradability or zero-defect guarantee is established."
+}

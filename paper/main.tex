@@ -1,4 +1,5 @@
 \documentclass[11pt,a4paper]{article}
+\usepackage{arxiv}
 \usepackage[margin=25mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
@@ -21,17 +22,17 @@
 \newcommand{\clip}{\operatorname{clip}}
 \newcommand{\diag}{\operatorname{diag}}
 \newtheorem{proposition}{Proposition}
-\title{FREM: Causal Fourier--Reservoir Engram Memory for Financial Forecasting and Liability-Aware Allocation}
+\title{FREM: Causal Fourier--Reservoir Engram Memory for Financial Forecasting and Liability-Aware Allocation\\\large Evidence-Bound Specification, Exploratory Findings, and the FREM-S14 Successor Protocol}
 \author{Research specification prepared for Ryan Gomez}
-\date{12 October 2026\\Version 0.4: exploratory evidence and S4 development}
+\date{20 October 2026\\Version 0.5: exploratory evidence and prospective FREM-S14 protocol}
 \begin{document}
 \maketitle
 \begin{center}
-\fcolorbox{teal}{teal!5}{\parbox{0.92\linewidth}{\textbf{Primary memory advantage not established.} Synthetic and public exploratory campaigns are complete. S3 memory effects are mixed and both primary intervals include zero. Canonical admitted-market confirmation remains unevaluated; protected 2025 onward outcomes remain untouched. This draft reports actual exploratory evidence and does not establish profitability or submission readiness.}}
+\fcolorbox{teal}{teal!5}{\parbox{0.92\linewidth}{\textbf{Primary memory advantage not established.} Synthetic and public exploratory campaigns are complete. S3 memory effects are mixed and both primary intervals include zero. The prospective FREM-S14 GPU successor is implemented and packaged but remains numerically unqualified: its first GPU candidate failed a contraction test before market access, and its next saved version failed while Kaggle mounted the declared dataset before notebook code ran. Canonical admitted-market confirmation remains unevaluated; protected 2025 onward outcomes remain untouched. This draft reports actual evidence and does not establish profitability or submission readiness.}}
 \end{center}
 
 \begin{abstract}
-Financial predictors must separate recurring information from transient noise while respecting information availability, execution timing, and investor liabilities. We specify FREM, a candidate architecture combining a temporal joint-embedding predictive objective, a contraction-bounded fixed reservoir, trailing Fourier descriptors, and bounded episodic residual memory. The proposed mechanism is delayed utility credit: an episode influences retention only after its outcome becomes observable, and memories are retained according to realized predictive contribution, spectral surprise, reuse, and age. A feedback controller adjusts a limited set of learning and expert-weighting choices. A separate constrained allocation layer consumes explicitly defined simple-return forecasts or scenarios and protects investor cash-flow obligations. We formalize information timing, the model, fitting, frozen and adaptive inference, uncertainty, cost accounting, and a liability case based on Laura Gao's supplied preparation document. Elementary results establish a reservoir contraction bound, causal forecast measurability under stated assumptions, and a finite-memory bound; they do not establish market predictability. The prospective evaluation compares memory against mechanism-off, alternative-retention, and classical and neural controls using chronological purging, an untouched tail, complete seed families, and date-block inference. The retained synthetic integration exercise favors the memory-off control; its numbers are audited from saved predictions and reported with their limited scope. Completed public exploratory S2, six-window and S3 campaigns provide mixed or unsupported memory evidence. S3 primary gains are -0.014116 and +0.007006 nats in 2023 and 2024; both exploratory intervals include zero. Canonical confirmation remains unevaluated, and the completed protocols remain closed.
+Financial predictors must separate recurring information from transient noise while respecting information availability, execution timing, and investor liabilities. We specify FREM, a candidate architecture combining temporal joint-embedding prediction, contraction-bounded reservoirs, trailing Fourier descriptors, and bounded outcome-matured episodic memory. The proposed mechanism is delayed utility credit: an episode can influence retention and retrieval only after its outcome becomes observable. The FREM-S14 successor adds masked multi-offset EMA targets, an exact conditional finite-grid Gaussian diffusion transition, mature-neighbor graph retrieval, bounded training-residual-guided neurogenesis, and separately capped likelihood, downside, and tail routers. A constrained allocation layer consumes explicitly defined simple-return scenarios and protects investor cash-flow obligations. We formalize information timing, forward and training processes, frozen inference, uncertainty, cost accounting, and a liability case based on Laura Gao's supplied preparation document. Algebraic results establish reservoir contraction, causal forecast measurability under stated assumptions, and bounded retained state; they do not establish market predictability. The fixed S14 development family contains 19 arms, three seeds, and three expanding historical-proxy folds, with complete-family inference and an untouched 2025 onward boundary. The retained synthetic integration exercise favors the memory-off control. Completed public exploratory S2, six-window, S3, and S4 campaigns provide mixed or unsupported memory evidence; S3 primary gains are -0.014116 and +0.007006 nats in 2023 and 2024, with both intervals including zero. S14 has produced no market fit: one GPU engineering attempt failed a strict numerical test, and a later attempt failed during external dataset mounting before notebook execution. Canonical confirmation therefore remains unevaluated, and completed protocols remain closed.
 \end{abstract}
 \newpage
 \begingroup
@@ -458,6 +459,171 @@ Good results are selection artifacts & Many variants and repeated holdouts & Fro
 Fallback violates rules & Cash or reduced turnover is assumed always feasible & Recheck all hard constraints for every fallback and after lot rounding \\
 \bottomrule
 \end{longtable}
+
+\section{FREM-S14 prospective successor}
+\label{sec:s14}
+
+FREM-S14 is a separately versioned development successor. It does not reopen or
+replace the completed S2--S8 exploratory studies, and no S14 result is pooled
+with their evidence. The central prospective question is whether a learned
+causal router over multiscale reservoir, spectral, stochastic-latent, and
+outcome-matured engram features can improve a proper held-out distributional
+score over matched mechanism-off and simpler controls. The implementation is
+complete enough to state and execute the declared engineering and historical
+proxy protocol, but the protocol has not produced a qualified market result.
+
+\subsection{Forward mechanism}
+
+For each leak $\alpha_j\in\{0.1,0.4,0.9\}$, the active reservoir coordinates
+follow
+\begin{equation}
+r^{(j)}_t=(1-\alpha_j)r^{(j)}_{t-1}
+ +\alpha_j\tanh(Wr^{(j)}_{t-1}+Ux_t+b),
+\qquad \lVert W\rVert_2\le 0.85.
+\end{equation}
+Inactive coordinates are masked. Capacity is fixed; at declared training
+epochs, inactive units may be recruited by stable ranking of their absolute
+sample correlation with training residuals. Counts, sums, squares, and
+cross-products are checkpointed. Validation and evaluation labels cannot
+change the active set. The \texttt{no\_neurogenesis} and
+\texttt{fixed\_full\_capacity} arms distinguish recruitment from mere capacity.
+
+The latent vector is arranged on a periodic $4\times8$ lattice. With positive
+row and column diffusion coefficients, damping $\kappa>0$, lattice Laplacians
+$L_r,L_c$, and $A=D_rL_r+D_cL_c+\kappa I$, S14 uses the conditional linear
+Gaussian transition
+\begin{equation}
+ dZ=(-AZ+f(z_0))\,dt+\sigma\,dW,
+ \qquad f(z_0)=\tanh(Bz_0+c).
+\end{equation}
+In the orthonormal eigenbasis, a mode with eigenvalue $a>0$ has
+\begin{equation}
+ \mathbb E[Z_{t+\Delta}\mid Z_t=z]
+ =e^{-a\Delta}z+\frac{1-e^{-a\Delta}}{a}f,
+ \quad
+ \operatorname{Var}[Z_{t+\Delta}\mid Z_t]
+ =\sigma^2\frac{1-e^{-2a\Delta}}{2a}.
+\end{equation}
+The implementation uses \texttt{expm1} forms near zero. This is exact for the
+declared finite-dimensional conditional model; it is not a physical market PDE
+or a convergence theorem for a nonlinear continuum process. The
+\texttt{no\_spde} arm replaces it with the registered MLP transition.
+
+Masked online contexts are predicted at the distinct offsets
+$\lfloor H/2\rfloor$ and $H$. EMA stop-gradient targets consume shifted trailing
+contexts, and the maximum offset governs purging. Forecast loss is combined
+with mode-wise Gaussian latent likelihood, cosine agreement, variance floors,
+and covariance penalties. The \texttt{no\_mask},
+\texttt{no\_multihorizon}, and \texttt{no\_jepa} arms isolate these choices.
+
+Memory keys combine fixed statistical, Fourier, and short n-gram coordinates.
+An eligible episode must have the same asset identity and outcome maturity
+strictly before the current decision. A bounded top-$k$ search uses cosine and
+age weights, followed by one convex personalized graph-diffusion step among the
+eligible selected neighbors. Invalid pairs are zeroed before moments and the
+weights are renormalized. The full-arm trace candidate retains episode decision
+and maturity times, asset, slot, similarity, age, value, base weight, graph
+weight, final weight, coverage, and reconstructed memory moments. This trace is
+an audit mechanism, not evidence that retrieval helps. The
+\texttt{no\_memory}, \texttt{no\_graph}, and \texttt{no\_ngram} controls remove
+the corresponding paths.
+
+Three capped-simplex gates separately weight experts for likelihood, downside
+Brier loss, and tail pinball loss. A balance penalty discourages collapse. The
+forecast law is a finite-variance Student mixture whose variance includes both
+within-component variance and centered between-component dispersion. The law
+can assign mass below a $-100\%$ simple return and is therefore a scoring model,
+not a solvency-safe return simulator. Portfolio replay uses separately bounded
+finite scenarios and never treats the unbounded predictive law as executable
+wealth support.
+
+\subsection{Training, controls, and fixed proxy matrix}
+
+Training uses AdamW, gradient clipping, deterministic registered seeds, cosine
+scheduling, early stopping on the validation partition, CUDA checks, and exact
+epoch resume. The fixed arm family is
+\begin{quote}\small
+full, no-memory, no-JEPA, no-neurogenesis, no-reservoir, no-spectral,
+uniform-router, no-risk, zero, ridge, XGBoost, hybrid-XGBoost,
+fixed-full-capacity, no-ngram, GRU, no-SPDE, no-multihorizon, no-graph, and
+no-mask.
+\end{quote}
+The registered seeds are 11, 29, and 47. There is no automatic hyperparameter
+search in this matrix. Hybrid XGBoost is validation selected and its additional
+compute must be reported rather than hidden.
+
+The historical proxy cohort is SPY, QQQ, IWM, DIA, TLT, IEF, GLD, and SLV.
+Three expanding prefixes end before 2011, 2015, and 2018. The intake requires
+identical calendars and rejects intersection selection, forward filling, and
+asset substitution. Nine causal historical features create 20-observation
+compounded targets. Each fold uses chronological 60\% training, 20\% validation,
+and 20\% evaluation, with a 20-observation embargo and outcome-maturity purge.
+The complete matrix therefore has
+$19\times3\times3=171$ declared cells. Those cells are not 171 independent
+financial histories. A fold may consume at most 2,800 seconds and the notebook
+at most 13,500 seconds including tests and qualification. A failed, missing, or
+timed-out cell stays in the denominator.
+
+The primary endpoint is the complete-family date-balanced Student-mixture
+negative log likelihood. Seeds are averaged within arm and fold before equal
+fold aggregation. Paired circular 20-date blocks are resampled 2,000 times;
+the complete arm family receives Holm adjustment. The practical improvement
+margin is $0.01$ nats per observation. Independent reconstruction checks raw
+laws, moments, scores, allocation targets, self-financing wealth, fees, drift,
+and liquidation. Even a completed favorable proxy outcome would remain
+exploratory because the source is a present-day adjusted-close archive without
+verified point-in-time adjustment vintages, inactive securities, executable
+quotes, spreads, impact, or terminal distributions.
+
+\subsection{Implementation and execution evidence through 20 October 2026}
+
+The current trace candidate is package 0.1.5. Its source identity is
+\texttt{6ccbee61b0518d0e\allowbreak fa297bcfe547e769c\allowbreak
+4e3a9c51610341f4e\allowbreak 8c622258414d37}.
+The immutable release ZIP, wheel, and notebook hashes are retained in the
+repository release receipt. In the current audit, 57 dependency-free tests
+passed from source and the same 57 passed from a fresh wheel installation under
+Python 3.12. Scoped Ruff formatting and lint, bytecode compilation, an offline
+lock check, and exact release-hash readback passed. These checks exclude 46
+declared numerical contracts and all CUDA/AMP execution.
+
+Two earlier private GPU attempts are scientifically non-results. Version 1 ran
+41 tests and failed one strict float32 reservoir-contraction check before
+qualification or market access. Its code, output, and failure receipt are
+preserved. A prospective normalization repair retained the contraction bound
+and acceptance threshold. Saved version 2 used the repaired 0.1.3 release but
+Kaggle exhausted 30 dataset-mount retries before notebook code ran; its visible
+log reports zero output bytes. Consequently it executed zero tests, zero
+qualification arms, and zero historical cells. This external infrastructure
+failure neither supports nor falsifies the model and permits an exact,
+recorded retry without outcome-driven modification.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabularx}{\linewidth}{p{.20\linewidth}p{.22\linewidth}X}
+\toprule Artifact or stage & Status & Evidence boundary \\
+\midrule
+S14 0.1.5 source and wheel & 57 + 57 tests pass & Dependency-free contracts only; not numerical or CUDA qualification \\
+GPU saved version 1 & Engineering failure & 41 pass, one contraction failure; zero market cells \\
+GPU saved version 2 & External mount failure & Notebook never ran; zero-byte output and zero market cells \\
+Generated 19-arm qualification & Not executed for 0.1.5 & Required before data intake \\
+Historical proxy matrix & 0/171 complete & No S14 predictive or economic result \\
+Protected 2025 onward boundary & Not accessed & No confirmatory claim or consumption \\
+\bottomrule
+\end{tabularx}
+\caption{FREM-S14 implementation and execution ledger. Engineering evidence is
+not promoted to model efficacy.}
+\label{tab:s14-ledger}
+\end{table}
+
+The admissible continuation is narrow: preserve both failed saved versions;
+verify the exact 0.1.5 notebook and release hashes; obtain a GPU runtime with
+the declared dataset mounted; complete all numerical tests and generated
+qualification; then execute or explicitly fail every one of the 171 cells.
+Only a downloaded, independently verified complete bundle can support proxy
+analysis. A valid negative result closes this version. A genuine validity
+defect requires a recorded corrected successor; a favorable seed, fold, block
+length, or subgroup cannot be chosen after outcomes are seen.
 
 \section{Current evidence and failure analysis}
 \label{sec:evidence}

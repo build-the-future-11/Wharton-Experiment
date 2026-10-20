@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "type": "external_infrastructure_failure_before_notebook_execution",
+  "version": "FREM-S14-0.1.3 Kaggle saved version 359955736",
+  "observation": "Kaggle marked saved version 359955736 failed with 0 B output because its platform exhausted retries mounting the declared Huge Stock Market Dataset. Notebook code, tests, generated qualification, historical cells, and protected outcomes did not run.",
+  "cause": "Kaggle dataset mounting failed before the notebook process started; no model or data-contract failure was observed.",
+  "decision": "Preserve the terminal failure and do not score it as model evidence. Permit one exact-design retry only after source, archive, wheel, notebook, dataset attachment, accelerator, and saved-version identity are rechecked. Do not change thresholds, folds, arms, seeds, or budgets in response to this failure.",
+  "next_candidate": "FREM-S14-0.1.5 is separately hash-bound and locally engineering-verified; it adds retrieval provenance without changing the issued scientific design. It still requires exact numerical/CUDA qualification before any historical proxy execution.",
+  "discriminating_evidence": "A future saved version must expose a complete test/qualification transcript and retained bundle. Only then may historical cells begin, and all results must pass independent reconstruction.",
+  "result": "RETRY_ADMISSIBLE_NOT_LAUNCHED",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "receipt": "research/frem_s14_kaggle_failure_20261020/RECEIPT.json"
+}

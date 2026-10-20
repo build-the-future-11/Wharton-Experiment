@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-19T05:31:00.089834+00:00",
+  "iteration": "FREM-S14",
+  "status": "GPU_V1_FAILED_REPAIR_PACKAGED_FOLLOWUP_ACTIVE",
+  "scientific_status": "NOT_EVALUATED",
+  "current_candidate": {
+    "package_version": "0.1.1",
+    "source_identity": "7c5e45bd2762b7b6b919cebc7a9367cdd1dac216f19fbe0478043664aa58c690",
+    "release": {
+      "archive": "frem_s14_kaggle_bundle.zip",
+      "archive_sha256": "b0a3e74c7b4070c7070f8a5aeb3c9bb8e274f62e4ab4285a108f5dfd4755f019",
+      "wheel": "frem_s14-0.1.1-py3-none-any.whl",
+      "wheel_sha256": "eee6cad20278a7b059ad660d804e7a1eb8973f5e940ac97dfbce93c7347c1596",
+      "notebook_sha256": "b7e129be2d950d6d7ea1a8c008bde2ea21dad73f56996b69aaffc3467d75e87d",
+      "members": 13,
+      "runtime_qualified": false,
+      "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+    },
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU.ipynb",
+    "uploaded": false,
+    "numerical_qualified": false,
+    "market_started": false,
+    "local_stdlib_unique_tests": 21,
+    "source_and_installed_wheel_pass": true,
+    "static_checks": "Scoped Ruff/format, AST/notebook compilation, wheel RECORD/source equality and identical rebuild passed.",
+    "local_numerical_admission": {
+      "minimum_mib": 512,
+      "passed": false,
+      "samples": [
+        {
+          "available_mib": 86.984375,
+          "pageouts": 420523
+        },
+        {
+          "available_mib": 125.03125,
+          "pageouts": 420523
+        },
+        {
+          "available_mib": 123.203125,
+          "pageouts": 420524
+        }
+      ],
+      "time": "2026-10-19T05:26:25.017415+00:00"
+    },
+    "repair": "Float64 reservoir normalization with dimension-scaled float32 rounding margin; contraction and test tolerance unchanged. Notebook retains release ZIP and PAYLOAD inventory."
+  },
+  "prior_gpu_run": {
+    "version": 359930995,
+    "status": "FAILED_ENGINEERING_BEFORE_MARKET",
+    "tests": "41 passed, 1 failed",
+    "test_returncode": 1,
+    "archive_sha256": "2a35aab2493600268cfe63334c645f6c2e021607729efbcceed8def5bc565fbc",
+    "files": 65,
+    "delivery": {
+      "archive_sha256": "621f598948e8a59af38b3c936aabd2265d1d126fa582a6ce33f6cfc9c14903a1",
+      "wheel_sha256": "2960e272ee7165756cb4f1dd3f7202adbbb8c72dd329a2e017177b7325f6d2cf",
+      "mode": "historical_suite"
+    },
+    "payload_members_verified_against_local_hash_bound_release": 12,
+    "installed_python_sources_verified": 14,
+    "qualification_started": false,
+    "market_started": false,
+    "readback_defect": "PAYLOAD.json was verified in-memory but not retained; local bound release supplies inventory. Corrected notebook retains inventory and release.zip.",
+    "package_version": "0.1.0",
+    "source_identity": "de0efbe21debec8c492f28a6e38c0c26f28a29b6c820fa991ffc77a13a111de1",
+    "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=359930995",
+    "accelerator": "GPU T4 x2 observed",
+    "visibility": "Private observed",
+    "internet": "off observed",
+    "receipt": "research/frem_s14_20261019/KAGGLE_VERSION1_RECEIPT.json"
+  },
+  "blocker": "Kaggle editor reports Could not connect to the reCAPTCHA service; corrected upload is pending.",
+  "blocker_screenshot": "research/frem_s14_20261019/kaggle_editor_recaptcha_blocked.png",
+  "followup": {
+    "id": "finish-s14-kaggle-gpu-qualification",
+    "kind": "heartbeat",
+    "name": "Finish S14 Kaggle GPU qualification",
+    "status": "ACTIVE",
+    "rrule": "FREQ=MINUTELY;INTERVAL=30",
+    "target_thread_id": "01a15268-c54b-77d0-a295-cc5fa3396a2e"
+  },
+  "expected_historical_cells": 171,
+  "completed_historical_cells": 0,
+  "notebook_seconds_ceiling": 13500,
+  "protected_access": false,
+  "predecessor_preservation": "research/frem_s14_20261019/predecessor_preservation.json",
+  "launch_receipt_preserved": "research/frem_s14_20261019/LAUNCH_RECEIPT.json",
+  "checklist": "successors/frem_s14/CHECKLIST.md",
+  "remaining": [
+    "Upload exact repaired candidate and verify saved code identity.",
+    "Pass complete numerical suite and generated 19-arm CUDA qualification.",
+    "Execute strict dataset intake and the fixed 171-cell historical proxy matrix.",
+    "Download and independently reconcile all raw outputs, scores, allocations, hashes and failures."
+  ],
+  "claim_boundary": "Engineering passes do not establish predictive improvement or tradable profitability; no zero-defect guarantee."
+}

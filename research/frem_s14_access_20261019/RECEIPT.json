@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-10-19T08:31:40.422269+00:00",
+  "status": "KAGGLE_ACCOUNT_ACCESS_BLOCKED_RUN_OUTCOME_UNKNOWN",
+  "package_version": "0.1.3",
+  "version": 359955736,
+  "last_verified_run_status": "RUNNING",
+  "last_verified_check_utc": "2026-10-19T08:19:44Z",
+  "last_observed_accelerator": "GPU T4 x2",
+  "last_observed_output_bytes": 0,
+  "current_run_status": "UNKNOWN_ACCESS_BLOCKED",
+  "tests": {
+    "expected": 102,
+    "collected": null,
+    "passed": null,
+    "failed": null,
+    "skipped": null
+  },
+  "generated_qualification": {
+    "expected_arms": 19,
+    "completed": null
+  },
+  "historical_suite": {
+    "expected_cells": 171,
+    "actual_started": null,
+    "actual_completed": null,
+    "independently_verified_completed": 0
+  },
+  "observations": [
+    "Exact saved-version URL returned page not found, including after one supported reload.",
+    "Kaggle homepage displayed Login, confirming browser signed out.",
+    "Normal Google sign-in opened Complete registration, which was cancelled.",
+    "Existing-account email/username sign-in needs credentials; username ryangomez010 prepared, password blank."
+  ],
+  "required_user_action": "Sign in to existing Kaggle account ryangomez010 through the open login tab, then reply ready to resume the follow-up.",
+  "prior_receipt": "research/frem_s14_readback_20261019/RECEIPT.json",
+  "launch_receipt": "research/frem_s14_readback_20261019/LAUNCH_RECEIPT.json",
+  "release": {
+    "package_version": "0.1.3",
+    "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+    "archive": "frem_s14_kaggle_bundle.zip",
+    "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
+    "wheel": "frem_s14-0.1.3-py3-none-any.whl",
+    "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
+    "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "source_changed": false,
+  "new_run_launched": false,
+  "run_cancelled": false,
+  "run_failure_inferred": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "followup": {
+    "id": "finish-s14-kaggle-gpu-qualification",
+    "status": "PAUSED",
+    "reason": "Human login required"
+  },
+  "screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png"
+}

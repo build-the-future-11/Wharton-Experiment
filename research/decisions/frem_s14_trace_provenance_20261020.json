@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "type": "engineering_observability_successor_before_market_access",
+  "version": "FREM-S14-0.1.5",
+  "predecessor": "FREM-S14-0.1.3 active private GPU run preserved",
+  "scope": "Add diagnostic retrieval provenance and readback reconstruction to the full arm only. Core architecture, data contract, 19 arms, seeds, folds, thresholds, budgets, training objective, and protected boundary are unchanged.",
+  "observation": "The prior artifact ledger could verify aggregate predictions but could not show which mature same-asset engrams created an individual full-arm memory context.",
+  "hypothesized_cause": "Engram admission and retrieval existed in the model but their per-decision episode provenance was not persisted as a separately verifiable artifact.",
+  "change": "Versioned candidate 0.1.5 records full-arm retrieval traces and independently checks episode origin, maturity, asset, slots, normalized weights, coverage, and reconstructed weighted moments. The release builder now refuses to overwrite a candidate path; the read-only plan command accepts declared suite wrappers.",
+  "predicted_effect": "A qualified future result can be audited for retrieval causality without changing the issued predictive law or seeing market outcomes during this implementation work.",
+  "discriminating_experiment": "Run the exact numerical trace contracts plus CUDA qualification on the hash-bound 0.1.5 package, then verify a retained result bundle before any historical-proxy comparison is interpreted.",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "result": "IMPLEMENTED_AND_PACKAGED_NUMERICAL_VERIFICATION_PENDING"
+}

@@ -1,0 +1,12 @@
+{
+  "predecessor_tracked_source_and_results_unchanged": true,
+  "s12_canonical_record_unchanged": true,
+  "canonical_docs_preserve_prior_prefix": true,
+  "tracked_changes": [
+    "README.md",
+    "RESEARCH_STATE.json",
+    "docs/CODEX_HANDOFF.md",
+    "docs/STATIC_VERIFICATION.md",
+    "research/events.jsonl"
+  ]
+}
