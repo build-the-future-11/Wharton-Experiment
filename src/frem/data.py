@@ -556,6 +556,8 @@ class WindowData:
                 if value.shape != (n,):
                     raise DataValidationError(f"{name} must have shape [N]")
                 setattr(self, name, value)
+        if (self.entry_time is None) != (self.exit_time is None):
+            raise DataValidationError("entry_time and exit_time must either both be supplied or both be omitted")
         if self.entry_time is not None and np.any(self.entry_time <= self.time):
             raise DataValidationError("Entry must occur strictly after the decision")
         if (
