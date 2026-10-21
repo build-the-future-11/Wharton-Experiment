@@ -1,0 +1,5 @@
+Using CPython 3.12.14 interpreter at: /Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python
+Resolved 1 package in 10ms
+Prepared 1 package in 17ms
+Installed 1 package in 11ms
+ + frem-s14==0.1.8 (from file:///Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/dist/frem_s14-0.1.8-py3-none-any.whl)

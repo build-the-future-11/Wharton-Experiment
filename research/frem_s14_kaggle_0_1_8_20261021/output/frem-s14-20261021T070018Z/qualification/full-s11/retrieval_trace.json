@@ -1,0 +1,46 @@
+{
+  "columns": {
+    "age_days": [
+      4
+    ],
+    "base_weight": [
+      4
+    ],
+    "eligible": [
+      4
+    ],
+    "episode_asset": [
+      4
+    ],
+    "episode_decision": [
+      4
+    ],
+    "episode_maturity": [
+      4
+    ],
+    "episode_value": [
+      4
+    ],
+    "graph_applied": [],
+    "graph_weight": [
+      4
+    ],
+    "memory_coverage": [],
+    "memory_mean": [],
+    "memory_std": [],
+    "retained_count": [],
+    "similarity": [
+      4
+    ],
+    "slot": [
+      4
+    ],
+    "weight": [
+      4
+    ]
+  },
+  "prediction_artifact": "predictions.npz",
+  "rows": 132,
+  "schema": "frem-s14-retrieval-trace-v1",
+  "scope": "full-arm test forecasts; mature training engrams only"
+}

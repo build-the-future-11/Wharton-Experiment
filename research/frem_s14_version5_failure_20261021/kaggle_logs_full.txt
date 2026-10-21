@@ -1,0 +1,363 @@
+menu
+Skip to
+content
+
+Create
+
+Home
+
+Competitions
+
+Benchmarks
+
+how_to_vote
+
+Arenas
+
+Game Arena
+
+Data Hub
+
+More
+
+Discussions
+
+Learn
+
+Kaggle Rankings
+
+Progression
+
+Documentation
+
+Host a Competition
+
+Research Grants
+
+Educator Resources
+
+Support/Contact
+
+Community Guidelines
+
+Team
+
+Blog
+
+Terms
+
+Privacy
+
+Your Work
+
+Viewed
+
+FREM S14 GPU benchmark 20261019
+
+worldcastr-lineage-study-portable-v2
+
+ML4 Material Discovery quantile v2
+
+ML4 Material Discovery development v1
+
+heston_signature_variance_v2_r1
+
+Edited
+
+FREM S14 GPU benchmark 20261019
+
+notebook8da93b987e
+
+BackLOG v0.3 frozen replication (not run)
+
+REDCELL v03 evidence study 20261020
+
+notebookb762015339
+
+auto_awesome_motion
+
+View Active Events
+
+​
+Ryan Gomez010 · 9h ago · 23 views · Private
+arrow_drop_up
+0
+lock
+Share
+edit
+Edit
+file_download
+Download
+more_vert
+FREM S14 GPU benchmark 20261019
+edit
+Notebook
+Input
+Output
+Logs
+Comments (0)
+Settings
+Logs
+file_download
+Download Logs
+error
+Version 5 failed to run after 56.2s
+Accelerator
+
+GPU T4 x2
+
+Environment
+
+Latest Container Image
+
+Output
+
+795.45 kB
+
+Time
+	
+#
+	
+Log Message
+
+7.6s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+7.6s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+7.6s	3	0.00s - to python to disable frozen modules.
+
+7.6s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+8.2s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+8.2s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+8.2s	7	0.00s - to python to disable frozen modules.
+
+8.2s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+10.4s	9	Processing ./frem-s14-20261020T175636Z/payload/frem_s14-0.1.7-py3-none-any.whl
+
+10.4s	10	Installing collected packages: frem-s14
+
+10.5s	11	Successfully installed frem-s14-0.1.7
+
+10.6s	12	Processing ./frem-s14-20261020T175636Z/payload/frem_s14-0.1.7-py3-none-any.whl
+
+10.6s	13	Installing collected packages: frem-s14
+
+10.6s	14	Successfully installed frem-s14-0.1.7
+
+10.6s	15	Verified release and isolated install: /kaggle/working/frem-s14-20261020T175636Z
+
+13.9s	16	{"passed": true, "minimum_mib": 512, "samples": [{"available_mib": 30293.6328125, "pageouts": 0}, {"available_mib": 30293.7734375, "pageouts": 0}, {"available_mib": 30293.5234375, "pageouts": 0}], "time": "2026-10-20T17:56:41.080758+00:00"}
+
+13.9s	17	
+
+48.7s	18	...............................FF....................................... [ 67%]
+
+48.7s	19	...................................                                      [100%]
+
+48.7s	20	=================================== FAILURES ===================================
+
+48.7s	21	_______ HardeningTests.test_intake_calendar_mismatch_is_retained_failure _______
+
+48.7s	22	ValueError: exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches
+
+48.7s	23	
+
+48.7s	24	During handling of the above exception, another exception occurred:
+
+48.7s	25	
+
+48.7s	26	self = <test_hardening_stdlib.HardeningTests testMethod=test_intake_calendar_mismatch_is_retained_failure>
+
+48.7s	27	
+
+48.7s	28	    def test_intake_calendar_mismatch_is_retained_failure(self):
+
+48.7s	29	        for asset in ASSETS:
+
+48.7s	30	            self.prices(asset, 224 if asset == "slv" else 225)
+
+48.7s	31	        out = self.root / "failed"
+
+48.7s	32	>       with self.assertRaisesRegex(ValueError, "calendar mismatch"):
+
+48.7s	33	             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+48.7s	34	E       AssertionError: "calendar mismatch" does not match "exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches"
+
+48.7s	35	
+
+48.7s	36	tests/test_hardening_stdlib.py:209: AssertionError
+
+48.7s	37	_______ HardeningTests.test_intake_end_to_end_values_hashes_and_calendar _______
+
+48.7s	38	
+
+48.7s	39	self = <test_hardening_stdlib.HardeningTests testMethod=test_intake_end_to_end_values_hashes_and_calendar>
+
+48.7s	40	
+
+48.7s	41	    def test_intake_end_to_end_values_hashes_and_calendar(self):
+
+48.7s	42	        paths = {asset: self.prices(asset) for asset in ASSETS}
+
+48.7s	43	        out = self.root / "prepared"
+
+48.7s	44	>       panel = prepare(self.root / "input", out)
+
+48.7s	45	                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+48.7s	46	
+
+48.7s	47	tests/test_hardening_stdlib.py:189: 
+
+48.7s	48	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+48.7s	49	../installed/frem_s14/intake.py:118: in prepare
+
+48.7s	50	    path, matches = resolve_etf_source(source_root, asset)
+
+48.7s	51	                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+48.7s	52	_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+48.7s	53	
+
+48.7s	54	source_root = PosixPath('/tmp/tmpgd3jinom/input'), asset = 'spy'
+
+48.7s	55	
+
+48.7s	56	    def resolve_etf_source(source_root, asset):
+
+48.7s	57	        """Resolve one asset from the dataset's declared ``Data/ETFs`` taxonomy.
+
+48.7s	58	    
+
+48.7s	59	        The upstream archive can contain the same ticker filename in both its
+
+48.7s	60	        ``Stocks`` and ``ETFs`` branches. The cohort is explicitly an ETF cohort,
+
+48.7s	61	        so a repository-wide basename match is ambiguous and incorrect. We still
+
+48.7s	62	        fail closed if more than one canonical ETF path is mounted.
+
+48.7s	63	        """
+
+48.7s	64	        filename = asset + ".us.txt"
+
+48.7s	65	        all_matches = sorted(Path(source_root).rglob(filename))
+
+48.7s	66	        canonical = [
+
+48.7s	67	            path
+
+48.7s	68	            for path in all_matches
+
+48.7s	69	            if len(path.parts) >= 3 and path.parts[-3:] == ("Data", "ETFs", filename)
+
+48.7s	70	        ]
+
+48.7s	71	        if len(canonical) != 1 or canonical[0].is_symlink() or not canonical[0].is_file():
+
+48.7s	72	>           raise ValueError(
+
+48.7s	73	                f"exactly one regular Data/ETFs/{filename} required, "
+
+48.7s	74	                f"found {len(canonical)} canonical among {len(all_matches)} basename matches"
+
+48.7s	75	            )
+
+48.7s	76	E           ValueError: exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches
+
+48.7s	77	
+
+48.7s	78	../installed/frem_s14/intake.py:43: ValueError
+
+48.7s	79	=========================== short test summary info ============================
+
+48.7s	80	FAILED tests/test_hardening_stdlib.py::HardeningTests::test_intake_calendar_mismatch_is_retained_failure
+
+48.7s	81	FAILED tests/test_hardening_stdlib.py::HardeningTests::test_intake_end_to_end_values_hashes_and_calendar
+
+48.7s	82	2 failed, 105 passed in 27.23s
+
+48.7s	83	
+
+49.0s	84	Traceback (most recent call last):
+
+49.0s	85	  File "<string>", line 1, in <module>
+
+49.0s	86	    import sys;import papermill as pm;pm.execute_notebook("__notebook__.ipynb","__notebook__.ipynb",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)
+
+49.0s	87	                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+49.0s	88	  File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 131, in execute_notebook
+
+49.0s	89	    raise_for_execution_errors(nb, output_path)
+
+49.0s	90	    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+
+49.0s	91	  File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+
+49.0s	92	    raise error
+
+49.0s	93	papermill.exceptions.PapermillExecutionError: 
+
+49.0s	94	---------------------------------------------------------------------------
+
+49.0s	95	Exception encountered at "In [2]":
+
+49.0s	96	---------------------------------------------------------------------------
+
+49.0s	97	RuntimeError                              Traceback (most recent call last)
+
+49.0s	98	/tmp/ipykernel_23/2362907652.py in <cell line: 0>()
+
+49.0s	99	      1 run("preflight", ["-m", "frem_s14", "preflight", "--output", str(RUN / "host-admission.json")], 30)
+
+49.0s	100	----> 2 run("tests", ["-m", "pytest", str(PAYLOAD / "tests"), "-W", "error", "-q"], 1800)
+
+49.0s	101	      3 run(
+
+49.0s	102	      4     "qualify",
+
+49.0s	103	      5     [
+
+49.0s	104	
+
+49.0s	105	/tmp/ipykernel_23/2314996549.py in run(name, args, timeout)
+
+49.0s	106	    126     print(log.read_text()[-16000:])
+
+49.0s	107	    127     if code:
+
+49.0s	108	--> 128         raise RuntimeError(f"{name} failed ({code}); retained {log}")
+
+49.0s	109	    129 
+
+49.0s	110	    130 
+
+49.0s	111	
+
+49.0s	112	RuntimeError: tests failed (1); retained /kaggle/working/frem-s14-20261020T175636Z/tests.log
+
+49.0s	113	
+
+51.2s	114	/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+
+51.2s	115	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+
+51.4s	116	/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+
+51.4s	117	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+
+52.1s	118	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+
+52.2s	119	[NbConvertApp] Writing 130198 bytes to __notebook__.ipynb
+
+54.7s	120	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+
+55.3s	121	[NbConvertApp] Writing 421993 bytes to __results__.html

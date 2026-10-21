@@ -1,0 +1,154 @@
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s14/tests/test_hardening_numerical.py:3:1
+   |
+ 1 |   """Regressions for causal clocks, AMP memory, moments and raw evidence readback."""
+ 2 |
+ 3 | / import os
+ 4 | | from dataclasses import replace
+ 5 | |
+ 6 | | import numpy as np
+ 7 | | import pytest
+ 8 | | import torch
+ 9 | | from scipy.optimize import minimize
+10 | | from scipy.stats import multivariate_normal
+11 | |
+12 | | from frem_s14.baselines import combine
+13 | | from frem_s14.cli import qualification_config
+14 | | from frem_s14.data import Samples, generated_panel
+15 | | from frem_s14.dynamics import StochasticField
+16 | | from frem_s14.evaluation import allocate, score_law
+17 | | from frem_s14.model import S14, Engram, objective
+18 | | from frem_s14.training import seed_all
+19 | | from frem_s14.verification import verify_calendar, verify_suite
+   | |_______________________________________________________________^
+20 |
+21 |   DEVICE = os.environ.get("FREM_S14_TEST_DEVICE", "cpu")
+   |
+help: Organize imports
+   |
+8  | import torch
+   - from scipy.optimize import minimize
+   - from scipy.stats import multivariate_normal
+   -
+9  | from frem_s14.baselines import combine
+--------------------------------------------------------------------------------
+16 | from frem_s14.verification import verify_calendar, verify_suite
+17 + from scipy.optimize import minimize
+18 + from scipy.stats import multivariate_normal
+19 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s14/tests/test_numerical.py:3:1
+   |
+ 1 |   """Mathematical, causality, gradient, serialization and accounting tests."""
+ 2 |
+ 3 | / import os
+ 4 | | import time
+ 5 | | from dataclasses import replace
+ 6 | |
+ 7 | | import numpy as np
+ 8 | | import pytest
+ 9 | | import torch
+10 | | from scipy.optimize import minimize
+11 | | from scipy.stats import t
+12 | |
+13 | | from frem_s14.cli import qualification_config
+14 | | from frem_s14.data import Samples, generated_panel, load_csv
+15 | | from frem_s14.evaluation import (
+16 | |     allocate,
+17 | |     capped_simplex,
+18 | |     holm,
+19 | |     paired_bootstrap,
+20 | |     rebalance,
+21 | |     score_law,
+22 | | )
+23 | | from frem_s14.model import S14, nll, objective
+24 | | from frem_s14.runtime import digest, write_json
+25 | | from frem_s14.training import (
+26 | |     GRUForecast,
+27 | |     load_checkpoint,
+28 | |     populate,
+29 | |     predict,
+30 | |     save_checkpoint,
+31 | |     seed_all,
+32 | |     train_neural,
+33 | | )
+   | |_^
+34 |
+35 |   DEVICE = os.environ.get("FREM_S14_TEST_DEVICE", "cpu")
+   |
+help: Organize imports
+   |
+9  | import torch
+   - from scipy.optimize import minimize
+   - from scipy.stats import t
+   -
+10 | from frem_s14.cli import qualification_config
+--------------------------------------------------------------------------------
+30 | )
+31 + from scipy.optimize import minimize
+32 + from scipy.stats import t
+33 |
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s14/tests/test_readback_numerical.py:3:1
+   |
+ 1 |   """Generated end-to-end readback and adversarial retained-evidence tests."""
+ 2 |
+ 3 | / import json
+ 4 | | import os
+ 5 | | import shutil
+ 6 | | from dataclasses import replace
+ 7 | |
+ 8 | | import numpy as np
+ 9 | | import pytest
+10 | |
+11 | | from frem_s14.cli import campaign, qualification_config
+12 | | from frem_s14.runtime import read_json
+13 | | from frem_s14.verification import verify_semantics
+   | |__________________________________________________^
+help: Organize imports
+   |
+9  | import pytest
+   -
+10 | from frem_s14.cli import campaign, qualification_config
+   |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> successors/frem_s14/tests/test_upgrades.py:3:1
+   |
+ 1 |   """Independent matrix, semigroup, Monte Carlo, FIFO and gradient contracts."""
+ 2 |
+ 3 | / import os
+ 4 | | from dataclasses import replace
+ 5 | |
+ 6 | | import numpy as np
+ 7 | | import pytest
+ 8 | | import torch
+ 9 | | from scipy.linalg import expm
+10 | |
+11 | | from frem_s14.cli import qualification_config
+12 | | from frem_s14.dynamics import StochasticField, ring_laplacian
+13 | | from frem_s14.model import S14, Engram, objective
+14 | | from frem_s14.training import seed_all
+   | |______________________________________^
+15 |
+16 |   DEVICE = os.environ.get("FREM_S14_TEST_DEVICE", "cpu")
+   |
+help: Organize imports
+   |
+8  | import torch
+   - from scipy.linalg import expm
+   -
+9  | from frem_s14.cli import qualification_config
+10 | from frem_s14.dynamics import StochasticField, ring_laplacian
+11 | from frem_s14.model import S14, Engram, objective
+12 | from frem_s14.training import seed_all
+13 + from scipy.linalg import expm
+14 |
+   |
+
+Found 4 errors.
+[*] 4 fixable with `--fix`.

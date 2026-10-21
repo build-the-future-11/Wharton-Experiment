@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 249, in <module>
+    main()
+    ~~~~^^
+  File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 245, in main
+    print(json.dumps({"panel": str(prepare(args.source, args.output))}))
+                                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 135, in prepare
+    raise ValueError(
+        f"calendar mismatch for {asset}; no intersection or forward fill allowed"
+    )
+ValueError: calendar mismatch for qqq; no intersection or forward fill allowed

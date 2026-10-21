@@ -1,0 +1,82 @@
+* Getting build dependencies for wheel...
+running egg_info
+writing src/frem_s14.egg-info/PKG-INFO
+writing dependency_links to src/frem_s14.egg-info/dependency_links.txt
+writing entry points to src/frem_s14.egg-info/entry_points.txt
+writing requirements to src/frem_s14.egg-info/requires.txt
+writing top-level names to src/frem_s14.egg-info/top_level.txt
+reading manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+copying src/frem_s14/intake.py -> build/lib/frem_s14
+copying src/frem_s14/__init__.py -> build/lib/frem_s14
+running egg_info
+writing src/frem_s14.egg-info/PKG-INFO
+writing dependency_links to src/frem_s14.egg-info/dependency_links.txt
+writing entry points to src/frem_s14.egg-info/entry_points.txt
+writing requirements to src/frem_s14.egg-info/requires.txt
+writing top-level names to src/frem_s14.egg-info/top_level.txt
+reading manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+writing manifest file 'src/frem_s14.egg-info/SOURCES.txt'
+installing to build/bdist.macosx-26.0-arm64/wheel
+running install
+running install_lib
+creating build/bdist.macosx-26.0-arm64/wheel
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s14
+copying build/lib/frem_s14/intake.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/baselines.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/verification.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/config.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/suite.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/evaluation.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/__init__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/runtime.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/model.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/cli.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/archive.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/__main__.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/training.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/data.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+copying build/lib/frem_s14/dynamics.py -> build/bdist.macosx-26.0-arm64/wheel/./frem_s14
+running install_egg_info
+Copying src/frem_s14.egg-info to build/bdist.macosx-26.0-arm64/wheel/./frem_s14-0.1.8-py3.12.egg-info
+running install_scripts
+creating build/bdist.macosx-26.0-arm64/wheel/frem_s14-0.1.8.dist-info/WHEEL
+creating '/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/tmpzf3122q3/.tmp-jqx5c4a7/frem_s14-0.1.8-py3-none-any.whl' and adding 'build/bdist.macosx-26.0-arm64/wheel' to it
+adding 'frem_s14/__init__.py'
+adding 'frem_s14/__main__.py'
+adding 'frem_s14/archive.py'
+adding 'frem_s14/baselines.py'
+adding 'frem_s14/cli.py'
+adding 'frem_s14/config.py'
+adding 'frem_s14/data.py'
+adding 'frem_s14/dynamics.py'
+adding 'frem_s14/evaluation.py'
+adding 'frem_s14/intake.py'
+adding 'frem_s14/model.py'
+adding 'frem_s14/runtime.py'
+adding 'frem_s14/suite.py'
+adding 'frem_s14/training.py'
+adding 'frem_s14/verification.py'
+adding 'frem_s14-0.1.8.dist-info/METADATA'
+adding 'frem_s14-0.1.8.dist-info/WHEEL'
+adding 'frem_s14-0.1.8.dist-info/entry_points.txt'
+adding 'frem_s14-0.1.8.dist-info/top_level.txt'
+adding 'frem_s14-0.1.8.dist-info/RECORD'
+removing build/bdist.macosx-26.0-arm64/wheel
+Successfully built frem_s14-0.1.8-py3-none-any.whl
+{
+  "package_version": "0.1.8",
+  "source_identity": "c8d8a1c3fa57e6cdfcd2bcec72fee22d7e0c86ce861da316b18b393ad907414b",
+  "archive": "frem_s14_kaggle_bundle-0.1.8.zip",
+  "archive_sha256": "34fbc8132743331e77a7d887ffae50ce899db8ff588adeba4c75c3dc2c8a8567",
+  "wheel": "frem_s14-0.1.8-py3-none-any.whl",
+  "wheel_sha256": "61de299bcaf34c60f0e4a98887d4ffae91d192e6c325ed5f7ad7ae6a5d4a11d5",
+  "notebook_sha256": "c00aae6a2135201b13945628b86173dc1e44da4a757c2acb4deff47a5090f320",
+  "members": 18,
+  "runtime_qualified": false,
+  "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+}

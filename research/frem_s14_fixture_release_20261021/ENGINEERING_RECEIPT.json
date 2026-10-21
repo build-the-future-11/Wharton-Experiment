@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-21T04:57:45.025846+00:00",
+  "status": "PACKAGED_VERIFIED_GPU_UPLOAD_BLOCKED",
+  "package_version": "0.1.8",
+  "release": {
+    "package_version": "0.1.8",
+    "source_identity": "c8d8a1c3fa57e6cdfcd2bcec72fee22d7e0c86ce861da316b18b393ad907414b",
+    "archive": "frem_s14_kaggle_bundle-0.1.8.zip",
+    "archive_sha256": "34fbc8132743331e77a7d887ffae50ce899db8ff588adeba4c75c3dc2c8a8567",
+    "wheel": "frem_s14-0.1.8-py3-none-any.whl",
+    "wheel_sha256": "61de299bcaf34c60f0e4a98887d4ffae91d192e6c325ed5f7ad7ae6a5d4a11d5",
+    "notebook_sha256": "c00aae6a2135201b13945628b86173dc1e44da4a757c2acb4deff47a5090f320",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "verification": "research/frem_s14_fixture_release_20261021/RELEASE_VERIFICATION.json",
+  "checks": {
+    "source_stdlib": 59,
+    "installed_stdlib": 59,
+    "unique_stdlib_tests": 59,
+    "lint": "PASS from package working directory",
+    "format": "PASS",
+    "deterministic_rebuild": "PASS",
+    "prior_release_files_unchanged": 29,
+    "numerical_tests": "NOT_RUN",
+    "gpu_qualification": "NOT_RUN"
+  },
+  "preserved_invocation_failures": [
+    "Root-working-directory Ruff inferred a different first-party import classification; lint.log retained. Same source passes from package root.",
+    "Initial package-root command used one excess parent-directory level and failed before running Ruff. Corrected invocation passes.",
+    "Initial clean install used python -m pip, but this uv-managed venv has no pip. install.log and verification.log retained. Supported uv pip install --no-index --no-deps succeeded; wheel and test payload unchanged."
+  ],
+  "external_observations": {
+    "version5": 360511217,
+    "version5_state": "56.2 second run - failure; Version 5 of 5; 79 output files",
+    "output_download": "Chrome ERR_BLOCKED_BY_CLIENT from normal Download output action",
+    "editor": "Editor Loading; import disabled; one normal reload attempted",
+    "authenticated_cli": "No Kaggle executable/config/token available in checked standard locations; no credentials created or extracted"
+  },
+  "uploaded": false,
+  "new_gpu_run_launched": false,
+  "historical_cells_completed": 0,
+  "expected_historical_cells": 171,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "successor_status": "AWAITING_VERIFIED_S14_RESULTS",
+  "decision": "research/decisions/frem_s14_fixture_release_0_1_8_20261021.json"
+}

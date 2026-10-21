@@ -1,0 +1,13 @@
+--- before/test_hardening_stdlib.py
++++ after/test_hardening_stdlib.py
+@@ -163,8 +163,8 @@
+                 resume_seconds(root / "full-s11/epoch_000.pt", 10)
+ 
+     def prices(self, asset, count=225):
+-        path = self.root / "input" / (asset + ".us.txt")
+-        path.parent.mkdir(exist_ok=True)
++        path = self.root / "input" / "Data" / "ETFs" / (asset + ".us.txt")
++        path.parent.mkdir(parents=True, exist_ok=True)
+         with path.open("w", newline="") as stream:
+             writer = csv.writer(stream)
+             writer.writerow(["Date", "Open", "High", "Low", "Close", "Volume", "OpenInt"])

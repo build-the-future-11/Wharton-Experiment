@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-10-21T03:02:54.212412+00:00",
+  "version": 360511217,
+  "version_number": 5,
+  "package_version": "0.1.7",
+  "status": "FAILED_ENGINEERING_TEST_FIXTURE_BEFORE_QUALIFICATION",
+  "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217",
+  "observed_runtime_seconds": 56.2,
+  "observed_output_size": "795.45 kB",
+  "tests": {
+    "collected": 107,
+    "passed": 105,
+    "failed": 2,
+    "skipped": 0,
+    "seconds": 27.23,
+    "warnings_as_errors": true,
+    "evidence": "visible saved-version logs; downloaded output integrity pending"
+  },
+  "failed_tests": [
+    "HardeningTests.test_intake_calendar_mismatch_is_retained_failure",
+    "HardeningTests.test_intake_end_to_end_values_hashes_and_calendar"
+  ],
+  "failure": "Both generated fixtures wrote flat input/<ticker>.us.txt; frozen runtime requires Data/ETFs/<ticker>.us.txt. The first failure masked the intended calendar mismatch assertion.",
+  "generated_arms_completed": 0,
+  "historical_cells_completed": 0,
+  "expected_historical_cells": 171,
+  "market_intake_started": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "identity_verification": {
+    "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
+    "source_wheel_modules_verified": 15,
+    "saved_local_cell_content_match": true,
+    "archive_wheel_notebook_hash_match": true,
+    "before_fixture_sha256": "4c0bb2d87a53421befd7b3cf3980dbe90c75938b9da085bd7c9efc8fb9b7eab5",
+    "after_fixture_sha256": "6bcb47bcd5ce5ad35acfd98e18576b402f6413c6b5d137c0943638ade1f3e6e1",
+    "runtime_changed": false,
+    "static_parse": "PASS"
+  },
+  "local_regression": {
+    "runtime": "trusted extracted 0.1.7 wheel",
+    "before": {
+      "run": 59,
+      "passed": 57,
+      "failures": 1,
+      "errors": 1,
+      "skipped": 0
+    },
+    "corrected": {
+      "run": 59,
+      "passed": 59,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "warnings_as_errors": true,
+    "numerical_imports": false,
+    "lint": "PASS with declared S14 pyproject config",
+    "format": "PASS with declared S14 pyproject config",
+    "initial_static_invocation": "Ruff from /private/tmp without --config picked unrelated defaults: SIM117 and line-length formatting disagreements. Preserved as invocation defect; explicit declared config passes. No source reformatted to satisfy unrelated config."
+  },
+  "repair": {
+    "file": "successors/frem_s14/tests/test_hardening_stdlib.py",
+    "change": "Only test fixture directory and recursive parent creation; all test assertions retained.",
+    "runtime_code_changed": false,
+    "frozen_design_changed": false,
+    "new_package_built": false,
+    "new_gpu_run_launched": false
+  },
+  "archive_readback": {
+    "status": "BLOCKED_BROWSER_DOWNLOAD",
+    "reason": "Chrome ERR_BLOCKED_BY_CLIENT on the UI Download output action at /code/svzip/360511217; not bypassed.",
+    "downloaded": false,
+    "integrity_verified": false,
+    "numerical_semantics_verified": false
+  },
+  "raw_evidence": [
+    "kaggle_logs_full.ax.txt",
+    "kaggle_logs_full.txt",
+    "kaggle_failed.png",
+    "download_blocked.png",
+    "before_stdlib.log",
+    "corrected_stdlib.log",
+    "fixture.patch"
+  ],
+  "claim_boundary": "Engineering failure before generated qualification or historical fits; no predictive evidence, no valid negative or positive scientific result."
+}

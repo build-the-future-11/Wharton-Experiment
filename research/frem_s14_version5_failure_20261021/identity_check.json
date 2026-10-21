@@ -1,0 +1,10 @@
+{
+  "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
+  "source_wheel_modules_verified": 15,
+  "saved_local_cell_content_match": true,
+  "archive_wheel_notebook_hash_match": true,
+  "before_fixture_sha256": "4c0bb2d87a53421befd7b3cf3980dbe90c75938b9da085bd7c9efc8fb9b7eab5",
+  "after_fixture_sha256": "6bcb47bcd5ce5ad35acfd98e18576b402f6413c6b5d137c0943638ade1f3e6e1",
+  "runtime_changed": false,
+  "static_parse": "PASS"
+}

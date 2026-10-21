@@ -1,0 +1,21 @@
+{
+  "id": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "id_no": 139546196,
+  "title": "FREM S14 GPU benchmark 20261019",
+  "code_file": "frem-s14-gpu-benchmark-20261019.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "machine_shape": "NvidiaTeslaT4"
+}

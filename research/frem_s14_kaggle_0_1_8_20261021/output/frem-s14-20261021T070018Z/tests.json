@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "wall_seconds": 35.16198505600005,
+  "command": [
+    "-m",
+    "pytest",
+    "/kaggle/working/frem-s14-20261021T070018Z/payload/tests",
+    "-W",
+    "error",
+    "-q"
+  ]
+}

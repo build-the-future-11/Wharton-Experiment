@@ -1,0 +1,1068 @@
+Browser tab: 793907778, Title: "FREM S14 GPU benchmark 20261019", URL: "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217".
+1 AXWebArea FREM S14 GPU benchmark 20261019, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217
+	2 container root
+		3 container Main Kaggle page navigation
+			4 button Navigation menu
+			5 link Description: Skip to content, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217#site-content
+			6 link Description: Return to Kaggle home page, Value: kaggle.com/
+			7 pop up button Create on Kaggle
+				8 text Create
+			9 container
+				10 container
+					11 content list
+						12 container Home List Item
+							13 link Description: Home, Value: kaggle.com/
+						14 container Competitions List Item
+							15 link Description: Competitions, Value: kaggle.com/competitions
+						16 container Benchmarks List Item
+							17 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						18 container Arenas List Item
+							19 link Description: Arenas, Value: kaggle.com/arenas
+						20 container Game Arena List Item
+							21 link Description: Game Arena, Value: kaggle.com/game-arena
+					22 content list
+						23 container Data Hub List Item
+							24 container
+								25 link (collapsed) Description: Data Hub, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217#, Secondary Actions: Expand
+								26 button Expand
+					27 content list
+						28 container More on Kaggle List Item
+							29 container
+								30 link (expanded) Description: More on Kaggle, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217#, Secondary Actions: Collapse
+								31 button Collapse
+						32 container Discussions List Item
+							33 link Description: Discussions, Value: kaggle.com/discussions
+						34 container Kaggle Learn List Item
+							35 link Description: Kaggle Learn, Value: kaggle.com/learn
+						36 container Kaggle Rankings List Item
+							37 link Description: Kaggle Rankings, Value: kaggle.com/rankings
+						38 container Progression List Item
+							39 link Description: Progression, Value: kaggle.com/progression
+						40 container Documentation List Item
+							41 link Description: Documentation, Value: kaggle.com/docs
+						42 container Host a Competition List Item
+							43 link Description: Host a Competition, Value: kaggle.com/c/about/host
+						44 container Research Grants List Item
+							45 link Description: Research Grants, Value: kaggle.com/research-grants
+						46 container Educator Resources List Item
+							47 link Description: Educator Resources, Value: kaggle.com/edu
+						48 container Support/Contact List Item
+							49 link Description: Support/Contact, Value: kaggle.com/contact
+						50 container Community Guidelines List Item
+							51 link Description: Community Guidelines, Value: kaggle.com/community-guidelines
+						52 container Team List Item
+							53 link Description: Team, Value: kaggle.com/about/team
+						54 container Blog List Item
+							55 link Description: Blog, Value: kaggle.com/blog
+						56 container Terms List Item
+							57 link Description: Terms, Value: kaggle.com/terms
+						58 container Privacy List Item
+							59 link Description: Privacy, Value: kaggle.com/privacy
+				60 content list
+					61 container Your Work List Item
+						62 container
+							63 link Description: Your Work, Value: kaggle.com/work
+							64 button (expanded) Description: Collapse Your Work, Help: Collapse
+					65 container Collapse Viewed List Item
+						66 container
+							67 link (expanded) Description: Collapse Viewed, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217#, Secondary Actions: Collapse
+							68 button Collapse Viewed
+					69 content list
+						70 container FREM S14 GPU benchmark 20261019 List Item
+							71 link Description: FREM S14 GPU benchmark 20261019, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019
+						72 container worldcastr-lineage-study-portable-v2 List Item
+							73 link Description: worldcastr-lineage-study-portable-v2, Value: kaggle.com/code/ryangomez010/worldcastr-lineage-study-portable-v2
+						74 container ML4 Material Discovery quantile v2 List Item
+							75 link Description: ML4 Material Discovery quantile v2, Value: kaggle.com/code/ryangomez010/ml4-material-discovery-quantile-v2
+						76 container ML4 Material Discovery development v1 List Item
+							77 link Description: ML4 Material Discovery development v1, Value: kaggle.com/code/ryangomez010/ml4-material-discovery-development-v1
+						78 container heston_signature_variance_v2_r1 List Item
+							79 link Description: heston_signature_variance_v2_r1, Value: kaggle.com/code/ryangomez010/heston-signature-variance-v2-r1
+					80 container Collapse Edited List Item
+						81 container
+							82 link (expanded) Description: Collapse Edited, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log?scriptVersionId=360511217#, Secondary Actions: Collapse
+							83 button Collapse Edited
+					84 content list
+						85 container FREM S14 GPU benchmark 20261019 List Item
+							86 link Description: FREM S14 GPU benchmark 20261019, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019
+						87 container notebook8da93b987e List Item
+							88 link Description: notebook8da93b987e, Value: kaggle.com/code/ryangomez010/notebook8da93b987e
+						89 container BackLOG v0.3 frozen replication (not run) List Item
+							90 link Description: BackLOG v0.3 frozen replication (not run), Value: kaggle.com/code/ryangomez010/backlog-v0-3-frozen-replication-not-run
+						91 container REDCELL v03 evidence study 20261020 List Item
+							92 link Description: REDCELL v03 evidence study 20261020, Value: kaggle.com/code/ryangomez010/redcell-v03-evidence-study-20261020
+						93 container notebookb762015339 List Item
+							94 link Description: notebookb762015339, Value: kaggle.com/code/ryangomez010/notebookb762015339
+				95 button (collapsed) Open Active Events dialog View Active Events, Secondary Actions: Expand
+					96 container Open Active Events dialog
+						97 text auto_awesome_motion
+					98 text View Active Events
+		99 container Main menu, search and your account
+			100 container
+				101 text field (settable) :r9:
+				102 button Ryan Gomez010
+					103 image
+		104 container site-content
+			105 link Description: Ryan Gomez010's profile, Value: kaggle.com/ryangomez010
+			106 text Ryan Gomez010 · 
+			107 container Description: 9 hours ago, Help: Tue Oct 20 2026 23:13:35 GMT+0530 (India Standard Time)
+				108 text 9h ago
+			109 text  ·  23 views  ·  Private
+			110 container
+				111 button Upvote
+				112 button 0 votes
+			113 button Share
+			114 link Description: Edit, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit/run/360511217
+			115 pop up button (collapsed) Download, Secondary Actions: Expand
+			116 button More options for this notebook
+			117 heading FREM S14 GPU benchmark 20261019, Value: 1
+				118 text FREM S14 GPU benchmark 20261019
+			119 button Edit title
+			120 tab group
+				121 tab (selectable, settable, boolean) Description: Notebook, 1 of 6, Value: 0
+				122 tab (selectable, settable, boolean) Description: Input, 2 of 6, Value: 0
+				123 tab (selectable, settable, boolean) Description: Output, 3 of 6, Value: 0
+				124 tab (selected, settable, boolean) Description: Logs, 4 of 6, Value: 1
+				125 tab (selectable, settable, boolean) Description: Comments (0), 5 of 6, Value: 0
+				126 tab (selectable, settable, boolean) Description: Settings, 6 of 6, Value: 0
+			127 heading Logs, Value: 2
+				128 text Logs
+			136 link Download logs
+				137 button Download logs
+			129 container
+				130 heading Version 5 failed to run after 56.2s, Value: 5
+					131 text Version   failed to run  after 56.2s
+				132 text Accelerator GPU T4 x2 Environment
+				133 link Description: Latest Container Image opens in new window, Value: gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f
+				134 button
+				135 text Output 795.45 kB
+			138 table
+				139 row
+					140 cell
+						141 text Time
+					142 cell
+						143 text #
+					144 cell
+						145 text Log Message
+				146 row
+					147 cell
+						148 text 7.6s
+					149 cell
+						150 text 1
+					151 cell
+						152 text 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+				153 row
+					154 cell
+						155 text 7.6s
+					156 cell
+						157 text 2
+					158 cell
+						159 text 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+				160 row
+					161 cell
+						162 text 7.6s
+					163 cell
+						164 text 3
+					165 cell
+						166 text 0.00s - to python to disable frozen modules.
+
+				167 row
+					168 cell
+						169 text 7.6s
+					170 cell
+						171 text 4
+					172 cell
+						173 text 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+				174 row
+					175 cell
+						176 text 8.2s
+					177 cell
+						178 text 5
+					179 cell
+						180 text 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+				181 row
+					182 cell
+						183 text 8.2s
+					184 cell
+						185 text 6
+					186 cell
+						187 text 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+				188 row
+					189 cell
+						190 text 8.2s
+					191 cell
+						192 text 7
+					193 cell
+						194 text 0.00s - to python to disable frozen modules.
+
+				195 row
+					196 cell
+						197 text 8.2s
+					198 cell
+						199 text 8
+					200 cell
+						201 text 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+				202 row
+					203 cell
+						204 text 10.4s
+					205 cell
+						206 text 9
+					207 cell
+						208 text Processing ./frem-s14-20261020T175636Z/payload/frem_s14-0.1.7-py3-none-any.whl
+
+				209 row
+					210 cell
+						211 text 10.4s
+					212 cell
+						213 text 10
+					214 cell
+						215 text Installing collected packages: frem-s14
+
+				216 row
+					217 cell
+						218 text 10.5s
+					219 cell
+						220 text 11
+					221 cell
+						222 text Successfully installed frem-s14-0.1.7
+
+				223 row
+					224 cell
+						225 text 10.6s
+					226 cell
+						227 text 12
+					228 cell
+						229 text Processing ./frem-s14-20261020T175636Z/payload/frem_s14-0.1.7-py3-none-any.whl
+
+				230 row
+					231 cell
+						232 text 10.6s
+					233 cell
+						234 text 13
+					235 cell
+						236 text Installing collected packages: frem-s14
+
+				237 row
+					238 cell
+						239 text 10.6s
+					240 cell
+						241 text 14
+					242 cell
+						243 text Successfully installed frem-s14-0.1.7
+
+				244 row
+					245 cell
+						246 text 10.6s
+					247 cell
+						248 text 15
+					249 cell
+						250 text Verified release and isolated install: /kaggle/working/frem-s14-20261020T175636Z
+
+				251 row
+					252 cell
+						253 text 13.9s
+					254 cell
+						255 text 16
+					256 cell
+						257 text {"passed": true, "minimum_mib": 512, "samples": [{"available_mib": 30293.6328125, "pageouts": 0}, {"available_mib": 30293.7734375, "pageouts": 0}, {"available_mib": 30293.5234375, "pageouts": 0}], "time": "2026-10-20T17:56:41.080758+00:00"}
+
+				258 row
+					259 cell
+						260 text 13.9s
+					261 cell
+						262 text 17
+				263 row
+					264 cell
+						265 text 48.7s
+					266 cell
+						267 text 18
+					268 cell
+						269 text ...............................FF....................................... [ 67%]
+
+				270 row
+					271 cell
+						272 text 48.7s
+					273 cell
+						274 text 19
+					275 cell
+						276 text ...................................                                      [100%]
+
+				277 row
+					278 cell
+						279 text 48.7s
+					280 cell
+						281 text 20
+					282 cell
+						283 text =================================== FAILURES ===================================
+
+				284 row
+					285 cell
+						286 text 48.7s
+					287 cell
+						288 text 21
+					289 cell
+						290 text _______ HardeningTests.test_intake_calendar_mismatch_is_retained_failure _______
+
+				291 row
+					292 cell
+						293 text 48.7s
+					294 cell
+						295 text 22
+					296 cell
+						297 text ValueError: exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches
+
+				298 row
+					299 cell
+						300 text 48.7s
+					301 cell
+						302 text 23
+				303 row
+					304 cell
+						305 text 48.7s
+					306 cell
+						307 text 24
+					308 cell
+						309 text During handling of the above exception, another exception occurred:
+
+				310 row
+					311 cell
+						312 text 48.7s
+					313 cell
+						314 text 25
+				315 row
+					316 cell
+						317 text 48.7s
+					318 cell
+						319 text 26
+					320 cell
+						321 text self = <test_hardening_stdlib.HardeningTests testMethod=test_intake_calendar_mismatch_is_retained_failure>
+
+				322 row
+					323 cell
+						324 text 48.7s
+					325 cell
+						326 text 27
+				327 row
+					328 cell
+						329 text 48.7s
+					330 cell
+						331 text 28
+					332 cell
+						333 text     def test_intake_calendar_mismatch_is_retained_failure(self):
+
+				334 row
+					335 cell
+						336 text 48.7s
+					337 cell
+						338 text 29
+					339 cell
+						340 text         for asset in ASSETS:
+
+				341 row
+					342 cell
+						343 text 48.7s
+					344 cell
+						345 text 30
+					346 cell
+						347 text             self.prices(asset, 224 if asset == "slv" else 225)
+
+				348 row
+					349 cell
+						350 text 48.7s
+					351 cell
+						352 text 31
+					353 cell
+						354 text         out = self.root / "failed"
+
+				355 row
+					356 cell
+						357 text 48.7s
+					358 cell
+						359 text 32
+					360 cell
+						361 text >       with self.assertRaisesRegex(ValueError, "calendar mismatch"):
+
+				362 row
+					363 cell
+						364 text 48.7s
+					365 cell
+						366 text 33
+					367 cell
+						368 text              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				369 row
+					370 cell
+						371 text 48.7s
+					372 cell
+						373 text 34
+					374 cell
+						375 text E       AssertionError: "calendar mismatch" does not match "exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches"
+
+				376 row
+					377 cell
+						378 text 48.7s
+					379 cell
+						380 text 35
+				381 row
+					382 cell
+						383 text 48.7s
+					384 cell
+						385 text 36
+					386 cell
+						387 text tests/test_hardening_stdlib.py:209: AssertionError
+
+				388 row
+					389 cell
+						390 text 48.7s
+					391 cell
+						392 text 37
+					393 cell
+						394 text _______ HardeningTests.test_intake_end_to_end_values_hashes_and_calendar _______
+
+				395 row
+					396 cell
+						397 text 48.7s
+					398 cell
+						399 text 38
+				400 row
+					401 cell
+						402 text 48.7s
+					403 cell
+						404 text 39
+					405 cell
+						406 text self = <test_hardening_stdlib.HardeningTests testMethod=test_intake_end_to_end_values_hashes_and_calendar>
+
+				407 row
+					408 cell
+						409 text 48.7s
+					410 cell
+						411 text 40
+				412 row
+					413 cell
+						414 text 48.7s
+					415 cell
+						416 text 41
+					417 cell
+						418 text     def test_intake_end_to_end_values_hashes_and_calendar(self):
+
+				419 row
+					420 cell
+						421 text 48.7s
+					422 cell
+						423 text 42
+					424 cell
+						425 text         paths = {asset: self.prices(asset) for asset in ASSETS}
+
+				426 row
+					427 cell
+						428 text 48.7s
+					429 cell
+						430 text 43
+					431 cell
+						432 text         out = self.root / "prepared"
+
+				433 row
+					434 cell
+						435 text 48.7s
+					436 cell
+						437 text 44
+					438 cell
+						439 text >       panel = prepare(self.root / "input", out)
+
+				440 row
+					441 cell
+						442 text 48.7s
+					443 cell
+						444 text 45
+					445 cell
+						446 text                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				447 row
+					448 cell
+						449 text 48.7s
+					450 cell
+						451 text 46
+				452 row
+					453 cell
+						454 text 48.7s
+					455 cell
+						456 text 47
+					457 cell
+						458 text tests/test_hardening_stdlib.py:189: 
+
+				459 row
+					460 cell
+						461 text 48.7s
+					462 cell
+						463 text 48
+					464 cell
+						465 text _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+				466 row
+					467 cell
+						468 text 48.7s
+					469 cell
+						470 text 49
+					471 cell
+						472 text ../installed/frem_s14/intake.py:118: in prepare
+
+				473 row
+					474 cell
+						475 text 48.7s
+					476 cell
+						477 text 50
+					478 cell
+						479 text     path, matches = resolve_etf_source(source_root, asset)
+
+				480 row
+					481 cell
+						482 text 48.7s
+					483 cell
+						484 text 51
+					485 cell
+						486 text                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				487 row
+					488 cell
+						489 text 48.7s
+					490 cell
+						491 text 52
+					492 cell
+						493 text _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+				494 row
+					495 cell
+						496 text 48.7s
+					497 cell
+						498 text 53
+				499 row
+					500 cell
+						501 text 48.7s
+					502 cell
+						503 text 54
+					504 cell
+						505 text source_root = PosixPath('/tmp/tmpgd3jinom/input'), asset = 'spy'
+
+				506 row
+					507 cell
+						508 text 48.7s
+					509 cell
+						510 text 55
+				511 row
+					512 cell
+						513 text 48.7s
+					514 cell
+						515 text 56
+					516 cell
+						517 text     def resolve_etf_source(source_root, asset):
+
+				518 row
+					519 cell
+						520 text 48.7s
+					521 cell
+						522 text 57
+					523 cell
+						524 text         """Resolve one asset from the dataset's declared ``Data/ETFs`` taxonomy.
+
+				525 row
+					526 cell
+						527 text 48.7s
+					528 cell
+						529 text 58
+				530 row
+					531 cell
+						532 text 48.7s
+					533 cell
+						534 text 59
+					535 cell
+						536 text         The upstream archive can contain the same ticker filename in both its
+
+				537 row
+					538 cell
+						539 text 48.7s
+					540 cell
+						541 text 60
+					542 cell
+						543 text         ``Stocks`` and ``ETFs`` branches. The cohort is explicitly an ETF cohort,
+
+				544 row
+					545 cell
+						546 text 48.7s
+					547 cell
+						548 text 61
+					549 cell
+						550 text         so a repository-wide basename match is ambiguous and incorrect. We still
+
+				551 row
+					552 cell
+						553 text 48.7s
+					554 cell
+						555 text 62
+					556 cell
+						557 text         fail closed if more than one canonical ETF path is mounted.
+
+				558 row
+					559 cell
+						560 text 48.7s
+					561 cell
+						562 text 63
+					563 cell
+						564 text         """
+
+				565 row
+					566 cell
+						567 text 48.7s
+					568 cell
+						569 text 64
+					570 cell
+						571 text         filename = asset + ".us.txt"
+
+				572 row
+					573 cell
+						574 text 48.7s
+					575 cell
+						576 text 65
+					577 cell
+						578 text         all_matches = sorted(Path(source_root).rglob(filename))
+
+				579 row
+					580 cell
+						581 text 48.7s
+					582 cell
+						583 text 66
+					584 cell
+						585 text         canonical = [
+
+				586 row
+					587 cell
+						588 text 48.7s
+					589 cell
+						590 text 67
+					591 cell
+						592 text             path
+
+				593 row
+					594 cell
+						595 text 48.7s
+					596 cell
+						597 text 68
+					598 cell
+						599 text             for path in all_matches
+
+				600 row
+					601 cell
+						602 text 48.7s
+					603 cell
+						604 text 69
+					605 cell
+						606 text             if len(path.parts) >= 3 and path.parts[-3:] == ("Data", "ETFs", filename)
+
+				607 row
+					608 cell
+						609 text 48.7s
+					610 cell
+						611 text 70
+					612 cell
+						613 text         ]
+
+				614 row
+					615 cell
+						616 text 48.7s
+					617 cell
+						618 text 71
+					619 cell
+						620 text         if len(canonical) != 1 or canonical[0].is_symlink() or not canonical[0].is_file():
+
+				621 row
+					622 cell
+						623 text 48.7s
+					624 cell
+						625 text 72
+					626 cell
+						627 text >           raise ValueError(
+
+				628 row
+					629 cell
+						630 text 48.7s
+					631 cell
+						632 text 73
+					633 cell
+						634 text                 f"exactly one regular Data/ETFs/{filename} required, "
+
+				635 row
+					636 cell
+						637 text 48.7s
+					638 cell
+						639 text 74
+					640 cell
+						641 text                 f"found {len(canonical)} canonical among {len(all_matches)} basename matches"
+
+				642 row
+					643 cell
+						644 text 48.7s
+					645 cell
+						646 text 75
+					647 cell
+						648 text             )
+
+				649 row
+					650 cell
+						651 text 48.7s
+					652 cell
+						653 text 76
+					654 cell
+						655 text E           ValueError: exactly one regular Data/ETFs/spy.us.txt required, found 0 canonical among 1 basename matches
+
+				656 row
+					657 cell
+						658 text 48.7s
+					659 cell
+						660 text 77
+				661 row
+					662 cell
+						663 text 48.7s
+					664 cell
+						665 text 78
+					666 cell
+						667 text ../installed/frem_s14/intake.py:43: ValueError
+
+				668 row
+					669 cell
+						670 text 48.7s
+					671 cell
+						672 text 79
+					673 cell
+						674 text =========================== short test summary info ============================
+
+				675 row
+					676 cell
+						677 text 48.7s
+					678 cell
+						679 text 80
+					680 cell
+						681 text FAILED tests/test_hardening_stdlib.py::HardeningTests::test_intake_calendar_mismatch_is_retained_failure
+
+				682 row
+					683 cell
+						684 text 48.7s
+					685 cell
+						686 text 81
+					687 cell
+						688 text FAILED tests/test_hardening_stdlib.py::HardeningTests::test_intake_end_to_end_values_hashes_and_calendar
+
+				689 row
+					690 cell
+						691 text 48.7s
+					692 cell
+						693 text 82
+					694 cell
+						695 text 2 failed, 105 passed in 27.23s
+
+				696 row
+					697 cell
+						698 text 48.7s
+					699 cell
+						700 text 83
+				701 row
+					702 cell
+						703 text 49.0s
+					704 cell
+						705 text 84
+					706 cell
+						707 text Traceback (most recent call last):
+
+				708 row
+					709 cell
+						710 text 49.0s
+					711 cell
+						712 text 85
+					713 cell
+						714 text   File "<string>", line 1, in <module>
+
+				715 row
+					716 cell
+						717 text 49.0s
+					718 cell
+						719 text 86
+					720 cell
+						721 text     import sys;import papermill as pm;pm.execute_notebook("__notebook__.ipynb","__notebook__.ipynb",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)
+
+				722 row
+					723 cell
+						724 text 49.0s
+					725 cell
+						726 text 87
+					727 cell
+						728 text                                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				729 row
+					730 cell
+						731 text 49.0s
+					732 cell
+						733 text 88
+					734 cell
+						735 text   File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 131, in execute_notebook
+
+				736 row
+					737 cell
+						738 text 49.0s
+					739 cell
+						740 text 89
+					741 cell
+						742 text     raise_for_execution_errors(nb, output_path)
+
+				743 row
+					744 cell
+						745 text 49.0s
+					746 cell
+						747 text 90
+					748 cell
+						749 text     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+
+				750 row
+					751 cell
+						752 text 49.0s
+					753 cell
+						754 text 91
+					755 cell
+						756 text   File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+
+				757 row
+					758 cell
+						759 text 49.0s
+					760 cell
+						761 text 92
+					762 cell
+						763 text     raise error
+
+				764 row
+					765 cell
+						766 text 49.0s
+					767 cell
+						768 text 93
+					769 cell
+						770 text papermill.exceptions.PapermillExecutionError: 
+
+				771 row
+					772 cell
+						773 text 49.0s
+					774 cell
+						775 text 94
+					776 cell
+						777 text ---------------------------------------------------------------------------
+
+				778 row
+					779 cell
+						780 text 49.0s
+					781 cell
+						782 text 95
+					783 cell
+						784 text Exception encountered at "In [2]":
+
+				785 row
+					786 cell
+						787 text 49.0s
+					788 cell
+						789 text 96
+					790 cell
+						791 text ---------------------------------------------------------------------------
+
+				792 row
+					793 cell
+						794 text 49.0s
+					795 cell
+						796 text 97
+					797 cell
+						798 text RuntimeError                              Traceback (most recent call last)
+
+				799 row
+					800 cell
+						801 text 49.0s
+					802 cell
+						803 text 98
+					804 cell
+						805 text /tmp/ipykernel_23/2362907652.py in <cell line: 0>()
+
+				806 row
+					807 cell
+						808 text 49.0s
+					809 cell
+						810 text 99
+					811 cell
+						812 text       1 run("preflight", ["-m", "frem_s14", "preflight", "--output", str(RUN / "host-admission.json")], 30)
+
+				813 row
+					814 cell
+						815 text 49.0s
+					816 cell
+						817 text 100
+					818 cell
+						819 text ----> 2 run("tests", ["-m", "pytest", str(PAYLOAD / "tests"), "-W", "error", "-q"], 1800)
+
+				820 row
+					821 cell
+						822 text 49.0s
+					823 cell
+						824 text 101
+					825 cell
+						826 text       3 run(
+
+				827 row
+					828 cell
+						829 text 49.0s
+					830 cell
+						831 text 102
+					832 cell
+						833 text       4     "qualify",
+
+				834 row
+					835 cell
+						836 text 49.0s
+					837 cell
+						838 text 103
+					839 cell
+						840 text       5     [
+
+				841 row
+					842 cell
+						843 text 49.0s
+					844 cell
+						845 text 104
+				846 row
+					847 cell
+						848 text 49.0s
+					849 cell
+						850 text 105
+					851 cell
+						852 text /tmp/ipykernel_23/2314996549.py in run(name, args, timeout)
+
+				853 row
+					854 cell
+						855 text 49.0s
+					856 cell
+						857 text 106
+					858 cell
+						859 text     126     print(log.read_text()[-16000:])
+
+				860 row
+					861 cell
+						862 text 49.0s
+					863 cell
+						864 text 107
+					865 cell
+						866 text     127     if code:
+
+				867 row
+					868 cell
+						869 text 49.0s
+					870 cell
+						871 text 108
+					872 cell
+						873 text --> 128         raise RuntimeError(f"{name} failed ({code}); retained {log}")
+
+				874 row
+					875 cell
+						876 text 49.0s
+					877 cell
+						878 text 109
+					879 cell
+						880 text     129 
+
+				881 row
+					882 cell
+						883 text 49.0s
+					884 cell
+						885 text 110
+					886 cell
+						887 text     130 
+
+				888 row
+					889 cell
+						890 text 49.0s
+					891 cell
+						892 text 111
+				893 row
+					894 cell
+						895 text 49.0s
+					896 cell
+						897 text 112
+					898 cell
+						899 text RuntimeError: tests failed (1); retained /kaggle/working/frem-s14-20261020T175636Z/tests.log
+
+				900 row
+					901 cell
+						902 text 49.0s
+					903 cell
+						904 text 113
+				905 row
+					906 cell
+						907 text 51.2s
+					908 cell
+						909 text 114
+					910 cell
+						911 text /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+
+				912 row
+					913 cell
+						914 text 51.2s
+					915 cell
+						916 text 115
+					917 cell
+						918 text   cells[i][c] = re.sub('\\\\\|', '|', cell)
+
+				919 row
+					920 cell
+						921 text 51.4s
+					922 cell
+						923 text 116
+					924 cell
+						925 text /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+
+				926 row
+					927 cell
+						928 text 51.4s
+					929 cell
+						930 text 117
+					931 cell
+						932 text   text = re.sub(r'_', '\_', text) # Escape underscores in display text
+
+				933 row
+					934 cell
+						935 text 52.1s
+					936 cell
+						937 text 118
+					938 cell
+						939 text [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+
+				940 row
+					941 cell
+						942 text 52.2s
+					943 cell
+						944 text 119
+					945 cell
+						946 text [NbConvertApp] Writing 130198 bytes to __notebook__.ipynb
+
+				947 row
+					948 cell
+						949 text 54.7s
+					950 cell
+						951 text 120
+					952 cell
+						953 text [NbConvertApp] Converting notebook __notebook__.ipynb to html
+
+				954 row
+					955 cell
+						956 text 55.3s
+					957 cell
+						958 text 121
+					959 cell
+						960 text [NbConvertApp] Writing 421993 bytes to __results__.html
+
+
+The focused UI element is 124 tab (selected, settable, boolean) Description: Logs, 4 of 6, Value: 1

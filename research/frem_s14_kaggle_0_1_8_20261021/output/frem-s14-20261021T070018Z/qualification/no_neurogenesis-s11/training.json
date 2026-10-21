@@ -1,0 +1,20 @@
+{
+  "best_validation_nll": -2.591671376410871,
+  "history": [
+    {
+      "epoch": 0,
+      "growth": null,
+      "loss": 1.8515902056413538,
+      "training_mse": 1.430007158541212,
+      "validation_nll": -2.586189312782138
+    },
+    {
+      "epoch": 1,
+      "growth": null,
+      "loss": 1.8134816931743247,
+      "training_mse": 1.4146866237415987,
+      "validation_nll": -2.591671376410871
+    }
+  ],
+  "parameters": 1697
+}

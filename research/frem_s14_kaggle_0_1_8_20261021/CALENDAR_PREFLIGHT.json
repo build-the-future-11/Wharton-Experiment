@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "timestamp": "2026-10-21T07:13:47.466639+00:00",
+  "status": "BLOCKED_SOURCE_CALENDARS",
+  "interval": [
+    "2007-01-01",
+    "2018-01-01"
+  ],
+  "files": {
+    "spy": {
+      "sha256": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+      "bytes": 163787,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "qqq": {
+      "sha256": "a29e145b1591274990a73caf9e7cf38c1b8e59cca4daedb048c49f2c4a01f03f",
+      "bytes": 239012,
+      "rows": 2736,
+      "missing_from_union": [],
+      "outside_common": [
+        "2011-02-17"
+      ]
+    },
+    "iwm": {
+      "sha256": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+      "bytes": 162105,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "dia": {
+      "sha256": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+      "bytes": 159715,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "tlt": {
+      "sha256": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+      "bytes": 158900,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "ief": {
+      "sha256": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+      "bytes": 156577,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "gld": {
+      "sha256": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+      "bytes": 154879,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "slv": {
+      "sha256": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc",
+      "bytes": 133162,
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    }
+  },
+  "union_dates": 2736,
+  "common_dates_diagnostic_only": 2735,
+  "input_hashes_match_executed_run": true,
+  "data_modified": false,
+  "scientific_execution": false,
+  "scope": "Date-only prerequisite. Does not admit prices, data rights, point-in-time validity, or scientific execution."
+}

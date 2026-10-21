@@ -1,0 +1,74 @@
+{
+  "hashes_match_executed_input": true,
+  "hashes": {
+    "dia": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+    "gld": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+    "ief": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+    "iwm": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+    "qqq": "a29e145b1591274990a73caf9e7cf38c1b8e59cca4daedb048c49f2c4a01f03f",
+    "slv": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc",
+    "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+    "tlt": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564"
+  },
+  "union_dates": 2736,
+  "common_dates": 2735,
+  "assets": {
+    "dia": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "gld": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "ief": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "iwm": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "qqq": {
+      "rows": 2736,
+      "missing_from_union": [],
+      "outside_common": [
+        "2011-02-17"
+      ]
+    },
+    "slv": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "spy": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    },
+    "tlt": {
+      "rows": 2735,
+      "missing_from_union": [
+        "2011-02-17"
+      ],
+      "outside_common": []
+    }
+  },
+  "science_run": false
+}

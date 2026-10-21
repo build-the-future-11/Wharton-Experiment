@@ -1,0 +1,14 @@
+{
+  "brier": 0.26264890929100504,
+  "coverage90": 0.803030303030303,
+  "date_mean_nll": -2.6189988039977274,
+  "dates": 33,
+  "defined_ic_dates": 33,
+  "mae": 0.012812117380409643,
+  "peak_cuda_bytes": 68479488,
+  "process_peak_rss_bytes": 1755897856,
+  "rank_ic": 0.024242424242424256,
+  "rows": 132,
+  "rss_scope": "process lifetime maximum, not an isolated cell peak",
+  "wall_seconds": 1.2756926099999646
+}

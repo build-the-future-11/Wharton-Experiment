@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "old_release_files_unchanged": 29,
+  "wheel_modules_verified": 15,
+  "changed_runtime_modules": [
+    "frem_s14/__init__.py"
+  ],
+  "scientific_runtime_unchanged": true,
+  "payload_hashes_verified": 17,
+  "embedded_release_equal": true,
+  "deterministic_rebuild_equal": true,
+  "installed_dependency_free_tests": 59,
+  "numeric_or_gpu_tests": "NOT_RUN",
+  "historical_cells_completed": 0,
+  "protected_access": false,
+  "release": {
+    "package_version": "0.1.8",
+    "source_identity": "c8d8a1c3fa57e6cdfcd2bcec72fee22d7e0c86ce861da316b18b393ad907414b",
+    "archive": "frem_s14_kaggle_bundle-0.1.8.zip",
+    "archive_sha256": "34fbc8132743331e77a7d887ffae50ce899db8ff588adeba4c75c3dc2c8a8567",
+    "wheel": "frem_s14-0.1.8-py3-none-any.whl",
+    "wheel_sha256": "61de299bcaf34c60f0e4a98887d4ffae91d192e6c325ed5f7ad7ae6a5d4a11d5",
+    "notebook_sha256": "c00aae6a2135201b13945628b86173dc1e44da4a757c2acb4deff47a5090f320",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  }
+}

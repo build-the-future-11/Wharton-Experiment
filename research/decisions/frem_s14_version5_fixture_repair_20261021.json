@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-21",
+  "type": "pre_market_test_fixture_repair",
+  "version": "FREM-S14-0.1.7 Kaggle saved version 360511217",
+  "observation": "107 warning-strict tests collected: 105 passed and 2 failed due to fixtures using a flat directory inconsistent with the frozen Data/ETFs taxonomy. Generated qualification and historical intake never started.",
+  "decision": "Preserve Version 5 and all release artifacts. Correct only the generated fixture path and recursive mkdir, preserving every assertion and runtime module. Require a newly versioned test payload and exact-source GPU qualification before the unchanged 171-cell suite. Do not launch a duplicate or bypass the blocked archive download.",
+  "unchanged": [
+    "core architecture",
+    "Data/ETFs source taxonomy",
+    "ETF cohort",
+    "thresholds",
+    "folds",
+    "arms",
+    "seeds",
+    "labels",
+    "scores",
+    "budgets",
+    "protected boundary"
+  ],
+  "discriminating_evidence": "Both original failures reproduced on the exact 0.1.7 wheel. With only the fixture correction all 59 dependency-free tests pass with warnings as errors; current numerical qualification is not inherited.",
+  "result": "FIXTURE_CORRECTION_VERIFIED_NEW_RELEASE_AND_GPU_QUALIFICATION_PENDING",
+  "scientific_status": "NOT_EVALUATED",
+  "market_fits": 0,
+  "protected_access": false,
+  "receipt": "research/frem_s14_version5_failure_20261021/FAILURE_RECEIPT.json"
+}

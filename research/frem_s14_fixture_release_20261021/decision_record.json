@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-21T04:53:38.985647+00:00",
+  "previous": "d60619a970b8778db3f2c0d826c38716fe3980f77ae0c5421ee2b5c930f16f19",
+  "event": {
+    "date": "2026-10-21",
+    "type": "pre_market_fixture_corrected_release",
+    "version": "FREM-S14-0.1.8",
+    "observation": "Version 5 (360511217) is visibly terminal with 105 passes and two fixture failures before qualification or historical fits. The previously verified two-line fixture correction remains unbundled. Normal saved-output download remains blocked by Chrome on this session's live check.",
+    "decision": "Preserve every earlier release. Package the existing fixture correction in immutable 0.1.8 with version metadata changes only. Require complete exact-payload tests and generated qualification before the unchanged historical suite. Resolve archive access through normal authorized access; no bypass. Do not duplicate Version 5.",
+    "user_scope": "Finish S14, then use verified findings to select, implement and test a bounded successor against simple baselines. No result-dependent successor is selected before S14 results exist.",
+    "unchanged": [
+      "scientific runtime other than version metadata",
+      "19 arms",
+      "three seeds",
+      "three folds",
+      "0.01-nat threshold",
+      "bootstrap settings",
+      "171-cell denominator",
+      "13500-second notebook ceiling",
+      "protected boundary"
+    ],
+    "successor_gate": "After independent S14 readback, record a specific observation, hypothesis, fixed bounded matrix and prospective evaluation split before implementation or affected outcome access. Retrospective reuse must be labeled development, never fresh confirmation.",
+    "status": "LOCAL_RELEASE_PREPARATION",
+    "protected_access": false
+  },
+  "sha256": "a558d0266f08925523cf48a9472798ca66e3f2d4f2666c571e8291a95f768708"
+}

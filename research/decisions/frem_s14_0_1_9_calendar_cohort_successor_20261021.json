@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-21",
+  "type": "pre_market_source_calendar_corrected_successor",
+  "version": "FREM-S14-0.1.9",
+  "observation": "Private Kaggle Version 6 (script version 360684950) ran the exact 0.1.8 payload. It passed all 107 warning-strict tests, completed all 19 generated CUDA qualification arms, and passed independent qualification verification. Strict historical intake then failed before any historical model cell because QQQ contains 2011-02-17 while each of SPY, IWM, DIA, TLT, IEF, GLD and SLV omits that date. Independent readback verified the executed input hashes and the failure. Version 7 (360733756) was accidentally queued from stale canonical state, identified as an exact duplicate, and cancellation was acknowledged before execution.",
+  "validity_defect": "The frozen eight-ETF balanced-calendar contract is not supported by the declared source bytes. Intersection, forward fill, invented observations or reuse of generated qualification cannot repair that contract.",
+  "decision": "Close 0.1.8 as a valid pre-market source-admission failure. Freeze a separately versioned 0.1.9 exploratory successor with the fixed seven-ETF cohort SPY, IWM, DIA, TLT, IEF, GLD and SLV, chosen solely from the pre-outcome calendar audit. Require exact SHA-256 allowlisting of all seven source files and exact calendar equality. QQQ is excluded prospectively; no date is deleted from the retained seven-asset histories and no value is imputed. Rebuild the wheel, release ZIP and notebook, then require all local gates, all target tests, all 19 CUDA qualification arms and independent verification before any of the unchanged 171 historical cells may start.",
+  "source_sha256": {
+    "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+    "iwm": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+    "dia": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+    "tlt": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+    "ief": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+    "gld": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+    "slv": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc"
+  },
+  "unchanged": [
+    "core architecture and optimization",
+    "19 registered arms",
+    "seeds 11, 29 and 47",
+    "three expanding folds ending before 2011, 2015 and 2018",
+    "20-observation labels and embargo",
+    "0.01-nat practical threshold",
+    "2000-replicate 20-date block bootstrap and Holm correction",
+    "171-cell denominator",
+    "13500-second notebook ceiling",
+    "2025 protected boundary"
+  ],
+  "falsifier": "The successor is invalid if any allowlisted source hash or seven-asset calendar differs, any target test or generated qualification arm fails, any historical cell is omitted from the denominator, or independent bundle reconstruction fails. A valid negative market result closes the tested successor and does not authorize a favorable repeat.",
+  "scientific_status": "NOT_EVALUATED",
+  "market_cells_started": 0,
+  "protected_access": false,
+  "evidence": [
+    "research/frem_s14_kaggle_0_1_8_20261021/ARCHIVE_VERIFICATION.json",
+    "research/frem_s14_kaggle_0_1_8_20261021/CALENDAR_AUDIT_ALL_ASSETS.json",
+    "research/frem_s14_kaggle_0_1_8_20261021/SAVED_IDENTITY.json"
+  ]
+}

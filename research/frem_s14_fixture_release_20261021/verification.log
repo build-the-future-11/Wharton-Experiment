@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s14_fixture_release_20261021/verify_release.py", line 97, in <module>
+    main()
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s14_fixture_release_20261021/verify_release.py", line 69, in main
+    run("install.log", [sys.executable, "-m", "pip", "install", "--no-index", "--no-deps",
+  File "/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/research/frem_s14_fixture_release_20261021/verify_release.py", line 26, in run
+    subprocess.run(command, cwd=cwd, env=env, stdout=stream,
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/.venv/bin/python', '-m', 'pip', 'install', '--no-index', '--no-deps', '--target', '/var/folders/ct/lk8xnz1s6pvd55g05hqjv7k00000gn/T/frem-s14-018-verify-3gte4d_a/installed', '/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/dist/frem_s14-0.1.8-py3-none-any.whl']' returned non-zero exit status 1.

@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "prior_release_files_unchanged": 5,
+  "wheel_modules_verified": 15,
+  "changed_runtime_modules": [
+    "frem_s14/__init__.py",
+    "frem_s14/intake.py"
+  ],
+  "payload_hashes_verified": 17,
+  "embedded_release_equal": true,
+  "deterministic_rebuild_equal": true,
+  "installed_dependency_free_tests": 59,
+  "historical_intake": {
+    "status": "PASS",
+    "assets": [
+      "spy",
+      "iwm",
+      "dia",
+      "tlt",
+      "ief",
+      "gld",
+      "slv"
+    ],
+    "rows": 19005,
+    "calendar_dates": 2715,
+    "source_hashes": {
+      "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+      "iwm": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+      "dia": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+      "tlt": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+      "ief": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+      "gld": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+      "slv": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc"
+    },
+    "no_intersection_or_imputation": true
+  },
+  "numeric_or_gpu_tests": "NOT_RUN_LOCAL_RESOURCE_GATE",
+  "historical_model_cells_completed": 0,
+  "protected_access": false,
+  "release": {
+    "package_version": "0.1.9",
+    "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
+    "archive": "frem_s14_kaggle_bundle-0.1.9.zip",
+    "archive_sha256": "19901b3584971f877c1d0c4f1a45f0933739cc9bd45aec1da16f1bf2b1fb6ac1",
+    "wheel": "frem_s14-0.1.9-py3-none-any.whl",
+    "wheel_sha256": "e529184f0d37636525fb88c70206952f5e28cbdecf622f3355656411e2317942",
+    "notebook_sha256": "ad6db2053c789aebe38a9cdc3bafb51f5bb5a5b3e9ccad8a46dfcdb725b05292",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  }
+}

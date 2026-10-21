@@ -93,3 +93,69 @@ Checked boxes mean implemented, not numerically validated. This is a bounded, re
 - [ ] Empirical block-length adequacy, uncertainty calibration, genuinely untouched confirmation and independent reproduction.
 
 No assertion of perfect code, guaranteed profitability, calibrated crash probabilities, physical PDE identification or zero remaining defects is supported.
+
+
+## 21 October 2026 — Version 5 evidence
+
+- [x] Preserve exact Version 5 terminal failure: 107 collected, 105 passed, 2 failed, 0 skipped; qualification and historical cells did not start.
+- [x] Reproduce both fixture failures on the exact 0.1.7 wheel; correct only the fixture's directory contract, retaining every assertion.
+- [x] All 59 dependency-free tests pass with warnings as errors after correction; scoped static checks pass.
+- [x] Verify local versioned source/wheel/archive/notebook and retained saved-code identity; keep every frozen 0.1.7 artifact.
+- [ ] Download and integrity-verify Version 5 outputs; Chrome blocked the normal archive action, so visible-log evidence is not represented as downloaded bundle verification.
+- [ ] Build a new immutable corrected test payload and pass all 107 tests plus 19 generated CUDA arms before the unchanged 171-cell historical suite.
+
+See `research/frem_s14_version5_failure_20261021/FAILURE_RECEIPT.json`. No GPU passes transfer to the corrected payload and no scientific result is claimed.
+
+## 0.1.9 source-calendar successor
+
+- [x] Preserve 0.1.8 Version 6 as a valid pre-market source-admission failure after 107 tests and 19/19 generated qualification arms.
+- [x] Cancel the accidentally queued identical Version 7 before execution; do not interpret it as a repeat.
+- [x] Freeze SPY/IWM/DIA/TLT/IEF/GLD/SLV before historical model outcomes and exclude QQQ solely from the source-calendar audit.
+- [x] Allowlist exact source hashes and retain exact calendar equality; do not intersect, delete rows, forward fill or impute.
+- [ ] Build and locally verify immutable 0.1.9 artifacts.
+- [ ] Execute the exact 0.1.9 target tests and all 19 generated CUDA qualification arms.
+- [ ] Execute and independently reconstruct every one of the unchanged 171 historical cells.
+
+
+## 21 October 2026 — Version 6 qualified; historical source calendars incompatible
+
+Private Kaggle Version 6 (`360684950`, package 0.1.8) passed all 107 warning-strict
+tests in 27.75 seconds, completed 19/19 generated CUDA arms and passed its in-run
+independent 222-file semantic verifier. Saved notebook cells match the local
+candidate; GPU T4 x2, Internet off, fixed source and private visibility are verified.
+The run failed after 105.6 seconds during strict historical intake, before any fit.
+
+All eight independently downloaded public source files match the executed hashes.
+QQQ has 2736 selected dates; all seven other ETFs have 2735 and lack 2011-02-17.
+No dates or prices were removed, filled or fabricated. The frozen equality rule
+cannot admit these exact bytes. Historical completion remains 0/171; S14 remains
+NOT_EVALUATED, with no predictive or economic baseline advantage established.
+
+The 308 run files plus Kaggle log are retained. Anchored integrity verification
+passes for 18 payload members, 15 installed modules and the qualification manifest.
+The local ZIP was reconstructed from API-downloaded files. Local numerical
+readback was refused by the unchanged memory/pageout gate. The temporary API token
+was revoked and its local secret removed; other tokens remain intact.
+
+Added a separate read-only calendar preflight with three passing regression tests;
+it does not modify or qualify the frozen GPU payload. Read
+`research/frem_s14_kaggle_0_1_8_20261021/FAILURE_RECEIPT.json` and `FLAW_CHECKLIST.md`.
+Do not launch Version 6 again or silently weaken its intake. Recover compatible
+source observations or specify a separately versioned missing-data study before
+fitting. The broader research/paper completion request is not yet fulfilled.
+
+
+### Current frontier reconciled across research chats
+
+The original eight-ETF Version 6 failure above is historical. The separate
+research execution chat has already frozen and launched seven-ETF package 0.1.9
+as private Kaggle Version 8. Its saved-source identity is recorded in
+`research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json`. QQQ is excluded
+prospectively on source-calendar grounds; retained histories are not intersected
+or filled. This narrows the population and is a new study, not a successful
+completion of the original eight-ETF matrix. The latest execution-owner check at
+10:53 UTC reports RUNNING. No historical results are yet independently verified.
+The existing `finish-frem-s14-version-8` monitor owns terminal output collection.
+Do not launch another run or change its frozen code, cohort, threshold or budget.
+Version 6 evidence and token revocation in this chat are complete. The broader
+baseline comparison and final research release remain pending Version 8 evidence.

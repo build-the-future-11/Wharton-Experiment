@@ -10,7 +10,16 @@ from pathlib import Path
 
 from .runtime import digest, timestamp, write_json
 
-ASSETS = ("spy", "qqq", "iwm", "dia", "tlt", "ief", "gld", "slv")
+ASSETS = ("spy", "iwm", "dia", "tlt", "ief", "gld", "slv")
+SOURCE_SHA256 = {
+    "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+    "iwm": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+    "dia": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+    "tlt": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+    "ief": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+    "gld": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+    "slv": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc",
+}
 SOURCE = "https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
 FEATURES = (
     "intraday",
@@ -86,14 +95,22 @@ def read_prices(path, boundary="2025-01-01"):
     return records
 
 
-def prepare(source_root, output, start="2007-01-01", stop="2018-01-01"):
-    """Fixed eight-ETF development cohort. No data-driven asset substitution."""
+def prepare(
+    source_root,
+    output,
+    start="2007-01-01",
+    stop="2018-01-01",
+    expected_hashes=SOURCE_SHA256,
+):
+    """Frozen seven-ETF successor cohort. No data-driven asset substitution."""
     if (
         date.fromisoformat(start).isoformat() != start
         or date.fromisoformat(stop).isoformat() != stop
         or not "2007-01-01" <= start < stop <= "2025-01-01"
     ):
         raise ValueError("invalid or protected historical interval")
+    if expected_hashes is not None and set(expected_hashes) != set(ASSETS):
+        raise ValueError("exact seven-ETF source hash allowlist required")
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     receipt = {
@@ -116,13 +133,16 @@ def prepare(source_root, output, start="2007-01-01", stop="2018-01-01"):
         tables = {}
         for asset in ASSETS:
             path, matches = resolve_etf_source(source_root, asset)
+            observed_hash = digest(path)
+            if expected_hashes is not None and observed_hash != expected_hashes[asset]:
+                raise ValueError(f"source hash mismatch for {asset}")
             table = read_prices(path, boundary=stop)
             selected = {k: v for k, v in table.items() if start <= k < stop}
             if len(selected) < 200:
                 raise ValueError(f"insufficient fixed-cohort observations: {asset}")
             tables[asset] = selected
             receipt["files"][asset] = {
-                "sha256": digest(path),
+                "sha256": observed_hash,
                 "bytes": path.stat().st_size,
                 "selected_rows": len(selected),
                 "source_path": str(path),
@@ -186,7 +206,7 @@ def prepare(source_root, output, start="2007-01-01", stop="2018-01-01"):
                 "source": SOURCE,
                 "retrieved_at": datetime.now(timezone.utc).isoformat(),
                 "license": "Kaggle dataset card: CC0 (provider assertion, checked 2026-10-19)",
-                "universe_policy": "Fixed SPY QQQ IWM DIA TLT IEF GLD SLV historical survivor cohort; no eligibility claim",
+                "universe_policy": "Fixed SPY IWM DIA TLT IEF GLD SLV source-calendar successor cohort; QQQ excluded prospectively after pre-market calendar audit; no eligibility claim",
                 "return_definition": "source_adjusted_close_ratio_not_verified_total_return",
                 "feature_availability": "historical_order_only_unverified_point_in_time",
                 "purpose": "historical_proxy",

@@ -1,0 +1,12 @@
+{
+  "returncode": 1,
+  "wall_seconds": 8.992525237999985,
+  "command": [
+    "-m",
+    "frem_s14.intake",
+    "--source",
+    "/kaggle/input",
+    "--output",
+    "/kaggle/working/frem-s14-20261021T070018Z/intake"
+  ]
+}

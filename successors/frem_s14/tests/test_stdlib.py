@@ -17,7 +17,7 @@ from frem_s14.runtime import admit, identity, manifest, read_json, timestamp, ve
 
 class Contracts(unittest.TestCase):
     def test_exported_version_and_plan_cli_match_declared_suite_wrapper(self):
-        self.assertEqual(__version__, "0.1.7")
+        self.assertEqual(__version__, "0.1.9")
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "suite.json"
             path.write_text(json.dumps({"config": RunConfig().to_dict(), "fold_ends": []}))

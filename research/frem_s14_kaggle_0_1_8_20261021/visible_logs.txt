@@ -1,0 +1,838 @@
+Browser tab: 793908522, Title: "FREM S14 GPU benchmark 20261019", URL: "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log".
+0 AXWebArea FREM S14 GPU benchmark 20261019, URL: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log
+	1 container root
+		2 container Main Kaggle page navigation
+			3 button Navigation menu
+			4 link Description: Skip to content, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log#site-content
+			5 link Description: Return to Kaggle home page, Value: kaggle.com/
+			6 pop up button Create on Kaggle
+				7 text Create
+			8 container
+				9 container
+					10 content list
+						11 container Home List Item
+							12 link Description: Home, Value: kaggle.com/
+						13 container Competitions List Item
+							14 link Description: Competitions, Value: kaggle.com/competitions
+						15 container Benchmarks List Item
+							16 link Description: Benchmarks, Value: kaggle.com/benchmarks
+						17 container Arenas List Item
+							18 link Description: Arenas, Value: kaggle.com/arenas
+						19 container Game Arena List Item
+							20 link Description: Game Arena, Value: kaggle.com/game-arena
+					21 content list
+						22 container Data Hub List Item
+							23 container
+								24 link (collapsed) Description: Data Hub, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log#, Secondary Actions: Expand
+								25 button Expand
+					26 content list
+						27 container More on Kaggle List Item
+							28 container
+								29 link (expanded) Description: More on Kaggle, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log#, Secondary Actions: Collapse
+								30 button Collapse
+						31 container Discussions List Item
+							32 link Description: Discussions, Value: kaggle.com/discussions
+						33 container Kaggle Learn List Item
+							34 link Description: Kaggle Learn, Value: kaggle.com/learn
+						35 container Kaggle Rankings List Item
+							36 link Description: Kaggle Rankings, Value: kaggle.com/rankings
+						37 container Progression List Item
+							38 link Description: Progression, Value: kaggle.com/progression
+						39 container Documentation List Item
+							40 link Description: Documentation, Value: kaggle.com/docs
+						41 container Host a Competition List Item
+							42 link Description: Host a Competition, Value: kaggle.com/c/about/host
+						43 container Research Grants List Item
+							44 link Description: Research Grants, Value: kaggle.com/research-grants
+						45 container Educator Resources List Item
+							46 link Description: Educator Resources, Value: kaggle.com/edu
+						47 container Support/Contact List Item
+							48 link Description: Support/Contact, Value: kaggle.com/contact
+						49 container Community Guidelines List Item
+							50 link Description: Community Guidelines, Value: kaggle.com/community-guidelines
+						51 container Team List Item
+							52 link Description: Team, Value: kaggle.com/about/team
+						53 container Blog List Item
+							54 link Description: Blog, Value: kaggle.com/blog
+						55 container Terms List Item
+							56 link Description: Terms, Value: kaggle.com/terms
+						57 container Privacy List Item
+							58 link Description: Privacy, Value: kaggle.com/privacy
+				59 content list
+					60 container Your Work List Item
+						61 container
+							62 link Description: Your Work, Value: kaggle.com/work
+							63 button (expanded) Description: Collapse Your Work, Help: Collapse
+					64 container Collapse Viewed List Item
+						65 container
+							66 link (expanded) Description: Collapse Viewed, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log#, Secondary Actions: Collapse
+							67 button Collapse Viewed
+					68 content list
+						69 container FREM S14 GPU benchmark 20261019 List Item
+							70 link Description: FREM S14 GPU benchmark 20261019, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019
+						71 container piml-paper-release-20261021-r1 List Item
+							72 link Description: piml-paper-release-20261021-r1, Value: kaggle.com/code/ryangomez010/piml-paper-release-20261021-r1
+						73 container piml-s2-release-audit-20261021-r2 List Item
+							74 link Description: piml-s2-release-audit-20261021-r2, Value: kaggle.com/code/ryangomez010/piml-s2-release-audit-20261021-r2
+						75 container piml-s2-development-20261021-r2 List Item
+							76 link Description: piml-s2-development-20261021-r2, Value: kaggle.com/code/ryangomez010/piml-s2-development-20261021-r2
+						77 container RIPII Radial Adaptation v1 4138f62b0ba1 List Item
+							78 link Description: RIPII Radial Adaptation v1 4138f62b0ba1, Value: kaggle.com/code/ryangomez010/ripii-radial-adaptation-v1-4138f62b0ba1
+					79 container Collapse Edited List Item
+						80 container
+							81 link (expanded) Description: Collapse Edited, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/log#, Secondary Actions: Collapse
+							82 button Collapse Edited
+					83 content list
+						84 container ML4 Biocomputation v2 frozen confirmatory List Item
+							85 link Description: ML4 Biocomputation v2 frozen confirmatory, Value: kaggle.com/code/ryangomez010/ml4-biocomputation-v2-frozen-confirmatory
+						86 container causal-alpha-development-20261021 List Item
+							87 link Description: causal-alpha-development-20261021, Value: kaggle.com/code/ryangomez010/causal-alpha-development-20261021
+						88 container APEN Burgers S4 rollout memory development List Item
+							89 link Description: APEN Burgers S4 rollout memory development, Value: kaggle.com/code/ryangomez010/apen-burgers-s4-rollout-memory-development
+						90 container notebook2ee5306d9d List Item
+							91 link Description: notebook2ee5306d9d, Value: kaggle.com/code/ryangomez010/notebook2ee5306d9d
+						92 container notebook09a8825ca5 List Item
+							93 link Description: notebook09a8825ca5, Value: kaggle.com/code/ryangomez010/notebook09a8825ca5
+				94 button (collapsed) Event running 1 View Active Events, Secondary Actions: Expand
+					95 container
+						96 container Event running
+							97 text update
+						98 text 1
+					99 text View Active Events
+		100 container Main menu, search and your account
+			101 container
+				102 text field (settable) :r6:
+				103 button Ryan Gomez010
+					104 image
+		105 container site-content
+			106 link Description: Ryan Gomez010's profile, Value: kaggle.com/ryangomez010
+			107 text Ryan Gomez010 · 
+			108 container Description: 3 minutes ago, Help: Wed Oct 21 2026 12:30:05 GMT+0530 (India Standard Time)
+				109 text 3m ago
+			110 text  ·  26 views  ·  Private
+			111 container
+				112 button Upvote
+				113 button 0 votes
+			114 button Share
+			115 link Description: Edit, Value: kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019/edit/run/360684950
+			116 pop up button (collapsed) Download, Secondary Actions: Expand
+			117 button More options for this notebook
+			118 heading FREM S14 GPU benchmark 20261019, Value: 1
+				119 text FREM S14 GPU benchmark 20261019
+			120 button Edit title
+			121 tab group
+				122 tab (selectable, settable, boolean) Description: Notebook, 1 of 6, Value: 0
+				123 tab (selectable, settable, boolean) Description: Input, 2 of 6, Value: 0
+				124 tab (selectable, settable, boolean) Description: Output, 3 of 6, Value: 0
+				125 tab (selected, settable, boolean) Description: Logs, 4 of 6, Value: 1
+				126 tab (selectable, settable, boolean) Description: Comments (0), 5 of 6, Value: 0
+				127 tab (selectable, settable, boolean) Description: Settings, 6 of 6, Value: 0
+			128 heading Logs, Value: 2
+				129 text Logs
+			137 link Download logs
+				138 button Download logs
+			130 container
+				131 heading Version 6 failed to run after 105.6s, Value: 5
+					132 text Version  6  failed to run  after 105.6s
+				133 text Accelerator GPU T4 x2 Environment
+				134 link Description: Latest Container Image opens in new window, Value: gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f
+				135 button
+				136 text Output 5.59 MB
+			139 table
+				140 row
+					141 cell
+						142 text Time
+					143 cell
+						144 text #
+					145 cell
+						146 text Log Message
+				147 row
+					148 cell
+						149 text 8.3s
+					150 cell
+						151 text 1
+					152 cell
+						153 text 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+				154 row
+					155 cell
+						156 text 8.3s
+					157 cell
+						158 text 2
+					159 cell
+						160 text 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+				161 row
+					162 cell
+						163 text 8.3s
+					164 cell
+						165 text 3
+					166 cell
+						167 text 0.00s - to python to disable frozen modules.
+
+				168 row
+					169 cell
+						170 text 8.3s
+					171 cell
+						172 text 4
+					173 cell
+						174 text 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+				175 row
+					176 cell
+						177 text 8.9s
+					178 cell
+						179 text 5
+					180 cell
+						181 text 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+
+				182 row
+					183 cell
+						184 text 8.9s
+					185 cell
+						186 text 6
+					187 cell
+						188 text 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+
+				189 row
+					190 cell
+						191 text 8.9s
+					192 cell
+						193 text 7
+					194 cell
+						195 text 0.00s - to python to disable frozen modules.
+
+				196 row
+					197 cell
+						198 text 8.9s
+					199 cell
+						200 text 8
+					201 cell
+						202 text 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+
+				203 row
+					204 cell
+						205 text 11.3s
+					206 cell
+						207 text 9
+					208 cell
+						209 text Processing ./frem-s14-20261021T070018Z/payload/frem_s14-0.1.8-py3-none-any.whl
+
+				210 row
+					211 cell
+						212 text 11.3s
+					213 cell
+						214 text 10
+					215 cell
+						216 text Installing collected packages: frem-s14
+
+				217 row
+					218 cell
+						219 text 11.4s
+					220 cell
+						221 text 11
+					222 cell
+						223 text Successfully installed frem-s14-0.1.8
+
+				224 row
+					225 cell
+						226 text 11.5s
+					227 cell
+						228 text 12
+					229 cell
+						230 text Processing ./frem-s14-20261021T070018Z/payload/frem_s14-0.1.8-py3-none-any.whl
+
+				231 row
+					232 cell
+						233 text 11.5s
+					234 cell
+						235 text 13
+					236 cell
+						237 text Installing collected packages: frem-s14
+
+				238 row
+					239 cell
+						240 text 11.5s
+					241 cell
+						242 text 14
+					243 cell
+						244 text Successfully installed frem-s14-0.1.8
+
+				245 row
+					246 cell
+						247 text 11.5s
+					248 cell
+						249 text 15
+					250 cell
+						251 text Verified release and isolated install: /kaggle/working/frem-s14-20261021T070018Z
+
+				252 row
+					253 cell
+						254 text 14.9s
+					255 cell
+						256 text 16
+					257 cell
+						258 text {"passed": true, "minimum_mib": 512, "samples": [{"available_mib": 30293.9375, "pageouts": 0}, {"available_mib": 30293.9375, "pageouts": 0}, {"available_mib": 30293.6875, "pageouts": 0}], "time": "2026-10-21T07:00:23.022860+00:00"}
+
+				259 row
+					260 cell
+						261 text 14.9s
+					262 cell
+						263 text 17
+				264 row
+					265 cell
+						266 text 50.0s
+					267 cell
+						268 text 18
+					269 cell
+						270 text ........................................................................ [ 67%]
+
+				271 row
+					272 cell
+						273 text 50.0s
+					274 cell
+						275 text 19
+					276 cell
+						277 text ...................................                                      [100%]
+
+				278 row
+					279 cell
+						280 text 50.0s
+					281 cell
+						282 text 20
+					283 cell
+						284 text 107 passed in 27.75s
+
+				285 row
+					286 cell
+						287 text 50.0s
+					288 cell
+						289 text 21
+				290 row
+					291 cell
+						292 text 83.9s
+					293 cell
+						294 text 22
+					295 cell
+						296 text {
+
+				297 row
+					298 cell
+						299 text 83.9s
+					300 cell
+						301 text 23
+					302 cell
+						303 text   "output": "/kaggle/working/frem-s14-20261021T070018Z/qualification",
+
+				304 row
+					305 cell
+						306 text 83.9s
+					307 cell
+						308 text 24
+					309 cell
+						310 text   "status": "COMPLETE",
+
+				311 row
+					312 cell
+						313 text 83.9s
+					314 cell
+						315 text 25
+					316 cell
+						317 text   "cells": 19
+
+				318 row
+					319 cell
+						320 text 83.9s
+					321 cell
+						322 text 26
+					323 cell
+						324 text }
+
+				325 row
+					326 cell
+						327 text 83.9s
+					328 cell
+						329 text 27
+				330 row
+					331 cell
+						332 text 88.9s
+					333 cell
+						334 text 28
+					335 cell
+						336 text {
+
+				337 row
+					338 cell
+						339 text 88.9s
+					340 cell
+						341 text 29
+					342 cell
+						343 text   "verified": true,
+
+				344 row
+					345 cell
+						346 text 88.9s
+					347 cell
+						348 text 30
+					349 cell
+						350 text   "files": 222,
+
+				351 row
+					352 cell
+						353 text 88.9s
+					354 cell
+						355 text 31
+					356 cell
+						357 text   "semantics": {
+
+				358 row
+					359 cell
+						360 text 88.9s
+					361 cell
+						362 text 32
+					363 cell
+						364 text     "cells": 19,
+
+				365 row
+					366 cell
+						367 text 88.9s
+					368 cell
+						369 text 33
+					370 cell
+						371 text     "law_scores_and_ledger_arithmetic_verified": true
+
+				372 row
+					373 cell
+						374 text 88.9s
+					375 cell
+						376 text 34
+					377 cell
+						378 text   }
+
+				379 row
+					380 cell
+						381 text 88.9s
+					382 cell
+						383 text 35
+					384 cell
+						385 text }
+
+				386 row
+					387 cell
+						388 text 88.9s
+					389 cell
+						390 text 36
+				391 row
+					392 cell
+						393 text 97.9s
+					394 cell
+						395 text 37
+					396 cell
+						397 text Traceback (most recent call last):
+
+				398 row
+					399 cell
+						400 text 97.9s
+					401 cell
+						402 text 38
+					403 cell
+						404 text   File "<frozen runpy>", line 203, in _run_module_as_main
+
+				405 row
+					406 cell
+						407 text 97.9s
+					408 cell
+						409 text 39
+					410 cell
+						411 text   File "<frozen runpy>", line 88, in _run_code
+
+				412 row
+					413 cell
+						414 text 97.9s
+					415 cell
+						416 text 40
+					417 cell
+						418 text   File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 249, in <module>
+
+				419 row
+					420 cell
+						421 text 97.9s
+					422 cell
+						423 text 41
+					424 cell
+						425 text     main()
+
+				426 row
+					427 cell
+						428 text 97.9s
+					429 cell
+						430 text 42
+					431 cell
+						432 text     ~~~~^^
+
+				433 row
+					434 cell
+						435 text 97.9s
+					436 cell
+						437 text 43
+					438 cell
+						439 text   File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 245, in main
+
+				440 row
+					441 cell
+						442 text 97.9s
+					443 cell
+						444 text 44
+					445 cell
+						446 text     print(json.dumps({"panel": str(prepare(args.source, args.output))}))
+
+				447 row
+					448 cell
+						449 text 97.9s
+					450 cell
+						451 text 45
+					452 cell
+						453 text                                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				454 row
+					455 cell
+						456 text 97.9s
+					457 cell
+						458 text 46
+					459 cell
+						460 text   File "/kaggle/working/frem-s14-20261021T070018Z/installed/frem_s14/intake.py", line 135, in prepare
+
+				461 row
+					462 cell
+						463 text 97.9s
+					464 cell
+						465 text 47
+					466 cell
+						467 text     raise ValueError(
+
+				468 row
+					469 cell
+						470 text 97.9s
+					471 cell
+						472 text 48
+					473 cell
+						474 text         f"calendar mismatch for {asset}; no intersection or forward fill allowed"
+
+				475 row
+					476 cell
+						477 text 97.9s
+					478 cell
+						479 text 49
+					480 cell
+						481 text     )
+
+				482 row
+					483 cell
+						484 text 97.9s
+					485 cell
+						486 text 50
+					487 cell
+						488 text ValueError: calendar mismatch for qqq; no intersection or forward fill allowed
+
+				489 row
+					490 cell
+						491 text 97.9s
+					492 cell
+						493 text 51
+				494 row
+					495 cell
+						496 text 98.3s
+					497 cell
+						498 text 52
+					499 cell
+						500 text Traceback (most recent call last):
+
+				501 row
+					502 cell
+						503 text 98.3s
+					504 cell
+						505 text 53
+					506 cell
+						507 text   File "<string>", line 1, in <module>
+
+				508 row
+					509 cell
+						510 text 98.3s
+					511 cell
+						512 text 54
+					513 cell
+						514 text     import sys;import papermill as pm;pm.execute_notebook("__notebook__.ipynb","__notebook__.ipynb",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=13500)
+
+				515 row
+					516 cell
+						517 text 98.3s
+					518 cell
+						519 text 55
+					520 cell
+						521 text                                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+				522 row
+					523 cell
+						524 text 98.3s
+					525 cell
+						526 text 56
+					527 cell
+						528 text   File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 131, in execute_notebook
+
+				529 row
+					530 cell
+						531 text 98.3s
+					532 cell
+						533 text 57
+					534 cell
+						535 text     raise_for_execution_errors(nb, output_path)
+
+				536 row
+					537 cell
+						538 text 98.3s
+					539 cell
+						540 text 58
+					541 cell
+						542 text     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+
+				543 row
+					544 cell
+						545 text 98.3s
+					546 cell
+						547 text 59
+					548 cell
+						549 text   File "/usr/local/lib/python3.13/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+
+				550 row
+					551 cell
+						552 text 98.3s
+					553 cell
+						554 text 60
+					555 cell
+						556 text     raise error
+
+				557 row
+					558 cell
+						559 text 98.3s
+					560 cell
+						561 text 61
+					562 cell
+						563 text papermill.exceptions.PapermillExecutionError: 
+
+				564 row
+					565 cell
+						566 text 98.3s
+					567 cell
+						568 text 62
+					569 cell
+						570 text ---------------------------------------------------------------------------
+
+				571 row
+					572 cell
+						573 text 98.3s
+					574 cell
+						575 text 63
+					576 cell
+						577 text Exception encountered at "In [3]":
+
+				578 row
+					579 cell
+						580 text 98.3s
+					581 cell
+						582 text 64
+					583 cell
+						584 text ---------------------------------------------------------------------------
+
+				585 row
+					586 cell
+						587 text 98.3s
+					588 cell
+						589 text 65
+					590 cell
+						591 text RuntimeError                              Traceback (most recent call last)
+
+				592 row
+					593 cell
+						594 text 98.3s
+					595 cell
+						596 text 66
+					597 cell
+						598 text /tmp/ipykernel_23/1924729295.py in <cell line: 0>()
+
+				599 row
+					600 cell
+						601 text 98.3s
+					602 cell
+						603 text 67
+					604 cell
+						605 text       1 if MODE == "historical_suite":
+
+				606 row
+					607 cell
+						608 text 98.3s
+					609 cell
+						610 text 68
+					611 cell
+						612 text ----> 2     run(
+
+				613 row
+					614 cell
+						615 text 98.3s
+					616 cell
+						617 text 69
+					618 cell
+						619 text       3         "intake",
+
+				620 row
+					621 cell
+						622 text 98.3s
+					623 cell
+						624 text 70
+					625 cell
+						626 text       4         ["-m", "frem_s14.intake", "--source", "/kaggle/input", "--output", str(RUN / "intake")],
+
+				627 row
+					628 cell
+						629 text 98.3s
+					630 cell
+						631 text 71
+					632 cell
+						633 text       5         300,
+
+				634 row
+					635 cell
+						636 text 98.3s
+					637 cell
+						638 text 72
+				639 row
+					640 cell
+						641 text 98.3s
+					642 cell
+						643 text 73
+					644 cell
+						645 text /tmp/ipykernel_23/2481956509.py in run(name, args, timeout)
+
+				646 row
+					647 cell
+						648 text 98.3s
+					649 cell
+						650 text 74
+					651 cell
+						652 text     126     print(log.read_text()[-16000:])
+
+				653 row
+					654 cell
+						655 text 98.3s
+					656 cell
+						657 text 75
+					658 cell
+						659 text     127     if code:
+
+				660 row
+					661 cell
+						662 text 98.3s
+					663 cell
+						664 text 76
+					665 cell
+						666 text --> 128         raise RuntimeError(f"{name} failed ({code}); retained {log}")
+
+				667 row
+					668 cell
+						669 text 98.3s
+					670 cell
+						671 text 77
+					672 cell
+						673 text     129 
+
+				674 row
+					675 cell
+						676 text 98.3s
+					677 cell
+						678 text 78
+					679 cell
+						680 text     130 
+
+				681 row
+					682 cell
+						683 text 98.3s
+					684 cell
+						685 text 79
+				686 row
+					687 cell
+						688 text 98.3s
+					689 cell
+						690 text 80
+					691 cell
+						692 text RuntimeError: intake failed (1); retained /kaggle/working/frem-s14-20261021T070018Z/intake.log
+
+				693 row
+					694 cell
+						695 text 98.3s
+					696 cell
+						697 text 81
+				698 row
+					699 cell
+						700 text 100.6s
+					701 cell
+						702 text 82
+					703 cell
+						704 text /usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+
+				705 row
+					706 cell
+						707 text 100.6s
+					708 cell
+						709 text 83
+					710 cell
+						711 text   cells[i][c] = re.sub('\\\\\|', '|', cell)
+
+				712 row
+					713 cell
+						714 text 100.8s
+					715 cell
+						716 text 84
+					717 cell
+						718 text /usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+
+				719 row
+					720 cell
+						721 text 100.8s
+					722 cell
+						723 text 85
+					724 cell
+						725 text   text = re.sub(r'_', '\_', text) # Escape underscores in display text
+
+				726 row
+					727 cell
+						728 text 101.6s
+					729 cell
+						730 text 86
+					731 cell
+						732 text [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+
+				733 row
+					734 cell
+						735 text 101.7s
+					736 cell
+						737 text 87
+					738 cell
+						739 text [NbConvertApp] Writing 128036 bytes to __notebook__.ipynb
+
+				740 row
+					741 cell
+						742 text 104.2s
+					743 cell
+						744 text 88
+					745 cell
+						746 text [NbConvertApp] Converting notebook __notebook__.ipynb to html
+
+				747 row
+					748 cell
+						749 text 104.8s
+					750 cell
+						751 text 89
+					752 cell
+						753 text [NbConvertApp] Writing 419699 bytes to __results__.html
+
+
+The focused UI element is 125 tab (selected, settable, boolean) Description: Logs, 4 of 6, Value: 1

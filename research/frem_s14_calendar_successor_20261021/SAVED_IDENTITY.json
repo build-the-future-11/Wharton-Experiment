@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T10:15:46Z",
+  "platform": "Kaggle",
+  "kernel_ref": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "kernel_id": 139546196,
+  "version_number": 8,
+  "status_at_check": "RUNNING",
+  "is_frozen": true,
+  "package_version": "0.1.9",
+  "local_notebook_sha256": "ad6db2053c789aebe38a9cdc3bafb51f5bb5a5b3e9ccad8a46dfcdb725b05292",
+  "saved_notebook_sha256": "56de27214cb7c730abd37ca98ffa68045e0e760c2afa2115c5498c0cd5dba534",
+  "normalized_cell_content_sha256": "8c28793670a3cbef3607fb7db0a6f1ab28df7ca4a020562c583cb643b32cf94e",
+  "normalized_cell_content_equal": true,
+  "saved_metadata_sha256": "8ae717c46a901426c9d239ab10fc5285d296928ed3e7a725ac87d68faf7ff04b",
+  "release_archive_sha256": "19901b3584971f877c1d0c4f1a45f0933739cc9bd45aec1da16f1bf2b1fb6ac1",
+  "wheel_sha256": "e529184f0d37636525fb88c70206952f5e28cbdecf622f3355656411e2317942",
+  "settings": {
+    "private": true,
+    "gpu": true,
+    "machine_shape": "NvidiaTeslaT4",
+    "internet": false,
+    "dataset_sources": [
+      "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
+    ]
+  },
+  "scientific_status": "RUNNING_NOT_EVALUATED",
+  "protected_access": false
+}

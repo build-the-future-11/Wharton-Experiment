@@ -1,15 +1,15 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.1.7-s14-gpu-queued",
+  "version": "0.1.9-s14-calendar-successor-kaggle-version8-running",
   "created": "2026-10-10",
-  "updated": "2026-10-20T17:45:51+00:00",
+  "updated": "2026-10-21T10:58:35.803174+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
   },
-  "phase": "s14_gpu_0_1_7_version5_queued",
+  "phase": "s14_0_1_9_kaggle_version8_running",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -638,6 +638,18 @@
       "date": "2026-10-19T06:11:45.892713+00:00",
       "event": "S14 0.1.2 validity and efficiency hardening: 48 unique dependency-free tests pass from source and wheel; six prior defects reproduced and repaired; 36 numerical tests and 171 market cells remain pending behind resource/Kaggle gates. No core architecture or benchmark design/budget change.",
       "receipt": "research/frem_s14_hardening_20261019/RECEIPT.json"
+    },
+    {
+      "timestamp": "2026-10-21T04:58:55.186512+00:00",
+      "event": "Prepared immutable S14 0.1.8 from the verified fixture correction. Same 59 dependency-free tests pass from source and clean wheel; deterministic release rebuild passes; 29 prior release files unchanged. GPU upload blocked by stalled Kaggle editor; retained Version 5 archive blocked by Chrome. No new GPU run, historical cell, protected access or result-driven successor. See research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json"
+    },
+    {
+      "timestamp": "2026-10-21T05:04:31.568100+00:00",
+      "event": "User requested queueing on their specified Google-linked Kaggle account. Settings confirm it is already ryangomez010, with about 21h19m GPU quota. Official Kaggle CLI 2.2.4 installed in isolated temporary environment. Requested explicit confirmation for temporary token creation/use/revocation; pending. No credential created or candidate uploaded."
+    },
+    {
+      "timestamp": "2026-10-21T06:29:21.116095+00:00",
+      "event": "Verified 0.1.8 release hashes unchanged. User granted explicit temporary-token authorization. Browser automatic approval review rejected the Generate New Token action for lack of fresh immediate confirmation; no token created. Requested the specific action-time confirmation and preserved screenshot and rejection receipt. No queue, scientific execution or protected access."
     }
   ],
   "prior_reported_evidence": [
@@ -1934,60 +1946,49 @@
     "next_action": "Run exact notebook and ZIP on an admitted compatible CUDA target; preserve and independently verify generated results before supplying any market dataset."
   },
   "frem_s14": {
-    "timestamp": "2026-10-20T17:35:11+00:00",
+    "timestamp": "2026-10-21T10:15:46+00:00",
     "iteration": "FREM-S14",
-    "status": "GPU_0_1_6_VERSION4_RUNNING",
+    "status": "GPU_0_1_9_VERSION8_RUNNING_NOT_EVALUATED",
     "scientific_status": "NOT_EVALUATED",
     "decisions": [
       "research/decisions/frem_s14_kaggle_mount_failure_20261020.json",
       "research/decisions/frem_s14_kaggle_0_1_5_launch_20261020.json",
       "research/decisions/frem_s14_gru_interface_repair_20261020.json",
-      "research/decisions/frem_s14_kaggle_0_1_6_launch_20261020.json"
+      "research/decisions/frem_s14_kaggle_0_1_6_launch_20261020.json",
+      "research/decisions/frem_s14_etf_taxonomy_repair_20261020.json",
+      "research/decisions/frem_s14_version5_fixture_repair_20261021.json",
+      "research/decisions/frem_s14_fixture_release_0_1_8_20261021.json",
+      "research/decisions/frem_s14_0_1_9_calendar_cohort_successor_20261021.json",
+      "research/decisions/frem_s14_version6_calendar_failure_20261021.json"
     ],
     "current_candidate": {
-      "package_version": "0.1.3",
-      "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
+      "package_version": "0.1.9",
+      "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
       "release": {
-        "package_version": "0.1.3",
-        "source_identity": "ffa9fbc341774a2a5b567304da116875b58afa08d7c22188e475ccf16ff863b0",
-        "archive": "frem_s14_kaggle_bundle.zip",
-        "archive_sha256": "c0483b7111cb15fa1035fc99dff8094797e8e98adb9d38f34519739697d3e289",
-        "wheel": "frem_s14-0.1.3-py3-none-any.whl",
-        "wheel_sha256": "3070424b01a14d8fc0244a49188204253a677a60ab3113c6ad403333feb5ed7b",
-        "notebook_sha256": "4ecea24998cdef60071a3df7ab5df8d98a7d90056bed8854410b7cd453c10419",
+        "package_version": "0.1.9",
+        "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
+        "archive": "frem_s14_kaggle_bundle-0.1.9.zip",
+        "archive_sha256": "19901b3584971f877c1d0c4f1a45f0933739cc9bd45aec1da16f1bf2b1fb6ac1",
+        "wheel": "frem_s14-0.1.9-py3-none-any.whl",
+        "wheel_sha256": "e529184f0d37636525fb88c70206952f5e28cbdecf622f3355656411e2317942",
+        "notebook_sha256": "ad6db2053c789aebe38a9cdc3bafb51f5bb5a5b3e9ccad8a46dfcdb725b05292",
         "members": 18,
         "runtime_qualified": false,
-        "status": "KAGGLE_VERSION_3_RUNNING_NOT_NUMERICALLY_QUALIFIED"
+        "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
       },
-      "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU.ipynb",
+      "release_record": "successors/frem_s14/dist/RELEASE-0.1.9.json",
+      "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_9.ipynb",
       "uploaded": true,
       "numerical_qualified": false,
-      "market_started": null,
-      "local_stdlib_unique_tests": 56,
-      "source_and_installed_wheel_pass": true,
-      "declared_target_tests": 102,
-      "declared_numerical_tests_pending": 46,
-      "static_checks": "Scoped Ruff/format, compile, 15 wheel sources, wheel RECORD, embedded ZIP and byte-identical rebuild passed",
-      "local_numerical_admission": {
-        "minimum_mib": 512,
-        "passed": false,
-        "samples": [
-          {
-            "available_mib": 112.453125,
-            "pageouts": 548956
-          },
-          {
-            "available_mib": 99.40625,
-            "pageouts": 548987
-          },
-          {
-            "available_mib": 125.546875,
-            "pageouts": 548995
-          }
-        ],
-        "time": "2026-10-19T09:31:17.019657+00:00"
-      },
-      "repair": "research/frem_s14_readback_20261019/AUDIT.md"
+      "market_started": false,
+      "declared_target_tests": 107,
+      "local_source_stdlib_tests": 59,
+      "local_installed_stdlib_tests": 59,
+      "unique_stdlib_tests": 59,
+      "pending_test_payload_change": false,
+      "identity_check": "research/frem_s14_calendar_successor_20261021/RELEASE_VERIFICATION.json",
+      "saved_identity": "research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json",
+      "note": "Separately versioned seven-ETF calendar-compatible successor is independently release-verified and queued as private Kaggle Version 8. Model, folds, controls, seeds, threshold, bootstrap, denominator and ceilings are unchanged."
     },
     "trace_candidate": {
       "timestamp": "2026-10-20T00:00:00+00:00",
@@ -2059,7 +2060,7 @@
         "wheel_sha256": "fab2bc0d8d1b9c5dee8cd63054c083a7bbe0f38a9f672e33625bcba165b03520",
         "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_7.ipynb",
         "notebook_sha256": "d043efd5965e354474536cff2617f8237bf2f3c4ebe5a63bd89e4e1321c8fb0e",
-        "status": "KAGGLE_VERSION_5_QUEUED_NOT_NUMERICALLY_QUALIFIED"
+        "status": "KAGGLE_VERSION_5_FAILED_TEST_FIXTURE_BEFORE_QUALIFICATION"
       },
       "saved_source_normalized_cells_sha256": "4932e2ca7579fe09329c732f1dab310899b42e1ce21258e54446b60915eec5aa",
       "saved_source_exact_cell_content_match": true,
@@ -2070,7 +2071,8 @@
       "protected_access": false,
       "receipt": "research/frem_s14_etf_taxonomy_repair_20261020/ENGINEERING_RECEIPT.json",
       "launch_receipt": "research/frem_s14_kaggle_0_1_7_20261020/LAUNCH_RECEIPT.json",
-      "decision": "research/decisions/frem_s14_etf_taxonomy_repair_20261020.json"
+      "decision": "research/decisions/frem_s14_etf_taxonomy_repair_20261020.json",
+      "failure_receipt": "research/frem_s14_version5_failure_20261021/FAILURE_RECEIPT.json"
     },
     "prior_gpu_run": {
       "version": 359930995,
@@ -2097,19 +2099,50 @@
       "internet": "off observed",
       "receipt": "research/frem_s14_20261019/KAGGLE_VERSION1_RECEIPT.json"
     },
-    "blocker": null,
+    "version6_calendar_failure": {
+      "timestamp": "2026-10-21T07:00:18Z",
+      "version": 360684950,
+      "version_number": 6,
+      "status": "FAILED_PRE_MODEL_HISTORICAL_INTAKE_CALENDAR_MISMATCH",
+      "package_version": "0.1.8",
+      "source_identity": "c8d8a1c3fa57e6cdfcd2bcec72fee22d7e0c86ce861da316b18b393ad907414b",
+      "archive_sha256": "34fbc8132743331e77a7d887ffae50ce899db8ff588adeba4c75c3dc2c8a8567",
+      "saved_source_exact_cell_content_match": true,
+      "tests_passed": 107,
+      "generated_arms_completed": 19,
+      "qualification_verification_passed": true,
+      "historical_cells_completed": 0,
+      "market_model_started": false,
+      "failure_stage": "historical_intake",
+      "failure": "QQQ alone contains 2011-02-17; each of the other seven ETFs omits it. Strict no-intersection intake failed closed before any historical model cell.",
+      "protected_access": false,
+      "saved_identity": "research/frem_s14_kaggle_0_1_8_20261021/SAVED_IDENTITY.json",
+      "archive_verification": "research/frem_s14_kaggle_0_1_8_20261021/ARCHIVE_VERIFICATION.json",
+      "calendar_audit": "research/frem_s14_kaggle_0_1_8_20261021/CALENDAR_AUDIT_ALL_ASSETS.json"
+    },
+    "version7_accidental_duplicate": {
+      "version": 360733756,
+      "version_number": 7,
+      "status": "CANCEL_ACKNOWLEDGED",
+      "package_version": "0.1.8",
+      "reason": "Exact inadmissible duplicate launched from stale canonical state after Version 6 had already established the calendar defect; canceled without scientific use.",
+      "saved_source_exact_cell_content_match": true,
+      "historical_cells_completed": 0,
+      "scientific_use": false,
+      "protected_access": false
+    },
+    "blocker": "Kaggle Version 8 is running on the saved T4 target. Scientific status remains NOT_EVALUATED until terminal output is downloaded and independently verified.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
-      "id": "finish-s14-kaggle-version-5",
+      "id": "finish-frem-s14-version-8",
       "kind": "heartbeat",
-      "name": "Finish S14 Kaggle Version 5",
+      "name": "Finish FREM S14 Version 8",
       "status": "ACTIVE",
-      "rrule": "FREQ=MINUTELY;INTERVAL=30",
-      "target_thread_id": "01a15268-c54b-77d0-a295-cc5fa3396a2e",
-      "interval_minutes": 30,
-      "guard": "Version 360511217 is the sole active corrected-freeze run; do not launch a duplicate or alter the frozen design.",
-      "reason": "Version 4 is terminal and preserved; monitor the hash-verified 0.1.7 run to a terminal state and retain all outputs or failure evidence."
+      "rrule": "FREQ=MINUTELY;INTERVAL=15",
+      "interval_minutes": 15,
+      "guard": "Monitor only exact private Version 8. Do not push, relaunch, duplicate, retune, alter the seven-ETF cohort or interfere with unrelated runs.",
+      "reason": "Version 8 is queued behind unrelated account GPU work; resume only on meaningful status change and independently verify the complete terminal output."
     },
     "expected_historical_cells": 171,
     "completed_historical_cells": 0,
@@ -2119,47 +2152,56 @@
     "launch_receipt_preserved": "research/frem_s14_20261019/LAUNCH_RECEIPT.json",
     "checklist": "successors/frem_s14/CHECKLIST.md",
     "remaining": [
-      "Preserve terminal saved version 359955736 as an external dataset-mount failure before notebook execution; do not reinterpret it as model evidence.",
-      "Preserve terminal saved version 360508080 as a full CUDA qualification followed by a pre-market source-discovery failure; do not reinterpret it as market evidence.",
-      "Monitor exact saved version 360511217 to a terminal state without a duplicate launch; preserve logs and all outputs or failure evidence.",
-      "Execute all 107 warning-strict tests, then generated 19-arm CUDA qualification.",
-      "Execute strict fixed-cohort intake and the full 171-cell historical proxy benchmark within existing ceilings.",
-      "Download the archive, verify the trusted release/source and independently reconstruct every fold, cell, score, ledger and complete comparison family."
+      "Wait for the single exact Version 8 run to reach a terminal state without relaunching it.",
+      "Download and hash-verify the complete Version 8 output archive.",
+      "Verify all 107 tests, all 19 generated qualification arms and the unchanged fixed 171-cell historical proxy denominator.",
+      "Independently reconstruct every retained scientific result and failure before changing any claim.",
+      "Only then select, freeze, implement and test a bounded result-driven successor against matched simple baselines, preserving all old results."
     ],
     "claim_boundary": "Engineering passes do not establish predictive improvement or tradable profitability; no zero-defect guarantee.",
-    "receipt": "research/frem_s14_kaggle_0_1_7_20261020/LAUNCH_RECEIPT.json",
+    "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
     "specification": "successors/frem_s14/SPECIFICATION.md",
-    "candidate_preparation": "KAGGLE_VERSION_5_QUEUED",
+    "candidate_preparation": "KAGGLE_VERSION8_QUEUED_EXACT_SAVED_SOURCE_VERIFIED",
     "hardening_record": "research/frem_s14_readback_20261019",
     "audit": "research/frem_s14_readback_20261019/AUDIT.md",
     "prior_candidate_receipt": "research/frem_s14_readback_20261019/RECEIPT.json",
     "current_gpu_run": {
-      "timestamp": "2026-10-20T17:45:21Z",
-      "version": 360511217,
-      "version_number": 5,
-      "status": "QUEUED",
-      "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019?scriptVersionId=360511217",
-      "package_version": "0.1.7",
-      "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
-      "archive_sha256": "054086b6e4f26be99387dc47a4cbea30a5aa76112fd6e3f3093a90b80517c5c7",
-      "wheel_sha256": "fab2bc0d8d1b9c5dee8cd63054c083a7bbe0f38a9f672e33625bcba165b03520",
-      "notebook_sha256": "d043efd5965e354474536cff2617f8237bf2f3c4ebe5a63bd89e4e1321c8fb0e",
-      "saved_source_normalized_cells_sha256": "4932e2ca7579fe09329c732f1dab310899b42e1ce21258e54446b60915eec5aa",
+      "timestamp": "2026-10-21T10:02:54Z",
+      "kernel_id": 139546196,
+      "version_number": 8,
+      "status": "RUNNING_NOT_EVALUATED",
+      "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019",
+      "package_version": "0.1.9",
+      "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
+      "archive_sha256": "19901b3584971f877c1d0c4f1a45f0933739cc9bd45aec1da16f1bf2b1fb6ac1",
+      "wheel_sha256": "e529184f0d37636525fb88c70206952f5e28cbdecf622f3355656411e2317942",
+      "notebook_sha256": "ad6db2053c789aebe38a9cdc3bafb51f5bb5a5b3e9ccad8a46dfcdb725b05292",
+      "saved_source_normalized_cells_sha256": "8c28793670a3cbef3607fb7db0a6f1ab28df7ca4a020562c583cb643b32cf94e",
       "saved_source_exact_cell_content_match": true,
       "visibility": "Private observed",
-      "accelerator": "GPU T4 x2 observed",
+      "accelerator": "NvidiaTeslaT4 saved setting",
       "internet": "off observed",
       "dataset": "Huge Stock Market Dataset attached",
       "expected_tests": 107,
       "expected_generated_arms": 19,
       "expected_historical_cells": 171,
       "notebook_seconds_ceiling": 13500,
-      "tests_passed": null,
+      "tests_passed": 0,
       "historical_cells_completed": 0,
       "protected_access": false,
-      "last_verified_status": "QUEUED",
-      "last_verified_check_utc": "2026-10-20T17:45:21Z",
-      "receipt": "research/frem_s14_kaggle_0_1_7_20261020/LAUNCH_RECEIPT.json"
+      "last_verified_status": "RUNNING",
+      "last_verified_check_utc": "2026-10-21T10:15:46+00:00",
+      "receipt": "research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json",
+      "tests_failed": 0,
+      "actual_tests_collected": 0,
+      "tests_skipped": 0,
+      "generated_arms_completed": 0,
+      "actual_historical_cells_completed": 0,
+      "market_intake_started": false,
+      "failure_stage": null,
+      "failure": null,
+      "observed_run_seconds": null,
+      "archive_readback": "PENDING_TERMINAL_RUN"
     },
     "prior_intake_failed_gpu_run": {
       "timestamp": "2026-10-20T17:42:43Z",
@@ -2283,6 +2325,75 @@
       "current_gpu_release_contains_operations": false,
       "future_notebook_integration_qualified": false,
       "claim": "Standalone process orchestration engineering only; not model or scientific qualification."
+    },
+    "fixture_repair": {
+      "decision": "research/decisions/frem_s14_version5_fixture_repair_20261021.json",
+      "file": "successors/frem_s14/tests/test_hardening_stdlib.py",
+      "before_sha256": "4c0bb2d87a53421befd7b3cf3980dbe90c75938b9da085bd7c9efc8fb9b7eab5",
+      "after_sha256": "6bcb47bcd5ce5ad35acfd98e18576b402f6413c6b5d137c0943638ade1f3e6e1",
+      "dependency_free_tests": 59,
+      "runtime_changed": false,
+      "pending": "new versioned payload and exact GPU qualification after failure readback"
+    },
+    "prior_current_candidate_0_1_7": {
+      "package_version": "0.1.7",
+      "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
+      "release": {
+        "package_version": "0.1.7",
+        "source_identity": "36c4e42addfee4e4226b5b854bb8f735d0e4102db6b42d6bc32e005c26e3daa8",
+        "archive": "frem_s14_kaggle_bundle-0.1.7.zip",
+        "archive_sha256": "054086b6e4f26be99387dc47a4cbea30a5aa76112fd6e3f3093a90b80517c5c7",
+        "wheel": "frem_s14-0.1.7-py3-none-any.whl",
+        "wheel_sha256": "fab2bc0d8d1b9c5dee8cd63054c083a7bbe0f38a9f672e33625bcba165b03520",
+        "notebook_sha256": "d043efd5965e354474536cff2617f8237bf2f3c4ebe5a63bd89e4e1321c8fb0e",
+        "members": 18,
+        "runtime_qualified": false,
+        "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+      },
+      "release_record": "successors/frem_s14/dist/RELEASE-0.1.7.json",
+      "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_7.ipynb",
+      "uploaded": true,
+      "numerical_qualified": false,
+      "market_started": false,
+      "declared_target_tests": 107,
+      "current_gpu_tests": {
+        "collected": 107,
+        "passed": 105,
+        "failed": 2,
+        "skipped": 0,
+        "seconds": 27.23,
+        "warnings_as_errors": true,
+        "evidence": "visible saved-version logs; downloaded output integrity pending"
+      },
+      "local_corrected_fixture_stdlib_tests": 59,
+      "pending_test_payload_change": true,
+      "identity_check": "research/frem_s14_version5_failure_20261021/identity_check.json",
+      "note": "Versioned 0.1.7 artifacts remain immutable. Unversioned RELEASE.json/FREM_S14_GPU.ipynb retain historical 0.1.3 and must not be used for this run. Corrected test fixture is not packaged or GPU qualified."
+    },
+    "continuation": "research/frem_s14_fixture_release_20261021/CONTINUATION.md",
+    "queue_readiness": "research/frem_s14_fixture_release_20261021/QUEUE_READINESS.json",
+    "token_action_receipt": "research/frem_s14_kaggle_0_1_8_20261021/TOKEN_ACTION_REJECTION.json",
+    "version6_verified_failure_receipt": "research/frem_s14_kaggle_0_1_8_20261021/FAILURE_RECEIPT.json",
+    "version6_calendar_preflight": "research/frem_s14_kaggle_0_1_8_20261021/CALENDAR_PREFLIGHT.json",
+    "version6_temporary_token": {
+      "revoked": true,
+      "local_secret_removed": true,
+      "scope": "Token created in this chat for Version 6 only; does not describe credentials managed by the other chat."
+    },
+    "flaw_checklist": "research/frem_s14_kaggle_0_1_8_20261021/FLAW_CHECKLIST.md",
+    "coordination": {
+      "execution_owner_thread": "01a15db2-d8ca-71c0-be1d-259f4eb70eb7",
+      "monitor": "finish-frem-s14-version-8",
+      "last_owner_report": "2026-10-21T10:53:34Z RUNNING",
+      "note": "Concurrent owner launched the separately frozen seven-ETF 0.1.9. Preserve its candidate and current run; this chat only adds Version 6 evidence and documentation. Browser in this chat could not access the private run on the final check."
     }
+  },
+  "benchmark_and_successor_request_20261021": {
+    "request": "Finish S14, then implement and test evidence-driven changes against simple baselines; preserve old results.",
+    "status": "READY_TO_QUEUE_AWAITING_TEMPORARY_TOKEN_APPROVAL",
+    "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
+    "successor_status": "AWAITING_VERIFIED_S14_RESULTS",
+    "new_historical_cells": 0,
+    "protected_access": false
   }
 }

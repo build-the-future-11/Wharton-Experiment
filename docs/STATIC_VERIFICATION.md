@@ -560,3 +560,102 @@ The operations directory is outside the running wheel/notebook. Future launcher 
 - Not verified: 0.1.5 numerical tests, CUDA/AMP qualification, historical proxy cells, protected outcomes, predictive improvement, profitability, or independent reproduction.
 
 The terminal platform failure is preserved in `research/frem_s14_kaggle_failure_20261020/RECEIPT.json`. No new 0.1.5 Kaggle version was created because the editor did not finish loading.
+
+## 20 October 2026 — S14 0.1.7 current verification boundary
+
+- Version 4 (`360508080`, 0.1.6): 30,293 MiB host admission with zero pageouts; 105 warning-strict tests passed; 19/19 generated CUDA arms completed in 29.5475 seconds; independent 222-file qualification readback passed.
+- Version 4 market boundary: strict intake failed before any fit because the source archive contained both ETF- and stock-category basename matches for `spy.us.txt`; historical completion is 0/171 and protected access is false.
+- Version 5 (`360511217`, 0.1.7): private, GPU T4 x2, Internet off, fixed dataset attached, normalized saved code equal to the local candidate; current state `QUEUED`.
+- 0.1.7 local static boundary: 24 dependency-free source tests and 14 clean-wheel tests pass with warnings as errors; Ruff format/lint, compileall, release hashes, notebook parsing, and saved-code identity pass. No numerical import ran locally.
+- The 0.1.7 change is limited to exact canonical ETF-path resolution plus collision receipts and duplicate-canonical rejection. It does not change the architecture, 19 arms, seeds, folds, thresholds, budgets, or protected boundary.
+
+These facts establish engineering qualification for 0.1.6 and exact queued provenance for 0.1.7. They do not establish any S14 predictive, statistical, portfolio, profitability, publication, or independent-reproduction claim.
+
+
+## 21 October 2026 — Version 5 terminal fixture failure
+
+Exact private Version 5 (`360511217`, package 0.1.7) failed after 56.2 seconds. Its visible warning-strict test log reports 107 collected, 105 passed, two failed, zero skipped in 27.23 seconds. The two intake fixtures still wrote flat `input/<ticker>.us.txt` files and therefore failed the frozen `Data/ETFs` path contract before reaching their original assertions. Generated qualification, historical intake and all 171 market cells did not start; protected access remains false and scientific status is NOT_EVALUATED.
+
+Both failures were reproduced locally against the exact hash-verified 0.1.7 wheel. Only the generated fixture path and recursive parent-directory creation were corrected. All original assertions remain, including calendar mismatch rejection and hash/value checks. All 59 dependency-free tests then passed with warnings as errors. Scoped Ruff lint/format under the declared S14 configuration and static parsing pass. An initial Ruff invocation from a temporary directory selected unrelated defaults; that invocation defect is recorded. No numerical import or market fit ran locally.
+
+The versioned 0.1.7 source, 15 installed-wheel modules, archive and notebook match the launch identities; retained saved notebook cells match exactly. No runtime module, frozen threshold, fold, arm, seed, ETF taxonomy, cohort, label, score or budget changed. The frozen release artifacts were not rebuilt. The corrected test payload still needs a new immutable release and exact GPU qualification.
+
+Chrome blocked the normal Version 5 Download output action with ERR_BLOCKED_BY_CLIENT. The control was not bypassed. Complete visible logs and screenshots are retained, but downloaded-output integrity and numerical readback remain pending. The exact-version monitor is paused because the run is terminal and archive download needs user action. Stale canonical current-candidate aliases were reconciled to versioned 0.1.7; historical unversioned 0.1.3 files remain intact. Read `research/frem_s14_version5_failure_20261021/FAILURE_RECEIPT.json` and its preserved before-state.
+
+
+## 21 October 2026 — S14 0.1.8 fixture release prepared; external execution blocked
+
+The immutable 0.1.8 release packages the existing two-line fixture correction and
+version metadata only. Scientific runtime, thresholds, 19 arms, three seeds, three
+folds, 171-cell denominator and budgets are unchanged. The same 59 unique
+dependency-free tests pass from source and a clean installed wheel. Package-root
+Ruff and format checks pass; wheel/archive/notebook/metadata reproduce exactly.
+All 29 previously recorded release files remain unchanged. Invocation failures
+are retained in the new receipt; no local numerical tests ran.
+
+Live Version 5 remains a terminal 56.2-second failure with 79 retained files.
+Normal output download remains blocked by Chrome ERR_BLOCKED_BY_CLIENT; the
+Kaggle editor remains at Editor Loading with import disabled after one reload.
+No new candidate upload or GPU run occurred. S14 historical completion remains
+0/171 and science is NOT_EVALUATED. User action was requested for normal access.
+
+The user now requests S14 completion followed by a result-driven successor. That
+successor is deliberately not selected or implemented before verified S14 results.
+Read research/frem_s14_fixture_release_20261021/CONTINUATION.md and
+ENGINEERING_RECEIPT.json. Existing Version 5 monitoring was not changed.
+
+
+### Same-session account and queue readiness
+
+The user requested queueing under their specified Google-linked Kaggle account.
+Settings confirm it is already `ryangomez010`; approximately 21h19m GPU quota was
+available. Official Kaggle CLI 2.2.4 is now installed in a temporary environment.
+The editor still cannot import. Explicit confirmation was requested to generate
+a temporary API token, upload/queue the exact private 0.1.8 release, verify saved
+identity, then revoke the token. Confirmation is pending; no credential, upload
+or new saved version was created. See QUEUE_READINESS.json in the new receipt
+directory. Prior Chrome output-download blocking remains unresolved.
+
+
+## 21 October 2026 — Version 6 qualified; historical source calendars incompatible
+
+Private Kaggle Version 6 (`360684950`, package 0.1.8) passed all 107 warning-strict
+tests in 27.75 seconds, completed 19/19 generated CUDA arms and passed its in-run
+independent 222-file semantic verifier. Saved notebook cells match the local
+candidate; GPU T4 x2, Internet off, fixed source and private visibility are verified.
+The run failed after 105.6 seconds during strict historical intake, before any fit.
+
+All eight independently downloaded public source files match the executed hashes.
+QQQ has 2736 selected dates; all seven other ETFs have 2735 and lack 2011-02-17.
+No dates or prices were removed, filled or fabricated. The frozen equality rule
+cannot admit these exact bytes. Historical completion remains 0/171; S14 remains
+NOT_EVALUATED, with no predictive or economic baseline advantage established.
+
+The 308 run files plus Kaggle log are retained. Anchored integrity verification
+passes for 18 payload members, 15 installed modules and the qualification manifest.
+The local ZIP was reconstructed from API-downloaded files. Local numerical
+readback was refused by the unchanged memory/pageout gate. The temporary API token
+was revoked and its local secret removed; other tokens remain intact.
+
+Added a separate read-only calendar preflight with three passing regression tests;
+it does not modify or qualify the frozen GPU payload. Read
+`research/frem_s14_kaggle_0_1_8_20261021/FAILURE_RECEIPT.json` and `FLAW_CHECKLIST.md`.
+Do not launch Version 6 again or silently weaken its intake. Recover compatible
+source observations or specify a separately versioned missing-data study before
+fitting. The broader research/paper completion request is not yet fulfilled.
+
+
+### Current frontier reconciled across research chats
+
+The original eight-ETF Version 6 failure above is historical. The separate
+research execution chat has already frozen and launched seven-ETF package 0.1.9
+as private Kaggle Version 8. Its saved-source identity is recorded in
+`research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json`. QQQ is excluded
+prospectively on source-calendar grounds; retained histories are not intersected
+or filled. This narrows the population and is a new study, not a successful
+completion of the original eight-ETF matrix. The latest execution-owner check at
+10:53 UTC reports RUNNING. No historical results are yet independently verified.
+The existing `finish-frem-s14-version-8` monitor owns terminal output collection.
+Do not launch another run or change its frozen code, cohort, threshold or budget.
+Version 6 evidence and token revocation in this chat are complete. The broader
+baseline comparison and final research release remain pending Version 8 evidence.

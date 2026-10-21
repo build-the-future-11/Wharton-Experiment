@@ -1,0 +1,11 @@
+{
+  "returncode": 0,
+  "wall_seconds": 5.181440640000005,
+  "command": [
+    "-m",
+    "frem_s14",
+    "verify",
+    "--bundle",
+    "/kaggle/working/frem-s14-20261021T070018Z/qualification"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-21",
+  "type": "execution_evidence_and_source_calendar_diagnosis",
+  "version": "FREM-S14-0.1.8",
+  "observation": "Private Kaggle Version 6 / 360684950 passed 107 warning-strict tests, all 19 generated CUDA arms and in-run semantic verification of 222 files, then failed strict historical intake on unequal calendars. Eight anonymously downloaded source files match the executed hashes. QQQ includes 2011-02-17; the other seven ETFs do not. Historical cells remain 0/171.",
+  "decision": "Preserve Version 6 and all predecessors. Do not retry unchanged or silently drop/fill dates. Add a read-only calendar preflight outside the immutable payload. Keep S14 NOT_EVALUATED while compatible source data or a separately specified missing-data successor is unresolved. Correct stale paper and state claims.",
+  "user_scope": "Complete rigorous research, implementation, paper and corresponding GitHub artifact; accept only measured evidence rather than guaranteed favorable results.",
+  "evidence": "research/frem_s14_kaggle_0_1_8_20261021",
+  "scientific_mechanism_changed": false,
+  "frozen_release_changed": false,
+  "historical_cells_started": 0,
+  "protected_access": false,
+  "status": "ENGINEERING_QUALIFIED_DATA_CONTRACT_BLOCKED"
+}

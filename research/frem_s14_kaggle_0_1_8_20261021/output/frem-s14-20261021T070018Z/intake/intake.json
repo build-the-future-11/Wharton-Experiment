@@ -1,0 +1,115 @@
+{
+  "assets": [
+    "spy",
+    "qqq",
+    "iwm",
+    "dia",
+    "tlt",
+    "ief",
+    "gld",
+    "slv"
+  ],
+  "error": "ValueError: calendar mismatch for qqq; no intersection or forward fill allowed",
+  "files": {
+    "dia": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/dia.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/dia.us.txt"
+      ],
+      "bytes": 159715,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/dia.us.txt"
+    },
+    "gld": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/gld.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/gld.us.txt"
+      ],
+      "bytes": 154879,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/gld.us.txt"
+    },
+    "ief": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/ief.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/ief.us.txt"
+      ],
+      "bytes": 156577,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/ief.us.txt"
+    },
+    "iwm": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/iwm.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/iwm.us.txt"
+      ],
+      "bytes": 162105,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/iwm.us.txt"
+    },
+    "qqq": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/qqq.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/qqq.us.txt"
+      ],
+      "bytes": 239012,
+      "selected_rows": 2736,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "a29e145b1591274990a73caf9e7cf38c1b8e59cca4daedb048c49f2c4a01f03f",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/qqq.us.txt"
+    },
+    "slv": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/slv.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/slv.us.txt"
+      ],
+      "bytes": 133162,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/slv.us.txt"
+    },
+    "spy": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/spy.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/spy.us.txt"
+      ],
+      "bytes": 163787,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/spy.us.txt"
+    },
+    "tlt": {
+      "basename_matches": [
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/tlt.us.txt",
+        "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/ETFs/tlt.us.txt"
+      ],
+      "bytes": 158900,
+      "selected_rows": 2735,
+      "selection_rule": "exact Data/ETFs path suffix",
+      "sha256": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+      "source_path": "/kaggle/input/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/Data/ETFs/tlt.us.txt"
+    }
+  },
+  "limitations": [
+    "historical survivor-selected ETF cohort",
+    "no verified publication timestamps",
+    "adjustments may embed later revisions",
+    "no verified terminal distributions",
+    "not a tradable or point-in-time-valid performance claim"
+  ],
+  "rights": "Dataset card lists CC0; provider assertion",
+  "source": "https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+  "start": "2007-01-01",
+  "status": "FAILED",
+  "stop": "2018-01-01"
+}

@@ -1,0 +1,15 @@
+{
+  "hashes_match_executed_input": true,
+  "hashes": {
+    "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+    "qqq": "a29e145b1591274990a73caf9e7cf38c1b8e59cca4daedb048c49f2c4a01f03f"
+  },
+  "qqq_only_dates": [
+    "2011-02-17"
+  ],
+  "spy_only_dates": [],
+  "counts": {
+    "spy": 2735,
+    "qqq": 2736
+  }
+}

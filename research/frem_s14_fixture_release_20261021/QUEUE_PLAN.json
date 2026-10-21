@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-21T05:02:54.802484+00:00",
+  "account_username": "ryangomez010",
+  "requested_email_matches_account_settings": true,
+  "google_link_matches_requested_account": true,
+  "gpu_quota_available_observed": "21h19m of 30h",
+  "package_version": "0.1.8",
+  "notebook": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "private": true,
+  "accelerator": "NvidiaTeslaT4",
+  "internet": false,
+  "timeout_seconds": 13500,
+  "stage": "research/frem_s14_fixture_release_20261021/upload_stage",
+  "launch_authorized": true,
+  "temporary_api_token_creation": "EXPLICIT_CONFIRMATION_REQUESTED_PENDING",
+  "token_handling_if_authorized": "Temporary local credential only; use to upload/queue and verify saved identity, then revoke; no secret in repository or output",
+  "prior_version5_archive": "Still blocked through normal Chrome download; no alternative download attempted",
+  "new_gpu_run_launched": false
+}

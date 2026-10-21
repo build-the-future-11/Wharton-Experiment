@@ -1,0 +1,15 @@
+{
+  "returncode": 0,
+  "wall_seconds": 33.91616281100005,
+  "command": [
+    "-W",
+    "error",
+    "-m",
+    "frem_s14",
+    "qualify",
+    "--device",
+    "cuda",
+    "--output",
+    "/kaggle/working/frem-s14-20261021T070018Z/qualification"
+  ]
+}

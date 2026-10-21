@@ -3,11 +3,11 @@
   "source_sha256": {
     "arxiv.sty": "eaf2fa779acfc1dc4e5ea75b78bb40967b780b67a19b80113c6b2930cfff2d14",
     "engineering_results.tex": "15863c18aee90ec6a9a15323cbedf5ae8db6ed018ccce7f68e2b6986199d7016",
-    "main.tex": "ecb6e63caf0644af6669a4daac134c23f89bdd0fb490d7e9ba5ad1079f53aaf3",
+    "main.tex": "5b0bc1b90f61ba56879f8ea9e90a9ae32fc73f78257ab0c8140670066b90eae3",
     "public_results.tex": "911fe241e17d735688228e404ed9b67d4dd2432e6325bfef7456108f006298e3",
     "references.bib": "3b632ab7f02f07023e2a13664f5e7fb1c484c0a87891fe86c71430f9b45086fa",
     "s4_results.tex": "3672da4335ab420902d1dffe2cd189a4013e96b73340aaa8893ff41eae624779"
   },
-  "pdf_sha256": "d6be479932a9a3e4d63b85bfbc815d165cd3e66ee2b0620f8ce7d95cf10893ad",
+  "pdf_sha256": "009fe6fb780542b67cfe0080c07b256c05beb23390afcc311829f5bb3224104d",
   "scope": "Document compilation only; no research execution or submission readiness"
 }

@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "files": 222,
+  "semantics": {
+    "cells": 19,
+    "law_scores_and_ledger_arithmetic_verified": true
+  }
+}

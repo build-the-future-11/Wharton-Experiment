@@ -163,8 +163,8 @@ class HardeningTests(unittest.TestCase):
                 resume_seconds(root / "full-s11/epoch_000.pt", 10)
 
     def prices(self, asset, count=225):
-        path = self.root / "input" / (asset + ".us.txt")
-        path.parent.mkdir(exist_ok=True)
+        path = self.root / "input" / "Data" / "ETFs" / (asset + ".us.txt")
+        path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("w", newline="") as stream:
             writer = csv.writer(stream)
             writer.writerow(["Date", "Open", "High", "Low", "Close", "Volume", "OpenInt"])
@@ -186,11 +186,13 @@ class HardeningTests(unittest.TestCase):
     def test_intake_end_to_end_values_hashes_and_calendar(self):
         paths = {asset: self.prices(asset) for asset in ASSETS}
         out = self.root / "prepared"
-        panel = prepare(self.root / "input", out)
+        with self.assertRaisesRegex(ValueError, "source hash mismatch"):
+            prepare(self.root / "input", self.root / "hash-rejected")
+        panel = prepare(self.root / "input", out, expected_hashes=None)
         with panel.open(newline="") as stream:
             rows = list(csv.DictReader(stream))
-        self.assertEqual(len(rows), (225 - 20) * 8)
-        self.assertEqual({r["asset"] for r in rows[:8]}, {a.upper() for a in ASSETS})
+        self.assertEqual(len(rows), (225 - 20) * len(ASSETS))
+        self.assertEqual({r["asset"] for r in rows[: len(ASSETS)]}, {a.upper() for a in ASSETS})
         self.assertAlmostEqual(float(rows[0]["return"]), 102 / 101.9 - 1)
         self.assertAlmostEqual(float(rows[0]["feature_00_intraday"]), 1 / 0.99 - 1)
         meta = read_json(str(panel) + ".manifest.json")
@@ -200,14 +202,14 @@ class HardeningTests(unittest.TestCase):
         self.assertEqual(receipt["status"], "COMPLETE")
         self.assertEqual(receipt["files"]["spy"]["sha256"], digest(paths["spy"]))
         with self.assertRaises(FileExistsError):
-            prepare(self.root / "input", out)
+            prepare(self.root / "input", out, expected_hashes=None)
 
     def test_intake_calendar_mismatch_is_retained_failure(self):
         for asset in ASSETS:
             self.prices(asset, 224 if asset == "slv" else 225)
         out = self.root / "failed"
         with self.assertRaisesRegex(ValueError, "calendar mismatch"):
-            prepare(self.root / "input", out)
+            prepare(self.root / "input", out, expected_hashes=None)
         self.assertEqual(read_json(out / "intake.json")["status"], "FAILED")
         self.assertFalse((out / "panel.csv").exists())
 
