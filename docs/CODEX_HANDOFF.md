@@ -985,6 +985,63 @@ download and independently verify the complete terminal output. The temporary
 token secret must never be printed or committed and should be revoked only
 after terminal evidence recovery no longer needs it.
 
+## 21 October 2026 — Version 8 terminal budget failure; output recovery active
+
+Kaggle now reports private Version 8 as `ERROR`. The retained historical-suite
+receipt records Fold 0 and Fold 1 complete. Fold 2 reports all 57 cell identities
+complete, so the combined inventory contains 171/171 `COMPLETE` entries, but the
+frozen campaign budget expired immediately before Fold 2 semantic verification.
+The overall suite therefore raised `declared benchmark family incomplete`, and
+the notebook-level `verify-suite` stage did not run. A complete cell inventory
+is not a passing suite and does not support a scientific or performance claim.
+Scientific status remains `NOT_EVALUATED`.
+
+Kaggle exposes 4,499 terminal output files. Exact output recovery is active into
+`research/frem_s14_kaggle_0_1_9_version8_20261021`; do not delete partial files,
+relaunch Version 8, increase the frozen ceiling, or infer results from the partial
+download. After all files are retained, independently verify every manifest,
+cell, law, ledger, fold comparison and cross-fold family. Preserve the terminal
+failure even if raw evidence later verifies. See `TERMINAL_STATUS.json`.
+
+Complete recovery subsequently retained all 4,499 remote files totaling
+1,432,242,492 bytes. Independent streaming integrity verification passed for
+every remote file, the frozen 0.1.9 release, all 18 payload members, 15 installed
+source modules and the generated qualification and historical-suite manifests.
+The retained stages show 107 warning-strict tests passed and 19/19 generated CUDA
+qualification arms complete with their in-run verifier passing. Those are
+engineering/qualification results only: the historical suite remains failed,
+despite reporting 171/171 `COMPLETE` cell records, because Fold 2 exhausted the
+frozen campaign budget before its semantic verification and notebook
+`verify-suite` never ran.
+
+Fresh local admission samples were 482.96875, 484.0 and 477.234375 MiB available
+with pageouts stable at 369449. The unchanged 512 MiB resource floor therefore
+blocked local numerical semantic verification before import or execution.
+Scientific status remains `NOT_EVALUATED`; the active heartbeat may quietly
+recheck admission but must not relaunch, repair, retune or inspect protected
+outcomes. See `INTEGRITY_VERIFICATION.json` and
+`LOCAL_SEMANTIC_VERIFICATION_ADMISSION.json` in the retained Version 8 evidence.
+
+At 15:04 UTC the unchanged local admission gate passed with 4,026.5,
+3,672.265625 and 3,541.015625 MiB available and stable pageouts. The exact
+retained 0.1.9 semantic verifier was then run without changing thresholds. It
+failed on Fold 0 `full-s11`: reconstructed `date_mean_nll` differed from the
+retained metric at the frozen `1e-10` tolerance. A bounded diagnostic checked
+114 Fold 0-1 cells: 90 had this mismatch, with maximum absolute delta
+`1.2320971132240288e-08`; all checked raw NLL vectors remained within their
+separately declared tolerance and the other reconstructed summary fields
+matched. Fold 2 failed earlier because preprocessing did not reconstruct
+exactly. An isolated environment with the retained NumPy and SciPy versions was
+prepared, but a fresh admission check fell to 103.453125, 108.53125 and
+111.21875 MiB with rising pageouts, so it was not run.
+
+This is recorded as a reproducibility/verification-validity defect, not a
+hypothesis result. Version 8 remains terminal failed, no tolerance was relaxed,
+no experiment was rerun, and scientific status remains `NOT_EVALUATED`. The
+Version 8 heartbeat is closed after this terminal evidence-backed conclusion.
+See `INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json`,
+`SEMANTIC_MISMATCH_DIAGNOSIS.json` and the Version 8 semantic-readback decision.
+
 
 ## 21 October 2026 — Version 6 qualified; historical source calendars incompatible
 

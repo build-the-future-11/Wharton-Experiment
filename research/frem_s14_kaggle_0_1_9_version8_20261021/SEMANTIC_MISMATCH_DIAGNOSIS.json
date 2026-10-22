@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T15:08:05Z",
+  "status": "REPRODUCIBILITY_DEFECT_CONFIRMED_CURRENT_RUNTIME_EXACT_RUNTIME_RECHECK_RESOURCE_BLOCKED",
+  "diagnostic": "diagnose_semantic_mismatch.py",
+  "cells_checked": 114,
+  "fold_setup_failures": [
+    {
+      "fold": 2,
+      "type": "ValueError",
+      "error": "preprocessing differs from training-only inputs"
+    }
+  ],
+  "nll_vectors_outside_declared_tolerance": 0,
+  "summary_differences": {
+    "date_mean_nll": {
+      "maximum_absolute_delta": 1.2320971132240288e-08,
+      "mismatches_at_declared_1e_10_tolerance": 90,
+      "first_mismatch": {
+        "fold": 0,
+        "cell": "full-s11",
+        "retained": -1.1945023983416985,
+        "reconstructed": -1.1945023941334532,
+        "absolute_delta": 4.2082453077796345e-09
+      }
+    },
+    "mae_maximum_absolute_delta": 0.0,
+    "brier_maximum_absolute_delta": 1.1102230246251565e-16,
+    "coverage90_maximum_absolute_delta": 0.0,
+    "rank_ic_maximum_absolute_delta": 0.0,
+    "defined_ic_dates_maximum_absolute_delta": 0.0,
+    "dates_maximum_absolute_delta": 0.0,
+    "rows_maximum_absolute_delta": 0.0
+  },
+  "interpretation": "The declared frozen verifier is not cross-runtime reproducible on the admitted local runtime. The evidence does not establish whether the Fold 2 preprocessing mismatch persists under the exact retained NumPy/SciPy versions because the follow-up resource gate failed.",
+  "exact_numpy_scipy_environment_prepared": "/private/tmp/frem-s14-readback-20261021",
+  "exact_environment_recheck_admission": "LOCAL_EXACT_ENVIRONMENT_RECHECK_ADMISSION_20261021T150805Z.json",
+  "threshold_changed": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T12:36:06Z",
+  "purpose": "Admission check before local numerical semantic verification of retained Version 8 historical-suite evidence",
+  "required_minimum_available_mib": 512.0,
+  "available_mib_samples": [
+    338.9375,
+    235.484375,
+    206.515625
+  ],
+  "pageouts_samples": [
+    370802,
+    370825,
+    370863
+  ],
+  "pageouts_non_rising": false,
+  "admitted": false,
+  "status": "BLOCKED_BELOW_512_MIB_AND_RISING_PAGEOUTS",
+  "action": "No numerical verifier was imported or run locally. Recheck the unchanged admission gate on a later heartbeat.",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

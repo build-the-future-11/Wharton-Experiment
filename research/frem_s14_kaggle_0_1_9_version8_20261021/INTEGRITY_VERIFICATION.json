@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "status": "PASS_INTEGRITY_ONLY",
+  "remote_output_files_verified": 4499,
+  "remote_output_bytes_verified": 1432242492,
+  "release_sha256": "19901b3584971f877c1d0c4f1a45f0933739cc9bd45aec1da16f1bf2b1fb6ac1",
+  "payload_members_verified": 18,
+  "installed_sources_verified": 15,
+  "manifests_verified": [
+    "historical_suite/fold0/manifest.json",
+    "historical_suite/fold1/manifest.json",
+    "historical_suite/fold2/manifest.json",
+    "historical_suite/manifest.json",
+    "qualification/manifest.json"
+  ],
+  "stages": {
+    "preflight": {
+      "returncode": 0,
+      "wall_seconds": 3.1338451439999915,
+      "command": [
+        "-m",
+        "frem_s14",
+        "preflight",
+        "--output",
+        "/kaggle/working/frem-s14-20261021T101522Z/host-admission.json"
+      ]
+    },
+    "tests": {
+      "returncode": 0,
+      "wall_seconds": 32.45562266000002,
+      "command": [
+        "-m",
+        "pytest",
+        "/kaggle/working/frem-s14-20261021T101522Z/payload/tests",
+        "-W",
+        "error",
+        "-q"
+      ]
+    },
+    "qualify": {
+      "returncode": 0,
+      "wall_seconds": 32.213256143999985,
+      "command": [
+        "-W",
+        "error",
+        "-m",
+        "frem_s14",
+        "qualify",
+        "--device",
+        "cuda",
+        "--output",
+        "/kaggle/working/frem-s14-20261021T101522Z/qualification"
+      ]
+    },
+    "verify_qualification": {
+      "returncode": 0,
+      "wall_seconds": 5.0309061909999855,
+      "command": [
+        "-m",
+        "frem_s14",
+        "verify",
+        "--bundle",
+        "/kaggle/working/frem-s14-20261021T101522Z/qualification"
+      ]
+    },
+    "intake": {
+      "returncode": 0,
+      "wall_seconds": 8.140097442000013,
+      "command": [
+        "-m",
+        "frem_s14.intake",
+        "--source",
+        "/kaggle/input",
+        "--output",
+        "/kaggle/working/frem-s14-20261021T101522Z/intake"
+      ]
+    },
+    "historical_suite": {
+      "returncode": 1,
+      "wall_seconds": 5777.014230738,
+      "command": [
+        "-W",
+        "error",
+        "-m",
+        "frem_s14.suite",
+        "--data",
+        "/kaggle/working/frem-s14-20261021T101522Z/intake/panel.csv",
+        "--qualification",
+        "/kaggle/working/frem-s14-20261021T101522Z/qualification",
+        "--output",
+        "/kaggle/working/frem-s14-20261021T101522Z/historical_suite",
+        "--device",
+        "cuda"
+      ]
+    }
+  },
+  "warning_strict_tests_passed": 107,
+  "qualification_cells_reported_complete": 19,
+  "historical_cells_reported_complete": 171,
+  "historical_cells_by_fold": {
+    "0": 57,
+    "1": 57,
+    "2": 57
+  },
+  "historical_semantics_independently_verified": 0,
+  "suite_status": "FAILED",
+  "failure_stage": "fold2_post_cell_semantic_verification_budget_gate",
+  "verify_suite_ran": false,
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "claim": "Integrity and stage-shape verification only; COMPLETE cell inventories are not a passing semantic verification or scientific result."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T13:17:50.908593+00:00",
+  "purpose": "Fresh exact-source admission check requested before obtaining a scientific result from retained Version 8 evidence",
+  "command": "PYTHONPATH=retained Version 8 installed source python3 -S -B -m frem_s14 preflight",
+  "minimum_available_mib": 512.0,
+  "samples": [
+    {"available_mib": 310.46875, "pageouts": 397249},
+    {"available_mib": 351.828125, "pageouts": 397320},
+    {"available_mib": 275.515625, "pageouts": 397353}
+  ],
+  "admitted": false,
+  "status": "BLOCKED_BELOW_512_MIB_AND_RISING_PAGEOUTS",
+  "action": "No numerical semantic verifier or outcome artifact was imported or run.",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

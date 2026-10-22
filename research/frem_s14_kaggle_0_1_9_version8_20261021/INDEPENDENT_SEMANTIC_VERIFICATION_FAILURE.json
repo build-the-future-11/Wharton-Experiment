@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T15:08:05Z",
+  "status": "FAILED",
+  "admission": "LOCAL_SEMANTIC_VERIFICATION_ADMISSION_20261021T150410Z.json",
+  "verifier": "verify_retained_semantics.py",
+  "retained_source": "frem-s14-20261021T101522Z/installed",
+  "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
+  "local_runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "torch": "2.14.1"
+  },
+  "retained_runtime": {
+    "python": "3.13.15",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "torch": "2.11.0+cu128",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39"
+  },
+  "failure": {
+    "type": "ValueError",
+    "error": "summary differs: date_mean_nll",
+    "first_observed_fold": 0,
+    "first_observed_cell": "full-s11"
+  },
+  "diagnosis": "SEMANTIC_MISMATCH_DIAGNOSIS.json",
+  "historical_cells_fully_semantically_verified": 0,
+  "suite_completion_status": "FAILED",
+  "suite_failure_preserved": true,
+  "fold2_failure_preserved": true,
+  "notebook_verify_suite_ran": false,
+  "threshold_changed": false,
+  "rerun_performed": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "claim_boundary": "Independent semantic verification did not pass. Integrity verification and generated qualification remain valid engineering evidence, but no historical scientific or performance conclusion is admitted."
+}

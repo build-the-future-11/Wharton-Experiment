@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-21",
+  "iteration": "FREM-S14",
+  "decision": "Close Version 8 as a preserved terminal failed execution with independent semantic readback failure; admit no historical scientific or performance conclusion and do not silently relax tolerances, repair, or rerun it.",
+  "observation": "After an admitted local resource check, the exact retained 0.1.9 verifier failed on Fold 0 full-s11 because reconstructed date_mean_nll differed from the retained metric at the frozen 1e-10 tolerance. A bounded diagnostic found 90 such mismatches among 114 cells in Folds 0-1, with maximum absolute delta 1.2320971132240288e-08; all checked NLL vectors remained within their separately declared tolerance. Fold 2 failed even earlier because retained preprocessing did not reconstruct exactly. An exact NumPy/SciPy-version environment was prepared, but its recheck was not admitted because memory fell below 512 MiB and pageouts rose.",
+  "scientific_meaning": "This is a reproducibility and verification-validity defect, not evidence for or against the hypothesis. The original Kaggle suite remains FAILED from the Fold 2 frozen-budget exhaustion, and notebook verify-suite remains absent. The 4,499-file integrity pass and 19-arm generated qualification remain engineering evidence only.",
+  "preservation": [
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/TERMINAL_STATUS.json",
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/INTEGRITY_VERIFICATION.json",
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json",
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/SEMANTIC_MISMATCH_DIAGNOSIS.json"
+  ],
+  "future_boundary": "Any correction must be separately versioned and frozen before execution, must resolve cross-runtime preprocessing and summary reconstruction without changing the scientific threshold after seeing outcomes, and must preserve Version 8 unchanged.",
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

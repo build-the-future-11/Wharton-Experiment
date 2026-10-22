@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T15:04:10Z",
+  "purpose": "Admission check immediately before independent local numerical semantic verification of retained Version 8 historical-suite evidence",
+  "required_minimum_available_mib": 512.0,
+  "available_mib_samples": [
+    4026.5,
+    3672.265625,
+    3541.015625
+  ],
+  "pageouts_samples": [
+    441926,
+    441926,
+    441926
+  ],
+  "pageouts_non_rising": true,
+  "admitted": true,
+  "status": "ADMITTED",
+  "scientific_status_before_verification": "NOT_EVALUATED",
+  "protected_access": false
+}

@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "checked_at_utc": "2026-10-21T10:15:46Z",
+  "checked_at_utc": "2026-10-21T15:08:05Z",
   "platform": "Kaggle",
   "kernel_ref": "ryangomez010/frem-s14-gpu-benchmark-20261019",
   "kernel_id": 139546196,
   "version_number": 8,
-  "status_at_check": "RUNNING",
+  "status_at_check": "ERROR",
   "is_frozen": true,
   "package_version": "0.1.9",
   "local_notebook_sha256": "ad6db2053c789aebe38a9cdc3bafb51f5bb5a5b3e9ccad8a46dfcdb725b05292",
@@ -24,6 +24,10 @@
       "borismarjanovic/price-volume-data-for-all-us-stocks-etfs"
     ]
   },
-  "scientific_status": "RUNNING_NOT_EVALUATED",
+  "scientific_status": "TERMINAL_ERROR_INDEPENDENT_SEMANTIC_VERIFICATION_FAILED",
+  "terminal_evidence": "research/frem_s14_kaggle_0_1_9_version8_20261021",
+  "integrity_verification": "research/frem_s14_kaggle_0_1_9_version8_20261021/INTEGRITY_VERIFICATION.json",
+  "independent_semantic_verification": "research/frem_s14_kaggle_0_1_9_version8_20261021/INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json",
+  "local_semantic_verification_admission": "research/frem_s14_kaggle_0_1_9_version8_20261021/LOCAL_SEMANTIC_VERIFICATION_ADMISSION.json",
   "protected_access": false
 }

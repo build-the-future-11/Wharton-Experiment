@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-21T15:08:05Z",
+  "kernel_ref": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+  "version_number": 8,
+  "package_version": "0.1.9",
+  "kaggle_status": "ERROR",
+  "run_directory": "frem-s14-20261021T101522Z",
+  "historical_suite_returncode": 1,
+  "historical_suite_wall_seconds": 5777.014230738,
+  "suite_failure": "declared benchmark family incomplete; failures retained",
+  "folds": [
+    {
+      "fold": 0,
+      "status": "COMPLETE"
+    },
+    {
+      "fold": 1,
+      "status": "COMPLETE"
+    },
+    {
+      "fold": 2,
+      "status": "FAILED",
+      "error": "declared campaign wall-clock budget exhausted"
+    }
+  ],
+  "cell_inventory": {
+    "declared": 171,
+    "reported_complete": 171,
+    "independently_verified": 0
+  },
+  "failure_stage": "fold2_post_cell_semantic_verification_budget_gate",
+  "verify_suite_ran": false,
+  "remote_output_files": 4499,
+  "local_files_at_initial_terminal_check": 338,
+  "output_recovery": "COMPLETE",
+  "output_files_retained": 4499,
+  "output_bytes_retained": 1432242492,
+  "integrity_verification": "INTEGRITY_VERIFICATION.json",
+  "integrity_status": "PASS_INTEGRITY_ONLY",
+  "local_semantic_verification_admission": "LOCAL_SEMANTIC_VERIFICATION_ADMISSION.json",
+  "admitted_semantic_verification": "LOCAL_SEMANTIC_VERIFICATION_ADMISSION_20261021T150410Z.json",
+  "local_semantic_verification": "INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json",
+  "local_semantic_verification_status": "FAILED_REPRODUCIBILITY_DEFECT",
+  "semantic_mismatch_diagnosis": "SEMANTIC_MISMATCH_DIAGNOSIS.json",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "claim_boundary": "Reported COMPLETE cell inventory and integrity-only verification are not a passing suite. No scientific or performance conclusion is admitted until every retained historical semantic, fold comparison and cross-fold family is independently verified."
+}

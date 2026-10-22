@@ -1,15 +1,15 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.1.9-s14-calendar-successor-kaggle-version8-running",
+  "version": "0.1.9-s14-calendar-successor-kaggle-version8-semantic-readback-failed",
   "created": "2026-10-10",
-  "updated": "2026-10-21T10:58:35.803174+00:00",
+  "updated": "2026-10-21T15:08:05+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
   },
-  "phase": "s14_0_1_9_kaggle_version8_running",
+  "phase": "s14_0_1_9_kaggle_version8_terminal_semantic_readback_failed",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -1946,9 +1946,9 @@
     "next_action": "Run exact notebook and ZIP on an admitted compatible CUDA target; preserve and independently verify generated results before supplying any market dataset."
   },
   "frem_s14": {
-    "timestamp": "2026-10-21T10:15:46+00:00",
+    "timestamp": "2026-10-21T15:08:05+00:00",
     "iteration": "FREM-S14",
-    "status": "GPU_0_1_9_VERSION8_RUNNING_NOT_EVALUATED",
+    "status": "GPU_0_1_9_VERSION8_TERMINAL_ERROR_INDEPENDENT_SEMANTIC_VERIFICATION_FAILED",
     "scientific_status": "NOT_EVALUATED",
     "decisions": [
       "research/decisions/frem_s14_kaggle_mount_failure_20261020.json",
@@ -1959,7 +1959,8 @@
       "research/decisions/frem_s14_version5_fixture_repair_20261021.json",
       "research/decisions/frem_s14_fixture_release_0_1_8_20261021.json",
       "research/decisions/frem_s14_0_1_9_calendar_cohort_successor_20261021.json",
-      "research/decisions/frem_s14_version6_calendar_failure_20261021.json"
+      "research/decisions/frem_s14_version6_calendar_failure_20261021.json",
+      "research/decisions/frem_s14_version8_semantic_readback_failure_20261021.json"
     ],
     "current_candidate": {
       "package_version": "0.1.9",
@@ -1979,7 +1980,8 @@
       "release_record": "successors/frem_s14/dist/RELEASE-0.1.9.json",
       "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_1_9.ipynb",
       "uploaded": true,
-      "numerical_qualified": false,
+      "numerical_qualified": true,
+      "generated_numerical_qualification_verified": true,
       "market_started": false,
       "declared_target_tests": 107,
       "local_source_stdlib_tests": 59,
@@ -1988,7 +1990,7 @@
       "pending_test_payload_change": false,
       "identity_check": "research/frem_s14_calendar_successor_20261021/RELEASE_VERIFICATION.json",
       "saved_identity": "research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json",
-      "note": "Separately versioned seven-ETF calendar-compatible successor is independently release-verified and queued as private Kaggle Version 8. Model, folds, controls, seeds, threshold, bootstrap, denominator and ceilings are unchanged."
+      "note": "Separately versioned seven-ETF calendar-compatible successor is independently release-verified. Private Kaggle Version 8 passed all 107 warning-strict tests and its 19-arm generated CUDA qualification, but the historical suite failed at the Fold 2 post-cell semantic-verification budget gate. This generated qualification does not qualify or validate the failed historical suite."
     },
     "trace_candidate": {
       "timestamp": "2026-10-20T00:00:00+00:00",
@@ -2131,18 +2133,18 @@
       "scientific_use": false,
       "protected_access": false
     },
-    "blocker": "Kaggle Version 8 is running on the saved T4 target. Scientific status remains NOT_EVALUATED until terminal output is downloaded and independently verified.",
+    "blocker": "Kaggle Version 8 is terminal ERROR. All 4,499 remote files are retained and integrity-verified, but an admitted independent semantic readback failed: 90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly. The original Fold 2 frozen-budget failure and absent notebook verify-suite remain preserved. Scientific status is NOT_EVALUATED.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
       "id": "finish-frem-s14-version-8",
       "kind": "heartbeat",
       "name": "Finish FREM S14 Version 8",
-      "status": "ACTIVE",
+      "status": "INACTIVE_TERMINAL_VERIFICATION_FAILURE",
       "rrule": "FREQ=MINUTELY;INTERVAL=15",
       "interval_minutes": 15,
       "guard": "Monitor only exact private Version 8. Do not push, relaunch, duplicate, retune, alter the seven-ETF cohort or interfere with unrelated runs.",
-      "reason": "Version 8 is queued behind unrelated account GPU work; resume only on meaningful status change and independently verify the complete terminal output."
+      "reason": "Independent semantic verification reached a terminal evidence-backed failure and a scientific decision was recorded. Version 8 remains preserved; no relaunch or silent repair is authorized."
     },
     "expected_historical_cells": 171,
     "completed_historical_cells": 0,
@@ -2152,16 +2154,14 @@
     "launch_receipt_preserved": "research/frem_s14_20261019/LAUNCH_RECEIPT.json",
     "checklist": "successors/frem_s14/CHECKLIST.md",
     "remaining": [
-      "Wait for the single exact Version 8 run to reach a terminal state without relaunching it.",
-      "Download and hash-verify the complete Version 8 output archive.",
-      "Verify all 107 tests, all 19 generated qualification arms and the unchanged fixed 171-cell historical proxy denominator.",
-      "Independently reconstruct every retained scientific result and failure before changing any claim.",
-      "Only then select, freeze, implement and test a bounded result-driven successor against matched simple baselines, preserving all old results."
+      "Preserve Version 8 unchanged as a terminal suite failure and independent semantic readback failure.",
+      "Do not interpret retained historical metrics or choose a result-driven repair while the declared verifier does not reproduce them.",
+      "If future work is explicitly authorized, define and freeze a separately versioned successor that resolves cross-runtime preprocessing and summary reconstruction before execution."
     ],
     "claim_boundary": "Engineering passes do not establish predictive improvement or tradable profitability; no zero-defect guarantee.",
     "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
     "specification": "successors/frem_s14/SPECIFICATION.md",
-    "candidate_preparation": "KAGGLE_VERSION8_QUEUED_EXACT_SAVED_SOURCE_VERIFIED",
+    "candidate_preparation": "KAGGLE_VERSION8_TERMINAL_FAILED_PRESERVED",
     "hardening_record": "research/frem_s14_readback_20261019",
     "audit": "research/frem_s14_readback_20261019/AUDIT.md",
     "prior_candidate_receipt": "research/frem_s14_readback_20261019/RECEIPT.json",
@@ -2169,7 +2169,7 @@
       "timestamp": "2026-10-21T10:02:54Z",
       "kernel_id": 139546196,
       "version_number": 8,
-      "status": "RUNNING_NOT_EVALUATED",
+      "status": "TERMINAL_ERROR_INDEPENDENT_SEMANTIC_VERIFICATION_FAILED",
       "url": "https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019",
       "package_version": "0.1.9",
       "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
@@ -2186,22 +2186,38 @@
       "expected_generated_arms": 19,
       "expected_historical_cells": 171,
       "notebook_seconds_ceiling": 13500,
-      "tests_passed": 0,
-      "historical_cells_completed": 0,
+      "tests_passed": 107,
+      "historical_cells_completed": 171,
+      "historical_cells_independently_verified": 0,
+      "historical_cells_diagnostic_checked": 114,
       "protected_access": false,
-      "last_verified_status": "RUNNING",
-      "last_verified_check_utc": "2026-10-21T10:15:46+00:00",
+      "last_verified_status": "ERROR",
+      "last_verified_check_utc": "2026-10-21T12:30:05+00:00",
       "receipt": "research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json",
       "tests_failed": 0,
-      "actual_tests_collected": 0,
+      "actual_tests_collected": 107,
       "tests_skipped": 0,
-      "generated_arms_completed": 0,
-      "actual_historical_cells_completed": 0,
+      "generated_arms_completed": 19,
+      "qualification_verification_passed": true,
+      "actual_historical_cells_completed": 171,
       "market_intake_started": false,
-      "failure_stage": null,
-      "failure": null,
-      "observed_run_seconds": null,
-      "archive_readback": "PENDING_TERMINAL_RUN"
+      "failure_stage": "fold2_post_cell_semantic_verification_budget_gate",
+      "failure": "TimeoutError: declared campaign wall-clock budget exhausted after the Fold 2 cell inventory recorded 57/57 COMPLETE; overall three-fold suite failed and verify-suite did not run.",
+      "observed_run_seconds": 5777.014230738,
+      "archive_readback": "COMPLETE_INTEGRITY_VERIFIED",
+      "output_files_retained": 4499,
+      "output_bytes_retained": 1432242492,
+      "integrity_verification": "research/frem_s14_kaggle_0_1_9_version8_20261021/INTEGRITY_VERIFICATION.json",
+      "integrity_status": "PASS_INTEGRITY_ONLY",
+      "local_semantic_verification_admission": "research/frem_s14_kaggle_0_1_9_version8_20261021/LOCAL_SEMANTIC_VERIFICATION_ADMISSION.json",
+      "local_semantic_verification_status": "FAILED_REPRODUCIBILITY_DEFECT",
+      "local_semantic_admission_checked_at_utc": "2026-10-21T15:04:10+00:00",
+      "independent_semantic_verification": "research/frem_s14_kaggle_0_1_9_version8_20261021/INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json",
+      "semantic_mismatch_diagnosis": "research/frem_s14_kaggle_0_1_9_version8_20261021/SEMANTIC_MISMATCH_DIAGNOSIS.json",
+      "semantic_verifier_passed": false,
+      "terminal_evidence": "research/frem_s14_kaggle_0_1_9_version8_20261021",
+      "last_verified_at_utc": "2026-10-21T12:30:05+00:00",
+      "latest_readback_receipt": "research/frem_s14_version8_verification_20261021T113801Z/VERIFICATION_STATUS.json"
     },
     "prior_intake_failed_gpu_run": {
       "timestamp": "2026-10-20T17:42:43Z",
@@ -2395,5 +2411,18 @@
     "successor_status": "AWAITING_VERIFIED_S14_RESULTS",
     "new_historical_cells": 0,
     "protected_access": false
+  },
+  "publication": {
+    "timestamp": "2026-10-21T11:38:23.399949+00:00",
+    "commit": "c3c43c051abdef217bcc5f54dea8d86257504975",
+    "repository": "https://github.com/build-the-future-11/Wharton-Experiment",
+    "repository_is_public": true,
+    "branch": "codex/frem-research-execution-20261020",
+    "status": "PUBLISHED_REMOTE_SHA_VERIFIED",
+    "push_performed": true,
+    "user_authorization": "Explicit approval to publish commit with code, public market data, logs and research outputs",
+    "prior_rejection_receipt": "research/frem_s14_kaggle_0_1_8_20261021/PUBLICATION_STATUS.json",
+    "remote_commit": "c3c43c051abdef217bcc5f54dea8d86257504975",
+    "remote_commit_equal": true
   }
 }
