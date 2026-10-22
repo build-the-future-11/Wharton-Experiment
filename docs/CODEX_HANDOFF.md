@@ -1059,6 +1059,14 @@ inputs or produced any model result. See
 the exact hash-bound candidate and retain every outcome; do not declare a
 positive result unless the fixed runtime and independent verifiers pass.
 
+The release source was then pushed to the configured GitHub branch. Kaggle launch
+is currently blocked by authentication: the available browser session was signed
+out, Google SSO offered a different new `RyanGomez` account registration rather
+than the existing private `ryangomez010` owner, and that registration was
+canceled. The private FREM URL renders Kaggle's not-found page while signed out.
+No account was created, no upload occurred and no run was launched. See
+`research/frem_s14_semantic_successor_20261022/KAGGLE_ACCESS_BLOCKER.json`.
+
 
 ## 21 October 2026 — Version 6 qualified; historical source calendars incompatible
 

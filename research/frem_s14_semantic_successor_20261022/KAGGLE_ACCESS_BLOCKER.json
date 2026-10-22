@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-22T03:34:17Z",
+  "attempted_action": "Launch the exact private FREM-S14 0.2.0 Kaggle notebook after the hash-bound source commit was pushed.",
+  "observations": [
+    "The available Kaggle browser session was signed out.",
+    "Normal Google SSO opened a Complete registration flow for profile URL kaggle.com/RyanGomez, rather than the existing private owner ryangomez010.",
+    "The new-account registration was canceled without continuing.",
+    "The existing private notebook URL https://www.kaggle.com/code/ryangomez010/frem-s14-gpu-benchmark-20261019 rendered Kaggle's not-found page while signed out."
+  ],
+  "no_external_mutation": {
+    "new_account_created": false,
+    "notebook_uploaded": false,
+    "kaggle_run_launched": false,
+    "protected_access": false
+  },
+  "blocker": "An authenticated session for the existing ryangomez010 Kaggle account is required. Do not create a new RyanGomez account or submit the release to a different account.",
+  "candidate": {
+    "package_version": "0.2.0",
+    "source_identity": "f7feb800695935b574f40703c544cb4c071bfec8bdb9a77722ef001e147274cb",
+    "archive_sha256": "95ea50e52504bf1652f565574e34ad8f91e47b392bda9d00d79999375d011d0d"
+  }
+}

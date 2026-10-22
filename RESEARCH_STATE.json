@@ -1,15 +1,15 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.2.0-s14-semantic-reproducibility-successor-kaggle-pending",
+  "version": "0.2.0-s14-semantic-reproducibility-successor-kaggle-access-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-22T03:34:00+00:00",
+  "updated": "2026-10-22T03:34:17+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
   },
-  "phase": "s14_0_2_0_semantic_reproducibility_successor_static_verified_kaggle_pending",
+  "phase": "s14_0_2_0_semantic_reproducibility_successor_static_verified_kaggle_access_blocked",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -2015,9 +2015,11 @@
       ],
       "unchanged_contract": "seven-ETF cohort, data hashes, 19 arms, seeds, folds, threshold, bootstrap family, private Internet-off T4 contract and no-imputation rule",
       "release_verification": "research/frem_s14_semantic_successor_20261022/RELEASE_VERIFICATION.json",
+      "kaggle_access_blocker": "research/frem_s14_semantic_successor_20261022/KAGGLE_ACCESS_BLOCKER.json",
       "decision": "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json",
       "plan": "research/frem_s14_semantic_successor_20261022/PLAN.md",
       "uploaded": false,
+      "launch_status": "BLOCKED_EXISTING_PRIVATE_KAGGLE_ACCOUNT_UNAUTHENTICATED",
       "runtime_qualified": false,
       "historical_cells_completed": 0,
       "protected_access": false,
@@ -2164,7 +2166,7 @@
       "scientific_use": false,
       "protected_access": false
     },
-    "blocker": "Kaggle Version 8 is terminal ERROR and remains preserved: all 4,499 remote files are retained and integrity-verified, but independent semantic readback failed (90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly). The 0.2.0 successor is statically release-verified but must still pass target warning-strict tests, all 19 qualification arms, target and independent semantic verification before any historical metric may be interpreted. Scientific status is NOT_EVALUATED.",
+    "blocker": "Kaggle Version 8 is terminal ERROR and remains preserved: all 4,499 remote files are retained and integrity-verified, but independent semantic readback failed (90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly). The 0.2.0 successor is statically release-verified but launch is blocked because the available browser is unauthenticated for existing private owner ryangomez010; Google SSO offered a different new-account registration, which was canceled. Once existing-account access is restored, 0.2.0 must still pass target warning-strict tests, all 19 qualification arms, target and independent semantic verification before any historical metric may be interpreted. Scientific status is NOT_EVALUATED.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
