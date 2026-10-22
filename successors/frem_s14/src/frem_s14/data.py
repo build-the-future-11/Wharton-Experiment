@@ -1,12 +1,39 @@
 """Timestamp-audited balanced panels; training-only scaling and purged splits."""
 
 import csv
+import math
 from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
 
 from .runtime import digest, read_json, timestamp, validate_forecast_clock
+
+
+def _canonical_median(values):
+    """Return a runtime-independent finite median over scalar input values.
+
+    This is deliberately used only for the frozen train-only scaling statistics.
+    NumPy's reduction implementation is permitted to vary across supported
+    releases; a sorted Python-float reduction gives the saved scaler an exact,
+    independently reconstructible definition.
+    """
+    ordered = sorted(float(value) for value in np.asarray(values).reshape(-1))
+    if not ordered or not all(math.isfinite(value) for value in ordered):
+        raise ValueError("canonical median requires finite nonempty values")
+    midpoint = len(ordered) // 2
+    if len(ordered) % 2:
+        return ordered[midpoint]
+    return (ordered[midpoint - 1] + ordered[midpoint]) / 2.0
+
+
+def _canonical_std(values):
+    """Population standard deviation with an explicit scalar reduction order."""
+    vector = [float(value) for value in np.asarray(values).reshape(-1)]
+    if not vector or not all(math.isfinite(value) for value in vector):
+        raise ValueError("canonical standard deviation requires finite nonempty values")
+    mean = math.fsum(vector) / len(vector)
+    return math.sqrt(math.fsum((value - mean) ** 2 for value in vector) / len(vector))
 
 
 @dataclass
@@ -197,10 +224,19 @@ class Samples:
         # Only feature rows used as training contexts fit the scaler, never the future block.
         last = int(self.origin[self.train].max())
         prefix = panel.features[: last + 1].reshape(-1, panel.features.shape[-1])
-        self.center = np.median(prefix, axis=0)
-        mad = np.median(np.abs(prefix - self.center), axis=0) * 1.4826
+        self.center = np.array(
+            [_canonical_median(prefix[:, column]) for column in range(prefix.shape[1])],
+            dtype=np.float64,
+        )
+        mad = np.array(
+            [
+                _canonical_median(np.abs(prefix[:, column] - self.center[column])) * 1.4826
+                for column in range(prefix.shape[1])
+            ],
+            dtype=np.float64,
+        )
         self.scale = np.where(mad > 1e-8, mad, 1.0)
-        self.target_scale = max(float(np.std(self.y[self.train])), 1e-4)
+        self.target_scale = max(_canonical_std(self.y[self.train]), 1e-4)
         self.x = np.clip((panel.features - self.center) / self.scale, -20, 20).astype(np.float32)
 
     def batch(self, ix, future=False):

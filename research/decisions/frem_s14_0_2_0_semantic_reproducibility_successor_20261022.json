@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22",
+  "iteration": "FREM-S14",
+  "decision": "Create separately versioned 0.2.0 historical-proxy successor after Version 8 failed independent semantic verification.",
+  "cause": "Version 8 retained complete artifacts but 90 of 114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll reconstruction tolerance across runtimes, and Fold 2 preprocessing did not reconstruct exactly.",
+  "repairs": [
+    "Persist target-runtime NLL, Brier and coverage score vectors and use explicit ordered scalar reductions for saved reports and date-level inference.",
+    "Use explicit sorted scalar train-only median/MAD and fsum standard-deviation reductions for preprocessing.",
+    "Give each new fold 4000 seconds for fitting plus mandatory in-run semantic verification while retaining the 13500-second notebook-wide limit."
+  ],
+  "unchanged_scientific_contract": [
+    "seven-ETF source-calendar cohort and hashes",
+    "19 arms, seeds 11/29/47, folds, horizons, threshold and bootstrap family",
+    "private Internet-off Kaggle T4 execution and no protected access",
+    "no imputation, row deletion or outcome-driven cohort replacement"
+  ],
+  "pre_execution_gates": [
+    "new source/release/notebook hashes must be recorded",
+    "warning-strict target tests and 19-arm generated qualification must pass",
+    "target and independent semantic verification must pass before historical metrics are interpreted"
+  ],
+  "previous_evidence_preserved": [
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json",
+    "research/frem_s14_kaggle_0_1_9_version8_20261021/SEMANTIC_MISMATCH_DIAGNOSIS.json"
+  ],
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_STATIC_RELEASE_VERIFICATION",
+  "release": {
+    "package_version": "0.2.0",
+    "source_identity": "f7feb800695935b574f40703c544cb4c071bfec8bdb9a77722ef001e147274cb",
+    "archive": "frem_s14_kaggle_bundle-0.2.0.zip",
+    "archive_sha256": "95ea50e52504bf1652f565574e34ad8f91e47b392bda9d00d79999375d011d0d",
+    "wheel": "frem_s14-0.2.0-py3-none-any.whl",
+    "wheel_sha256": "5bf2054f66316a67320e88e8df3db872e1565b11ba7e48c2dc0433a6eafcfa1e",
+    "notebook_sha256": "bd95672cf20a99516c7c377858b953f80bfa2f2128e8f406fb9f283f038037aa",
+    "members": 18,
+    "runtime_qualified": false,
+    "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+  },
+  "wheel_modules_verified": 15,
+  "payload_hashes_verified": 17,
+  "embedded_release_equal": true,
+  "notebook_syntax_verified": true,
+  "private_gpu_internet_off": true,
+  "runtime_qualified": false,
+  "numeric_or_gpu_tests": "NOT_RUN_LOCAL_RESOURCE_GATE",
+  "historical_model_cells_completed": 0,
+  "protected_access": false
+}

@@ -1,5 +1,7 @@
 """Independent likelihood reconstruction, date-cluster inference, self-financing ledgers."""
 
+import math
+
 import numpy as np
 from scipy.special import logsumexp
 from scipy.stats import rankdata, t
@@ -35,25 +37,63 @@ def score_law(raw, y, df):
     }
 
 
-def summary(raw, y, times, df):
-    scores = score_law(raw, y, df)
+def canonical_mean(values):
+    """A scalar mean with a fixed Python-float accumulation contract."""
+    vector = [float(value) for value in np.asarray(values).reshape(-1)]
+    if not vector or not all(math.isfinite(value) for value in vector):
+        raise ValueError("canonical mean requires finite nonempty values")
+    return math.fsum(vector) / len(vector)
+
+
+def date_nll(nll, times):
+    """Aggregate a retained score vector by its ordered decision-date clusters."""
+    nll, times = np.asarray(nll), np.asarray(times)
+    if nll.ndim != 1 or times.ndim != 1 or nll.shape != times.shape:
+        raise ValueError("date score vector and timestamps must be aligned")
+    dates = np.unique(times)
+    return np.array([canonical_mean(nll[times == date]) for date in dates], dtype=np.float64)
+
+
+def summary_from_scores(raw, y, times, scores):
+    """Build metrics from a saved, independently checked target-runtime score vector."""
+    required = {"nll", "brier", "coverage90"}
+    if set(scores) != required:
+        raise ValueError("saved score artifact has an unexpected schema")
+    nll = np.asarray(scores["nll"], dtype=np.float64)
+    brier = np.asarray(scores["brier"], dtype=np.float64)
+    coverage = np.asarray(scores["coverage90"])
+    if (
+        any(value.shape != np.asarray(y).shape for value in (nll, brier, coverage))
+        or not np.isfinite(nll).all()
+        or not np.isfinite(brier).all()
+        or coverage.dtype != np.bool_
+    ):
+        raise ValueError("saved score artifact contains invalid vectors")
     date_nll, ics = [], []
     for date in np.unique(times):
         ix = times == date
-        date_nll.append(scores["nll"][ix].mean())
+        date_nll.append(canonical_mean(nll[ix]))
         a, b = rankdata(raw["mean"][ix]), rankdata(y[ix])
         if np.std(a) > 0 and np.std(b) > 0:
             ics.append(float(np.corrcoef(a, b)[0, 1]))
     return {
-        "date_mean_nll": float(np.mean(date_nll)),
-        "mae": float(np.mean(abs(y - raw["mean"]))),
-        "brier": float(scores["brier"].mean()),
-        "coverage90": float(scores["coverage90"].mean()),
-        "rank_ic": float(np.mean(ics)) if ics else None,
+        "date_mean_nll": canonical_mean(date_nll),
+        "mae": canonical_mean(abs(np.asarray(y) - raw["mean"])),
+        "brier": canonical_mean(brier),
+        "coverage90": canonical_mean(coverage.astype(np.float64)),
+        "rank_ic": canonical_mean(ics) if ics else None,
         "defined_ic_dates": len(ics),
         "dates": len(date_nll),
         "rows": len(y),
     }
+
+
+def summary(raw, y, times, df):
+    """Convenience scorer for ephemeral callers; persisted runs use score artifacts."""
+    scores = score_law(raw, y, df)
+    return summary_from_scores(
+        raw, y, times, {key: scores[key] for key in ("nll", "brier", "coverage90")}
+    )
 
 
 def paired_bootstrap(difference, block, repetitions, seed=1901):

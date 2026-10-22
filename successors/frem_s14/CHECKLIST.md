@@ -148,14 +148,30 @@ fitting. The broader research/paper completion request is not yet fulfilled.
 ### Current frontier reconciled across research chats
 
 The original eight-ETF Version 6 failure above is historical. The separate
-research execution chat has already frozen and launched seven-ETF package 0.1.9
-as private Kaggle Version 8. Its saved-source identity is recorded in
-`research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json`. QQQ is excluded
-prospectively on source-calendar grounds; retained histories are not intersected
-or filled. This narrows the population and is a new study, not a successful
-completion of the original eight-ETF matrix. The latest execution-owner check at
-10:53 UTC reports RUNNING. No historical results are yet independently verified.
-The existing `finish-frem-s14-version-8` monitor owns terminal output collection.
-Do not launch another run or change its frozen code, cohort, threshold or budget.
-Version 6 evidence and token revocation in this chat are complete. The broader
-baseline comparison and final research release remain pending Version 8 evidence.
+seven-ETF 0.1.9 study (private Kaggle Version 8) is also historical and terminal:
+its archived output was integrity-verified, but independent semantic readback
+failed. Its saved-source identity is recorded in
+`research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json`; the failure
+decision is `research/decisions/frem_s14_version8_semantic_readback_failure_20261021.json`.
+QQQ was excluded prospectively on source-calendar grounds; retained histories
+were not intersected or filled. No Version 8 historical metric is valid evidence.
+Do not relaunch or alter Version 8. The 0.2.0 successor below is a separate
+prospective candidate; baseline comparison and final research release remain
+pending its independently verified evidence.
+
+## 0.2.0 semantic-reproducibility successor
+
+- [x] Preserve Version 8 as an invalid execution rather than relaxing its
+  numeric tolerance or inferring a performance result from retained metrics.
+- [x] Freeze a new score-artifact contract: persisted target-runtime NLL, Brier
+  and coverage vectors feed ordered scalar aggregation, while an independent
+  scorer still validates every score vector within its declared law tolerance.
+- [x] Replace NumPy-dependent train-only scaler reductions with deterministic
+  sorted scalar medians and `math.fsum` standard deviation.
+- [x] Reserve a 4000-second per-fold ceiling for in-run semantic readback under
+  the unchanged notebook-wide 13500-second cap.
+- [x] Build and hash-bind the new 0.2.0 release and private Kaggle notebook.
+- [ ] Pass target warning-strict tests, 19 generated qualification arms and both
+  semantic verifiers before opening the fixed historical-proxy suite.
+- [ ] Complete and independently verify the 171-cell suite without excluding
+  failures; classify rather than optimize for a favorable outcome.

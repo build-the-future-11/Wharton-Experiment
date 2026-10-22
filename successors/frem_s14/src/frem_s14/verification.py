@@ -5,7 +5,15 @@ from pathlib import Path
 import numpy as np
 
 from .config import RunConfig
-from .evaluation import allocate, holm, paired_bootstrap, rebalance, score_law, summary
+from .evaluation import (
+    allocate,
+    date_nll,
+    holm,
+    paired_bootstrap,
+    rebalance,
+    score_law,
+    summary_from_scores,
+)
 from .runtime import cell_inventory, digest, identity, read_json, verify, verify_completion
 
 
@@ -232,6 +240,8 @@ def verify_semantics(root):
                 raise ValueError("cell source/data/config/runtime binding differs")
             with np.load(cell / "predictions.npz", allow_pickle=False) as archive:
                 raw = {k: archive[k] for k in archive.files}
+            with np.load(cell / "scores.npz", allow_pickle=False) as archive:
+                retained_scores = {key: archive[key] for key in archive.files}
             verify_calendar(raw, splits["test"], n_assets)
             verify_sample_inputs(raw, samples, samples.test)
             trace = cell / "retrieval_trace.npz"
@@ -261,9 +271,20 @@ def verify_semantics(root):
                 raise ValueError("mixture mean differs")
             if not np.allclose(np.sqrt(np.maximum(variance, 0)), raw["std"], atol=1e-6, rtol=1e-4):
                 raise ValueError("mixture standard deviation differs")
-            if not np.allclose(raw["nll"], scores["nll"], rtol=3e-5, atol=3e-5):
+            if set(retained_scores) != {"nll", "brier", "coverage90"}:
+                raise ValueError("retained score artifact schema differs")
+            if any(retained_scores[key].shape != raw["y"].shape for key in retained_scores):
+                raise ValueError("retained score artifact shape differs")
+            if retained_scores["coverage90"].dtype != np.bool_:
+                raise ValueError("retained coverage score type differs")
+            if any(
+                not np.allclose(retained_scores[key], scores[key], rtol=3e-5, atol=3e-5)
+                for key in ("nll", "brier")
+            ) or not np.array_equal(retained_scores["coverage90"], scores["coverage90"]):
+                raise ValueError("retained score artifact differs from independent score")
+            if not np.allclose(raw["nll"], retained_scores["nll"], rtol=3e-5, atol=3e-5):
                 raise ValueError("retained likelihood differs from independent score")
-            reconstructed = summary(raw, raw["y"], raw["times"], cfg.model.student_df)
+            reconstructed = summary_from_scores(raw, raw["y"], raw["times"], retained_scores)
             saved = read_json(cell / "metrics.json")
             for key, value in reconstructed.items():
                 if value is None:
@@ -284,9 +305,7 @@ def verify_semantics(root):
                 ):
                     raise ValueError("ledger execution contract differs from configuration")
                 verify_ledger(report, raw)
-            date_scores.setdefault(arm, []).append(
-                np.array([scores["nll"][raw["times"] == d].mean() for d in np.unique(raw["times"])])
-            )
+            date_scores.setdefault(arm, []).append(date_nll(retained_scores["nll"], raw["times"]))
             cells += 1
     for policy in ("equal_weight", "cash"):
         report = read_json(root / f"{policy}.json")

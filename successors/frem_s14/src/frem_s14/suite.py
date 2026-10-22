@@ -45,7 +45,12 @@ def suite_config(device="cuda"):
         patience=3,
         embargo=20,
         batch_size=128,
-        max_seconds=2800,
+        # The prior 0.1.9 candidate completed Fold 2's cells but exhausted this
+        # per-fold ceiling during mandatory semantic readback.  This successor
+        # reserves a distinct full-suite verifier stage while allowing a fold to
+        # finish the same required in-run readback; the notebook's unchanged
+        # 13,500-second ceiling remains the outer non-negotiable limit.
+        max_seconds=4000,
         bootstrap_reps=2000,
         block_dates=20,
         max_weight=0.25,

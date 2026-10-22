@@ -176,8 +176,8 @@ run("verify_qualification", ["-m", "frem_s14", "verify", "--bundle", str(RUN/"qu
 """
     train = """if MODE == "historical_suite":
     run("intake", ["-m", "frem_s14.intake", "--source", "/kaggle/input", "--output", str(RUN/"intake")], 300)
-    run("historical_suite", ["-W", "error", "-m", "frem_s14.suite", "--data", str(RUN/"intake/panel.csv"), "--qualification", str(RUN/"qualification"), "--output", str(RUN/"historical_suite"), "--device", DEVICE], 8700)
-    run("verify_suite", ["-m", "frem_s14", "verify-suite", "--bundle", str(RUN/"historical_suite")], 900)
+    run("historical_suite", ["-W", "error", "-m", "frem_s14.suite", "--data", str(RUN/"intake/panel.csv"), "--qualification", str(RUN/"qualification"), "--output", str(RUN/"historical_suite"), "--device", DEVICE], 11200)
+    run("verify_suite", ["-m", "frem_s14", "verify-suite", "--bundle", str(RUN/"historical_suite")], 1300)
 else:
     print("Generated qualification only; no market dataset opened.")
 print("Retain/download all files under", RUN)

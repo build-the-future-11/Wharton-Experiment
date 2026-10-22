@@ -136,7 +136,14 @@ def campaign(root, config, data_path=None, qualification=None, resume=None):
 
         from .baselines import baseline, hybrid
         from .data import Samples, generated_panel, load_csv
-        from .evaluation import holm, paired_bootstrap, portfolio, score_law, summary
+        from .evaluation import (
+            date_nll,
+            holm,
+            paired_bootstrap,
+            portfolio,
+            score_law,
+            summary_from_scores,
+        )
         from .training import budget, predict, train_neural
         from .verification import verify_semantics
 
@@ -241,6 +248,7 @@ def campaign(root, config, data_path=None, qualification=None, resume=None):
                 scores = score_law(raw, samples.y[samples.test], config.model.student_df)
                 if not np.allclose(raw["nll"], scores["nll"], atol=3e-5, rtol=3e-5):
                     raise ValueError("independent Student-mixture score reconstruction failed")
+                score_artifact = {key: scores[key] for key in ("nll", "brier", "coverage90")}
                 np.savez(
                     cell / "predictions.npz",
                     **raw,
@@ -249,6 +257,7 @@ def campaign(root, config, data_path=None, qualification=None, resume=None):
                     ends=samples.end[samples.test],
                     assets=samples.asset[samples.test],
                 )
+                np.savez(cell / "scores.npz", **score_artifact)
                 if trace is not None:
                     np.savez(cell / "retrieval_trace.npz", **trace)
                     write_json(
@@ -263,11 +272,11 @@ def campaign(root, config, data_path=None, qualification=None, resume=None):
                             "prediction_artifact": "predictions.npz",
                         },
                     )
-                report = summary(
+                report = summary_from_scores(
                     raw,
                     samples.y[samples.test],
                     samples.time[samples.test],
-                    config.model.student_df,
+                    score_artifact,
                 )
                 report["wall_seconds"] = time.monotonic() - cell_start
                 report["process_peak_rss_bytes"] = resource.getrusage(
@@ -285,12 +294,7 @@ def campaign(root, config, data_path=None, qualification=None, resume=None):
                         portfolio(samples, raw, config, cost_multiplier=multiplier),
                     )
                 date_scores.setdefault(arm, []).append(
-                    np.array(
-                        [
-                            scores["nll"][samples.time[samples.test] == d].mean()
-                            for d in np.unique(samples.time[samples.test])
-                        ]
-                    )
+                    date_nll(score_artifact["nll"], samples.time[samples.test])
                 )
                 complete.append({"arm": arm, "seed": seed})
                 active = None

@@ -1042,6 +1042,23 @@ Version 8 heartbeat is closed after this terminal evidence-backed conclusion.
 See `INDEPENDENT_SEMANTIC_VERIFICATION_FAILURE.json`,
 `SEMANTIC_MISMATCH_DIAGNOSIS.json` and the Version 8 semantic-readback decision.
 
+## 22 October 2026 — 0.2.0 semantic-reproducibility successor prepared
+
+With an explicit new-work authorization, a separately versioned 0.2.0 candidate
+was prepared without changing Version 8 or interpreting its retained metrics.
+It persists target-runtime NLL/Brier/coverage vectors and uses ordered
+`math.fsum` scalar reductions; its train-only preprocessing uses sorted scalar
+medians and `math.fsum` standard deviation; and its new fold budget is 4000
+seconds within the unchanged 13500-second notebook cap. Its static release
+verification hash-checked the wheel, archive, all payload members, embedded
+notebook archive, notebook syntax, private GPU setting and Internet-off setting.
+It has not run target numerical tests, qualified on CUDA, opened historical
+inputs or produced any model result. See
+`research/frem_s14_semantic_successor_20261022/PLAN.md`,
+`RELEASE_VERIFICATION.json`, and the corresponding decision record. Launch only
+the exact hash-bound candidate and retain every outcome; do not declare a
+positive result unless the fixed runtime and independent verifiers pass.
+
 
 ## 21 October 2026 — Version 6 qualified; historical source calendars incompatible
 

@@ -1,15 +1,15 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.1.9-s14-calendar-successor-kaggle-version8-semantic-readback-failed",
+  "version": "0.2.0-s14-semantic-reproducibility-successor-kaggle-pending",
   "created": "2026-10-10",
-  "updated": "2026-10-21T15:08:05+00:00",
+  "updated": "2026-10-22T03:34:00+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
   },
-  "phase": "s14_0_1_9_kaggle_version8_terminal_semantic_readback_failed",
+  "phase": "s14_0_2_0_semantic_reproducibility_successor_static_verified_kaggle_pending",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -1946,9 +1946,9 @@
     "next_action": "Run exact notebook and ZIP on an admitted compatible CUDA target; preserve and independently verify generated results before supplying any market dataset."
   },
   "frem_s14": {
-    "timestamp": "2026-10-21T15:08:05+00:00",
+    "timestamp": "2026-10-22T03:34:00+00:00",
     "iteration": "FREM-S14",
-    "status": "GPU_0_1_9_VERSION8_TERMINAL_ERROR_INDEPENDENT_SEMANTIC_VERIFICATION_FAILED",
+    "status": "GPU_0_2_0_SEMANTIC_REPRODUCIBILITY_SUCCESSOR_STATICALLY_VERIFIED_KAGGLE_PENDING",
     "scientific_status": "NOT_EVALUATED",
     "decisions": [
       "research/decisions/frem_s14_kaggle_mount_failure_20261020.json",
@@ -1960,7 +1960,8 @@
       "research/decisions/frem_s14_fixture_release_0_1_8_20261021.json",
       "research/decisions/frem_s14_0_1_9_calendar_cohort_successor_20261021.json",
       "research/decisions/frem_s14_version6_calendar_failure_20261021.json",
-      "research/decisions/frem_s14_version8_semantic_readback_failure_20261021.json"
+      "research/decisions/frem_s14_version8_semantic_readback_failure_20261021.json",
+      "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json"
     ],
     "current_candidate": {
       "package_version": "0.1.9",
@@ -1991,6 +1992,36 @@
       "identity_check": "research/frem_s14_calendar_successor_20261021/RELEASE_VERIFICATION.json",
       "saved_identity": "research/frem_s14_calendar_successor_20261021/SAVED_IDENTITY.json",
       "note": "Separately versioned seven-ETF calendar-compatible successor is independently release-verified. Private Kaggle Version 8 passed all 107 warning-strict tests and its 19-arm generated CUDA qualification, but the historical suite failed at the Fold 2 post-cell semantic-verification budget gate. This generated qualification does not qualify or validate the failed historical suite."
+    },
+    "semantic_reproducibility_successor": {
+      "timestamp": "2026-10-22T03:34:00+00:00",
+      "package_version": "0.2.0",
+      "role": "Separately versioned prospective repair of Version 8 cross-runtime preprocessing and score-summary reconstruction; no historical result has been reused or inspected.",
+      "source_identity": "f7feb800695935b574f40703c544cb4c071bfec8bdb9a77722ef001e147274cb",
+      "release": {
+        "archive": "frem_s14_kaggle_bundle-0.2.0.zip",
+        "archive_sha256": "95ea50e52504bf1652f565574e34ad8f91e47b392bda9d00d79999375d011d0d",
+        "wheel": "frem_s14-0.2.0-py3-none-any.whl",
+        "wheel_sha256": "5bf2054f66316a67320e88e8df3db872e1565b11ba7e48c2dc0433a6eafcfa1e",
+        "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_0.ipynb",
+        "notebook_sha256": "bd95672cf20a99516c7c377858b953f80bfa2f2128e8f406fb9f283f038037aa",
+        "members": 18,
+        "status": "PACKAGED_STATICALLY_VERIFIED_NOT_NUMERICALLY_QUALIFIED"
+      },
+      "repairs": [
+        "Persist target-runtime NLL, Brier and coverage score vectors; calculate reported scalar scores with ordered math.fsum reductions.",
+        "Compute train-only center, MAD scale and target scale through sorted Python-float medians and math.fsum.",
+        "Increase only the new successor per-fold wall clock to 4000 seconds while retaining the notebook-wide 13500-second deadline."
+      ],
+      "unchanged_contract": "seven-ETF cohort, data hashes, 19 arms, seeds, folds, threshold, bootstrap family, private Internet-off T4 contract and no-imputation rule",
+      "release_verification": "research/frem_s14_semantic_successor_20261022/RELEASE_VERIFICATION.json",
+      "decision": "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json",
+      "plan": "research/frem_s14_semantic_successor_20261022/PLAN.md",
+      "uploaded": false,
+      "runtime_qualified": false,
+      "historical_cells_completed": 0,
+      "protected_access": false,
+      "claim_boundary": "Static packaging verification is not numerical qualification, a historical result, predictive evidence or a positive result."
     },
     "trace_candidate": {
       "timestamp": "2026-10-20T00:00:00+00:00",
@@ -2133,7 +2164,7 @@
       "scientific_use": false,
       "protected_access": false
     },
-    "blocker": "Kaggle Version 8 is terminal ERROR. All 4,499 remote files are retained and integrity-verified, but an admitted independent semantic readback failed: 90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly. The original Fold 2 frozen-budget failure and absent notebook verify-suite remain preserved. Scientific status is NOT_EVALUATED.",
+    "blocker": "Kaggle Version 8 is terminal ERROR and remains preserved: all 4,499 remote files are retained and integrity-verified, but independent semantic readback failed (90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly). The 0.2.0 successor is statically release-verified but must still pass target warning-strict tests, all 19 qualification arms, target and independent semantic verification before any historical metric may be interpreted. Scientific status is NOT_EVALUATED.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
@@ -2155,8 +2186,8 @@
     "checklist": "successors/frem_s14/CHECKLIST.md",
     "remaining": [
       "Preserve Version 8 unchanged as a terminal suite failure and independent semantic readback failure.",
-      "Do not interpret retained historical metrics or choose a result-driven repair while the declared verifier does not reproduce them.",
-      "If future work is explicitly authorized, define and freeze a separately versioned successor that resolves cross-runtime preprocessing and summary reconstruction before execution."
+      "Do not interpret retained historical metrics or choose a result-driven repair while the declared Version 8 verifier does not reproduce them.",
+      "Run only the exact hash-bound 0.2.0 successor, preserve all target output, and require both target and independently controlled semantic verification before interpreting its fixed 171-cell suite."
     ],
     "claim_boundary": "Engineering passes do not establish predictive improvement or tradable profitability; no zero-defect guarantee.",
     "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
