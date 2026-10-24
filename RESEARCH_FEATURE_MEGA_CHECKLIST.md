@@ -1,5 +1,7 @@
 # FREM research feature mega checklist
 
+> **Current execution checklist:** Use `PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md` for the ordered work required from the verified FREM-S14 0.2.4 frontier. This document remains the broader capability and successor backlog.
+
 **Prepared:** 20 October 2026  
 **Current scientific status:** `NOT_EVALUATED`  
 **Active implementation frontier:** FREM-S14 v0.1.3 saved version `359955736` is preserved as an external dataset-mount failure before notebook execution. The separately packaged v0.1.5 trace candidate adds readback provenance only. Exact GPU numerical qualification, the declared 171-cell historical-proxy suite, saved-output readback, and any scientific interpretation remain pending.

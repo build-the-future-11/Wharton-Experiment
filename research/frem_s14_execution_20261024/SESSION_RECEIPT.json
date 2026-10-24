@@ -1,0 +1,49 @@
+{
+  "schema": "frem-s14-execution-session-v1",
+  "timestamp_utc": "2026-10-24T10:41:22Z",
+  "branch": "codex/frem-research-execution-20261020",
+  "head_before_session_commit": "b41711a636e1210c20fb394faf46c414d104dcf8",
+  "candidate": {
+    "package_version": "0.2.4",
+    "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+    "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+    "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+    "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f"
+  },
+  "static_hash_recheck": "PASS",
+  "gate0_inventory": {
+    "path": "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",
+    "pre_existing_untracked_paths": 4902,
+    "all_paths_classified": true,
+    "bulk_stage_authorized": false
+  },
+  "local_resource_observation": {
+    "page_size_bytes": 16384,
+    "pages_free": 3010,
+    "pages_speculative": 17046,
+    "available_free_plus_speculative_mib": 313.375,
+    "minimum_mib": 512,
+    "pageouts": 414102,
+    "admitted": false,
+    "numerical_imports_or_tests_run": false
+  },
+  "kaggle_access_observation": {
+    "chrome_profiles_checked": [
+      "ryanewan80@gmail.com Profile 1",
+      "ryanewan80@gmail.com Profile 8",
+      "ryangomez.09110@gmail.com Profile 23",
+      "ryangomez.hs@gmail.com Profile 31"
+    ],
+    "result": "No checked profile exposed an authenticated Kaggle owner session. Profile 31 reached a blank Kaggle login shell after reload and direct navigation.",
+    "account_identity_verified": false,
+    "private_notebook_verified_today": false,
+    "upload_performed": false,
+    "run_launched": false,
+    "api_token_created": false
+  },
+  "historical_cells_completed_for_0_2_4": 0,
+  "qualification_arms_completed_for_0_2_4": 0,
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false,
+  "next_gate": "Restore an existing authenticated ryangomez010 Kaggle session, verify private GPU/Internet-off/input/quota state, and re-read exact 0.2.4 hashes before any upload."
+}

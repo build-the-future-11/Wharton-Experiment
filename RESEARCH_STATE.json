@@ -2,12 +2,22 @@
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
   "version": "0.2.4-s14-semantic-reproducibility-successor-kaggle-access-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-24T08:14:21.206137+00:00",
+  "updated": "2026-10-24T10:41:22+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
+  },
+  "project_execution_mega_checklist": {
+    "path": "PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md",
+    "created": "2026-10-24",
+    "status": "ACTIVE_ORDERED_EXECUTION_AND_IMPROVEMENT_CHECKLIST",
+    "frontier": "FREM-S14 0.2.4 static release verified; local numerical admission and existing private Kaggle owner access blocked",
+    "next_gate": "Resolve existing Kaggle owner ryangomez010 browser profile, verify exact saved-source identity, then run target qualification before any 171-cell historical execution",
+    "improvement_policy": "P0 evidence tooling, P1 post-disposition capabilities and P2 successor science are separated; no checklist item mutates frozen 0.2.4 by implication",
+    "gate0_untracked_inventory": "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",
+    "latest_session_receipt": "research/frem_s14_execution_20261024/SESSION_RECEIPT.json"
   },
   "phase": "s14_0_2_4_release_verified_local_numerical_and_kaggle_access_blocked",
   "scientific_status": "NOT_EVALUATED",
@@ -1454,7 +1464,13 @@
     ],
     "next_action": "Review the complete S10 design and establish data/precision feasibility before implementing and freezing any experiment."
   },
-  "current_design_revision": "FREM-S13-P0",
+  "current_design_revision": "FREM-S14-0.2.4",
+  "active_successor_protocol": {
+    "specification": "successors/frem_s14/SPECIFICATION.md",
+    "historical_suite_config": "successors/frem_s14/configs/historical_suite.json",
+    "release": "successors/frem_s14/dist/RELEASE-0.2.4.json",
+    "relationship_to_original": "Separately versioned successor; research/protocol.json remains the preserved original FREM-P0 protocol."
+  },
   "s10_design_v2_20261015": {
     "status": "EXTENDED_DESIGN_COMPLETE_IMPLEMENTATION_AND_EMPIRICAL_GATES_PENDING",
     "overview": "docs/FREM_S10_IMPLEMENTATION_BLUEPRINT.md",
@@ -1968,6 +1984,15 @@
       "research/decisions/frem_s14_0_2_4_invocation_stable_release_20261024.json"
     ],
     "active_candidate_ref": "semantic_reproducibility_successor",
+    "active_candidate": {
+      "package_version": "0.2.4",
+      "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+      "release_record": "successors/frem_s14/dist/RELEASE-0.2.4.json",
+      "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_4.ipynb",
+      "status": "STATICALLY_VERIFIED_NOT_NUMERICALLY_QUALIFIED",
+      "uploaded": false,
+      "historical_cells_completed": 0
+    },
     "current_candidate_history_note": "The following 0.1.9 object is the preserved Version 8 execution identity, not the active launch candidate. Exact 0.2.4 is the only active candidate.",
     "current_candidate": {
       "package_version": "0.1.9",

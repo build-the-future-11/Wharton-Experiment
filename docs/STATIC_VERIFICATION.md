@@ -2,6 +2,12 @@
 
 **Historical authoring-time record: source was authored and statically reviewed; scientific status remains NOT EVALUATED.**
 
+## 24 October 2026: FREM-S14 0.2.4 execution frontier
+
+The exact 0.2.4 wheel, archive, and notebook hashes were re-read and still match the immutable release record. A path-complete Gate 0 inventory classified 4,902 pre-existing untracked evidence files; the 1.3 GiB Version 8 output remains preserved outside ordinary Git and is not bulk-staged. Canonical state now identifies FREM-S14 0.2.4 as the active design and retains the historical 0.1.9 Version 8 object separately.
+
+Local numerical admission still fails: the latest free-plus-speculative sample was 313.375 MiB against the 512 MiB floor, with 414,102 cumulative pageouts. Four plausible Chrome profiles were checked, but none exposed an authenticated Kaggle owner session; the strongest candidate displayed only a blank Kaggle login shell. No numerical import, upload, new token, Kaggle launch, protected access, qualification arm, or historical cell occurred. Scientific status remains `NOT_EVALUATED`. See `research/frem_s14_execution_20261024/SESSION_RECEIPT.json` and `PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md`.
+
 This document preserves the original no-runtime authoring boundary. The historical cleanup passed 163 FREM tests, 67 RE-JEPA v0.3 tests, 45 RENG-JEPA v0.1 tests, full-scope Ruff, static validation, and three package builds; see `research/repository_cleanup_verification_2026-10-11.json`. Later S2, public slow-study, and S3 receipts contain completed exploratory public runs. S3 passed 217 regression tests. Current status and exact receipts are in [RESEARCH_COMPLETION_STATUS.md](RESEARCH_COMPLETION_STATUS.md). No canonical admitted-market or protected confirmation has occurred.
 
 The user explicitly asked for the full implementation and research package without model runs or experiments. This verification respects that boundary. The machine-readable inventory in `STATIC_VERIFICATION.json` contains the exact final Python/JSON counts, authored test-function inventory and syntax findings.
