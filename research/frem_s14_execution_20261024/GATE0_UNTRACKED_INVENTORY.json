@@ -2,7 +2,7 @@
   "all_paths_classified": true,
   "branch": "codex/frem-research-execution-20261020",
   "bulk_stage_authorized": false,
-  "created_at": "2026-10-24T10:42:40.999599+00:00",
+  "created_at": "2026-10-24T10:45:48.431228+00:00",
   "credential_values_collected": false,
   "entries": [
     {
@@ -24563,10 +24563,11 @@
       "sensitivity": "internal verification evidence"
     }
   },
-  "head": "b41711a636e1210c20fb394faf46c414d104dcf8",
+  "head": "95f2ed17042f1a72282be4c2358bab752488c24f",
   "intended_tracked_exclusions": [
     "PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md",
     "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",
+    "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json",
     "research/frem_s14_execution_20261024/SESSION_RECEIPT.json",
     "scripts/inventory_untracked_evidence.py"
   ],

@@ -51,6 +51,7 @@ GROUPS = {
 
 INTENDED_TRACKED = {
     "PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md",
+    "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json",
     "research/frem_s14_execution_20261024/SESSION_RECEIPT.json",
     "scripts/inventory_untracked_evidence.py",
     "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",

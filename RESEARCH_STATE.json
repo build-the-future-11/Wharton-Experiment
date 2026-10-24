@@ -2,7 +2,7 @@
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
   "version": "0.2.4-s14-semantic-reproducibility-successor-kaggle-access-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-24T10:41:22+00:00",
+  "updated": "2026-10-24T10:45:09+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
@@ -13,13 +13,14 @@
     "path": "PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md",
     "created": "2026-10-24",
     "status": "ACTIVE_ORDERED_EXECUTION_AND_IMPROVEMENT_CHECKLIST",
-    "frontier": "FREM-S14 0.2.4 static release verified; local numerical admission and existing private Kaggle owner access blocked",
-    "next_gate": "Resolve existing Kaggle owner ryangomez010 browser profile, verify exact saved-source identity, then run target qualification before any 171-cell historical execution",
+    "frontier": "FREM-S14 0.2.4 static release verified; local numerical admission failed; existing private Kaggle owner and target runtime settings verified",
+    "next_gate": "Upload exact 0.2.4 after action-time confirmation, verify saved-source identity, then run target qualification before any 171-cell historical execution",
     "improvement_policy": "P0 evidence tooling, P1 post-disposition capabilities and P2 successor science are separated; no checklist item mutates frozen 0.2.4 by implication",
     "gate0_untracked_inventory": "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",
-    "latest_session_receipt": "research/frem_s14_execution_20261024/SESSION_RECEIPT.json"
+    "latest_session_receipt": "research/frem_s14_execution_20261024/SESSION_RECEIPT.json",
+    "kaggle_access_ready_receipt": "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json"
   },
-  "phase": "s14_0_2_4_release_verified_local_numerical_and_kaggle_access_blocked",
+  "phase": "s14_0_2_4_kaggle_access_ready_upload_confirmation_pending",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -2053,7 +2054,8 @@
       "plan": "research/frem_s14_semantic_successor_0_2_4_20261024/PLAN.md",
       "superseded_unrun_releases": ["0.2.0", "0.2.1", "0.2.2", "0.2.3"],
       "uploaded": false,
-      "launch_status": "BLOCKED_EXISTING_PRIVATE_KAGGLE_ACCOUNT_PROFILE_UNRESOLVED",
+      "launch_status": "KAGGLE_ACCESS_READY_UPLOAD_CONFIRMATION_PENDING",
+      "kaggle_access_ready_receipt": "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json",
       "runtime_qualified": false,
       "historical_cells_completed": 0,
       "protected_access": false,

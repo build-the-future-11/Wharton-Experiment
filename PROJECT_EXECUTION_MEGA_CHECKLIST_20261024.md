@@ -3,7 +3,7 @@
 **Prepared:** 24 October 2026
 **Canonical frontier:** FREM-S14 release 0.2.4
 **Current scientific status:** `NOT_EVALUATED`
-**Immediate state:** static release verified; local numerical admission failed; existing private Kaggle owner profile unresolved; 0/19 qualification arms and 0/171 historical cells completed for 0.2.4.
+**Immediate state:** static release verified; local numerical admission failed; existing private Kaggle owner and target runtime settings verified; browser upload awaits action-time confirmation; 0/19 qualification arms and 0/171 historical cells completed for 0.2.4.
 
 This is the ordered checklist for finishing the current project honestly. It complements the broader capability backlog in `RESEARCH_FEATURE_MEGA_CHECKLIST.md`. Work through the gates in order. A checked item must have the named evidence; source code, a green UI, a static parse, or a paper draft does not substitute for runtime or scientific evidence.
 
@@ -73,17 +73,17 @@ This is the ordered checklist for finishing the current project honestly. It com
 - [ ] Bind any passing local receipt to the exact 0.2.4 source, interpreter, environment, and command.
 - [ ] Continue monitoring the resource floor throughout any admitted local numerical work.
 
-### Kaggle path — immediate blocker
+### Kaggle path — access ready, upload pending
 
-- [ ] User opens the browser profile already authenticated as Kaggle owner `ryangomez010`.
-- [ ] Confirm the visible Kaggle account identity before any upload.
-- [ ] Confirm the target notebook is private.
-- [ ] Confirm Internet is disabled.
-- [ ] Confirm the intended GPU accelerator and available quota.
-- [ ] Confirm the fixed input source is attached under the expected read-only path.
-- [ ] Confirm no equivalent 0.2.4 run is already queued, running, or complete.
-- [ ] Confirm no temporary token is needed; if one becomes necessary, use the existing explicit token lifecycle and retain revocation evidence.
-- [ ] Record an access/readiness receipt before transmission.
+- [x] Establish the existing Google-linked browser profile for Kaggle owner `ryangomez010`.
+- [x] Confirm the visible Kaggle account identity before any upload.
+- [x] Confirm the target notebook is private.
+- [x] Confirm Internet is disabled.
+- [x] Confirm GPU T4 x2 and retain the displayed quota text `00:00 / 30 hrs` without inferring undocumented semantics.
+- [x] Confirm the fixed Huge Stock Market Dataset input is attached.
+- [x] Confirm the notebook has only saved Versions 1-8 and no observed equivalent 0.2.4 saved version.
+- [x] Confirm no temporary token is needed; browser authentication uses the existing Google session.
+- [x] Record `research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json` before transmission.
 
 **Gate 2 acceptance:** either a fresh exact-source local admission passes or the existing private Kaggle owner, quota, accelerator, Internet, input mount, and duplicate-run state are verified.
 

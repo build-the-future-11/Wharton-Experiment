@@ -1,0 +1,44 @@
+{
+  "schema": "frem-s14-kaggle-access-ready-v1",
+  "timestamp_utc": "2026-10-24T10:45:09Z",
+  "candidate": {
+    "package_version": "0.2.4",
+    "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+    "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+    "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f"
+  },
+  "browser_profile": "Ryan (ryangomez.hs@gmail.com), Chrome Profile 31",
+  "authentication": {
+    "method": "existing Google sign-in session",
+    "visible_kaggle_name": "Ryan Gomez010",
+    "visible_kaggle_slug": "ryangomez010",
+    "owner_identity_verified": true,
+    "api_token_created": false
+  },
+  "notebook": {
+    "slug": "ryangomez010/frem-s14-gpu-benchmark-20261019",
+    "visibility": "Private",
+    "latest_saved_version": 8,
+    "latest_script_version_id": 360736919,
+    "existing_saved_package": "0.1.9",
+    "equivalent_0_2_4_saved_version_observed": false
+  },
+  "session_options": {
+    "accelerator": "GPU T4 x2",
+    "quota_text": "Quota: 00:00 / 30 hrs",
+    "persistence": "No persistence",
+    "environment": "Pin to original environment (2026-10-03)",
+    "internet": "off"
+  },
+  "input": {
+    "visible_name": "Huge Stock Market Dataset",
+    "expected_source": "borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+    "attached": true
+  },
+  "editor_state": "Version 8 draft opened; editor loading indicator remained visible, but session options and input controls rendered.",
+  "upload_performed": false,
+  "run_launched": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "next_gate": "Obtain action-time confirmation for the browser file upload, then transmit only exact 0.2.4 artifacts and independently read back the saved source before launch."
+}
