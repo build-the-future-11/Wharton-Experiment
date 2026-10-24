@@ -1,0 +1,25 @@
+test_baseline_count_is_checked (test_evidence_inventory_stdlib.PreservationTests.test_baseline_count_is_checked) ... ok
+test_duplicate_baseline_path_is_rejected (test_evidence_inventory_stdlib.PreservationTests.test_duplicate_baseline_path_is_rejected) ... ok
+test_existing_receipt_is_not_overwritten (test_evidence_inventory_stdlib.PreservationTests.test_existing_receipt_is_not_overwritten) ... ok
+test_hashes_match_and_new_paths_are_not_added_to_baseline (test_evidence_inventory_stdlib.PreservationTests.test_hashes_match_and_new_paths_are_not_added_to_baseline) ... ok
+test_legacy_baseline_still_checks_sizes (test_evidence_inventory_stdlib.PreservationTests.test_legacy_baseline_still_checks_sizes) ... ok
+test_missing_evidence_is_rejected (test_evidence_inventory_stdlib.PreservationTests.test_missing_evidence_is_rejected) ... ok
+test_nonregular_input_and_traversal_are_rejected (test_evidence_inventory_stdlib.PreservationTests.test_nonregular_input_and_traversal_are_rejected) ... ok
+test_output_symlink_does_not_overwrite_target (test_evidence_inventory_stdlib.PreservationTests.test_output_symlink_does_not_overwrite_target) ... ok
+test_receipt_creation_uses_exclusive_open (test_evidence_inventory_stdlib.PreservationTests.test_receipt_creation_uses_exclusive_open) ... ok
+test_same_size_content_change_is_rejected (test_evidence_inventory_stdlib.PreservationTests.test_same_size_content_change_is_rejected) ... ok
+test_symlink_input_and_parent_are_rejected (test_evidence_inventory_stdlib.PreservationTests.test_symlink_input_and_parent_are_rejected) ... ok
+test_unclassified_path_is_rejected (test_evidence_inventory_stdlib.PreservationTests.test_unclassified_path_is_rejected) ... ok
+test_cell_order_and_missing_cells_are_rejected (test_s14_saved_notebook_stdlib.SavedSourceTests.test_cell_order_and_missing_cells_are_rejected) ... ok
+test_cell_type_and_malformed_source_are_rejected (test_s14_saved_notebook_stdlib.SavedSourceTests.test_cell_type_and_malformed_source_are_rejected) ... ok
+test_duplicate_json_and_nonfinite_constants_are_rejected (test_s14_saved_notebook_stdlib.SavedSourceTests.test_duplicate_json_and_nonfinite_constants_are_rejected) ... ok
+test_embedded_archive_is_checked_even_with_self_consistent_notebook_hash (test_s14_saved_notebook_stdlib.SavedSourceTests.test_embedded_archive_is_checked_even_with_self_consistent_notebook_hash) ... ok
+test_line_arrays_and_strings_match_with_different_metadata (test_s14_saved_notebook_stdlib.SavedSourceTests.test_line_arrays_and_strings_match_with_different_metadata) ... ok
+test_one_character_source_mutation_is_rejected (test_s14_saved_notebook_stdlib.SavedSourceTests.test_one_character_source_mutation_is_rejected) ... ok
+test_real_release_self_check_does_not_claim_remote_identity (test_s14_saved_notebook_stdlib.SavedSourceTests.test_real_release_self_check_does_not_claim_remote_identity) ... ok
+test_trusted_local_hash_mismatch_is_rejected (test_s14_saved_notebook_stdlib.SavedSourceTests.test_trusted_local_hash_mismatch_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.095s
+
+OK

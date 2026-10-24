@@ -1,3 +1,5 @@
+24 October execution update: [preflight and repair report](../research/frem_final_execution_20261024T110832Z/REPORT.md). Exact S14 0.2.4 identities remain unchanged; 20 dependency-free external-tooling tests pass. The registry contains 19 qualification cells (seed 11) and 171 historical cells (seeds 11/29/47). The inventory now refuses overwrites/symlinks and hashes all 4,902 retained files. Private Kaggle editor settings are freshly verified; upload confirmation is pending. Local numerical admission failed at 115–228 MiB against 512 MiB. No target run, S15 implementation, or protected access occurred.
+
 # Release verification: scope and limits
 
 **Historical authoring-time record: source was authored and statically reviewed; scientific status remains NOT EVALUATED.**

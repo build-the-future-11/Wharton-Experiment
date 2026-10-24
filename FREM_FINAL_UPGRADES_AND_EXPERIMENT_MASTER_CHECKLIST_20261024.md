@@ -3,6 +3,7 @@
 Date: 2026-10-24  
 Current candidate: `FREM-S14-0.2.4`  
 Current scientific status: `NOT_EVALUATED`  
+Execution update: [preflight session](research/frem_final_execution_20261024T110832Z/REPORT.md); specific Kaggle upload confirmation pending.
 Purpose: one ordered, copy-pastable execution checklist covering the remaining S14 experiment, repository hardening, bug closure, a separately versioned S15 extension, benchmarking, ablations, protected confirmation, independent reproduction, and publication evidence.
 
 This is an execution specification, not evidence that the work has already run. A checked item needs the artifact named in that item. “Perfect” means every declared gate passes, every known limitation is either repaired or bounded, no critical/high defect remains open, and the final claim matches the evidence. It does not mean forcing a positive result.
@@ -52,10 +53,10 @@ Each arrow is fail-closed. Do not skip a failed gate by starting its downstream 
 - [x] Record that no 0.2.4 saved version or run has been observed.
 - [x] Record that local numerical admission failed and no local S14 numerical work is authorized by current resource facts.
 - [ ] Re-run `git status --short --branch` immediately before every mutation batch.
-- [ ] Verify the four exact 0.2.4 identities against `dist/RELEASE-0.2.4.json`.
+- [x] Verify the four exact 0.2.4 identities against `dist/RELEASE-0.2.4.json`.
 - [ ] Re-run the untracked-evidence inventory and compare counts/hashes before staging.
-- [ ] Create a session directory with UTC timestamp, branch, HEAD, dirty-state hash, operator, host, and purpose.
-- [ ] Add an append-only session receipt before any external upload or numerical run.
+- [x] Create a session directory with UTC timestamp, branch, HEAD, dirty-state hash, operator, host, and purpose.
+- [x] Add an append-only session receipt before any external upload or numerical run.
 - [ ] Stop if the branch, release identities, account, notebook, dataset, accelerator, or visibility differs from the recorded contract.
 
 **Acceptance evidence:** a fresh session receipt and unchanged release hashes.
@@ -65,8 +66,8 @@ Each arrow is fail-closed. Do not skip a failed gate by starting its downstream 
 ### 1.1 Upload and saved-source readback
 
 - [ ] Obtain action-time confirmation before using the browser file picker for the private Kaggle upload.
-- [ ] Confirm the notebook is `ryangomez010/frem-s14-gpu-benchmark-20261019` and private.
-- [ ] Confirm no duplicate 0.2.4 version is queued, running, or complete.
+- [x] Confirm the notebook is `ryangomez010/frem-s14-gpu-benchmark-20261019` and private.
+- [x] Confirm no duplicate 0.2.4 version is queued, running, or complete.
 - [ ] Upload the exact generated 0.2.4 notebook and metadata from `successors/frem_s14/kaggle/`.
 - [ ] Keep GPU `T4 x2`, Internet off, persistence off, pinned environment, and the declared input.
 - [ ] Save a new version without replacing Versions 1-8.
@@ -80,7 +81,7 @@ Each arrow is fail-closed. Do not skip a failed gate by starting its downstream 
 - [ ] Run dependency/runtime checks before importing scientific modules.
 - [ ] Run the complete packaged test directory with warnings treated as errors.
 - [ ] Run all 19 generated qualification arms on CUDA.
-- [ ] Run seeds `11`, `29`, and `47` exactly as declared.
+- [ ] Run the frozen qualification seed `11` for each of the 19 arms. Seeds `11`, `29`, and `47` belong to the historical suite, not generated qualification.
 - [ ] Preserve per-cell stdout, stderr, checkpoint, metrics, traces, wall time, peak RSS/VRAM, parameter count, and environment.
 - [ ] Verify every target, score vector, split, calendar, retrieval trace, ledger, and completion receipt independently.
 - [ ] Require 19/19 arms and every declared seed/config family to be complete.

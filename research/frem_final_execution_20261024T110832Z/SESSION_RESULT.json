@@ -1,0 +1,40 @@
+{
+  "schema": "frem-final-session-result-v1",
+  "timestamp_utc": "2026-10-24T11:19:03.575437+00:00",
+  "status": "PREFLIGHT_AND_EXTERNAL_TOOLING_COMPLETE_UPLOAD_CONFIRMATION_PENDING",
+  "branch": "codex/frem-research-execution-20261020",
+  "starting_head": "fbb1397aa3ecd2eb8c0e11249507d083dbe0a72c",
+  "tooling_tests": {
+    "passed": 20,
+    "failed": 0,
+    "warnings_as_errors": true,
+    "log": "research/frem_final_execution_20261024T110832Z/tooling_tests_final.log"
+  },
+  "quality": {
+    "ruff_lint": "PASS",
+    "ruff_format": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "frozen_s14_release_unchanged": true,
+  "retained_evidence": {
+    "EVIDENCE_BASELINE_HASHES.json": {
+      "path": "research/frem_final_execution_20261024T110832Z/EVIDENCE_BASELINE_HASHES.json",
+      "sha256": "9891c413f63467b6b73bb27a18a62964c9a098e8cd5cde97b5c70b2983cf8c6e"
+    },
+    "EVIDENCE_PRESERVATION_FINAL.json": {
+      "path": "research/frem_final_execution_20261024T110832Z/EVIDENCE_PRESERVATION_FINAL.json",
+      "sha256": "4822971e2fcecb10b80ae76568c640bd042b9c06fae1918edbaf079d007c4a1c"
+    }
+  },
+  "preserved_file_count": 4902,
+  "retained_evidence_bulk_staged": false,
+  "inventory_limit": "Initial legacy inventory supplied sizes only; final check compares 4902 newly established content hashes.",
+  "secret_pattern_findings": [],
+  "uploaded": false,
+  "new_saved_version_created": false,
+  "qualification_cells": 0,
+  "historical_cells": 0,
+  "s15_started": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED"
+}

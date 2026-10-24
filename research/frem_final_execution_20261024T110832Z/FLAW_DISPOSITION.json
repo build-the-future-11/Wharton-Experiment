@@ -1,0 +1,40 @@
+{
+  "schema": "frem-execution-flaws-v1",
+  "scope": "Preflight and external evidence tooling only; not an exhaustive S15 scientific audit",
+  "items": [
+    {
+      "id": "EXEC-001",
+      "severity": "high",
+      "flaw": "Inventory overwrites receipts and follows output symlinks",
+      "repair": "Reject existing paths and symlink ancestors; exclusive creation and fsync",
+      "status": "CLOSED_ENGINEERING",
+      "before": "research/frem_final_execution_20261024T110832Z/inventory_regression_before.log",
+      "after": "research/frem_final_execution_20261024T110832Z/tooling_tests_final.log"
+    },
+    {
+      "id": "EXEC-002",
+      "severity": "medium",
+      "flaw": "Original inventory cannot detect same-size content changes",
+      "repair": "Stream SHA-256 for every retained file; baseline comparison rejects digest, size, count, classification and missing-file mismatches",
+      "status": "CLOSED_PROSPECTIVE_ONLY",
+      "limitation": "Original receipt contained sizes only; new hashes do not prove bytes before this session",
+      "evidence": "research/frem_final_execution_20261024T110832Z/EVIDENCE_BASELINE_HASHES.json"
+    },
+    {
+      "id": "PLAN-001",
+      "severity": "high",
+      "flaw": "Checklist qualification seeds contradict immutable contract",
+      "repair": "Use frozen 19-arm seed-11 qualification; preserve three-seed historical suite",
+      "status": "CLOSED_DOCUMENTATION",
+      "evidence": "research/frem_final_execution_20261024T110832Z/EXECUTION_REGISTRY.json"
+    },
+    {
+      "id": "STATE-001",
+      "severity": "medium",
+      "flaw": "Top-level S14 blocker/remaining fields refer to inaccessible account and superseded 0.2.0",
+      "repair": "Reconcile current aliases to verified 0.2.4 and current preupload state; preserve old values in session snapshot",
+      "status": "CLOSED_CANONICAL_STATE",
+      "evidence": "research/frem_final_execution_20261024T110832Z/KAGGLE_PREUPLOAD_OBSERVATION.json"
+    }
+  ]
+}

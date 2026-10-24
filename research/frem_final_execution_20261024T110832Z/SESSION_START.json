@@ -1,0 +1,12 @@
+{
+  "schema": "frem-final-execution-session-v1",
+  "started_at_utc": "20261024T110832Z",
+  "branch": "codex/frem-research-execution-20261020",
+  "head": "fbb1397aa3ecd2eb8c0e11249507d083dbe0a72c",
+  "dirty_state_sha256": "31464bd337beff1a38fee7d2b8b36e926b9d544ced8d6e251820f1c7b423ee69",
+  "host": "Ryans-Macbook-Air.local",
+  "operator": "Codex",
+  "purpose": "Execute final master checklist in declared dependency order; preserve S14 0.2.4",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

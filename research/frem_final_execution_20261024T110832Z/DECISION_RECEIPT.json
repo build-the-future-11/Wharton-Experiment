@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-24T11:17:12.234675+00:00",
+  "previous": "a5d9e3b3fbbf46cc657584bb1eb6717383ec29ed1e64108c7b98c402558829d2",
+  "event": {
+    "id": "frem_final_program_execution_preflight_20261024",
+    "observation": "Execution checklist qualification section specified seeds 11,29,47, but immutable 0.2.4 qualification_config specifies seed 11 and 19 total arms; historical_suite specifies 11,29,47 and 171 cells. Gate 0 inventory overwrote existing receipts and followed output symlinks; original inventory had sizes but no content hashes.",
+    "hypothesized_cause": "Planning transcription error and nonexclusive inventory write; stale canonical next-step strings retained after release succession.",
+    "change": "Correct only planning prose to the frozen contract; harden external inventory tool; add dependency-free notebook source readback verifier. Preserve all frozen S14 source/artifacts and old receipts.",
+    "predicted_effect": "Prevent duplicate qualification cells, evidence overwrites, stale-version launch and unnoticed source tampering without changing scientific behavior.",
+    "discriminating_experiment": "Two failing pre-repair overwrite regressions; 20 final adversarial tooling tests; immutable release hash recheck; exact 19/171 registry enumeration; 4902-file preservation inventory.",
+    "result": "20 tooling tests pass; release hashes match; current local numerical admission fails; private Kaggle import dialog ready but specific file-upload confirmation pending.",
+    "scientific_change": false,
+    "protected_access": false,
+    "scientific_status": "NOT_EVALUATED",
+    "s15_started": false,
+    "evidence": "research/frem_final_execution_20261024T110832Z"
+  },
+  "sha256": "3f368fb31ec98d9534adc740d4eda2825425f5bb617b53eaedb21fed92fe3cc4"
+}
