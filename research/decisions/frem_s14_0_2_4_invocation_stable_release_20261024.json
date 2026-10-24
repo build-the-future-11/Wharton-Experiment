@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24",
+  "iteration": "FREM-S14",
+  "decision": "Preserve unrun 0.2.3 and create a fail-fast, invocation-stable 0.2.4 release candidate.",
+  "observation": "Ruff import classification changed with the invocation working directory because the package had no explicit first-party declaration. The 0.2.3 pre-build shell also continued into artifact creation after lint returned nonzero. Therefore its archive cannot satisfy the claimed pre-build quality gate.",
+  "repair": [
+    "Declare frem_s14 as a Ruff first-party package.",
+    "Run lint and format from the package root with fail-fast shell behavior before building.",
+    "Lint the extracted payload using the same explicit configuration and require exact source/archive equality.",
+    "Advance all immutable artifact identities to 0.2.4."
+  ],
+  "unchanged_scientific_contract": [
+    "all scientific runtime modules other than the version literal",
+    "model, data, cohort, arms, seeds, folds, endpoints and statistical rules",
+    "4000-second fold and 13500-second notebook ceilings",
+    "private Internet-off T4 execution and no protected access"
+  ],
+  "previous_release": "0.2.3",
+  "previous_release_status": "PRESERVED_UNRUN_NEVER_UPLOADED",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

@@ -1110,3 +1110,40 @@ The existing `finish-frem-s14-version-8` monitor owns terminal output collection
 Do not launch another run or change its frozen code, cohort, threshold or budget.
 Version 6 evidence and token revocation in this chat are complete. The broader
 baseline comparison and final research release remain pending Version 8 evidence.
+
+## 24 October 2026 — S14 0.2.4 release verified; execution access blocked
+
+Version 8 remains terminal invalid evidence: its independent semantic verifier
+did not reproduce the retained summaries. No Version 8 metric was interpreted.
+The unrun 0.2.0 semantic successor was audited before upload and found to have a
+wheel/module version mismatch plus stale predecessor budget prose/configuration.
+Versions 0.2.0 through 0.2.3 are preserved under distinct hashes; none was
+uploaded or numerically executed. Their successive engineering failures and
+repairs are recorded in `research/decisions`.
+
+The current exact candidate is 0.2.4, source identity
+`cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2`.
+Archive SHA-256 is
+`ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21`;
+wheel SHA-256 is
+`57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486`;
+notebook SHA-256 is
+`e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f`.
+Fifty-nine dependency-free tests passed from source and the same 59 passed
+against the extracted clean wheel. Checkout and extracted payload Ruff
+lint/format pass, every packaged source/test/config/document equals the audited
+checkout, the static release verifier passes, and a second fixed-epoch wheel
+build is byte-identical.
+
+Local numerical admission failed before imports at 330.234375, 358.359375 and
+331.6875 MiB available against the unchanged 512 MiB floor; pageouts increased
+342665/342757/342774. Chrome opened at an ambiguous profile chooser, so no
+browser profile, credential or alternate account was guessed. No upload, saved
+version, target test, qualification arm or historical cell occurred. The user
+must open the existing browser profile authenticated as Kaggle owner
+`ryangomez010`. Then upload only the exact 0.2.4 notebook, verify saved identity,
+run target tests and all 19 generated arms, and continue the 171-cell suite only
+after qualification. Interpret no metric unless target and separately controlled
+semantic verifiers both pass. Read
+`research/frem_s14_semantic_successor_0_2_4_20261024/ENGINEERING_RECEIPT.json`
+and `FLAW_CHECKLIST.md`.

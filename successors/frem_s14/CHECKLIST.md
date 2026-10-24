@@ -175,3 +175,42 @@ pending its independently verified evidence.
   semantic verifiers before opening the fixed historical-proxy suite.
 - [ ] Complete and independently verify the 171-cell suite without excluding
   failures; classify rather than optimize for a favorable outcome.
+
+### 0.2.1 pre-launch release-identity correction
+
+- [x] Preserve the unrun 0.2.0 wheel, archive, notebook, hashes and static
+  receipt rather than overwriting them.
+- [x] Make the Python module version agree with wheel metadata and require that
+  agreement in installed-wheel tests and release verification.
+- [x] Make the packaged historical configuration and prose agree with the
+  already frozen 4,000-second successor fold ceiling.
+- [ ] Pass target warning-strict tests, all 19 qualification arms, target
+  semantic verification and independent semantic verification before any
+  historical metric is interpreted.
+
+### 0.2.2 release-scope quality correction
+
+- [x] Preserve the unrun 0.2.1 wheel, archive, notebook and verification receipt.
+- [x] Apply only Ruff import-order and formatter corrections to packaged tests;
+  do not change a test assertion or scientific runtime.
+- [x] Re-run source and clean-wheel dependency-free tests, release-scope lint,
+  formatting, static release verification and reproducible-build comparison.
+- [x] Do not run 0.2.2 after the post-build archive audit failed; retain it as
+  an unrun superseded package and advance only with a new identity.
+
+### 0.2.3 verified-archive rebuild
+
+- [x] Preserve 0.2.2 unrun after its post-build archive lint check exposed that
+  import-order edits were not present in the packaged test bytes.
+- [x] Verify the corrected checkout before building a new immutable identity.
+- [x] Do not run 0.2.3 after its pre-build quality gate failed; retain it under
+  its own hashes and advance only with a new identity.
+
+### 0.2.4 invocation-stable release audit
+
+- [x] Preserve 0.2.3 unrun after its pre-build lint failed but the non-fail-fast
+  shell continued into artifact creation.
+- [x] Declare `frem_s14` as first-party in Ruff so import classification is
+  stable from the repository root, package root and extracted archive checks.
+- [ ] Use fail-fast pre-build checks and accept only a candidate whose extracted
+  archive, checkout, clean wheel and deterministic rebuild all pass.

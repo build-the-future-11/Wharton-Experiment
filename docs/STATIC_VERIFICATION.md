@@ -659,3 +659,24 @@ The existing `finish-frem-s14-version-8` monitor owns terminal output collection
 Do not launch another run or change its frozen code, cohort, threshold or budget.
 Version 6 evidence and token revocation in this chat are complete. The broader
 baseline comparison and final research release remain pending Version 8 evidence.
+
+## 24 October 2026 — S14 0.2.4 verified release boundary
+
+The current unrun candidate is version 0.2.4. Its static verifier checks the
+module/distribution version, 15 installed source modules, 17 archive payload
+hashes, 4,000-second packaged/runtime fold budget, notebook syntax, embedded
+archive equality, private visibility, GPU setting and Internet-off setting.
+Fifty-nine dependency-free tests pass from source and the same 59 pass against
+the extracted clean wheel. Checkout and extracted payload Ruff lint/format pass;
+the second fixed-epoch wheel has byte-identical SHA-256
+`57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486`.
+
+This is engineering evidence only. Local numerical admission failed at
+330.234375/358.359375/331.6875 MiB with rising pageouts, so no numerical library
+was imported. Existing-account Kaggle access is unresolved at Chrome's profile
+chooser; no profile was guessed and no upload or run occurred. Target numerical
+tests, 19-arm CUDA qualification, all 171 historical cells, target/independent
+semantic verification, empirical claims, protected confirmation, paper results
+and conference readiness remain unverified. Versions 0.2.0 through 0.2.3 are
+preserved unrun as failed/superseded release candidates. Exact evidence is in
+`research/frem_s14_semantic_successor_0_2_4_20261024`.

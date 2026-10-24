@@ -1,0 +1,12 @@
+{
+  "package_version": "0.2.2",
+  "source_identity": "f45f87384bb46f31f0c8bc298c645a5cd2102ed16e77206a4ebe30f2145683ba",
+  "archive": "frem_s14_kaggle_bundle-0.2.2.zip",
+  "archive_sha256": "8e01717ff62c5f21c5051626bdd763ac96bc4ed73755b71960d19636b4d2efd1",
+  "wheel": "frem_s14-0.2.2-py3-none-any.whl",
+  "wheel_sha256": "2c2dc73596793ac53f48bc2d1845d5df83e7498400344bba9522a927e3041576",
+  "notebook_sha256": "d526f66475e6717e5ee9ac7aa48404a091694082933fe4ab13d19937b0640a45",
+  "members": 18,
+  "runtime_qualified": false,
+  "status": "PACKAGED_NOT_NUMERICALLY_QUALIFIED"
+}

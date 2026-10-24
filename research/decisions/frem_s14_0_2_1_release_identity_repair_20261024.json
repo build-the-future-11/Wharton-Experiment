@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "iteration": "FREM-S14",
+  "decision": "Supersede the unrun 0.2.0 release with 0.2.1 before any Kaggle upload or numerical execution.",
+  "observation": "The 0.2.0 wheel metadata declared 0.2.0 while frem_s14.__version__ and its test declared 0.1.9. Its packaged README, specification and historical_suite.json also retained the predecessor 2800-second fold ceiling although the frozen successor decision and runtime suite used 4000 seconds.",
+  "severity": "Release identity and reproducibility blocker. Target tests would have accepted the stale module version and independent users could have followed a configuration inconsistent with the executed suite.",
+  "repair": [
+    "Bump the immutable release to 0.2.1 while preserving all 0.2.0 artifacts and hashes.",
+    "Align module and wheel versions and test installed-distribution equality.",
+    "Align the packaged configuration and prose with the frozen 4000-second per-fold ceiling and unchanged 13500-second notebook ceiling.",
+    "Extend release verification to check module identity and the packaged/runtime fold budget contract."
+  ],
+  "unchanged_scientific_contract": [
+    "seven-ETF cohort and exact source hashes",
+    "19 arms, seeds 11/29/47, three folds, labels, threshold and bootstrap family",
+    "model and optimizer behavior",
+    "private Internet-off Kaggle T4 execution",
+    "13500-second notebook ceiling and no protected access"
+  ],
+  "previous_release": "0.2.0",
+  "previous_release_status": "PRESERVED_UNRUN_NEVER_UPLOADED",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

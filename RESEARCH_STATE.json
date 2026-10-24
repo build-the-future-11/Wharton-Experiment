@@ -1,15 +1,15 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.2.0-s14-semantic-reproducibility-successor-kaggle-access-blocked",
+  "version": "0.2.4-s14-semantic-reproducibility-successor-kaggle-access-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-22T03:34:17+00:00",
+  "updated": "2026-10-24T08:14:21.206137+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
     "status": "EXECUTION_STARTED_EVIDENCE_BOUND",
     "scope": "Evidence-bound implementation, evaluation, inspection, reproducibility, and release deliverables for the FREM-S14 frontier and separately frozen successors."
   },
-  "phase": "s14_0_2_0_semantic_reproducibility_successor_static_verified_kaggle_access_blocked",
+  "phase": "s14_0_2_4_release_verified_local_numerical_and_kaggle_access_blocked",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -1413,7 +1413,7 @@
     "next_action": "Run unchanged unconsumed frozen matrix in a fresh output directory after resource admission succeeds, then audit every outcome. No blind positive-result search."
   },
   "current_iteration": "FREM-S14",
-  "current_request_scope": "Preserve the core architecture and all prior results; continue code hardening and permissible local tests, then private Kaggle GPU qualification and the fixed 171-cell historical proxy suite. The first GPU engineering run failed before market access; the corrected candidate remains unrun.",
+  "current_request_scope": "Preserve the core architecture, frozen Version 8 validity failure and every superseded unrun release; complete exact private Kaggle target tests, 19-arm qualification, fixed 171-cell historical proxy suite and independent semantic verification for release 0.2.4 without protected access or outcome-driven changes.",
   "s10_design_20261015": {
     "status": "DESIGN_COMPLETE_REVIEW_AND_FEASIBILITY_PENDING",
     "predecessor_phase": "s9_exploratory_implemented_resource_blocked",
@@ -1946,9 +1946,9 @@
     "next_action": "Run exact notebook and ZIP on an admitted compatible CUDA target; preserve and independently verify generated results before supplying any market dataset."
   },
   "frem_s14": {
-    "timestamp": "2026-10-22T03:34:00+00:00",
+    "timestamp": "2026-10-24T08:14:21.206137+00:00",
     "iteration": "FREM-S14",
-    "status": "GPU_0_2_0_SEMANTIC_REPRODUCIBILITY_SUCCESSOR_STATICALLY_VERIFIED_KAGGLE_PENDING",
+    "status": "GPU_0_2_4_RELEASE_VERIFIED_LOCAL_NUMERICAL_AND_KAGGLE_ACCESS_BLOCKED",
     "scientific_status": "NOT_EVALUATED",
     "decisions": [
       "research/decisions/frem_s14_kaggle_mount_failure_20261020.json",
@@ -1961,8 +1961,14 @@
       "research/decisions/frem_s14_0_1_9_calendar_cohort_successor_20261021.json",
       "research/decisions/frem_s14_version6_calendar_failure_20261021.json",
       "research/decisions/frem_s14_version8_semantic_readback_failure_20261021.json",
-      "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json"
+      "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json",
+      "research/decisions/frem_s14_0_2_1_release_identity_repair_20261024.json",
+      "research/decisions/frem_s14_0_2_2_quality_release_20261024.json",
+      "research/decisions/frem_s14_0_2_3_verified_archive_rebuild_20261024.json",
+      "research/decisions/frem_s14_0_2_4_invocation_stable_release_20261024.json"
     ],
+    "active_candidate_ref": "semantic_reproducibility_successor",
+    "current_candidate_history_note": "The following 0.1.9 object is the preserved Version 8 execution identity, not the active launch candidate. Exact 0.2.4 is the only active candidate.",
     "current_candidate": {
       "package_version": "0.1.9",
       "source_identity": "3ede5ae4badf3a0ff14a1f50fad37797320ac6a8812891b11ac5d93ea1c67577",
@@ -1994,17 +2000,17 @@
       "note": "Separately versioned seven-ETF calendar-compatible successor is independently release-verified. Private Kaggle Version 8 passed all 107 warning-strict tests and its 19-arm generated CUDA qualification, but the historical suite failed at the Fold 2 post-cell semantic-verification budget gate. This generated qualification does not qualify or validate the failed historical suite."
     },
     "semantic_reproducibility_successor": {
-      "timestamp": "2026-10-22T03:34:00+00:00",
-      "package_version": "0.2.0",
+      "timestamp": "2026-10-24T08:14:21.206137+00:00",
+      "package_version": "0.2.4",
       "role": "Separately versioned prospective repair of Version 8 cross-runtime preprocessing and score-summary reconstruction; no historical result has been reused or inspected.",
-      "source_identity": "f7feb800695935b574f40703c544cb4c071bfec8bdb9a77722ef001e147274cb",
+      "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
       "release": {
-        "archive": "frem_s14_kaggle_bundle-0.2.0.zip",
-        "archive_sha256": "95ea50e52504bf1652f565574e34ad8f91e47b392bda9d00d79999375d011d0d",
-        "wheel": "frem_s14-0.2.0-py3-none-any.whl",
-        "wheel_sha256": "5bf2054f66316a67320e88e8df3db872e1565b11ba7e48c2dc0433a6eafcfa1e",
-        "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_0.ipynb",
-        "notebook_sha256": "bd95672cf20a99516c7c377858b953f80bfa2f2128e8f406fb9f283f038037aa",
+        "archive": "frem_s14_kaggle_bundle-0.2.4.zip",
+        "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+        "wheel": "frem_s14-0.2.4-py3-none-any.whl",
+        "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+        "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_4.ipynb",
+        "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
         "members": 18,
         "status": "PACKAGED_STATICALLY_VERIFIED_NOT_NUMERICALLY_QUALIFIED"
       },
@@ -2014,12 +2020,15 @@
         "Increase only the new successor per-fold wall clock to 4000 seconds while retaining the notebook-wide 13500-second deadline."
       ],
       "unchanged_contract": "seven-ETF cohort, data hashes, 19 arms, seeds, folds, threshold, bootstrap family, private Internet-off T4 contract and no-imputation rule",
-      "release_verification": "research/frem_s14_semantic_successor_20261022/RELEASE_VERIFICATION.json",
-      "kaggle_access_blocker": "research/frem_s14_semantic_successor_20261022/KAGGLE_ACCESS_BLOCKER.json",
-      "decision": "research/decisions/frem_s14_0_2_0_semantic_reproducibility_successor_20261022.json",
-      "plan": "research/frem_s14_semantic_successor_20261022/PLAN.md",
+      "release_verification": "research/frem_s14_semantic_successor_0_2_4_20261024/RELEASE_VERIFICATION.json",
+      "engineering_receipt": "research/frem_s14_semantic_successor_0_2_4_20261024/ENGINEERING_RECEIPT.json",
+      "local_admission": "research/frem_s14_semantic_successor_0_2_4_20261024/LOCAL_ADMISSION.json",
+      "kaggle_access_blocker": "research/frem_s14_semantic_successor_0_2_4_20261024/KAGGLE_ACCESS_BLOCKER.json",
+      "decision": "research/decisions/frem_s14_0_2_4_invocation_stable_release_20261024.json",
+      "plan": "research/frem_s14_semantic_successor_0_2_4_20261024/PLAN.md",
+      "superseded_unrun_releases": ["0.2.0", "0.2.1", "0.2.2", "0.2.3"],
       "uploaded": false,
-      "launch_status": "BLOCKED_EXISTING_PRIVATE_KAGGLE_ACCOUNT_UNAUTHENTICATED",
+      "launch_status": "BLOCKED_EXISTING_PRIVATE_KAGGLE_ACCOUNT_PROFILE_UNRESOLVED",
       "runtime_qualified": false,
       "historical_cells_completed": 0,
       "protected_access": false,
@@ -2166,7 +2175,7 @@
       "scientific_use": false,
       "protected_access": false
     },
-    "blocker": "Kaggle Version 8 is terminal ERROR and remains preserved: all 4,499 remote files are retained and integrity-verified, but independent semantic readback failed (90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly). The 0.2.0 successor is statically release-verified but launch is blocked because the available browser is unauthenticated for existing private owner ryangomez010; Google SSO offered a different new-account registration, which was canceled. Once existing-account access is restored, 0.2.0 must still pass target warning-strict tests, all 19 qualification arms, target and independent semantic verification before any historical metric may be interpreted. Scientific status is NOT_EVALUATED.",
+    "blocker": "Kaggle Version 8 is terminal ERROR and remains preserved: all 4,499 remote files are retained and integrity-verified, but independent semantic readback failed (90/114 diagnosed Fold 0-1 cells exceeded the frozen 1e-10 date_mean_nll summary tolerance, and Fold 2 preprocessing did not reconstruct exactly). Releases 0.2.0 through 0.2.3 are preserved unrun after pre-launch audit failures. Exact 0.2.4 passes dependency-free source/clean-wheel tests, archive/identity/budget verification, lint/format and reproducible-wheel checks, but local numerical admission failed and the Chrome profile owning private Kaggle account ryangomez010 is unresolved. Once existing-account access is restored, only 0.2.4 may run; it must still pass target warning-strict tests, all 19 qualification arms, target and independent semantic verification before any historical metric may be interpreted. Scientific status is NOT_EVALUATED.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
@@ -2439,8 +2448,8 @@
   },
   "benchmark_and_successor_request_20261021": {
     "request": "Finish S14, then implement and test evidence-driven changes against simple baselines; preserve old results.",
-    "status": "READY_TO_QUEUE_AWAITING_TEMPORARY_TOKEN_APPROVAL",
-    "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
+    "status": "EXACT_0_2_4_RELEASE_READY_AWAITING_EXISTING_KAGGLE_ACCOUNT_ACCESS",
+    "receipt": "research/frem_s14_semantic_successor_0_2_4_20261024/ENGINEERING_RECEIPT.json",
     "successor_status": "AWAITING_VERIFIED_S14_RESULTS",
     "new_historical_cells": 0,
     "protected_access": false

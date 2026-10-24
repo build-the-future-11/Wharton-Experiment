@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24",
+  "iteration": "FREM-S14",
+  "decision": "Supersede the unrun 0.2.1 artifact with a 0.2.2 release-scope quality correction before external execution.",
+  "observation": "The strengthened 0.2.1 identity and budget verification passed, and 59 dependency-free source tests passed. Full release-scope Ruff then found import-order defects in four packaged numerical test modules and formatter differences in the version/contract test. These do not alter runtime science but prevented a clean declared quality gate.",
+  "repair": [
+    "Apply Ruff import-order and formatter changes only to packaged test source.",
+    "Advance module and distribution identity to 0.2.2 and rebuild only to new immutable paths.",
+    "Require source tests, clean installed-wheel tests, lint, formatting, static payload verification and byte-reproducible rebuild before upload."
+  ],
+  "unchanged_scientific_contract": [
+    "all frem_s14 runtime modules other than the version literal",
+    "seven-ETF cohort and exact source hashes",
+    "19 arms, seeds, folds, endpoints, practical threshold and statistics",
+    "4000-second fold ceiling and 13500-second notebook ceiling",
+    "private Internet-off T4 execution and no protected access"
+  ],
+  "previous_release": "0.2.1",
+  "previous_release_status": "PRESERVED_UNRUN_NEVER_UPLOADED",
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

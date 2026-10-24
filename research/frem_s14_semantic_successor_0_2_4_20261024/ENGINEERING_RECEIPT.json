@@ -1,0 +1,91 @@
+{
+  "timestamp_utc": "2026-10-24T08:14:21.206137+00:00",
+  "iteration": "FREM-S14",
+  "package_version": "0.2.4",
+  "status": "STATIC_AND_DEPENDENCY_FREE_VERIFIED_TARGET_NUMERICAL_EXECUTION_BLOCKED",
+  "release": {
+    "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+    "archive": "successors/frem_s14/dist/frem_s14_kaggle_bundle-0.2.4.zip",
+    "archive_bytes": 89207,
+    "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+    "wheel": "successors/frem_s14/dist/frem_s14-0.2.4-py3-none-any.whl",
+    "wheel_bytes": 51067,
+    "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+    "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_4.ipynb",
+    "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
+    "metadata": "successors/frem_s14/kaggle/kernel-metadata-0.2.4.json",
+    "metadata_sha256": "24e67f9d032f36dc47c1e26375cbd5de980b678b817a04f8f04481642b02df68"
+  },
+  "verification": {
+    "source_dependency_free_tests": {
+      "passed": 59,
+      "failed": 0,
+      "errors": 0
+    },
+    "clean_extracted_wheel_dependency_free_tests": {
+      "passed": 59,
+      "failed": 0,
+      "errors": 0
+    },
+    "checkout_ruff_lint": "PASS",
+    "checkout_ruff_format": "PASS",
+    "extracted_payload_ruff_lint": "PASS",
+    "extracted_payload_ruff_format": "PASS",
+    "payload_files_equal_checkout": true,
+    "static_release_verification": "research/frem_s14_semantic_successor_0_2_4_20261024/RELEASE_VERIFICATION.json",
+    "module_and_wheel_version_equal": true,
+    "fold_budget_contract_seconds": 4000,
+    "notebook_ceiling_seconds": 13500,
+    "rebuild_wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+    "wheel_rebuild_byte_identical": true
+  },
+  "local_numerical_admission": {
+    "receipt": "research/frem_s14_semantic_successor_0_2_4_20261024/LOCAL_ADMISSION.json",
+    "passed": false,
+    "minimum_mib": 512,
+    "available_mib": [
+      330.234375,
+      358.359375,
+      331.6875
+    ],
+    "pageouts": [
+      342665,
+      342757,
+      342774
+    ],
+    "numerical_import_attempted": false
+  },
+  "preserved_prelaunch_releases": [
+    {
+      "version": "0.2.0",
+      "archive_sha256": "95ea50e52504bf1652f565574e34ad8f91e47b392bda9d00d79999375d011d0d",
+      "disposition": "SUPERSEDED_UNRUN_RELEASE_IDENTITY_AND_PACKAGED_CONTRACT_DEFECT"
+    },
+    {
+      "version": "0.2.1",
+      "archive_sha256": "f1cf7152249e375bf6db613af179c7023f8fe214d2ddc008328c7ed6302274b4",
+      "disposition": "SUPERSEDED_UNRUN_RELEASE_SCOPE_QUALITY_AUDIT"
+    },
+    {
+      "version": "0.2.2",
+      "archive_sha256": "8e01717ff62c5f21c5051626bdd763ac96bc4ed73755b71960d19636b4d2efd1",
+      "disposition": "SUPERSEDED_UNRUN_CORRECTIONS_NOT_PRESENT_IN_ARCHIVE"
+    },
+    {
+      "version": "0.2.3",
+      "archive_sha256": "4651dc47f19bdb5bb91b00c8bd6900044d6118b0c31e2ba71c230f94fb52176f",
+      "disposition": "SUPERSEDED_UNRUN_INVOCATION_CONTEXT_AND_NON_FAIL_FAST_BUILD"
+    }
+  ],
+  "external_execution": {
+    "uploaded": false,
+    "kaggle_version_created": false,
+    "target_tests_run": false,
+    "generated_qualification_arms_completed": 0,
+    "historical_cells_completed": 0,
+    "protected_access": false,
+    "blocker": "Existing private Kaggle owner ryangomez010 is not authenticated in an unambiguous active browser profile. No profile, credentials or alternate account were guessed."
+  },
+  "scientific_status": "NOT_EVALUATED",
+  "claims": "Engineering and release verification only; no predictive, economic, protected, publication-readiness or conference-readiness claim."
+}

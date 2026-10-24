@@ -1,5 +1,6 @@
 """Executable low-memory contracts; these do not import a scientific library."""
 
+import importlib.metadata
 import io
 import json
 import tempfile
@@ -17,7 +18,13 @@ from frem_s14.runtime import admit, identity, manifest, read_json, timestamp, ve
 
 class Contracts(unittest.TestCase):
     def test_exported_version_and_plan_cli_match_declared_suite_wrapper(self):
-        self.assertEqual(__version__, "0.1.9")
+        self.assertEqual(__version__, "0.2.4")
+        try:
+            installed_version = importlib.metadata.version("frem-s14")
+        except importlib.metadata.PackageNotFoundError:
+            installed_version = None
+        if installed_version is not None:
+            self.assertEqual(installed_version, __version__)
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / "suite.json"
             path.write_text(json.dumps({"config": RunConfig().to_dict(), "fold_ends": []}))
@@ -27,6 +34,14 @@ class Contracts(unittest.TestCase):
             plan = json.loads(output.getvalue())
             self.assertEqual(plan["configuration"], json.loads(json.dumps(RunConfig().to_dict())))
             self.assertEqual(plan["cells"], len(RunConfig().arms) * len(RunConfig().seeds))
+
+        declared = json.loads(
+            (Path(__file__).resolve().parents[1] / "configs/historical_suite.json").read_text()
+        )
+        from frem_s14.suite import suite_config
+
+        self.assertEqual(declared["config"]["max_seconds"], 4000)
+        self.assertEqual(declared["config"]["max_seconds"], suite_config().max_seconds)
 
     def test_json_rejects_ambiguous_identity(self):
         with tempfile.TemporaryDirectory() as temp:
