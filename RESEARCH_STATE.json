@@ -2481,6 +2481,24 @@
     "new_historical_cells": 0,
     "protected_access": false
   },
+  "final_upgrades_and_experiment_master_checklist_20261024": {
+    "created_at": "2026-10-24T10:49:58Z",
+    "path": "FREM_FINAL_UPGRADES_AND_EXPERIMENT_MASTER_CHECKLIST_20261024.md",
+    "status": "PLANNED_NOT_EXECUTED",
+    "current_scientific_status": "NOT_EVALUATED",
+    "s14_boundary": "FREM-S14-0.2.4 remains byte-identical and must receive a terminal disposition before outcome-informed successor selection.",
+    "s15_boundary": "All science-changing fixes and features require a separately versioned S15 protocol, freeze, registry, budget, and output root.",
+    "declared_matrices": {
+      "s14_historical_proxy_cells": 171,
+      "s15_development_cells": 24,
+      "s15_core_confirmatory_cells": 210,
+      "s15_mechanism_ablation_cells": 162
+    },
+    "checklist_items": 367,
+    "protected_access": false,
+    "new_model_fits": 0,
+    "claim": "Planning and documentation only; no runtime, empirical, benchmark, ablation, or protected result was produced."
+  },
   "publication": {
     "timestamp": "2026-10-21T11:38:23.399949+00:00",
     "commit": "c3c43c051abdef217bcc5f54dea8d86257504975",

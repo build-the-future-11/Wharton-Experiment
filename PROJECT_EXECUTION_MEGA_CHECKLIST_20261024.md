@@ -5,7 +5,7 @@
 **Current scientific status:** `NOT_EVALUATED`
 **Immediate state:** static release verified; local numerical admission failed; existing private Kaggle owner and target runtime settings verified; browser upload awaits action-time confirmation; 0/19 qualification arms and 0/171 historical cells completed for 0.2.4.
 
-This is the ordered checklist for finishing the current project honestly. It complements the broader capability backlog in `RESEARCH_FEATURE_MEGA_CHECKLIST.md`. Work through the gates in order. A checked item must have the named evidence; source code, a green UI, a static parse, or a paper draft does not substitute for runtime or scientific evidence.
+This is the ordered checklist for finishing the current project honestly. It complements the broader capability backlog in `RESEARCH_FEATURE_MEGA_CHECKLIST.md`. The integrated final engineering, S15 extension, benchmark, ablation, robustness, OOD, reproduction, and release program is in `FREM_FINAL_UPGRADES_AND_EXPERIMENT_MASTER_CHECKLIST_20261024.md`. Work through the gates in order. A checked item must have the named evidence; source code, a green UI, a static parse, or a paper draft does not substitute for runtime or scientific evidence.
 
 ## Non-negotiable rules
 
