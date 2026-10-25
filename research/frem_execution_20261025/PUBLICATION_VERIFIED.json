@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-10-25T08:59:25.306153+00:00",
+  "status": "PUBLISHED_REMOTE_VERIFIED",
+  "branch": "codex/frem-research-execution-20261020",
+  "remote": "https://github.com/build-the-future-11/Wharton-Experiment.git",
+  "previous_remote_head": "dc411dd2e01554964f547a719f7163c877dbcf73",
+  "published_delivery_head": "99fc89de7bb324612a06296445a9695ba1a6f2e1",
+  "delivery_commit": "9ad1d42206b9650e5e5ee31b849fb9e8bfb76711",
+  "commits_pushed": 7,
+  "mode": "normal fast-forward; original commit identities preserved",
+  "remote_readback_sha": "99fc89de7bb324612a06296445a9695ba1a6f2e1",
+  "remote_equals_local_at_readback": true,
+  "owner_authenticated": "build-the-future-11",
+  "prior_failure_receipt": "PUBLICATION_RECEIPT.json",
+  "scientific_status": "NOT_EVALUATED",
+  "kaggle_execution_started": false,
+  "scope": "Publication only; no new experiment, quota observation, or protected use."
+}
