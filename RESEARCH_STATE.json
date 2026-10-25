@@ -2,7 +2,7 @@
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
   "version": "0.2.4-s14-kaggle-source-verified-quota-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-25T08:34:38.633674+00:00",
+  "updated": "2026-10-25T08:38:35.553003+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
@@ -2582,6 +2582,12 @@
     "preserved_evidence_files": 4902,
     "receipt": "research/frem_execution_20261025/SESSION_RESULT.json",
     "handoff_archive": "dist/FREM_S14_HANDOFF_20261025.zip",
-    "verification_report": "reports/VERIFICATION_AND_HANDOFF.md"
+    "verification_report": "reports/VERIFICATION_AND_HANDOFF.md",
+    "publication": {
+      "status": "BLOCKED_AUTHENTICATION",
+      "delivery_commit": "9ad1d42206b9650e5e5ee31b849fb9e8bfb76711",
+      "receipt": "research/frem_execution_20261025/PUBLICATION_RECEIPT.json",
+      "remote_verified_equal": false
+    }
   }
 }

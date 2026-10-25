@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-10-25T08:36:45.405639+00:00",
+  "status": "BLOCKED_AUTHENTICATION",
+  "local_commit": "9ad1d42206b9650e5e5ee31b849fb9e8bfb76711",
+  "branch": "codex/frem-research-execution-20261020",
+  "remote": "https://github.com/build-the-future-11/Wharton-Experiment.git",
+  "push_attempt": "Failed: could not read Username for https://github.com: Device not configured",
+  "cli_auth_status": "Existing GitHub CLI token invalid; confirmed with network-enabled auth status. No credential values collected.",
+  "connector_permissions": "push/admin true, read-only metadata verified; commit creation API does not expose original authorship/time fields",
+  "decision": "Preserve existing commit identities. Await user reauthentication for ordinary fast-forward git push.",
+  "remote_last_verified": "dc411dd2e01554964f547a719f7163c877dbcf73",
+  "published": false
+}
