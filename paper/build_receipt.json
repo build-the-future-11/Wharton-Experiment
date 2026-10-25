@@ -3,11 +3,11 @@
   "source_sha256": {
     "arxiv.sty": "eaf2fa779acfc1dc4e5ea75b78bb40967b780b67a19b80113c6b2930cfff2d14",
     "engineering_results.tex": "15863c18aee90ec6a9a15323cbedf5ae8db6ed018ccce7f68e2b6986199d7016",
-    "main.tex": "5b0bc1b90f61ba56879f8ea9e90a9ae32fc73f78257ab0c8140670066b90eae3",
+    "main.tex": "760387d6bb283ab1e26c3b648c21ab4e6ce0cbd1d57014c8ff061932f00cba22",
     "public_results.tex": "911fe241e17d735688228e404ed9b67d4dd2432e6325bfef7456108f006298e3",
-    "references.bib": "3b632ab7f02f07023e2a13664f5e7fb1c484c0a87891fe86c71430f9b45086fa",
+    "references.bib": "b5dc943ab825133715e46ab1f85d9e1fb6e8d932e65c22edb754c468f6b2036a",
     "s4_results.tex": "3672da4335ab420902d1dffe2cd189a4013e96b73340aaa8893ff41eae624779"
   },
-  "pdf_sha256": "009fe6fb780542b67cfe0080c07b256c05beb23390afcc311829f5bb3224104d",
+  "pdf_sha256": "d2e86176b66b09c87be6d1f1d8fb53f2d7c0da7a3c27d736fe6e7d3ea3a6ebcd",
   "scope": "Document compilation only; no research execution or submission readiness"
 }

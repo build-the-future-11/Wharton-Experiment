@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-25T08:20:00.273811+00:00",
+  "path_count": 4902,
+  "baseline_content_hashes_verified": 4902,
+  "baseline_sha256": "9891c413f63467b6b73bb27a18a62964c9a098e8cd5cde97b5c70b2983cf8c6e",
+  "all_paths_classified": true,
+  "scope": "Baseline entries only",
+  "full_inventory_sha256": "a562b155c131e84eddc8ae7f0e21a2a80b1eb1edec9a7ae9016626a5e00802ae",
+  "full_inventory_location": "research/frem_execution_20261025/EVIDENCE_PRESERVATION.json (retained locally; not bulk-published)"
+}

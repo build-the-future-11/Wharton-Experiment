@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-10-25T08:18:32.844540+00:00",
+  "status": "BLOCKED",
+  "research_status": "PRE-RUN",
+  "scientific_status": "NOT_EVALUATED",
+  "frozen_release": "0.2.4",
+  "source_tests": {
+    "passed": 108,
+    "skipped_cuda": 1,
+    "seconds": 17.29,
+    "log": "numerical_tests.log"
+  },
+  "new_tool_tests": {
+    "pack": 8,
+    "validator": 6
+  },
+  "cpu_qualification": "FAILED_RESOURCE_ADMISSION_BEFORE_IMPORTS",
+  "cuda_qualification": "NOT_RUN",
+  "historical_cells": 0,
+  "protected_access": false,
+  "kaggle": "PRIVATE_VERSION9_SAVED_SOURCE_VERIFIED_QUOTA_BLOCKED",
+  "paper": "32-page draft built using existing arxiv.sty; no overfull boxes or unresolved references",
+  "frozen_source_changed": false,
+  "whole_suite_resume": "NOT_IMPLEMENTED_IN_FROZEN_CANDIDATE",
+  "next_gate": "Sufficient Kaggle GPU quota for the bounded full campaign; then exact target qualification and 171-cell suite.",
+  "kaggle_version_id": 362065796,
+  "quota_display": "00:44 / 30 hrs",
+  "preserved_evidence_files": 4902
+}

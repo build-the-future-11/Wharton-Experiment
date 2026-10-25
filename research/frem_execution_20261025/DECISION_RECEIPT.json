@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-25T08:16:11.755744+00:00",
+  "previous": "3f368fb31ec98d9534adc740d4eda2825425f5bb617b53eaedb21fed92fe3cc4",
+  "event": {
+    "type": "engineering_and_evidence_reconciliation",
+    "study": "FREM-S14",
+    "version": "0.2.4-unchanged",
+    "observation": "108 local numerical/source tests passed; one CUDA-only skip. Subsequent generated CPU qualification blocked before imports by fresh memory admission. Version 8 manuscript status stale. Frozen notebook lacks suite-level cross-session resume.",
+    "change": "External transport packer and static handoff validator; paper status/cohort/budget reconciliation and source-verified novelty limitations. No frozen source, threshold, cohort, seed, result or budget change.",
+    "evidence": "research/frem_execution_20261025",
+    "scientific_status": "NOT_EVALUATED",
+    "protected_access": false,
+    "failure_policy": "Retain CPU admission failure and all historical failures. No claim promotion or changed scientific freeze."
+  },
+  "sha256": "12e9bf6ba129f6e21b1a1e7bf077c88bc2552faa6ed905fab61f4030c4ea7366"
+}

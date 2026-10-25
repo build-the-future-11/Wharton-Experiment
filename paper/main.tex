@@ -24,15 +24,38 @@
 \newtheorem{proposition}{Proposition}
 \title{FREM: Causal Fourier--Reservoir Engram Memory for Financial Forecasting and Liability-Aware Allocation\\\large Evidence-Bound Specification, Exploratory Findings, and the FREM-S14 Successor Protocol}
 \author{Research specification prepared for Ryan Gomez}
-\date{21 October 2026\\Version 0.7: exploratory evidence and running FREM-S14 calendar successor}
+\date{25 October 2026\\Version 0.8: retained invalid evidence and verified local S14 tests}
 \begin{document}
 \maketitle
 \begin{center}
-\fcolorbox{teal}{teal!5}{\parbox{0.92\linewidth}{\textbf{Primary memory advantage not established.} Synthetic and public exploratory campaigns are complete. S3 memory effects are mixed and both primary intervals include zero. FREM-S14 package 0.1.8 passed 107 warning-strict tests and all 19 generated CUDA qualification arms on an admitted Kaggle GPU, then failed strict intake because seven of eight source ETF calendars lack 17 February 2011 while QQQ includes it. Version 6 is terminal; the mismatch is verified against all eight executed source hashes. A separately frozen seven-ETF package 0.1.9 is running as Version 8; no historical results are independently verified yet. Protected 2025 onward outcomes remain untouched. This draft reports actual evidence and does not establish profitability or submission readiness.}}
+\fcolorbox{teal}{teal!5}{\parbox{0.92\linewidth}{\textbf{Primary memory advantage not established.} Synthetic and public exploratory campaigns are complete. S3 memory effects are mixed and both primary intervals include zero. FREM-S14 package 0.1.8 passed 107 warning-strict tests and all 19 generated CUDA qualification arms on an admitted Kaggle GPU, then failed strict intake because seven of eight source ETF calendars lack 17 February 2011 while QQQ includes it. Version 6 is terminal; the mismatch is verified against all eight executed source hashes. The seven-ETF Version 8 terminated with a failed suite and failed independent semantic readback; its metrics are invalid evidence. The separate 0.2.4 candidate passes 108 local tests with one CUDA-only skip; target execution remains pending. Protected 2025 onward outcomes remain untouched. This draft reports actual evidence and does not establish profitability or submission readiness.}}
 \end{center}
 
 \begin{abstract}
-Financial predictors must separate recurring information from transient noise while respecting information availability, execution timing, and investor liabilities. We specify FREM, a candidate architecture combining temporal joint-embedding prediction, contraction-bounded reservoirs, trailing Fourier descriptors, and bounded outcome-matured episodic memory. The proposed mechanism is delayed utility credit: an episode can influence retention and retrieval only after its outcome becomes observable. The FREM-S14 successor adds masked multi-offset EMA targets, an exact conditional finite-grid Gaussian diffusion transition, mature-neighbor graph retrieval, bounded training-residual-guided neurogenesis, and separately capped likelihood, downside, and tail routers. A constrained allocation layer consumes explicitly defined simple-return scenarios and protects investor cash-flow obligations. We formalize information timing, forward and training processes, frozen inference, uncertainty, cost accounting, and a liability case based on Laura Gao's supplied preparation document. Algebraic results establish reservoir contraction, causal forecast measurability under stated assumptions, and bounded retained state; they do not establish market predictability. The fixed S14 development family contains 19 arms, three seeds, and three expanding historical-proxy folds, with complete-family inference and an untouched 2025 onward boundary. The retained synthetic integration exercise favors the memory-off control. Completed public exploratory S2, six-window, S3, and S4 campaigns provide mixed or unsupported memory evidence; S3 primary gains are -0.014116 and +0.007006 nats in 2023 and 2024, with both intervals including zero. S14 package 0.1.8 passed 107 warning-strict tests and a complete 19-arm generated CUDA qualification, then failed strict intake because the eight source calendars differ by one date. No historical model fit started in that eight-ETF attempt. A separately frozen seven-ETF successor is running, with no verified market result yet; canonical confirmation remains unevaluated and completed protocols remain closed.
+We study whether outcome-matured spectral memory improves out-of-time financial
+forecasting under matched information and bounded resources. FREM combines
+joint-embedding prediction, contraction-bounded reservoirs, trailing Fourier
+descriptors and bounded episodic retrieval. Its S14 successor adds masked
+multi-offset EMA targets, a conditional finite-grid Gaussian diffusion
+transition, mature-neighbor graph retrieval, training-residual-guided
+neurogenesis and capped likelihood, downside and tail routers. We specify
+causal timing, training, inference, proper scoring, uncertainty and allocation
+accounting. Algebraic results concern contraction, causal measurability and
+bounded retained state; they do not establish market predictability.
+
+The registered S14 historical-proxy matrix comprises 19 arms, three seeds and
+three expanding folds. The protected 2025 onward boundary remains untouched.
+Earlier synthetic and public exploratory studies provide mixed or unsupported
+memory evidence. S3 gains of -0.014116 and +0.007006 nats both have intervals
+including zero. The eight-ETF S14 attempt passed generated GPU qualification
+but failed strict calendar intake before fitting. Its seven-ETF successor,
+Version 8, terminated with failed independent semantic readback; its historical
+metrics are invalid evidence. The separately versioned 0.2.4 candidate repairs
+reproducibility and passes 108 local tests with one CUDA-only skip. Target
+qualification and historical results remain pending. No empirical advantage,
+profitability, exhaustive novelty or protected-confirmation claim follows from
+these engineering checks. Completed protocols, failures and negative findings
+remain preserved.
 \end{abstract}
 \newpage
 \begingroup
@@ -65,6 +88,18 @@ VICReg motivates variance and covariance penalties against representation collap
 XGBoost is gradient tree boosting \citep{chen2016}. It serves as a standalone benchmark and an optional residual corrector. It neither traverses a financial graph nor makes the reservoir run faster. DLinear motivates a simple decomposition-based linear sequence control, while patch-based Transformers motivate a compact tokenized sequence control \citep{zeng2022,nie2022}. The package's task-specific DLinear and patch-Transformer implementations are architectural controls, not claimed reproductions of published state-of-the-art scores.
 
 Financial retrieval and memory are already explicit research directions. FinMem combines layered memory with an LLM trading agent \citep{yu2023finmem}. FinSrag retrieves financial time-series segments using FinSeer and supplies them to StockLLM \citep{xiao2025finsrag}. These are direct application-level neighbors, although their language-model interfaces differ from FREM's numerical residual memory. Their existence rules out a broad claim to originate financial memory or retrieval. FREM's narrower question concerns outcome-matured utility retention under matched information and bounded storage. That distinction is a candidate mechanism, not established novelty, and neither publication's reported performance transfers to FREM.
+
+A source refresh on 25 October 2026 identifies a closer boundary: Zhao and
+Welsch's financial RAG preprint uses external Bayesian source memory updated
+from matured residual-return feedback \citep{zhao2026source}. Thus delayed
+market-feedback memory alone is not a defensible novelty claim. FREM's numerical
+episode store and reservoir mixture differ from a frozen language-model reader,
+but that distinction still needs a matched-mechanism experiment. HEPA also
+pretrains a horizon-conditioned temporal JEPA for event prediction
+\citep{petersen2026hepa}; multi-horizon representation prediction alone is not
+new. These are abstract-level source checks, not independent reproductions or
+an exhaustive full-text novelty review; their reported scores are not compared
+to FREM's different task.
 
 Repeatedly choosing a strategy because it looks good on the same historical outcomes can overfit the backtest \citep{bailey2015}. Consequently, the package separates development from protected confirmation, retains failed runs, and does not treat a new seed as a new market history. The literature review defines important neighbors but does not establish exhaustive novelty. Before submission, full-text mechanism comparisons and matched-information experiments against suitable retrieval controls remain necessary; the added primary-source records do not constitute an exhaustive novelty audit.
 
@@ -552,7 +587,7 @@ The registered seeds are 11, 29, and 47. There is no automatic hyperparameter
 search in this matrix. Hybrid XGBoost is validation selected and its additional
 compute must be reported rather than hidden.
 
-The historical proxy cohort is SPY, QQQ, IWM, DIA, TLT, IEF, GLD, and SLV.
+The current 0.2.4 historical proxy cohort is SPY, IWM, DIA, TLT, IEF, GLD, and SLV. The original eight-ETF cohort also included QQQ; its failed intake and the prospective population change are retained below.
 Three expanding prefixes end before 2011, 2015, and 2018. The intake requires
 identical calendars and rejects intersection selection, forward filling, and
 asset substitution. Nine causal historical features create 20-observation
@@ -560,7 +595,7 @@ compounded targets. Each fold uses chronological 60\% training, 20\% validation,
 and 20\% evaluation, with a 20-observation embargo and outcome-maturity purge.
 The complete matrix therefore has
 $19\times3\times3=171$ declared cells. Those cells are not 171 independent
-financial histories. A fold may consume at most 2,800 seconds and the notebook
+financial histories. The 0.2.x semantic successor reserves at most 4,000 seconds per fold for fitting and mandatory verification (the predecessor ceiling was 2,800 seconds), and the notebook
 at most 13,500 seconds including tests and qualification. A failed, missing, or
 timed-out cell stays in the denominator.
 
@@ -575,9 +610,9 @@ exploratory because the source is a present-day adjusted-close archive without
 verified point-in-time adjustment vintages, inactive securities, executable
 quotes, spreads, impact, or terminal distributions.
 
-\subsection{Implementation and execution evidence through 21 October 2026}
+\subsection{Preserved execution evidence through 21 October 2026}
 
-The fully read-back failed candidate is package 0.1.8, source identity
+The historical intake-failed candidate is package 0.1.8, source identity
 \texttt{c8d8a1c3fa57e6cd\allowbreak fcd2bcec72fee22d\allowbreak
 7e0c86ce861da316\allowbreak b18b393ad907414b}.
 The same 59 unique dependency-free tests passed from source and a clean wheel.
@@ -618,11 +653,11 @@ occurred: the unchanged host gate refused memory samples of 303.4, 289.2 and
 GPU Version 5 & Fixture failure & 105 passes, two failures; zero historical cells \\
 GPU Version 6 & Qualification complete & 107 tests and 19/19 generated arms pass \\
 Historical source intake & Calendar mismatch & Seven ETFs lack one QQQ date; no imputation or intersection applied \\
-Historical proxy matrix & 0/171 complete & No S14 predictive or economic result \\
+Version 6 historical matrix & 0/171 complete & No market fit before intake failure \\
 Protected 2025 onward & Not accessed & No confirmatory consumption \\
 \bottomrule
 \end{tabularx}
-\caption{S14 execution evidence. Generated qualification does not establish
+\caption{Historical S14 evidence through Version 6. Generated qualification does not establish
 market efficacy.}
 \label{tab:s14-ledger}
 \end{table}
@@ -649,12 +684,39 @@ as completion of, the original eight-ETF protocol. Model components, 19 arms,
 three seeds, three folds, practical threshold, bootstrap procedure, 171-cell
 denominator and compute ceilings are unchanged.
 
-Private Kaggle Version 8 has saved notebook cells matching that successor and
-the declared GPU, source and Internet settings. The execution owner's latest
-status check at 10:53 UTC on 21 October reports it running. Qualification counts,
-historical completion and baseline comparisons remain unverified until terminal
-outputs are independently reconstructed. The earlier Version 7 duplicate is
-recorded as cancellation-acknowledged; it supplies no scientific evidence.
+Private Kaggle Version 8 retained 4,499 files (1,432,242,492 bytes),
+107 passing tests, and 19/19 generated CUDA arms. Although all 171 cell records
+were marked complete, the suite failed when its budget expired before Fold 2
+semantic verification. Independent readback then failed: date-mean likelihood
+summaries differed under the frozen tolerance, and Fold 2 preprocessing did not
+reconstruct exactly. Integrity checks passed; semantic checks did not. These
+metrics are invalid evidence and are not interpreted as a positive or negative
+hypothesis result. The earlier Version 7 cancellation is retained separately.
+
+\subsection{Separate semantic-reproducibility candidate and local verification}
+
+Version 0.2.4 preserves the seven-ETF cohort, 19 arms, three seeds, three folds,
+practical margin, bootstrap procedure and 13,500-second total ceiling. It
+retains target-runtime per-observation score vectors and uses ordered scalar
+reductions and deterministic train-only preprocessing. The 4,000-second fold
+ceiling is a prospectively recorded change, not an extension of Version 8.
+Versions 0.2.0--0.2.3 remain preserved, unrun release candidates. No frozen
+acceptance tolerance was relaxed and no protected outcome was inspected.
+
+On 25 October the unchanged 0.2.4 source passed 108 warning-strict local tests
+in 17.29 seconds; one explicitly CUDA-only test was skipped. This includes
+mathematical and checkpoint tests but does not qualify a GPU environment.
+A subsequent generated CPU qualification attempt was stopped by a fresh
+resource-admission failure before numerical imports. Both outcomes are retained
+in \path{research/frem_execution_20261025}. The release wheel, 15 source modules,
+17 payload hashes and embedded notebook archive match the immutable release.
+No historical 0.2.4 fit or protected confirmation has occurred.
+
+\textbf{Pending experimental evidence:} target CUDA tests, 19-arm qualification,
+all 171 historical cells, independent semantic verification and complete-family
+analysis. Figures or tables asserting a current model advantage cannot be
+populated until this chain passes. Novelty and empirical superiority remain
+unestablished; the manuscript is an evidence-bound research draft.
 
 \section{Current evidence and failure analysis}
 \label{sec:evidence}

@@ -1,0 +1,287 @@
+{
+  "files": [
+    {
+      "path": "RESEARCH_STATE.json",
+      "bytes": 165405,
+      "sha256": "b75b3f8e88bb6051a0701dc03ce8185aefbd6f1565399be407953db033c0dcd1"
+    },
+    {
+      "path": "dist/FREM_S14_HANDOFF_20261025.zip",
+      "bytes": 450113,
+      "sha256": "94699fcbb946b9437449757e6e6275411ac7928f9ca9803d842ddb34f6a4039f"
+    },
+    {
+      "path": "docs/CODEX_HANDOFF.md",
+      "bytes": 111065,
+      "sha256": "09c46a38b0c59805cdf49b5d7fd8580116ed3455d2eed453970aa10922ee3831"
+    },
+    {
+      "path": "docs/STATIC_VERIFICATION.md",
+      "bytes": 67050,
+      "sha256": "fe16184409c60418c430376bda189427ce2a41fd17811f061d1ebe01570f7704"
+    },
+    {
+      "path": "kaggle/FREM_S14_GPU_0_2_4.ipynb",
+      "bytes": 128377,
+      "sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f"
+    },
+    {
+      "path": "kaggle/RELEASE-0.2.4.json",
+      "bytes": 577,
+      "sha256": "49809bcfb504dd07e9ca78a7bd607078c69815d8ee1928047d69d067da960d7a"
+    },
+    {
+      "path": "kaggle/REQUIRED_DATASETS.md",
+      "bytes": 1200,
+      "sha256": "9048addb587e8cb0bad48b09c7212d9a97e7a6cf1a3e971c0c31e44993e6b74a"
+    },
+    {
+      "path": "kaggle/START_HERE.md",
+      "bytes": 8021,
+      "sha256": "d6bded888aaf847d16b00c2b1cf64b43544f3464bf7e584d5210ea7b3b408e8f"
+    },
+    {
+      "path": "kaggle/checksums.sha256",
+      "bytes": 1062,
+      "sha256": "05a5823804b2c3737a4879fb036790a3f537f109cd563f8e095b4f6386e0fb9a"
+    },
+    {
+      "path": "kaggle/experiment_manifest.json",
+      "bytes": 26093,
+      "sha256": "fb136c12a036f9004ff5a5cde33a61d0dc0f8ae1e7e35b5c01adc168d99ea18c"
+    },
+    {
+      "path": "kaggle/frem_s14_kaggle_bundle-0.2.4.zip",
+      "bytes": 89207,
+      "sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21"
+    },
+    {
+      "path": "kaggle/input_manifest.json",
+      "bytes": 1592,
+      "sha256": "7ca0d17453c9f8e271877d21e3e10d85035ce86df9ae40adfb1407537abe8715"
+    },
+    {
+      "path": "kaggle/kaggle_config.json",
+      "bytes": 504,
+      "sha256": "bcbda03a1bb597a363c66f038fa8c86db0c6d5868a46cb7f1c3bf49f0e87d7ed"
+    },
+    {
+      "path": "kaggle/kernel-metadata-0.2.4.json",
+      "bytes": 417,
+      "sha256": "24e67f9d032f36dc47c1e26375cbd5de980b678b817a04f8f04481642b02df68"
+    },
+    {
+      "path": "kaggle/pack_results.py",
+      "bytes": 4951,
+      "sha256": "064d4a8f2a444e88b018494b2ab4a6e2a60b1df15e2f636996deb6dd772525d4"
+    },
+    {
+      "path": "kaggle/requirements-kaggle.txt",
+      "bytes": 229,
+      "sha256": "3700aa406c83d4c175caac3f81bc486827662b935edc9bc85b2186dd5a3519c9"
+    },
+    {
+      "path": "kaggle/validate_kaggle_package.py",
+      "bytes": 5251,
+      "sha256": "204aee18c5093ccbdd0e8992f4af0945da197a4cf77dd9c79642095794840324"
+    },
+    {
+      "path": "paper/build_receipt.json",
+      "bytes": 765,
+      "sha256": "e120111e148429bf171bcbd3d9d93e15b808e994e3705a986acc3b5dffb76808"
+    },
+    {
+      "path": "paper/main.pdf",
+      "bytes": 201069,
+      "sha256": "d2e86176b66b09c87be6d1f1d8fb53f2d7c0da7a3c27d736fe6e7d3ea3a6ebcd"
+    },
+    {
+      "path": "paper/main.tex",
+      "bytes": 85528,
+      "sha256": "760387d6bb283ab1e26c3b648c21ab4e6ce0cbd1d57014c8ff061932f00cba22"
+    },
+    {
+      "path": "paper/references.bib",
+      "bytes": 7149,
+      "sha256": "b5dc943ab825133715e46ab1f85d9e1fb6e8d932e65c22edb754c468f6b2036a"
+    },
+    {
+      "path": "reports/EXPERIMENT_PLAN.md",
+      "bytes": 3254,
+      "sha256": "7c33d751fa76d3208cd4bb2499cc733cfd573eaaec546af4f3bdb26fecc96441"
+    },
+    {
+      "path": "reports/FORENSIC_AUDIT.md",
+      "bytes": 4567,
+      "sha256": "2537687dddbd3dec5c64d0de9a7016c82172b8d14950b06679b3c54b7ec0c1b8"
+    },
+    {
+      "path": "reports/IMPROVEMENTS_AND_CHANGELOG.md",
+      "bytes": 2234,
+      "sha256": "20a968b1ac536092e9ab8274c784fa50c0bab77fd5038610052c37c1acf28a84"
+    },
+    {
+      "path": "reports/VERIFICATION_AND_HANDOFF.md",
+      "bytes": 12467,
+      "sha256": "1aa8a33c8db7eb6fd9226c90f61163e278ea9cebf6852de44db04bf18e7ab998"
+    },
+    {
+      "path": "research/events.jsonl",
+      "bytes": 199430,
+      "sha256": "ca9681b8785cb95b6f614c3c0775c4d318a34c83b03bd989226b310dca338f8e"
+    },
+    {
+      "path": "research/frem_execution_20261025/DECISION_EVENT.json",
+      "bytes": 843,
+      "sha256": "db57367dab30dbdbed40a0e200ade6360c0742a04179aa5702bb538c693dfedd"
+    },
+    {
+      "path": "research/frem_execution_20261025/DECISION_RECEIPT.json",
+      "bytes": 1091,
+      "sha256": "bb1f0db65344eb4b39a8c87e10b856a0665da6b0aa31fdb5c98fc57d1a220d89"
+    },
+    {
+      "path": "research/frem_execution_20261025/HANDOFF_ARCHIVE_RECEIPT.json",
+      "bytes": 861,
+      "sha256": "999d5446db6e6a61630f185bf9fbb355fb1689300a49c220b86cf8e2ab823ca8"
+    },
+    {
+      "path": "research/frem_execution_20261025/HANDOFF_VALIDATION.json",
+      "bytes": 456,
+      "sha256": "170634e0f37c110f446601d2160608270236a4ecc5ee2b1e83039a3d9c2c59a3"
+    },
+    {
+      "path": "research/frem_execution_20261025/HANDOFF_VALIDATION_ATTEMPT1.json",
+      "bytes": 271,
+      "sha256": "4e264ba2ed6e5205d661356b90fed35fa4d3018e472ab7b79a3fe2a273ef1070"
+    },
+    {
+      "path": "research/frem_execution_20261025/KAGGLE_FINAL_RECEIPT.json",
+      "bytes": 1293,
+      "sha256": "e5a0d874ee019cc124d5bc72c9271a960e5b5c74c0afbfe7e0d127f00edd8a98"
+    },
+    {
+      "path": "research/frem_execution_20261025/KAGGLE_SOURCE_READBACK.json",
+      "bytes": 1280,
+      "sha256": "724e97bd758d1830921023dedea6aea13cefdee7afa05075669495ebd9f64087"
+    },
+    {
+      "path": "research/frem_execution_20261025/LOCAL_ADMISSION.json",
+      "bytes": 324,
+      "sha256": "7f1c112d3b377daa047afa913f6332a4059e5b566a304fd1d4c114ee34479370"
+    },
+    {
+      "path": "research/frem_execution_20261025/PAPER_QA.json",
+      "bytes": 504,
+      "sha256": "695afabb529b6827ad8d4b535684cdeb67504098d32a6cc674890d7d304d0029"
+    },
+    {
+      "path": "research/frem_execution_20261025/PRESERVATION_SUMMARY.json",
+      "bytes": 504,
+      "sha256": "5c00f44ffb066521e7287e923fe167a61029613a1bb95797452dba480299f3dc"
+    },
+    {
+      "path": "research/frem_execution_20261025/QUOTA_OBSERVATION.json",
+      "bytes": 596,
+      "sha256": "35aa86026beb949455e235a39eb5a7cdd4d6b9205536dd029c4835a1305842d4"
+    },
+    {
+      "path": "research/frem_execution_20261025/RELEASE_VERIFICATION.json",
+      "bytes": 1074,
+      "sha256": "65afa8f6c15ecb31a20580c17520f2c3d9c7caf9f8160271ed8f135216873d1e"
+    },
+    {
+      "path": "research/frem_execution_20261025/SESSION_RESULT.json",
+      "bytes": 1025,
+      "sha256": "337f66e6c2ddb56ebb8d9a1ea1ec77dc04395e570c1c490b62f29a568d78b633"
+    },
+    {
+      "path": "research/frem_execution_20261025/START_SUMMARY.json",
+      "bytes": 162,
+      "sha256": "332950b308455548938b93591794cc003dd838e8749052740e50eeeb85a70474"
+    },
+    {
+      "path": "research/frem_execution_20261025/TEST_ENVIRONMENT.json",
+      "bytes": 252,
+      "sha256": "d3bc628da281b38868842978811bb9878255958e878c1b292e4feef0fecbc1a5"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification.log",
+      "bytes": 82,
+      "sha256": "2033126e3e639f1d18d13cd8e83119a8ab63e51ec7637d4e9af8c9bcc1315047"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification/admission.json",
+      "bytes": 327,
+      "sha256": "4533ccf64188749ec83827a0483c314dd8f26f58a9a1dee22e5149b8de83cbdd"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification/cells.json",
+      "bytes": 1471,
+      "sha256": "5645e0d768dcd708313514b3296fa1f5be8e4cfe6bc8b9a7901907b081aae407"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification/config.json",
+      "bytes": 1503,
+      "sha256": "26c56234441f1755be6ae80b03d52bfea027614bd274ca63a5632d2faeca63ed"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification/failure.json",
+      "bytes": 485,
+      "sha256": "b72e600e04791773d1a40a586b544c3343f09d2399746e4c586d888dcc6797d6"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification/manifest.json",
+      "bytes": 564,
+      "sha256": "a9e7c44896186d81a31a95bb3855c761eae7faf4f50a28d9f9018f3296940cf3"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification_return.zip",
+      "bytes": 2343,
+      "sha256": "b02ffafc5189caf05f1144d6ba5a9fc0cfd2c89983298aefc4654866e117ee39"
+    },
+    {
+      "path": "research/frem_execution_20261025/cpu_qualification_return.zip.receipt.json",
+      "bytes": 1009,
+      "sha256": "e6cacfcbf91d39f50ee98e013858ea688175d04d02d2fadb5b2e8a4630bc0cfb"
+    },
+    {
+      "path": "research/frem_execution_20261025/numerical_tests.log",
+      "bytes": 376,
+      "sha256": "f0def1fc7154036add09d44aab072d9cff1ec33a0e0f23de1251521756fab820"
+    },
+    {
+      "path": "research/frem_execution_20261025/pack_tests_final.log",
+      "bytes": 1052,
+      "sha256": "fbca22869f40bbc21270ac217b84ce0ea4422e27c74d1dd75723ba41c123b6c0"
+    },
+    {
+      "path": "research/frem_execution_20261025/package_tests.log",
+      "bytes": 860,
+      "sha256": "ba6031295012b639b23619684e25ffce334d58267075396755e1b4b0ef73b1fe"
+    },
+    {
+      "path": "scripts/pack_results.py",
+      "bytes": 4951,
+      "sha256": "064d4a8f2a444e88b018494b2ab4a6e2a60b1df15e2f636996deb6dd772525d4"
+    },
+    {
+      "path": "scripts/validate_kaggle_package.py",
+      "bytes": 5251,
+      "sha256": "204aee18c5093ccbdd0e8992f4af0945da197a4cf77dd9c79642095794840324"
+    },
+    {
+      "path": "tests/test_kaggle_package_stdlib.py",
+      "bytes": 2495,
+      "sha256": "0b843a5d064dea8d5c5581684fe958ab3ff630dd2fd4732fb920d7b760af2f0d"
+    },
+    {
+      "path": "tests/test_pack_results_stdlib.py",
+      "bytes": 3656,
+      "sha256": "1a7f910c691bfe8fb6e2ef894a6fdbaffbe2795a8ab3fde3c5e6a7b19a26b00a"
+    }
+  ],
+  "credential_pattern_scan": "NO_MATCHES",
+  "scan_limit": "Pattern scan plus explicit scoped file review; not a guarantee against unknown secret formats.",
+  "excluded": "Original user request, account screenshots, downloaded private notebook, before snapshots, full historical result trees, giant local inventories."
+}

@@ -1,0 +1,18 @@
+{
+  "mode": "historical_suite",
+  "device": "cuda",
+  "private": true,
+  "internet": false,
+  "accelerator": "GPU T4 x2 (one CUDA device used; no multi-GPU speed claim)",
+  "notebook_ceiling_seconds": 13500,
+  "fold_ceiling_seconds": 4000,
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "historical_cells": 171,
+  "qualification_cells": 19,
+  "checkpoint_resume": "cell-level API only; whole-suite cross-session resume NOT IMPLEMENTED",
+  "confirmatory_frozen": "UNSUPPORTED; do not access protected data"
+}

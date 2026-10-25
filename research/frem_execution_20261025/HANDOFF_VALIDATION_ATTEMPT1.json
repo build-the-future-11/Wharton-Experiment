@@ -1,0 +1,6 @@
+{
+  "status": "FAILED_TEST_HARNESS_PATH",
+  "error": "receipt ancestors must not be symlinks",
+  "cause": "macOS temporary directory /var aliases /private/var",
+  "resolution": "Repeat extracted validation using canonical resolved temporary path; validator unchanged."
+}

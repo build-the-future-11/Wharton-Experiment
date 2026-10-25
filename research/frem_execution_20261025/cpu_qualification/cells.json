@@ -1,0 +1,97 @@
+[
+  {
+    "arm": "full",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_memory",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_jepa",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_neurogenesis",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_reservoir",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_spectral",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "uniform_router",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_risk",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "zero",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "ridge",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "xgboost",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "hybrid_xgboost",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "fixed_full_capacity",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_ngram",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "gru",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_spde",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_multihorizon",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_graph",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  },
+  {
+    "arm": "no_mask",
+    "seed": 11,
+    "status": "NOT_STARTED"
+  }
+]

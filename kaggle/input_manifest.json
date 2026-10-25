@@ -1,0 +1,36 @@
+{
+  "schema": "frem-s14-external-inputs-v1",
+  "observed_date": "2026-10-25",
+  "dataset_url": "https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+  "attachment": "borismarjanovic/price-volume-data-for-all-us-stocks-etfs",
+  "provider_license_assertion": "CC0 on provider card; not a point-in-time validity assertion",
+  "version_identity": "Exact member SHA-256 allowlist; do not substitute changed version bytes",
+  "expected_root": "/kaggle/input",
+  "canonical_suffix": "Data/ETFs/<asset>.us.txt",
+  "assets": [
+    "spy",
+    "iwm",
+    "dia",
+    "tlt",
+    "ief",
+    "gld",
+    "slv"
+  ],
+  "sha256": {
+    "spy": "c678bccc09a3ee667e591d97e95498f2ac185c98408702cae738ba3320ebdeec",
+    "iwm": "0659f79d5ecd9d86136feb1f3579157fe0866cf84ff28c1d4a8a75f1b0a28029",
+    "dia": "dcd47d659f3c52628fcf601cee1fffe9ba25aa78041aef2f16057935051b9f55",
+    "tlt": "9b7c22d513b8165ecb021a622f27a1e71a151f901804261189de003ed6d95564",
+    "ief": "47b52d0a7cecf5347560d9a870bc6b2b173631a834a2259ec3002456d96372fc",
+    "gld": "c21b14f81fb7675a4a41e497eb2f48f75af577b64f41c252d119052d3b583f32",
+    "slv": "afc0ea0fda0271da19c51b5e7d31651d1d202ae74c2a7eb4dddb533bcacf99bc"
+  },
+  "start": "2007-01-01",
+  "stop_exclusive": "2018-01-01",
+  "protected_start": "2025-01-01",
+  "transforms": "Nine causal historical features; compounded 20-observation targets; train-only preprocessing",
+  "weights_required": false,
+  "source_embedded": true,
+  "kaggle_mount_currently_verified": false,
+  "size": "Not remeasured; seven member identities are enforced at intake."
+}

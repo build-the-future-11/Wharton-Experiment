@@ -1,0 +1,1303 @@
+{
+  "schema": "frem-s14-frozen-execution-registry-v1",
+  "package_version": "0.2.4",
+  "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+  "qualification_config": {
+    "model": {
+      "input_dim": 4,
+      "context": 8,
+      "horizon": 2,
+      "latent": 8,
+      "reservoir": 8,
+      "initial_neurons": 4,
+      "growth_step": 2,
+      "growth_every": 1,
+      "growth_threshold": 0.8,
+      "contraction": 0.85,
+      "leaks": [
+        0.1,
+        0.4,
+        0.9
+      ],
+      "bands": 2,
+      "memory_capacity": 32,
+      "neighbors": 4,
+      "memory_temperature": 0.2,
+      "memory_half_life": 252.0,
+      "ngram": 3,
+      "ngram_bonus": 0.5,
+      "experts": 3,
+      "router_cap": 0.8,
+      "student_df": 5.0,
+      "ema": 0.99,
+      "field_rows": 4,
+      "graph_mix": 0.25,
+      "mask_fraction": 0.25,
+      "arm": "full"
+    },
+    "seeds": [
+      11
+    ],
+    "arms": [
+      "full",
+      "no_memory",
+      "no_jepa",
+      "no_neurogenesis",
+      "no_reservoir",
+      "no_spectral",
+      "uniform_router",
+      "no_risk",
+      "zero",
+      "ridge",
+      "xgboost",
+      "hybrid_xgboost",
+      "fixed_full_capacity",
+      "no_ngram",
+      "gru",
+      "no_spde",
+      "no_multihorizon",
+      "no_graph",
+      "no_mask"
+    ],
+    "epochs": 2,
+    "batch_size": 32,
+    "patience": 2,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "jepa_weight": 0.1,
+    "risk_weight": 0.1,
+    "balance_weight": 0.01,
+    "device": "cuda",
+    "amp": false,
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "embargo": 2,
+    "max_seconds": 1800,
+    "bootstrap_reps": 99,
+    "block_dates": 4,
+    "cost_bps": 10.0,
+    "max_weight": 0.25,
+    "risk_aversion": 3.0,
+    "xgb_rounds": 5,
+    "protected_start": "2025-01-01T00:00:00+00:00"
+  },
+  "qualification_cells": [
+    {
+      "arm": "full",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 11,
+      "status": "NOT_STARTED"
+    }
+  ],
+  "historical_config": {
+    "config": {
+      "model": {
+        "input_dim": 9,
+        "context": 32,
+        "horizon": 20,
+        "latent": 32,
+        "reservoir": 48,
+        "initial_neurons": 24,
+        "growth_step": 8,
+        "growth_every": 2,
+        "growth_threshold": 0.8,
+        "contraction": 0.85,
+        "leaks": [
+          0.1,
+          0.4,
+          0.9
+        ],
+        "bands": 4,
+        "memory_capacity": 512,
+        "neighbors": 8,
+        "memory_temperature": 0.2,
+        "memory_half_life": 252.0,
+        "ngram": 3,
+        "ngram_bonus": 0.5,
+        "experts": 3,
+        "router_cap": 0.8,
+        "student_df": 5.0,
+        "ema": 0.99,
+        "field_rows": 4,
+        "graph_mix": 0.25,
+        "mask_fraction": 0.25,
+        "arm": "full"
+      },
+      "seeds": [
+        11,
+        29,
+        47
+      ],
+      "arms": [
+        "full",
+        "no_memory",
+        "no_jepa",
+        "no_neurogenesis",
+        "no_reservoir",
+        "no_spectral",
+        "uniform_router",
+        "no_risk",
+        "zero",
+        "ridge",
+        "xgboost",
+        "hybrid_xgboost",
+        "fixed_full_capacity",
+        "no_ngram",
+        "gru",
+        "no_spde",
+        "no_multihorizon",
+        "no_graph",
+        "no_mask"
+      ],
+      "epochs": 10,
+      "batch_size": 128,
+      "patience": 3,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "gradient_clip": 1.0,
+      "jepa_weight": 0.1,
+      "risk_weight": 0.1,
+      "balance_weight": 0.01,
+      "device": "cuda",
+      "amp": false,
+      "train_fraction": 0.6,
+      "validation_fraction": 0.2,
+      "embargo": 20,
+      "max_seconds": 4000,
+      "bootstrap_reps": 2000,
+      "block_dates": 20,
+      "cost_bps": 10.0,
+      "max_weight": 0.25,
+      "risk_aversion": 3.0,
+      "xgb_rounds": 300,
+      "protected_start": "2025-01-01T00:00:00+00:00"
+    },
+    "fold_ends": [
+      "2011-01-01",
+      "2015-01-01",
+      "2018-01-01"
+    ],
+    "expected_cells": 171,
+    "max_notebook_seconds": 13500
+  },
+  "historical_cells": [
+    {
+      "arm": "full",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 11,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 29,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 47,
+      "fold_end": "2011-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 11,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 29,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 47,
+      "fold_end": "2015-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "full",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_memory",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_jepa",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_neurogenesis",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_reservoir",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spectral",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "uniform_router",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_risk",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "zero",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "ridge",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "xgboost",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "hybrid_xgboost",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "fixed_full_capacity",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_ngram",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "gru",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_spde",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_multihorizon",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_graph",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 11,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 29,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    },
+    {
+      "arm": "no_mask",
+      "seed": 47,
+      "fold_end": "2018-01-01",
+      "status": "NOT_STARTED"
+    }
+  ],
+  "scientific_status": "NOT_EVALUATED",
+  "protected_access": false
+}

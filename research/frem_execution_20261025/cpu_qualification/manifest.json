@@ -1,0 +1,21 @@
+{
+  "files": {
+    "admission.json": {
+      "bytes": 327,
+      "sha256": "4533ccf64188749ec83827a0483c314dd8f26f58a9a1dee22e5149b8de83cbdd"
+    },
+    "cells.json": {
+      "bytes": 1471,
+      "sha256": "5645e0d768dcd708313514b3296fa1f5be8e4cfe6bc8b9a7901907b081aae407"
+    },
+    "config.json": {
+      "bytes": 1503,
+      "sha256": "26c56234441f1755be6ae80b03d52bfea027614bd274ca63a5632d2faeca63ed"
+    },
+    "failure.json": {
+      "bytes": 485,
+      "sha256": "b72e600e04791773d1a40a586b544c3343f09d2399746e4c586d888dcc6797d6"
+    }
+  },
+  "schema": 1
+}

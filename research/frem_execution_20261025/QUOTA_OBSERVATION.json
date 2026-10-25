@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-10-25T08:32:56.344288+00:00",
+  "source": "https://www.kaggle.com/settings/account",
+  "observed_label": "Kaggle GPU",
+  "observed_value": "00:44 / 30 hrs",
+  "progress_indicator": 2,
+  "editor_value": "Quota: 00:44 / 30 hrs - Link to Colab Pro for more Quota",
+  "reset_time": "NOT_DISPLAYED",
+  "notebook_ceiling_seconds": 13500,
+  "decision": "Do not admit the full campaign on this displayed quota. No purchase, account linking or reduced scientific matrix.",
+  "official_guidance": "https://www.kaggle.com/page/GPU-tips-and-tricks",
+  "execution_started": false
+}

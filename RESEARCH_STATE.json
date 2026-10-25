@@ -1,8 +1,8 @@
 {
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
-  "version": "0.2.4-s14-execution-preflight-verified-upload-confirmation-pending",
+  "version": "0.2.4-s14-kaggle-source-verified-quota-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-24T11:17:12.049015+00:00",
+  "updated": "2026-10-25T08:34:38.633674+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
@@ -13,14 +13,14 @@
     "path": "PROJECT_EXECUTION_MEGA_CHECKLIST_20261024.md",
     "created": "2026-10-24",
     "status": "ACTIVE_ORDERED_EXECUTION_AND_IMPROVEMENT_CHECKLIST",
-    "frontier": "FREM-S14 0.2.4 static release verified; local numerical admission failed; existing private Kaggle owner and target runtime settings verified",
-    "next_gate": "Confirm the exact 0.2.4 browser upload; read back saved source before starting the frozen target campaign.",
+    "frontier": "Exact S14 0.2.4 saved as private Kaggle Version 9; source readback and 108 local tests passed, one CUDA skip; target execution pending quota; separate CPU qualification failed memory admission.",
+    "next_gate": "Wait for sufficient GPU quota; exact 0.2.4 saved source is verified as Kaggle Version 9 (362065796). Target qualification precedes the 171-cell suite.",
     "improvement_policy": "P0 evidence tooling, P1 post-disposition capabilities and P2 successor science are separated; no checklist item mutates frozen 0.2.4 by implication",
     "gate0_untracked_inventory": "research/frem_s14_execution_20261024/GATE0_UNTRACKED_INVENTORY.json",
-    "latest_session_receipt": "research/frem_final_execution_20261024T110832Z/SESSION_RESULT.json",
+    "latest_session_receipt": "research/frem_execution_20261025/SESSION_RESULT.json",
     "kaggle_access_ready_receipt": "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json"
   },
-  "phase": "s14_0_2_4_preflight_verified_upload_confirmation_pending",
+  "phase": "s14_0_2_4_saved_version9_runtime_pending_quota",
   "scientific_status": "NOT_EVALUATED",
   "global_crisis_request": {
     "status": "BLOCKED_DATA_AND_EXECUTION_SCOPE",
@@ -45,7 +45,7 @@
   },
   "central_hypothesis": "Delayed-feedback utility-weighted causal spectral memory improves held-out log score over the identical memory-off JEPA-reservoir model under matched information and budgets.",
   "secondary_hypothesis": "Predictive gains, if any, translate into net-of-cost portfolio utility subject to eligible-universe and funding constraints.",
-  "compute_authorized_this_session": "Execute the final master checklist in dependency order. Exact 0.2.4 private Kaggle tests, 19-arm seed-11 qualification and fixed 171-cell historical proxy suite retain the 13,500-second ceiling. Browser file transmission awaits specific confirmation. S15 and protected work remain gated by their declared prerequisites.",
+  "compute_authorized_this_session": "User requested complete evidence-bound engineering and Kaggle execution. Exact 0.2.4 uploaded privately as source-only Version 9; all saved cells match. Full campaign not launched because displayed GPU quota is 00:44 against 13,500-second ceiling. No scientific retuning or protected use.",
   "development_budget_proposed": {
     "max_trials": 24,
     "max_wall_clock_hours": 12,
@@ -1997,9 +1997,11 @@
       "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
       "release_record": "successors/frem_s14/dist/RELEASE-0.2.4.json",
       "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_4.ipynb",
-      "status": "STATICALLY_VERIFIED_NOT_NUMERICALLY_QUALIFIED",
-      "uploaded": false,
-      "historical_cells_completed": 0
+      "status": "SAVED_VERSION9_SOURCE_VERIFIED_TARGET_RUNTIME_PENDING",
+      "uploaded": true,
+      "historical_cells_completed": 0,
+      "saved_version_id": 362065796,
+      "source_readback": "research/frem_execution_20261025/KAGGLE_SOURCE_READBACK.json"
     },
     "current_candidate_history_note": "The following 0.1.9 object is the preserved Version 8 execution identity, not the active launch candidate. Exact 0.2.4 is the only active candidate.",
     "current_candidate": {
@@ -2495,6 +2497,19 @@
       "historical_cells": 0,
       "protected_access": false,
       "session_result": "research/frem_final_execution_20261024T110832Z/SESSION_RESULT.json"
+    },
+    "execution_20261025": {
+      "saved_version": 362065796,
+      "save_type": "Quick Version; no code execution",
+      "source_match": true,
+      "receipt": "research/frem_execution_20261025/KAGGLE_FINAL_RECEIPT.json",
+      "local_tests": {
+        "passed": 108,
+        "skipped_cuda": 1
+      },
+      "target_qualified": false,
+      "historical_cells": 0,
+      "protected_access": false
     }
   },
   "benchmark_and_successor_request_20261021": {
@@ -2536,5 +2551,37 @@
     "prior_rejection_receipt": "research/frem_s14_kaggle_0_1_8_20261021/PUBLICATION_STATUS.json",
     "remote_commit": "c3c43c051abdef217bcc5f54dea8d86257504975",
     "remote_commit_equal": true
+  },
+  "execution_20261025": {
+    "timestamp_utc": "2026-10-25T08:18:32.844540+00:00",
+    "status": "BLOCKED",
+    "research_status": "PRE-RUN",
+    "scientific_status": "NOT_EVALUATED",
+    "frozen_release": "0.2.4",
+    "source_tests": {
+      "passed": 108,
+      "skipped_cuda": 1,
+      "seconds": 17.29,
+      "log": "numerical_tests.log"
+    },
+    "new_tool_tests": {
+      "pack": 8,
+      "validator": 6
+    },
+    "cpu_qualification": "FAILED_RESOURCE_ADMISSION_BEFORE_IMPORTS",
+    "cuda_qualification": "NOT_RUN",
+    "historical_cells": 0,
+    "protected_access": false,
+    "kaggle": "PRIVATE_VERSION9_SAVED_SOURCE_VERIFIED_QUOTA_BLOCKED",
+    "paper": "32-page draft built using existing arxiv.sty; no overfull boxes or unresolved references",
+    "frozen_source_changed": false,
+    "whole_suite_resume": "NOT_IMPLEMENTED_IN_FROZEN_CANDIDATE",
+    "next_gate": "Sufficient Kaggle GPU quota for the bounded full campaign; then exact target qualification and 171-cell suite.",
+    "kaggle_version_id": 362065796,
+    "quota_display": "00:44 / 30 hrs",
+    "preserved_evidence_files": 4902,
+    "receipt": "research/frem_execution_20261025/SESSION_RESULT.json",
+    "handoff_archive": "dist/FREM_S14_HANDOFF_20261025.zip",
+    "verification_report": "reports/VERIFICATION_AND_HANDOFF.md"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "complete_cells": [],
+  "error": "512 MiB/no-rising-pageout admission failed before numerical imports",
+  "expected_cells": 19,
+  "traceback": "Traceback (most recent call last):\n  File \"/Volumes/PRO-BLADE/GitHubRepos/Wharton-Experiment/successors/frem_s14/src/frem_s14/cli.py\", line 107, in campaign\n    raise RuntimeError(\nRuntimeError: 512 MiB/no-rising-pageout admission failed before numerical imports\n",
+  "type": "RuntimeError",
+  "wall_seconds": 3.0644214999920223
+}

@@ -1,0 +1,11 @@
+test_archive_tamper_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_archive_tamper_rejected) ... ok
+test_changed_dataset_hash_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_changed_dataset_hash_rejected) ... ok
+test_changed_trust_record_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_changed_trust_record_rejected) ... ok
+test_exact_package_only_claims_static_pass (test_kaggle_package_stdlib.HandoffValidationTests.test_exact_package_only_claims_static_pass) ... ok
+test_notebook_tamper_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_notebook_tamper_rejected) ... ok
+test_public_visibility_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_public_visibility_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.032s
+
+OK

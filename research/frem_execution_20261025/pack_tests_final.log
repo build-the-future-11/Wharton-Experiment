@@ -1,0 +1,13 @@
+test_changed_input_preserves_failure_receipt (test_pack_results_stdlib.PackResultsTests.test_changed_input_preserves_failure_receipt) ... ok
+test_empty_run_rejected (test_pack_results_stdlib.PackResultsTests.test_empty_run_rejected) ... ok
+test_existing_receipt_is_preserved (test_pack_results_stdlib.PackResultsTests.test_existing_receipt_is_preserved) ... ok
+test_existing_zip_is_preserved (test_pack_results_stdlib.PackResultsTests.test_existing_zip_is_preserved) ... ok
+test_failed_run_retained_without_claim_promotion (test_pack_results_stdlib.PackResultsTests.test_failed_run_retained_without_claim_promotion) ... ok
+test_input_symlink_rejected (test_pack_results_stdlib.PackResultsTests.test_input_symlink_rejected) ... ok
+test_output_inside_run_rejected (test_pack_results_stdlib.PackResultsTests.test_output_inside_run_rejected) ... ok
+test_output_symlink_rejected (test_pack_results_stdlib.PackResultsTests.test_output_symlink_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.018s
+
+OK
