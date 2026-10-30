@@ -1,0 +1,82 @@
+{
+  "timestamp_utc": "2026-10-30T14:26:59.807851+00:00",
+  "base_commit": "57aa3da1f64481694e5f8387c926ce7bbd756425",
+  "branch": "codex/frem-handoff-consistency-20261030",
+  "status": "PASS",
+  "checks": {
+    "old_version8_candidate_preserved": true,
+    "old_version8_run_preserved": true,
+    "all_previous_history_retained": true,
+    "all_prior_decisions_retained": true,
+    "active_alias_matches_retained_receipt": true,
+    "portable_verifier_equals_source": true,
+    "frozen_tracked_sources_unchanged": true,
+    "all_handoff_checksums_match": true,
+    "changed_python_compiles": true,
+    "standalone_cli_outside_repository_passes": true,
+    "git_diff_check": true,
+    "staged_diff_check_excluding_preserved_raw_log": true
+  },
+  "handoff_checksums": {
+    "FREM_S14_GPU_0_2_4.ipynb": {
+      "sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
+      "matches": true
+    },
+    "RELEASE-0.2.4.json": {
+      "sha256": "49809bcfb504dd07e9ca78a7bd607078c69815d8ee1928047d69d067da960d7a",
+      "matches": true
+    },
+    "REQUIRED_DATASETS.md": {
+      "sha256": "9048addb587e8cb0bad48b09c7212d9a97e7a6cf1a3e971c0c31e44993e6b74a",
+      "matches": true
+    },
+    "START_HERE.md": {
+      "sha256": "d6bded888aaf847d16b00c2b1cf64b43544f3464bf7e584d5210ea7b3b408e8f",
+      "matches": true
+    },
+    "experiment_manifest.json": {
+      "sha256": "fb136c12a036f9004ff5a5cde33a61d0dc0f8ae1e7e35b5c01adc168d99ea18c",
+      "matches": true
+    },
+    "frem_s14_kaggle_bundle-0.2.4.zip": {
+      "sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+      "matches": true
+    },
+    "input_manifest.json": {
+      "sha256": "7ca0d17453c9f8e271877d21e3e10d85035ce86df9ae40adfb1407537abe8715",
+      "matches": true
+    },
+    "kaggle_config.json": {
+      "sha256": "bcbda03a1bb597a363c66f038fa8c86db0c6d5868a46cb7f1c3bf49f0e87d7ed",
+      "matches": true
+    },
+    "kernel-metadata-0.2.4.json": {
+      "sha256": "24e67f9d032f36dc47c1e26375cbd5de980b678b817a04f8f04481642b02df68",
+      "matches": true
+    },
+    "pack_results.py": {
+      "sha256": "064d4a8f2a444e88b018494b2ab4a6e2a60b1df15e2f636996deb6dd772525d4",
+      "matches": true
+    },
+    "requirements-kaggle.txt": {
+      "sha256": "3700aa406c83d4c175caac3f81bc486827662b935edc9bc85b2186dd5a3519c9",
+      "matches": true
+    },
+    "validate_kaggle_package.py": {
+      "sha256": "d9361164560bffe524a990f47b73a36a97088884bf23df1c1f08f4fcc4e0a3ba",
+      "matches": true
+    }
+  },
+  "validator_tests": {
+    "test_methods": 11,
+    "passed_after_repair": 11,
+    "new_test_methods": 5,
+    "parent_invalid_subcases_accepted": 13,
+    "warnings_as_errors": true
+  },
+  "ruff": "Unavailable: No module named ruff",
+  "scientific_runs": 0,
+  "remote_kaggle_state_refreshed": false,
+  "protected_access": false,
+  "raw_log_whitespace": "Five trailing spaces from unittest subtest headings are retained verbatim in validator_parent.log. The all-staged diff check reported these five lines; scoped changed-source/report checks pass."
+}
