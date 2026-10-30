@@ -2,7 +2,7 @@
   "project": "FREM: Causal Fourier-Reservoir Engram Memory",
   "version": "0.2.4-s14-kaggle-source-verified-quota-blocked",
   "created": "2026-10-10",
-  "updated": "2026-10-25T08:59:25.306153+00:00",
+  "updated": "2026-10-30T14:26:04.832558+00:00",
   "research_feature_mega_checklist": {
     "path": "RESEARCH_FEATURE_MEGA_CHECKLIST.md",
     "created": "2026-10-20",
@@ -667,6 +667,12 @@
       "evidence": "research/frem_final_execution_20261024T110832Z",
       "scientific_status": "NOT_EVALUATED",
       "timestamp": "2026-10-24T11:17:12.049015+00:00"
+    },
+    {
+      "timestamp": "2026-10-30T14:26:04.832558+00:00",
+      "event": "Reconcile stale S14 preupload aliases with retained Version 9 source-only receipt; harden the external package validator without changing frozen study source. Live Kaggle state not refreshed.",
+      "evidence": "research/frem_handoff_consistency_20261030",
+      "scientific_status": "NOT_EVALUATED"
     }
   ],
   "prior_reported_evidence": [
@@ -1971,7 +1977,7 @@
   "frem_s14": {
     "timestamp": "2026-10-24T08:14:21.206137+00:00",
     "iteration": "FREM-S14",
-    "status": "EXACT_0_2_4_PREFLIGHT_VERIFIED_UPLOAD_CONFIRMATION_PENDING",
+    "status": "SAVED_VERSION9_SOURCE_VERIFIED_TARGET_RUNTIME_NOT_REFRESHED",
     "scientific_status": "NOT_EVALUATED",
     "decisions": [
       "research/decisions/frem_s14_kaggle_mount_failure_20261020.json",
@@ -2067,14 +2073,19 @@
         "0.2.2",
         "0.2.3"
       ],
-      "uploaded": false,
-      "launch_status": "PREUPLOAD_READY_SPECIFIC_CONFIRMATION_PENDING",
+      "uploaded": true,
+      "launch_status": "SAVED_VERSION9_SOURCE_VERIFIED_TARGET_RUNTIME_NOT_REFRESHED",
       "kaggle_access_ready_receipt": "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json",
       "runtime_qualified": false,
       "historical_cells_completed": 0,
       "protected_access": false,
       "claim_boundary": "Static packaging verification is not numerical qualification, a historical result, predictive evidence or a positive result.",
-      "latest_preupload_receipt": "research/frem_final_execution_20261024T110832Z/KAGGLE_PREUPLOAD_OBSERVATION.json"
+      "latest_preupload_receipt": "research/frem_final_execution_20261024T110832Z/KAGGLE_PREUPLOAD_OBSERVATION.json",
+      "saved_version_id": 362065796,
+      "saved_source_receipt": "research/frem_execution_20261025/KAGGLE_FINAL_RECEIPT.json",
+      "source_readback": "research/frem_execution_20261025/KAGGLE_SOURCE_READBACK.json",
+      "remote_observed_at_utc": "2026-10-25T08:24:19.779037+00:00",
+      "historical_access_receipts_note": "The retained preupload/access blocker fields describe earlier observations; the saved-source receipt supersedes their upload state only. No current account, quota or execution state is inferred."
     },
     "trace_candidate": {
       "timestamp": "2026-10-20T00:00:00+00:00",
@@ -2217,7 +2228,7 @@
       "scientific_use": false,
       "protected_access": false
     },
-    "blocker": "Exact 0.2.4 hashes reverified; existing private Kaggle owner and editor settings reverified. Import dialog ready; specific browser file-upload confirmation pending. Local numerical admission failed at 115.0/162.65625/228.015625 MiB against 512 MiB. No 0.2.4 qualification or historical run has started.",
+    "blocker": "Last remote observation 2026-10-25: exact 0.2.4 saved as private source-only Version 9 (362065796), no code executed, displayed GPU quota 00:44 / 30 hrs. Current quota, run state and target admission have not been refreshed; inspect the existing version and exclude an active duplicate before any launch. No source re-upload is required by that retained observation.",
     "prior_blocker": "Kaggle editor initially remained stuck at Editor Loading; an authenticated temporary Kaggle CLI then created the exact saved version without changing the scientific design.",
     "prior_blocker_screenshot": "research/frem_s14_access_20261019/kaggle_login_required.png",
     "followup": {
@@ -2238,7 +2249,7 @@
     "launch_receipt_preserved": "research/frem_s14_20261019/LAUNCH_RECEIPT.json",
     "checklist": "successors/frem_s14/CHECKLIST.md",
     "remaining": [
-      "Upload only exact 0.2.4 after the pending specific browser-upload confirmation; save source without launching and independently compare readback.",
+      "Refresh live Version 9 (362065796), current quota, actual execution settings and absence of an existing run before launching. Retained 2026-10-25 source readback already matches exact 0.2.4; do not duplicate the source-only upload or infer current quota from that historical receipt.",
       "Run the frozen seed-11 19-arm CUDA qualification and 171-cell three-seed historical proxy suite only under the exact target contract and fixed ceiling.",
       "Retain all output and verify integrity and semantics independently before interpreting results; record a terminal disposition.",
       "Keep S15 implementation and later scientific stages behind the checklist dependencies; do not access protected outcomes."
@@ -2246,7 +2257,7 @@
     "claim_boundary": "Engineering passes do not establish predictive improvement or tradable profitability; no zero-defect guarantee.",
     "receipt": "research/frem_s14_fixture_release_20261021/ENGINEERING_RECEIPT.json",
     "specification": "successors/frem_s14/SPECIFICATION.md",
-    "candidate_preparation": "KAGGLE_VERSION8_TERMINAL_FAILED_PRESERVED",
+    "candidate_preparation": "EXACT_0_2_4_SAVED_VERSION9_SOURCE_VERIFIED",
     "hardening_record": "research/frem_s14_readback_20261019",
     "audit": "research/frem_s14_readback_20261019/AUDIT.md",
     "prior_candidate_receipt": "research/frem_s14_readback_20261019/RECEIPT.json",
@@ -2591,5 +2602,16 @@
       "remote_verified_equal": true,
       "prior_failure_receipt": "research/frem_execution_20261025/PUBLICATION_RECEIPT.json"
     }
+  },
+  "handoff_consistency_20261030": {
+    "status": "LOCAL_REPAIR_VERIFIED",
+    "scope": "External handoff validator and canonical metadata only",
+    "prior_state": "research/frem_handoff_consistency_20261030/previous_current_fields.json",
+    "report": "reports/FREM_HANDOFF_FIX_20261030.md",
+    "source_tests": "11 warning-strict validator tests pass; five added test methods exposed 13 accepted invalid-metadata subcases as test failures on the unchanged parent.",
+    "model_tests_repeated": false,
+    "frozen_source_changed": false,
+    "target_runtime_status": "NOT_REFRESHED",
+    "protected_access": false
   }
 }
