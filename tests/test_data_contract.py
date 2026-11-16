@@ -84,6 +84,24 @@ def test_execution_label_starts_after_decision_and_has_h_intervals():
     assert data.entry_time[0] > data.time[0]
 
 
+@pytest.mark.parametrize("entry,exit", [(None, "existing"), ("existing", None)])
+def test_window_data_requires_complete_execution_interval(entry, exit):
+    data = window_fixture(n_dates=3, assets=1, horizon=1)
+    with pytest.raises(DataValidationError, match="entry_time and exit_time"):
+        WindowData(
+            data.x,
+            data.future_x,
+            data.y,
+            data.time,
+            data.label_time,
+            data.asset_id,
+            data.feature_names,
+            data.asset_names,
+            data.entry_time if entry == "existing" else None,
+            data.exit_time if exit == "existing" else None,
+        )
+
+
 def test_delayed_publication_changes_next_executable_entry():
     frame = panel()
     frame["available_at"] += np.timedelta64(2, "D")
