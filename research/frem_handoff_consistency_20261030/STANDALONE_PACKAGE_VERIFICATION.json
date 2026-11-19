@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STATIC_PACKAGE_ONLY",
+  "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
+  "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+  "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+  "payload_members": 17,
+  "dataset_members": 7,
+  "runtime_verified": false,
+  "manual_launch_ready": false,
+  "scientific_status": "NOT_EVALUATED"
+}

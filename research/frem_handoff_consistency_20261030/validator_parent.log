@@ -1,0 +1,146 @@
+test_archive_tamper_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_archive_tamper_rejected) ... ok
+test_changed_dataset_hash_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_changed_dataset_hash_rejected) ... ok
+test_changed_trust_record_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_changed_trust_record_rejected) ... ok
+test_duplicate_or_malformed_assets_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_or_malformed_assets_rejected) ... 
+  test_duplicate_or_malformed_assets_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_or_malformed_assets_rejected) (value=['spy', 'iwm', 'dia', 'tlt', 'ief', 'gld', 'slv', 'spy']) ... FAIL
+  test_duplicate_or_malformed_assets_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_or_malformed_assets_rejected) (value={'spy': None, 'iwm': None, 'dia': None, 'tlt': None, 'ief': None, 'gld': None, 'slv': None}) ... FAIL
+test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) ... 
+  test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='kernel-metadata-0.2.4.json') ... FAIL
+  test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='RELEASE-0.2.4.json') ... FAIL
+  test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='input_manifest.json') ... FAIL
+test_exact_package_only_claims_static_pass (test_kaggle_package_stdlib.HandoffValidationTests.test_exact_package_only_claims_static_pass) ... ok
+test_execution_kind_changes_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_execution_kind_changes_rejected) ... 
+  test_execution_kind_changes_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_execution_kind_changes_rejected) (key='language') ... FAIL
+  test_execution_kind_changes_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_execution_kind_changes_rejected) (key='kernel_type') ... FAIL
+test_extra_attached_inputs_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_extra_attached_inputs_rejected) ... 
+  test_extra_attached_inputs_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_extra_attached_inputs_rejected) (key='competition_sources') ... FAIL
+  test_extra_attached_inputs_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_extra_attached_inputs_rejected) (key='kernel_sources') ... FAIL
+test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) ... 
+  test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='NaN') ... FAIL
+  test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='Infinity') ... FAIL
+  test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='-Infinity') ... FAIL
+  test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='1e400') ... FAIL
+test_notebook_tamper_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_notebook_tamper_rejected) ... ok
+test_public_visibility_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_public_visibility_rejected) ... ok
+
+======================================================================
+FAIL: test_duplicate_or_malformed_assets_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_or_malformed_assets_rejected) (value=['spy', 'iwm', 'dia', 'tlt', 'ief', 'gld', 'slv', 'spy'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 125, in test_duplicate_or_malformed_assets_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_or_malformed_assets_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_or_malformed_assets_rejected) (value={'spy': None, 'iwm': None, 'dia': None, 'tlt': None, 'ief': None, 'gld': None, 'slv': None})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 125, in test_duplicate_or_malformed_assets_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='kernel-metadata-0.2.4.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 103, in test_duplicate_trust_keys_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='RELEASE-0.2.4.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 103, in test_duplicate_trust_keys_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_trust_keys_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_duplicate_trust_keys_rejected) (name='input_manifest.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 103, in test_duplicate_trust_keys_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_execution_kind_changes_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_execution_kind_changes_rejected) (key='language')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 77, in test_execution_kind_changes_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_execution_kind_changes_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_execution_kind_changes_rejected) (key='kernel_type')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 77, in test_execution_kind_changes_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_extra_attached_inputs_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_extra_attached_inputs_rejected) (key='competition_sources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 87, in test_extra_attached_inputs_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_extra_attached_inputs_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_extra_attached_inputs_rejected) (key='kernel_sources')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 87, in test_extra_attached_inputs_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='NaN')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 114, in test_nonfinite_metadata_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='Infinity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 114, in test_nonfinite_metadata_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='-Infinity')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 114, in test_nonfinite_metadata_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_metadata_rejected (test_kaggle_package_stdlib.HandoffValidationTests.test_nonfinite_metadata_rejected) (value='1e400')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d542eb317ed/frem-work/tests/test_kaggle_package_stdlib.py", line 114, in test_nonfinite_metadata_rejected
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.125s
+
+FAILED (failures=13)

@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-11-19T10:24:20Z",
+  "reviewed_source_head": "fbadbb0c27b74a8b5e91d70054aaf9cbd0faef09",
+  "reviewed_base_sha": "57aa3da1f64481694e5f8387c926ce7bbd756425",
+  "target_branch": "codex/frem-research-execution-20261020",
+  "status": "PASS_ENGINEERING_HANDOFF_REVIEW_ONLY",
+  "checks": {
+    "complete_13_file_patch_reviewed": true,
+    "local_warning_strict_validator_tests_passed": 11,
+    "local_warning_strict_validator_tests_total": 11,
+    "all_12_handoff_checksums_match": true,
+    "portable_helper_byte_identical": true,
+    "standalone_verifier_outside_checkout_passes": true,
+    "static_payload_members": 17,
+    "static_dataset_members": 7,
+    "archived_aliases_equal_prior_state": true,
+    "all_prior_history_retained": true,
+    "version8_evidence_preserved": true,
+    "frozen_source_changed": false
+  },
+  "validation_command": "python -W error -m unittest discover -s tests -p test_kaggle_package_stdlib.py -v",
+  "source_identity": {
+    "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
+    "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+    "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486"
+  },
+  "scientific_runs": 0,
+  "remote_kaggle_state_refreshed": false,
+  "runtime_qualified": false,
+  "manual_launch_ready": false,
+  "protected_access": false,
+  "scientific_status": "NOT_EVALUATED",
+  "interpretation": "Current local verification concerns only the external packaging/handoff validator. The retained 25 October Version 9 receipt is source-only historical evidence. GPU qualification, the 171-cell development matrix and independent semantic verification remain open. Merge into the existing FREM branch does not adopt research claims or authorize execution.",
+  "reviewed_required_file_snapshots": {
+    "research/protocol.json": "456a827b907b270d9bca6215b3111831ab6a7d1d",
+    "docs/CODEX_HANDOFF.md": "8d484eeafea1a00ca83fde98d0d2108997633389",
+    "docs/STATIC_VERIFICATION.md": "c52dee29ae3ef98337b93587bde1e5e6f58db044"
+  }
+}

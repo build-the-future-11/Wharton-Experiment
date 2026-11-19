@@ -1,0 +1,57 @@
+{
+  "base_commit": "57aa3da1f64481694e5f8387c926ce7bbd756425",
+  "canonical_updated": "2026-10-25T08:59:25.306153+00:00",
+  "fields": {
+    "status": "EXACT_0_2_4_PREFLIGHT_VERIFIED_UPLOAD_CONFIRMATION_PENDING",
+    "blocker": "Exact 0.2.4 hashes reverified; existing private Kaggle owner and editor settings reverified. Import dialog ready; specific browser file-upload confirmation pending. Local numerical admission failed at 115.0/162.65625/228.015625 MiB against 512 MiB. No 0.2.4 qualification or historical run has started.",
+    "candidate_preparation": "KAGGLE_VERSION8_TERMINAL_FAILED_PRESERVED",
+    "remaining": [
+      "Upload only exact 0.2.4 after the pending specific browser-upload confirmation; save source without launching and independently compare readback.",
+      "Run the frozen seed-11 19-arm CUDA qualification and 171-cell three-seed historical proxy suite only under the exact target contract and fixed ceiling.",
+      "Retain all output and verify integrity and semantics independently before interpreting results; record a terminal disposition.",
+      "Keep S15 implementation and later scientific stages behind the checklist dependencies; do not access protected outcomes."
+    ],
+    "semantic_reproducibility_successor": {
+      "timestamp": "2026-10-24T08:14:21.206137+00:00",
+      "package_version": "0.2.4",
+      "role": "Separately versioned prospective repair of Version 8 cross-runtime preprocessing and score-summary reconstruction; no historical result has been reused or inspected.",
+      "source_identity": "cba3c5c4bb9d0f4ab3ae12d85b465baa13d100c8b36fe15c2c91331844c706e2",
+      "release": {
+        "archive": "frem_s14_kaggle_bundle-0.2.4.zip",
+        "archive_sha256": "ddc04e93b37a086684624a2ad8d03de9269df1fa7f23ed14b9fcc8b2943f7c21",
+        "wheel": "frem_s14-0.2.4-py3-none-any.whl",
+        "wheel_sha256": "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d96486",
+        "notebook": "successors/frem_s14/kaggle/FREM_S14_GPU_0_2_4.ipynb",
+        "notebook_sha256": "e8fb05b52ee26f6a3045280e92bde247f85b381b7702bbc2fce4f4d97755670f",
+        "members": 18,
+        "status": "PACKAGED_STATICALLY_VERIFIED_NOT_NUMERICALLY_QUALIFIED"
+      },
+      "repairs": [
+        "Persist target-runtime NLL, Brier and coverage score vectors; calculate reported scalar scores with ordered math.fsum reductions.",
+        "Compute train-only center, MAD scale and target scale through sorted Python-float medians and math.fsum.",
+        "Increase only the new successor per-fold wall clock to 4000 seconds while retaining the notebook-wide 13500-second deadline."
+      ],
+      "unchanged_contract": "seven-ETF cohort, data hashes, 19 arms, seeds, folds, threshold, bootstrap family, private Internet-off T4 contract and no-imputation rule",
+      "release_verification": "research/frem_s14_semantic_successor_0_2_4_20261024/RELEASE_VERIFICATION.json",
+      "engineering_receipt": "research/frem_s14_semantic_successor_0_2_4_20261024/ENGINEERING_RECEIPT.json",
+      "local_admission": "research/frem_s14_semantic_successor_0_2_4_20261024/LOCAL_ADMISSION.json",
+      "kaggle_access_blocker": "research/frem_s14_semantic_successor_0_2_4_20261024/KAGGLE_ACCESS_BLOCKER.json",
+      "decision": "research/decisions/frem_s14_0_2_4_invocation_stable_release_20261024.json",
+      "plan": "research/frem_s14_semantic_successor_0_2_4_20261024/PLAN.md",
+      "superseded_unrun_releases": [
+        "0.2.0",
+        "0.2.1",
+        "0.2.2",
+        "0.2.3"
+      ],
+      "uploaded": false,
+      "launch_status": "PREUPLOAD_READY_SPECIFIC_CONFIRMATION_PENDING",
+      "kaggle_access_ready_receipt": "research/frem_s14_execution_20261024/KAGGLE_ACCESS_READY_RECEIPT.json",
+      "runtime_qualified": false,
+      "historical_cells_completed": 0,
+      "protected_access": false,
+      "claim_boundary": "Static packaging verification is not numerical qualification, a historical result, predictive evidence or a positive result.",
+      "latest_preupload_receipt": "research/frem_final_execution_20261024T110832Z/KAGGLE_PREUPLOAD_OBSERVATION.json"
+    }
+  }
+}

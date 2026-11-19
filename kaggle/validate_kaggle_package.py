@@ -9,6 +9,7 @@ import base64
 import hashlib
 import io
 import json
+import math
 import zipfile
 from pathlib import Path
 
@@ -21,6 +22,31 @@ EXPECTED_WHEEL = "57ae8e68b83eef921d83d58f2976f040a13281f3c505dfe6c98c7c4eb9d964
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def strict_json(data):
+    """Reject ambiguous or nonstandard JSON in the portable trust records."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"duplicate JSON key: {key}")
+            result[key] = value
+        return result
+
+    def reject_constant(value):
+        raise ValueError(f"nonfinite JSON value: {value}")
+
+    def finite_float(value):
+        result = float(value)
+        if not math.isfinite(result):
+            reject_constant(value)
+        return result
+
+    return json.loads(
+        data, object_pairs_hook=unique_object,
+        parse_constant=reject_constant, parse_float=finite_float,
+    )
 
 
 def read(path):
@@ -36,26 +62,30 @@ def validate(directory):
     notebook, archive = read(directory / NOTEBOOK), read(directory / ARCHIVE)
     if digest(notebook) != EXPECTED_NOTEBOOK or digest(archive) != EXPECTED_ARCHIVE:
         raise ValueError("pinned notebook or archive checksum mismatch")
-    release = json.loads(read(directory / "RELEASE-0.2.4.json"))
+    release = strict_json(read(directory / "RELEASE-0.2.4.json"))
     if (release["notebook_sha256"], release["archive_sha256"], release["wheel_sha256"]) != (
         EXPECTED_NOTEBOOK,
         EXPECTED_ARCHIVE,
         EXPECTED_WHEEL,
     ) or release["package_version"] != "0.2.4":
         raise ValueError("release metadata differs from pinned identity")
-    metadata = json.loads(read(directory / "kernel-metadata-0.2.4.json"))
+    metadata = strict_json(read(directory / "kernel-metadata-0.2.4.json"))
     expected = {
         "id": "ryangomez010/frem-s14-gpu-benchmark-20261019",
         "code_file": NOTEBOOK,
+        "language": "python",
+        "kernel_type": "notebook",
         "is_private": True,
         "enable_gpu": True,
         "enable_internet": False,
         "dataset_sources": ["borismarjanovic/price-volume-data-for-all-us-stocks-etfs"],
+        "competition_sources": [],
+        "kernel_sources": [],
     }
     for key, value in expected.items():
         if type(metadata.get(key)) is not type(value) or metadata[key] != value:
             raise ValueError(f"target metadata differs: {key}")
-    cells = json.loads(notebook)["cells"]
+    cells = strict_json(notebook)["cells"]
     code = "\n".join("".join(c["source"]) for c in cells if c["cell_type"] == "code")
     tree = ast.parse(code)
     assignments = {
@@ -68,7 +98,7 @@ def validate(directory):
     if base64.b64decode(ast.literal_eval(assignments["RELEASE"].args[0]), validate=True) != archive:
         raise ValueError("embedded archive differs")
     with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
-        payload = json.loads(bundle.read("PAYLOAD.json"))
+        payload = strict_json(bundle.read("PAYLOAD.json"))
         if len(bundle.namelist()) != len(payload) + 1 or set(bundle.namelist()) != set(payload) | {
             "PAYLOAD.json"
         }:
@@ -89,8 +119,15 @@ def validate(directory):
                 and isinstance(n.targets[0], ast.Name)
                 and n.targets[0].id == "SOURCE_SHA256"
             )
-    inputs = json.loads(read(directory / "input_manifest.json"))
-    if inputs["sha256"] != source_hashes or set(inputs["assets"]) != set(source_hashes):
+    inputs = strict_json(read(directory / "input_manifest.json"))
+    assets = inputs["assets"]
+    if (
+        not isinstance(assets, list)
+        or any(not isinstance(asset, str) for asset in assets)
+        or len(assets) != len(source_hashes)
+        or inputs["sha256"] != source_hashes
+        or set(assets) != set(source_hashes)
+    ):
         raise ValueError("input manifest differs from frozen member allowlist")
     return {
         "status": "PASS_STATIC_PACKAGE_ONLY",

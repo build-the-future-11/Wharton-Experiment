@@ -67,6 +67,64 @@ class HandoffValidationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             MODULE.validate(self.folder)
 
+    def test_execution_kind_changes_rejected(self):
+        name = "kernel-metadata-0.2.4.json"
+        original = (self.folder / name).read_bytes()
+        for key, value in (("language", "r"), ("kernel_type", "script")):
+            with self.subTest(key=key):
+                (self.folder / name).write_bytes(original)
+                self.edit_json(name, key, value)
+                with self.assertRaises(ValueError):
+                    MODULE.validate(self.folder)
+
+    def test_extra_attached_inputs_rejected(self):
+        name = "kernel-metadata-0.2.4.json"
+        original = (self.folder / name).read_bytes()
+        for key in ("competition_sources", "kernel_sources"):
+            with self.subTest(key=key):
+                (self.folder / name).write_bytes(original)
+                self.edit_json(name, key, ["unexpected/input"])
+                with self.assertRaises(ValueError):
+                    MODULE.validate(self.folder)
+
+    def test_duplicate_trust_keys_rejected(self):
+        for name, key in (
+            ("kernel-metadata-0.2.4.json", "is_private"),
+            ("RELEASE-0.2.4.json", "archive_sha256"),
+            ("input_manifest.json", "assets"),
+        ):
+            with self.subTest(name=name):
+                path = self.folder / name
+                original = path.read_bytes()
+                value = json.loads(original)[key]
+                # Both values agree: ambiguity itself must be rejected.
+                path.write_text("{" + json.dumps(key) + ":" + json.dumps(value) + "," + original.decode()[1:])
+                try:
+                    with self.assertRaises(ValueError):
+                        MODULE.validate(self.folder)
+                finally:
+                    path.write_bytes(original)
+
+    def test_nonfinite_metadata_rejected(self):
+        path = self.folder / "kernel-metadata-0.2.4.json"
+        original = path.read_text()
+        for value in ("NaN", "Infinity", "-Infinity", "1e400"):
+            with self.subTest(value=value):
+                path.write_text('{"invalid_numeric_field":' + value + "," + original[1:])
+                with self.assertRaises(ValueError):
+                    MODULE.validate(self.folder)
+
+    def test_duplicate_or_malformed_assets_rejected(self):
+        name = "input_manifest.json"
+        original = (self.folder / name).read_bytes()
+        assets = json.loads(original)["assets"]
+        for value in (assets + assets[:1], dict.fromkeys(assets)):
+            with self.subTest(value=value):
+                (self.folder / name).write_bytes(original)
+                self.edit_json(name, "assets", value)
+                with self.assertRaises(ValueError):
+                    MODULE.validate(self.folder)
+
 
 if __name__ == "__main__":
     unittest.main()
